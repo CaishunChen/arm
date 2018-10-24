@@ -1,0 +1,492 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>xsl: E:/XkapSourceCode/Xkap-Stm32/Xkap-Stm32/User/UserBsp/Bsp_TempHumidSensor.c 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">xsl
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">源码说明</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.13 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',false,false,'search.php','搜索');
+});
+</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_6d4e12d46ad8519ff7b80e874016d102.html">User</a></li><li class="navelem"><a class="el" href="dir_a31a870a1361c5173f8d637697bb576e.html">UserBsp</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#define-members">宏定义</a> &#124;
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle">
+<div class="title">Bsp_TempHumidSensor.c 文件参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="_bsp___temp_humid_sensor_8h_source.html">Bsp_TempHumidSensor.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_mem_manager_8h_source.html">MemManager.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="uctsk___debug_8h_source.html">uctsk_Debug.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_bsp___twi_8h_source.html">Bsp_Twi.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_bsp___dac_8h_source.html">Bsp_Dac.h</a>&quot;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+宏定义</h2></td></tr>
+<tr class="memitem:a04283843b882894a38742a0c88ecb3ae"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_bsp___temp_humid_sensor_8c.html#a04283843b882894a38742a0c88ecb3ae">TEMPHUMID_REG_R_STR</a>&#160;&#160;&#160;0x0C</td></tr>
+<tr class="separator:a04283843b882894a38742a0c88ecb3ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a427359c1dee23fed3da7bb2062e08fe0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_bsp___temp_humid_sensor_8c.html#a427359c1dee23fed3da7bb2062e08fe0">TEMPHUMID_REG_R_INF1</a>&#160;&#160;&#160;0x0D</td></tr>
+<tr class="separator:a427359c1dee23fed3da7bb2062e08fe0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac348a123cd8d48bdcb55df64c074e2d4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_bsp___temp_humid_sensor_8c.html#ac348a123cd8d48bdcb55df64c074e2d4">TEMPHUMID_REG_R_INF2</a>&#160;&#160;&#160;0x0E</td></tr>
+<tr class="separator:ac348a123cd8d48bdcb55df64c074e2d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa8be8bf4a28ae65c197e81e53ea6fd0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_bsp___temp_humid_sensor_8c.html#afa8be8bf4a28ae65c197e81e53ea6fd0">TEMPHUMID_REG_R_WIA</a>&#160;&#160;&#160;0x0F</td></tr>
+<tr class="separator:afa8be8bf4a28ae65c197e81e53ea6fd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00d0722f6bc09a30923980afe1d85671"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_bsp___temp_humid_sensor_8c.html#a00d0722f6bc09a30923980afe1d85671">TEMPHUMID_REG_R_HUMI1</a>&#160;&#160;&#160;0x10</td></tr>
+<tr class="separator:a00d0722f6bc09a30923980afe1d85671"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a191ec87f3922738c2c912942bff5f10a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_bsp___temp_humid_sensor_8c.html#a191ec87f3922738c2c912942bff5f10a">TEMPHUMID_REG_R_HUMI2</a>&#160;&#160;&#160;0x11</td></tr>
+<tr class="separator:a191ec87f3922738c2c912942bff5f10a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9dda1d198785d7b8f86a7c63c9f5d75f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_bsp___temp_humid_sensor_8c.html#a9dda1d198785d7b8f86a7c63c9f5d75f">TEMPHUMID_REG_R_TEMP1</a>&#160;&#160;&#160;0x12</td></tr>
+<tr class="separator:a9dda1d198785d7b8f86a7c63c9f5d75f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3701faf97a6f22b0a8c8dc01d85e3a92"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_bsp___temp_humid_sensor_8c.html#a3701faf97a6f22b0a8c8dc01d85e3a92">TEMPHUMID_REG_R_TEMP2</a>&#160;&#160;&#160;0x13</td></tr>
+<tr class="separator:a3701faf97a6f22b0a8c8dc01d85e3a92"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b9e1db2e95d12e0c9b1af48a1f8bbe3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_bsp___temp_humid_sensor_8c.html#a5b9e1db2e95d12e0c9b1af48a1f8bbe3">TEMPHUMID_REG_R_STAT</a>&#160;&#160;&#160;0x18</td></tr>
+<tr class="separator:a5b9e1db2e95d12e0c9b1af48a1f8bbe3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a031a5d603e1320f5a003720740401f93"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_bsp___temp_humid_sensor_8c.html#a031a5d603e1320f5a003720740401f93">TEMPHUMID_REG_RW_CTL1</a>&#160;&#160;&#160;0x1B</td></tr>
+<tr class="separator:a031a5d603e1320f5a003720740401f93"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99c3cb1f35f5209c2ef9141ac6f4445c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_bsp___temp_humid_sensor_8c.html#a99c3cb1f35f5209c2ef9141ac6f4445c">TEMPHUMID_REG_R_RDAT1</a>&#160;&#160;&#160;0x20</td></tr>
+<tr class="separator:a99c3cb1f35f5209c2ef9141ac6f4445c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af0dcfbad49efefa29ac0ce2002edcf6f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_bsp___temp_humid_sensor_8c.html#af0dcfbad49efefa29ac0ce2002edcf6f">TEMPHUMID_REG_R_RDAT2</a>&#160;&#160;&#160;0x21</td></tr>
+<tr class="separator:af0dcfbad49efefa29ac0ce2002edcf6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e675d96b50866e382c5b7edde158f6d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_bsp___temp_humid_sensor_8c.html#a9e675d96b50866e382c5b7edde158f6d">TEMPHUMID_REG_R_RDAT3</a>&#160;&#160;&#160;0x22</td></tr>
+<tr class="separator:a9e675d96b50866e382c5b7edde158f6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acee697e3eb12c51f96d91ef5a4e87e02"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_bsp___temp_humid_sensor_8c.html#acee697e3eb12c51f96d91ef5a4e87e02">TEMPHUMID_REG_R_RDAT4</a>&#160;&#160;&#160;0x23</td></tr>
+<tr class="separator:acee697e3eb12c51f96d91ef5a4e87e02"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8cd4488f4ea172ad03a4e74b357b8e8c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_bsp___temp_humid_sensor_8c.html#a8cd4488f4ea172ad03a4e74b357b8e8c">TEMPHUMID_REG_AC_REST</a>&#160;&#160;&#160;0x30</td></tr>
+<tr class="separator:a8cd4488f4ea172ad03a4e74b357b8e8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9426496a04a6638038daffcab843e22e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_bsp___temp_humid_sensor_8c.html#a9426496a04a6638038daffcab843e22e">TEMPHUMID_REG_AC_DET</a>&#160;&#160;&#160;0x31</td></tr>
+<tr class="separator:a9426496a04a6638038daffcab843e22e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ce3c4fe424ff315a71cb5c436812727"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_bsp___temp_humid_sensor_8c.html#a8ce3c4fe424ff315a71cb5c436812727">TEMPHUMID_REG_AC_STST</a>&#160;&#160;&#160;0x32</td></tr>
+<tr class="separator:a8ce3c4fe424ff315a71cb5c436812727"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa362f2b5b4e3b99f1a139ac61268674b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_bsp___temp_humid_sensor_8c.html#aa362f2b5b4e3b99f1a139ac61268674b">TEMPHUMID_ADR_R</a>&#160;&#160;&#160;0x30</td></tr>
+<tr class="separator:aa362f2b5b4e3b99f1a139ac61268674b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a931828d191ccc9f4da459087f0665c8f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_bsp___temp_humid_sensor_8c.html#a931828d191ccc9f4da459087f0665c8f">TEMPHUMID_ADR_W</a>&#160;&#160;&#160;0x31</td></tr>
+<tr class="separator:a931828d191ccc9f4da459087f0665c8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b19dffcac001b75ad6d6cd42ed1d13c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_bsp___temp_humid_sensor_8c.html#a9b19dffcac001b75ad6d6cd42ed1d13c">TEMPHUMID_IIC_ERROR_COUNT</a>&#160;&#160;&#160;2000</td></tr>
+<tr class="separator:a9b19dffcac001b75ad6d6cd42ed1d13c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:a69d57fe67a379b61282a5aa127302c74"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_bsp___temp_humid_sensor_8c.html#a69d57fe67a379b61282a5aa127302c74">BspTempHumidSensor_Init</a> (void)</td></tr>
+<tr class="separator:a69d57fe67a379b61282a5aa127302c74"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a96b97f829b266e6386a1ab314d479ec6"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_bsp___temp_humid_sensor_8c.html#a96b97f829b266e6386a1ab314d479ec6">BspTempHumidSensor_Read</a> (int16_t *pTemp, uint16_t *pHumi)</td></tr>
+<tr class="separator:a96b97f829b266e6386a1ab314d479ec6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3dcb3bfe44e60a433787c377db31a10c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_bsp___temp_humid_sensor_8c.html#a3dcb3bfe44e60a433787c377db31a10c">BspTempHumidSensor_DebugTest_100ms</a> (void)</td></tr>
+<tr class="separator:a3dcb3bfe44e60a433787c377db31a10c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a274ff0c3fed7a03f406ded88f54ad108"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_bsp___temp_humid_sensor_8c.html#a274ff0c3fed7a03f406ded88f54ad108">BspTempHumidSensor_DebugTestOnOff</a> (uint8_t OnOff)</td></tr>
+<tr class="separator:a274ff0c3fed7a03f406ded88f54ad108"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><dl class="section author"><dt>作者</dt><dd>徐松亮 许红宁(<a href="#" onclick="location.href='mai'+'lto:'+'538'+'76'+'03@'+'qq'+'.co'+'m'; return false;">53876<span style="display: none;">.nosp@m.</span>03@q<span style="display: none;">.nosp@m.</span>q.com</a>) </dd></dl>
+<dl class="section version"><dt>版本</dt><dd>V1.0.0 </dd></dl>
+<dl class="section date"><dt>日期</dt><dd>2018/01/01</dd></dl>
+<dl class="section attention"><dt>注意</dt><dd></dd></dl>
+<p>GNU General Public License (GPL)</p>
+<h2><center>&copy; COPYRIGHT 2017 XSLXHN</center></h2>
+</div><h2 class="groupheader">宏定义说明</h2>
+<a id="aa362f2b5b4e3b99f1a139ac61268674b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa362f2b5b4e3b99f1a139ac61268674b">&#9670;&nbsp;</a></span>TEMPHUMID_ADR_R</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TEMPHUMID_ADR_R&#160;&#160;&#160;0x30</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a931828d191ccc9f4da459087f0665c8f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a931828d191ccc9f4da459087f0665c8f">&#9670;&nbsp;</a></span>TEMPHUMID_ADR_W</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TEMPHUMID_ADR_W&#160;&#160;&#160;0x31</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9b19dffcac001b75ad6d6cd42ed1d13c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b19dffcac001b75ad6d6cd42ed1d13c">&#9670;&nbsp;</a></span>TEMPHUMID_IIC_ERROR_COUNT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TEMPHUMID_IIC_ERROR_COUNT&#160;&#160;&#160;2000</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9426496a04a6638038daffcab843e22e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9426496a04a6638038daffcab843e22e">&#9670;&nbsp;</a></span>TEMPHUMID_REG_AC_DET</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TEMPHUMID_REG_AC_DET&#160;&#160;&#160;0x31</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8cd4488f4ea172ad03a4e74b357b8e8c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8cd4488f4ea172ad03a4e74b357b8e8c">&#9670;&nbsp;</a></span>TEMPHUMID_REG_AC_REST</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TEMPHUMID_REG_AC_REST&#160;&#160;&#160;0x30</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8ce3c4fe424ff315a71cb5c436812727"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ce3c4fe424ff315a71cb5c436812727">&#9670;&nbsp;</a></span>TEMPHUMID_REG_AC_STST</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TEMPHUMID_REG_AC_STST&#160;&#160;&#160;0x32</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a00d0722f6bc09a30923980afe1d85671"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a00d0722f6bc09a30923980afe1d85671">&#9670;&nbsp;</a></span>TEMPHUMID_REG_R_HUMI1</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TEMPHUMID_REG_R_HUMI1&#160;&#160;&#160;0x10</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a191ec87f3922738c2c912942bff5f10a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a191ec87f3922738c2c912942bff5f10a">&#9670;&nbsp;</a></span>TEMPHUMID_REG_R_HUMI2</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TEMPHUMID_REG_R_HUMI2&#160;&#160;&#160;0x11</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a427359c1dee23fed3da7bb2062e08fe0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a427359c1dee23fed3da7bb2062e08fe0">&#9670;&nbsp;</a></span>TEMPHUMID_REG_R_INF1</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TEMPHUMID_REG_R_INF1&#160;&#160;&#160;0x0D</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac348a123cd8d48bdcb55df64c074e2d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac348a123cd8d48bdcb55df64c074e2d4">&#9670;&nbsp;</a></span>TEMPHUMID_REG_R_INF2</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TEMPHUMID_REG_R_INF2&#160;&#160;&#160;0x0E</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a99c3cb1f35f5209c2ef9141ac6f4445c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a99c3cb1f35f5209c2ef9141ac6f4445c">&#9670;&nbsp;</a></span>TEMPHUMID_REG_R_RDAT1</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TEMPHUMID_REG_R_RDAT1&#160;&#160;&#160;0x20</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af0dcfbad49efefa29ac0ce2002edcf6f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af0dcfbad49efefa29ac0ce2002edcf6f">&#9670;&nbsp;</a></span>TEMPHUMID_REG_R_RDAT2</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TEMPHUMID_REG_R_RDAT2&#160;&#160;&#160;0x21</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9e675d96b50866e382c5b7edde158f6d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9e675d96b50866e382c5b7edde158f6d">&#9670;&nbsp;</a></span>TEMPHUMID_REG_R_RDAT3</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TEMPHUMID_REG_R_RDAT3&#160;&#160;&#160;0x22</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acee697e3eb12c51f96d91ef5a4e87e02"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acee697e3eb12c51f96d91ef5a4e87e02">&#9670;&nbsp;</a></span>TEMPHUMID_REG_R_RDAT4</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TEMPHUMID_REG_R_RDAT4&#160;&#160;&#160;0x23</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5b9e1db2e95d12e0c9b1af48a1f8bbe3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b9e1db2e95d12e0c9b1af48a1f8bbe3">&#9670;&nbsp;</a></span>TEMPHUMID_REG_R_STAT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TEMPHUMID_REG_R_STAT&#160;&#160;&#160;0x18</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a04283843b882894a38742a0c88ecb3ae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a04283843b882894a38742a0c88ecb3ae">&#9670;&nbsp;</a></span>TEMPHUMID_REG_R_STR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TEMPHUMID_REG_R_STR&#160;&#160;&#160;0x0C</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9dda1d198785d7b8f86a7c63c9f5d75f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9dda1d198785d7b8f86a7c63c9f5d75f">&#9670;&nbsp;</a></span>TEMPHUMID_REG_R_TEMP1</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TEMPHUMID_REG_R_TEMP1&#160;&#160;&#160;0x12</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3701faf97a6f22b0a8c8dc01d85e3a92"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3701faf97a6f22b0a8c8dc01d85e3a92">&#9670;&nbsp;</a></span>TEMPHUMID_REG_R_TEMP2</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TEMPHUMID_REG_R_TEMP2&#160;&#160;&#160;0x13</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afa8be8bf4a28ae65c197e81e53ea6fd0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afa8be8bf4a28ae65c197e81e53ea6fd0">&#9670;&nbsp;</a></span>TEMPHUMID_REG_R_WIA</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TEMPHUMID_REG_R_WIA&#160;&#160;&#160;0x0F</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a031a5d603e1320f5a003720740401f93"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a031a5d603e1320f5a003720740401f93">&#9670;&nbsp;</a></span>TEMPHUMID_REG_RW_CTL1</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TEMPHUMID_REG_RW_CTL1&#160;&#160;&#160;0x1B</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">函数说明</h2>
+<a id="a3dcb3bfe44e60a433787c377db31a10c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3dcb3bfe44e60a433787c377db31a10c">&#9670;&nbsp;</a></span>BspTempHumidSensor_DebugTest_100ms()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BspTempHumidSensor_DebugTest_100ms </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a274ff0c3fed7a03f406ded88f54ad108"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a274ff0c3fed7a03f406ded88f54ad108">&#9670;&nbsp;</a></span>BspTempHumidSensor_DebugTestOnOff()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BspTempHumidSensor_DebugTestOnOff </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>OnOff</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a69d57fe67a379b61282a5aa127302c74"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a69d57fe67a379b61282a5aa127302c74">&#9670;&nbsp;</a></span>BspTempHumidSensor_Init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t BspTempHumidSensor_Init </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a96b97f829b266e6386a1ab314d479ec6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a96b97f829b266e6386a1ab314d479ec6">&#9670;&nbsp;</a></span>BspTempHumidSensor_Read()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t BspTempHumidSensor_Read </td>
+          <td>(</td>
+          <td class="paramtype">int16_t *&#160;</td>
+          <td class="paramname"><em>pTemp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t *&#160;</td>
+          <td class="paramname"><em>pHumi</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

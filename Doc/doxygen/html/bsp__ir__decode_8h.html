@@ -1,0 +1,226 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>xsl: E:/XkapSourceCode/Xkap-Stm32/Xkap-Stm32/User/UserBsp/Stm32F4/inc/bsp_ir_decode.h 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">xsl
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">源码说明</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.13 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',false,false,'search.php','搜索');
+});
+</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_6d4e12d46ad8519ff7b80e874016d102.html">User</a></li><li class="navelem"><a class="el" href="dir_a31a870a1361c5173f8d637697bb576e.html">UserBsp</a></li><li class="navelem"><a class="el" href="dir_5e177c7cc544a0a92a21db9013c51e57.html">Stm32F4</a></li><li class="navelem"><a class="el" href="dir_bfc268d3643ad69e1597d4c973161630.html">inc</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">结构体</a> &#124;
+<a href="#enum-members">枚举</a> &#124;
+<a href="#func-members">函数</a> &#124;
+<a href="#var-members">变量</a>  </div>
+  <div class="headertitle">
+<div class="title">bsp_ir_decode.h 文件参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><a href="bsp__ir__decode_8h_source.html">浏览源代码.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+结构体</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_i_r_d___t.html">IRD_T</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+枚举</h2></td></tr>
+<tr class="memitem:a729074937ffdeb0de1af811540626a59"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__ir__decode_8h.html#a729074937ffdeb0de1af811540626a59">IR_KEY_E</a> { <br />
+&#160;&#160;<a class="el" href="bsp__ir__decode_8h.html#a729074937ffdeb0de1af811540626a59a65f805f154db8c093a897f10c49a729c">IR_KEY_STRAT</a> = 0x80, 
+<a class="el" href="bsp__ir__decode_8h.html#a729074937ffdeb0de1af811540626a59ae2af1d6c92ff19fe6f2d6901be28ddb6">IR_KEY_POWER</a> = IR_KEY_STRAT + 0x45, 
+<a class="el" href="bsp__ir__decode_8h.html#a729074937ffdeb0de1af811540626a59a85dbeb19d01a12ff3ca403f385d3ce1f">IR_KEY_MENU</a> = IR_KEY_STRAT + 0x47, 
+<a class="el" href="bsp__ir__decode_8h.html#a729074937ffdeb0de1af811540626a59a3d98cb1a68aed304da1ca1c59d99b439">IR_KEY_TEST</a> = IR_KEY_STRAT + 0x44, 
+<br />
+&#160;&#160;<a class="el" href="bsp__ir__decode_8h.html#a729074937ffdeb0de1af811540626a59a0b50453bf5fd6136e6513ac567f5b1c4">IR_KEY_UP</a> = IR_KEY_STRAT + 0x40, 
+<a class="el" href="bsp__ir__decode_8h.html#a729074937ffdeb0de1af811540626a59a6198d2ffac87314f3029abe9ff9b4622">IR_KEY_RETURN</a> = IR_KEY_STRAT + 0x43, 
+<a class="el" href="bsp__ir__decode_8h.html#a729074937ffdeb0de1af811540626a59a96c1101ed90c345b6e54ebba8d6dbf8b">IR_KEY_LEFT</a> = IR_KEY_STRAT + 0x07, 
+<a class="el" href="bsp__ir__decode_8h.html#a729074937ffdeb0de1af811540626a59a899e447024dfb76c4d3ca14f9827aceb">IR_KEY_OK</a> = IR_KEY_STRAT + 0x15, 
+<br />
+&#160;&#160;<a class="el" href="bsp__ir__decode_8h.html#a729074937ffdeb0de1af811540626a59ad531b4fbceb9abd56490b01f8e6d9356">IR_KEY_RIGHT</a> = IR_KEY_STRAT + 0x09, 
+<a class="el" href="bsp__ir__decode_8h.html#a729074937ffdeb0de1af811540626a59a2202c58a958ca489cb8d0f4207fd74dc">IR_KEY_0</a> = IR_KEY_STRAT + 0x16, 
+<a class="el" href="bsp__ir__decode_8h.html#a729074937ffdeb0de1af811540626a59a77f73289310036402f162d0780510c4f">IR_KEY_DOWN</a> = IR_KEY_STRAT + 0x19, 
+<a class="el" href="bsp__ir__decode_8h.html#a729074937ffdeb0de1af811540626a59a10e35428b49c5cb8613c728de6c7cae7">IR_KEY_C</a> = IR_KEY_STRAT + 0x0D, 
+<br />
+&#160;&#160;<a class="el" href="bsp__ir__decode_8h.html#a729074937ffdeb0de1af811540626a59a78963e72b492495add0f3e97ac7abb87">IR_KEY_1</a> = IR_KEY_STRAT + 0x0C, 
+<a class="el" href="bsp__ir__decode_8h.html#a729074937ffdeb0de1af811540626a59a98dd71596f38f93837c92c306fbaa328">IR_KEY_2</a> = IR_KEY_STRAT + 0x18, 
+<a class="el" href="bsp__ir__decode_8h.html#a729074937ffdeb0de1af811540626a59a241385d4f343f96007408d38cd05fc9c">IR_KEY_3</a> = IR_KEY_STRAT + 0x5E, 
+<a class="el" href="bsp__ir__decode_8h.html#a729074937ffdeb0de1af811540626a59aa15ba7e6f3ef6c0eafbbfafc5c96a8a8">IR_KEY_4</a> = IR_KEY_STRAT + 0x08, 
+<br />
+&#160;&#160;<a class="el" href="bsp__ir__decode_8h.html#a729074937ffdeb0de1af811540626a59a7578bc5ac123557a94c540d664e86fe8">IR_KEY_5</a> = IR_KEY_STRAT + 0x1C, 
+<a class="el" href="bsp__ir__decode_8h.html#a729074937ffdeb0de1af811540626a59ad9cae0a03eb0ef0b27955437f429c44b">IR_KEY_6</a> = IR_KEY_STRAT + 0x5A, 
+<a class="el" href="bsp__ir__decode_8h.html#a729074937ffdeb0de1af811540626a59a72d474b9bda613d7e21ed0b8d7d80461">IR_KEY_7</a> = IR_KEY_STRAT + 0x42, 
+<a class="el" href="bsp__ir__decode_8h.html#a729074937ffdeb0de1af811540626a59a7db416fc2968f8540b665540a3c472d7">IR_KEY_8</a> = IR_KEY_STRAT + 0x52, 
+<br />
+&#160;&#160;<a class="el" href="bsp__ir__decode_8h.html#a729074937ffdeb0de1af811540626a59af753b1b4c3b05a4e31a2a64a2890d1ee">IR_KEY_9</a> = IR_KEY_STRAT + 0x4A
+<br />
+ }</td></tr>
+<tr class="separator:a729074937ffdeb0de1af811540626a59"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:a81b8b341657a03a22d16d75936903aef"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__ir__decode_8h.html#a81b8b341657a03a22d16d75936903aef">bsp_InitIRD</a> (void)</td></tr>
+<tr class="separator:a81b8b341657a03a22d16d75936903aef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab34e5095e8af99bbcb743ddf38376eae"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__ir__decode_8h.html#ab34e5095e8af99bbcb743ddf38376eae">IRD_StartWork</a> (void)</td></tr>
+<tr class="separator:ab34e5095e8af99bbcb743ddf38376eae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b0f03194cfcd71dec751ffebf152579"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__ir__decode_8h.html#a0b0f03194cfcd71dec751ffebf152579">IRD_StopWork</a> (void)</td></tr>
+<tr class="separator:a0b0f03194cfcd71dec751ffebf152579"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+变量</h2></td></tr>
+<tr class="memitem:af57ffd4b0ed7f13a8c6567e353fb5960"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_i_r_d___t.html">IRD_T</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__ir__decode_8h.html#af57ffd4b0ed7f13a8c6567e353fb5960">g_tIR</a></td></tr>
+<tr class="separator:af57ffd4b0ed7f13a8c6567e353fb5960"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">枚举类型说明</h2>
+<a id="a729074937ffdeb0de1af811540626a59"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a729074937ffdeb0de1af811540626a59">&#9670;&nbsp;</a></span>IR_KEY_E</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="bsp__ir__decode_8h.html#a729074937ffdeb0de1af811540626a59">IR_KEY_E</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><a id="a729074937ffdeb0de1af811540626a59a65f805f154db8c093a897f10c49a729c"></a>IR_KEY_STRAT&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a729074937ffdeb0de1af811540626a59ae2af1d6c92ff19fe6f2d6901be28ddb6"></a>IR_KEY_POWER&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a729074937ffdeb0de1af811540626a59a85dbeb19d01a12ff3ca403f385d3ce1f"></a>IR_KEY_MENU&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a729074937ffdeb0de1af811540626a59a3d98cb1a68aed304da1ca1c59d99b439"></a>IR_KEY_TEST&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a729074937ffdeb0de1af811540626a59a0b50453bf5fd6136e6513ac567f5b1c4"></a>IR_KEY_UP&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a729074937ffdeb0de1af811540626a59a6198d2ffac87314f3029abe9ff9b4622"></a>IR_KEY_RETURN&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a729074937ffdeb0de1af811540626a59a96c1101ed90c345b6e54ebba8d6dbf8b"></a>IR_KEY_LEFT&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a729074937ffdeb0de1af811540626a59a899e447024dfb76c4d3ca14f9827aceb"></a>IR_KEY_OK&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a729074937ffdeb0de1af811540626a59ad531b4fbceb9abd56490b01f8e6d9356"></a>IR_KEY_RIGHT&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a729074937ffdeb0de1af811540626a59a2202c58a958ca489cb8d0f4207fd74dc"></a>IR_KEY_0&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a729074937ffdeb0de1af811540626a59a77f73289310036402f162d0780510c4f"></a>IR_KEY_DOWN&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a729074937ffdeb0de1af811540626a59a10e35428b49c5cb8613c728de6c7cae7"></a>IR_KEY_C&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a729074937ffdeb0de1af811540626a59a78963e72b492495add0f3e97ac7abb87"></a>IR_KEY_1&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a729074937ffdeb0de1af811540626a59a98dd71596f38f93837c92c306fbaa328"></a>IR_KEY_2&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a729074937ffdeb0de1af811540626a59a241385d4f343f96007408d38cd05fc9c"></a>IR_KEY_3&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a729074937ffdeb0de1af811540626a59aa15ba7e6f3ef6c0eafbbfafc5c96a8a8"></a>IR_KEY_4&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a729074937ffdeb0de1af811540626a59a7578bc5ac123557a94c540d664e86fe8"></a>IR_KEY_5&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a729074937ffdeb0de1af811540626a59ad9cae0a03eb0ef0b27955437f429c44b"></a>IR_KEY_6&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a729074937ffdeb0de1af811540626a59a72d474b9bda613d7e21ed0b8d7d80461"></a>IR_KEY_7&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a729074937ffdeb0de1af811540626a59a7db416fc2968f8540b665540a3c472d7"></a>IR_KEY_8&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a729074937ffdeb0de1af811540626a59af753b1b4c3b05a4e31a2a64a2890d1ee"></a>IR_KEY_9&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">函数说明</h2>
+<a id="a81b8b341657a03a22d16d75936903aef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a81b8b341657a03a22d16d75936903aef">&#9670;&nbsp;</a></span>bsp_InitIRD()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void bsp_InitIRD </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab34e5095e8af99bbcb743ddf38376eae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab34e5095e8af99bbcb743ddf38376eae">&#9670;&nbsp;</a></span>IRD_StartWork()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void IRD_StartWork </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0b0f03194cfcd71dec751ffebf152579"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0b0f03194cfcd71dec751ffebf152579">&#9670;&nbsp;</a></span>IRD_StopWork()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void IRD_StopWork </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">变量说明</h2>
+<a id="af57ffd4b0ed7f13a8c6567e353fb5960"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af57ffd4b0ed7f13a8c6567e353fb5960">&#9670;&nbsp;</a></span>g_tIR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_i_r_d___t.html">IRD_T</a> g_tIR</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

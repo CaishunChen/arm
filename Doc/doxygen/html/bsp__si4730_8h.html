@@ -1,0 +1,504 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>xsl: E:/XkapSourceCode/Xkap-Stm32/Xkap-Stm32/User/UserBsp/Stm32F4/inc/bsp_si4730.h 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">xsl
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">源码说明</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.13 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',false,false,'search.php','搜索');
+});
+</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_6d4e12d46ad8519ff7b80e874016d102.html">User</a></li><li class="navelem"><a class="el" href="dir_a31a870a1361c5173f8d637697bb576e.html">UserBsp</a></li><li class="navelem"><a class="el" href="dir_5e177c7cc544a0a92a21db9013c51e57.html">Stm32F4</a></li><li class="navelem"><a class="el" href="dir_bfc268d3643ad69e1597d4c973161630.html">inc</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#define-members">宏定义</a> &#124;
+<a href="#enum-members">枚举</a> &#124;
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle">
+<div class="title">bsp_si4730.h 文件参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><a href="bsp__si4730_8h_source.html">浏览源代码.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+宏定义</h2></td></tr>
+<tr class="memitem:aed0bd34debd4ce545a0e5a63c90a4632"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__si4730_8h.html#aed0bd34debd4ce545a0e5a63c90a4632">I2C_ADDR_SI4730_W</a>&#160;&#160;&#160;0x22</td></tr>
+<tr class="separator:aed0bd34debd4ce545a0e5a63c90a4632"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a994b2c8d5f648ec7fc60c41d7276e7c1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__si4730_8h.html#a994b2c8d5f648ec7fc60c41d7276e7c1">I2C_ADDR_SI4730_R</a>&#160;&#160;&#160;0x23</td></tr>
+<tr class="separator:a994b2c8d5f648ec7fc60c41d7276e7c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+枚举</h2></td></tr>
+<tr class="memitem:af9bdc3014f3d54c426b6d2df10de4960"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <br />
+&#160;&#160;<a class="el" href="bsp__si4730_8h.html#af9bdc3014f3d54c426b6d2df10de4960ac2afcfe035ec92a638aefac64c92cf22">SI4730_CMD_POWER_UP</a> = 0x01, 
+<a class="el" href="bsp__si4730_8h.html#af9bdc3014f3d54c426b6d2df10de4960a768df131580380397ea420542a75ee1a">SI4730_CMD_GET_REV</a> = 0x10, 
+<a class="el" href="bsp__si4730_8h.html#af9bdc3014f3d54c426b6d2df10de4960ac343330c30c76f7db75ee2dcd3c85103">SI4730_CMD_POWER_DOWN</a> = 0x11, 
+<a class="el" href="bsp__si4730_8h.html#af9bdc3014f3d54c426b6d2df10de4960acd0ed6bd8fbe62609aa319a16cb9a40f">SI4730_CMD_SET_PROPERTY</a> = 0x12, 
+<br />
+&#160;&#160;<a class="el" href="bsp__si4730_8h.html#af9bdc3014f3d54c426b6d2df10de4960af3bd3fc5fc50b8145b4388932588029c">SI4730_CMD_GET_PROPERTY</a> = 0x13, 
+<a class="el" href="bsp__si4730_8h.html#af9bdc3014f3d54c426b6d2df10de4960a10029b54527b348a0f81fc535f1be61a">SI4730_CMD_GET_INT_STATUS</a> = 0x14, 
+<a class="el" href="bsp__si4730_8h.html#af9bdc3014f3d54c426b6d2df10de4960ab59767f23bf640d56ad2ac5e7bb72b62">SI4730_CMD_PATCH_ARGS</a> = 0x15, 
+<a class="el" href="bsp__si4730_8h.html#af9bdc3014f3d54c426b6d2df10de4960a9c01bcf4f5ea5a3ba3cb23300157d0cf">SI4730_CMD_PATCH_DATA</a> = 0x16, 
+<br />
+&#160;&#160;<a class="el" href="bsp__si4730_8h.html#af9bdc3014f3d54c426b6d2df10de4960ae5d3aa7347183498a16397ab52196c19">SI4730_CMD_FM_TUNE_FREQ</a> = 0x20, 
+<a class="el" href="bsp__si4730_8h.html#af9bdc3014f3d54c426b6d2df10de4960a69fedbb65b53b954b3bfb03f4fd49f42">SI4730_CMD_FM_SEEK_START</a> = 0x21, 
+<a class="el" href="bsp__si4730_8h.html#af9bdc3014f3d54c426b6d2df10de4960a52fa4c2a7f6065f3667e04ae29639be3">SI4730_CMD_FM_TUNE_STATUS</a> = 0x22, 
+<a class="el" href="bsp__si4730_8h.html#af9bdc3014f3d54c426b6d2df10de4960aaf7531040f0e639f548810593009bcc4">SI4730_CMD_FM_RSQ_STATUS</a> = 0x23, 
+<br />
+&#160;&#160;<a class="el" href="bsp__si4730_8h.html#af9bdc3014f3d54c426b6d2df10de4960a180f3b34eecf6d800dda2e98f319e69b">SI4730_CMD_FM_AGC_STATUS</a> = 0x27, 
+<a class="el" href="bsp__si4730_8h.html#af9bdc3014f3d54c426b6d2df10de4960a8301e50b2c4e1b0df529d33eb007ab3f">SI4730_CMD_FM_AGC_OVERRIDE</a> = 0x28, 
+<a class="el" href="bsp__si4730_8h.html#af9bdc3014f3d54c426b6d2df10de4960a37a2c202289dfd887e1010c52caf9c56">SI4730_CMD_GPIO_CTL</a> = 0x80, 
+<a class="el" href="bsp__si4730_8h.html#af9bdc3014f3d54c426b6d2df10de4960aac9685c956bab6bec575a7060a878c95">SI4730_CMD_GPIO_SET</a> = 0x81
+<br />
+ }</td></tr>
+<tr class="separator:af9bdc3014f3d54c426b6d2df10de4960"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:abd4b5a22c3b6f1911dd1a3cbea90e86a"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__si4730_8h.html#abd4b5a22c3b6f1911dd1a3cbea90e86a">SI4730_SendCmd</a> (uint8_t *_pCmdBuf, uint8_t _ucCmdLen)</td></tr>
+<tr class="separator:abd4b5a22c3b6f1911dd1a3cbea90e86a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5523785c0cffb72f3913d0cb6e5ee212"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__si4730_8h.html#a5523785c0cffb72f3913d0cb6e5ee212">SI4730_WaitStatus80</a> (uint32_t _uiTimeOut, uint8_t _ucStopEn)</td></tr>
+<tr class="separator:a5523785c0cffb72f3913d0cb6e5ee212"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a37cd2080b04b1291c85bf74d256cf93f"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__si4730_8h.html#a37cd2080b04b1291c85bf74d256cf93f">SI4730_PowerUp_FM_Revice</a> (void)</td></tr>
+<tr class="separator:a37cd2080b04b1291c85bf74d256cf93f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab9db1b0c4b3d5fc6e9d32e8e9974aa9"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__si4730_8h.html#aab9db1b0c4b3d5fc6e9d32e8e9974aa9">SI4730_PowerUp_AM_Revice</a> (void)</td></tr>
+<tr class="separator:aab9db1b0c4b3d5fc6e9d32e8e9974aa9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0d281bf1437e89c173e14e886eb0bb0"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__si4730_8h.html#ac0d281bf1437e89c173e14e886eb0bb0">SI4730_PowerDown</a> (void)</td></tr>
+<tr class="separator:ac0d281bf1437e89c173e14e886eb0bb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a764d5ad4a10609a27e348981978ac932"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__si4730_8h.html#a764d5ad4a10609a27e348981978ac932">SI4730_GetRevision</a> (uint8_t *_ReadBuf)</td></tr>
+<tr class="separator:a764d5ad4a10609a27e348981978ac932"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4838462fd4823831b7b491adf90a2ccf"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__si4730_8h.html#a4838462fd4823831b7b491adf90a2ccf">SI4730_SetFMFreq</a> (uint32_t _uiFreq)</td></tr>
+<tr class="separator:a4838462fd4823831b7b491adf90a2ccf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6870e448b79b6b75652abaabe2ce8f1a"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__si4730_8h.html#a6870e448b79b6b75652abaabe2ce8f1a">SI4730_SetAMFreq</a> (uint32_t _uiFreq)</td></tr>
+<tr class="separator:a6870e448b79b6b75652abaabe2ce8f1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d09bb6385596fb4cfe466d62f864f41"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__si4730_8h.html#a7d09bb6385596fb4cfe466d62f864f41">SI4730_SetAMFreqCap</a> (uint32_t _uiFreq, uint16_t _usCap)</td></tr>
+<tr class="separator:a7d09bb6385596fb4cfe466d62f864f41"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf510d1bbe9863ba6051974daff62ead"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__si4730_8h.html#aaf510d1bbe9863ba6051974daff62ead">SI4730_GetFMTuneStatus</a> (uint8_t *_ReadBuf)</td></tr>
+<tr class="separator:aaf510d1bbe9863ba6051974daff62ead"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a882dff89c86237d6b94dfc8bdc152547"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__si4730_8h.html#a882dff89c86237d6b94dfc8bdc152547">SI4730_GetAMTuneStatus</a> (uint8_t *_ReadBuf)</td></tr>
+<tr class="separator:a882dff89c86237d6b94dfc8bdc152547"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a310e47cbce1000b31a2f24250a4ab89d"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__si4730_8h.html#a310e47cbce1000b31a2f24250a4ab89d">SI4730_GetFMSignalQuality</a> (uint8_t *_ReadBuf)</td></tr>
+<tr class="separator:a310e47cbce1000b31a2f24250a4ab89d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a16f7d19928fbf0c8a8fd43d6329fbde5"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__si4730_8h.html#a16f7d19928fbf0c8a8fd43d6329fbde5">SI4730_GetAMSignalQuality</a> (uint8_t *_ReadBuf)</td></tr>
+<tr class="separator:a16f7d19928fbf0c8a8fd43d6329fbde5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a055301288ff1cc2b812e6773b65d3e21"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__si4730_8h.html#a055301288ff1cc2b812e6773b65d3e21">SI4730_SetOutVolume</a> (uint8_t _ucVolume)</td></tr>
+<tr class="separator:a055301288ff1cc2b812e6773b65d3e21"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf89255e91128307dc4ae9045b063405"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__si4730_8h.html#acf89255e91128307dc4ae9045b063405">SI4730_SetProperty</a> (uint16_t _usPropNumber, uint16_t _usPropValue)</td></tr>
+<tr class="separator:acf89255e91128307dc4ae9045b063405"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">宏定义说明</h2>
+<a id="a994b2c8d5f648ec7fc60c41d7276e7c1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a994b2c8d5f648ec7fc60c41d7276e7c1">&#9670;&nbsp;</a></span>I2C_ADDR_SI4730_R</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define I2C_ADDR_SI4730_R&#160;&#160;&#160;0x23</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aed0bd34debd4ce545a0e5a63c90a4632"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aed0bd34debd4ce545a0e5a63c90a4632">&#9670;&nbsp;</a></span>I2C_ADDR_SI4730_W</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define I2C_ADDR_SI4730_W&#160;&#160;&#160;0x22</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">枚举类型说明</h2>
+<a id="af9bdc3014f3d54c426b6d2df10de4960"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af9bdc3014f3d54c426b6d2df10de4960">&#9670;&nbsp;</a></span>anonymous enum</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">anonymous enum</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><a id="af9bdc3014f3d54c426b6d2df10de4960ac2afcfe035ec92a638aefac64c92cf22"></a>SI4730_CMD_POWER_UP&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="af9bdc3014f3d54c426b6d2df10de4960a768df131580380397ea420542a75ee1a"></a>SI4730_CMD_GET_REV&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="af9bdc3014f3d54c426b6d2df10de4960ac343330c30c76f7db75ee2dcd3c85103"></a>SI4730_CMD_POWER_DOWN&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="af9bdc3014f3d54c426b6d2df10de4960acd0ed6bd8fbe62609aa319a16cb9a40f"></a>SI4730_CMD_SET_PROPERTY&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="af9bdc3014f3d54c426b6d2df10de4960af3bd3fc5fc50b8145b4388932588029c"></a>SI4730_CMD_GET_PROPERTY&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="af9bdc3014f3d54c426b6d2df10de4960a10029b54527b348a0f81fc535f1be61a"></a>SI4730_CMD_GET_INT_STATUS&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="af9bdc3014f3d54c426b6d2df10de4960ab59767f23bf640d56ad2ac5e7bb72b62"></a>SI4730_CMD_PATCH_ARGS&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="af9bdc3014f3d54c426b6d2df10de4960a9c01bcf4f5ea5a3ba3cb23300157d0cf"></a>SI4730_CMD_PATCH_DATA&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="af9bdc3014f3d54c426b6d2df10de4960ae5d3aa7347183498a16397ab52196c19"></a>SI4730_CMD_FM_TUNE_FREQ&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="af9bdc3014f3d54c426b6d2df10de4960a69fedbb65b53b954b3bfb03f4fd49f42"></a>SI4730_CMD_FM_SEEK_START&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="af9bdc3014f3d54c426b6d2df10de4960a52fa4c2a7f6065f3667e04ae29639be3"></a>SI4730_CMD_FM_TUNE_STATUS&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="af9bdc3014f3d54c426b6d2df10de4960aaf7531040f0e639f548810593009bcc4"></a>SI4730_CMD_FM_RSQ_STATUS&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="af9bdc3014f3d54c426b6d2df10de4960a180f3b34eecf6d800dda2e98f319e69b"></a>SI4730_CMD_FM_AGC_STATUS&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="af9bdc3014f3d54c426b6d2df10de4960a8301e50b2c4e1b0df529d33eb007ab3f"></a>SI4730_CMD_FM_AGC_OVERRIDE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="af9bdc3014f3d54c426b6d2df10de4960a37a2c202289dfd887e1010c52caf9c56"></a>SI4730_CMD_GPIO_CTL&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="af9bdc3014f3d54c426b6d2df10de4960aac9685c956bab6bec575a7060a878c95"></a>SI4730_CMD_GPIO_SET&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">函数说明</h2>
+<a id="a16f7d19928fbf0c8a8fd43d6329fbde5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a16f7d19928fbf0c8a8fd43d6329fbde5">&#9670;&nbsp;</a></span>SI4730_GetAMSignalQuality()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t SI4730_GetAMSignalQuality </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>_ReadBuf</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a882dff89c86237d6b94dfc8bdc152547"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a882dff89c86237d6b94dfc8bdc152547">&#9670;&nbsp;</a></span>SI4730_GetAMTuneStatus()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t SI4730_GetAMTuneStatus </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>_ReadBuf</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a310e47cbce1000b31a2f24250a4ab89d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a310e47cbce1000b31a2f24250a4ab89d">&#9670;&nbsp;</a></span>SI4730_GetFMSignalQuality()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t SI4730_GetFMSignalQuality </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>_ReadBuf</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aaf510d1bbe9863ba6051974daff62ead"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaf510d1bbe9863ba6051974daff62ead">&#9670;&nbsp;</a></span>SI4730_GetFMTuneStatus()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t SI4730_GetFMTuneStatus </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>_ReadBuf</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a764d5ad4a10609a27e348981978ac932"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a764d5ad4a10609a27e348981978ac932">&#9670;&nbsp;</a></span>SI4730_GetRevision()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t SI4730_GetRevision </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>_ReadBuf</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac0d281bf1437e89c173e14e886eb0bb0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac0d281bf1437e89c173e14e886eb0bb0">&#9670;&nbsp;</a></span>SI4730_PowerDown()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t SI4730_PowerDown </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aab9db1b0c4b3d5fc6e9d32e8e9974aa9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aab9db1b0c4b3d5fc6e9d32e8e9974aa9">&#9670;&nbsp;</a></span>SI4730_PowerUp_AM_Revice()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t SI4730_PowerUp_AM_Revice </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a37cd2080b04b1291c85bf74d256cf93f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a37cd2080b04b1291c85bf74d256cf93f">&#9670;&nbsp;</a></span>SI4730_PowerUp_FM_Revice()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t SI4730_PowerUp_FM_Revice </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abd4b5a22c3b6f1911dd1a3cbea90e86a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abd4b5a22c3b6f1911dd1a3cbea90e86a">&#9670;&nbsp;</a></span>SI4730_SendCmd()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t SI4730_SendCmd </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>_pCmdBuf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>_ucCmdLen</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6870e448b79b6b75652abaabe2ce8f1a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6870e448b79b6b75652abaabe2ce8f1a">&#9670;&nbsp;</a></span>SI4730_SetAMFreq()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t SI4730_SetAMFreq </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>_uiFreq</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7d09bb6385596fb4cfe466d62f864f41"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d09bb6385596fb4cfe466d62f864f41">&#9670;&nbsp;</a></span>SI4730_SetAMFreqCap()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t SI4730_SetAMFreqCap </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>_uiFreq</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>_usCap</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4838462fd4823831b7b491adf90a2ccf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4838462fd4823831b7b491adf90a2ccf">&#9670;&nbsp;</a></span>SI4730_SetFMFreq()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t SI4730_SetFMFreq </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>_uiFreq</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a055301288ff1cc2b812e6773b65d3e21"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a055301288ff1cc2b812e6773b65d3e21">&#9670;&nbsp;</a></span>SI4730_SetOutVolume()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t SI4730_SetOutVolume </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>_ucVolume</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acf89255e91128307dc4ae9045b063405"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acf89255e91128307dc4ae9045b063405">&#9670;&nbsp;</a></span>SI4730_SetProperty()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t SI4730_SetProperty </td>
+          <td>(</td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>_usPropNumber</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>_usPropValue</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5523785c0cffb72f3913d0cb6e5ee212"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5523785c0cffb72f3913d0cb6e5ee212">&#9670;&nbsp;</a></span>SI4730_WaitStatus80()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t SI4730_WaitStatus80 </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>_uiTimeOut</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>_ucStopEn</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

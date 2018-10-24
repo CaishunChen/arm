@@ -1,0 +1,686 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>xsl: E:/XkapSourceCode/Xkap-Stm32/Xkap-Stm32/User/UserTask/uctsk_SpiSlave.c 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">xsl
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">源码说明</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.13 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',false,false,'search.php','搜索');
+});
+</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_6d4e12d46ad8519ff7b80e874016d102.html">User</a></li><li class="navelem"><a class="el" href="dir_ba9e781c49be9d79c84eb9994eefebec.html">UserTask</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">结构体</a> &#124;
+<a href="#define-members">宏定义</a> &#124;
+<a href="#typedef-members">类型定义</a> &#124;
+<a href="#enum-members">枚举</a> &#124;
+<a href="#func-members">函数</a> &#124;
+<a href="#var-members">变量</a>  </div>
+  <div class="headertitle">
+<div class="title">uctsk_SpiSlave.c 文件参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="includes_8h_source.html">includes.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_i_a_p_8h_source.html">IAP.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_bsp___cpu_flash_8h_source.html">Bsp_CpuFlash.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="uctsk___spi_slave_8h_source.html">uctsk_SpiSlave.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_module___memory_8h_source.html">Module_Memory.h</a>&quot;</code><br />
+<code>#include &quot;Bsp_Uart.h&quot;</code><br />
+<code>#include &quot;<a class="el" href="_bsp___rtc_8h_source.html">Bsp_Rtc.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="uctsk___a_d_8h_source.html">uctsk_AD.h</a>&quot;</code><br />
+<code>#include &quot;Bsp_Key.h&quot;</code><br />
+<code>#include &quot;<a class="el" href="_bsp___relay_8h_source.html">Bsp_Relay.h</a>&quot;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+结构体</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_s_p_i___s_l_a_v_e___s___q.html">SPI_SLAVE_S_Q</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+宏定义</h2></td></tr>
+<tr class="memitem:a85ed3470d458c9d7925f514bb2bc670a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___spi_slave_8c.html#a85ed3470d458c9d7925f514bb2bc670a">SPI_SLAVE_GLOBAL</a></td></tr>
+<tr class="separator:a85ed3470d458c9d7925f514bb2bc670a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad26de335cc695fcc3ce016b19cf28081"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___spi_slave_8c.html#ad26de335cc695fcc3ce016b19cf28081">SPI_SLAVE_TXBUF_MAX</a>&#160;&#160;&#160;256</td></tr>
+<tr class="separator:ad26de335cc695fcc3ce016b19cf28081"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb5128b86236e36d574cfd32830ca897"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___spi_slave_8c.html#acb5128b86236e36d574cfd32830ca897">SPI_SLAVE_RXBUF_MAX</a>&#160;&#160;&#160;256</td></tr>
+<tr class="separator:acb5128b86236e36d574cfd32830ca897"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3bb1d2387d14e541c986a6887bdd65c9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___spi_slave_8c.html#a3bb1d2387d14e541c986a6887bdd65c9">UCTSK_SPISLAVE_UART_TX2_BUFFERLOOP_BUF_MAX</a>&#160;&#160;&#160;256</td></tr>
+<tr class="separator:a3bb1d2387d14e541c986a6887bdd65c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a753647587fb8c2edea6ada4dc7a3f5d5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___spi_slave_8c.html#a753647587fb8c2edea6ada4dc7a3f5d5">UCTSK_SPISLAVE_UART_TX2_BUFFERLOOP_NODE_MAX</a>&#160;&#160;&#160;10</td></tr>
+<tr class="separator:a753647587fb8c2edea6ada4dc7a3f5d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b4d9cfaf74f54322b9077b716988b38"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___spi_slave_8c.html#a1b4d9cfaf74f54322b9077b716988b38">UCTSK_SPISLAVE_UART_RX2_BUFFERLOOP_BUF_MAX</a>&#160;&#160;&#160;256</td></tr>
+<tr class="separator:a1b4d9cfaf74f54322b9077b716988b38"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a37c2f1a420c80de71734d1dc83732f64"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___spi_slave_8c.html#a37c2f1a420c80de71734d1dc83732f64">UCTSK_SPISLAVE_UART_RX2_BUFFERLOOP_NODE_MAX</a>&#160;&#160;&#160;10</td></tr>
+<tr class="separator:a37c2f1a420c80de71734d1dc83732f64"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48f4b4b4da1c026fe01121f9bad597d8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___spi_slave_8c.html#a48f4b4b4da1c026fe01121f9bad597d8">UCTSK_SPISLAVE_UART_TX4_BUFFERLOOP_BUF_MAX</a>&#160;&#160;&#160;256</td></tr>
+<tr class="separator:a48f4b4b4da1c026fe01121f9bad597d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a15612754e0bb7e218ae2f0f6e2115c79"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___spi_slave_8c.html#a15612754e0bb7e218ae2f0f6e2115c79">UCTSK_SPISLAVE_UART_TX4_BUFFERLOOP_NODE_MAX</a>&#160;&#160;&#160;10</td></tr>
+<tr class="separator:a15612754e0bb7e218ae2f0f6e2115c79"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d54bbe30a2eed6c789c38a2b7aa95e0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___spi_slave_8c.html#a8d54bbe30a2eed6c789c38a2b7aa95e0">UCTSK_SPISLAVE_UART_RX4_BUFFERLOOP_BUF_MAX</a>&#160;&#160;&#160;256</td></tr>
+<tr class="separator:a8d54bbe30a2eed6c789c38a2b7aa95e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a230f002f971424ada96526fc91d22a19"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___spi_slave_8c.html#a230f002f971424ada96526fc91d22a19">UCTSK_SPISLAVE_UART_RX4_BUFFERLOOP_NODE_MAX</a>&#160;&#160;&#160;10</td></tr>
+<tr class="separator:a230f002f971424ada96526fc91d22a19"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66c16505db7596e36f53fe72728f0a73"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___spi_slave_8c.html#a66c16505db7596e36f53fe72728f0a73">UCTSK_SPISLAVE_UART_TX5_BUFFERLOOP_BUF_MAX</a>&#160;&#160;&#160;256</td></tr>
+<tr class="separator:a66c16505db7596e36f53fe72728f0a73"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af784039f8b2130ee9d57c1c505223233"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___spi_slave_8c.html#af784039f8b2130ee9d57c1c505223233">UCTSK_SPISLAVE_UART_TX5_BUFFERLOOP_NODE_MAX</a>&#160;&#160;&#160;10</td></tr>
+<tr class="separator:af784039f8b2130ee9d57c1c505223233"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af183447b3079df56360c758feb22c950"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___spi_slave_8c.html#af183447b3079df56360c758feb22c950">UCTSK_SPISLAVE_UART_RX5_BUFFERLOOP_BUF_MAX</a>&#160;&#160;&#160;256</td></tr>
+<tr class="separator:af183447b3079df56360c758feb22c950"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5058edefa4ad0c0cd914bcd0ff7edcb3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___spi_slave_8c.html#a5058edefa4ad0c0cd914bcd0ff7edcb3">UCTSK_SPISLAVE_UART_RX5_BUFFERLOOP_NODE_MAX</a>&#160;&#160;&#160;10</td></tr>
+<tr class="separator:a5058edefa4ad0c0cd914bcd0ff7edcb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+类型定义</h2></td></tr>
+<tr class="memitem:a1d62f974aa0321a68577ddd0a77e29ae"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="struct_s_p_i___s_l_a_v_e___s___q.html">SPI_SLAVE_S_Q</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___spi_slave_8c.html#a1d62f974aa0321a68577ddd0a77e29ae">SPI_SLAVE_S_Q</a></td></tr>
+<tr class="separator:a1d62f974aa0321a68577ddd0a77e29ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+枚举</h2></td></tr>
+<tr class="memitem:a895620211c1030a7d295204255c13f96"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___spi_slave_8c.html#a895620211c1030a7d295204255c13f96">SPI_E_SLAVE_STEP</a> { <br />
+&#160;&#160;<a class="el" href="uctsk___spi_slave_8c.html#a895620211c1030a7d295204255c13f96a8c39f1ceae072fbe030bcbd234296257">SPI_E_SLAVE_CMD_UART1_R</a>, 
+<a class="el" href="uctsk___spi_slave_8c.html#a895620211c1030a7d295204255c13f96a66993061dc0f507d347f430ea275277a">SPI_E_SLAVE_CMD_UART2_R</a>, 
+<a class="el" href="uctsk___spi_slave_8c.html#a895620211c1030a7d295204255c13f96a1174e97370c34ffb99501cf49a650462">SPI_E_SLAVE_CMD_UART3_R</a>, 
+<a class="el" href="uctsk___spi_slave_8c.html#a895620211c1030a7d295204255c13f96a2d621595e4950db1a8c423d7c2cdb6aa">SPI_E_SLAVE_CMD_UART4_R</a>, 
+<br />
+&#160;&#160;<a class="el" href="uctsk___spi_slave_8c.html#a895620211c1030a7d295204255c13f96a6a9e9ad37707e752c279e1d74ba5c6c4">SPI_E_SLAVE_CMD_UART5_R</a>, 
+<a class="el" href="uctsk___spi_slave_8c.html#a895620211c1030a7d295204255c13f96afde0921f5984ec12b4b8209095bfdabd">SPI_E_SLAVE_CMD_M_PARSE</a>
+<br />
+ }</td></tr>
+<tr class="separator:a895620211c1030a7d295204255c13f96"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:a51c4bf5528d7b0107ccf87f09ffc9826"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___spi_slave_8c.html#a51c4bf5528d7b0107ccf87f09ffc9826">MODULE_OS_TASK_TAB</a> (AppTaskSpiTCB)</td></tr>
+<tr class="separator:a51c4bf5528d7b0107ccf87f09ffc9826"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad9f4334e753952d17248177c91ababff"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___spi_slave_8c.html#ad9f4334e753952d17248177c91ababff">MODULE_OS_TASK_STK</a> (App_TaskSpiStk, <a class="el" href="app__cfg_8h.html#a719d654a23e31b2798e740c0f12904d3">APP_TASK_SPI_STK_SIZE</a>)</td></tr>
+<tr class="separator:ad9f4334e753952d17248177c91ababff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d921ae4a13262c397255b18256939d6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___spi_slave_8c.html#a7d921ae4a13262c397255b18256939d6">MODULE_OS_Q</a> (SpiSlave_pQ)</td></tr>
+<tr class="separator:a7d921ae4a13262c397255b18256939d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0fd0b7a69119d7b82870bd4a367dd7df"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___spi_slave_8c.html#a0fd0b7a69119d7b82870bd4a367dd7df">SpiSlave_UartIrq_Rx1</a> (uint8_t *pbuf, uint16_t len)</td></tr>
+<tr class="separator:a0fd0b7a69119d7b82870bd4a367dd7df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa1d1a383094a3fd4168725fc48052f1d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___spi_slave_8c.html#aa1d1a383094a3fd4168725fc48052f1d">SpiSlave_UartIrq_Rx2</a> (uint8_t *pbuf, uint16_t len)</td></tr>
+<tr class="separator:aa1d1a383094a3fd4168725fc48052f1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a462f5d8eae27b636dcee3164218bb727"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___spi_slave_8c.html#a462f5d8eae27b636dcee3164218bb727">SpiSlave_UartIrq_Rx3</a> (uint8_t *pbuf, uint16_t len)</td></tr>
+<tr class="separator:a462f5d8eae27b636dcee3164218bb727"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad0075216ba5f7dd0edc0b25319c147ce"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___spi_slave_8c.html#ad0075216ba5f7dd0edc0b25319c147ce">SpiSlave_UartIrq_Rx4</a> (uint8_t *pbuf, uint16_t len)</td></tr>
+<tr class="separator:ad0075216ba5f7dd0edc0b25319c147ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80260561b284e694d339025ad5c75344"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___spi_slave_8c.html#a80260561b284e694d339025ad5c75344">SpiSlave_UartIrq_Rx5</a> (uint8_t *pbuf, uint16_t len)</td></tr>
+<tr class="separator:a80260561b284e694d339025ad5c75344"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a034b672a55fa1f2ebacdb9d661c6d2f7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___spi_slave_8c.html#a034b672a55fa1f2ebacdb9d661c6d2f7">Spi_Slave_1ms</a> (void)</td></tr>
+<tr class="separator:a034b672a55fa1f2ebacdb9d661c6d2f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa512af047e0da39b2adb34fcbdf8754d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___spi_slave_8c.html#aa512af047e0da39b2adb34fcbdf8754d">App_SpiTaskCreate</a> (void)</td></tr>
+<tr class="separator:aa512af047e0da39b2adb34fcbdf8754d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a995176d46317e9a1a8a20a2bc3a6a0cd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___spi_slave_8c.html#a995176d46317e9a1a8a20a2bc3a6a0cd">SpiMaster_DebugTestOnOff</a> (uint8_t OnOff)</td></tr>
+<tr class="separator:a995176d46317e9a1a8a20a2bc3a6a0cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+变量</h2></td></tr>
+<tr class="memitem:a82cd9f8eb29354856ccf5bc123b92086"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_s_p_i___s_l_a_v_e___s___q.html">SPI_SLAVE_S_Q</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___spi_slave_8c.html#a82cd9f8eb29354856ccf5bc123b92086">Spi_Slave_S_QBuf</a> [<a class="el" href="uctsk___spi_slave_8h.html#a14540116c775963d9b0add34495de953">SPI_SLAVE_QBUF_MAX</a>]</td></tr>
+<tr class="separator:a82cd9f8eb29354856ccf5bc123b92086"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">宏定义说明</h2>
+<a id="a85ed3470d458c9d7925f514bb2bc670a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a85ed3470d458c9d7925f514bb2bc670a">&#9670;&nbsp;</a></span>SPI_SLAVE_GLOBAL</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SPI_SLAVE_GLOBAL</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acb5128b86236e36d574cfd32830ca897"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb5128b86236e36d574cfd32830ca897">&#9670;&nbsp;</a></span>SPI_SLAVE_RXBUF_MAX</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SPI_SLAVE_RXBUF_MAX&#160;&#160;&#160;256</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad26de335cc695fcc3ce016b19cf28081"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad26de335cc695fcc3ce016b19cf28081">&#9670;&nbsp;</a></span>SPI_SLAVE_TXBUF_MAX</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SPI_SLAVE_TXBUF_MAX&#160;&#160;&#160;256</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1b4d9cfaf74f54322b9077b716988b38"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1b4d9cfaf74f54322b9077b716988b38">&#9670;&nbsp;</a></span>UCTSK_SPISLAVE_UART_RX2_BUFFERLOOP_BUF_MAX</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define UCTSK_SPISLAVE_UART_RX2_BUFFERLOOP_BUF_MAX&#160;&#160;&#160;256</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a37c2f1a420c80de71734d1dc83732f64"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a37c2f1a420c80de71734d1dc83732f64">&#9670;&nbsp;</a></span>UCTSK_SPISLAVE_UART_RX2_BUFFERLOOP_NODE_MAX</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define UCTSK_SPISLAVE_UART_RX2_BUFFERLOOP_NODE_MAX&#160;&#160;&#160;10</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8d54bbe30a2eed6c789c38a2b7aa95e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d54bbe30a2eed6c789c38a2b7aa95e0">&#9670;&nbsp;</a></span>UCTSK_SPISLAVE_UART_RX4_BUFFERLOOP_BUF_MAX</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define UCTSK_SPISLAVE_UART_RX4_BUFFERLOOP_BUF_MAX&#160;&#160;&#160;256</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a230f002f971424ada96526fc91d22a19"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a230f002f971424ada96526fc91d22a19">&#9670;&nbsp;</a></span>UCTSK_SPISLAVE_UART_RX4_BUFFERLOOP_NODE_MAX</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define UCTSK_SPISLAVE_UART_RX4_BUFFERLOOP_NODE_MAX&#160;&#160;&#160;10</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af183447b3079df56360c758feb22c950"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af183447b3079df56360c758feb22c950">&#9670;&nbsp;</a></span>UCTSK_SPISLAVE_UART_RX5_BUFFERLOOP_BUF_MAX</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define UCTSK_SPISLAVE_UART_RX5_BUFFERLOOP_BUF_MAX&#160;&#160;&#160;256</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5058edefa4ad0c0cd914bcd0ff7edcb3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5058edefa4ad0c0cd914bcd0ff7edcb3">&#9670;&nbsp;</a></span>UCTSK_SPISLAVE_UART_RX5_BUFFERLOOP_NODE_MAX</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define UCTSK_SPISLAVE_UART_RX5_BUFFERLOOP_NODE_MAX&#160;&#160;&#160;10</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3bb1d2387d14e541c986a6887bdd65c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3bb1d2387d14e541c986a6887bdd65c9">&#9670;&nbsp;</a></span>UCTSK_SPISLAVE_UART_TX2_BUFFERLOOP_BUF_MAX</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define UCTSK_SPISLAVE_UART_TX2_BUFFERLOOP_BUF_MAX&#160;&#160;&#160;256</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a753647587fb8c2edea6ada4dc7a3f5d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a753647587fb8c2edea6ada4dc7a3f5d5">&#9670;&nbsp;</a></span>UCTSK_SPISLAVE_UART_TX2_BUFFERLOOP_NODE_MAX</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define UCTSK_SPISLAVE_UART_TX2_BUFFERLOOP_NODE_MAX&#160;&#160;&#160;10</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a48f4b4b4da1c026fe01121f9bad597d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a48f4b4b4da1c026fe01121f9bad597d8">&#9670;&nbsp;</a></span>UCTSK_SPISLAVE_UART_TX4_BUFFERLOOP_BUF_MAX</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define UCTSK_SPISLAVE_UART_TX4_BUFFERLOOP_BUF_MAX&#160;&#160;&#160;256</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a15612754e0bb7e218ae2f0f6e2115c79"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a15612754e0bb7e218ae2f0f6e2115c79">&#9670;&nbsp;</a></span>UCTSK_SPISLAVE_UART_TX4_BUFFERLOOP_NODE_MAX</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define UCTSK_SPISLAVE_UART_TX4_BUFFERLOOP_NODE_MAX&#160;&#160;&#160;10</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a66c16505db7596e36f53fe72728f0a73"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a66c16505db7596e36f53fe72728f0a73">&#9670;&nbsp;</a></span>UCTSK_SPISLAVE_UART_TX5_BUFFERLOOP_BUF_MAX</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define UCTSK_SPISLAVE_UART_TX5_BUFFERLOOP_BUF_MAX&#160;&#160;&#160;256</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af784039f8b2130ee9d57c1c505223233"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af784039f8b2130ee9d57c1c505223233">&#9670;&nbsp;</a></span>UCTSK_SPISLAVE_UART_TX5_BUFFERLOOP_NODE_MAX</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define UCTSK_SPISLAVE_UART_TX5_BUFFERLOOP_NODE_MAX&#160;&#160;&#160;10</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">类型定义说明</h2>
+<a id="a1d62f974aa0321a68577ddd0a77e29ae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d62f974aa0321a68577ddd0a77e29ae">&#9670;&nbsp;</a></span>SPI_SLAVE_S_Q</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="struct_s_p_i___s_l_a_v_e___s___q.html">SPI_SLAVE_S_Q</a>  <a class="el" href="struct_s_p_i___s_l_a_v_e___s___q.html">SPI_SLAVE_S_Q</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">枚举类型说明</h2>
+<a id="a895620211c1030a7d295204255c13f96"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a895620211c1030a7d295204255c13f96">&#9670;&nbsp;</a></span>SPI_E_SLAVE_STEP</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="uctsk___spi_slave_8c.html#a895620211c1030a7d295204255c13f96">SPI_E_SLAVE_STEP</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><a id="a895620211c1030a7d295204255c13f96a8c39f1ceae072fbe030bcbd234296257"></a>SPI_E_SLAVE_CMD_UART1_R&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a895620211c1030a7d295204255c13f96a66993061dc0f507d347f430ea275277a"></a>SPI_E_SLAVE_CMD_UART2_R&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a895620211c1030a7d295204255c13f96a1174e97370c34ffb99501cf49a650462"></a>SPI_E_SLAVE_CMD_UART3_R&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a895620211c1030a7d295204255c13f96a2d621595e4950db1a8c423d7c2cdb6aa"></a>SPI_E_SLAVE_CMD_UART4_R&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a895620211c1030a7d295204255c13f96a6a9e9ad37707e752c279e1d74ba5c6c4"></a>SPI_E_SLAVE_CMD_UART5_R&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a895620211c1030a7d295204255c13f96afde0921f5984ec12b4b8209095bfdabd"></a>SPI_E_SLAVE_CMD_M_PARSE&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">函数说明</h2>
+<a id="aa512af047e0da39b2adb34fcbdf8754d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa512af047e0da39b2adb34fcbdf8754d">&#9670;&nbsp;</a></span>App_SpiTaskCreate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void App_SpiTaskCreate </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7d921ae4a13262c397255b18256939d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d921ae4a13262c397255b18256939d6">&#9670;&nbsp;</a></span>MODULE_OS_Q()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MODULE_OS_Q </td>
+          <td>(</td>
+          <td class="paramtype">SpiSlave_pQ&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad9f4334e753952d17248177c91ababff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad9f4334e753952d17248177c91ababff">&#9670;&nbsp;</a></span>MODULE_OS_TASK_STK()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MODULE_OS_TASK_STK </td>
+          <td>(</td>
+          <td class="paramtype">App_TaskSpiStk&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="app__cfg_8h.html#a719d654a23e31b2798e740c0f12904d3">APP_TASK_SPI_STK_SIZE</a>&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a51c4bf5528d7b0107ccf87f09ffc9826"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a51c4bf5528d7b0107ccf87f09ffc9826">&#9670;&nbsp;</a></span>MODULE_OS_TASK_TAB()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MODULE_OS_TASK_TAB </td>
+          <td>(</td>
+          <td class="paramtype">AppTaskSpiTCB&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a034b672a55fa1f2ebacdb9d661c6d2f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a034b672a55fa1f2ebacdb9d661c6d2f7">&#9670;&nbsp;</a></span>Spi_Slave_1ms()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Spi_Slave_1ms </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a995176d46317e9a1a8a20a2bc3a6a0cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a995176d46317e9a1a8a20a2bc3a6a0cd">&#9670;&nbsp;</a></span>SpiMaster_DebugTestOnOff()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SpiMaster_DebugTestOnOff </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>OnOff</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0fd0b7a69119d7b82870bd4a367dd7df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0fd0b7a69119d7b82870bd4a367dd7df">&#9670;&nbsp;</a></span>SpiSlave_UartIrq_Rx1()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SpiSlave_UartIrq_Rx1 </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>pbuf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>len</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa1d1a383094a3fd4168725fc48052f1d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa1d1a383094a3fd4168725fc48052f1d">&#9670;&nbsp;</a></span>SpiSlave_UartIrq_Rx2()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SpiSlave_UartIrq_Rx2 </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>pbuf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>len</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a462f5d8eae27b636dcee3164218bb727"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a462f5d8eae27b636dcee3164218bb727">&#9670;&nbsp;</a></span>SpiSlave_UartIrq_Rx3()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SpiSlave_UartIrq_Rx3 </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>pbuf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>len</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad0075216ba5f7dd0edc0b25319c147ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad0075216ba5f7dd0edc0b25319c147ce">&#9670;&nbsp;</a></span>SpiSlave_UartIrq_Rx4()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SpiSlave_UartIrq_Rx4 </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>pbuf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>len</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a80260561b284e694d339025ad5c75344"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a80260561b284e694d339025ad5c75344">&#9670;&nbsp;</a></span>SpiSlave_UartIrq_Rx5()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SpiSlave_UartIrq_Rx5 </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>pbuf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>len</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">变量说明</h2>
+<a id="a82cd9f8eb29354856ccf5bc123b92086"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a82cd9f8eb29354856ccf5bc123b92086">&#9670;&nbsp;</a></span>Spi_Slave_S_QBuf</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_s_p_i___s_l_a_v_e___s___q.html">SPI_SLAVE_S_Q</a> Spi_Slave_S_QBuf[<a class="el" href="uctsk___spi_slave_8h.html#a14540116c775963d9b0add34495de953">SPI_SLAVE_QBUF_MAX</a>]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

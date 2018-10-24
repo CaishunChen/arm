@@ -1,0 +1,239 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>xsl: E:/XkapSourceCode/Xkap-Stm32/Xkap-Stm32/User/UserBsp/Bsp_Printer.h 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">xsl
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">源码说明</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.13 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',false,false,'search.php','搜索');
+});
+</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_6d4e12d46ad8519ff7b80e874016d102.html">User</a></li><li class="navelem"><a class="el" href="dir_a31a870a1361c5173f8d637697bb576e.html">UserBsp</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#enum-members">枚举</a> &#124;
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle">
+<div class="title">Bsp_Printer.h 文件参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>bottom-driven &ndash;&gt; 串口打印机驱动.  
+<a href="#details">更多...</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="includes_8h_source.html">includes.h</a>&quot;</code><br />
+</div>
+<p><a href="_bsp___printer_8h_source.html">浏览源代码.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+枚举</h2></td></tr>
+<tr class="memitem:a1f4b196aab61370d71d6c72529fc6853"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_bsp___printer_8h.html#a1f4b196aab61370d71d6c72529fc6853">PRINTER_UARTX_APP_CMD</a> { <br />
+&#160;&#160;<a class="el" href="_bsp___printer_8h.html#a1f4b196aab61370d71d6c72529fc6853a4fb3d252a601622ce82533ff22922558">PRINTER_UARTX_APP_CMD_WORD_12SIZE12</a> = 0, 
+<a class="el" href="_bsp___printer_8h.html#a1f4b196aab61370d71d6c72529fc6853a87b8517488f275de9e1d82900dd64a8f">PRINTER_UARTX_APP_CMD_WORD_24SIZE24</a>, 
+<a class="el" href="_bsp___printer_8h.html#a1f4b196aab61370d71d6c72529fc6853a97aa3b95ae0196ff326df1c9dffcfe15">PRINTER_UARTX_APP_CMD_WORD_WIDTH_UNABLE</a>, 
+<a class="el" href="_bsp___printer_8h.html#a1f4b196aab61370d71d6c72529fc6853ae2c2b746192d45ad036eaaf057f1b07e">PRINTER_UARTX_APP_CMD_WORD_WIDTH_ANABLE</a>, 
+<br />
+&#160;&#160;<a class="el" href="_bsp___printer_8h.html#a1f4b196aab61370d71d6c72529fc6853a93c864e71d18355fa840bd7e200e8227">PRINTER_UARTX_APP_CMD_WORD_DOUBLE_UNABLE</a>, 
+<a class="el" href="_bsp___printer_8h.html#a1f4b196aab61370d71d6c72529fc6853a05e261bca6ebc47e14a3b1e3ae46dde5">PRINTER_UARTX_APP_CMD_WORD_DOUBLE_ANABLE</a>, 
+<a class="el" href="_bsp___printer_8h.html#a1f4b196aab61370d71d6c72529fc6853ac2d42ece15117ec5a45587bd771c6300">PRINTER_UARTX_APP_CMD_LINE_SPACE</a>, 
+<a class="el" href="_bsp___printer_8h.html#a1f4b196aab61370d71d6c72529fc6853a035a1cfca81134906e626e66ac970576">PRINTER_UARTX_APP_CMD_RIGHT_LIMIT</a>, 
+<br />
+&#160;&#160;<a class="el" href="_bsp___printer_8h.html#a1f4b196aab61370d71d6c72529fc6853a64dcc391e6c2cfa85d448c3347a01146">PRINTER_UARTX_APP_CMD_LEFT_LIMIT</a>, 
+<a class="el" href="_bsp___printer_8h.html#a1f4b196aab61370d71d6c72529fc6853a9e95d1f1553e8c1c6b59feb735b85bda">PRINTER_UARTX_APP_CMD_UNDERLINE_UNABLE</a>, 
+<a class="el" href="_bsp___printer_8h.html#a1f4b196aab61370d71d6c72529fc6853a83a961669a88ea7c1f48cf6b3c63a0ac">PRINTER_UARTX_APP_CMD_UNDERLINE_ENABLE</a>, 
+<a class="el" href="_bsp___printer_8h.html#a1f4b196aab61370d71d6c72529fc6853a2a7f997af0e1a2a5d71413aa41c42c43">PRINTER_UARTX_APP_CMD_INIT</a>, 
+<br />
+&#160;&#160;<a class="el" href="_bsp___printer_8h.html#a1f4b196aab61370d71d6c72529fc6853af15d518f4b874251dc2d64d9ec217c26">PRINTER_UARTX_APP_CMD_BAUD_115200</a>, 
+<a class="el" href="_bsp___printer_8h.html#a1f4b196aab61370d71d6c72529fc6853a87a8333b8e79bbd0fbbb6588f60c79ab">PRINTER_UARTX_APP_CMD_BAUD_9600</a>, 
+<a class="el" href="_bsp___printer_8h.html#a1f4b196aab61370d71d6c72529fc6853afd0a6b4420106648921759bda8fb5fbe">PRINTER_UARTX_APP_CMD_ENTER</a>, 
+<a class="el" href="_bsp___printer_8h.html#a1f4b196aab61370d71d6c72529fc6853a0edc4b84bb7bd040f994fd030496536c">PRINTER_UARTX_APP_CMD_IMAGE</a>
+<br />
+ }</td></tr>
+<tr class="separator:a1f4b196aab61370d71d6c72529fc6853"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:ac6eda308c082f921924eee519ba363c2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_bsp___printer_8h.html#ac6eda308c082f921924eee519ba363c2">BspPrinter_Init</a> (void)</td></tr>
+<tr class="separator:ac6eda308c082f921924eee519ba363c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b0f12a5d8b82dae25a7f11d6449a95f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_bsp___printer_8h.html#a0b0f12a5d8b82dae25a7f11d6449a95f">BspPrinter_InterruptRx</a> (uint8_t *pbuf, uint16_t len)</td></tr>
+<tr class="separator:a0b0f12a5d8b82dae25a7f11d6449a95f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a28fa7610d0a21a3dcc2edfebd6d53adc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_bsp___printer_8h.html#a28fa7610d0a21a3dcc2edfebd6d53adc">BspPrinter_PrintInfo</a> (BSP_PRINTER_LCD_INFO pinfo)</td></tr>
+<tr class="separator:a28fa7610d0a21a3dcc2edfebd6d53adc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada014069925484a734fa180ab4a81b0c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_bsp___printer_8h.html#ada014069925484a734fa180ab4a81b0c">BspPrinter_DebugTestOnOff</a> (uint8_t OnOff)</td></tr>
+<tr class="separator:ada014069925484a734fa180ab4a81b0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>bottom-driven &ndash;&gt; 串口打印机驱动. </p>
+<dl class="section author"><dt>作者</dt><dd>徐松亮 许红宁(<a href="#" onclick="location.href='mai'+'lto:'+'538'+'76'+'03@'+'qq'+'.co'+'m'; return false;">53876<span style="display: none;">.nosp@m.</span>03@q<span style="display: none;">.nosp@m.</span>q.com</a>) </dd></dl>
+<dl class="section version"><dt>版本</dt><dd>V1.0.0 </dd></dl>
+<dl class="section date"><dt>日期</dt><dd>2018/01/01 </dd></dl>
+<dl class="section note"><dt>注解</dt><dd><pre class="fragment">===============================================================================
+                    ##### How to use this driver #####
+===============================================================================
+  1,    适用芯片
+        STM      :  STM32F1  STM32F4
+        Nordic   :  Nrf51    Nrf52
+  2,    移植步骤
+  3,    验证方法
+  4,    使用方法
+  5,    其他说明</pre></dd></dl>
+<dl class="section attention"><dt>注意</dt><dd></dd></dl>
+<p>GNU General Public License (GPL)</p>
+<h2><center>&copy; COPYRIGHT 2017 XSLXHN</center></h2>
+</div><h2 class="groupheader">枚举类型说明</h2>
+<a id="a1f4b196aab61370d71d6c72529fc6853"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1f4b196aab61370d71d6c72529fc6853">&#9670;&nbsp;</a></span>PRINTER_UARTX_APP_CMD</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="_bsp___printer_8h.html#a1f4b196aab61370d71d6c72529fc6853">PRINTER_UARTX_APP_CMD</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><a id="a1f4b196aab61370d71d6c72529fc6853a4fb3d252a601622ce82533ff22922558"></a>PRINTER_UARTX_APP_CMD_WORD_12SIZE12&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a1f4b196aab61370d71d6c72529fc6853a87b8517488f275de9e1d82900dd64a8f"></a>PRINTER_UARTX_APP_CMD_WORD_24SIZE24&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a1f4b196aab61370d71d6c72529fc6853a97aa3b95ae0196ff326df1c9dffcfe15"></a>PRINTER_UARTX_APP_CMD_WORD_WIDTH_UNABLE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a1f4b196aab61370d71d6c72529fc6853ae2c2b746192d45ad036eaaf057f1b07e"></a>PRINTER_UARTX_APP_CMD_WORD_WIDTH_ANABLE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a1f4b196aab61370d71d6c72529fc6853a93c864e71d18355fa840bd7e200e8227"></a>PRINTER_UARTX_APP_CMD_WORD_DOUBLE_UNABLE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a1f4b196aab61370d71d6c72529fc6853a05e261bca6ebc47e14a3b1e3ae46dde5"></a>PRINTER_UARTX_APP_CMD_WORD_DOUBLE_ANABLE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a1f4b196aab61370d71d6c72529fc6853ac2d42ece15117ec5a45587bd771c6300"></a>PRINTER_UARTX_APP_CMD_LINE_SPACE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a1f4b196aab61370d71d6c72529fc6853a035a1cfca81134906e626e66ac970576"></a>PRINTER_UARTX_APP_CMD_RIGHT_LIMIT&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a1f4b196aab61370d71d6c72529fc6853a64dcc391e6c2cfa85d448c3347a01146"></a>PRINTER_UARTX_APP_CMD_LEFT_LIMIT&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a1f4b196aab61370d71d6c72529fc6853a9e95d1f1553e8c1c6b59feb735b85bda"></a>PRINTER_UARTX_APP_CMD_UNDERLINE_UNABLE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a1f4b196aab61370d71d6c72529fc6853a83a961669a88ea7c1f48cf6b3c63a0ac"></a>PRINTER_UARTX_APP_CMD_UNDERLINE_ENABLE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a1f4b196aab61370d71d6c72529fc6853a2a7f997af0e1a2a5d71413aa41c42c43"></a>PRINTER_UARTX_APP_CMD_INIT&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a1f4b196aab61370d71d6c72529fc6853af15d518f4b874251dc2d64d9ec217c26"></a>PRINTER_UARTX_APP_CMD_BAUD_115200&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a1f4b196aab61370d71d6c72529fc6853a87a8333b8e79bbd0fbbb6588f60c79ab"></a>PRINTER_UARTX_APP_CMD_BAUD_9600&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a1f4b196aab61370d71d6c72529fc6853afd0a6b4420106648921759bda8fb5fbe"></a>PRINTER_UARTX_APP_CMD_ENTER&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a1f4b196aab61370d71d6c72529fc6853a0edc4b84bb7bd040f994fd030496536c"></a>PRINTER_UARTX_APP_CMD_IMAGE&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">函数说明</h2>
+<a id="ada014069925484a734fa180ab4a81b0c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ada014069925484a734fa180ab4a81b0c">&#9670;&nbsp;</a></span>BspPrinter_DebugTestOnOff()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BspPrinter_DebugTestOnOff </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>OnOff</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac6eda308c082f921924eee519ba363c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac6eda308c082f921924eee519ba363c2">&#9670;&nbsp;</a></span>BspPrinter_Init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BspPrinter_Init </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0b0f12a5d8b82dae25a7f11d6449a95f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0b0f12a5d8b82dae25a7f11d6449a95f">&#9670;&nbsp;</a></span>BspPrinter_InterruptRx()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BspPrinter_InterruptRx </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>pbuf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>len</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a28fa7610d0a21a3dcc2edfebd6d53adc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a28fa7610d0a21a3dcc2edfebd6d53adc">&#9670;&nbsp;</a></span>BspPrinter_PrintInfo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BspPrinter_PrintInfo </td>
+          <td>(</td>
+          <td class="paramtype">BSP_PRINTER_LCD_INFO&#160;</td>
+          <td class="paramname"><em>pinfo</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

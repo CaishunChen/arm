@@ -1,0 +1,4 @@
+L 1 "..\..\User\USB-VCP\src\usbd_usr.c"
+N/* Includes ------------------------------------------------------------------*/
+C "..\..\User\USB-VCP\src\usbd_usr.c" 2 22 cannot open source input file "usbd_usr.h": No such file or directory
+N#include "usbd_usr.h"

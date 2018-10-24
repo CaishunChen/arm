@@ -1,0 +1,621 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>xsl: E:/XkapSourceCode/Xkap-Stm32/Xkap-Stm32/User/UserBsp/Stm32F4/src/LCD_SPFD5420.c 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">xsl
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">源码说明</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.13 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',false,false,'search.php','搜索');
+});
+</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_6d4e12d46ad8519ff7b80e874016d102.html">User</a></li><li class="navelem"><a class="el" href="dir_a31a870a1361c5173f8d637697bb576e.html">UserBsp</a></li><li class="navelem"><a class="el" href="dir_5e177c7cc544a0a92a21db9013c51e57.html">Stm32F4</a></li><li class="navelem"><a class="el" href="dir_d01952803e2c83a827a93ec31a7773bd.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#define-members">宏定义</a> &#124;
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle">
+<div class="title">LCD_SPFD5420.c 文件参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;stm32f4xx.h&quot;</code><br />
+<code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;string.h&gt;</code><br />
+<code>#include &quot;bsp_tft_lcd.h&quot;</code><br />
+<code>#include &quot;<a class="el" href="fonts_8h_source.html">fonts.h</a>&quot;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+宏定义</h2></td></tr>
+<tr class="memitem:a0fe20882cbfdf863e8e9f6c909c5fd52"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_stm32_f4_2src_2_l_c_d___s_p_f_d5420_8c.html#a0fe20882cbfdf863e8e9f6c909c5fd52">SPFD5420_BASE</a>&#160;&#160;&#160;((uint32_t)(0x60000000 | 0x00000000))</td></tr>
+<tr class="separator:a0fe20882cbfdf863e8e9f6c909c5fd52"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c9868426892cbca8ed10bdd9a1a6dc1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_stm32_f4_2src_2_l_c_d___s_p_f_d5420_8c.html#a5c9868426892cbca8ed10bdd9a1a6dc1">SPFD5420_REG</a>&#160;&#160;&#160;*(__IO uint16_t *)(<a class="el" href="_stm32_f4_2src_2_l_c_d___s_p_f_d5420_8c.html#a0fe20882cbfdf863e8e9f6c909c5fd52">SPFD5420_BASE</a>)</td></tr>
+<tr class="separator:a5c9868426892cbca8ed10bdd9a1a6dc1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae76423b841d1eb1207d491adef1c98c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_stm32_f4_2src_2_l_c_d___s_p_f_d5420_8c.html#aae76423b841d1eb1207d491adef1c98c">SPFD5420_RAM</a>&#160;&#160;&#160;*(__IO uint16_t *)(<a class="el" href="_stm32_f4_2src_2_l_c_d___s_p_f_d5420_8c.html#a0fe20882cbfdf863e8e9f6c909c5fd52">SPFD5420_BASE</a> + (1 &lt;&lt; 19))</td></tr>
+<tr class="separator:aae76423b841d1eb1207d491adef1c98c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:a40d6a2a87e3a5eb447b9fe8b2a06924c"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_stm32_f4_2src_2_l_c_d___s_p_f_d5420_8c.html#a40d6a2a87e3a5eb447b9fe8b2a06924c">SPFD5420_ReadID</a> (void)</td></tr>
+<tr class="separator:a40d6a2a87e3a5eb447b9fe8b2a06924c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b0c420ed684871c5c73727d10e1f753"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_stm32_f4_2src_2_l_c_d___s_p_f_d5420_8c.html#a3b0c420ed684871c5c73727d10e1f753">SPFD5420_InitHard</a> (void)</td></tr>
+<tr class="separator:a3b0c420ed684871c5c73727d10e1f753"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa83118a0970720d4f9dd9468b0e1e393"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_stm32_f4_2src_2_l_c_d___s_p_f_d5420_8c.html#aa83118a0970720d4f9dd9468b0e1e393">SPFD5420_DispOn</a> (void)</td></tr>
+<tr class="separator:aa83118a0970720d4f9dd9468b0e1e393"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e17eb30421bf5eec6fc1e030c1739bc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_stm32_f4_2src_2_l_c_d___s_p_f_d5420_8c.html#a2e17eb30421bf5eec6fc1e030c1739bc">SPFD5420_DispOff</a> (void)</td></tr>
+<tr class="separator:a2e17eb30421bf5eec6fc1e030c1739bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade5f7afd5ea0dbbd263cb2143d40277c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_stm32_f4_2src_2_l_c_d___s_p_f_d5420_8c.html#ade5f7afd5ea0dbbd263cb2143d40277c">SPFD5420_ClrScr</a> (uint16_t _usColor)</td></tr>
+<tr class="separator:ade5f7afd5ea0dbbd263cb2143d40277c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a575d75601468e7306b03a4e9926b6450"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_stm32_f4_2src_2_l_c_d___s_p_f_d5420_8c.html#a575d75601468e7306b03a4e9926b6450">SPFD5420_PutPixel</a> (uint16_t _usX, uint16_t _usY, uint16_t _usColor)</td></tr>
+<tr class="separator:a575d75601468e7306b03a4e9926b6450"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee8b39a2ef338505cf6596e4f13f2ba6"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_stm32_f4_2src_2_l_c_d___s_p_f_d5420_8c.html#aee8b39a2ef338505cf6596e4f13f2ba6">SPFD5420_GetPixel</a> (uint16_t _usX, uint16_t _usY)</td></tr>
+<tr class="separator:aee8b39a2ef338505cf6596e4f13f2ba6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6bf393e27fe9a0999bec0ff4e45dc4db"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_stm32_f4_2src_2_l_c_d___s_p_f_d5420_8c.html#a6bf393e27fe9a0999bec0ff4e45dc4db">SPFD5420_DrawLine</a> (uint16_t _usX1, uint16_t _usY1, uint16_t _usX2, uint16_t _usY2, uint16_t _usColor)</td></tr>
+<tr class="separator:a6bf393e27fe9a0999bec0ff4e45dc4db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56cedaab14462485fc4adc749e05e0c1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_stm32_f4_2src_2_l_c_d___s_p_f_d5420_8c.html#a56cedaab14462485fc4adc749e05e0c1">SPFD5420_DrawHLine</a> (uint16_t _usX1, uint16_t _usY1, uint16_t _usX2, uint16_t _usColor)</td></tr>
+<tr class="separator:a56cedaab14462485fc4adc749e05e0c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af4c43758b0836a2b31e2a1710c1f353f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_stm32_f4_2src_2_l_c_d___s_p_f_d5420_8c.html#af4c43758b0836a2b31e2a1710c1f353f">SPFD5420_DrawHColorLine</a> (uint16_t _usX1, uint16_t _usY1, uint16_t _usWidth, const uint16_t *_pColor)</td></tr>
+<tr class="separator:af4c43758b0836a2b31e2a1710c1f353f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad87c7cb9f3769e72475347b9e5e31418"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_stm32_f4_2src_2_l_c_d___s_p_f_d5420_8c.html#ad87c7cb9f3769e72475347b9e5e31418">SPFD5420_DrawHTransLine</a> (uint16_t _usX1, uint16_t _usY1, uint16_t _usWidth, const uint16_t *_pColor)</td></tr>
+<tr class="separator:ad87c7cb9f3769e72475347b9e5e31418"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a386c5d27bec1a5502ec144de2509758b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_stm32_f4_2src_2_l_c_d___s_p_f_d5420_8c.html#a386c5d27bec1a5502ec144de2509758b">SPFD5420_DrawRect</a> (uint16_t _usX, uint16_t _usY, uint8_t _usHeight, uint16_t _usWidth, uint16_t _usColor)</td></tr>
+<tr class="separator:a386c5d27bec1a5502ec144de2509758b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b14d49b2e1096f2dbdf0000b739d23f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_stm32_f4_2src_2_l_c_d___s_p_f_d5420_8c.html#a3b14d49b2e1096f2dbdf0000b739d23f">SPFD5420_DrawCircle</a> (uint16_t _usX, uint16_t _usY, uint16_t _usRadius, uint16_t _usColor)</td></tr>
+<tr class="separator:a3b14d49b2e1096f2dbdf0000b739d23f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc42ee543ca3e9277d74a1c71c7d4ede"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_stm32_f4_2src_2_l_c_d___s_p_f_d5420_8c.html#afc42ee543ca3e9277d74a1c71c7d4ede">SPFD5420_DrawBMP</a> (uint16_t _usX, uint16_t _usY, uint16_t _usHeight, uint16_t _usWidth, uint16_t *_ptr)</td></tr>
+<tr class="separator:afc42ee543ca3e9277d74a1c71c7d4ede"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b0116c8f7a1a2d066c387c95c6cbf38"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_stm32_f4_2src_2_l_c_d___s_p_f_d5420_8c.html#a8b0116c8f7a1a2d066c387c95c6cbf38">SPFD5420_SetBackLight</a> (uint8_t _bright)</td></tr>
+<tr class="separator:a8b0116c8f7a1a2d066c387c95c6cbf38"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">宏定义说明</h2>
+<a id="a0fe20882cbfdf863e8e9f6c909c5fd52"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0fe20882cbfdf863e8e9f6c909c5fd52">&#9670;&nbsp;</a></span>SPFD5420_BASE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SPFD5420_BASE&#160;&#160;&#160;((uint32_t)(0x60000000 | 0x00000000))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aae76423b841d1eb1207d491adef1c98c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae76423b841d1eb1207d491adef1c98c">&#9670;&nbsp;</a></span>SPFD5420_RAM</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SPFD5420_RAM&#160;&#160;&#160;*(__IO uint16_t *)(<a class="el" href="_stm32_f4_2src_2_l_c_d___s_p_f_d5420_8c.html#a0fe20882cbfdf863e8e9f6c909c5fd52">SPFD5420_BASE</a> + (1 &lt;&lt; 19))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5c9868426892cbca8ed10bdd9a1a6dc1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5c9868426892cbca8ed10bdd9a1a6dc1">&#9670;&nbsp;</a></span>SPFD5420_REG</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SPFD5420_REG&#160;&#160;&#160;*(__IO uint16_t *)(<a class="el" href="_stm32_f4_2src_2_l_c_d___s_p_f_d5420_8c.html#a0fe20882cbfdf863e8e9f6c909c5fd52">SPFD5420_BASE</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">函数说明</h2>
+<a id="ade5f7afd5ea0dbbd263cb2143d40277c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ade5f7afd5ea0dbbd263cb2143d40277c">&#9670;&nbsp;</a></span>SPFD5420_ClrScr()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SPFD5420_ClrScr </td>
+          <td>(</td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>_usColor</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2e17eb30421bf5eec6fc1e030c1739bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e17eb30421bf5eec6fc1e030c1739bc">&#9670;&nbsp;</a></span>SPFD5420_DispOff()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SPFD5420_DispOff </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa83118a0970720d4f9dd9468b0e1e393"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa83118a0970720d4f9dd9468b0e1e393">&#9670;&nbsp;</a></span>SPFD5420_DispOn()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SPFD5420_DispOn </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afc42ee543ca3e9277d74a1c71c7d4ede"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc42ee543ca3e9277d74a1c71c7d4ede">&#9670;&nbsp;</a></span>SPFD5420_DrawBMP()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SPFD5420_DrawBMP </td>
+          <td>(</td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>_usX</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>_usY</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>_usHeight</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>_usWidth</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t *&#160;</td>
+          <td class="paramname"><em>_ptr</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3b14d49b2e1096f2dbdf0000b739d23f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b14d49b2e1096f2dbdf0000b739d23f">&#9670;&nbsp;</a></span>SPFD5420_DrawCircle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SPFD5420_DrawCircle </td>
+          <td>(</td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>_usX</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>_usY</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>_usRadius</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>_usColor</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af4c43758b0836a2b31e2a1710c1f353f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af4c43758b0836a2b31e2a1710c1f353f">&#9670;&nbsp;</a></span>SPFD5420_DrawHColorLine()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SPFD5420_DrawHColorLine </td>
+          <td>(</td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>_usX1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>_usY1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>_usWidth</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uint16_t *&#160;</td>
+          <td class="paramname"><em>_pColor</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a56cedaab14462485fc4adc749e05e0c1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a56cedaab14462485fc4adc749e05e0c1">&#9670;&nbsp;</a></span>SPFD5420_DrawHLine()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SPFD5420_DrawHLine </td>
+          <td>(</td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>_usX1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>_usY1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>_usX2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>_usColor</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad87c7cb9f3769e72475347b9e5e31418"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad87c7cb9f3769e72475347b9e5e31418">&#9670;&nbsp;</a></span>SPFD5420_DrawHTransLine()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SPFD5420_DrawHTransLine </td>
+          <td>(</td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>_usX1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>_usY1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>_usWidth</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uint16_t *&#160;</td>
+          <td class="paramname"><em>_pColor</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6bf393e27fe9a0999bec0ff4e45dc4db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6bf393e27fe9a0999bec0ff4e45dc4db">&#9670;&nbsp;</a></span>SPFD5420_DrawLine()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SPFD5420_DrawLine </td>
+          <td>(</td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>_usX1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>_usY1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>_usX2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>_usY2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>_usColor</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a386c5d27bec1a5502ec144de2509758b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a386c5d27bec1a5502ec144de2509758b">&#9670;&nbsp;</a></span>SPFD5420_DrawRect()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SPFD5420_DrawRect </td>
+          <td>(</td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>_usX</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>_usY</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>_usHeight</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>_usWidth</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>_usColor</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aee8b39a2ef338505cf6596e4f13f2ba6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee8b39a2ef338505cf6596e4f13f2ba6">&#9670;&nbsp;</a></span>SPFD5420_GetPixel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t SPFD5420_GetPixel </td>
+          <td>(</td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>_usX</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>_usY</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3b0c420ed684871c5c73727d10e1f753"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b0c420ed684871c5c73727d10e1f753">&#9670;&nbsp;</a></span>SPFD5420_InitHard()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SPFD5420_InitHard </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a575d75601468e7306b03a4e9926b6450"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a575d75601468e7306b03a4e9926b6450">&#9670;&nbsp;</a></span>SPFD5420_PutPixel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SPFD5420_PutPixel </td>
+          <td>(</td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>_usX</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>_usY</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>_usColor</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a40d6a2a87e3a5eb447b9fe8b2a06924c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a40d6a2a87e3a5eb447b9fe8b2a06924c">&#9670;&nbsp;</a></span>SPFD5420_ReadID()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t SPFD5420_ReadID </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8b0116c8f7a1a2d066c387c95c6cbf38"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b0116c8f7a1a2d066c387c95c6cbf38">&#9670;&nbsp;</a></span>SPFD5420_SetBackLight()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SPFD5420_SetBackLight </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>_bright</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

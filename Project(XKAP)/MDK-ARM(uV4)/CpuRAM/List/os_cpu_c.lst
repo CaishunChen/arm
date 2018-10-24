@@ -1,0 +1,54 @@
+L 1 "..\..\User\uCOS-III\uCOS-III\Ports\ARM-Cortex-M4\Generic\RealView\os_cpu_c.c"
+N/*
+N*********************************************************************************************************
+N*                                                uC/OS-III
+N*                                          The Real-Time Kernel
+N*
+N*
+N*                           (c) Copyright 2009-2010; Micrium, Inc.; Weston, FL
+N*                    All rights reserved.  Protected by international copyright laws.
+N*
+N*                                           ARM Cortex-M4 Port
+N*
+N* File      : OS_CPU_C.C
+N* Version   : V3.01.2
+N* By        : JJL
+N*             BAN
+N*
+N* LICENSING TERMS:
+N* ---------------
+N*           uC/OS-III is provided in source form for FREE short-term evaluation, for educational use or 
+N*           for peaceful research.  If you plan or intend to use uC/OS-III in a commercial application/
+N*           product then, you need to contact Micrium to properly license uC/OS-III for its use in your 
+N*           application/product.   We provide ALL the source code for your convenience and to help you 
+N*           experience uC/OS-III.  The fact that the source is provided does NOT mean that you can use 
+N*           it commercially without paying a licensing fee.
+N*
+N*           Knowledge of the source code may NOT be used to develop a similar product.
+N*
+N*           Please help us continue to provide the embedded community with the finest software available.
+N*           Your honesty is greatly appreciated.
+N*
+N*           You can contact us at www.micrium.com, or by phone at +1 (954) 217-2036.
+N*
+N* For       : ARMv7 Cortex-M4
+N* Mode      : Thumb-2 ISA
+N* Toolchain : RealView
+N*********************************************************************************************************
+N*/
+N
+N#define   OS_CPU_GLOBALS
+N
+N#ifdef VSC_INCLUDE_SOURCE_FILE_NAMES
+Sconst  CPU_CHAR  *os_cpu_c__c = "$Id: $";
+N#endif
+N
+N/*$PAGE*/
+N/*
+N*********************************************************************************************************
+N*                                             INCLUDE FILES
+N*********************************************************************************************************
+N*/
+N
+C "..\..\User\uCOS-III\uCOS-III\Ports\ARM-Cortex-M4\Generic\RealView\os_cpu_c.c" 52 17 cannot open source input file "os.h": No such file or directory
+N#include  <os.h>

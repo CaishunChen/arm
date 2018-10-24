@@ -1,0 +1,1568 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>xsl: E:/XkapSourceCode/Xkap-Stm32/Xkap-Stm32/User/UserTask/uctsk_RFMS.c 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">xsl
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">源码说明</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.13 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',false,false,'search.php','搜索');
+});
+</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_6d4e12d46ad8519ff7b80e874016d102.html">User</a></li><li class="navelem"><a class="el" href="dir_ba9e781c49be9d79c84eb9994eefebec.html">UserTask</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">结构体</a> &#124;
+<a href="#define-members">宏定义</a> &#124;
+<a href="#typedef-members">类型定义</a> &#124;
+<a href="#func-members">函数</a> &#124;
+<a href="#var-members">变量</a>  </div>
+  <div class="headertitle">
+<div class="title">uctsk_RFMS.c 文件参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="uctsk___r_f_m_s_8h_source.html">uctsk_RFMS.h</a>&quot;</code><br />
+<code>#include &quot;Bsp_Uart.h&quot;</code><br />
+<code>#include &quot;<a class="el" href="uctsk___debug_8h_source.html">uctsk_Debug.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_module___memory_8h_source.html">Module_Memory.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_bsp___cpu_flash_8h_source.html">Bsp_CpuFlash.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_bsp___rtc_8h_source.html">Bsp_Rtc.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_bsp___buzzer_music_8h_source.html">Bsp_BuzzerMusic.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="uctsk___sensor_8h_source.html">uctsk_Sensor.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="qed__cgen_8h_source.html">Qed_cgen.h</a>&quot;</code><br />
+<code>#include &quot;bsp_tft_lcd.h&quot;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+结构体</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_r_f_m_s___s___d_a_t_a___s_a_v_e___t_o___t_f.html">RFMS_S_DATA_SAVE_TO_TF</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_s_l_e_e_p___s___m_a_r_k.html">SLEEP_S_MARK</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+宏定义</h2></td></tr>
+<tr class="memitem:a573baf377c99751931ff2ec6b4a6e832"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___r_f_m_s_8c.html#a573baf377c99751931ff2ec6b4a6e832">UCTSK_RFMS_BUFFERLOOP_BUF_MAX</a>&#160;&#160;&#160;256</td></tr>
+<tr class="separator:a573baf377c99751931ff2ec6b4a6e832"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a21d5a241af068e758a15dc2281415f79"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___r_f_m_s_8c.html#a21d5a241af068e758a15dc2281415f79">UCTSK_RFMS_BUFFERLOOP_NODE_MAX</a>&#160;&#160;&#160;120</td></tr>
+<tr class="separator:a21d5a241af068e758a15dc2281415f79"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b229e576d34f2c73c9ac94c69918aaf"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___r_f_m_s_8c.html#a6b229e576d34f2c73c9ac94c69918aaf">UCTSK_RFMS_BUFFERLOOP1_BUF_MAX</a>&#160;&#160;&#160;256</td></tr>
+<tr class="separator:a6b229e576d34f2c73c9ac94c69918aaf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c17e259167c0bab1fa513c5c4870dd6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___r_f_m_s_8c.html#a2c17e259167c0bab1fa513c5c4870dd6">UCTSK_RFMS_BUFFERLOOP1_NODE_MAX</a>&#160;&#160;&#160;12</td></tr>
+<tr class="separator:a2c17e259167c0bab1fa513c5c4870dd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a88d175ddc0cf3adca82a6db6be389c0b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___r_f_m_s_8c.html#a88d175ddc0cf3adca82a6db6be389c0b">UCTSK_RFMS_POWER_SAVING_ON_TIME_S</a>&#160;&#160;&#160;(60*3)</td></tr>
+<tr class="separator:a88d175ddc0cf3adca82a6db6be389c0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a67d4f1d66003fac72d11d2a0d8279740"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___r_f_m_s_8c.html#a67d4f1d66003fac72d11d2a0d8279740">UCTSK_RFMS_POWER_SAVING_MAX_VALUE</a>&#160;&#160;&#160;(15000)</td></tr>
+<tr class="separator:a67d4f1d66003fac72d11d2a0d8279740"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a958e4508ed28ee5cc04249144312c15f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___r_f_m_s_8c.html#a958e4508ed28ee5cc04249144312c15f">M_PI_2</a>&#160;&#160;&#160;1.5707963267948966</td></tr>
+<tr class="separator:a958e4508ed28ee5cc04249144312c15f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c5fa62f70045a88775fc7342a1be2cf"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___r_f_m_s_8c.html#a0c5fa62f70045a88775fc7342a1be2cf">CORR_NUM</a>&#160;&#160;&#160;1800</td></tr>
+<tr class="separator:a0c5fa62f70045a88775fc7342a1be2cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a306d1caf5754197c11db622b53da271e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___r_f_m_s_8c.html#a306d1caf5754197c11db622b53da271e">SN_TH</a>&#160;&#160;&#160;0.35f</td></tr>
+<tr class="separator:a306d1caf5754197c11db622b53da271e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+类型定义</h2></td></tr>
+<tr class="memitem:aba192eeeafd6400b6b09531bc85a3e57"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="struct_r_f_m_s___s___d_a_t_a___s_a_v_e___t_o___t_f.html">RFMS_S_DATA_SAVE_TO_TF</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___r_f_m_s_8c.html#aba192eeeafd6400b6b09531bc85a3e57">RFMS_S_DATA_SAVE_TO_TF</a></td></tr>
+<tr class="separator:aba192eeeafd6400b6b09531bc85a3e57"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a172217282d7a1671a708a0f0dbd003f5"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="struct_s_l_e_e_p___s___m_a_r_k.html">SLEEP_S_MARK</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___r_f_m_s_8c.html#a172217282d7a1671a708a0f0dbd003f5">SLEEP_S_MARK</a></td></tr>
+<tr class="separator:a172217282d7a1671a708a0f0dbd003f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:a5732030b12ed1fc87bcd9703a546123a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___r_f_m_s_8c.html#a5732030b12ed1fc87bcd9703a546123a">MODULE_OS_TASK_TAB</a> (AppTaskRfmsTCB)</td></tr>
+<tr class="separator:a5732030b12ed1fc87bcd9703a546123a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af268b713fbf0d0d4f9ab3a3825b32707"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___r_f_m_s_8c.html#af268b713fbf0d0d4f9ab3a3825b32707">MODULE_OS_TASK_STK</a> (App_TaskRfmsStk, <a class="el" href="app__os__cfg_8h.html#a126153d745aa24cc0d0d13e55e9a9654">APP_TASK_RFMS_STK_SIZE</a>)</td></tr>
+<tr class="separator:af268b713fbf0d0d4f9ab3a3825b32707"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c9b3ecdfc54e775dcfe207a63df0885"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___r_f_m_s_8c.html#a9c9b3ecdfc54e775dcfe207a63df0885">MODULE_OS_TASK_TAB</a> (AppTaskRfmsTxTCB)</td></tr>
+<tr class="separator:a9c9b3ecdfc54e775dcfe207a63df0885"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7fa516d38b5f8d4fc8d0a0710c3cf1a3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___r_f_m_s_8c.html#a7fa516d38b5f8d4fc8d0a0710c3cf1a3">MODULE_OS_TASK_STK</a> (App_TaskRfmsTxStk, <a class="el" href="app__os__cfg_8h.html#ab7437816bb924e7135c320bf480b6d84">APP_TASK_RFMS_TX_STK_SIZE</a>)</td></tr>
+<tr class="separator:a7fa516d38b5f8d4fc8d0a0710c3cf1a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a325cc9df6bb873a7bc094e072eabaa5c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___r_f_m_s_8c.html#a325cc9df6bb873a7bc094e072eabaa5c">MODULE_OS_TASK_TAB</a> (AppTaskRfmsTestTCB)</td></tr>
+<tr class="separator:a325cc9df6bb873a7bc094e072eabaa5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a511414be17bd382cd75bac99a332e62f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___r_f_m_s_8c.html#a511414be17bd382cd75bac99a332e62f">MODULE_OS_TASK_STK</a> (App_TaskRfmsTestStk, <a class="el" href="app__os__cfg_8h.html#ac9bc5441ee8169db9cc119d49b9b976e">APP_TASK_RFMS_TEST_STK_SIZE</a>)</td></tr>
+<tr class="separator:a511414be17bd382cd75bac99a332e62f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a598c473302e2c763daee0f83428a0ed3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___r_f_m_s_8c.html#a598c473302e2c763daee0f83428a0ed3">MODULE_OS_SEM</a> (UctskRfms_Sem_Rx)</td></tr>
+<tr class="separator:a598c473302e2c763daee0f83428a0ed3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af6f7714c4acc296f687c659b57aeee15"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___r_f_m_s_8c.html#af6f7714c4acc296f687c659b57aeee15">MODULE_OS_SEM</a> (UctskRfms_Sem_Tx)</td></tr>
+<tr class="separator:af6f7714c4acc296f687c659b57aeee15"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a029466ecb85b7f3eb5064a119efe0eeb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___r_f_m_s_8c.html#a029466ecb85b7f3eb5064a119efe0eeb">MODULE_OS_SEM</a> (UctskRfms_Sem_GetFileData)</td></tr>
+<tr class="separator:a029466ecb85b7f3eb5064a119efe0eeb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a181f9d6e9a02463f489ce37814a12cde"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___r_f_m_s_8c.html#a181f9d6e9a02463f489ce37814a12cde">uctsk_Rfms_GetRunState</a> (void)</td></tr>
+<tr class="separator:a181f9d6e9a02463f489ce37814a12cde"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa9842b304e6941c109fa95a9d3367a66"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___r_f_m_s_8c.html#aa9842b304e6941c109fa95a9d3367a66">uctsk_Rfms_SetRunState</a> (uint8_t state)</td></tr>
+<tr class="separator:aa9842b304e6941c109fa95a9d3367a66"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af789033b42d2b14fb1359f6fccd9e069"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___r_f_m_s_8c.html#af789033b42d2b14fb1359f6fccd9e069">uctsk_Rfms_RxIrq</a> (uint8_t *pbuf, uint16_t len)</td></tr>
+<tr class="separator:af789033b42d2b14fb1359f6fccd9e069"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa9f757cc791d503db15e2c9b331103ff"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___r_f_m_s_8c.html#aa9f757cc791d503db15e2c9b331103ff">uctsk_Rfms_PowerOnOff</a> (uint8_t OnOff)</td></tr>
+<tr class="separator:aa9f757cc791d503db15e2c9b331103ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ec55797a5cc946c11e4154bd3a7c4fe"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___r_f_m_s_8c.html#a8ec55797a5cc946c11e4154bd3a7c4fe">uctsk_Rfms_SetOnOff</a> (uint8_t OnOff, uint8_t ManualOrAuto)</td></tr>
+<tr class="separator:a8ec55797a5cc946c11e4154bd3a7c4fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58331f962c51dc076d26374366f73212"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___r_f_m_s_8c.html#a58331f962c51dc076d26374366f73212">uctsk_Rfms_1mS</a> (void)</td></tr>
+<tr class="separator:a58331f962c51dc076d26374366f73212"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a328322e378a83d8d8ae2f51f280b22aa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___r_f_m_s_8c.html#a328322e378a83d8d8ae2f51f280b22aa">uctsk_Rfms_DataStream_DebugTestOnOff</a> (uint8_t OnOff)</td></tr>
+<tr class="separator:a328322e378a83d8d8ae2f51f280b22aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b66d7dd32a00c85bc6d77f0b7a8843e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___r_f_m_s_8c.html#a7b66d7dd32a00c85bc6d77f0b7a8843e">uctsk_Rfms_WaveStream_DebugTestOnOff</a> (uint8_t OnOff)</td></tr>
+<tr class="separator:a7b66d7dd32a00c85bc6d77f0b7a8843e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94772929239ce84703e12c0325265a98"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___r_f_m_s_8c.html#a94772929239ce84703e12c0325265a98">uctsk_Rfms_FinalData_DebugTestOnOff</a> (uint8_t OnOff)</td></tr>
+<tr class="separator:a94772929239ce84703e12c0325265a98"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06bf46631e367ef9499abd4e633cc1aa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___r_f_m_s_8c.html#a06bf46631e367ef9499abd4e633cc1aa">uctsk_Rfms_RunFileData_DebugTestOnOff</a> (uint8_t OnOff)</td></tr>
+<tr class="separator:a06bf46631e367ef9499abd4e633cc1aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab68dfb414a900f6d3e1d1a041dffe40f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___r_f_m_s_8c.html#ab68dfb414a900f6d3e1d1a041dffe40f">App_RfmsTaskCreate</a> (void)</td></tr>
+<tr class="separator:ab68dfb414a900f6d3e1d1a041dffe40f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab179de0d8c82e2447b2718ba10e1f26e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___r_f_m_s_8c.html#ab179de0d8c82e2447b2718ba10e1f26e">App_RfmsTaskTestCreate</a> (void)</td></tr>
+<tr class="separator:ab179de0d8c82e2447b2718ba10e1f26e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa7f473f8afab1371f3915c67a3487659"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___r_f_m_s_8c.html#aa7f473f8afab1371f3915c67a3487659">App_RfmsTaskTxCreate</a> (void)</td></tr>
+<tr class="separator:aa7f473f8afab1371f3915c67a3487659"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a482499c49312e22b7e8a78fa0b29b403"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___r_f_m_s_8c.html#a482499c49312e22b7e8a78fa0b29b403">Arithmetic_AI</a> (unsigned char *s, unsigned char length)</td></tr>
+<tr class="separator:a482499c49312e22b7e8a78fa0b29b403"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d9bce0dac72db4ebd4bb29183690cdb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___r_f_m_s_8c.html#a8d9bce0dac72db4ebd4bb29183690cdb">uctsk_Rfms_Interpolation_Proc</a> (uint8_t *source, uint8_t *parameter, uint8_t *destination, uint8_t length, uint8_t <a class="el" href="main___soft_test_8c.html#ac6afabdc09a49a433ee19d8a9486056d">min</a>, float coeff, uint8_t endMark)</td></tr>
+<tr class="separator:a8d9bce0dac72db4ebd4bb29183690cdb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5887381368b10e893c8e0ae11bbb5da1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___r_f_m_s_8c.html#a5887381368b10e893c8e0ae11bbb5da1">uctsk_Rfms_Average_Proc</a> (uint8_t *valueArray, uint8_t average, uint16_t *coordirateArray, uint16_t centerCoordinate, uint16_t limit, uint8_t length, uint8_t endMark, float step)</td></tr>
+<tr class="separator:a5887381368b10e893c8e0ae11bbb5da1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8817028a8bb60803cb1509108d225f21"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___r_f_m_s_8c.html#a8817028a8bb60803cb1509108d225f21">uctsk_Rfms_DataSaveToTf_100ms</a> (void)</td></tr>
+<tr class="separator:a8817028a8bb60803cb1509108d225f21"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a010e4b4380d4c34b46aef83fc69dc887"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___r_f_m_s_8c.html#a010e4b4380d4c34b46aef83fc69dc887">uctsk_RfmsSetSleepLevelBeforeAlarm</a> (void)</td></tr>
+<tr class="separator:a010e4b4380d4c34b46aef83fc69dc887"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e256ee0a6f4ee62f9747ec6e516f151"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___r_f_m_s_8c.html#a7e256ee0a6f4ee62f9747ec6e516f151">uctsk_Rfms_BufferLoop1Pop</a> (uint8_t *pbuf, uint16_t *plen)</td></tr>
+<tr class="separator:a7e256ee0a6f4ee62f9747ec6e516f151"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc67e343bc2d3b063cccfdabc0fb9e39"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___r_f_m_s_8c.html#abc67e343bc2d3b063cccfdabc0fb9e39">uctsk_Rfms_KeepBodyMoveIndex</a> (struct tm *p_tm, uint8_t *p_buf, uint8_t *index)</td></tr>
+<tr class="separator:abc67e343bc2d3b063cccfdabc0fb9e39"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad8c6150d6ae9f0252fa25fe82664964"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___r_f_m_s_8c.html#aad8c6150d6ae9f0252fa25fe82664964">uctsk_Rfms_KeepBodyMove_GetFinalInfo</a> (struct tm *p_tm, uint8_t *pOutbuf)</td></tr>
+<tr class="separator:aad8c6150d6ae9f0252fa25fe82664964"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+变量</h2></td></tr>
+<tr class="memitem:affff027bd0c1c11f539907827c11dc42"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___r_f_m_s_8c.html#affff027bd0c1c11f539907827c11dc42">UctskRfms_BufferLoopAllErrCmt</a> =0</td></tr>
+<tr class="separator:affff027bd0c1c11f539907827c11dc42"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f1f58f8962829fee58825e6f172628f"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___r_f_m_s_8c.html#a1f1f58f8962829fee58825e6f172628f">UctskRfms_BufferLoopMaxErrCmt</a> =0</td></tr>
+<tr class="separator:a1f1f58f8962829fee58825e6f172628f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6540f300ed9d7157880ab0c3845826a2"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___r_f_m_s_8c.html#a6540f300ed9d7157880ab0c3845826a2">Uctsk_Rfms_RunFileData_DebugTest_Enable</a> = <a class="el" href="includes_8h.html#a29e413f6725b2ba32d165ffaa35b01e5">OFF</a></td></tr>
+<tr class="separator:a6540f300ed9d7157880ab0c3845826a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa645519acf1147dfe5f7f51c4cfca6c4"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___r_f_m_s_8c.html#aa645519acf1147dfe5f7f51c4cfca6c4">Uctsk_Rfms_RxZeroCmtInfo</a> = 0</td></tr>
+<tr class="separator:aa645519acf1147dfe5f7f51c4cfca6c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b320be877a650ac74da86edbd9271dd"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___r_f_m_s_8c.html#a6b320be877a650ac74da86edbd9271dd">Uctsk_Rfms_PowerSavingTimer_s</a> = <a class="el" href="uctsk___r_f_m_s_8c.html#a88d175ddc0cf3adca82a6db6be389c0b">UCTSK_RFMS_POWER_SAVING_ON_TIME_S</a></td></tr>
+<tr class="separator:a6b320be877a650ac74da86edbd9271dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae32bf7293b8037f7187bcc3c88d970a9"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___r_f_m_s_8c.html#ae32bf7293b8037f7187bcc3c88d970a9">uctsk_Rfms_PowerSavingOff</a> = 0</td></tr>
+<tr class="separator:ae32bf7293b8037f7187bcc3c88d970a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66e45997046d208e5af74b9a25caa2d3"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___r_f_m_s_8c.html#a66e45997046d208e5af74b9a25caa2d3">uctsk_Rfms_TxNum</a> =0</td></tr>
+<tr class="separator:a66e45997046d208e5af74b9a25caa2d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9367da785ff9237c504c6e04dee816fa"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___r_f_m_s_8c.html#a9367da785ff9237c504c6e04dee816fa">uctsk_Rfms_RxNum</a> =0</td></tr>
+<tr class="separator:a9367da785ff9237c504c6e04dee816fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb661bcb429333cdfb7927cb8b150dce"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___r_f_m_s_8c.html#aeb661bcb429333cdfb7927cb8b150dce">uctsk_Rfms_MonitorRxNum</a> =0</td></tr>
+<tr class="separator:aeb661bcb429333cdfb7927cb8b150dce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4145f02aa0765b119eef0a04c71323b0"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___r_f_m_s_8c.html#a4145f02aa0765b119eef0a04c71323b0">uctsk_Rfms_RxValue</a> =0</td></tr>
+<tr class="separator:a4145f02aa0765b119eef0a04c71323b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a84c4132dfb460507fab80a98d79e4d05"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___r_f_m_s_8c.html#a84c4132dfb460507fab80a98d79e4d05">uctsk_SmartAlarmRunBitmap</a> =0</td></tr>
+<tr class="separator:a84c4132dfb460507fab80a98d79e4d05"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec42b0f8124eefd5c519a9e1f11312d9"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___r_f_m_s_8c.html#aec42b0f8124eefd5c519a9e1f11312d9">uctsk_CurrentSleepLevel</a> =0</td></tr>
+<tr class="separator:aec42b0f8124eefd5c519a9e1f11312d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af382fba96416ba1ca4e82e55a6011b07"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___r_f_m_s_8c.html#af382fba96416ba1ca4e82e55a6011b07">uctsk_Rfms_Err</a> =0</td></tr>
+<tr class="separator:af382fba96416ba1ca4e82e55a6011b07"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a448ecd30570ea8318da606abe1ed4224"><td class="memItemLeft" align="right" valign="top">MODULE_MEMORY_S_DAY_INFO&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___r_f_m_s_8c.html#a448ecd30570ea8318da606abe1ed4224">uctsk_Rfms_s_DayInfo</a></td></tr>
+<tr class="separator:a448ecd30570ea8318da606abe1ed4224"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4fea7f2b9edeb663eae730681aaa920e"><td class="memItemLeft" align="right" valign="top">MODULE_MEMORY_S_DAY_SLEEPLEVEL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___r_f_m_s_8c.html#a4fea7f2b9edeb663eae730681aaa920e">uctsk_Rfms_s_DaySleepLevel</a></td></tr>
+<tr class="separator:a4fea7f2b9edeb663eae730681aaa920e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acea65d8e56f6545c7d4966dddea9ee48"><td class="memItemLeft" align="right" valign="top">MODULE_MEMORY_S_DAY_BREATH&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___r_f_m_s_8c.html#acea65d8e56f6545c7d4966dddea9ee48">uctsk_Rfms_s_DayBreath</a></td></tr>
+<tr class="separator:acea65d8e56f6545c7d4966dddea9ee48"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12a0913b897ae29e8062f2a1b2450817"><td class="memItemLeft" align="right" valign="top">MODULE_MEMORY_S_DAY_HEARTRATE&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___r_f_m_s_8c.html#a12a0913b897ae29e8062f2a1b2450817">uctsk_Rfms_s_HeartRate</a></td></tr>
+<tr class="separator:a12a0913b897ae29e8062f2a1b2450817"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a57298946b5977d078591d4e6b92cf5bd"><td class="memItemLeft" align="right" valign="top">MODULE_MEMORY_S_DAY_BODYMOVE&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___r_f_m_s_8c.html#a57298946b5977d078591d4e6b92cf5bd">uctsk_Rfms_s_BodyMove</a></td></tr>
+<tr class="separator:a57298946b5977d078591d4e6b92cf5bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a510303e8ea5ea703b0b3e64656e0a8b8"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___r_f_m_s_8c.html#a510303e8ea5ea703b0b3e64656e0a8b8">uctsk_Rfms_ExtFlashReadSign</a> =0</td></tr>
+<tr class="separator:a510303e8ea5ea703b0b3e64656e0a8b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86733de05619e67d9b2b2f86f948873c"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___r_f_m_s_8c.html#a86733de05619e67d9b2b2f86f948873c">uctsk_Rfms_Hardware</a> =0</td></tr>
+<tr class="separator:a86733de05619e67d9b2b2f86f948873c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64e9c26f8609d87dc8bba5e9b409bb42"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___r_f_m_s_8c.html#a64e9c26f8609d87dc8bba5e9b409bb42">uctsk_Rfms_Software</a> =0</td></tr>
+<tr class="separator:a64e9c26f8609d87dc8bba5e9b409bb42"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7280690493f21f551ba31d3cf8c7ee50"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___r_f_m_s_8c.html#a7280690493f21f551ba31d3cf8c7ee50">uctsk_Rfms_NoBodyThresholdValue</a> = 0</td></tr>
+<tr class="separator:a7280690493f21f551ba31d3cf8c7ee50"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad6c3cff540cabd7c3572952a289cd8b4"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___r_f_m_s_8c.html#ad6c3cff540cabd7c3572952a289cd8b4">uctsk_Rfms_NoBodyThresholdVTimerS</a> = 0</td></tr>
+<tr class="separator:ad6c3cff540cabd7c3572952a289cd8b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af3f9455ba140b7b7c0703dcd4ac01a45"><td class="memItemLeft" align="right" valign="top">struct tm&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___r_f_m_s_8c.html#af3f9455ba140b7b7c0703dcd4ac01a45">CurrentDate</a></td></tr>
+<tr class="separator:af3f9455ba140b7b7c0703dcd4ac01a45"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c667591b5571387e00dc0f39332bb36"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_u_c_t_s_k___s___m_o_v_e___p_o_w_e_r.html">UCTSK_S_MOVE_POWER</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___r_f_m_s_8c.html#a7c667591b5571387e00dc0f39332bb36">uctsk_s_RfmsMovePower</a></td></tr>
+<tr class="separator:a7c667591b5571387e00dc0f39332bb36"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a859142213e0dc4cd2e21661fd3437bea"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___r_f_m_s_8c.html#a859142213e0dc4cd2e21661fd3437bea">uctsk_Rfms_ExRxNumBuf</a> [6] = {0}</td></tr>
+<tr class="separator:a859142213e0dc4cd2e21661fd3437bea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab6e83310cb63734925dd400d4bc54b82"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___r_f_m_s_8c.html#ab6e83310cb63734925dd400d4bc54b82">dataInitCnt</a> =0</td></tr>
+<tr class="separator:ab6e83310cb63734925dd400d4bc54b82"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ec5570083ad3064d4607cd07adb76f4"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___r_f_m_s_8c.html#a8ec5570083ad3064d4607cd07adb76f4">UctskRfms_TestfileDataNum</a> =0</td></tr>
+<tr class="separator:a8ec5570083ad3064d4607cd07adb76f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5d3c05c715fce1d6fdc07e368cd4ed9"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___r_f_m_s_8c.html#ae5d3c05c715fce1d6fdc07e368cd4ed9">UctskRfms_TestfileDataAllByteNum</a> =0</td></tr>
+<tr class="separator:ae5d3c05c715fce1d6fdc07e368cd4ed9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a24366a136ebbb4033802f234a823d043"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_biquad_sections.html">BiquadSections</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___r_f_m_s_8c.html#a24366a136ebbb4033802f234a823d043">IIR_Breath_BPF</a></td></tr>
+<tr class="separator:a24366a136ebbb4033802f234a823d043"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d2348284fe9d98fa6becc0c3512e35f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_biquad_sections.html">BiquadSections</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___r_f_m_s_8c.html#a1d2348284fe9d98fa6becc0c3512e35f">IIR_Heart_BPF</a></td></tr>
+<tr class="separator:a1d2348284fe9d98fa6becc0c3512e35f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5080bfe203219333b8b0575e3382007c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_u_c_t_s_k___s___m_o_v_e___p_o_w_e_r.html">UCTSK_S_MOVE_POWER</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___r_f_m_s_8c.html#a5080bfe203219333b8b0575e3382007c">uctsk_s_MovePower</a></td></tr>
+<tr class="separator:a5080bfe203219333b8b0575e3382007c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">宏定义说明</h2>
+<a id="a0c5fa62f70045a88775fc7342a1be2cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c5fa62f70045a88775fc7342a1be2cf">&#9670;&nbsp;</a></span>CORR_NUM</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CORR_NUM&#160;&#160;&#160;1800</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a958e4508ed28ee5cc04249144312c15f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a958e4508ed28ee5cc04249144312c15f">&#9670;&nbsp;</a></span>M_PI_2</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define M_PI_2&#160;&#160;&#160;1.5707963267948966</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a306d1caf5754197c11db622b53da271e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a306d1caf5754197c11db622b53da271e">&#9670;&nbsp;</a></span>SN_TH</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SN_TH&#160;&#160;&#160;0.35f</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6b229e576d34f2c73c9ac94c69918aaf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6b229e576d34f2c73c9ac94c69918aaf">&#9670;&nbsp;</a></span>UCTSK_RFMS_BUFFERLOOP1_BUF_MAX</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define UCTSK_RFMS_BUFFERLOOP1_BUF_MAX&#160;&#160;&#160;256</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2c17e259167c0bab1fa513c5c4870dd6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2c17e259167c0bab1fa513c5c4870dd6">&#9670;&nbsp;</a></span>UCTSK_RFMS_BUFFERLOOP1_NODE_MAX</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define UCTSK_RFMS_BUFFERLOOP1_NODE_MAX&#160;&#160;&#160;12</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a573baf377c99751931ff2ec6b4a6e832"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a573baf377c99751931ff2ec6b4a6e832">&#9670;&nbsp;</a></span>UCTSK_RFMS_BUFFERLOOP_BUF_MAX</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define UCTSK_RFMS_BUFFERLOOP_BUF_MAX&#160;&#160;&#160;256</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a21d5a241af068e758a15dc2281415f79"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a21d5a241af068e758a15dc2281415f79">&#9670;&nbsp;</a></span>UCTSK_RFMS_BUFFERLOOP_NODE_MAX</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define UCTSK_RFMS_BUFFERLOOP_NODE_MAX&#160;&#160;&#160;120</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a67d4f1d66003fac72d11d2a0d8279740"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a67d4f1d66003fac72d11d2a0d8279740">&#9670;&nbsp;</a></span>UCTSK_RFMS_POWER_SAVING_MAX_VALUE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define UCTSK_RFMS_POWER_SAVING_MAX_VALUE&#160;&#160;&#160;(15000)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a88d175ddc0cf3adca82a6db6be389c0b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a88d175ddc0cf3adca82a6db6be389c0b">&#9670;&nbsp;</a></span>UCTSK_RFMS_POWER_SAVING_ON_TIME_S</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define UCTSK_RFMS_POWER_SAVING_ON_TIME_S&#160;&#160;&#160;(60*3)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">类型定义说明</h2>
+<a id="aba192eeeafd6400b6b09531bc85a3e57"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aba192eeeafd6400b6b09531bc85a3e57">&#9670;&nbsp;</a></span>RFMS_S_DATA_SAVE_TO_TF</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="struct_r_f_m_s___s___d_a_t_a___s_a_v_e___t_o___t_f.html">RFMS_S_DATA_SAVE_TO_TF</a>  <a class="el" href="struct_r_f_m_s___s___d_a_t_a___s_a_v_e___t_o___t_f.html">RFMS_S_DATA_SAVE_TO_TF</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a172217282d7a1671a708a0f0dbd003f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a172217282d7a1671a708a0f0dbd003f5">&#9670;&nbsp;</a></span>SLEEP_S_MARK</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="struct_s_l_e_e_p___s___m_a_r_k.html">SLEEP_S_MARK</a>  <a class="el" href="struct_s_l_e_e_p___s___m_a_r_k.html">SLEEP_S_MARK</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">函数说明</h2>
+<a id="ab68dfb414a900f6d3e1d1a041dffe40f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab68dfb414a900f6d3e1d1a041dffe40f">&#9670;&nbsp;</a></span>App_RfmsTaskCreate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void App_RfmsTaskCreate </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab179de0d8c82e2447b2718ba10e1f26e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab179de0d8c82e2447b2718ba10e1f26e">&#9670;&nbsp;</a></span>App_RfmsTaskTestCreate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void App_RfmsTaskTestCreate </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa7f473f8afab1371f3915c67a3487659"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa7f473f8afab1371f3915c67a3487659">&#9670;&nbsp;</a></span>App_RfmsTaskTxCreate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void App_RfmsTaskTxCreate </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a482499c49312e22b7e8a78fa0b29b403"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a482499c49312e22b7e8a78fa0b29b403">&#9670;&nbsp;</a></span>Arithmetic_AI()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Arithmetic_AI </td>
+          <td>(</td>
+          <td class="paramtype">unsigned char *&#160;</td>
+          <td class="paramname"><em>s</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned char&#160;</td>
+          <td class="paramname"><em>length</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a598c473302e2c763daee0f83428a0ed3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a598c473302e2c763daee0f83428a0ed3">&#9670;&nbsp;</a></span>MODULE_OS_SEM() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MODULE_OS_SEM </td>
+          <td>(</td>
+          <td class="paramtype">UctskRfms_Sem_Rx&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af6f7714c4acc296f687c659b57aeee15"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af6f7714c4acc296f687c659b57aeee15">&#9670;&nbsp;</a></span>MODULE_OS_SEM() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MODULE_OS_SEM </td>
+          <td>(</td>
+          <td class="paramtype">UctskRfms_Sem_Tx&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a029466ecb85b7f3eb5064a119efe0eeb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a029466ecb85b7f3eb5064a119efe0eeb">&#9670;&nbsp;</a></span>MODULE_OS_SEM() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MODULE_OS_SEM </td>
+          <td>(</td>
+          <td class="paramtype">UctskRfms_Sem_GetFileData&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af268b713fbf0d0d4f9ab3a3825b32707"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af268b713fbf0d0d4f9ab3a3825b32707">&#9670;&nbsp;</a></span>MODULE_OS_TASK_STK() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MODULE_OS_TASK_STK </td>
+          <td>(</td>
+          <td class="paramtype">App_TaskRfmsStk&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="app__os__cfg_8h.html#a126153d745aa24cc0d0d13e55e9a9654">APP_TASK_RFMS_STK_SIZE</a>&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7fa516d38b5f8d4fc8d0a0710c3cf1a3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7fa516d38b5f8d4fc8d0a0710c3cf1a3">&#9670;&nbsp;</a></span>MODULE_OS_TASK_STK() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MODULE_OS_TASK_STK </td>
+          <td>(</td>
+          <td class="paramtype">App_TaskRfmsTxStk&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="app__os__cfg_8h.html#ab7437816bb924e7135c320bf480b6d84">APP_TASK_RFMS_TX_STK_SIZE</a>&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a511414be17bd382cd75bac99a332e62f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a511414be17bd382cd75bac99a332e62f">&#9670;&nbsp;</a></span>MODULE_OS_TASK_STK() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MODULE_OS_TASK_STK </td>
+          <td>(</td>
+          <td class="paramtype">App_TaskRfmsTestStk&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="app__os__cfg_8h.html#ac9bc5441ee8169db9cc119d49b9b976e">APP_TASK_RFMS_TEST_STK_SIZE</a>&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5732030b12ed1fc87bcd9703a546123a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5732030b12ed1fc87bcd9703a546123a">&#9670;&nbsp;</a></span>MODULE_OS_TASK_TAB() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MODULE_OS_TASK_TAB </td>
+          <td>(</td>
+          <td class="paramtype">AppTaskRfmsTCB&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9c9b3ecdfc54e775dcfe207a63df0885"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c9b3ecdfc54e775dcfe207a63df0885">&#9670;&nbsp;</a></span>MODULE_OS_TASK_TAB() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MODULE_OS_TASK_TAB </td>
+          <td>(</td>
+          <td class="paramtype">AppTaskRfmsTxTCB&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a325cc9df6bb873a7bc094e072eabaa5c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a325cc9df6bb873a7bc094e072eabaa5c">&#9670;&nbsp;</a></span>MODULE_OS_TASK_TAB() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MODULE_OS_TASK_TAB </td>
+          <td>(</td>
+          <td class="paramtype">AppTaskRfmsTestTCB&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a58331f962c51dc076d26374366f73212"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a58331f962c51dc076d26374366f73212">&#9670;&nbsp;</a></span>uctsk_Rfms_1mS()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void uctsk_Rfms_1mS </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5887381368b10e893c8e0ae11bbb5da1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5887381368b10e893c8e0ae11bbb5da1">&#9670;&nbsp;</a></span>uctsk_Rfms_Average_Proc()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void uctsk_Rfms_Average_Proc </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>valueArray</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>average</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t *&#160;</td>
+          <td class="paramname"><em>coordirateArray</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>centerCoordinate</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>limit</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>length</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>endMark</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>step</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7e256ee0a6f4ee62f9747ec6e516f151"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e256ee0a6f4ee62f9747ec6e516f151">&#9670;&nbsp;</a></span>uctsk_Rfms_BufferLoop1Pop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t uctsk_Rfms_BufferLoop1Pop </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>pbuf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t *&#160;</td>
+          <td class="paramname"><em>plen</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8817028a8bb60803cb1509108d225f21"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8817028a8bb60803cb1509108d225f21">&#9670;&nbsp;</a></span>uctsk_Rfms_DataSaveToTf_100ms()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void uctsk_Rfms_DataSaveToTf_100ms </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a328322e378a83d8d8ae2f51f280b22aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a328322e378a83d8d8ae2f51f280b22aa">&#9670;&nbsp;</a></span>uctsk_Rfms_DataStream_DebugTestOnOff()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void uctsk_Rfms_DataStream_DebugTestOnOff </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>OnOff</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a94772929239ce84703e12c0325265a98"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a94772929239ce84703e12c0325265a98">&#9670;&nbsp;</a></span>uctsk_Rfms_FinalData_DebugTestOnOff()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void uctsk_Rfms_FinalData_DebugTestOnOff </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>OnOff</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a181f9d6e9a02463f489ce37814a12cde"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a181f9d6e9a02463f489ce37814a12cde">&#9670;&nbsp;</a></span>uctsk_Rfms_GetRunState()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t uctsk_Rfms_GetRunState </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8d9bce0dac72db4ebd4bb29183690cdb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d9bce0dac72db4ebd4bb29183690cdb">&#9670;&nbsp;</a></span>uctsk_Rfms_Interpolation_Proc()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void uctsk_Rfms_Interpolation_Proc </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>source</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>parameter</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>destination</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>length</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>min</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>coeff</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>endMark</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aad8c6150d6ae9f0252fa25fe82664964"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aad8c6150d6ae9f0252fa25fe82664964">&#9670;&nbsp;</a></span>uctsk_Rfms_KeepBodyMove_GetFinalInfo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t uctsk_Rfms_KeepBodyMove_GetFinalInfo </td>
+          <td>(</td>
+          <td class="paramtype">struct tm *&#160;</td>
+          <td class="paramname"><em>p_tm</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>pOutbuf</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abc67e343bc2d3b063cccfdabc0fb9e39"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc67e343bc2d3b063cccfdabc0fb9e39">&#9670;&nbsp;</a></span>uctsk_Rfms_KeepBodyMoveIndex()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t uctsk_Rfms_KeepBodyMoveIndex </td>
+          <td>(</td>
+          <td class="paramtype">struct tm *&#160;</td>
+          <td class="paramname"><em>p_tm</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>p_buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>index</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa9f757cc791d503db15e2c9b331103ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa9f757cc791d503db15e2c9b331103ff">&#9670;&nbsp;</a></span>uctsk_Rfms_PowerOnOff()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void uctsk_Rfms_PowerOnOff </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>OnOff</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a06bf46631e367ef9499abd4e633cc1aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a06bf46631e367ef9499abd4e633cc1aa">&#9670;&nbsp;</a></span>uctsk_Rfms_RunFileData_DebugTestOnOff()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void uctsk_Rfms_RunFileData_DebugTestOnOff </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>OnOff</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af789033b42d2b14fb1359f6fccd9e069"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af789033b42d2b14fb1359f6fccd9e069">&#9670;&nbsp;</a></span>uctsk_Rfms_RxIrq()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void uctsk_Rfms_RxIrq </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>pbuf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>len</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8ec55797a5cc946c11e4154bd3a7c4fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ec55797a5cc946c11e4154bd3a7c4fe">&#9670;&nbsp;</a></span>uctsk_Rfms_SetOnOff()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void uctsk_Rfms_SetOnOff </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>OnOff</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>ManualOrAuto</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa9842b304e6941c109fa95a9d3367a66"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa9842b304e6941c109fa95a9d3367a66">&#9670;&nbsp;</a></span>uctsk_Rfms_SetRunState()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void uctsk_Rfms_SetRunState </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>state</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7b66d7dd32a00c85bc6d77f0b7a8843e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b66d7dd32a00c85bc6d77f0b7a8843e">&#9670;&nbsp;</a></span>uctsk_Rfms_WaveStream_DebugTestOnOff()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void uctsk_Rfms_WaveStream_DebugTestOnOff </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>OnOff</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a010e4b4380d4c34b46aef83fc69dc887"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a010e4b4380d4c34b46aef83fc69dc887">&#9670;&nbsp;</a></span>uctsk_RfmsSetSleepLevelBeforeAlarm()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void uctsk_RfmsSetSleepLevelBeforeAlarm </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">变量说明</h2>
+<a id="af3f9455ba140b7b7c0703dcd4ac01a45"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af3f9455ba140b7b7c0703dcd4ac01a45">&#9670;&nbsp;</a></span>CurrentDate</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct tm CurrentDate</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab6e83310cb63734925dd400d4bc54b82"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab6e83310cb63734925dd400d4bc54b82">&#9670;&nbsp;</a></span>dataInitCnt</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t dataInitCnt =0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a24366a136ebbb4033802f234a823d043"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a24366a136ebbb4033802f234a823d043">&#9670;&nbsp;</a></span>IIR_Breath_BPF</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_biquad_sections.html">BiquadSections</a> IIR_Breath_BPF</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1d2348284fe9d98fa6becc0c3512e35f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d2348284fe9d98fa6becc0c3512e35f">&#9670;&nbsp;</a></span>IIR_Heart_BPF</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_biquad_sections.html">BiquadSections</a> IIR_Heart_BPF</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aec42b0f8124eefd5c519a9e1f11312d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec42b0f8124eefd5c519a9e1f11312d9">&#9670;&nbsp;</a></span>uctsk_CurrentSleepLevel</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t uctsk_CurrentSleepLevel =0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af382fba96416ba1ca4e82e55a6011b07"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af382fba96416ba1ca4e82e55a6011b07">&#9670;&nbsp;</a></span>uctsk_Rfms_Err</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t uctsk_Rfms_Err =0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a859142213e0dc4cd2e21661fd3437bea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a859142213e0dc4cd2e21661fd3437bea">&#9670;&nbsp;</a></span>uctsk_Rfms_ExRxNumBuf</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t uctsk_Rfms_ExRxNumBuf[6] = {0}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a510303e8ea5ea703b0b3e64656e0a8b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a510303e8ea5ea703b0b3e64656e0a8b8">&#9670;&nbsp;</a></span>uctsk_Rfms_ExtFlashReadSign</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t uctsk_Rfms_ExtFlashReadSign =0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a86733de05619e67d9b2b2f86f948873c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a86733de05619e67d9b2b2f86f948873c">&#9670;&nbsp;</a></span>uctsk_Rfms_Hardware</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t uctsk_Rfms_Hardware =0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aeb661bcb429333cdfb7927cb8b150dce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb661bcb429333cdfb7927cb8b150dce">&#9670;&nbsp;</a></span>uctsk_Rfms_MonitorRxNum</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t uctsk_Rfms_MonitorRxNum =0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7280690493f21f551ba31d3cf8c7ee50"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7280690493f21f551ba31d3cf8c7ee50">&#9670;&nbsp;</a></span>uctsk_Rfms_NoBodyThresholdValue</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t uctsk_Rfms_NoBodyThresholdValue = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad6c3cff540cabd7c3572952a289cd8b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad6c3cff540cabd7c3572952a289cd8b4">&#9670;&nbsp;</a></span>uctsk_Rfms_NoBodyThresholdVTimerS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t uctsk_Rfms_NoBodyThresholdVTimerS = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae32bf7293b8037f7187bcc3c88d970a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae32bf7293b8037f7187bcc3c88d970a9">&#9670;&nbsp;</a></span>uctsk_Rfms_PowerSavingOff</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t uctsk_Rfms_PowerSavingOff = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6b320be877a650ac74da86edbd9271dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6b320be877a650ac74da86edbd9271dd">&#9670;&nbsp;</a></span>Uctsk_Rfms_PowerSavingTimer_s</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t Uctsk_Rfms_PowerSavingTimer_s = <a class="el" href="uctsk___r_f_m_s_8c.html#a88d175ddc0cf3adca82a6db6be389c0b">UCTSK_RFMS_POWER_SAVING_ON_TIME_S</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6540f300ed9d7157880ab0c3845826a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6540f300ed9d7157880ab0c3845826a2">&#9670;&nbsp;</a></span>Uctsk_Rfms_RunFileData_DebugTest_Enable</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t Uctsk_Rfms_RunFileData_DebugTest_Enable = <a class="el" href="includes_8h.html#a29e413f6725b2ba32d165ffaa35b01e5">OFF</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9367da785ff9237c504c6e04dee816fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9367da785ff9237c504c6e04dee816fa">&#9670;&nbsp;</a></span>uctsk_Rfms_RxNum</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t uctsk_Rfms_RxNum =0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4145f02aa0765b119eef0a04c71323b0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4145f02aa0765b119eef0a04c71323b0">&#9670;&nbsp;</a></span>uctsk_Rfms_RxValue</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t uctsk_Rfms_RxValue =0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa645519acf1147dfe5f7f51c4cfca6c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa645519acf1147dfe5f7f51c4cfca6c4">&#9670;&nbsp;</a></span>Uctsk_Rfms_RxZeroCmtInfo</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t Uctsk_Rfms_RxZeroCmtInfo = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a57298946b5977d078591d4e6b92cf5bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a57298946b5977d078591d4e6b92cf5bd">&#9670;&nbsp;</a></span>uctsk_Rfms_s_BodyMove</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MODULE_MEMORY_S_DAY_BODYMOVE uctsk_Rfms_s_BodyMove</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acea65d8e56f6545c7d4966dddea9ee48"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acea65d8e56f6545c7d4966dddea9ee48">&#9670;&nbsp;</a></span>uctsk_Rfms_s_DayBreath</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MODULE_MEMORY_S_DAY_BREATH uctsk_Rfms_s_DayBreath</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a448ecd30570ea8318da606abe1ed4224"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a448ecd30570ea8318da606abe1ed4224">&#9670;&nbsp;</a></span>uctsk_Rfms_s_DayInfo</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MODULE_MEMORY_S_DAY_INFO uctsk_Rfms_s_DayInfo</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4fea7f2b9edeb663eae730681aaa920e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4fea7f2b9edeb663eae730681aaa920e">&#9670;&nbsp;</a></span>uctsk_Rfms_s_DaySleepLevel</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MODULE_MEMORY_S_DAY_SLEEPLEVEL uctsk_Rfms_s_DaySleepLevel</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a12a0913b897ae29e8062f2a1b2450817"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a12a0913b897ae29e8062f2a1b2450817">&#9670;&nbsp;</a></span>uctsk_Rfms_s_HeartRate</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MODULE_MEMORY_S_DAY_HEARTRATE uctsk_Rfms_s_HeartRate</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a64e9c26f8609d87dc8bba5e9b409bb42"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a64e9c26f8609d87dc8bba5e9b409bb42">&#9670;&nbsp;</a></span>uctsk_Rfms_Software</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t uctsk_Rfms_Software =0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a66e45997046d208e5af74b9a25caa2d3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a66e45997046d208e5af74b9a25caa2d3">&#9670;&nbsp;</a></span>uctsk_Rfms_TxNum</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t uctsk_Rfms_TxNum =0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5080bfe203219333b8b0575e3382007c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5080bfe203219333b8b0575e3382007c">&#9670;&nbsp;</a></span>uctsk_s_MovePower</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_u_c_t_s_k___s___m_o_v_e___p_o_w_e_r.html">UCTSK_S_MOVE_POWER</a> uctsk_s_MovePower</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7c667591b5571387e00dc0f39332bb36"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7c667591b5571387e00dc0f39332bb36">&#9670;&nbsp;</a></span>uctsk_s_RfmsMovePower</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_u_c_t_s_k___s___m_o_v_e___p_o_w_e_r.html">UCTSK_S_MOVE_POWER</a> uctsk_s_RfmsMovePower</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a84c4132dfb460507fab80a98d79e4d05"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a84c4132dfb460507fab80a98d79e4d05">&#9670;&nbsp;</a></span>uctsk_SmartAlarmRunBitmap</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t uctsk_SmartAlarmRunBitmap =0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="affff027bd0c1c11f539907827c11dc42"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#affff027bd0c1c11f539907827c11dc42">&#9670;&nbsp;</a></span>UctskRfms_BufferLoopAllErrCmt</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t UctskRfms_BufferLoopAllErrCmt =0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1f1f58f8962829fee58825e6f172628f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1f1f58f8962829fee58825e6f172628f">&#9670;&nbsp;</a></span>UctskRfms_BufferLoopMaxErrCmt</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t UctskRfms_BufferLoopMaxErrCmt =0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae5d3c05c715fce1d6fdc07e368cd4ed9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae5d3c05c715fce1d6fdc07e368cd4ed9">&#9670;&nbsp;</a></span>UctskRfms_TestfileDataAllByteNum</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t UctskRfms_TestfileDataAllByteNum =0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8ec5570083ad3064d4607cd07adb76f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ec5570083ad3064d4607cd07adb76f4">&#9670;&nbsp;</a></span>UctskRfms_TestfileDataNum</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t UctskRfms_TestfileDataNum =0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

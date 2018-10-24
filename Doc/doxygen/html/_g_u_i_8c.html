@@ -1,0 +1,503 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>xsl: E:/XkapSourceCode/Xkap-Stm32/Xkap-Stm32/User/UserBsp/LCD_DriverBib/GUI.c 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">xsl
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">源码说明</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.13 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',false,false,'search.php','搜索');
+});
+</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_6d4e12d46ad8519ff7b80e874016d102.html">User</a></li><li class="navelem"><a class="el" href="dir_a31a870a1361c5173f8d637697bb576e.html">UserBsp</a></li><li class="navelem"><a class="el" href="dir_3f861b6511145bcc189ac0812d6e5d6a.html">LCD_DriverBib</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle">
+<div class="title">GUI.c 文件参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;stm32f10x.h&quot;</code><br />
+<code>#include &quot;<a class="el" href="_l_c_d___s_t7735_8h_source.html">LCD_ST7735.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_g_u_i_8h_source.html">GUI.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="ib_2font_8h_source.html">font.h</a>&quot;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:a3703c9517d0440c3b81da70690bd2ebb"><td class="memItemLeft" align="right" valign="top">u16&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_g_u_i_8c.html#a3703c9517d0440c3b81da70690bd2ebb">LCD_BGR2RGB</a> (u16 c)</td></tr>
+<tr class="separator:a3703c9517d0440c3b81da70690bd2ebb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa517e6c36afb8c67438bb9a39d152f3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_g_u_i_8c.html#afa517e6c36afb8c67438bb9a39d152f3">Gui_Circle</a> (u16 X, u16 Y, u16 R, u16 fc)</td></tr>
+<tr class="separator:afa517e6c36afb8c67438bb9a39d152f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa51a474cf621594b9724265394076c9e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_g_u_i_8c.html#aa51a474cf621594b9724265394076c9e">Gui_DrawLine</a> (u16 x0, u16 y0, u16 <a class="el" href="_bsp___lcd_8c.html#a3818b7c50ae3cf2e9ae39316586a1aa4">x1</a>, u16 y1, u16 Color)</td></tr>
+<tr class="separator:aa51a474cf621594b9724265394076c9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b96dcb72cd9d80d7b736aab7dd635f9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_g_u_i_8c.html#a4b96dcb72cd9d80d7b736aab7dd635f9">Gui_box</a> (u16 x, u16 <a class="el" href="_bsp___lcd_8c.html#a0ed6a908288e0cd87f79c1b5ab56d07c">y</a>, u16 w, u16 h, u16 bc)</td></tr>
+<tr class="separator:a4b96dcb72cd9d80d7b736aab7dd635f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8963dd7943d28539a405e764f187115c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_g_u_i_8c.html#a8963dd7943d28539a405e764f187115c">Gui_box2</a> (u16 x, u16 <a class="el" href="_bsp___lcd_8c.html#a0ed6a908288e0cd87f79c1b5ab56d07c">y</a>, u16 w, u16 h, u8 mode)</td></tr>
+<tr class="separator:a8963dd7943d28539a405e764f187115c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31cfa47ba35352eb376817bc1dc9748e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_g_u_i_8c.html#a31cfa47ba35352eb376817bc1dc9748e">DisplayButtonDown</a> (u16 <a class="el" href="_bsp___lcd_8c.html#a3818b7c50ae3cf2e9ae39316586a1aa4">x1</a>, u16 y1, u16 <a class="el" href="_bsp___lcd_8c.html#ab24e1cc331c488f6a1623cde1564c644">x2</a>, u16 y2)</td></tr>
+<tr class="separator:a31cfa47ba35352eb376817bc1dc9748e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afaf5638b52a65fb90517c72826be63f7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_g_u_i_8c.html#afaf5638b52a65fb90517c72826be63f7">DisplayButtonUp</a> (u16 <a class="el" href="_bsp___lcd_8c.html#a3818b7c50ae3cf2e9ae39316586a1aa4">x1</a>, u16 y1, u16 <a class="el" href="_bsp___lcd_8c.html#ab24e1cc331c488f6a1623cde1564c644">x2</a>, u16 y2)</td></tr>
+<tr class="separator:afaf5638b52a65fb90517c72826be63f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f673f4bf6a97b6a21b64c2d04b3e2bb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_g_u_i_8c.html#a3f673f4bf6a97b6a21b64c2d04b3e2bb">Gui_DrawFont_GBK16</a> (u16 x, u16 <a class="el" href="_bsp___lcd_8c.html#a0ed6a908288e0cd87f79c1b5ab56d07c">y</a>, u16 fc, u16 bc, u8 *s)</td></tr>
+<tr class="separator:a3f673f4bf6a97b6a21b64c2d04b3e2bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ade58c8f4f118a692c67d53ee3d724b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_g_u_i_8c.html#a9ade58c8f4f118a692c67d53ee3d724b">Gui_DrawFont_GBK24</a> (u16 x, u16 <a class="el" href="_bsp___lcd_8c.html#a0ed6a908288e0cd87f79c1b5ab56d07c">y</a>, u16 fc, u16 bc, u8 *s)</td></tr>
+<tr class="separator:a9ade58c8f4f118a692c67d53ee3d724b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a38fd180b7771d8d6391fc8a701b86d13"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_g_u_i_8c.html#a38fd180b7771d8d6391fc8a701b86d13">Gui_DrawFont_Num32</a> (u16 x, u16 <a class="el" href="_bsp___lcd_8c.html#a0ed6a908288e0cd87f79c1b5ab56d07c">y</a>, u16 fc, u16 bc, u16 num)</td></tr>
+<tr class="separator:a38fd180b7771d8d6391fc8a701b86d13"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">函数说明</h2>
+<a id="a31cfa47ba35352eb376817bc1dc9748e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a31cfa47ba35352eb376817bc1dc9748e">&#9670;&nbsp;</a></span>DisplayButtonDown()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DisplayButtonDown </td>
+          <td>(</td>
+          <td class="paramtype">u16&#160;</td>
+          <td class="paramname"><em>x1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">u16&#160;</td>
+          <td class="paramname"><em>y1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">u16&#160;</td>
+          <td class="paramname"><em>x2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">u16&#160;</td>
+          <td class="paramname"><em>y2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afaf5638b52a65fb90517c72826be63f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afaf5638b52a65fb90517c72826be63f7">&#9670;&nbsp;</a></span>DisplayButtonUp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DisplayButtonUp </td>
+          <td>(</td>
+          <td class="paramtype">u16&#160;</td>
+          <td class="paramname"><em>x1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">u16&#160;</td>
+          <td class="paramname"><em>y1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">u16&#160;</td>
+          <td class="paramname"><em>x2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">u16&#160;</td>
+          <td class="paramname"><em>y2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4b96dcb72cd9d80d7b736aab7dd635f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b96dcb72cd9d80d7b736aab7dd635f9">&#9670;&nbsp;</a></span>Gui_box()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Gui_box </td>
+          <td>(</td>
+          <td class="paramtype">u16&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">u16&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">u16&#160;</td>
+          <td class="paramname"><em>w</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">u16&#160;</td>
+          <td class="paramname"><em>h</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">u16&#160;</td>
+          <td class="paramname"><em>bc</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8963dd7943d28539a405e764f187115c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8963dd7943d28539a405e764f187115c">&#9670;&nbsp;</a></span>Gui_box2()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Gui_box2 </td>
+          <td>(</td>
+          <td class="paramtype">u16&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">u16&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">u16&#160;</td>
+          <td class="paramname"><em>w</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">u16&#160;</td>
+          <td class="paramname"><em>h</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">u8&#160;</td>
+          <td class="paramname"><em>mode</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afa517e6c36afb8c67438bb9a39d152f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afa517e6c36afb8c67438bb9a39d152f3">&#9670;&nbsp;</a></span>Gui_Circle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Gui_Circle </td>
+          <td>(</td>
+          <td class="paramtype">u16&#160;</td>
+          <td class="paramname"><em>X</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">u16&#160;</td>
+          <td class="paramname"><em>Y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">u16&#160;</td>
+          <td class="paramname"><em>R</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">u16&#160;</td>
+          <td class="paramname"><em>fc</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3f673f4bf6a97b6a21b64c2d04b3e2bb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3f673f4bf6a97b6a21b64c2d04b3e2bb">&#9670;&nbsp;</a></span>Gui_DrawFont_GBK16()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Gui_DrawFont_GBK16 </td>
+          <td>(</td>
+          <td class="paramtype">u16&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">u16&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">u16&#160;</td>
+          <td class="paramname"><em>fc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">u16&#160;</td>
+          <td class="paramname"><em>bc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">u8 *&#160;</td>
+          <td class="paramname"><em>s</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9ade58c8f4f118a692c67d53ee3d724b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ade58c8f4f118a692c67d53ee3d724b">&#9670;&nbsp;</a></span>Gui_DrawFont_GBK24()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Gui_DrawFont_GBK24 </td>
+          <td>(</td>
+          <td class="paramtype">u16&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">u16&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">u16&#160;</td>
+          <td class="paramname"><em>fc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">u16&#160;</td>
+          <td class="paramname"><em>bc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">u8 *&#160;</td>
+          <td class="paramname"><em>s</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a38fd180b7771d8d6391fc8a701b86d13"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a38fd180b7771d8d6391fc8a701b86d13">&#9670;&nbsp;</a></span>Gui_DrawFont_Num32()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Gui_DrawFont_Num32 </td>
+          <td>(</td>
+          <td class="paramtype">u16&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">u16&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">u16&#160;</td>
+          <td class="paramname"><em>fc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">u16&#160;</td>
+          <td class="paramname"><em>bc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">u16&#160;</td>
+          <td class="paramname"><em>num</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa51a474cf621594b9724265394076c9e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa51a474cf621594b9724265394076c9e">&#9670;&nbsp;</a></span>Gui_DrawLine()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Gui_DrawLine </td>
+          <td>(</td>
+          <td class="paramtype">u16&#160;</td>
+          <td class="paramname"><em>x0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">u16&#160;</td>
+          <td class="paramname"><em>y0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">u16&#160;</td>
+          <td class="paramname"><em>x1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">u16&#160;</td>
+          <td class="paramname"><em>y1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">u16&#160;</td>
+          <td class="paramname"><em>Color</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3703c9517d0440c3b81da70690bd2ebb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3703c9517d0440c3b81da70690bd2ebb">&#9670;&nbsp;</a></span>LCD_BGR2RGB()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">u16 LCD_BGR2RGB </td>
+          <td>(</td>
+          <td class="paramtype">u16&#160;</td>
+          <td class="paramname"><em>c</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

@@ -1,0 +1,938 @@
+/*
+***********************************************************************************
+*                    作    者: 徐松亮
+*                    更新时间: 2015-05-29
+***********************************************************************************
+*/
+//-------------------加载库函数------------------------------
+#include "includes.h"
+#include "GUI.h"
+#include "EmWinXslApp.h"
+#include "Module_SdFat.h"
+#include "Language.h"
+#include "uctsk_HCI.h"
+#include "Bsp_Key.h"
+
+#include "WM.h"
+//-------------------宏定义----------------------------------
+//测试函数分类开关
+#define  EMWIN_XSL_APP_TEST_BASIC_TEXT    0
+#define  EMWIN_XSL_APP_TEST_WRAP_TEXT     0
+#define  EMWIN_XSL_APP_TEST_DISPDEC       0
+#define  EMWIN_XSL_APP_TEST_BASIC_2D      1
+#define  EMWIN_XSL_APP_TEST_BMP           0
+#define  EMWIN_XSL_APP_TEST_BMP_TF        1
+#define  EMWIN_XSL_APP_TEST_JPG_TF        0
+#define  EMWIN_XSL_APP_TEST_GIF_TF        0
+#define  EMWIN_XSL_APP_TEST_PNG_TF        0
+//-------------------变量------------------------------------
+//申请缓存不能使用CCM地址,因为SDIO的驱动用了DMA功能,而CCM不支持DMA
+static char *pGuiBuffer=NULL;
+//-------------------接口函数--------------------------------
+/*
+************************************************************************************
+*   功能说明: 从TF卡获取数据，被函数GUI_BMP_DrawEx()调用
+*   形    参：p             FIL类型数据
+*             NumBytesReq   请求读取的字节数
+*             ppData        数据指针
+*             Off           如果Off = 1，那么将重新从其实位置读取
+*   返 回 值: 返回读取的字节数
+************************************************************************************
+*/
+static int EmWinXslApp_GetTfData(void * p, const U8 ** ppData, unsigned NumBytesReq, U32 Off)
+{
+    static int FileAddress = 0;
+    UINT NumBytesRead;
+    FIL *PicFile;
+
+    PicFile = (FIL *)p;
+    // 检测缓存大小(最少内存量: 每次固定显示一行,每个像素4字节)
+    if (NumBytesReq > LCD_GetXSize()*4)
+    {
+        NumBytesReq = LCD_GetXSize()*4;
+    }
+    // 设置读取位置
+    if(Off == 1) FileAddress = 0;
+    else FileAddress = Off;
+    //
+    ModuleSdFat_Res =f_lseek(PicFile, FileAddress);
+    // 读取数据到缓存
+    ModuleSdFat_Res = f_read(PicFile, pGuiBuffer, NumBytesReq, &NumBytesRead);
+    // 让指针ppData指向读取的函数
+    *ppData = (const U8 *)pGuiBuffer;
+    // 返回读取的字节数
+    return NumBytesRead;
+}
+
+/*
+*********************************************************************************************************
+*   函 数 名: _ShowBMPEx
+*   功能说明: 显示BMP图片
+*   形    参：sFilename 要显示图片的名字
+*   返 回 值: 无
+*********************************************************************************************************
+*/
+/*
+************************************************************************************
+*   功能说明: 从TF卡获取数据，被函数GUI_BMP_DrawEx()调用
+*   形    参：p             FIL类型数据
+*             NumBytesReq   请求读取的字节数
+*             ppData        数据指针
+*             Off           如果Off = 1，那么将重新从其实位置读取
+*   返 回 值: 返回读取的字节数
+************************************************************************************
+*/
+static char *pStreamedBmpBeginAddr =  (char*)0x8075000;
+static int EmWinXslApp_GetSpiFlashData(void * p, const U8 ** ppData, unsigned NumBytesReq, U32 Off)
+{
+    static int FileAddress = 0;
+    UINT NumBytesRead;
+    //FIL *PicFile;
+
+    //PicFile = (FIL *)p;
+    // 检测缓存大小(最少内存量: 每次固定显示一行,每个像素4字节)
+    if (NumBytesReq > LCD_GetXSize()*4)
+    {
+        NumBytesReq = LCD_GetXSize()*4;
+    }
+    // 设置读取位置
+    if(Off == 1) FileAddress = 0;
+    else FileAddress = Off;
+    // 地址偏移
+    // ModuleSdFat_Res = f_lseek(PicFile, FileAddress);
+    // 读取数据到缓存
+    // ModuleSdFat_Res = f_read(PicFile, pGuiBuffer, NumBytesReq, &NumBytesRead);
+    memcpy(pGuiBuffer,pStreamedBmpBeginAddr+FileAddress,NumBytesReq);
+    // 让指针ppData指向读取的函数
+    *ppData = (const U8 *)pGuiBuffer;
+    NumBytesRead  =  NumBytesReq;
+    // 返回读取的字节数
+    return NumBytesRead;
+}
+uint8_t EmWinXslApp_ShowStreamedBMP(const char * sFilename,uint16_t xpos,uint16_t ypos)
+{
+    // 申请缓存(最少内存量: 每次固定显示一行,每个像素4字节 如320*4=1280B)
+    pGuiBuffer = MemManager_Get(E_MEM_MANAGER_TYPE_5KB_BASIC);
+    GUI_DrawStreamedBitmapExAuto(EmWinXslApp_GetSpiFlashData, NULL, xpos, ypos);
+    //GUI_DrawStreamedBitmapAuto(pStreamedBmpBeginAddr,0,0);
+    // 释放缓存
+    MemManager_Free(E_MEM_MANAGER_TYPE_5KB_BASIC,pGuiBuffer);
+    //
+    return OK;
+}
+
+/*
+*********************************************************************************************************
+*   函 数 名: _ShowBMPEx
+*   功能说明: 显示BMP图片
+*   形    参：sFilename 要显示图片的名字
+*   返 回 值: 无
+*********************************************************************************************************
+*/
+uint8_t EmWinXslApp_ShowBMP(const char * sFilename,uint16_t xpos,uint16_t ypos)
+{
+    //OS_ERR          err;
+    // 打开文件
+    ModuleSdFat_Res = f_open(&ModuleSdFat_fsrc, sFilename, FA_OPEN_EXISTING | FA_READ /*| FA_OPEN_ALWAYS*/);
+    if (ModuleSdFat_Res != FR_OK)
+    {
+        return ERR;
+    }
+    // 申请缓存(最少内存量: 每次固定显示一行,每个像素4字节 如320*4=1280B)
+    pGuiBuffer = MemManager_Get(E_MEM_MANAGER_TYPE_5KB_BASIC);
+    //  XSize = GUI_BMP_GetXSizeEx(_GetData, &file);
+    //  YSize = GUI_BMP_GetYSizeEx(_GetData, &file);
+    //OSSchedLock(&err);
+    GUI_BMP_DrawEx(EmWinXslApp_GetTfData, &ModuleSdFat_fsrc, xpos, ypos);
+    //OSSchedUnlock(&err);
+    // 释放缓存
+    MemManager_Free(E_MEM_MANAGER_TYPE_5KB_BASIC,pGuiBuffer);
+    // 关闭文件
+    f_close(&ModuleSdFat_fsrc);
+    //
+    return OK;
+}
+
+/*
+*********************************************************************************************************
+*   函 数 名: _ShowJPGEx
+*   功能说明: 显示BMP图片
+*   形    参：sFilename 要显示图片的名字
+*   返 回 值: 无
+*********************************************************************************************************
+*/
+uint8_t EmWinXslApp_ShowJPG(const char * sFilename,uint16_t xpos,uint16_t ypos)
+{
+    //OS_ERR          err;
+    uint16_t i16;
+    static GUI_JPEG_INFO JpegInfo;
+    // 打开文件
+    ModuleSdFat_Res = f_open(&ModuleSdFat_fsrc, sFilename, FA_OPEN_EXISTING | FA_READ | FA_OPEN_ALWAYS);
+    if (ModuleSdFat_Res != FR_OK)
+    {
+        return ERR;
+    }
+    // 申请缓存
+    pGuiBuffer = MemManager_Get(E_MEM_MANAGER_TYPE_5KB_BASIC);
+    //  XSize = GUI_BMP_GetXSizeEx(_GetData, &file);
+    //  YSize = GUI_BMP_GetYSizeEx(_GetData, &file);
+    //
+    GUI_JPEG_GetInfoEx(EmWinXslApp_GetTfData,&ModuleSdFat_fsrc,&JpegInfo);
+    //*必要的时候加上调度锁,防止刷图片的时候死机
+    for(i16=100; i16<200; i16+=10)
+    {
+        //OSSchedLock(&err);
+        GUI_JPEG_DrawScaledEx(EmWinXslApp_GetTfData,\
+                              &ModuleSdFat_fsrc,\
+                              (LCD_GetXSize()-JpegInfo.XSize*i16/100)/2,\
+                              (LCD_GetYSize()-JpegInfo.YSize*i16/100)/2,\
+                              i16,\
+                              100);
+        //OSSchedUnlock(&err);
+        GUI_Delay(1000);
+    }
+    // 释放缓存
+    MemManager_Free(E_MEM_MANAGER_TYPE_5KB_BASIC,pGuiBuffer);
+    // 关闭文件
+    f_close(&ModuleSdFat_fsrc);
+    //
+    return OK;
+}
+/*
+*********************************************************************************************************
+*   功能说明: 显示BMP图片
+*   形    参：sFilename 要显示图片的名字
+*   返 回 值: 无
+*********************************************************************************************************
+*/
+void EmWinXslApp_ShowGIF(const char * sFilename,uint16_t xpos,uint16_t ypos)
+{
+    //OS_ERR  err;
+    static GUI_GIF_INFO         InfoGif1;
+    static GUI_GIF_IMAGE_INFO   InfoGif2;
+    uint8_t i=0;
+    // 打开文件
+    ModuleSdFat_Res = f_open(&ModuleSdFat_fsrc, sFilename, FA_OPEN_EXISTING | FA_READ | FA_OPEN_ALWAYS);
+    if (ModuleSdFat_Res != FR_OK)
+    {
+        return;
+    }
+    // 申请缓存
+    pGuiBuffer = MemManager_Get(E_MEM_MANAGER_TYPE_5KB_BASIC);
+    //  XSize = GUI_BMP_GetXSizeEx(_GetData, &file);
+    //  YSize = GUI_BMP_GetYSizeEx(_GetData, &file);
+    //
+    GUI_GIF_GetInfoEx(EmWinXslApp_GetTfData,&ModuleSdFat_fsrc,&InfoGif1);
+    // 必要的时候加上调度锁,防止刷图片的时候死机
+    //OSSchedLock(&err);
+    while(1)
+    {
+        if(i<InfoGif1.NumImages)
+        {
+
+            GUI_GIF_GetImageInfoEx(EmWinXslApp_GetTfData,&ModuleSdFat_fsrc,&InfoGif2,i);
+            GUI_GIF_DrawSubEx(EmWinXslApp_GetTfData,\
+                              &ModuleSdFat_fsrc,\
+                              (LCD_GetXSize()-InfoGif1.xSize)/2,\
+                              (LCD_GetYSize()-InfoGif1.ySize)/2,\
+                              i++);
+            GUI_X_Delay(InfoGif2.Delay*10);
+        }
+        else
+        {
+            break;
+        }
+    }
+    //OSSchedUnlock(&err);
+    // 释放缓存
+    MemManager_Free(E_MEM_MANAGER_TYPE_5KB_BASIC,pGuiBuffer);
+    // 关闭文件
+    f_close(&ModuleSdFat_fsrc);
+}
+/*
+*********************************************************************************************************
+*   函 数 名: _ShowPNGEx
+*   功能说明: 显示PNG图片
+*   形    参：sFilename 要显示图片的名字
+*   返 回 值: 无
+*********************************************************************************************************
+*/
+/*
+void EmWinXslApp_ShowPNG(const char * sFilename,uint16_t xpos,uint16_t ypos)
+{
+    //OS_ERR  err;
+    // 打开文件
+    ModuleSdFat_Res = f_open(&ModuleSdFat_fsrc, sFilename, FA_OPEN_EXISTING | FA_READ | FA_OPEN_ALWAYS);
+    if (ModuleSdFat_Res != FR_OK)
+    {
+        return;
+    }
+    // 申请缓存
+    //pGuiBuffer = MemManager_Get(E_MEM_MANAGER_TYPE_5KB_BASIC);
+    //  XSize = GUI_BMP_GetXSizeEx(_GetData, &file);
+    //  YSize = GUI_BMP_GetYSizeEx(_GetData, &file);
+    //
+    //必要的时候加上调度锁,防止刷图片的时候死机
+    //OSSchedLock(&err);
+    GUI_PNG_DrawEx(_GetData,&ModuleSdFat_fsrc,xpos,ypos);
+    //OSSchedUnlock(&err);
+    // 释放缓存
+    //MemManager_Free(E_MEM_MANAGER_TYPE_5KB_BASIC,pGuiBuffer);
+    // 关闭文件
+    f_close(&ModuleSdFat_fsrc);
+}
+*/
+/*
+*********************************************************************************************************
+*   函 数 名: _cbGetData
+*   功能说明: 使用XBF字体
+*   形    参: Off       要读取数据的起始位置
+*             NumBytes  要读取的字节数
+*             pVoid     应用定义指针，此处是文件句柄指针
+*             pBuffer   用于存储字体数据的地址
+*   返 回 值: 0 成功  1 失败
+*********************************************************************************************************
+*/
+GUI_XBF_DATA XBF_Data;
+GUI_FONT     XBF_Font;
+FIL          Fontfile;
+static int EmWinXslApp_GetTfXbfData(U32 Off, U16 NumBytes, void * pVoid, void * pBuffer)
+{
+    FIL *FontFile;
+    UINT NumBytesRead;
+    // 文件句柄
+    FontFile = (FIL *)pVoid;
+    // 指向数据地址
+    ModuleSdFat_Res =f_lseek(FontFile, Off);
+    if (ModuleSdFat_Res != FR_OK)
+    {
+        return 1;
+    }
+    // 读取数据到buffer
+    ModuleSdFat_Res = f_read(FontFile, pBuffer, NumBytes, &NumBytesRead);
+    if (ModuleSdFat_Res != FR_OK)
+    {
+        return 1;
+    }
+    return 0;
+}
+
+/*
+*********************************************************************************************************
+*   函 数 名: _ShowXBF
+*   功能说明: 使用XBF字体
+*   形    参：无
+*   返 回 值: 无
+*********************************************************************************************************
+*/
+void EmWinXslApp_ShowXBF(uint8_t OnOff)
+{
+    if(OnOff==ON)
+    {
+        ModuleSdFat_Res = f_open(&Fontfile, "yh36.xbf", FA_OPEN_EXISTING | FA_READ | FA_OPEN_ALWAYS);
+        if (ModuleSdFat_Res != FR_OK)
+        {
+            return;
+        }
+
+        /* 创建XBF字体 */
+        GUI_XBF_CreateFont(&XBF_Font,
+                           &XBF_Data,
+                           GUI_XBF_TYPE_PROP_AA4_EXT,
+                           EmWinXslApp_GetTfXbfData,
+                           &Fontfile);
+    }
+    else if(OnOff==OFF)
+    {
+        f_close(&Fontfile);
+    }
+}
+/*
+*********************************************************************************************************
+*   功能说明: 测试
+*********************************************************************************************************
+*/
+void EmWinXslApp_Test(void)
+{
+    // 使用内存设备防止屏闪
+    WM_SetCreateFlags(WM_CF_MEMDEV);
+    //--------------------实验一:基本字体实验
+    /*
+    常用函数
+      GUI_DispString("Xsl \nTest text!");
+      GUI_DispStringAt();
+      GUI_DispStringHCenterAt("Xsl \nTest text!",120,120);
+      GUI_DispStringInRect();
+    */
+#if EMWIN_XSL_APP_TEST_BASIC_TEXT
+    {
+        {
+            int i;
+            GUI_SetBkColor(GUI_BLUE);
+            GUI_Clear();
+            GUI_SetPenSize(10);
+            GUI_SetColor(GUI_RED);
+            GUI_DrawLine(80,20,240,100);
+            GUI_DrawLine(80,100,240,20);
+            //
+            i=0;
+            GUI_SetColor(GUI_YELLOW);
+            GUI_SetFont(&GUI_Font16B_1);
+            GUI_SetTextMode(GUI_TM_TRANS);
+            GUI_DispStringHCenterAt("TEST->TEXT",160,i);
+            //
+            GUI_SetBkColor(GUI_BLACK);
+            GUI_SetColor(GUI_RED);
+            GUI_SetFont(&GUI_Font8x16);
+            //正常文本
+            i=20;
+            GUI_SetTextMode(GUI_TM_NORMAL);
+            GUI_DispStringHCenterAt("GUI_TM_NORMAL",160,i);
+            //翻转文本
+            i+=16;
+            GUI_SetTextMode(GUI_TM_REV);
+            GUI_DispStringHCenterAt("GUI_TM_REV",160,i);
+            //透明文本
+            i+=16;
+            GUI_SetTextMode(GUI_TM_TRANS);
+            GUI_DispStringHCenterAt("GUI_TM_TRANS",160,i);
+            //异或文本
+            i+=16;
+            GUI_SetTextMode(GUI_TM_XOR);
+            GUI_DispStringHCenterAt("GUI_TM_XOR",160,i);
+            //综合文本
+            i+=16;
+            GUI_SetTextMode(GUI_TM_TRANS | GUI_TM_REV);
+            GUI_DispStringHCenterAt("GUI_TM_TRANS | GUI_TM_REV",160,i);
+            //正常文本
+            i+=16;
+            GUI_SetTextMode(GUI_TM_NORMAL);
+            GUI_SetTextStyle(GUI_TS_NORMAL);
+            GUI_DispStringHCenterAt("GUI_TS_NORMAL",160,i);
+            //下划线文本
+            i+=16;
+            GUI_SetTextStyle(GUI_TS_UNDERLINE);
+            GUI_DispStringHCenterAt("GUI_TS_UNDERLINE",160,i);
+            //删除线文本
+            i+=16;
+            GUI_SetTextStyle(GUI_TS_STRIKETHRU);
+            GUI_DispStringHCenterAt("GUI_TS_STRIKETHRU",160,i);
+            //上划线文本
+            i+=16;
+            GUI_SetTextStyle(GUI_TS_OVERLINE);
+            GUI_DispStringHCenterAt("GUI_TS_OVERLINE",160,i);
+            //
+            GUI_Delay(5000);
+        }
+        {
+            //清屏
+            GUI_SetColor(GUI_BLACK);
+            GUI_FillRect(0,20,320,240);
+            //
+            GUI_SetTextMode(GUI_TM_TRANS);
+            GUI_SetTextStyle(GUI_TS_NORMAL);
+            GUI_SetColor(GUI_YELLOW);
+            //
+            GUI_SetFont(&GUI_Font8_ASCII);
+            GUI_DispStringAt("Hello World",0,20+0);
+            GUI_SetFont(&GUI_Font10S_ASCII);
+            GUI_DispStringAt("Hello World",0,20+30);
+            GUI_SetFont(&GUI_Font13_1);
+            GUI_DispStringAt("Hello World",0,20+60);
+            GUI_SetFont(&GUI_Font16_ASCII);
+            GUI_DispStringAt("Hello World",0,20+90);
+            GUI_SetFont(&GUI_FontComic18B_ASCII);
+            GUI_DispStringAt("Hello World",0,20+120);
+            GUI_SetFont(&GUI_FontComic24B_ASCII);
+            GUI_DispStringAt("Hello World",0,20+150);
+            GUI_SetFont(&GUI_Font32B_ASCII);
+            GUI_DispStringAt("Hello World",0,20+180);
+            //
+            GUI_Delay(5000);
+        }
+        /*
+        实验目的: 显示自定义字库(c文件)的中文
+        显示中文:
+            1,工具软件:   FontCvtDemo(StEmWin文件夹中的才是正版)
+            2,用上面的软件生成C字库文件
+               新建txt文本，写入汉字，保存为unicode编码文件
+               FontCvtDemo选择字体新建字库，禁用所有字符(Edit菜单)
+               FontCvtDemo载入txt文件(Edit-Read pattern file...)
+               FontCvtDemo另存为c类型文件
+            3, 描述中文的文件必须为UTF8类型,统一建立了LanguageUtf8.c
+        */
+        {
+            extern GUI_CONST_STORAGE GUI_FONT GUI_FontXslZk;
+            //清屏
+            GUI_SetColor(GUI_BLACK);
+            GUI_FillRect(0,20,320,240);
+            //
+            GUI_SetTextMode(GUI_TM_TRANS);
+            GUI_SetTextStyle(GUI_TS_NORMAL);
+            GUI_SetColor(GUI_YELLOW);
+            //
+            GUI_UC_SetEncodeUTF8();
+            GUI_SetFont(&GUI_FontXslZk);
+            GUI_DispStringAt((char*)pSTR_UTF8_XSLZK[Main_Language],0,20+0);
+            //
+            GUI_Delay(5000);
+        }
+        /*
+        实验目的: 显示外部字库(xbf文件)的中文
+        显示中文:
+            1,工具软件:   FontCvtDemo(StEmWin文件夹中的才是正版)
+            2,用上面的软件生成xbf字库文件
+               FontCvtDemo选择字体新建字库，禁用所有字符(Edit菜单)
+               FontCvtDemo另存为xbf类型文件
+            3, 描述中文的文件必须为UTF8类型,统一建立了LanguageUtf8.c
+        */
+        {
+            //清屏
+            GUI_SetColor(GUI_BLACK);
+            GUI_FillRect(0,20,320,240);
+            //
+            GUI_SetTextMode(GUI_TM_TRANS);
+            GUI_SetTextStyle(GUI_TS_NORMAL);
+            GUI_SetColor(GUI_GREEN);
+            //
+            //挂载磁盘
+            ModuleSdFat_Res = f_mount(&ModuleSdFat_Fs,MODULE_SDFAT_SD_PATH,0);
+            if( ModuleSdFat_Res != FR_OK )
+            {
+                return;
+            }
+            EmWinXslApp_ShowXBF(ON);
+            GUI_UC_SetEncodeUTF8();
+            GUI_SetFont(&XBF_Font);
+            GUI_DispStringAt((char*)pSTR_UTF8_XSLZK[Main_Language],0,20+0);
+            EmWinXslApp_ShowXBF(OFF);
+            //卸载磁盘
+            ModuleSdFat_Res = f_mount(NULL,MODULE_SDFAT_SD_PATH,0);
+            //
+            GUI_Delay(5000);
+        }
+    }
+#endif
+    //--------------------实验二:框内显示字体实验
+#if EMWIN_XSL_APP_TEST_WRAP_TEXT
+    {
+        int i;
+        char pstr[]="this example demonstrates text wrapping";
+        GUI_RECT rect = {10,20,59,69};
+        GUI_WRAPMODE aWm[]  =   {GUI_WRAPMODE_NONE,GUI_WRAPMODE_CHAR,GUI_WRAPMODE_WORD};
+        //
+        GUI_SetBkColor(GUI_BLACK);
+        GUI_Clear();
+        //
+        GUI_SetColor(GUI_YELLOW);
+        GUI_SetFont(&GUI_Font16B_1);
+        GUI_SetTextMode(GUI_TM_TRANS);
+        GUI_SetTextStyle(GUI_TS_NORMAL);
+        GUI_DispStringHCenterAt("TEST->Text Wrapping",160,0);
+        //
+        GUI_SetFont(&GUI_Font6x8);
+        //
+        for(i=0; i<3; i++)
+        {
+            GUI_SetColor(GUI_BLUE);
+            GUI_FillRectEx(&rect);
+            GUI_SetColor(GUI_WHITE);
+            GUI_DispStringInRectWrap(pstr,&rect,GUI_TA_LEFT,aWm[i]);
+            rect.x0+=60;
+            rect.x1+=60;
+        }
+        //
+        GUI_Delay(5000);
+    }
+#endif
+    //--------------------实验三:数值显示
+#if EMWIN_XSL_APP_TEST_DISPDEC
+    {
+        int i;
+        //
+        GUI_SetBkColor(GUI_BLACK);
+        GUI_Clear();
+        //
+        GUI_SetColor(GUI_YELLOW);
+        GUI_SetFont(&GUI_Font16B_1);
+        GUI_SetTextMode(GUI_TM_TRANS);
+        GUI_SetTextStyle(GUI_TS_NORMAL);
+        GUI_DispStringHCenterAt("TEST->DispDec",160,0);
+        //
+        GUI_SetFont(&GUI_Font24B_ASCII);
+        //普通显示
+        i=20;
+        GUI_GotoXY(0,i);
+        GUI_DispDec(-123,4);
+        GUI_GotoXY(100,i);
+        GUI_DispDec(1234,7);
+        //指定位置显示
+        i+=24;
+        GUI_DispDecAt(1234,0,i,4);
+        //最少字符显示(不用指定长度)
+        i+=24;
+        GUI_GotoXY(0,i);
+        GUI_DispDecMin(-12345);
+        //显示整数模式的小数
+        GUI_GotoXY(100,i);
+        GUI_DispDecShift(-12345,7,2);
+        //显示整数(强制显示正负号)
+        i+=24;
+        GUI_GotoXY(0,i);
+        GUI_DispSDec(12345,6);
+        //显示整数模式的小数(强制显示正负号)
+        GUI_GotoXY(100,i);
+        GUI_DispSDecShift(12345,7,2);
+        //显示十六进制和二进制
+        i+=24;
+        GUI_DispBinAt(0x55,0,i,8);
+        GUI_DispHexAt(0x5A,100,i,2);
+        //显示浮点数值
+        i+=24;
+        GUI_GotoXY(0,i);
+        GUI_DispSFloatMin(-12.345,3);
+        //
+        GUI_Delay(5000);
+    }
+#endif
+    //--------------------实验三：2D基本绘图
+    /*
+    常用函数：
+        画笔：
+        GUI_GetPenSize()
+        GUI_SetPenSize()
+        矢量绘图：
+        GUI_DrawPoint()
+        GUI_DrawLine()
+        GUI_DrawLineRel()
+        GUI_DrawLineTo()
+        GUI_DrawPolyLine()
+        GUI_DrawPolygon()
+        GUI_DrawEllipse()
+        GUI_DrawArc()
+        基本绘图：
+        GUI_ClearRect()
+        GUI_CopyRect()
+        GUI_DrawGradientH()
+        GUI_DrawGradientV()
+        GUI_DrawGradientRoundedH()
+        GUI_DrawGradientRoundedV()
+        GUI_DrawPixel()
+        GUI_DrawPoint()
+        GUI_DrawRect()
+        GUI_DrawRectEx()
+        GUI_DrawRoundedFrame()
+        GUI_DrawRoundedRect()
+        GUI_FillRect()
+        GUI_FillRectEx()
+        GUI_FillRoundedRect()
+        GUI_InvertRect()
+        多边形相关
+        GUI_DrawPolygon()       //绘制多边形的轮廓
+        GUI_EnlargePolygon()    //扩展多边形
+        GUI_FillPolygon()       //绘制填充的多边形
+        GUI_MagnifyPolygon()    //放大多边形
+        GUI_RotatePolygon()     //按指定角度旋转多边形
+    */
+#if EMWIN_XSL_APP_TEST_BASIC_2D
+    {
+        int i,j,k;
+        //
+        GUI_SetBkColor(GUI_BLACK);
+        GUI_Clear();
+        //
+        GUI_SetColor(GUI_YELLOW);
+        GUI_SetFont(&GUI_Font16B_1); //
+        GUI_SetTextMode(GUI_TM_TRANS);
+        GUI_SetTextStyle(GUI_TS_NORMAL);
+        GUI_DispStringHCenterAt("TEST->2D Basic",160,0);
+        //画线
+        GUI_SetColor(GUI_RED);
+        i=20;
+        GUI_SetPenSize(1);
+        GUI_DrawLine(0,i,200,i);
+        i+=10;
+        GUI_SetPenSize(4);
+        GUI_DrawLine(0,i,200,i);
+        i+=10;
+        GUI_SetPenSize(8);
+        GUI_DrawLine(0,i,200,i);
+        //画方块
+        i+=10;
+        GUI_SetColor(GUI_RED);
+        GUI_DrawGradientRoundedH(0,i+0,50,i+50,25,0x0000FF,0x00FFFF);
+        GUI_DrawRect(60,i+0,110,i+50);
+        GUI_DrawRoundedFrame(120,i+0,170,i+50,10,10);
+        GUI_FillRoundedRect(180,i+0,230,i+50,10);
+        //画Alpha图形(透明度可设定)
+        i+=60;
+        GUI_EnableAlpha(1);
+        GUI_SetAlpha(0);
+        GUI_SetColor(GUI_BLUE);
+        GUI_FillCircle(100,i+50,49);
+        GUI_SetColor(GUI_YELLOW);
+        for(j=0; j<100; j++)
+        {
+            k=(j*255)/100;
+            GUI_SetAlpha(k);
+            GUI_DrawHLine(i+j,100-j,100+j);
+        }
+        GUI_SetAlpha(0x80);
+        GUI_SetColor(GUI_MAGENTA);
+        GUI_SetFont(&GUI_Font24B_ASCII);
+        GUI_SetTextMode(GUI_TM_TRANS);
+        GUI_DispStringHCenterAt("Alphablending",100,i+3);
+        GUI_SetAlpha(0);
+        GUI_EnableAlpha(0);
+        //画圆
+        GUI_SetColor(GUI_GREEN);
+        for(i=10; i<=50; i+=3)
+        {
+            GUI_DrawCircle((320/4)*3,(240/4)*3,i);
+        }
+        //
+        GUI_Delay(5000);
+        //用多边形函数画-----拓展三角形
+        {
+            int i;
+            const GUI_POINT POINT_BUF[]= {{40,20},{0,20},{20,0}};
+            GUI_POINT pointbuf[GUI_COUNTOF(POINT_BUF)];
+            //清屏
+            GUI_SetColor(GUI_BLACK);
+            GUI_FillRect(0,20,320,240);
+            GUI_SetDrawMode(GUI_DM_XOR);
+            GUI_FillPolygon(POINT_BUF,GUI_COUNTOF(POINT_BUF),140,110);
+            for(i=0; i<10; i++)
+            {
+                GUI_EnlargePolygon(pointbuf,POINT_BUF,GUI_COUNTOF(POINT_BUF),i*5);
+                GUI_FillPolygon(pointbuf,GUI_COUNTOF(POINT_BUF),140,110);
+            }
+            GUI_SetDrawMode(GUI_DM_NORMAL);
+            GUI_Delay(5000);
+        }
+        //画饼图
+        {
+            int i,a0,a1;
+            const unsigned aValues[]= {100,135,190,240,340,360};
+            const GUI_COLOR aColors[]= {GUI_BLUE,GUI_GREEN,GUI_RED,GUI_CYAN,GUI_MAGENTA,GUI_YELLOW};
+            //清屏
+            GUI_SetColor(GUI_BLACK);
+            GUI_FillRect(0,20,320,240);
+            //
+            for(i=0; i<GUI_COUNTOF(aValues); i++)
+            {
+                a0=(i==0)?0:aValues[i-1];
+                a1=aValues[i];
+                GUI_SetColor(aColors[i]);
+                GUI_DrawPie(320/2,240/2,100,a0,a1,0);
+            }
+            //
+            GUI_Delay(5000);
+        }
+    }
+#endif
+    //--------------------实验：bmp显示(加载到存储器)
+    /*
+    常用函数:
+        GUI_BMP_Draw()             绘制已加载到存储器的BMP文件
+        GUI_BMP_DrawEx()           绘制无需加载到存储器的BMP文件
+        GUI_BMP_DrawScaled()       绘制已加载到存储器的带比例的BMP文件
+        GUI_BMP_DrawScaledEx()  绘制无需加载到存储器的带比例的BMP文件
+        GUI_BMP_GetXSize()      返回加载到存储器的BMP文件的X大小
+        GUI_BMP_GetXSizeEx()       返回无需加载到存储器的BMP文件的X大小
+        GUI_BMP_GetYSize()      返回加载到存储器的BMP文件的Y大小
+        GUI_BMP_GetYSizeEx()       返回无需加载到存储器的BMP文件的Y大小
+        GUI_BMP_Serialize()     创建BMP文件
+        GUI_BMP_SerializeEx()   基于给定的矩形创建BMP文件
+    */
+#if EMWIN_XSL_APP_TEST_BMP
+    {
+        extern GUI_CONST_STORAGE GUI_BITMAP bm1;
+        extern GUI_CONST_STORAGE GUI_BITMAP bmres2;
+        //
+        GUI_SetBkColor(GUI_BLACK);
+        GUI_Clear();
+        //
+        GUI_SetColor(GUI_YELLOW);
+        GUI_SetFont(&GUI_Font16B_1); //
+        GUI_SetTextMode(GUI_TM_TRANS);
+        GUI_SetTextStyle(GUI_TS_NORMAL);
+        GUI_DispStringHCenterAt("TEST->BMP",160,0);
+        //
+        GUI_DrawBitmap(&bm1,0,0);
+        GUI_DrawBitmap(&bm1,320-72,0);
+        GUI_DrawBitmap(&bmres2,0,240-181);
+        //
+        GUI_Delay(5000);
+    }
+#endif
+    //--------------------实验：放在TF卡里的bmp图片
+#if EMWIN_XSL_APP_TEST_BMP_TF
+    /*
+    游标函数:
+      GUI_CURSOR_Select()        游标选择
+      GUI_CURSOR_Show()          游标显示
+      GUI_CURSOR_SetPosition()   设置游标位置
+      GUI_CURSOR_Hide()          游标隐藏
+    */
+    {
+        uint16_t i16;
+        int t32;
+        GUI_SetBkColor(GUI_BLACK);
+        GUI_Clear();
+        //
+        GUI_SetColor(GUI_YELLOW);
+        GUI_SetFont(&GUI_Font16B_1); //
+        GUI_SetTextMode(GUI_TM_TRANS);
+        GUI_SetTextStyle(GUI_TS_NORMAL);
+        GUI_DispStringHCenterAt("TEST->BMP(TF card)",160,0);
+        //
+        //挂载磁盘
+        ModuleSdFat_Res = f_mount(&ModuleSdFat_Fs,MODULE_SDFAT_SD_PATH,0);
+        if( ModuleSdFat_Res != FR_OK )
+        {
+            return;
+        }
+        EmWinXslApp_ShowBMP("res3.bmp",0,20);
+        //卸载磁盘
+        ModuleSdFat_Res = f_mount(NULL,MODULE_SDFAT_SD_PATH,0);
+        //显示游标
+        GUI_CURSOR_Show();
+        GUI_CURSOR_SetPosition(100,100);
+        //
+        GUI_CURSOR_SelectAnim(&GUI_CursorAnimHourglassM);
+        GUI_Delay(5000);
+        GUI_CURSOR_Select(&GUI_CursorArrowM);
+        //用设置游标位置的方式操作游标
+        for(i16=1; i16<=320; i16++)
+        {
+            t32 = GUI_GetTime();
+            GUI_CURSOR_SetPosition(i16,100);
+            while((GUI_GetTime()-t32)<10);
+        }
+        //用矢量方式操作游标
+#if 0				
+        {
+            GUI_PID_STATE guiPidState;
+            guiPidState.x=1;
+            guiPidState.y=200;
+            GUI_PID_StoreState(&guiPidState);
+            for(i16=1; i16<=300; i16++)
+            {
+                t32 = GUI_GetTime();
+                GUI_PID_GetState(&guiPidState);
+                guiPidState.x+=1;
+                GUI_PID_StoreState(&guiPidState);
+                GUI_Exec();
+                while((GUI_GetTime()-t32)<10);
+            }
+        }
+#endif				
+        //GUI_Delay(5000);
+        GUI_CURSOR_Hide();
+    }
+#endif
+    //--------------------实验：放在TF卡里的JPG图片
+#if EMWIN_XSL_APP_TEST_JPG_TF
+    {
+        GUI_SetBkColor(GUI_BLACK);
+        GUI_Clear();
+        //
+        GUI_SetColor(GUI_YELLOW);
+        GUI_SetFont(&GUI_Font16B_1); //
+        GUI_SetTextMode(GUI_TM_TRANS);
+        GUI_SetTextStyle(GUI_TS_NORMAL);
+        GUI_DispStringHCenterAt("TEST->JPEG(TF card)",160,0);
+        //
+        //挂载磁盘
+        ModuleSdFat_Res = f_mount(&ModuleSdFat_Fs,MODULE_SDFAT_SD_PATH,0);
+        if( ModuleSdFat_Res != FR_OK )
+        {
+            return;
+        }
+        EmWinXslApp_ShowJPG("res4.jpg",0,20);
+        //卸载磁盘
+        ModuleSdFat_Res = f_mount(NULL,MODULE_SDFAT_SD_PATH,0);
+        //
+        GUI_Delay(5000);
+    }
+#endif
+    //--------------------实验：放在TF卡里的GIF图片(慢)
+#if EMWIN_XSL_APP_TEST_GIF_TF
+    {
+        GUI_SetBkColor(GUI_BLACK);
+        GUI_Clear();
+        //
+        GUI_SetColor(GUI_YELLOW);
+        GUI_SetFont(&GUI_Font16B_1); //
+        GUI_SetTextMode(GUI_TM_TRANS);
+        GUI_SetTextStyle(GUI_TS_NORMAL);
+        GUI_DispStringHCenterAt("TEST->GIF(TF card)",160,0);
+        //
+        //挂载磁盘
+        ModuleSdFat_Res = f_mount(&ModuleSdFat_Fs,MODULE_SDFAT_SD_PATH,0);
+        if( ModuleSdFat_Res != FR_OK )
+        {
+            return;
+        }
+        EmWinXslApp_ShowGIF("res5.gif",0,20);
+        //卸载磁盘
+        ModuleSdFat_Res = f_mount(NULL,MODULE_SDFAT_SD_PATH,0);
+        //
+        GUI_Delay(5000);
+    }
+#endif
+    //--------------------实验：放在TF卡里的PNG图片(未实验成功,且PNG解码需要另外解码程序配合,故以后再做)
+#if EMWIN_XSL_APP_TEST_PNG_TF
+    {
+        GUI_SetBkColor(GUI_BLACK);
+        GUI_Clear();
+        //
+        GUI_SetColor(GUI_YELLOW);
+        GUI_SetFont(&GUI_Font16B_1); //
+        GUI_SetTextMode(GUI_TM_TRANS);
+        GUI_SetTextStyle(GUI_TS_NORMAL);
+        GUI_DispStringHCenterAt("TEST->PNG(TF card)",160,0);
+        //
+        //挂载磁盘
+        ModuleSdFat_Res = f_mount(&ModuleSdFat_Fs,MODULE_SDFAT_SD_PATH,0);
+        if( ModuleSdFat_Res != FR_OK )
+        {
+            return;
+        }
+        //EmWinXslApp_ShowPNG("res1.png",0,20);
+        EmWinXslApp_ShowPNG("res6.png",0,100);
+        EmWinXslApp_ShowPNG("res7.png",100,100);
+        //卸载磁盘
+        ModuleSdFat_Res = f_mount(NULL,MODULE_SDFAT_SD_PATH,0);
+        //
+        GUI_Delay(5000);
+    }
+#endif
+    //--------------------键盘实验
+    /*
+    常用函数:
+      GUI_StoreKeyMsg()       把消息存储于指定键
+      GUI_SendKeyMsg()        把消息发送至指定键
+         GUI_ClearKeyBuffer() 清除键缓存器
+         GUI_GetKey()         返回键缓存器中的内容
+         GUI_StoreKey()       把键存储于缓存器中
+         GUI_WaitKey()        等待键被按下
+    */
+    //--------------------
+    BspKey_NewSign=0;
+    while(1)
+    {
+        if(BspKey_NewSign==1)
+        {
+            BspKey_NewSign=0;
+            if(BspKey_Value==HCI_KEY_ESC)
+            {
+               break;
+            }
+        }
+        GUI_Delay(300);
+    }
+}
+//-------------------------------------------------------------------------------------------------------
+

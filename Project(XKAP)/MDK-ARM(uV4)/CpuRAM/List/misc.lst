@@ -1,0 +1,117 @@
+L 1 "..\..\Libraries\STM32F4xx_StdPeriph_Driver\src\misc.c"
+N/**
+N  ******************************************************************************
+N  * @file    misc.c
+N  * @author  MCD Application Team
+N  * @version V1.3.0
+N  * @date    08-November-2013
+N  * @brief   This file provides all the miscellaneous firmware functions (add-on
+N  *          to CMSIS functions).
+N  *          
+N  *  @verbatim   
+N  *                               
+N  *          ===================================================================      
+N  *                        How to configure Interrupts using driver 
+N  *          ===================================================================      
+N  * 
+N  *            This section provide functions allowing to configure the NVIC interrupts (IRQ).
+N  *            The Cortex-M4 exceptions are managed by CMSIS functions.
+N  *
+N  *            1. Configure the NVIC Priority Grouping using NVIC_PriorityGroupConfig()
+N  *                function according to the following table.
+N 
+N  *  The table below gives the allowed values of the pre-emption priority and subpriority according
+N  *  to the Priority Grouping configuration performed by NVIC_PriorityGroupConfig function
+N  *    ==========================================================================================================================
+N  *      NVIC_PriorityGroup   | NVIC_IRQChannelPreemptionPriority | NVIC_IRQChannelSubPriority  |       Description
+N  *    ==========================================================================================================================
+N  *     NVIC_PriorityGroup_0  |                0                  |            0-15             | 0 bits for pre-emption priority
+N  *                           |                                   |                             | 4 bits for subpriority
+N  *    --------------------------------------------------------------------------------------------------------------------------
+N  *     NVIC_PriorityGroup_1  |                0-1                |            0-7              | 1 bits for pre-emption priority
+N  *                           |                                   |                             | 3 bits for subpriority
+N  *    --------------------------------------------------------------------------------------------------------------------------    
+N  *     NVIC_PriorityGroup_2  |                0-3                |            0-3              | 2 bits for pre-emption priority
+N  *                           |                                   |                             | 2 bits for subpriority
+N  *    --------------------------------------------------------------------------------------------------------------------------    
+N  *     NVIC_PriorityGroup_3  |                0-7                |            0-1              | 3 bits for pre-emption priority
+N  *                           |                                   |                             | 1 bits for subpriority
+N  *    --------------------------------------------------------------------------------------------------------------------------    
+N  *     NVIC_PriorityGroup_4  |                0-15               |            0                | 4 bits for pre-emption priority
+N  *                           |                                   |                             | 0 bits for subpriority                       
+N  *    ==========================================================================================================================     
+N  *
+N  *            2. Enable and Configure the priority of the selected IRQ Channels using NVIC_Init()  
+N  *
+N  * @note  When the NVIC_PriorityGroup_0 is selected, IRQ pre-emption is no more possible. 
+N  *        The pending IRQ priority will be managed only by the subpriority.
+N  *
+N  * @note  IRQ priority order (sorted by highest to lowest priority):
+N  *         - Lowest pre-emption priority
+N  *         - Lowest subpriority
+N  *         - Lowest hardware priority (IRQ number)
+N  *
+N  *  @endverbatim
+N  *
+N  ******************************************************************************
+N  * @attention
+N  *
+N  * <h2><center>&copy; COPYRIGHT 2013 STMicroelectronics</center></h2>
+N  *
+N  * Licensed under MCD-ST Liberty SW License Agreement V2, (the "License");
+N  * You may not use this file except in compliance with the License.
+N  * You may obtain a copy of the License at:
+N  *
+N  *        http://www.st.com/software_license_agreement_liberty_v2
+N  *
+N  * Unless required by applicable law or agreed to in writing, software 
+N  * distributed under the License is distributed on an "AS IS" BASIS, 
+N  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+N  * See the License for the specific language governing permissions and
+N  * limitations under the License.
+N  *
+N  ******************************************************************************
+N  */
+N
+N/* Includes ------------------------------------------------------------------*/
+N#include "misc.h"
+L 1 "..\..\Libraries\STM32F4xx_StdPeriph_Driver\inc\misc.h" 1
+N/**
+N  ******************************************************************************
+N  * @file    misc.h
+N  * @author  MCD Application Team
+N  * @version V1.3.0
+N  * @date    08-November-2013
+N  * @brief   This file contains all the functions prototypes for the miscellaneous
+N  *          firmware library functions (add-on to CMSIS functions).
+N  ******************************************************************************
+N  * @attention
+N  *
+N  * <h2><center>&copy; COPYRIGHT 2013 STMicroelectronics</center></h2>
+N  *
+N  * Licensed under MCD-ST Liberty SW License Agreement V2, (the "License");
+N  * You may not use this file except in compliance with the License.
+N  * You may obtain a copy of the License at:
+N  *
+N  *        http://www.st.com/software_license_agreement_liberty_v2
+N  *
+N  * Unless required by applicable law or agreed to in writing, software 
+N  * distributed under the License is distributed on an "AS IS" BASIS, 
+N  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+N  * See the License for the specific language governing permissions and
+N  * limitations under the License.
+N  *
+N  ******************************************************************************
+N  */
+N
+N/* Define to prevent recursive inclusion -------------------------------------*/
+N#ifndef __MISC_H
+N#define __MISC_H
+N
+N#ifdef __cplusplus
+S extern "C" {
+N#endif
+N
+N/* Includes ------------------------------------------------------------------*/
+C "..\..\Libraries\STM32F4xx_StdPeriph_Driver\inc\misc.h" 38 23 cannot open source input file "stm32f4xx.h": No such file or directory
+N#include "stm32f4xx.h"

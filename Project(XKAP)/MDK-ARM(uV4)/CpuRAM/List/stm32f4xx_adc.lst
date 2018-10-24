@@ -1,0 +1,147 @@
+L 1 "..\..\Libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_adc.c"
+N/**
+N  ******************************************************************************
+N  * @file    stm32f4xx_adc.c
+N  * @author  MCD Application Team
+N  * @version V1.3.0
+N  * @date    08-November-2013
+N  * @brief   This file provides firmware functions to manage the following 
+N  *          functionalities of the Analog to Digital Convertor (ADC) peripheral:
+N  *           + Initialization and Configuration (in addition to ADC multi mode 
+N  *             selection)
+N  *           + Analog Watchdog configuration
+N  *           + Temperature Sensor & Vrefint (Voltage Reference internal) & VBAT
+N  *             management 
+N  *           + Regular Channels Configuration
+N  *           + Regular Channels DMA Configuration
+N  *           + Injected channels Configuration
+N  *           + Interrupts and flags management
+N  *         
+N  @verbatim
+N ===============================================================================
+N                     ##### How to use this driver #####
+N ===============================================================================
+N    [..]
+N    (#) Enable the ADC interface clock using 
+N        RCC_APB2PeriphClockCmd(RCC_APB2Periph_ADCx, ENABLE); 
+N       
+N    (#) ADC pins configuration
+N         (++) Enable the clock for the ADC GPIOs using the following function:
+N             RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOx, ENABLE);   
+N         (++) Configure these ADC pins in analog mode using GPIO_Init();  
+N  
+N     (#) Configure the ADC Prescaler, conversion resolution and data 
+N         alignment using the ADC_Init() function.
+N     (#) Activate the ADC peripheral using ADC_Cmd() function.
+N  
+N     *** Regular channels group configuration ***
+N     ============================================
+N     [..]    
+N       (+) To configure the ADC regular channels group features, use 
+N           ADC_Init() and ADC_RegularChannelConfig() functions.
+N       (+) To activate the continuous mode, use the ADC_continuousModeCmd()
+N           function.
+N       (+) To configurate and activate the Discontinuous mode, use the 
+N           ADC_DiscModeChannelCountConfig() and ADC_DiscModeCmd() functions.
+N       (+) To read the ADC converted values, use the ADC_GetConversionValue()
+N           function.
+N  
+N     *** Multi mode ADCs Regular channels configuration ***
+N     ======================================================
+N     [..]
+N       (+) Refer to "Regular channels group configuration" description to
+N           configure the ADC1, ADC2 and ADC3 regular channels.        
+N       (+) Select the Multi mode ADC regular channels features (dual or 
+N           triple mode) using ADC_CommonInit() function and configure 
+N           the DMA mode using ADC_MultiModeDMARequestAfterLastTransferCmd() 
+N           functions.        
+N       (+) Read the ADCs converted values using the 
+N           ADC_GetMultiModeConversionValue() function.
+N  
+N     *** DMA for Regular channels group features configuration ***
+N     ============================================================= 
+N     [..]
+N       (+) To enable the DMA mode for regular channels group, use the 
+N           ADC_DMACmd() function.
+N       (+) To enable the generation of DMA requests continuously at the end
+N           of the last DMA transfer, use the ADC_DMARequestAfterLastTransferCmd() 
+N           function.
+N  
+N     *** Injected channels group configuration ***
+N     =============================================    
+N     [..]
+N       (+) To configure the ADC Injected channels group features, use 
+N           ADC_InjectedChannelConfig() and  ADC_InjectedSequencerLengthConfig()
+N           functions.
+N       (+) To activate the continuous mode, use the ADC_continuousModeCmd()
+N           function.
+N       (+) To activate the Injected Discontinuous mode, use the 
+N           ADC_InjectedDiscModeCmd() function.  
+N       (+) To activate the AutoInjected mode, use the ADC_AutoInjectedConvCmd() 
+N           function.        
+N       (+) To read the ADC converted values, use the ADC_GetInjectedConversionValue() 
+N           function.
+N  
+N    @endverbatim
+N  ******************************************************************************
+N  * @attention
+N  *
+N  * <h2><center>&copy; COPYRIGHT 2013 STMicroelectronics</center></h2>
+N  *
+N  * Licensed under MCD-ST Liberty SW License Agreement V2, (the "License");
+N  * You may not use this file except in compliance with the License.
+N  * You may obtain a copy of the License at:
+N  *
+N  *        http://www.st.com/software_license_agreement_liberty_v2
+N  *
+N  * Unless required by applicable law or agreed to in writing, software 
+N  * distributed under the License is distributed on an "AS IS" BASIS, 
+N  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+N  * See the License for the specific language governing permissions and
+N  * limitations under the License.
+N  *
+N  ******************************************************************************  
+N  */ 
+N
+N/* Includes ------------------------------------------------------------------*/
+N#include "stm32f4xx_adc.h"
+L 1 "..\..\Libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_adc.h" 1
+N/**
+N  ******************************************************************************
+N  * @file    stm32f4xx_adc.h
+N  * @author  MCD Application Team
+N  * @version V1.3.0
+N  * @date    08-November-2013
+N  * @brief   This file contains all the functions prototypes for the ADC firmware 
+N  *          library.
+N  ******************************************************************************
+N  * @attention
+N  *
+N  * <h2><center>&copy; COPYRIGHT 2013 STMicroelectronics</center></h2>
+N  *
+N  * Licensed under MCD-ST Liberty SW License Agreement V2, (the "License");
+N  * You may not use this file except in compliance with the License.
+N  * You may obtain a copy of the License at:
+N  *
+N  *        http://www.st.com/software_license_agreement_liberty_v2
+N  *
+N  * Unless required by applicable law or agreed to in writing, software 
+N  * distributed under the License is distributed on an "AS IS" BASIS, 
+N  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+N  * See the License for the specific language governing permissions and
+N  * limitations under the License.
+N  *
+N  ******************************************************************************
+N  */
+N
+N/* Define to prevent recursive inclusion -------------------------------------*/
+N#ifndef __STM32F4xx_ADC_H
+N#define __STM32F4xx_ADC_H
+N
+N#ifdef __cplusplus
+S extern "C" {
+N#endif
+N
+N/* Includes ------------------------------------------------------------------*/
+C "..\..\Libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_adc.h" 38 23 cannot open source input file "stm32f4xx.h": No such file or directory
+N#include "stm32f4xx.h"

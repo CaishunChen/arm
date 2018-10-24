@@ -1,0 +1,1596 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>xsl: STM324xG_EVAL_SDIO_SD_Private_Defines</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">xsl
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">源码说明</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.13 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',false,false,'search.php','搜索');
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#define-members">宏定义</a>  </div>
+  <div class="headertitle">
+<div class="title">STM324xG_EVAL_SDIO_SD_Private_Defines<div class="ingroups"><a class="el" href="group___utilities.html">Utilities</a> &raquo; <a class="el" href="group___s_t_m32___e_v_a_l.html">STM32_EVAL</a> &raquo; <a class="el" href="group___s_t_m324x_g___e_v_a_l.html">STM324xG_EVAL</a> &raquo; <a class="el" href="group___s_t_m324x_g___e_v_a_l___s_d_i_o___s_d.html">STM324xG_EVAL_SDIO_SD</a></div></div>  </div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+宏定义</h2></td></tr>
+<tr class="memitem:ga070d2ce7b6bb7e5c05602aa8c308d0c4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_t_m324x_g___e_v_a_l___s_d_i_o___s_d___private___defines.html#ga070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>&#160;&#160;&#160;0</td></tr>
+<tr class="memdesc:ga070d2ce7b6bb7e5c05602aa8c308d0c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">SDIO Static flags, TimeOut, FIFO Address  <a href="#ga070d2ce7b6bb7e5c05602aa8c308d0c4">更多...</a><br /></td></tr>
+<tr class="separator:ga070d2ce7b6bb7e5c05602aa8c308d0c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab07b969cd21592c74e8ad5d929e97055"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_t_m324x_g___e_v_a_l___s_d_i_o___s_d___private___defines.html#gab07b969cd21592c74e8ad5d929e97055">SDIO_STATIC_FLAGS</a>&#160;&#160;&#160;((uint32_t)0x000005FF)</td></tr>
+<tr class="separator:gab07b969cd21592c74e8ad5d929e97055"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga451e336c7bc16567a28475fcb75c9828"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_t_m324x_g___e_v_a_l___s_d_i_o___s_d___private___defines.html#ga451e336c7bc16567a28475fcb75c9828">SDIO_CMD0TIMEOUT</a>&#160;&#160;&#160;((uint32_t)0x00010000)</td></tr>
+<tr class="separator:ga451e336c7bc16567a28475fcb75c9828"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga69314e11291e427652a4f6a3a5b1c439"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_t_m324x_g___e_v_a_l___s_d_i_o___s_d___private___defines.html#ga69314e11291e427652a4f6a3a5b1c439">SD_OCR_ADDR_OUT_OF_RANGE</a>&#160;&#160;&#160;((uint32_t)0x80000000)</td></tr>
+<tr class="memdesc:ga69314e11291e427652a4f6a3a5b1c439"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mask for errors Card Status R1 (OCR Register)  <a href="#ga69314e11291e427652a4f6a3a5b1c439">更多...</a><br /></td></tr>
+<tr class="separator:ga69314e11291e427652a4f6a3a5b1c439"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga540633bf8f3289c628063e2c1bd5f9ab"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_t_m324x_g___e_v_a_l___s_d_i_o___s_d___private___defines.html#ga540633bf8f3289c628063e2c1bd5f9ab">SD_OCR_ADDR_MISALIGNED</a>&#160;&#160;&#160;((uint32_t)0x40000000)</td></tr>
+<tr class="separator:ga540633bf8f3289c628063e2c1bd5f9ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad528da3ef5cf61ecf6d500a9b527c3e9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_t_m324x_g___e_v_a_l___s_d_i_o___s_d___private___defines.html#gad528da3ef5cf61ecf6d500a9b527c3e9">SD_OCR_BLOCK_LEN_ERR</a>&#160;&#160;&#160;((uint32_t)0x20000000)</td></tr>
+<tr class="separator:gad528da3ef5cf61ecf6d500a9b527c3e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga749b810615490fcf173d5355a6f42075"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_t_m324x_g___e_v_a_l___s_d_i_o___s_d___private___defines.html#ga749b810615490fcf173d5355a6f42075">SD_OCR_ERASE_SEQ_ERR</a>&#160;&#160;&#160;((uint32_t)0x10000000)</td></tr>
+<tr class="separator:ga749b810615490fcf173d5355a6f42075"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gadbeb08085e7282275fd5684b5d59d5aa"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_t_m324x_g___e_v_a_l___s_d_i_o___s_d___private___defines.html#gadbeb08085e7282275fd5684b5d59d5aa">SD_OCR_BAD_ERASE_PARAM</a>&#160;&#160;&#160;((uint32_t)0x08000000)</td></tr>
+<tr class="separator:gadbeb08085e7282275fd5684b5d59d5aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gabe0162775c8357aa31263ec2225bd123"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_t_m324x_g___e_v_a_l___s_d_i_o___s_d___private___defines.html#gabe0162775c8357aa31263ec2225bd123">SD_OCR_WRITE_PROT_VIOLATION</a>&#160;&#160;&#160;((uint32_t)0x04000000)</td></tr>
+<tr class="separator:gabe0162775c8357aa31263ec2225bd123"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac9a82e52cc83dd23035bc0fdd9a88cf4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_t_m324x_g___e_v_a_l___s_d_i_o___s_d___private___defines.html#gac9a82e52cc83dd23035bc0fdd9a88cf4">SD_OCR_LOCK_UNLOCK_FAILED</a>&#160;&#160;&#160;((uint32_t)0x01000000)</td></tr>
+<tr class="separator:gac9a82e52cc83dd23035bc0fdd9a88cf4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga75c4da9e9ca6b935c3afb213dda9c7d0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_t_m324x_g___e_v_a_l___s_d_i_o___s_d___private___defines.html#ga75c4da9e9ca6b935c3afb213dda9c7d0">SD_OCR_COM_CRC_FAILED</a>&#160;&#160;&#160;((uint32_t)0x00800000)</td></tr>
+<tr class="separator:ga75c4da9e9ca6b935c3afb213dda9c7d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaacbea47f6b504f11a696e9164d4eb7cd"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_t_m324x_g___e_v_a_l___s_d_i_o___s_d___private___defines.html#gaacbea47f6b504f11a696e9164d4eb7cd">SD_OCR_ILLEGAL_CMD</a>&#160;&#160;&#160;((uint32_t)0x00400000)</td></tr>
+<tr class="separator:gaacbea47f6b504f11a696e9164d4eb7cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1631f9e745f1f6c1ded6fba841a05a3d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_t_m324x_g___e_v_a_l___s_d_i_o___s_d___private___defines.html#ga1631f9e745f1f6c1ded6fba841a05a3d">SD_OCR_CARD_ECC_FAILED</a>&#160;&#160;&#160;((uint32_t)0x00200000)</td></tr>
+<tr class="separator:ga1631f9e745f1f6c1ded6fba841a05a3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3530c6edf8d326b2d72a8a7fb488957b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_t_m324x_g___e_v_a_l___s_d_i_o___s_d___private___defines.html#ga3530c6edf8d326b2d72a8a7fb488957b">SD_OCR_CC_ERROR</a>&#160;&#160;&#160;((uint32_t)0x00100000)</td></tr>
+<tr class="separator:ga3530c6edf8d326b2d72a8a7fb488957b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga11edb9b3be6266ffb00b9a507e3b9fff"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_t_m324x_g___e_v_a_l___s_d_i_o___s_d___private___defines.html#ga11edb9b3be6266ffb00b9a507e3b9fff">SD_OCR_GENERAL_UNKNOWN_ERROR</a>&#160;&#160;&#160;((uint32_t)0x00080000)</td></tr>
+<tr class="separator:ga11edb9b3be6266ffb00b9a507e3b9fff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga26270305d70e7d17a8bde14c15378bfd"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_t_m324x_g___e_v_a_l___s_d_i_o___s_d___private___defines.html#ga26270305d70e7d17a8bde14c15378bfd">SD_OCR_STREAM_READ_UNDERRUN</a>&#160;&#160;&#160;((uint32_t)0x00040000)</td></tr>
+<tr class="separator:ga26270305d70e7d17a8bde14c15378bfd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3b9973ae82de6ca9acb76444a9204407"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_t_m324x_g___e_v_a_l___s_d_i_o___s_d___private___defines.html#ga3b9973ae82de6ca9acb76444a9204407">SD_OCR_STREAM_WRITE_OVERRUN</a>&#160;&#160;&#160;((uint32_t)0x00020000)</td></tr>
+<tr class="separator:ga3b9973ae82de6ca9acb76444a9204407"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5a2a4ac30f0b473c87f283c9b25508c7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_t_m324x_g___e_v_a_l___s_d_i_o___s_d___private___defines.html#ga5a2a4ac30f0b473c87f283c9b25508c7">SD_OCR_CID_CSD_OVERWRIETE</a>&#160;&#160;&#160;((uint32_t)0x00010000)</td></tr>
+<tr class="separator:ga5a2a4ac30f0b473c87f283c9b25508c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gafe54250dcb2461950611828b409b8c42"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_t_m324x_g___e_v_a_l___s_d_i_o___s_d___private___defines.html#gafe54250dcb2461950611828b409b8c42">SD_OCR_WP_ERASE_SKIP</a>&#160;&#160;&#160;((uint32_t)0x00008000)</td></tr>
+<tr class="separator:gafe54250dcb2461950611828b409b8c42"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4e3e8df5237733fa61ced5304d6e25b8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_t_m324x_g___e_v_a_l___s_d_i_o___s_d___private___defines.html#ga4e3e8df5237733fa61ced5304d6e25b8">SD_OCR_CARD_ECC_DISABLED</a>&#160;&#160;&#160;((uint32_t)0x00004000)</td></tr>
+<tr class="separator:ga4e3e8df5237733fa61ced5304d6e25b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga67cbe1781e4db67d3b2fe422ba63de09"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_t_m324x_g___e_v_a_l___s_d_i_o___s_d___private___defines.html#ga67cbe1781e4db67d3b2fe422ba63de09">SD_OCR_ERASE_RESET</a>&#160;&#160;&#160;((uint32_t)0x00002000)</td></tr>
+<tr class="separator:ga67cbe1781e4db67d3b2fe422ba63de09"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2b6aa7c64b853586d3eecfd251d7709f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_t_m324x_g___e_v_a_l___s_d_i_o___s_d___private___defines.html#ga2b6aa7c64b853586d3eecfd251d7709f">SD_OCR_AKE_SEQ_ERROR</a>&#160;&#160;&#160;((uint32_t)0x00000008)</td></tr>
+<tr class="separator:ga2b6aa7c64b853586d3eecfd251d7709f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gace772bc4b0b2fdf6488e308afe8f29d1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_t_m324x_g___e_v_a_l___s_d_i_o___s_d___private___defines.html#gace772bc4b0b2fdf6488e308afe8f29d1">SD_OCR_ERRORBITS</a>&#160;&#160;&#160;((uint32_t)0xFDFFE008)</td></tr>
+<tr class="separator:gace772bc4b0b2fdf6488e308afe8f29d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga77d65e0cdecf792a2928b61cc85ed687"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_t_m324x_g___e_v_a_l___s_d_i_o___s_d___private___defines.html#ga77d65e0cdecf792a2928b61cc85ed687">SD_R6_GENERAL_UNKNOWN_ERROR</a>&#160;&#160;&#160;((uint32_t)0x00002000)</td></tr>
+<tr class="memdesc:ga77d65e0cdecf792a2928b61cc85ed687"><td class="mdescLeft">&#160;</td><td class="mdescRight">Masks for R6 Response  <a href="#ga77d65e0cdecf792a2928b61cc85ed687">更多...</a><br /></td></tr>
+<tr class="separator:ga77d65e0cdecf792a2928b61cc85ed687"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4f58bfcb28f68b87113fea12b172a247"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_t_m324x_g___e_v_a_l___s_d_i_o___s_d___private___defines.html#ga4f58bfcb28f68b87113fea12b172a247">SD_R6_ILLEGAL_CMD</a>&#160;&#160;&#160;((uint32_t)0x00004000)</td></tr>
+<tr class="separator:ga4f58bfcb28f68b87113fea12b172a247"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad4677c73c4e8e7e1ec2161554cfdfeeb"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_t_m324x_g___e_v_a_l___s_d_i_o___s_d___private___defines.html#gad4677c73c4e8e7e1ec2161554cfdfeeb">SD_R6_COM_CRC_FAILED</a>&#160;&#160;&#160;((uint32_t)0x00008000)</td></tr>
+<tr class="separator:gad4677c73c4e8e7e1ec2161554cfdfeeb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0c04dbb0a43806365bea64893961079e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_t_m324x_g___e_v_a_l___s_d_i_o___s_d___private___defines.html#ga0c04dbb0a43806365bea64893961079e">SD_VOLTAGE_WINDOW_SD</a>&#160;&#160;&#160;((uint32_t)0x80100000)</td></tr>
+<tr class="separator:ga0c04dbb0a43806365bea64893961079e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad5a86eaeba6869b6b2139b92ddfb3a1f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_t_m324x_g___e_v_a_l___s_d_i_o___s_d___private___defines.html#gad5a86eaeba6869b6b2139b92ddfb3a1f">SD_HIGH_CAPACITY</a>&#160;&#160;&#160;((uint32_t)0x40000000)</td></tr>
+<tr class="separator:gad5a86eaeba6869b6b2139b92ddfb3a1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3cb5fdbf46102857a99b044415873f14"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_t_m324x_g___e_v_a_l___s_d_i_o___s_d___private___defines.html#ga3cb5fdbf46102857a99b044415873f14">SD_STD_CAPACITY</a>&#160;&#160;&#160;((uint32_t)0x00000000)</td></tr>
+<tr class="separator:ga3cb5fdbf46102857a99b044415873f14"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac37389a0323f1a04aec2b59c905f0f6a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_t_m324x_g___e_v_a_l___s_d_i_o___s_d___private___defines.html#gac37389a0323f1a04aec2b59c905f0f6a">SD_CHECK_PATTERN</a>&#160;&#160;&#160;((uint32_t)0x000001AA)</td></tr>
+<tr class="separator:gac37389a0323f1a04aec2b59c905f0f6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8166660dfea1f2a865e30a8f86269b7f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_t_m324x_g___e_v_a_l___s_d_i_o___s_d___private___defines.html#ga8166660dfea1f2a865e30a8f86269b7f">SD_MAX_VOLT_TRIAL</a>&#160;&#160;&#160;((uint32_t)0x0000FFFF)</td></tr>
+<tr class="separator:ga8166660dfea1f2a865e30a8f86269b7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa989d106109048a2fb453928325d1f7d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_t_m324x_g___e_v_a_l___s_d_i_o___s_d___private___defines.html#gaa989d106109048a2fb453928325d1f7d">SD_ALLZERO</a>&#160;&#160;&#160;((uint32_t)0x00000000)</td></tr>
+<tr class="separator:gaa989d106109048a2fb453928325d1f7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6877313126588b7f2ce96f9b4d9a59b1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_t_m324x_g___e_v_a_l___s_d_i_o___s_d___private___defines.html#ga6877313126588b7f2ce96f9b4d9a59b1">SD_WIDE_BUS_SUPPORT</a>&#160;&#160;&#160;((uint32_t)0x00040000)</td></tr>
+<tr class="separator:ga6877313126588b7f2ce96f9b4d9a59b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gadfcb6043212373c69f3f740732f5d2b2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_t_m324x_g___e_v_a_l___s_d_i_o___s_d___private___defines.html#gadfcb6043212373c69f3f740732f5d2b2">SD_SINGLE_BUS_SUPPORT</a>&#160;&#160;&#160;((uint32_t)0x00010000)</td></tr>
+<tr class="separator:gadfcb6043212373c69f3f740732f5d2b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0560d0e5f15b8c676bd1c53bf0ac381f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_t_m324x_g___e_v_a_l___s_d_i_o___s_d___private___defines.html#ga0560d0e5f15b8c676bd1c53bf0ac381f">SD_CARD_LOCKED</a>&#160;&#160;&#160;((uint32_t)0x02000000)</td></tr>
+<tr class="separator:ga0560d0e5f15b8c676bd1c53bf0ac381f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9ca34cf6f4e38835347bc2dc29f9469e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_t_m324x_g___e_v_a_l___s_d_i_o___s_d___private___defines.html#ga9ca34cf6f4e38835347bc2dc29f9469e">SD_DATATIMEOUT</a>&#160;&#160;&#160;((uint32_t)0xFFFFFFFF)</td></tr>
+<tr class="separator:ga9ca34cf6f4e38835347bc2dc29f9469e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga37de3e6a7edfd787d09efddc589120ae"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_t_m324x_g___e_v_a_l___s_d_i_o___s_d___private___defines.html#ga37de3e6a7edfd787d09efddc589120ae">SD_0TO7BITS</a>&#160;&#160;&#160;((uint32_t)0x000000FF)</td></tr>
+<tr class="separator:ga37de3e6a7edfd787d09efddc589120ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2057731e114d40de0d0d6d2ff74f1501"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_t_m324x_g___e_v_a_l___s_d_i_o___s_d___private___defines.html#ga2057731e114d40de0d0d6d2ff74f1501">SD_8TO15BITS</a>&#160;&#160;&#160;((uint32_t)0x0000FF00)</td></tr>
+<tr class="separator:ga2057731e114d40de0d0d6d2ff74f1501"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga177a89af799d66f7782e6e8dd4e1438f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_t_m324x_g___e_v_a_l___s_d_i_o___s_d___private___defines.html#ga177a89af799d66f7782e6e8dd4e1438f">SD_16TO23BITS</a>&#160;&#160;&#160;((uint32_t)0x00FF0000)</td></tr>
+<tr class="separator:ga177a89af799d66f7782e6e8dd4e1438f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3d61f23b4fcf1efb4a16b26bd1f54550"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_t_m324x_g___e_v_a_l___s_d_i_o___s_d___private___defines.html#ga3d61f23b4fcf1efb4a16b26bd1f54550">SD_24TO31BITS</a>&#160;&#160;&#160;((uint32_t)0xFF000000)</td></tr>
+<tr class="separator:ga3d61f23b4fcf1efb4a16b26bd1f54550"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3be502d718368f47d02b554e863f30b1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_t_m324x_g___e_v_a_l___s_d_i_o___s_d___private___defines.html#ga3be502d718368f47d02b554e863f30b1">SD_MAX_DATA_LENGTH</a>&#160;&#160;&#160;((uint32_t)0x01FFFFFF)</td></tr>
+<tr class="separator:ga3be502d718368f47d02b554e863f30b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga96eec3ea095e393f51ab2686d928908c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_t_m324x_g___e_v_a_l___s_d_i_o___s_d___private___defines.html#ga96eec3ea095e393f51ab2686d928908c">SD_HALFFIFO</a>&#160;&#160;&#160;((uint32_t)0x00000008)</td></tr>
+<tr class="separator:ga96eec3ea095e393f51ab2686d928908c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga95cd045964036c67c40103ab6aa504b7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_t_m324x_g___e_v_a_l___s_d_i_o___s_d___private___defines.html#ga95cd045964036c67c40103ab6aa504b7">SD_HALFFIFOBYTES</a>&#160;&#160;&#160;((uint32_t)0x00000020)</td></tr>
+<tr class="separator:ga95cd045964036c67c40103ab6aa504b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac93a99c6a0f8999f37e690d6955872ac"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_t_m324x_g___e_v_a_l___s_d_i_o___s_d___private___defines.html#gac93a99c6a0f8999f37e690d6955872ac">SD_CCCC_LOCK_UNLOCK</a>&#160;&#160;&#160;((uint32_t)0x00000080)</td></tr>
+<tr class="memdesc:gac93a99c6a0f8999f37e690d6955872ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Command Class Supported  <a href="#gac93a99c6a0f8999f37e690d6955872ac">更多...</a><br /></td></tr>
+<tr class="separator:gac93a99c6a0f8999f37e690d6955872ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad8cbc04a4adf7c5588ddeb8e29f391f2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_t_m324x_g___e_v_a_l___s_d_i_o___s_d___private___defines.html#gad8cbc04a4adf7c5588ddeb8e29f391f2">SD_CCCC_WRITE_PROT</a>&#160;&#160;&#160;((uint32_t)0x00000040)</td></tr>
+<tr class="separator:gad8cbc04a4adf7c5588ddeb8e29f391f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf8f161db032555d848d233e6883e1ddf"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_t_m324x_g___e_v_a_l___s_d_i_o___s_d___private___defines.html#gaf8f161db032555d848d233e6883e1ddf">SD_CCCC_ERASE</a>&#160;&#160;&#160;((uint32_t)0x00000020)</td></tr>
+<tr class="separator:gaf8f161db032555d848d233e6883e1ddf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gafe1c9bdbdccf901be62203bf5547147e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_t_m324x_g___e_v_a_l___s_d_i_o___s_d___private___defines.html#gafe1c9bdbdccf901be62203bf5547147e">SDIO_SEND_IF_COND</a>&#160;&#160;&#160;((uint32_t)0x00000008)</td></tr>
+<tr class="memdesc:gafe1c9bdbdccf901be62203bf5547147e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Following commands are SD Card Specific commands. SDIO_APP_CMD should be sent before sending these commands.  <a href="#gafe1c9bdbdccf901be62203bf5547147e">更多...</a><br /></td></tr>
+<tr class="separator:gafe1c9bdbdccf901be62203bf5547147e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga070d2ce7b6bb7e5c05602aa8c308d0c4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_t_m324x_g___e_v_a_l___s_d_i_o___s_d___private___defines.html#ga070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>&#160;&#160;&#160;0</td></tr>
+<tr class="memdesc:ga070d2ce7b6bb7e5c05602aa8c308d0c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">SDIO Static flags, TimeOut, FIFO Address  <a href="#ga070d2ce7b6bb7e5c05602aa8c308d0c4">更多...</a><br /></td></tr>
+<tr class="separator:ga070d2ce7b6bb7e5c05602aa8c308d0c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab07b969cd21592c74e8ad5d929e97055"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_t_m324x_g___e_v_a_l___s_d_i_o___s_d___private___defines.html#gab07b969cd21592c74e8ad5d929e97055">SDIO_STATIC_FLAGS</a>&#160;&#160;&#160;((uint32_t)0x000005FF)</td></tr>
+<tr class="separator:gab07b969cd21592c74e8ad5d929e97055"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga451e336c7bc16567a28475fcb75c9828"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_t_m324x_g___e_v_a_l___s_d_i_o___s_d___private___defines.html#ga451e336c7bc16567a28475fcb75c9828">SDIO_CMD0TIMEOUT</a>&#160;&#160;&#160;((uint32_t)0x00010000)</td></tr>
+<tr class="separator:ga451e336c7bc16567a28475fcb75c9828"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga69314e11291e427652a4f6a3a5b1c439"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_t_m324x_g___e_v_a_l___s_d_i_o___s_d___private___defines.html#ga69314e11291e427652a4f6a3a5b1c439">SD_OCR_ADDR_OUT_OF_RANGE</a>&#160;&#160;&#160;((uint32_t)0x80000000)</td></tr>
+<tr class="memdesc:ga69314e11291e427652a4f6a3a5b1c439"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mask for errors Card Status R1 (OCR Register)  <a href="#ga69314e11291e427652a4f6a3a5b1c439">更多...</a><br /></td></tr>
+<tr class="separator:ga69314e11291e427652a4f6a3a5b1c439"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga540633bf8f3289c628063e2c1bd5f9ab"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_t_m324x_g___e_v_a_l___s_d_i_o___s_d___private___defines.html#ga540633bf8f3289c628063e2c1bd5f9ab">SD_OCR_ADDR_MISALIGNED</a>&#160;&#160;&#160;((uint32_t)0x40000000)</td></tr>
+<tr class="separator:ga540633bf8f3289c628063e2c1bd5f9ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad528da3ef5cf61ecf6d500a9b527c3e9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_t_m324x_g___e_v_a_l___s_d_i_o___s_d___private___defines.html#gad528da3ef5cf61ecf6d500a9b527c3e9">SD_OCR_BLOCK_LEN_ERR</a>&#160;&#160;&#160;((uint32_t)0x20000000)</td></tr>
+<tr class="separator:gad528da3ef5cf61ecf6d500a9b527c3e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga749b810615490fcf173d5355a6f42075"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_t_m324x_g___e_v_a_l___s_d_i_o___s_d___private___defines.html#ga749b810615490fcf173d5355a6f42075">SD_OCR_ERASE_SEQ_ERR</a>&#160;&#160;&#160;((uint32_t)0x10000000)</td></tr>
+<tr class="separator:ga749b810615490fcf173d5355a6f42075"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gadbeb08085e7282275fd5684b5d59d5aa"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_t_m324x_g___e_v_a_l___s_d_i_o___s_d___private___defines.html#gadbeb08085e7282275fd5684b5d59d5aa">SD_OCR_BAD_ERASE_PARAM</a>&#160;&#160;&#160;((uint32_t)0x08000000)</td></tr>
+<tr class="separator:gadbeb08085e7282275fd5684b5d59d5aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gabe0162775c8357aa31263ec2225bd123"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_t_m324x_g___e_v_a_l___s_d_i_o___s_d___private___defines.html#gabe0162775c8357aa31263ec2225bd123">SD_OCR_WRITE_PROT_VIOLATION</a>&#160;&#160;&#160;((uint32_t)0x04000000)</td></tr>
+<tr class="separator:gabe0162775c8357aa31263ec2225bd123"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac9a82e52cc83dd23035bc0fdd9a88cf4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_t_m324x_g___e_v_a_l___s_d_i_o___s_d___private___defines.html#gac9a82e52cc83dd23035bc0fdd9a88cf4">SD_OCR_LOCK_UNLOCK_FAILED</a>&#160;&#160;&#160;((uint32_t)0x01000000)</td></tr>
+<tr class="separator:gac9a82e52cc83dd23035bc0fdd9a88cf4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga75c4da9e9ca6b935c3afb213dda9c7d0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_t_m324x_g___e_v_a_l___s_d_i_o___s_d___private___defines.html#ga75c4da9e9ca6b935c3afb213dda9c7d0">SD_OCR_COM_CRC_FAILED</a>&#160;&#160;&#160;((uint32_t)0x00800000)</td></tr>
+<tr class="separator:ga75c4da9e9ca6b935c3afb213dda9c7d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaacbea47f6b504f11a696e9164d4eb7cd"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_t_m324x_g___e_v_a_l___s_d_i_o___s_d___private___defines.html#gaacbea47f6b504f11a696e9164d4eb7cd">SD_OCR_ILLEGAL_CMD</a>&#160;&#160;&#160;((uint32_t)0x00400000)</td></tr>
+<tr class="separator:gaacbea47f6b504f11a696e9164d4eb7cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1631f9e745f1f6c1ded6fba841a05a3d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_t_m324x_g___e_v_a_l___s_d_i_o___s_d___private___defines.html#ga1631f9e745f1f6c1ded6fba841a05a3d">SD_OCR_CARD_ECC_FAILED</a>&#160;&#160;&#160;((uint32_t)0x00200000)</td></tr>
+<tr class="separator:ga1631f9e745f1f6c1ded6fba841a05a3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3530c6edf8d326b2d72a8a7fb488957b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_t_m324x_g___e_v_a_l___s_d_i_o___s_d___private___defines.html#ga3530c6edf8d326b2d72a8a7fb488957b">SD_OCR_CC_ERROR</a>&#160;&#160;&#160;((uint32_t)0x00100000)</td></tr>
+<tr class="separator:ga3530c6edf8d326b2d72a8a7fb488957b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga11edb9b3be6266ffb00b9a507e3b9fff"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_t_m324x_g___e_v_a_l___s_d_i_o___s_d___private___defines.html#ga11edb9b3be6266ffb00b9a507e3b9fff">SD_OCR_GENERAL_UNKNOWN_ERROR</a>&#160;&#160;&#160;((uint32_t)0x00080000)</td></tr>
+<tr class="separator:ga11edb9b3be6266ffb00b9a507e3b9fff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga26270305d70e7d17a8bde14c15378bfd"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_t_m324x_g___e_v_a_l___s_d_i_o___s_d___private___defines.html#ga26270305d70e7d17a8bde14c15378bfd">SD_OCR_STREAM_READ_UNDERRUN</a>&#160;&#160;&#160;((uint32_t)0x00040000)</td></tr>
+<tr class="separator:ga26270305d70e7d17a8bde14c15378bfd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3b9973ae82de6ca9acb76444a9204407"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_t_m324x_g___e_v_a_l___s_d_i_o___s_d___private___defines.html#ga3b9973ae82de6ca9acb76444a9204407">SD_OCR_STREAM_WRITE_OVERRUN</a>&#160;&#160;&#160;((uint32_t)0x00020000)</td></tr>
+<tr class="separator:ga3b9973ae82de6ca9acb76444a9204407"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5a2a4ac30f0b473c87f283c9b25508c7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_t_m324x_g___e_v_a_l___s_d_i_o___s_d___private___defines.html#ga5a2a4ac30f0b473c87f283c9b25508c7">SD_OCR_CID_CSD_OVERWRIETE</a>&#160;&#160;&#160;((uint32_t)0x00010000)</td></tr>
+<tr class="separator:ga5a2a4ac30f0b473c87f283c9b25508c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gafe54250dcb2461950611828b409b8c42"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_t_m324x_g___e_v_a_l___s_d_i_o___s_d___private___defines.html#gafe54250dcb2461950611828b409b8c42">SD_OCR_WP_ERASE_SKIP</a>&#160;&#160;&#160;((uint32_t)0x00008000)</td></tr>
+<tr class="separator:gafe54250dcb2461950611828b409b8c42"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4e3e8df5237733fa61ced5304d6e25b8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_t_m324x_g___e_v_a_l___s_d_i_o___s_d___private___defines.html#ga4e3e8df5237733fa61ced5304d6e25b8">SD_OCR_CARD_ECC_DISABLED</a>&#160;&#160;&#160;((uint32_t)0x00004000)</td></tr>
+<tr class="separator:ga4e3e8df5237733fa61ced5304d6e25b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga67cbe1781e4db67d3b2fe422ba63de09"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_t_m324x_g___e_v_a_l___s_d_i_o___s_d___private___defines.html#ga67cbe1781e4db67d3b2fe422ba63de09">SD_OCR_ERASE_RESET</a>&#160;&#160;&#160;((uint32_t)0x00002000)</td></tr>
+<tr class="separator:ga67cbe1781e4db67d3b2fe422ba63de09"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2b6aa7c64b853586d3eecfd251d7709f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_t_m324x_g___e_v_a_l___s_d_i_o___s_d___private___defines.html#ga2b6aa7c64b853586d3eecfd251d7709f">SD_OCR_AKE_SEQ_ERROR</a>&#160;&#160;&#160;((uint32_t)0x00000008)</td></tr>
+<tr class="separator:ga2b6aa7c64b853586d3eecfd251d7709f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gace772bc4b0b2fdf6488e308afe8f29d1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_t_m324x_g___e_v_a_l___s_d_i_o___s_d___private___defines.html#gace772bc4b0b2fdf6488e308afe8f29d1">SD_OCR_ERRORBITS</a>&#160;&#160;&#160;((uint32_t)0xFDFFE008)</td></tr>
+<tr class="separator:gace772bc4b0b2fdf6488e308afe8f29d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga77d65e0cdecf792a2928b61cc85ed687"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_t_m324x_g___e_v_a_l___s_d_i_o___s_d___private___defines.html#ga77d65e0cdecf792a2928b61cc85ed687">SD_R6_GENERAL_UNKNOWN_ERROR</a>&#160;&#160;&#160;((uint32_t)0x00002000)</td></tr>
+<tr class="memdesc:ga77d65e0cdecf792a2928b61cc85ed687"><td class="mdescLeft">&#160;</td><td class="mdescRight">Masks for R6 Response  <a href="#ga77d65e0cdecf792a2928b61cc85ed687">更多...</a><br /></td></tr>
+<tr class="separator:ga77d65e0cdecf792a2928b61cc85ed687"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4f58bfcb28f68b87113fea12b172a247"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_t_m324x_g___e_v_a_l___s_d_i_o___s_d___private___defines.html#ga4f58bfcb28f68b87113fea12b172a247">SD_R6_ILLEGAL_CMD</a>&#160;&#160;&#160;((uint32_t)0x00004000)</td></tr>
+<tr class="separator:ga4f58bfcb28f68b87113fea12b172a247"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad4677c73c4e8e7e1ec2161554cfdfeeb"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_t_m324x_g___e_v_a_l___s_d_i_o___s_d___private___defines.html#gad4677c73c4e8e7e1ec2161554cfdfeeb">SD_R6_COM_CRC_FAILED</a>&#160;&#160;&#160;((uint32_t)0x00008000)</td></tr>
+<tr class="separator:gad4677c73c4e8e7e1ec2161554cfdfeeb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0c04dbb0a43806365bea64893961079e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_t_m324x_g___e_v_a_l___s_d_i_o___s_d___private___defines.html#ga0c04dbb0a43806365bea64893961079e">SD_VOLTAGE_WINDOW_SD</a>&#160;&#160;&#160;((uint32_t)0x80100000)</td></tr>
+<tr class="separator:ga0c04dbb0a43806365bea64893961079e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad5a86eaeba6869b6b2139b92ddfb3a1f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_t_m324x_g___e_v_a_l___s_d_i_o___s_d___private___defines.html#gad5a86eaeba6869b6b2139b92ddfb3a1f">SD_HIGH_CAPACITY</a>&#160;&#160;&#160;((uint32_t)0x40000000)</td></tr>
+<tr class="separator:gad5a86eaeba6869b6b2139b92ddfb3a1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3cb5fdbf46102857a99b044415873f14"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_t_m324x_g___e_v_a_l___s_d_i_o___s_d___private___defines.html#ga3cb5fdbf46102857a99b044415873f14">SD_STD_CAPACITY</a>&#160;&#160;&#160;((uint32_t)0x00000000)</td></tr>
+<tr class="separator:ga3cb5fdbf46102857a99b044415873f14"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac37389a0323f1a04aec2b59c905f0f6a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_t_m324x_g___e_v_a_l___s_d_i_o___s_d___private___defines.html#gac37389a0323f1a04aec2b59c905f0f6a">SD_CHECK_PATTERN</a>&#160;&#160;&#160;((uint32_t)0x000001AA)</td></tr>
+<tr class="separator:gac37389a0323f1a04aec2b59c905f0f6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8166660dfea1f2a865e30a8f86269b7f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_t_m324x_g___e_v_a_l___s_d_i_o___s_d___private___defines.html#ga8166660dfea1f2a865e30a8f86269b7f">SD_MAX_VOLT_TRIAL</a>&#160;&#160;&#160;((uint32_t)0x0000FFFF)</td></tr>
+<tr class="separator:ga8166660dfea1f2a865e30a8f86269b7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa989d106109048a2fb453928325d1f7d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_t_m324x_g___e_v_a_l___s_d_i_o___s_d___private___defines.html#gaa989d106109048a2fb453928325d1f7d">SD_ALLZERO</a>&#160;&#160;&#160;((uint32_t)0x00000000)</td></tr>
+<tr class="separator:gaa989d106109048a2fb453928325d1f7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6877313126588b7f2ce96f9b4d9a59b1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_t_m324x_g___e_v_a_l___s_d_i_o___s_d___private___defines.html#ga6877313126588b7f2ce96f9b4d9a59b1">SD_WIDE_BUS_SUPPORT</a>&#160;&#160;&#160;((uint32_t)0x00040000)</td></tr>
+<tr class="separator:ga6877313126588b7f2ce96f9b4d9a59b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gadfcb6043212373c69f3f740732f5d2b2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_t_m324x_g___e_v_a_l___s_d_i_o___s_d___private___defines.html#gadfcb6043212373c69f3f740732f5d2b2">SD_SINGLE_BUS_SUPPORT</a>&#160;&#160;&#160;((uint32_t)0x00010000)</td></tr>
+<tr class="separator:gadfcb6043212373c69f3f740732f5d2b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0560d0e5f15b8c676bd1c53bf0ac381f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_t_m324x_g___e_v_a_l___s_d_i_o___s_d___private___defines.html#ga0560d0e5f15b8c676bd1c53bf0ac381f">SD_CARD_LOCKED</a>&#160;&#160;&#160;((uint32_t)0x02000000)</td></tr>
+<tr class="separator:ga0560d0e5f15b8c676bd1c53bf0ac381f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9ca34cf6f4e38835347bc2dc29f9469e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_t_m324x_g___e_v_a_l___s_d_i_o___s_d___private___defines.html#ga9ca34cf6f4e38835347bc2dc29f9469e">SD_DATATIMEOUT</a>&#160;&#160;&#160;((uint32_t)0xFFFFFFFF)</td></tr>
+<tr class="separator:ga9ca34cf6f4e38835347bc2dc29f9469e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga37de3e6a7edfd787d09efddc589120ae"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_t_m324x_g___e_v_a_l___s_d_i_o___s_d___private___defines.html#ga37de3e6a7edfd787d09efddc589120ae">SD_0TO7BITS</a>&#160;&#160;&#160;((uint32_t)0x000000FF)</td></tr>
+<tr class="separator:ga37de3e6a7edfd787d09efddc589120ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2057731e114d40de0d0d6d2ff74f1501"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_t_m324x_g___e_v_a_l___s_d_i_o___s_d___private___defines.html#ga2057731e114d40de0d0d6d2ff74f1501">SD_8TO15BITS</a>&#160;&#160;&#160;((uint32_t)0x0000FF00)</td></tr>
+<tr class="separator:ga2057731e114d40de0d0d6d2ff74f1501"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga177a89af799d66f7782e6e8dd4e1438f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_t_m324x_g___e_v_a_l___s_d_i_o___s_d___private___defines.html#ga177a89af799d66f7782e6e8dd4e1438f">SD_16TO23BITS</a>&#160;&#160;&#160;((uint32_t)0x00FF0000)</td></tr>
+<tr class="separator:ga177a89af799d66f7782e6e8dd4e1438f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3d61f23b4fcf1efb4a16b26bd1f54550"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_t_m324x_g___e_v_a_l___s_d_i_o___s_d___private___defines.html#ga3d61f23b4fcf1efb4a16b26bd1f54550">SD_24TO31BITS</a>&#160;&#160;&#160;((uint32_t)0xFF000000)</td></tr>
+<tr class="separator:ga3d61f23b4fcf1efb4a16b26bd1f54550"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3be502d718368f47d02b554e863f30b1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_t_m324x_g___e_v_a_l___s_d_i_o___s_d___private___defines.html#ga3be502d718368f47d02b554e863f30b1">SD_MAX_DATA_LENGTH</a>&#160;&#160;&#160;((uint32_t)0x01FFFFFF)</td></tr>
+<tr class="separator:ga3be502d718368f47d02b554e863f30b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga96eec3ea095e393f51ab2686d928908c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_t_m324x_g___e_v_a_l___s_d_i_o___s_d___private___defines.html#ga96eec3ea095e393f51ab2686d928908c">SD_HALFFIFO</a>&#160;&#160;&#160;((uint32_t)0x00000008)</td></tr>
+<tr class="separator:ga96eec3ea095e393f51ab2686d928908c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga95cd045964036c67c40103ab6aa504b7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_t_m324x_g___e_v_a_l___s_d_i_o___s_d___private___defines.html#ga95cd045964036c67c40103ab6aa504b7">SD_HALFFIFOBYTES</a>&#160;&#160;&#160;((uint32_t)0x00000020)</td></tr>
+<tr class="separator:ga95cd045964036c67c40103ab6aa504b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac93a99c6a0f8999f37e690d6955872ac"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_t_m324x_g___e_v_a_l___s_d_i_o___s_d___private___defines.html#gac93a99c6a0f8999f37e690d6955872ac">SD_CCCC_LOCK_UNLOCK</a>&#160;&#160;&#160;((uint32_t)0x00000080)</td></tr>
+<tr class="memdesc:gac93a99c6a0f8999f37e690d6955872ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Command Class Supported  <a href="#gac93a99c6a0f8999f37e690d6955872ac">更多...</a><br /></td></tr>
+<tr class="separator:gac93a99c6a0f8999f37e690d6955872ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad8cbc04a4adf7c5588ddeb8e29f391f2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_t_m324x_g___e_v_a_l___s_d_i_o___s_d___private___defines.html#gad8cbc04a4adf7c5588ddeb8e29f391f2">SD_CCCC_WRITE_PROT</a>&#160;&#160;&#160;((uint32_t)0x00000040)</td></tr>
+<tr class="separator:gad8cbc04a4adf7c5588ddeb8e29f391f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf8f161db032555d848d233e6883e1ddf"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_t_m324x_g___e_v_a_l___s_d_i_o___s_d___private___defines.html#gaf8f161db032555d848d233e6883e1ddf">SD_CCCC_ERASE</a>&#160;&#160;&#160;((uint32_t)0x00000020)</td></tr>
+<tr class="separator:gaf8f161db032555d848d233e6883e1ddf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gafe1c9bdbdccf901be62203bf5547147e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_t_m324x_g___e_v_a_l___s_d_i_o___s_d___private___defines.html#gafe1c9bdbdccf901be62203bf5547147e">SDIO_SEND_IF_COND</a>&#160;&#160;&#160;((uint32_t)0x00000008)</td></tr>
+<tr class="memdesc:gafe1c9bdbdccf901be62203bf5547147e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Following commands are SD Card Specific commands. SDIO_APP_CMD should be sent before sending these commands.  <a href="#gafe1c9bdbdccf901be62203bf5547147e">更多...</a><br /></td></tr>
+<tr class="separator:gafe1c9bdbdccf901be62203bf5547147e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<h2 class="groupheader">宏定义说明</h2>
+<a id="ga070d2ce7b6bb7e5c05602aa8c308d0c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga070d2ce7b6bb7e5c05602aa8c308d0c4">&#9670;&nbsp;</a></span>NULL <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define NULL&#160;&#160;&#160;0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>SDIO Static flags, TimeOut, FIFO Address </p>
+
+</div>
+</div>
+<a id="ga070d2ce7b6bb7e5c05602aa8c308d0c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga070d2ce7b6bb7e5c05602aa8c308d0c4">&#9670;&nbsp;</a></span>NULL <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define NULL&#160;&#160;&#160;0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>SDIO Static flags, TimeOut, FIFO Address </p>
+
+</div>
+</div>
+<a id="ga37de3e6a7edfd787d09efddc589120ae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga37de3e6a7edfd787d09efddc589120ae">&#9670;&nbsp;</a></span>SD_0TO7BITS <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SD_0TO7BITS&#160;&#160;&#160;((uint32_t)0x000000FF)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga37de3e6a7edfd787d09efddc589120ae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga37de3e6a7edfd787d09efddc589120ae">&#9670;&nbsp;</a></span>SD_0TO7BITS <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SD_0TO7BITS&#160;&#160;&#160;((uint32_t)0x000000FF)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga177a89af799d66f7782e6e8dd4e1438f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga177a89af799d66f7782e6e8dd4e1438f">&#9670;&nbsp;</a></span>SD_16TO23BITS <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SD_16TO23BITS&#160;&#160;&#160;((uint32_t)0x00FF0000)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga177a89af799d66f7782e6e8dd4e1438f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga177a89af799d66f7782e6e8dd4e1438f">&#9670;&nbsp;</a></span>SD_16TO23BITS <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SD_16TO23BITS&#160;&#160;&#160;((uint32_t)0x00FF0000)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga3d61f23b4fcf1efb4a16b26bd1f54550"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga3d61f23b4fcf1efb4a16b26bd1f54550">&#9670;&nbsp;</a></span>SD_24TO31BITS <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SD_24TO31BITS&#160;&#160;&#160;((uint32_t)0xFF000000)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga3d61f23b4fcf1efb4a16b26bd1f54550"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga3d61f23b4fcf1efb4a16b26bd1f54550">&#9670;&nbsp;</a></span>SD_24TO31BITS <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SD_24TO31BITS&#160;&#160;&#160;((uint32_t)0xFF000000)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga2057731e114d40de0d0d6d2ff74f1501"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga2057731e114d40de0d0d6d2ff74f1501">&#9670;&nbsp;</a></span>SD_8TO15BITS <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SD_8TO15BITS&#160;&#160;&#160;((uint32_t)0x0000FF00)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga2057731e114d40de0d0d6d2ff74f1501"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga2057731e114d40de0d0d6d2ff74f1501">&#9670;&nbsp;</a></span>SD_8TO15BITS <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SD_8TO15BITS&#160;&#160;&#160;((uint32_t)0x0000FF00)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gaa989d106109048a2fb453928325d1f7d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa989d106109048a2fb453928325d1f7d">&#9670;&nbsp;</a></span>SD_ALLZERO <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SD_ALLZERO&#160;&#160;&#160;((uint32_t)0x00000000)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gaa989d106109048a2fb453928325d1f7d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa989d106109048a2fb453928325d1f7d">&#9670;&nbsp;</a></span>SD_ALLZERO <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SD_ALLZERO&#160;&#160;&#160;((uint32_t)0x00000000)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga0560d0e5f15b8c676bd1c53bf0ac381f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga0560d0e5f15b8c676bd1c53bf0ac381f">&#9670;&nbsp;</a></span>SD_CARD_LOCKED <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SD_CARD_LOCKED&#160;&#160;&#160;((uint32_t)0x02000000)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga0560d0e5f15b8c676bd1c53bf0ac381f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga0560d0e5f15b8c676bd1c53bf0ac381f">&#9670;&nbsp;</a></span>SD_CARD_LOCKED <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SD_CARD_LOCKED&#160;&#160;&#160;((uint32_t)0x02000000)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gaf8f161db032555d848d233e6883e1ddf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf8f161db032555d848d233e6883e1ddf">&#9670;&nbsp;</a></span>SD_CCCC_ERASE <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SD_CCCC_ERASE&#160;&#160;&#160;((uint32_t)0x00000020)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gaf8f161db032555d848d233e6883e1ddf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf8f161db032555d848d233e6883e1ddf">&#9670;&nbsp;</a></span>SD_CCCC_ERASE <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SD_CCCC_ERASE&#160;&#160;&#160;((uint32_t)0x00000020)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gac93a99c6a0f8999f37e690d6955872ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gac93a99c6a0f8999f37e690d6955872ac">&#9670;&nbsp;</a></span>SD_CCCC_LOCK_UNLOCK <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SD_CCCC_LOCK_UNLOCK&#160;&#160;&#160;((uint32_t)0x00000080)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Command Class Supported </p>
+
+</div>
+</div>
+<a id="gac93a99c6a0f8999f37e690d6955872ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gac93a99c6a0f8999f37e690d6955872ac">&#9670;&nbsp;</a></span>SD_CCCC_LOCK_UNLOCK <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SD_CCCC_LOCK_UNLOCK&#160;&#160;&#160;((uint32_t)0x00000080)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Command Class Supported </p>
+
+</div>
+</div>
+<a id="gad8cbc04a4adf7c5588ddeb8e29f391f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gad8cbc04a4adf7c5588ddeb8e29f391f2">&#9670;&nbsp;</a></span>SD_CCCC_WRITE_PROT <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SD_CCCC_WRITE_PROT&#160;&#160;&#160;((uint32_t)0x00000040)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gad8cbc04a4adf7c5588ddeb8e29f391f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gad8cbc04a4adf7c5588ddeb8e29f391f2">&#9670;&nbsp;</a></span>SD_CCCC_WRITE_PROT <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SD_CCCC_WRITE_PROT&#160;&#160;&#160;((uint32_t)0x00000040)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gac37389a0323f1a04aec2b59c905f0f6a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gac37389a0323f1a04aec2b59c905f0f6a">&#9670;&nbsp;</a></span>SD_CHECK_PATTERN <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SD_CHECK_PATTERN&#160;&#160;&#160;((uint32_t)0x000001AA)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gac37389a0323f1a04aec2b59c905f0f6a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gac37389a0323f1a04aec2b59c905f0f6a">&#9670;&nbsp;</a></span>SD_CHECK_PATTERN <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SD_CHECK_PATTERN&#160;&#160;&#160;((uint32_t)0x000001AA)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga9ca34cf6f4e38835347bc2dc29f9469e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga9ca34cf6f4e38835347bc2dc29f9469e">&#9670;&nbsp;</a></span>SD_DATATIMEOUT <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SD_DATATIMEOUT&#160;&#160;&#160;((uint32_t)0xFFFFFFFF)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga9ca34cf6f4e38835347bc2dc29f9469e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga9ca34cf6f4e38835347bc2dc29f9469e">&#9670;&nbsp;</a></span>SD_DATATIMEOUT <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SD_DATATIMEOUT&#160;&#160;&#160;((uint32_t)0xFFFFFFFF)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga96eec3ea095e393f51ab2686d928908c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga96eec3ea095e393f51ab2686d928908c">&#9670;&nbsp;</a></span>SD_HALFFIFO <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SD_HALFFIFO&#160;&#160;&#160;((uint32_t)0x00000008)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga96eec3ea095e393f51ab2686d928908c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga96eec3ea095e393f51ab2686d928908c">&#9670;&nbsp;</a></span>SD_HALFFIFO <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SD_HALFFIFO&#160;&#160;&#160;((uint32_t)0x00000008)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga95cd045964036c67c40103ab6aa504b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga95cd045964036c67c40103ab6aa504b7">&#9670;&nbsp;</a></span>SD_HALFFIFOBYTES <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SD_HALFFIFOBYTES&#160;&#160;&#160;((uint32_t)0x00000020)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga95cd045964036c67c40103ab6aa504b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga95cd045964036c67c40103ab6aa504b7">&#9670;&nbsp;</a></span>SD_HALFFIFOBYTES <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SD_HALFFIFOBYTES&#160;&#160;&#160;((uint32_t)0x00000020)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gad5a86eaeba6869b6b2139b92ddfb3a1f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gad5a86eaeba6869b6b2139b92ddfb3a1f">&#9670;&nbsp;</a></span>SD_HIGH_CAPACITY <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SD_HIGH_CAPACITY&#160;&#160;&#160;((uint32_t)0x40000000)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gad5a86eaeba6869b6b2139b92ddfb3a1f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gad5a86eaeba6869b6b2139b92ddfb3a1f">&#9670;&nbsp;</a></span>SD_HIGH_CAPACITY <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SD_HIGH_CAPACITY&#160;&#160;&#160;((uint32_t)0x40000000)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga3be502d718368f47d02b554e863f30b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga3be502d718368f47d02b554e863f30b1">&#9670;&nbsp;</a></span>SD_MAX_DATA_LENGTH <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SD_MAX_DATA_LENGTH&#160;&#160;&#160;((uint32_t)0x01FFFFFF)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga3be502d718368f47d02b554e863f30b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga3be502d718368f47d02b554e863f30b1">&#9670;&nbsp;</a></span>SD_MAX_DATA_LENGTH <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SD_MAX_DATA_LENGTH&#160;&#160;&#160;((uint32_t)0x01FFFFFF)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga8166660dfea1f2a865e30a8f86269b7f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga8166660dfea1f2a865e30a8f86269b7f">&#9670;&nbsp;</a></span>SD_MAX_VOLT_TRIAL <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SD_MAX_VOLT_TRIAL&#160;&#160;&#160;((uint32_t)0x0000FFFF)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga8166660dfea1f2a865e30a8f86269b7f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga8166660dfea1f2a865e30a8f86269b7f">&#9670;&nbsp;</a></span>SD_MAX_VOLT_TRIAL <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SD_MAX_VOLT_TRIAL&#160;&#160;&#160;((uint32_t)0x0000FFFF)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga540633bf8f3289c628063e2c1bd5f9ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga540633bf8f3289c628063e2c1bd5f9ab">&#9670;&nbsp;</a></span>SD_OCR_ADDR_MISALIGNED <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SD_OCR_ADDR_MISALIGNED&#160;&#160;&#160;((uint32_t)0x40000000)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga540633bf8f3289c628063e2c1bd5f9ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga540633bf8f3289c628063e2c1bd5f9ab">&#9670;&nbsp;</a></span>SD_OCR_ADDR_MISALIGNED <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SD_OCR_ADDR_MISALIGNED&#160;&#160;&#160;((uint32_t)0x40000000)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga69314e11291e427652a4f6a3a5b1c439"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga69314e11291e427652a4f6a3a5b1c439">&#9670;&nbsp;</a></span>SD_OCR_ADDR_OUT_OF_RANGE <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SD_OCR_ADDR_OUT_OF_RANGE&#160;&#160;&#160;((uint32_t)0x80000000)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Mask for errors Card Status R1 (OCR Register) </p>
+
+</div>
+</div>
+<a id="ga69314e11291e427652a4f6a3a5b1c439"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga69314e11291e427652a4f6a3a5b1c439">&#9670;&nbsp;</a></span>SD_OCR_ADDR_OUT_OF_RANGE <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SD_OCR_ADDR_OUT_OF_RANGE&#160;&#160;&#160;((uint32_t)0x80000000)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Mask for errors Card Status R1 (OCR Register) </p>
+
+</div>
+</div>
+<a id="ga2b6aa7c64b853586d3eecfd251d7709f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga2b6aa7c64b853586d3eecfd251d7709f">&#9670;&nbsp;</a></span>SD_OCR_AKE_SEQ_ERROR <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SD_OCR_AKE_SEQ_ERROR&#160;&#160;&#160;((uint32_t)0x00000008)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga2b6aa7c64b853586d3eecfd251d7709f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga2b6aa7c64b853586d3eecfd251d7709f">&#9670;&nbsp;</a></span>SD_OCR_AKE_SEQ_ERROR <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SD_OCR_AKE_SEQ_ERROR&#160;&#160;&#160;((uint32_t)0x00000008)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gadbeb08085e7282275fd5684b5d59d5aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gadbeb08085e7282275fd5684b5d59d5aa">&#9670;&nbsp;</a></span>SD_OCR_BAD_ERASE_PARAM <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SD_OCR_BAD_ERASE_PARAM&#160;&#160;&#160;((uint32_t)0x08000000)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gadbeb08085e7282275fd5684b5d59d5aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gadbeb08085e7282275fd5684b5d59d5aa">&#9670;&nbsp;</a></span>SD_OCR_BAD_ERASE_PARAM <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SD_OCR_BAD_ERASE_PARAM&#160;&#160;&#160;((uint32_t)0x08000000)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gad528da3ef5cf61ecf6d500a9b527c3e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gad528da3ef5cf61ecf6d500a9b527c3e9">&#9670;&nbsp;</a></span>SD_OCR_BLOCK_LEN_ERR <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SD_OCR_BLOCK_LEN_ERR&#160;&#160;&#160;((uint32_t)0x20000000)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gad528da3ef5cf61ecf6d500a9b527c3e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gad528da3ef5cf61ecf6d500a9b527c3e9">&#9670;&nbsp;</a></span>SD_OCR_BLOCK_LEN_ERR <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SD_OCR_BLOCK_LEN_ERR&#160;&#160;&#160;((uint32_t)0x20000000)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga4e3e8df5237733fa61ced5304d6e25b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga4e3e8df5237733fa61ced5304d6e25b8">&#9670;&nbsp;</a></span>SD_OCR_CARD_ECC_DISABLED <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SD_OCR_CARD_ECC_DISABLED&#160;&#160;&#160;((uint32_t)0x00004000)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga4e3e8df5237733fa61ced5304d6e25b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga4e3e8df5237733fa61ced5304d6e25b8">&#9670;&nbsp;</a></span>SD_OCR_CARD_ECC_DISABLED <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SD_OCR_CARD_ECC_DISABLED&#160;&#160;&#160;((uint32_t)0x00004000)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga1631f9e745f1f6c1ded6fba841a05a3d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga1631f9e745f1f6c1ded6fba841a05a3d">&#9670;&nbsp;</a></span>SD_OCR_CARD_ECC_FAILED <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SD_OCR_CARD_ECC_FAILED&#160;&#160;&#160;((uint32_t)0x00200000)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga1631f9e745f1f6c1ded6fba841a05a3d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga1631f9e745f1f6c1ded6fba841a05a3d">&#9670;&nbsp;</a></span>SD_OCR_CARD_ECC_FAILED <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SD_OCR_CARD_ECC_FAILED&#160;&#160;&#160;((uint32_t)0x00200000)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga3530c6edf8d326b2d72a8a7fb488957b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga3530c6edf8d326b2d72a8a7fb488957b">&#9670;&nbsp;</a></span>SD_OCR_CC_ERROR <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SD_OCR_CC_ERROR&#160;&#160;&#160;((uint32_t)0x00100000)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga3530c6edf8d326b2d72a8a7fb488957b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga3530c6edf8d326b2d72a8a7fb488957b">&#9670;&nbsp;</a></span>SD_OCR_CC_ERROR <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SD_OCR_CC_ERROR&#160;&#160;&#160;((uint32_t)0x00100000)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga5a2a4ac30f0b473c87f283c9b25508c7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga5a2a4ac30f0b473c87f283c9b25508c7">&#9670;&nbsp;</a></span>SD_OCR_CID_CSD_OVERWRIETE <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SD_OCR_CID_CSD_OVERWRIETE&#160;&#160;&#160;((uint32_t)0x00010000)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga5a2a4ac30f0b473c87f283c9b25508c7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga5a2a4ac30f0b473c87f283c9b25508c7">&#9670;&nbsp;</a></span>SD_OCR_CID_CSD_OVERWRIETE <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SD_OCR_CID_CSD_OVERWRIETE&#160;&#160;&#160;((uint32_t)0x00010000)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga75c4da9e9ca6b935c3afb213dda9c7d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga75c4da9e9ca6b935c3afb213dda9c7d0">&#9670;&nbsp;</a></span>SD_OCR_COM_CRC_FAILED <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SD_OCR_COM_CRC_FAILED&#160;&#160;&#160;((uint32_t)0x00800000)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga75c4da9e9ca6b935c3afb213dda9c7d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga75c4da9e9ca6b935c3afb213dda9c7d0">&#9670;&nbsp;</a></span>SD_OCR_COM_CRC_FAILED <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SD_OCR_COM_CRC_FAILED&#160;&#160;&#160;((uint32_t)0x00800000)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga67cbe1781e4db67d3b2fe422ba63de09"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga67cbe1781e4db67d3b2fe422ba63de09">&#9670;&nbsp;</a></span>SD_OCR_ERASE_RESET <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SD_OCR_ERASE_RESET&#160;&#160;&#160;((uint32_t)0x00002000)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga67cbe1781e4db67d3b2fe422ba63de09"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga67cbe1781e4db67d3b2fe422ba63de09">&#9670;&nbsp;</a></span>SD_OCR_ERASE_RESET <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SD_OCR_ERASE_RESET&#160;&#160;&#160;((uint32_t)0x00002000)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga749b810615490fcf173d5355a6f42075"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga749b810615490fcf173d5355a6f42075">&#9670;&nbsp;</a></span>SD_OCR_ERASE_SEQ_ERR <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SD_OCR_ERASE_SEQ_ERR&#160;&#160;&#160;((uint32_t)0x10000000)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga749b810615490fcf173d5355a6f42075"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga749b810615490fcf173d5355a6f42075">&#9670;&nbsp;</a></span>SD_OCR_ERASE_SEQ_ERR <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SD_OCR_ERASE_SEQ_ERR&#160;&#160;&#160;((uint32_t)0x10000000)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gace772bc4b0b2fdf6488e308afe8f29d1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gace772bc4b0b2fdf6488e308afe8f29d1">&#9670;&nbsp;</a></span>SD_OCR_ERRORBITS <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SD_OCR_ERRORBITS&#160;&#160;&#160;((uint32_t)0xFDFFE008)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gace772bc4b0b2fdf6488e308afe8f29d1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gace772bc4b0b2fdf6488e308afe8f29d1">&#9670;&nbsp;</a></span>SD_OCR_ERRORBITS <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SD_OCR_ERRORBITS&#160;&#160;&#160;((uint32_t)0xFDFFE008)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga11edb9b3be6266ffb00b9a507e3b9fff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga11edb9b3be6266ffb00b9a507e3b9fff">&#9670;&nbsp;</a></span>SD_OCR_GENERAL_UNKNOWN_ERROR <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SD_OCR_GENERAL_UNKNOWN_ERROR&#160;&#160;&#160;((uint32_t)0x00080000)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga11edb9b3be6266ffb00b9a507e3b9fff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga11edb9b3be6266ffb00b9a507e3b9fff">&#9670;&nbsp;</a></span>SD_OCR_GENERAL_UNKNOWN_ERROR <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SD_OCR_GENERAL_UNKNOWN_ERROR&#160;&#160;&#160;((uint32_t)0x00080000)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gaacbea47f6b504f11a696e9164d4eb7cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaacbea47f6b504f11a696e9164d4eb7cd">&#9670;&nbsp;</a></span>SD_OCR_ILLEGAL_CMD <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SD_OCR_ILLEGAL_CMD&#160;&#160;&#160;((uint32_t)0x00400000)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gaacbea47f6b504f11a696e9164d4eb7cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaacbea47f6b504f11a696e9164d4eb7cd">&#9670;&nbsp;</a></span>SD_OCR_ILLEGAL_CMD <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SD_OCR_ILLEGAL_CMD&#160;&#160;&#160;((uint32_t)0x00400000)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gac9a82e52cc83dd23035bc0fdd9a88cf4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gac9a82e52cc83dd23035bc0fdd9a88cf4">&#9670;&nbsp;</a></span>SD_OCR_LOCK_UNLOCK_FAILED <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SD_OCR_LOCK_UNLOCK_FAILED&#160;&#160;&#160;((uint32_t)0x01000000)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gac9a82e52cc83dd23035bc0fdd9a88cf4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gac9a82e52cc83dd23035bc0fdd9a88cf4">&#9670;&nbsp;</a></span>SD_OCR_LOCK_UNLOCK_FAILED <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SD_OCR_LOCK_UNLOCK_FAILED&#160;&#160;&#160;((uint32_t)0x01000000)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga26270305d70e7d17a8bde14c15378bfd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga26270305d70e7d17a8bde14c15378bfd">&#9670;&nbsp;</a></span>SD_OCR_STREAM_READ_UNDERRUN <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SD_OCR_STREAM_READ_UNDERRUN&#160;&#160;&#160;((uint32_t)0x00040000)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga26270305d70e7d17a8bde14c15378bfd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga26270305d70e7d17a8bde14c15378bfd">&#9670;&nbsp;</a></span>SD_OCR_STREAM_READ_UNDERRUN <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SD_OCR_STREAM_READ_UNDERRUN&#160;&#160;&#160;((uint32_t)0x00040000)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga3b9973ae82de6ca9acb76444a9204407"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga3b9973ae82de6ca9acb76444a9204407">&#9670;&nbsp;</a></span>SD_OCR_STREAM_WRITE_OVERRUN <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SD_OCR_STREAM_WRITE_OVERRUN&#160;&#160;&#160;((uint32_t)0x00020000)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga3b9973ae82de6ca9acb76444a9204407"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga3b9973ae82de6ca9acb76444a9204407">&#9670;&nbsp;</a></span>SD_OCR_STREAM_WRITE_OVERRUN <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SD_OCR_STREAM_WRITE_OVERRUN&#160;&#160;&#160;((uint32_t)0x00020000)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gafe54250dcb2461950611828b409b8c42"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gafe54250dcb2461950611828b409b8c42">&#9670;&nbsp;</a></span>SD_OCR_WP_ERASE_SKIP <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SD_OCR_WP_ERASE_SKIP&#160;&#160;&#160;((uint32_t)0x00008000)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gafe54250dcb2461950611828b409b8c42"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gafe54250dcb2461950611828b409b8c42">&#9670;&nbsp;</a></span>SD_OCR_WP_ERASE_SKIP <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SD_OCR_WP_ERASE_SKIP&#160;&#160;&#160;((uint32_t)0x00008000)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gabe0162775c8357aa31263ec2225bd123"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gabe0162775c8357aa31263ec2225bd123">&#9670;&nbsp;</a></span>SD_OCR_WRITE_PROT_VIOLATION <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SD_OCR_WRITE_PROT_VIOLATION&#160;&#160;&#160;((uint32_t)0x04000000)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gabe0162775c8357aa31263ec2225bd123"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gabe0162775c8357aa31263ec2225bd123">&#9670;&nbsp;</a></span>SD_OCR_WRITE_PROT_VIOLATION <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SD_OCR_WRITE_PROT_VIOLATION&#160;&#160;&#160;((uint32_t)0x04000000)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gad4677c73c4e8e7e1ec2161554cfdfeeb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gad4677c73c4e8e7e1ec2161554cfdfeeb">&#9670;&nbsp;</a></span>SD_R6_COM_CRC_FAILED <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SD_R6_COM_CRC_FAILED&#160;&#160;&#160;((uint32_t)0x00008000)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gad4677c73c4e8e7e1ec2161554cfdfeeb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gad4677c73c4e8e7e1ec2161554cfdfeeb">&#9670;&nbsp;</a></span>SD_R6_COM_CRC_FAILED <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SD_R6_COM_CRC_FAILED&#160;&#160;&#160;((uint32_t)0x00008000)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga77d65e0cdecf792a2928b61cc85ed687"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga77d65e0cdecf792a2928b61cc85ed687">&#9670;&nbsp;</a></span>SD_R6_GENERAL_UNKNOWN_ERROR <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SD_R6_GENERAL_UNKNOWN_ERROR&#160;&#160;&#160;((uint32_t)0x00002000)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Masks for R6 Response </p>
+
+</div>
+</div>
+<a id="ga77d65e0cdecf792a2928b61cc85ed687"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga77d65e0cdecf792a2928b61cc85ed687">&#9670;&nbsp;</a></span>SD_R6_GENERAL_UNKNOWN_ERROR <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SD_R6_GENERAL_UNKNOWN_ERROR&#160;&#160;&#160;((uint32_t)0x00002000)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Masks for R6 Response </p>
+
+</div>
+</div>
+<a id="ga4f58bfcb28f68b87113fea12b172a247"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga4f58bfcb28f68b87113fea12b172a247">&#9670;&nbsp;</a></span>SD_R6_ILLEGAL_CMD <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SD_R6_ILLEGAL_CMD&#160;&#160;&#160;((uint32_t)0x00004000)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga4f58bfcb28f68b87113fea12b172a247"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga4f58bfcb28f68b87113fea12b172a247">&#9670;&nbsp;</a></span>SD_R6_ILLEGAL_CMD <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SD_R6_ILLEGAL_CMD&#160;&#160;&#160;((uint32_t)0x00004000)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gadfcb6043212373c69f3f740732f5d2b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gadfcb6043212373c69f3f740732f5d2b2">&#9670;&nbsp;</a></span>SD_SINGLE_BUS_SUPPORT <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SD_SINGLE_BUS_SUPPORT&#160;&#160;&#160;((uint32_t)0x00010000)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gadfcb6043212373c69f3f740732f5d2b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gadfcb6043212373c69f3f740732f5d2b2">&#9670;&nbsp;</a></span>SD_SINGLE_BUS_SUPPORT <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SD_SINGLE_BUS_SUPPORT&#160;&#160;&#160;((uint32_t)0x00010000)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga3cb5fdbf46102857a99b044415873f14"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga3cb5fdbf46102857a99b044415873f14">&#9670;&nbsp;</a></span>SD_STD_CAPACITY <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SD_STD_CAPACITY&#160;&#160;&#160;((uint32_t)0x00000000)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga3cb5fdbf46102857a99b044415873f14"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga3cb5fdbf46102857a99b044415873f14">&#9670;&nbsp;</a></span>SD_STD_CAPACITY <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SD_STD_CAPACITY&#160;&#160;&#160;((uint32_t)0x00000000)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga0c04dbb0a43806365bea64893961079e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga0c04dbb0a43806365bea64893961079e">&#9670;&nbsp;</a></span>SD_VOLTAGE_WINDOW_SD <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SD_VOLTAGE_WINDOW_SD&#160;&#160;&#160;((uint32_t)0x80100000)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga0c04dbb0a43806365bea64893961079e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga0c04dbb0a43806365bea64893961079e">&#9670;&nbsp;</a></span>SD_VOLTAGE_WINDOW_SD <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SD_VOLTAGE_WINDOW_SD&#160;&#160;&#160;((uint32_t)0x80100000)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga6877313126588b7f2ce96f9b4d9a59b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga6877313126588b7f2ce96f9b4d9a59b1">&#9670;&nbsp;</a></span>SD_WIDE_BUS_SUPPORT <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SD_WIDE_BUS_SUPPORT&#160;&#160;&#160;((uint32_t)0x00040000)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga6877313126588b7f2ce96f9b4d9a59b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga6877313126588b7f2ce96f9b4d9a59b1">&#9670;&nbsp;</a></span>SD_WIDE_BUS_SUPPORT <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SD_WIDE_BUS_SUPPORT&#160;&#160;&#160;((uint32_t)0x00040000)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga451e336c7bc16567a28475fcb75c9828"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga451e336c7bc16567a28475fcb75c9828">&#9670;&nbsp;</a></span>SDIO_CMD0TIMEOUT <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SDIO_CMD0TIMEOUT&#160;&#160;&#160;((uint32_t)0x00010000)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga451e336c7bc16567a28475fcb75c9828"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga451e336c7bc16567a28475fcb75c9828">&#9670;&nbsp;</a></span>SDIO_CMD0TIMEOUT <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SDIO_CMD0TIMEOUT&#160;&#160;&#160;((uint32_t)0x00010000)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gafe1c9bdbdccf901be62203bf5547147e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gafe1c9bdbdccf901be62203bf5547147e">&#9670;&nbsp;</a></span>SDIO_SEND_IF_COND <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SDIO_SEND_IF_COND&#160;&#160;&#160;((uint32_t)0x00000008)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Following commands are SD Card Specific commands. SDIO_APP_CMD should be sent before sending these commands. </p>
+
+</div>
+</div>
+<a id="gafe1c9bdbdccf901be62203bf5547147e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gafe1c9bdbdccf901be62203bf5547147e">&#9670;&nbsp;</a></span>SDIO_SEND_IF_COND <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SDIO_SEND_IF_COND&#160;&#160;&#160;((uint32_t)0x00000008)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Following commands are SD Card Specific commands. SDIO_APP_CMD should be sent before sending these commands. </p>
+
+</div>
+</div>
+<a id="gab07b969cd21592c74e8ad5d929e97055"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gab07b969cd21592c74e8ad5d929e97055">&#9670;&nbsp;</a></span>SDIO_STATIC_FLAGS <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SDIO_STATIC_FLAGS&#160;&#160;&#160;((uint32_t)0x000005FF)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gab07b969cd21592c74e8ad5d929e97055"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gab07b969cd21592c74e8ad5d929e97055">&#9670;&nbsp;</a></span>SDIO_STATIC_FLAGS <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SDIO_STATIC_FLAGS&#160;&#160;&#160;((uint32_t)0x000005FF)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

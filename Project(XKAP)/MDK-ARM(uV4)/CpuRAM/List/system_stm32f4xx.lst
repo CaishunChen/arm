@@ -1,0 +1,257 @@
+L 1 "..\..\User\UserBsp\Stm32F4\system_stm32f4xx.c"
+N/*
+N*********************************************************************************************************
+N*
+N*	模块名称 : 系统时钟配置模块
+N*	文件名称 : system_stm32f4xx.c
+N*	版    本 : V1.0
+N*	说    明 : 其中的 SystemInit() 函数配置系统时钟。这个函数被启动文件（汇编文件）调用，因此main()函数
+N*			   不必重复调用。
+N*
+N*			  这是固件库中提供的文件，我们仅修改了其中的 SystemInit_ExtMemCtl() 函数。
+N*
+N*	Copyright (C), 2013-2014, 安富莱电子 www.armfly.com
+N*
+N*********************************************************************************************************
+N*/
+N
+N/*
+N	【安富莱提示】
+N	
+N	1、 缺省的外部晶振频率是25MHz， PLL倍频到 168MHz 作为CPU系统时钟。
+N		如果外部晶振频率不是 25MHz， 请修改  "stm32f4xx.h " 文件中的 "HSE_VALUE" 宏定义
+N	     
+N	2、 如果需要将变量定位外部SRAM， 请打开  "DATA_IN_ExtSRAM" 宏定义，缺省是被注释掉的。
+N		如果需要将变量定位外部SDRAM，请打开  "DATA_IN_ExtSDRAM" 宏定义，缺省是被注释掉的。
+N	
+N	3、 如果需要将程序定位在CPU内部，请打开 "VECT_TAB_SRAM" 宏定义，缺省是被注释掉的。
+N		SystemInit_ExtMemCtl() 函数是在main()函数之前被执行的，它主要完成FSMC总线的配置。如果外部SRAM的地址
+N		和ST的板子不同，那么你需要更改这个函数。
+N		
+N		安富莱STM32-V5开发板SRAM口线和ST固件库缺省硬件不同之处：
+N		a) 增加了 PE5/FSMC_A21，和主片选一起译码。ST的没有配置PE5。
+N		b) 片选管脚不同，ST的是PG9/FSMC_NE2, 安富莱的STM32-V5是 PG10/FSMC_NE3
+N	
+N	4、"DATA_IN_ExtSRAM" 和 "VECT_TAB_SRAM" 这两个宏也可以在工程配置中 predefine 参数中指定。
+N	
+N	5、 SystemCoreClock 全局变量表示系统主频（Hz），缺省是 168000000. 在C程序中可以直接使用改全局变量。
+N	   如果程序在运行过程中动态修改了PLL倍频系数，或者切换了时钟源，请务必执行一次 SystemCoreClockUpdate()
+N	   函数，这个函数会自动根据PLL倍频参数计算出实际的主频。
+N	
+N*/
+N/**
+N  ******************************************************************************
+N  * @file    Project/STM32F4xx_StdPeriph_Templates/system_stm32f4xx.c
+N  * @author  MCD Application Team
+N  * @version V1.3.0
+N  * @date    13-November-2013
+N  * @brief   CMSIS Cortex-M4 Device Peripheral Access Layer System Source File.
+N  *          This file contains the system clock configuration for STM32F4xx devices.
+N  *             
+N  * 1.  This file provides two functions and one global variable to be called from 
+N  *     user application:
+N  *      - SystemInit(): Setups the system clock (System clock source, PLL Multiplier
+N  *                      and Divider factors, AHB/APBx prescalers and Flash settings),
+N  *                      depending on the configuration made in the clock xls tool. 
+N  *                      This function is called at startup just after reset and 
+N  *                      before branch to main program. This call is made inside
+N  *                      the "startup_stm32f4xx.s" file.
+N  *
+N  *      - SystemCoreClock variable: Contains the core clock (HCLK), it can be used
+N  *                                  by the user application to setup the SysTick 
+N  *                                  timer or configure other parameters.
+N  *                                     
+N  *      - SystemCoreClockUpdate(): Updates the variable SystemCoreClock and must
+N  *                                 be called whenever the core clock is changed
+N  *                                 during program execution.
+N  *
+N  * 2. After each device reset the HSI (16 MHz) is used as system clock source.
+N  *    Then SystemInit() function is called, in "startup_stm32f4xx.s" file, to
+N  *    configure the system clock before to branch to main program.
+N  *
+N  * 3. If the system clock source selected by user fails to startup, the SystemInit()
+N  *    function will do nothing and HSI still used as system clock source. User can 
+N  *    add some code to deal with this issue inside the SetSysClock() function.
+N  *
+N  * 4. The default value of HSE crystal is set to 25MHz, refer to "HSE_VALUE" define
+N  *    in "stm32f4xx.h" file. When HSE is used as system clock source, directly or
+N  *    through PLL, and you are using different crystal you have to adapt the HSE
+N  *    value to your own configuration.
+N  *
+N  * 5. This file configures the system clock as follows:
+N  *=============================================================================
+N  *=============================================================================
+N  *                    Supported STM32F40xxx/41xxx devices
+N  *-----------------------------------------------------------------------------
+N  *        System Clock source                    | PLL (HSE)
+N  *-----------------------------------------------------------------------------
+N  *        SYSCLK(Hz)                             | 168000000
+N  *-----------------------------------------------------------------------------
+N  *        HCLK(Hz)                               | 168000000
+N  *-----------------------------------------------------------------------------
+N  *        AHB Prescaler                          | 1
+N  *-----------------------------------------------------------------------------
+N  *        APB1 Prescaler                         | 4
+N  *-----------------------------------------------------------------------------
+N  *        APB2 Prescaler                         | 2
+N  *-----------------------------------------------------------------------------
+N  *        HSE Frequency(Hz)                      | 25000000
+N  *-----------------------------------------------------------------------------
+N  *        PLL_M                                  | 25
+N  *-----------------------------------------------------------------------------
+N  *        PLL_N                                  | 336
+N  *-----------------------------------------------------------------------------
+N  *        PLL_P                                  | 2
+N  *-----------------------------------------------------------------------------
+N  *        PLL_Q                                  | 7
+N  *-----------------------------------------------------------------------------
+N  *        PLLI2S_N                               | NA
+N  *-----------------------------------------------------------------------------
+N  *        PLLI2S_R                               | NA
+N  *-----------------------------------------------------------------------------
+N  *        I2S input clock                        | NA
+N  *-----------------------------------------------------------------------------
+N  *        VDD(V)                                 | 3.3
+N  *-----------------------------------------------------------------------------
+N  *        Main regulator output voltage          | Scale1 mode
+N  *-----------------------------------------------------------------------------
+N  *        Flash Latency(WS)                      | 5
+N  *-----------------------------------------------------------------------------
+N  *        Prefetch Buffer                        | ON
+N  *-----------------------------------------------------------------------------
+N  *        Instruction cache                      | ON
+N  *-----------------------------------------------------------------------------
+N  *        Data cache                             | ON
+N  *-----------------------------------------------------------------------------
+N  *        Require 48MHz for USB OTG FS,          | Disabled
+N  *        SDIO and RNG clock                     |
+N  *-----------------------------------------------------------------------------
+N  *=============================================================================
+N  *=============================================================================
+N  *                    Supported STM32F42xxx/43xxx devices
+N  *-----------------------------------------------------------------------------
+N  *        System Clock source                    | PLL (HSE)
+N  *-----------------------------------------------------------------------------
+N  *        SYSCLK(Hz)                             | 180000000
+N  *-----------------------------------------------------------------------------
+N  *        HCLK(Hz)                               | 180000000
+N  *-----------------------------------------------------------------------------
+N  *        AHB Prescaler                          | 1
+N  *-----------------------------------------------------------------------------
+N  *        APB1 Prescaler                         | 4
+N  *-----------------------------------------------------------------------------
+N  *        APB2 Prescaler                         | 2
+N  *-----------------------------------------------------------------------------
+N  *        HSE Frequency(Hz)                      | 25000000
+N  *-----------------------------------------------------------------------------
+N  *        PLL_M                                  | 25
+N  *-----------------------------------------------------------------------------
+N  *        PLL_N                                  | 360
+N  *-----------------------------------------------------------------------------
+N  *        PLL_P                                  | 2
+N  *-----------------------------------------------------------------------------
+N  *        PLL_Q                                  | 7
+N  *-----------------------------------------------------------------------------
+N  *        PLLI2S_N                               | NA
+N  *-----------------------------------------------------------------------------
+N  *        PLLI2S_R                               | NA
+N  *-----------------------------------------------------------------------------
+N  *        I2S input clock                        | NA
+N  *-----------------------------------------------------------------------------
+N  *        VDD(V)                                 | 3.3
+N  *-----------------------------------------------------------------------------
+N  *        Main regulator output voltage          | Scale1 mode
+N  *-----------------------------------------------------------------------------
+N  *        Flash Latency(WS)                      | 5
+N  *-----------------------------------------------------------------------------
+N  *        Prefetch Buffer                        | ON
+N  *-----------------------------------------------------------------------------
+N  *        Instruction cache                      | ON
+N  *-----------------------------------------------------------------------------
+N  *        Data cache                             | ON
+N  *-----------------------------------------------------------------------------
+N  *        Require 48MHz for USB OTG FS,          | Disabled
+N  *        SDIO and RNG clock                     |
+N  *-----------------------------------------------------------------------------
+N  *=============================================================================
+N  *=============================================================================
+N  *                         Supported STM32F401xx devices
+N  *-----------------------------------------------------------------------------
+N  *        System Clock source                    | PLL (HSE)
+N  *-----------------------------------------------------------------------------
+N  *        SYSCLK(Hz)                             | 84000000
+N  *-----------------------------------------------------------------------------
+N  *        HCLK(Hz)                               | 84000000
+N  *-----------------------------------------------------------------------------
+N  *        AHB Prescaler                          | 1
+N  *-----------------------------------------------------------------------------
+N  *        APB1 Prescaler                         | 2
+N  *-----------------------------------------------------------------------------
+N  *        APB2 Prescaler                         | 1
+N  *-----------------------------------------------------------------------------
+N  *        HSE Frequency(Hz)                      | 25000000
+N  *-----------------------------------------------------------------------------
+N  *        PLL_M                                  | 25
+N  *-----------------------------------------------------------------------------
+N  *        PLL_N                                  | 336
+N  *-----------------------------------------------------------------------------
+N  *        PLL_P                                  | 4
+N  *-----------------------------------------------------------------------------
+N  *        PLL_Q                                  | 7
+N  *-----------------------------------------------------------------------------
+N  *        PLLI2S_N                               | NA
+N  *-----------------------------------------------------------------------------
+N  *        PLLI2S_R                               | NA
+N  *-----------------------------------------------------------------------------
+N  *        I2S input clock                        | NA
+N  *-----------------------------------------------------------------------------
+N  *        VDD(V)                                 | 3.3
+N  *-----------------------------------------------------------------------------
+N  *        Main regulator output voltage          | Scale1 mode
+N  *-----------------------------------------------------------------------------
+N  *        Flash Latency(WS)                      | 2
+N  *-----------------------------------------------------------------------------
+N  *        Prefetch Buffer                        | ON
+N  *-----------------------------------------------------------------------------
+N  *        Instruction cache                      | ON
+N  *-----------------------------------------------------------------------------
+N  *        Data cache                             | ON
+N  *-----------------------------------------------------------------------------
+N  *        Require 48MHz for USB OTG FS,          | Disabled
+N  *        SDIO and RNG clock                     |
+N  *-----------------------------------------------------------------------------
+N  *=============================================================================      
+N  ****************************************************************************** 
+N  * @attention
+N  *
+N  * <h2><center>&copy; COPYRIGHT 2013 STMicroelectronics</center></h2>
+N  *
+N  * Licensed under MCD-ST Liberty SW License Agreement V2, (the "License");
+N  * You may not use this file except in compliance with the License.
+N  * You may obtain a copy of the License at:
+N  *
+N  *        http://www.st.com/software_license_agreement_liberty_v2
+N  *
+N  * Unless required by applicable law or agreed to in writing, software 
+N  * distributed under the License is distributed on an "AS IS" BASIS, 
+N  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+N  * See the License for the specific language governing permissions and
+N  * limitations under the License.
+N  *
+N  ******************************************************************************
+N  */
+N
+N/** @addtogroup CMSIS
+N  * @{
+N  */
+N
+N/** @addtogroup stm32f4xx_system
+N  * @{
+N  */  
+N  
+N/** @addtogroup STM32F4xx_System_Private_Includes
+N  * @{
+N  */
+N
+C "..\..\User\UserBsp\Stm32F4\system_stm32f4xx.c" 255 23 cannot open source input file "stm32f4xx.h": No such file or directory
+N#include "stm32f4xx.h"

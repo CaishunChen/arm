@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SourceInsightBookmarks
+	AppVer="4.00.0089"
+	AppVerMinReader="4.00.0009"
+	>
+	<Bookmarks>
+		<Mark
+			Name="6452255445847090308102"
+			Comment=""
+			File="Xkap-Stm32\User\UserTask\uctsk_GprsAppXkap.c"
+			Line="2519"
+			Column="65"
+			LineOffset="0"
+			/>
+	</Bookmarks>
+</SourceInsightBookmarks>

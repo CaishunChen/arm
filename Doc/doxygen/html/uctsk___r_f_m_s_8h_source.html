@@ -1,0 +1,1076 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>xsl: E:/XkapSourceCode/Xkap-Stm32/Xkap-Stm32/User/UserTask/uctsk_RFMS.h Ê∫êÊñá‰ª∂</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">xsl
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">Ê∫êÁ†ÅËØ¥Êòé</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Âà∂‰ΩúËÄÖ Doxygen 1.8.13 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',false,false,'search.php','ÊêúÁ¥¢');
+});
+</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_6d4e12d46ad8519ff7b80e874016d102.html">User</a></li><li class="navelem"><a class="el" href="dir_ba9e781c49be9d79c84eb9994eefebec.html">UserTask</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">uctsk_RFMS.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="uctsk___r_f_m_s_8h.html">ÊµèËßàËØ•Êñá‰ª∂ÁöÑÊñáÊ°£.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*</span></div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">***********************************************************************************</span></div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">*                    ◊˜    ’ﬂ: –ÏÀ…¡¡</span></div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">*                    ∏¸–¬ ±º‰: 2015-06-03</span></div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">***********************************************************************************</span></div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">*/</span></div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#ifndef __UCTSK_RFMS_H</span></div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#define __UCTSK_RFMS_H</span></div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">//-------------------º”‘ÿø‚∫Ø ˝------------------------------</span></div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="includes_8h.html">includes.h</a>&quot;</span></div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_module___memory_8h.html">Module_Memory.h</a>&quot;</span></div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">//------------------- ˝æ›¿‡–Õ--------------------------------</span></div><div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="uctsk___r_f_m_s_8h.html#a6951701a30b7a2c6c3c863395bf1b57f">   13</a></span>&#160;<span class="keyword">enum</span> <a class="code" href="uctsk___r_f_m_s_8h.html#a6951701a30b7a2c6c3c863395bf1b57f">UCTSK_RFMS_E_RUNSTATE</a></div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;{</div><div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="uctsk___r_f_m_s_8h.html#a6951701a30b7a2c6c3c863395bf1b57fa3217195fd7237873437538ac0e6bb21a">   15</a></span>&#160;    <a class="code" href="uctsk___r_f_m_s_8h.html#a6951701a30b7a2c6c3c863395bf1b57fa3217195fd7237873437538ac0e6bb21a">UCTSK_RFMS_E_RUNSTATE_IDLE</a>=0,</div><div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="uctsk___r_f_m_s_8h.html#a6951701a30b7a2c6c3c863395bf1b57fac0a468c8898af33d6ed90252217756c1">   16</a></span>&#160;    <a class="code" href="uctsk___r_f_m_s_8h.html#a6951701a30b7a2c6c3c863395bf1b57fac0a468c8898af33d6ed90252217756c1">UCTSK_RFMS_E_RUNSTATE_START</a>,</div><div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="uctsk___r_f_m_s_8h.html#a6951701a30b7a2c6c3c863395bf1b57fa94923fe4f802b52f3c264dac4c197b6a">   17</a></span>&#160;    <a class="code" href="uctsk___r_f_m_s_8h.html#a6951701a30b7a2c6c3c863395bf1b57fa94923fe4f802b52f3c264dac4c197b6a">UCTSK_RFMS_E_RUNSTATE_START_DELAY</a>,</div><div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="uctsk___r_f_m_s_8h.html#a6951701a30b7a2c6c3c863395bf1b57fa42ee4e3d9ae0b69fb2d9cd0301a3f091">   18</a></span>&#160;    <a class="code" href="uctsk___r_f_m_s_8h.html#a6951701a30b7a2c6c3c863395bf1b57fa42ee4e3d9ae0b69fb2d9cd0301a3f091">UCTSK_RFMS_E_RUNSTATE_GET</a>,</div><div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="uctsk___r_f_m_s_8h.html#a6951701a30b7a2c6c3c863395bf1b57fa908cda5c48c28f4b6b0aec025986f98d">   19</a></span>&#160;    <a class="code" href="uctsk___r_f_m_s_8h.html#a6951701a30b7a2c6c3c863395bf1b57fa908cda5c48c28f4b6b0aec025986f98d">UCTSK_RFMS_E_RUNSTATE_STOP</a>,</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;};</div><div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="uctsk___r_f_m_s_8h.html#a94d177b964933adc452f002e235ed4db">   21</a></span>&#160;<span class="keyword">enum</span> <a class="code" href="uctsk___r_f_m_s_8h.html#a94d177b964933adc452f002e235ed4db">UCTSK_RFMS_E_ERR</a></div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;{</div><div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="uctsk___r_f_m_s_8h.html#a94d177b964933adc452f002e235ed4dba83b6c1a779563d169cb149c7cc9a2965">   23</a></span>&#160;    <a class="code" href="uctsk___r_f_m_s_8h.html#a94d177b964933adc452f002e235ed4dba83b6c1a779563d169cb149c7cc9a2965">UCTSK_RFMS_E_ERR_RES1</a>           =  0xFA,</div><div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="uctsk___r_f_m_s_8h.html#a94d177b964933adc452f002e235ed4dbac9083be45e7826f2665cd3ad2f5bae44">   24</a></span>&#160;    <a class="code" href="uctsk___r_f_m_s_8h.html#a94d177b964933adc452f002e235ed4dbac9083be45e7826f2665cd3ad2f5bae44">UCTSK_RFMS_E_ERR_RES2</a>           =  0xFB,  </div><div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="uctsk___r_f_m_s_8h.html#a94d177b964933adc452f002e235ed4dba46d5cb0ecfebcb646cedd711df840b7d">   25</a></span>&#160;    <a class="code" href="uctsk___r_f_m_s_8h.html#a94d177b964933adc452f002e235ed4dba46d5cb0ecfebcb646cedd711df840b7d">UCTSK_RFMS_E_ERR_MOVE_TOO_MANY</a>  =  0xFC,</div><div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="uctsk___r_f_m_s_8h.html#a94d177b964933adc452f002e235ed4dba776d0b844cc86b84651eb4e0e205a281">   26</a></span>&#160;    <a class="code" href="uctsk___r_f_m_s_8h.html#a94d177b964933adc452f002e235ed4dba776d0b844cc86b84651eb4e0e205a281">UCTSK_RFMS_E_ERR_SIGNAL_HIGN</a>    =  0xFD,</div><div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="uctsk___r_f_m_s_8h.html#a94d177b964933adc452f002e235ed4dbafe6f2c05407bcef036d5f2f91c709288">   27</a></span>&#160;    <a class="code" href="uctsk___r_f_m_s_8h.html#a94d177b964933adc452f002e235ed4dbafe6f2c05407bcef036d5f2f91c709288">UCTSK_RFMS_E_ERR_SIGNAL_LOW</a>     =  0xFE,</div><div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="uctsk___r_f_m_s_8h.html#a94d177b964933adc452f002e235ed4dbad1314ff2f971d5d2dea7f3cf96d12319">   28</a></span>&#160;    <a class="code" href="uctsk___r_f_m_s_8h.html#a94d177b964933adc452f002e235ed4dbad1314ff2f971d5d2dea7f3cf96d12319">UCTSK_RFMS_E_ERR_SIGNAL_NO</a>      =  0xFF,</div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;};</div><div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="uctsk___r_f_m_s_8h.html#adf3685df911910dfa5ddd23fe2729458">   30</a></span>&#160;<span class="preprocessor">#define ARITHMETIC_BODY_MOVE_90S_PER_3600S_NUM  40</span></div><div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="uctsk___r_f_m_s_8h.html#a26f938ba02ed01899d012ba6c1528713">   31</a></span>&#160;<span class="preprocessor">#define ARITHMETIC_BODY_MOVE_LEVEL_WAKE         202</span></div><div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="uctsk___r_f_m_s_8h.html#a5d2a56602b467cdb83f26001f949a1a8">   32</a></span>&#160;<span class="preprocessor">#define ARITHMETIC_BODY_MOVE_LEVEL_LIGHT        155</span></div><div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="uctsk___r_f_m_s_8h.html#ab43f2309cf21a04b175263a3376108aa">   33</a></span>&#160;<span class="preprocessor">#define ARITHMETIC_BODY_MOVE_LEVEL_MIDDLE       120</span></div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="comment">//  “ƒ⁄ªÓ∂Øº‡≤‚ typedef struct UCTSK_S_MOVE_POWER
+{
+    uint8_t Num;
+    //
+    uint8_t Time[6];
+    //
+    uint32_t Data[6];
+} UCTSK_S_MOVE_POWER;
+//-------------------Ω”ø⁄∫Í∂®“Â(≈‰÷√œ‡πÿ)--------------------
+#define UCTSK_RFMS_ENABLE_KEEP_BODY_MOVE
+#define UCTSK_RFMS_KEEP_BODY_MOVE_TIME   (-12)
+//-------------------Ω”ø⁄∫Í∂®“Â(”≤º˛œ‡πÿ)--------------------
+#define UCTSK_RFMS_UARTX               1
+#define UCTSK_RFMS_UART_BPS            (19200)
+/*
+// ±÷”
+#if   (defined(STM32F1))
+#define UCTSK_RFMS_POWER_RCC_ENABLE    RCC_APB2PeriphClockCmd( RCC_APB2Periph_GPIOA , ENABLE);
+#elif (defined(STM32F4))
+#define UCTSK_RFMS_POWER_RCC_ENABLE    RCC_AHB1PeriphClockCmd( RCC_AHB1Periph_GPIOA , ENABLE);
+#endif
+//∂Àø⁄
+#define UCTSK_RFMS_POWER_PORT          GPIOA
+#define UCTSK_RFMS_POWER_PIN           GPIO_Pin_6
+//µÁ‘¥ø™∆Ù
+#define UCTSK_RFMS_POWER_PIN_ON        GPIO_SetBits(UCTSK_RFMS_POWER_PORT , UCTSK_RFMS_POWER_PIN)
+//µÁ‘¥πÿ±’
+#define UCTSK_RFMS_POWER_PIN_OFF       GPIO_ResetBits(UCTSK_RFMS_POWER_PORT , UCTSK_RFMS_POWER_PIN)
+*/
+//ø™∆Ù
+#define UCTSK_RFMS_ON         uctsk_Rfms_Tx((uint8_t*)UCTSK_RFMS_POWER_ON,sizeof(UCTSK_RFMS_POWER_ON));
+//πÿ±’
+#define UCTSK_RFMS_OFF        uctsk_Rfms_Tx((uint8_t*)UCTSK_RFMS_POWER_OFF,sizeof(UCTSK_RFMS_POWER_OFF));
+//-------------------Ω”ø⁄∫Í∂®“Â(”≤º˛Œﬁπÿ)--------------------
+//”√”⁄ ˝æ›»•÷±¡˜
+#define UCTSK_RFMS_DATA_DC    0x1FF
+//∆¿∑÷À„∑®
+//ÀØ√ﬂΩ·ππ
+#define WEIGHTSLEEPSTRCT               56    /*52*/
+#define STDSLEEPSTRUCTURE              0.6f  /*0.57f*/ /*0.65f*/
+//
+#define WEIGHTSLEEPSTRCT_HEAD          41
+#define STDSLEEPSTRUCTURE_HEAD         0.6f  
+#define WEIGHTSLEEPSTRCT_TAIL          15
+#define STDSLEEPSTRUCTURE_TAIL         0.4f  
+//»ÎÀØ ±≥§
+#define STDINTOPERIOD                  9
+#define WEIGHTSLEEPINTOPERIOD          12    /*13*/
+//ÃÂ∂Ø¥Œ ˝œ‡πÿµ√∑÷
+#define STDBODYMOVEMENTCOUNT_HI        12    /*16*/
+#define WEIGHTBODYMOVEMENTCOUNT        8
+#define STDBODYMOVEMENTCOUNT_LOW       8     /*10*/
+//ªΩ–—◊¥Ã¨œ‡πÿµ√∑÷
+#define WEIGHTAWAKESTATE               3
+//ÀØ√ﬂœ∞πﬂ
+#define STDSARTTIMEDIS                 30    /*10*/    /*15*/
+#define WEIGHTSTARTTIMEDIS             10    /*12*/
+//ÀØ√ﬂª∑æ≥-Œ¬∂»
+#define STDSLEEPTEMP_HI                24
+#define WEIGHTSLEEPTEMP                7
+#define STDSLEEPTEMP_LOW               20
+//ÀØ√ﬂª∑æ≥- ™∂»
+#define STDSLEEPHUM_HI                 65
+#define WEIGHTSLEEPHUM                 3
+#define STDSLEEPHUM_LOW                45
+//◊‹ÀØ ±≥§œµ ˝
+#define STDTOTALSLEEPPERIOD_HI         480
+#define STDTOTALSLEEPPERIOD_LOW        390
+//
+#define AGERATIO                        (1)
+//-------------------Ω”ø⁄±‰¡ø--------------------------------
+extern uint32_t uctsk_Rfms_TxNum;
+extern uint32_t uctsk_Rfms_RxNum;
+extern uint32_t uctsk_Rfms_MonitorRxNum;
+extern uint16_t uctsk_Rfms_RxValue;
+extern uint8_t uctsk_CurrentSleepLevel;
+extern uint8_t  uctsk_Rfms_Err;
+extern uint16_t Uctsk_Rfms_RxZeroCmtInfo;
+//---µ±«∞ª∫¥Ê «∑ÒŒ™ExtFlash÷–µƒ ˝æ›
+extern uint8_t uctsk_Rfms_ExtFlashReadSign;
+extern MODULE_MEMORY_S_DAY_INFO         uctsk_Rfms_s_DayInfo;
+extern MODULE_MEMORY_S_DAY_SLEEPLEVEL   uctsk_Rfms_s_DaySleepLevel;
+extern MODULE_MEMORY_S_DAY_BREATH       uctsk_Rfms_s_DayBreath;
+extern MODULE_MEMORY_S_DAY_HEARTRATE    uctsk_Rfms_s_HeartRate;
+extern MODULE_MEMORY_S_DAY_BODYMOVE     uctsk_Rfms_s_BodyMove;
+//
+extern uint8_t Uctsk_Rfms_RunFileData_DebugTest_Enable;
+extern uint32_t UctskRfms_TestfileDataNum;
+extern uint32_t UctskRfms_TestfileDataAllByteNum;
+extern uint8_t uctsk_Rfms_PowerSavingOff;
+extern uint16_t Uctsk_Rfms_PowerSavingTimer_s;
+extern uint16_t UctskRfms_BufferLoopAllErrCmt;
+extern uint16_t UctskRfms_BufferLoopMaxErrCmt;
+//
+extern uint8_t uctsk_Rfms_Hardware,uctsk_Rfms_Software;
+//
+extern uint32_t   uctsk_Rfms_NoBodyThresholdValue;
+extern uint32_t   uctsk_Rfms_NoBodyThresholdVTimerS;
+//-------------------Ω”ø⁄∫Ø ˝--------------------------------
+//¥¥Ω®»ŒŒÒ
+extern void App_RfmsTaskCreate(void);
+extern void App_RfmsTaskTestCreate(void);
+extern void App_RfmsTaskTxCreate(void);
+//ªÒ»°…Ë÷√‘À––◊¥Ã¨
+extern uint8_t uctsk_Rfms_GetRunState(void);
+extern void uctsk_Rfms_Power(uint8_t OnOff);
+extern void uctsk_Rfms_SetRunState(uint8_t state);
+// ˝æ›÷–∂œ
+extern void uctsk_Rfms_RxIrq(uint8_t *pbuf,uint16_t len);
+// ±º‰÷–∂œ
+extern void uctsk_Rfms_1mS(void);
+//…Ë÷√¥´∏–∆˜ø™πÿ
+extern void uctsk_Rfms_PowerOnOff(uint8_t OnOff);
+extern void uctsk_Rfms_SetOnOff(uint8_t OnOff,uint8_t ManualOrAuto);
+//µ˜ ‘
+extern void uctsk_Rfms_DataStream_DebugTestOnOff(uint8_t OnOff);
+extern void uctsk_Rfms_WaveStream_DebugTestOnOff(uint8_t OnOff);
+extern void uctsk_Rfms_FinalData_DebugTestOnOff(uint8_t OnOff);
+extern void uctsk_Rfms_RunFileData_DebugTestOnOff(uint8_t OnOff);
+// ˝æ›◊™ªª
+extern void uctsk_Rfms_Interpolation_Proc(uint8_t* source, uint8_t* parameter,uint8_t* destination, uint8_t length ,uint8_t min,float coeff, uint8_t endMark);
+extern void uctsk_Rfms_Average_Proc(uint8_t* valueArray, uint8_t average,uint16_t* coordirateArray,uint16_t centerCoordinate,uint16_t limit ,uint8_t length,uint8_t endMark, float step);
+extern void uctsk_Rfms_DataSaveToTf_100ms(void);
+extern void uctsk_RfmsSetSleepLevelBeforeAlarm(void);
+extern uint8_t uctsk_Rfms_BufferLoop1Pop(uint8_t *pbuf,uint16_t *plen);
+//ÃÂ∂Ø
+extern uint8_t uctsk_Rfms_KeepBodyMoveIndex(struct tm *p_tm,uint8_t *p_buf,uint8_t *index);
+extern uint8_t uctsk_Rfms_KeepBodyMove_GetFinalInfo(struct tm *p_tm,uint8_t *pOutbuf);
+//-----------------------------------------------------------
+#endif
+
+</span></div><div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="struct_u_c_t_s_k___s___m_o_v_e___p_o_w_e_r.html">   35</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="struct_u_c_t_s_k___s___m_o_v_e___p_o_w_e_r.html">UCTSK_S_MOVE_POWER</a></div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;{</div><div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="struct_u_c_t_s_k___s___m_o_v_e___p_o_w_e_r.html#a73502e56bf41a0270ac0e4541d321586">   37</a></span>&#160;    uint8_t <a class="code" href="struct_u_c_t_s_k___s___m_o_v_e___p_o_w_e_r.html#a73502e56bf41a0270ac0e4541d321586">Num</a>;</div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="comment">//</span></div><div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="struct_u_c_t_s_k___s___m_o_v_e___p_o_w_e_r.html#a7d8a5ee89c497dd7cb7fba68423d21af">   39</a></span>&#160;    uint8_t <a class="code" href="struct_u_c_t_s_k___s___m_o_v_e___p_o_w_e_r.html#a7d8a5ee89c497dd7cb7fba68423d21af">Time</a>[6];</div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="comment">//</span></div><div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="struct_u_c_t_s_k___s___m_o_v_e___p_o_w_e_r.html#a9581f133868bf7ce7c021030f7b530d4">   41</a></span>&#160;    uint32_t <a class="code" href="struct_u_c_t_s_k___s___m_o_v_e___p_o_w_e_r.html#a9581f133868bf7ce7c021030f7b530d4">Data</a>[6];</div><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;} <a class="code" href="uctsk___r_f_m_s_8h.html#a1542f497b0666364bf677e307450f45b">UCTSK_S_MOVE_POWER</a>;</div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="comment">//-------------------Ω”ø⁄∫Í∂®“Â(≈‰÷√œ‡πÿ)--------------------</span></div><div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="uctsk___r_f_m_s_8h.html#aec6ff9dbc376539b4ef72a1fd7f0f472">   44</a></span>&#160;<span class="preprocessor">#define UCTSK_RFMS_ENABLE_KEEP_BODY_MOVE</span></div><div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="uctsk___r_f_m_s_8h.html#aa1da28bed4dafd905c540d3203cfad9c">   45</a></span>&#160;<span class="preprocessor">#define UCTSK_RFMS_KEEP_BODY_MOVE_TIME   (-12)</span></div><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="comment">//-------------------Ω”ø⁄∫Í∂®“Â(”≤º˛œ‡πÿ)--------------------</span></div><div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="uctsk___r_f_m_s_8h.html#a11e754d6087013342bbed8548e0cf0b1">   47</a></span>&#160;<span class="preprocessor">#define UCTSK_RFMS_UARTX               1</span></div><div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="uctsk___r_f_m_s_8h.html#a03b20198eb04adb739ba6bd9016b9fb9">   48</a></span>&#160;<span class="preprocessor">#define UCTSK_RFMS_UART_BPS            (19200)</span></div><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="comment">/*</span></div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="comment">// ±÷”</span></div><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="comment">#if   (defined(STM32F1))</span></div><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="comment">#define UCTSK_RFMS_POWER_RCC_ENABLE    RCC_APB2PeriphClockCmd( RCC_APB2Periph_GPIOA , ENABLE);</span></div><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="comment">#elif (defined(STM32F4))</span></div><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="comment">#define UCTSK_RFMS_POWER_RCC_ENABLE    RCC_AHB1PeriphClockCmd( RCC_AHB1Periph_GPIOA , ENABLE);</span></div><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="comment">#endif</span></div><div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="comment">//∂Àø⁄ #define UCTSK_RFMS_POWER_PORT          GPIOA
+#define UCTSK_RFMS_POWER_PIN           GPIO_Pin_6
+//µÁ‘¥ø™∆Ù
+#define UCTSK_RFMS_POWER_PIN_ON        GPIO_SetBits(UCTSK_RFMS_POWER_PORT , UCTSK_RFMS_POWER_PIN)
+//µÁ‘¥πÿ±’
+#define UCTSK_RFMS_POWER_PIN_OFF       GPIO_ResetBits(UCTSK_RFMS_POWER_PORT , UCTSK_RFMS_POWER_PIN)
+*/
+//ø™∆Ù
+#define UCTSK_RFMS_ON         uctsk_Rfms_Tx((uint8_t*)UCTSK_RFMS_POWER_ON,sizeof(UCTSK_RFMS_POWER_ON));
+//πÿ±’
+#define UCTSK_RFMS_OFF        uctsk_Rfms_Tx((uint8_t*)UCTSK_RFMS_POWER_OFF,sizeof(UCTSK_RFMS_POWER_OFF));
+//-------------------Ω”ø⁄∫Í∂®“Â(”≤º˛Œﬁπÿ)--------------------
+//”√”⁄ ˝æ›»•÷±¡˜
+#define UCTSK_RFMS_DATA_DC    0x1FF
+//∆¿∑÷À„∑®
+//ÀØ√ﬂΩ·ππ
+#define WEIGHTSLEEPSTRCT               56    /*52*/
+#define STDSLEEPSTRUCTURE              0.6f  /*0.57f*/ /*0.65f*/
+//
+#define WEIGHTSLEEPSTRCT_HEAD          41
+#define STDSLEEPSTRUCTURE_HEAD         0.6f  
+#define WEIGHTSLEEPSTRCT_TAIL          15
+#define STDSLEEPSTRUCTURE_TAIL         0.4f  
+//»ÎÀØ ±≥§
+#define STDINTOPERIOD                  9
+#define WEIGHTSLEEPINTOPERIOD          12    /*13*/
+//ÃÂ∂Ø¥Œ ˝œ‡πÿµ√∑÷
+#define STDBODYMOVEMENTCOUNT_HI        12    /*16*/
+#define WEIGHTBODYMOVEMENTCOUNT        8
+#define STDBODYMOVEMENTCOUNT_LOW       8     /*10*/
+//ªΩ–—◊¥Ã¨œ‡πÿµ√∑÷
+#define WEIGHTAWAKESTATE               3
+//ÀØ√ﬂœ∞πﬂ
+#define STDSARTTIMEDIS                 30    /*10*/    /*15*/
+#define WEIGHTSTARTTIMEDIS             10    /*12*/
+//ÀØ√ﬂª∑æ≥-Œ¬∂»
+#define STDSLEEPTEMP_HI                24
+#define WEIGHTSLEEPTEMP                7
+#define STDSLEEPTEMP_LOW               20
+//ÀØ√ﬂª∑æ≥- ™∂»
+#define STDSLEEPHUM_HI                 65
+#define WEIGHTSLEEPHUM                 3
+#define STDSLEEPHUM_LOW                45
+//◊‹ÀØ ±≥§œµ ˝
+#define STDTOTALSLEEPPERIOD_HI         480
+#define STDTOTALSLEEPPERIOD_LOW        390
+//
+#define AGERATIO                        (1)
+//-------------------Ω”ø⁄±‰¡ø--------------------------------
+extern uint32_t uctsk_Rfms_TxNum;
+extern uint32_t uctsk_Rfms_RxNum;
+extern uint32_t uctsk_Rfms_MonitorRxNum;
+extern uint16_t uctsk_Rfms_RxValue;
+extern uint8_t uctsk_CurrentSleepLevel;
+extern uint8_t  uctsk_Rfms_Err;
+extern uint16_t Uctsk_Rfms_RxZeroCmtInfo;
+//---µ±«∞ª∫¥Ê «∑ÒŒ™ExtFlash÷–µƒ ˝æ›
+extern uint8_t uctsk_Rfms_ExtFlashReadSign;
+extern MODULE_MEMORY_S_DAY_INFO         uctsk_Rfms_s_DayInfo;
+extern MODULE_MEMORY_S_DAY_SLEEPLEVEL   uctsk_Rfms_s_DaySleepLevel;
+extern MODULE_MEMORY_S_DAY_BREATH       uctsk_Rfms_s_DayBreath;
+extern MODULE_MEMORY_S_DAY_HEARTRATE    uctsk_Rfms_s_HeartRate;
+extern MODULE_MEMORY_S_DAY_BODYMOVE     uctsk_Rfms_s_BodyMove;
+//
+extern uint8_t Uctsk_Rfms_RunFileData_DebugTest_Enable;
+extern uint32_t UctskRfms_TestfileDataNum;
+extern uint32_t UctskRfms_TestfileDataAllByteNum;
+extern uint8_t uctsk_Rfms_PowerSavingOff;
+extern uint16_t Uctsk_Rfms_PowerSavingTimer_s;
+extern uint16_t UctskRfms_BufferLoopAllErrCmt;
+extern uint16_t UctskRfms_BufferLoopMaxErrCmt;
+//
+extern uint8_t uctsk_Rfms_Hardware,uctsk_Rfms_Software;
+//
+extern uint32_t   uctsk_Rfms_NoBodyThresholdValue;
+extern uint32_t   uctsk_Rfms_NoBodyThresholdVTimerS;
+//-------------------Ω”ø⁄∫Ø ˝--------------------------------
+//¥¥Ω®»ŒŒÒ
+extern void App_RfmsTaskCreate(void);
+extern void App_RfmsTaskTestCreate(void);
+extern void App_RfmsTaskTxCreate(void);
+//ªÒ»°…Ë÷√‘À––◊¥Ã¨
+extern uint8_t uctsk_Rfms_GetRunState(void);
+extern void uctsk_Rfms_Power(uint8_t OnOff);
+extern void uctsk_Rfms_SetRunState(uint8_t state);
+// ˝æ›÷–∂œ
+extern void uctsk_Rfms_RxIrq(uint8_t *pbuf,uint16_t len);
+// ±º‰÷–∂œ
+extern void uctsk_Rfms_1mS(void);
+//…Ë÷√¥´∏–∆˜ø™πÿ
+extern void uctsk_Rfms_PowerOnOff(uint8_t OnOff);
+extern void uctsk_Rfms_SetOnOff(uint8_t OnOff,uint8_t ManualOrAuto);
+//µ˜ ‘
+extern void uctsk_Rfms_DataStream_DebugTestOnOff(uint8_t OnOff);
+extern void uctsk_Rfms_WaveStream_DebugTestOnOff(uint8_t OnOff);
+extern void uctsk_Rfms_FinalData_DebugTestOnOff(uint8_t OnOff);
+extern void uctsk_Rfms_RunFileData_DebugTestOnOff(uint8_t OnOff);
+// ˝æ›◊™ªª
+extern void uctsk_Rfms_Interpolation_Proc(uint8_t* source, uint8_t* parameter,uint8_t* destination, uint8_t length ,uint8_t min,float coeff, uint8_t endMark);
+extern void uctsk_Rfms_Average_Proc(uint8_t* valueArray, uint8_t average,uint16_t* coordirateArray,uint16_t centerCoordinate,uint16_t limit ,uint8_t length,uint8_t endMark, float step);
+extern void uctsk_Rfms_DataSaveToTf_100ms(void);
+extern void uctsk_RfmsSetSleepLevelBeforeAlarm(void);
+extern uint8_t uctsk_Rfms_BufferLoop1Pop(uint8_t *pbuf,uint16_t *plen);
+//ÃÂ∂Ø
+extern uint8_t uctsk_Rfms_KeepBodyMoveIndex(struct tm *p_tm,uint8_t *p_buf,uint8_t *index);
+extern uint8_t uctsk_Rfms_KeepBodyMove_GetFinalInfo(struct tm *p_tm,uint8_t *pOutbuf);
+//-----------------------------------------------------------
+#endif
+
+</span></div><div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="comment">#define UCTSK_RFMS_POWER_PORT          GPIOA</span></div><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="comment">#define UCTSK_RFMS_POWER_PIN           GPIO_Pin_6</span></div><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="comment">//µÁ‘¥ø™∆Ù</span></div><div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="comment">#define UCTSK_RFMS_POWER_PIN_ON        GPIO_SetBits(UCTSK_RFMS_POWER_PORT , UCTSK_RFMS_POWER_PIN)</span></div><div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="comment">//µÁ‘¥πÿ±’ #define UCTSK_RFMS_POWER_PIN_OFF       GPIO_ResetBits(UCTSK_RFMS_POWER_PORT , UCTSK_RFMS_POWER_PIN)
+*/
+//ø™∆Ù
+#define UCTSK_RFMS_ON         uctsk_Rfms_Tx((uint8_t*)UCTSK_RFMS_POWER_ON,sizeof(UCTSK_RFMS_POWER_ON));
+//πÿ±’
+#define UCTSK_RFMS_OFF        uctsk_Rfms_Tx((uint8_t*)UCTSK_RFMS_POWER_OFF,sizeof(UCTSK_RFMS_POWER_OFF));
+//-------------------Ω”ø⁄∫Í∂®“Â(”≤º˛Œﬁπÿ)--------------------
+//”√”⁄ ˝æ›»•÷±¡˜
+#define UCTSK_RFMS_DATA_DC    0x1FF
+//∆¿∑÷À„∑®
+//ÀØ√ﬂΩ·ππ
+#define WEIGHTSLEEPSTRCT               56    /*52*/
+#define STDSLEEPSTRUCTURE              0.6f  /*0.57f*/ /*0.65f*/
+//
+#define WEIGHTSLEEPSTRCT_HEAD          41
+#define STDSLEEPSTRUCTURE_HEAD         0.6f  
+#define WEIGHTSLEEPSTRCT_TAIL          15
+#define STDSLEEPSTRUCTURE_TAIL         0.4f  
+//»ÎÀØ ±≥§
+#define STDINTOPERIOD                  9
+#define WEIGHTSLEEPINTOPERIOD          12    /*13*/
+//ÃÂ∂Ø¥Œ ˝œ‡πÿµ√∑÷
+#define STDBODYMOVEMENTCOUNT_HI        12    /*16*/
+#define WEIGHTBODYMOVEMENTCOUNT        8
+#define STDBODYMOVEMENTCOUNT_LOW       8     /*10*/
+//ªΩ–—◊¥Ã¨œ‡πÿµ√∑÷
+#define WEIGHTAWAKESTATE               3
+//ÀØ√ﬂœ∞πﬂ
+#define STDSARTTIMEDIS                 30    /*10*/    /*15*/
+#define WEIGHTSTARTTIMEDIS             10    /*12*/
+//ÀØ√ﬂª∑æ≥-Œ¬∂»
+#define STDSLEEPTEMP_HI                24
+#define WEIGHTSLEEPTEMP                7
+#define STDSLEEPTEMP_LOW               20
+//ÀØ√ﬂª∑æ≥- ™∂»
+#define STDSLEEPHUM_HI                 65
+#define WEIGHTSLEEPHUM                 3
+#define STDSLEEPHUM_LOW                45
+//◊‹ÀØ ±≥§œµ ˝
+#define STDTOTALSLEEPPERIOD_HI         480
+#define STDTOTALSLEEPPERIOD_LOW        390
+//
+#define AGERATIO                        (1)
+//-------------------Ω”ø⁄±‰¡ø--------------------------------
+extern uint32_t uctsk_Rfms_TxNum;
+extern uint32_t uctsk_Rfms_RxNum;
+extern uint32_t uctsk_Rfms_MonitorRxNum;
+extern uint16_t uctsk_Rfms_RxValue;
+extern uint8_t uctsk_CurrentSleepLevel;
+extern uint8_t  uctsk_Rfms_Err;
+extern uint16_t Uctsk_Rfms_RxZeroCmtInfo;
+//---µ±«∞ª∫¥Ê «∑ÒŒ™ExtFlash÷–µƒ ˝æ›
+extern uint8_t uctsk_Rfms_ExtFlashReadSign;
+extern MODULE_MEMORY_S_DAY_INFO         uctsk_Rfms_s_DayInfo;
+extern MODULE_MEMORY_S_DAY_SLEEPLEVEL   uctsk_Rfms_s_DaySleepLevel;
+extern MODULE_MEMORY_S_DAY_BREATH       uctsk_Rfms_s_DayBreath;
+extern MODULE_MEMORY_S_DAY_HEARTRATE    uctsk_Rfms_s_HeartRate;
+extern MODULE_MEMORY_S_DAY_BODYMOVE     uctsk_Rfms_s_BodyMove;
+//
+extern uint8_t Uctsk_Rfms_RunFileData_DebugTest_Enable;
+extern uint32_t UctskRfms_TestfileDataNum;
+extern uint32_t UctskRfms_TestfileDataAllByteNum;
+extern uint8_t uctsk_Rfms_PowerSavingOff;
+extern uint16_t Uctsk_Rfms_PowerSavingTimer_s;
+extern uint16_t UctskRfms_BufferLoopAllErrCmt;
+extern uint16_t UctskRfms_BufferLoopMaxErrCmt;
+//
+extern uint8_t uctsk_Rfms_Hardware,uctsk_Rfms_Software;
+//
+extern uint32_t   uctsk_Rfms_NoBodyThresholdValue;
+extern uint32_t   uctsk_Rfms_NoBodyThresholdVTimerS;
+//-------------------Ω”ø⁄∫Ø ˝--------------------------------
+//¥¥Ω®»ŒŒÒ
+extern void App_RfmsTaskCreate(void);
+extern void App_RfmsTaskTestCreate(void);
+extern void App_RfmsTaskTxCreate(void);
+//ªÒ»°…Ë÷√‘À––◊¥Ã¨
+extern uint8_t uctsk_Rfms_GetRunState(void);
+extern void uctsk_Rfms_Power(uint8_t OnOff);
+extern void uctsk_Rfms_SetRunState(uint8_t state);
+// ˝æ›÷–∂œ
+extern void uctsk_Rfms_RxIrq(uint8_t *pbuf,uint16_t len);
+// ±º‰÷–∂œ
+extern void uctsk_Rfms_1mS(void);
+//…Ë÷√¥´∏–∆˜ø™πÿ
+extern void uctsk_Rfms_PowerOnOff(uint8_t OnOff);
+extern void uctsk_Rfms_SetOnOff(uint8_t OnOff,uint8_t ManualOrAuto);
+//µ˜ ‘
+extern void uctsk_Rfms_DataStream_DebugTestOnOff(uint8_t OnOff);
+extern void uctsk_Rfms_WaveStream_DebugTestOnOff(uint8_t OnOff);
+extern void uctsk_Rfms_FinalData_DebugTestOnOff(uint8_t OnOff);
+extern void uctsk_Rfms_RunFileData_DebugTestOnOff(uint8_t OnOff);
+// ˝æ›◊™ªª
+extern void uctsk_Rfms_Interpolation_Proc(uint8_t* source, uint8_t* parameter,uint8_t* destination, uint8_t length ,uint8_t min,float coeff, uint8_t endMark);
+extern void uctsk_Rfms_Average_Proc(uint8_t* valueArray, uint8_t average,uint16_t* coordirateArray,uint16_t centerCoordinate,uint16_t limit ,uint8_t length,uint8_t endMark, float step);
+extern void uctsk_Rfms_DataSaveToTf_100ms(void);
+extern void uctsk_RfmsSetSleepLevelBeforeAlarm(void);
+extern uint8_t uctsk_Rfms_BufferLoop1Pop(uint8_t *pbuf,uint16_t *plen);
+//ÃÂ∂Ø
+extern uint8_t uctsk_Rfms_KeepBodyMoveIndex(struct tm *p_tm,uint8_t *p_buf,uint8_t *index);
+extern uint8_t uctsk_Rfms_KeepBodyMove_GetFinalInfo(struct tm *p_tm,uint8_t *pOutbuf);
+//-----------------------------------------------------------
+#endif
+
+</span></div><div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="comment">#define UCTSK_RFMS_POWER_PIN_OFF       GPIO_ResetBits(UCTSK_RFMS_POWER_PORT , UCTSK_RFMS_POWER_PIN)</span></div><div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="comment">*/</span></div><div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="comment">//ø™∆Ù</span></div><div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="uctsk___r_f_m_s_8h.html#a37f86ed8cb2323f1a44841e0ddb81584">   65</a></span>&#160;<span class="preprocessor">#define UCTSK_RFMS_ON         uctsk_Rfms_Tx((uint8_t*)UCTSK_RFMS_POWER_ON,sizeof(UCTSK_RFMS_POWER_ON));</span></div><div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="comment">//πÿ±’ #define UCTSK_RFMS_OFF        uctsk_Rfms_Tx((uint8_t*)UCTSK_RFMS_POWER_OFF,sizeof(UCTSK_RFMS_POWER_OFF));
+//-------------------Ω”ø⁄∫Í∂®“Â(”≤º˛Œﬁπÿ)--------------------
+//”√”⁄ ˝æ›»•÷±¡˜
+#define UCTSK_RFMS_DATA_DC    0x1FF
+//∆¿∑÷À„∑®
+//ÀØ√ﬂΩ·ππ
+#define WEIGHTSLEEPSTRCT               56    /*52*/
+#define STDSLEEPSTRUCTURE              0.6f  /*0.57f*/ /*0.65f*/
+//
+#define WEIGHTSLEEPSTRCT_HEAD          41
+#define STDSLEEPSTRUCTURE_HEAD         0.6f  
+#define WEIGHTSLEEPSTRCT_TAIL          15
+#define STDSLEEPSTRUCTURE_TAIL         0.4f  
+//»ÎÀØ ±≥§
+#define STDINTOPERIOD                  9
+#define WEIGHTSLEEPINTOPERIOD          12    /*13*/
+//ÃÂ∂Ø¥Œ ˝œ‡πÿµ√∑÷
+#define STDBODYMOVEMENTCOUNT_HI        12    /*16*/
+#define WEIGHTBODYMOVEMENTCOUNT        8
+#define STDBODYMOVEMENTCOUNT_LOW       8     /*10*/
+//ªΩ–—◊¥Ã¨œ‡πÿµ√∑÷
+#define WEIGHTAWAKESTATE               3
+//ÀØ√ﬂœ∞πﬂ
+#define STDSARTTIMEDIS                 30    /*10*/    /*15*/
+#define WEIGHTSTARTTIMEDIS             10    /*12*/
+//ÀØ√ﬂª∑æ≥-Œ¬∂»
+#define STDSLEEPTEMP_HI                24
+#define WEIGHTSLEEPTEMP                7
+#define STDSLEEPTEMP_LOW               20
+//ÀØ√ﬂª∑æ≥- ™∂»
+#define STDSLEEPHUM_HI                 65
+#define WEIGHTSLEEPHUM                 3
+#define STDSLEEPHUM_LOW                45
+//◊‹ÀØ ±≥§œµ ˝
+#define STDTOTALSLEEPPERIOD_HI         480
+#define STDTOTALSLEEPPERIOD_LOW        390
+//
+#define AGERATIO                        (1)
+//-------------------Ω”ø⁄±‰¡ø--------------------------------
+extern uint32_t uctsk_Rfms_TxNum;
+extern uint32_t uctsk_Rfms_RxNum;
+extern uint32_t uctsk_Rfms_MonitorRxNum;
+extern uint16_t uctsk_Rfms_RxValue;
+extern uint8_t uctsk_CurrentSleepLevel;
+extern uint8_t  uctsk_Rfms_Err;
+extern uint16_t Uctsk_Rfms_RxZeroCmtInfo;
+//---µ±«∞ª∫¥Ê «∑ÒŒ™ExtFlash÷–µƒ ˝æ›
+extern uint8_t uctsk_Rfms_ExtFlashReadSign;
+extern MODULE_MEMORY_S_DAY_INFO         uctsk_Rfms_s_DayInfo;
+extern MODULE_MEMORY_S_DAY_SLEEPLEVEL   uctsk_Rfms_s_DaySleepLevel;
+extern MODULE_MEMORY_S_DAY_BREATH       uctsk_Rfms_s_DayBreath;
+extern MODULE_MEMORY_S_DAY_HEARTRATE    uctsk_Rfms_s_HeartRate;
+extern MODULE_MEMORY_S_DAY_BODYMOVE     uctsk_Rfms_s_BodyMove;
+//
+extern uint8_t Uctsk_Rfms_RunFileData_DebugTest_Enable;
+extern uint32_t UctskRfms_TestfileDataNum;
+extern uint32_t UctskRfms_TestfileDataAllByteNum;
+extern uint8_t uctsk_Rfms_PowerSavingOff;
+extern uint16_t Uctsk_Rfms_PowerSavingTimer_s;
+extern uint16_t UctskRfms_BufferLoopAllErrCmt;
+extern uint16_t UctskRfms_BufferLoopMaxErrCmt;
+//
+extern uint8_t uctsk_Rfms_Hardware,uctsk_Rfms_Software;
+//
+extern uint32_t   uctsk_Rfms_NoBodyThresholdValue;
+extern uint32_t   uctsk_Rfms_NoBodyThresholdVTimerS;
+//-------------------Ω”ø⁄∫Ø ˝--------------------------------
+//¥¥Ω®»ŒŒÒ
+extern void App_RfmsTaskCreate(void);
+extern void App_RfmsTaskTestCreate(void);
+extern void App_RfmsTaskTxCreate(void);
+//ªÒ»°…Ë÷√‘À––◊¥Ã¨
+extern uint8_t uctsk_Rfms_GetRunState(void);
+extern void uctsk_Rfms_Power(uint8_t OnOff);
+extern void uctsk_Rfms_SetRunState(uint8_t state);
+// ˝æ›÷–∂œ
+extern void uctsk_Rfms_RxIrq(uint8_t *pbuf,uint16_t len);
+// ±º‰÷–∂œ
+extern void uctsk_Rfms_1mS(void);
+//…Ë÷√¥´∏–∆˜ø™πÿ
+extern void uctsk_Rfms_PowerOnOff(uint8_t OnOff);
+extern void uctsk_Rfms_SetOnOff(uint8_t OnOff,uint8_t ManualOrAuto);
+//µ˜ ‘
+extern void uctsk_Rfms_DataStream_DebugTestOnOff(uint8_t OnOff);
+extern void uctsk_Rfms_WaveStream_DebugTestOnOff(uint8_t OnOff);
+extern void uctsk_Rfms_FinalData_DebugTestOnOff(uint8_t OnOff);
+extern void uctsk_Rfms_RunFileData_DebugTestOnOff(uint8_t OnOff);
+// ˝æ›◊™ªª
+extern void uctsk_Rfms_Interpolation_Proc(uint8_t* source, uint8_t* parameter,uint8_t* destination, uint8_t length ,uint8_t min,float coeff, uint8_t endMark);
+extern void uctsk_Rfms_Average_Proc(uint8_t* valueArray, uint8_t average,uint16_t* coordirateArray,uint16_t centerCoordinate,uint16_t limit ,uint8_t length,uint8_t endMark, float step);
+extern void uctsk_Rfms_DataSaveToTf_100ms(void);
+extern void uctsk_RfmsSetSleepLevelBeforeAlarm(void);
+extern uint8_t uctsk_Rfms_BufferLoop1Pop(uint8_t *pbuf,uint16_t *plen);
+//ÃÂ∂Ø
+extern uint8_t uctsk_Rfms_KeepBodyMoveIndex(struct tm *p_tm,uint8_t *p_buf,uint8_t *index);
+extern uint8_t uctsk_Rfms_KeepBodyMove_GetFinalInfo(struct tm *p_tm,uint8_t *pOutbuf);
+//-----------------------------------------------------------
+#endif
+
+</span></div><div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="uctsk___r_f_m_s_8h.html#a0b94dc88cf6ac8041a47b6eaff8e5e43">   67</a></span>&#160;<span class="preprocessor">#define UCTSK_RFMS_OFF        uctsk_Rfms_Tx((uint8_t*)UCTSK_RFMS_POWER_OFF,sizeof(UCTSK_RFMS_POWER_OFF));</span></div><div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="comment">//-------------------Ω”ø⁄∫Í∂®“Â(”≤º˛Œﬁπÿ)--------------------</span></div><div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="comment">//”√”⁄ ˝æ›»•÷±¡˜</span></div><div class="line"><a name="l00070"></a><span class="lineno"><a class="line" href="uctsk___r_f_m_s_8h.html#a7b82399e68f84a056e8189e781956be5">   70</a></span>&#160;<span class="preprocessor">#define UCTSK_RFMS_DATA_DC    0x1FF</span></div><div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="comment">//∆¿∑÷À„∑®</span></div><div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="comment">//ÀØ√ﬂΩ·ππ</span></div><div class="line"><a name="l00073"></a><span class="lineno"><a class="line" href="uctsk___r_f_m_s_8h.html#a9ca51dbe47de6ea75536d25d149fd97f">   73</a></span>&#160;<span class="preprocessor">#define WEIGHTSLEEPSTRCT               56    </span><span class="comment">/*52*/</span><span class="preprocessor"></span></div><div class="line"><a name="l00074"></a><span class="lineno"><a class="line" href="uctsk___r_f_m_s_8h.html#a918d16654e6104d1ff742a6bac0d2453">   74</a></span>&#160;<span class="preprocessor">#define STDSLEEPSTRUCTURE              0.6f  </span><span class="comment">/*0.57f*/</span><span class="preprocessor"> </span><span class="comment">/*0.65f*/</span><span class="preprocessor"></span></div><div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="comment">//</span></div><div class="line"><a name="l00076"></a><span class="lineno"><a class="line" href="uctsk___r_f_m_s_8h.html#ab46ce95179c6c8ba99f3ec93ab142126">   76</a></span>&#160;<span class="preprocessor">#define WEIGHTSLEEPSTRCT_HEAD          41</span></div><div class="line"><a name="l00077"></a><span class="lineno"><a class="line" href="uctsk___r_f_m_s_8h.html#a222159234dbbec64a7e917da32132d31">   77</a></span>&#160;<span class="preprocessor">#define STDSLEEPSTRUCTURE_HEAD         0.6f  </span></div><div class="line"><a name="l00078"></a><span class="lineno"><a class="line" href="uctsk___r_f_m_s_8h.html#abe2df646833276d10753851b47fc58e7">   78</a></span>&#160;<span class="preprocessor">#define WEIGHTSLEEPSTRCT_TAIL          15</span></div><div class="line"><a name="l00079"></a><span class="lineno"><a class="line" href="uctsk___r_f_m_s_8h.html#a96b704244b8460951974039addd99c5e">   79</a></span>&#160;<span class="preprocessor">#define STDSLEEPSTRUCTURE_TAIL         0.4f  </span></div><div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="comment">//»ÎÀØ ±≥§</span></div><div class="line"><a name="l00081"></a><span class="lineno"><a class="line" href="uctsk___r_f_m_s_8h.html#ac696a506443024301efd427b1cc97c69">   81</a></span>&#160;<span class="preprocessor">#define STDINTOPERIOD                  9</span></div><div class="line"><a name="l00082"></a><span class="lineno"><a class="line" href="uctsk___r_f_m_s_8h.html#a5cf97c68a1d635af3e8b43359cf70a0a">   82</a></span>&#160;<span class="preprocessor">#define WEIGHTSLEEPINTOPERIOD          12    </span><span class="comment">/*13*/</span><span class="preprocessor"></span></div><div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="comment">//ÃÂ∂Ø¥Œ ˝œ‡πÿµ√∑÷ #define STDBODYMOVEMENTCOUNT_HI        12    /*16*/
+#define WEIGHTBODYMOVEMENTCOUNT        8
+#define STDBODYMOVEMENTCOUNT_LOW       8     /*10*/
+//ªΩ–—◊¥Ã¨œ‡πÿµ√∑÷
+#define WEIGHTAWAKESTATE               3
+//ÀØ√ﬂœ∞πﬂ
+#define STDSARTTIMEDIS                 30    /*10*/    /*15*/
+#define WEIGHTSTARTTIMEDIS             10    /*12*/
+//ÀØ√ﬂª∑æ≥-Œ¬∂»
+#define STDSLEEPTEMP_HI                24
+#define WEIGHTSLEEPTEMP                7
+#define STDSLEEPTEMP_LOW               20
+//ÀØ√ﬂª∑æ≥- ™∂»
+#define STDSLEEPHUM_HI                 65
+#define WEIGHTSLEEPHUM                 3
+#define STDSLEEPHUM_LOW                45
+//◊‹ÀØ ±≥§œµ ˝
+#define STDTOTALSLEEPPERIOD_HI         480
+#define STDTOTALSLEEPPERIOD_LOW        390
+//
+#define AGERATIO                        (1)
+//-------------------Ω”ø⁄±‰¡ø--------------------------------
+extern uint32_t uctsk_Rfms_TxNum;
+extern uint32_t uctsk_Rfms_RxNum;
+extern uint32_t uctsk_Rfms_MonitorRxNum;
+extern uint16_t uctsk_Rfms_RxValue;
+extern uint8_t uctsk_CurrentSleepLevel;
+extern uint8_t  uctsk_Rfms_Err;
+extern uint16_t Uctsk_Rfms_RxZeroCmtInfo;
+//---µ±«∞ª∫¥Ê «∑ÒŒ™ExtFlash÷–µƒ ˝æ›
+extern uint8_t uctsk_Rfms_ExtFlashReadSign;
+extern MODULE_MEMORY_S_DAY_INFO         uctsk_Rfms_s_DayInfo;
+extern MODULE_MEMORY_S_DAY_SLEEPLEVEL   uctsk_Rfms_s_DaySleepLevel;
+extern MODULE_MEMORY_S_DAY_BREATH       uctsk_Rfms_s_DayBreath;
+extern MODULE_MEMORY_S_DAY_HEARTRATE    uctsk_Rfms_s_HeartRate;
+extern MODULE_MEMORY_S_DAY_BODYMOVE     uctsk_Rfms_s_BodyMove;
+//
+extern uint8_t Uctsk_Rfms_RunFileData_DebugTest_Enable;
+extern uint32_t UctskRfms_TestfileDataNum;
+extern uint32_t UctskRfms_TestfileDataAllByteNum;
+extern uint8_t uctsk_Rfms_PowerSavingOff;
+extern uint16_t Uctsk_Rfms_PowerSavingTimer_s;
+extern uint16_t UctskRfms_BufferLoopAllErrCmt;
+extern uint16_t UctskRfms_BufferLoopMaxErrCmt;
+//
+extern uint8_t uctsk_Rfms_Hardware,uctsk_Rfms_Software;
+//
+extern uint32_t   uctsk_Rfms_NoBodyThresholdValue;
+extern uint32_t   uctsk_Rfms_NoBodyThresholdVTimerS;
+//-------------------Ω”ø⁄∫Ø ˝--------------------------------
+//¥¥Ω®»ŒŒÒ
+extern void App_RfmsTaskCreate(void);
+extern void App_RfmsTaskTestCreate(void);
+extern void App_RfmsTaskTxCreate(void);
+//ªÒ»°…Ë÷√‘À––◊¥Ã¨
+extern uint8_t uctsk_Rfms_GetRunState(void);
+extern void uctsk_Rfms_Power(uint8_t OnOff);
+extern void uctsk_Rfms_SetRunState(uint8_t state);
+// ˝æ›÷–∂œ
+extern void uctsk_Rfms_RxIrq(uint8_t *pbuf,uint16_t len);
+// ±º‰÷–∂œ
+extern void uctsk_Rfms_1mS(void);
+//…Ë÷√¥´∏–∆˜ø™πÿ
+extern void uctsk_Rfms_PowerOnOff(uint8_t OnOff);
+extern void uctsk_Rfms_SetOnOff(uint8_t OnOff,uint8_t ManualOrAuto);
+//µ˜ ‘
+extern void uctsk_Rfms_DataStream_DebugTestOnOff(uint8_t OnOff);
+extern void uctsk_Rfms_WaveStream_DebugTestOnOff(uint8_t OnOff);
+extern void uctsk_Rfms_FinalData_DebugTestOnOff(uint8_t OnOff);
+extern void uctsk_Rfms_RunFileData_DebugTestOnOff(uint8_t OnOff);
+// ˝æ›◊™ªª
+extern void uctsk_Rfms_Interpolation_Proc(uint8_t* source, uint8_t* parameter,uint8_t* destination, uint8_t length ,uint8_t min,float coeff, uint8_t endMark);
+extern void uctsk_Rfms_Average_Proc(uint8_t* valueArray, uint8_t average,uint16_t* coordirateArray,uint16_t centerCoordinate,uint16_t limit ,uint8_t length,uint8_t endMark, float step);
+extern void uctsk_Rfms_DataSaveToTf_100ms(void);
+extern void uctsk_RfmsSetSleepLevelBeforeAlarm(void);
+extern uint8_t uctsk_Rfms_BufferLoop1Pop(uint8_t *pbuf,uint16_t *plen);
+//ÃÂ∂Ø
+extern uint8_t uctsk_Rfms_KeepBodyMoveIndex(struct tm *p_tm,uint8_t *p_buf,uint8_t *index);
+extern uint8_t uctsk_Rfms_KeepBodyMove_GetFinalInfo(struct tm *p_tm,uint8_t *pOutbuf);
+//-----------------------------------------------------------
+#endif
+
+</span></div><div class="line"><a name="l00084"></a><span class="lineno"><a class="line" href="uctsk___r_f_m_s_8h.html#a7c91924ccf7f86cf2ca85acc654f968a">   84</a></span>&#160;<span class="preprocessor">#define STDBODYMOVEMENTCOUNT_HI        12    </span><span class="comment">/*16*/</span><span class="preprocessor"></span></div><div class="line"><a name="l00085"></a><span class="lineno"><a class="line" href="uctsk___r_f_m_s_8h.html#a2dea3bfc2cc03c38a6e79bc9d20df7d2">   85</a></span>&#160;<span class="preprocessor">#define WEIGHTBODYMOVEMENTCOUNT        8</span></div><div class="line"><a name="l00086"></a><span class="lineno"><a class="line" href="uctsk___r_f_m_s_8h.html#ae96c5df6a2da0c181873f51f081d22f4">   86</a></span>&#160;<span class="preprocessor">#define STDBODYMOVEMENTCOUNT_LOW       8     </span><span class="comment">/*10*/</span><span class="preprocessor"></span></div><div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="comment">//ªΩ–—◊¥Ã¨œ‡πÿµ√∑÷ #define WEIGHTAWAKESTATE               3
+//ÀØ√ﬂœ∞πﬂ
+#define STDSARTTIMEDIS                 30    /*10*/    /*15*/
+#define WEIGHTSTARTTIMEDIS             10    /*12*/
+//ÀØ√ﬂª∑æ≥-Œ¬∂»
+#define STDSLEEPTEMP_HI                24
+#define WEIGHTSLEEPTEMP                7
+#define STDSLEEPTEMP_LOW               20
+//ÀØ√ﬂª∑æ≥- ™∂»
+#define STDSLEEPHUM_HI                 65
+#define WEIGHTSLEEPHUM                 3
+#define STDSLEEPHUM_LOW                45
+//◊‹ÀØ ±≥§œµ ˝
+#define STDTOTALSLEEPPERIOD_HI         480
+#define STDTOTALSLEEPPERIOD_LOW        390
+//
+#define AGERATIO                        (1)
+//-------------------Ω”ø⁄±‰¡ø--------------------------------
+extern uint32_t uctsk_Rfms_TxNum;
+extern uint32_t uctsk_Rfms_RxNum;
+extern uint32_t uctsk_Rfms_MonitorRxNum;
+extern uint16_t uctsk_Rfms_RxValue;
+extern uint8_t uctsk_CurrentSleepLevel;
+extern uint8_t  uctsk_Rfms_Err;
+extern uint16_t Uctsk_Rfms_RxZeroCmtInfo;
+//---µ±«∞ª∫¥Ê «∑ÒŒ™ExtFlash÷–µƒ ˝æ›
+extern uint8_t uctsk_Rfms_ExtFlashReadSign;
+extern MODULE_MEMORY_S_DAY_INFO         uctsk_Rfms_s_DayInfo;
+extern MODULE_MEMORY_S_DAY_SLEEPLEVEL   uctsk_Rfms_s_DaySleepLevel;
+extern MODULE_MEMORY_S_DAY_BREATH       uctsk_Rfms_s_DayBreath;
+extern MODULE_MEMORY_S_DAY_HEARTRATE    uctsk_Rfms_s_HeartRate;
+extern MODULE_MEMORY_S_DAY_BODYMOVE     uctsk_Rfms_s_BodyMove;
+//
+extern uint8_t Uctsk_Rfms_RunFileData_DebugTest_Enable;
+extern uint32_t UctskRfms_TestfileDataNum;
+extern uint32_t UctskRfms_TestfileDataAllByteNum;
+extern uint8_t uctsk_Rfms_PowerSavingOff;
+extern uint16_t Uctsk_Rfms_PowerSavingTimer_s;
+extern uint16_t UctskRfms_BufferLoopAllErrCmt;
+extern uint16_t UctskRfms_BufferLoopMaxErrCmt;
+//
+extern uint8_t uctsk_Rfms_Hardware,uctsk_Rfms_Software;
+//
+extern uint32_t   uctsk_Rfms_NoBodyThresholdValue;
+extern uint32_t   uctsk_Rfms_NoBodyThresholdVTimerS;
+//-------------------Ω”ø⁄∫Ø ˝--------------------------------
+//¥¥Ω®»ŒŒÒ
+extern void App_RfmsTaskCreate(void);
+extern void App_RfmsTaskTestCreate(void);
+extern void App_RfmsTaskTxCreate(void);
+//ªÒ»°…Ë÷√‘À––◊¥Ã¨
+extern uint8_t uctsk_Rfms_GetRunState(void);
+extern void uctsk_Rfms_Power(uint8_t OnOff);
+extern void uctsk_Rfms_SetRunState(uint8_t state);
+// ˝æ›÷–∂œ
+extern void uctsk_Rfms_RxIrq(uint8_t *pbuf,uint16_t len);
+// ±º‰÷–∂œ
+extern void uctsk_Rfms_1mS(void);
+//…Ë÷√¥´∏–∆˜ø™πÿ
+extern void uctsk_Rfms_PowerOnOff(uint8_t OnOff);
+extern void uctsk_Rfms_SetOnOff(uint8_t OnOff,uint8_t ManualOrAuto);
+//µ˜ ‘
+extern void uctsk_Rfms_DataStream_DebugTestOnOff(uint8_t OnOff);
+extern void uctsk_Rfms_WaveStream_DebugTestOnOff(uint8_t OnOff);
+extern void uctsk_Rfms_FinalData_DebugTestOnOff(uint8_t OnOff);
+extern void uctsk_Rfms_RunFileData_DebugTestOnOff(uint8_t OnOff);
+// ˝æ›◊™ªª
+extern void uctsk_Rfms_Interpolation_Proc(uint8_t* source, uint8_t* parameter,uint8_t* destination, uint8_t length ,uint8_t min,float coeff, uint8_t endMark);
+extern void uctsk_Rfms_Average_Proc(uint8_t* valueArray, uint8_t average,uint16_t* coordirateArray,uint16_t centerCoordinate,uint16_t limit ,uint8_t length,uint8_t endMark, float step);
+extern void uctsk_Rfms_DataSaveToTf_100ms(void);
+extern void uctsk_RfmsSetSleepLevelBeforeAlarm(void);
+extern uint8_t uctsk_Rfms_BufferLoop1Pop(uint8_t *pbuf,uint16_t *plen);
+//ÃÂ∂Ø
+extern uint8_t uctsk_Rfms_KeepBodyMoveIndex(struct tm *p_tm,uint8_t *p_buf,uint8_t *index);
+extern uint8_t uctsk_Rfms_KeepBodyMove_GetFinalInfo(struct tm *p_tm,uint8_t *pOutbuf);
+//-----------------------------------------------------------
+#endif
+
+</span></div><div class="line"><a name="l00088"></a><span class="lineno"><a class="line" href="uctsk___r_f_m_s_8h.html#af810b9149a88ad324929e15feec4fa19">   88</a></span>&#160;<span class="preprocessor">#define WEIGHTAWAKESTATE               3</span></div><div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="comment">//ÀØ√ﬂœ∞πﬂ #define STDSARTTIMEDIS                 30    /*10*/    /*15*/
+#define WEIGHTSTARTTIMEDIS             10    /*12*/
+//ÀØ√ﬂª∑æ≥-Œ¬∂»
+#define STDSLEEPTEMP_HI                24
+#define WEIGHTSLEEPTEMP                7
+#define STDSLEEPTEMP_LOW               20
+//ÀØ√ﬂª∑æ≥- ™∂»
+#define STDSLEEPHUM_HI                 65
+#define WEIGHTSLEEPHUM                 3
+#define STDSLEEPHUM_LOW                45
+//◊‹ÀØ ±≥§œµ ˝
+#define STDTOTALSLEEPPERIOD_HI         480
+#define STDTOTALSLEEPPERIOD_LOW        390
+//
+#define AGERATIO                        (1)
+//-------------------Ω”ø⁄±‰¡ø--------------------------------
+extern uint32_t uctsk_Rfms_TxNum;
+extern uint32_t uctsk_Rfms_RxNum;
+extern uint32_t uctsk_Rfms_MonitorRxNum;
+extern uint16_t uctsk_Rfms_RxValue;
+extern uint8_t uctsk_CurrentSleepLevel;
+extern uint8_t  uctsk_Rfms_Err;
+extern uint16_t Uctsk_Rfms_RxZeroCmtInfo;
+//---µ±«∞ª∫¥Ê «∑ÒŒ™ExtFlash÷–µƒ ˝æ›
+extern uint8_t uctsk_Rfms_ExtFlashReadSign;
+extern MODULE_MEMORY_S_DAY_INFO         uctsk_Rfms_s_DayInfo;
+extern MODULE_MEMORY_S_DAY_SLEEPLEVEL   uctsk_Rfms_s_DaySleepLevel;
+extern MODULE_MEMORY_S_DAY_BREATH       uctsk_Rfms_s_DayBreath;
+extern MODULE_MEMORY_S_DAY_HEARTRATE    uctsk_Rfms_s_HeartRate;
+extern MODULE_MEMORY_S_DAY_BODYMOVE     uctsk_Rfms_s_BodyMove;
+//
+extern uint8_t Uctsk_Rfms_RunFileData_DebugTest_Enable;
+extern uint32_t UctskRfms_TestfileDataNum;
+extern uint32_t UctskRfms_TestfileDataAllByteNum;
+extern uint8_t uctsk_Rfms_PowerSavingOff;
+extern uint16_t Uctsk_Rfms_PowerSavingTimer_s;
+extern uint16_t UctskRfms_BufferLoopAllErrCmt;
+extern uint16_t UctskRfms_BufferLoopMaxErrCmt;
+//
+extern uint8_t uctsk_Rfms_Hardware,uctsk_Rfms_Software;
+//
+extern uint32_t   uctsk_Rfms_NoBodyThresholdValue;
+extern uint32_t   uctsk_Rfms_NoBodyThresholdVTimerS;
+//-------------------Ω”ø⁄∫Ø ˝--------------------------------
+//¥¥Ω®»ŒŒÒ
+extern void App_RfmsTaskCreate(void);
+extern void App_RfmsTaskTestCreate(void);
+extern void App_RfmsTaskTxCreate(void);
+//ªÒ»°…Ë÷√‘À––◊¥Ã¨
+extern uint8_t uctsk_Rfms_GetRunState(void);
+extern void uctsk_Rfms_Power(uint8_t OnOff);
+extern void uctsk_Rfms_SetRunState(uint8_t state);
+// ˝æ›÷–∂œ
+extern void uctsk_Rfms_RxIrq(uint8_t *pbuf,uint16_t len);
+// ±º‰÷–∂œ
+extern void uctsk_Rfms_1mS(void);
+//…Ë÷√¥´∏–∆˜ø™πÿ
+extern void uctsk_Rfms_PowerOnOff(uint8_t OnOff);
+extern void uctsk_Rfms_SetOnOff(uint8_t OnOff,uint8_t ManualOrAuto);
+//µ˜ ‘
+extern void uctsk_Rfms_DataStream_DebugTestOnOff(uint8_t OnOff);
+extern void uctsk_Rfms_WaveStream_DebugTestOnOff(uint8_t OnOff);
+extern void uctsk_Rfms_FinalData_DebugTestOnOff(uint8_t OnOff);
+extern void uctsk_Rfms_RunFileData_DebugTestOnOff(uint8_t OnOff);
+// ˝æ›◊™ªª
+extern void uctsk_Rfms_Interpolation_Proc(uint8_t* source, uint8_t* parameter,uint8_t* destination, uint8_t length ,uint8_t min,float coeff, uint8_t endMark);
+extern void uctsk_Rfms_Average_Proc(uint8_t* valueArray, uint8_t average,uint16_t* coordirateArray,uint16_t centerCoordinate,uint16_t limit ,uint8_t length,uint8_t endMark, float step);
+extern void uctsk_Rfms_DataSaveToTf_100ms(void);
+extern void uctsk_RfmsSetSleepLevelBeforeAlarm(void);
+extern uint8_t uctsk_Rfms_BufferLoop1Pop(uint8_t *pbuf,uint16_t *plen);
+//ÃÂ∂Ø
+extern uint8_t uctsk_Rfms_KeepBodyMoveIndex(struct tm *p_tm,uint8_t *p_buf,uint8_t *index);
+extern uint8_t uctsk_Rfms_KeepBodyMove_GetFinalInfo(struct tm *p_tm,uint8_t *pOutbuf);
+//-----------------------------------------------------------
+#endif
+
+</span></div><div class="line"><a name="l00090"></a><span class="lineno"><a class="line" href="uctsk___r_f_m_s_8h.html#af9515a91c93c9b14a7678bf0b2ab0fad">   90</a></span>&#160;<span class="preprocessor">#define STDSARTTIMEDIS                 30    </span><span class="comment">/*10*/</span><span class="preprocessor">    </span><span class="comment">/*15*/</span><span class="preprocessor"></span></div><div class="line"><a name="l00091"></a><span class="lineno"><a class="line" href="uctsk___r_f_m_s_8h.html#a7cf5c5afaabe94a72018ab4ba1f00dd8">   91</a></span>&#160;<span class="preprocessor">#define WEIGHTSTARTTIMEDIS             10    </span><span class="comment">/*12*/</span><span class="preprocessor"></span></div><div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="comment">//ÀØ√ﬂª∑æ≥-Œ¬∂» #define STDSLEEPTEMP_HI                24
+#define WEIGHTSLEEPTEMP                7
+#define STDSLEEPTEMP_LOW               20
+//ÀØ√ﬂª∑æ≥- ™∂»
+#define STDSLEEPHUM_HI                 65
+#define WEIGHTSLEEPHUM                 3
+#define STDSLEEPHUM_LOW                45
+//◊‹ÀØ ±≥§œµ ˝
+#define STDTOTALSLEEPPERIOD_HI         480
+#define STDTOTALSLEEPPERIOD_LOW        390
+//
+#define AGERATIO                        (1)
+//-------------------Ω”ø⁄±‰¡ø--------------------------------
+extern uint32_t uctsk_Rfms_TxNum;
+extern uint32_t uctsk_Rfms_RxNum;
+extern uint32_t uctsk_Rfms_MonitorRxNum;
+extern uint16_t uctsk_Rfms_RxValue;
+extern uint8_t uctsk_CurrentSleepLevel;
+extern uint8_t  uctsk_Rfms_Err;
+extern uint16_t Uctsk_Rfms_RxZeroCmtInfo;
+//---µ±«∞ª∫¥Ê «∑ÒŒ™ExtFlash÷–µƒ ˝æ›
+extern uint8_t uctsk_Rfms_ExtFlashReadSign;
+extern MODULE_MEMORY_S_DAY_INFO         uctsk_Rfms_s_DayInfo;
+extern MODULE_MEMORY_S_DAY_SLEEPLEVEL   uctsk_Rfms_s_DaySleepLevel;
+extern MODULE_MEMORY_S_DAY_BREATH       uctsk_Rfms_s_DayBreath;
+extern MODULE_MEMORY_S_DAY_HEARTRATE    uctsk_Rfms_s_HeartRate;
+extern MODULE_MEMORY_S_DAY_BODYMOVE     uctsk_Rfms_s_BodyMove;
+//
+extern uint8_t Uctsk_Rfms_RunFileData_DebugTest_Enable;
+extern uint32_t UctskRfms_TestfileDataNum;
+extern uint32_t UctskRfms_TestfileDataAllByteNum;
+extern uint8_t uctsk_Rfms_PowerSavingOff;
+extern uint16_t Uctsk_Rfms_PowerSavingTimer_s;
+extern uint16_t UctskRfms_BufferLoopAllErrCmt;
+extern uint16_t UctskRfms_BufferLoopMaxErrCmt;
+//
+extern uint8_t uctsk_Rfms_Hardware,uctsk_Rfms_Software;
+//
+extern uint32_t   uctsk_Rfms_NoBodyThresholdValue;
+extern uint32_t   uctsk_Rfms_NoBodyThresholdVTimerS;
+//-------------------Ω”ø⁄∫Ø ˝--------------------------------
+//¥¥Ω®»ŒŒÒ
+extern void App_RfmsTaskCreate(void);
+extern void App_RfmsTaskTestCreate(void);
+extern void App_RfmsTaskTxCreate(void);
+//ªÒ»°…Ë÷√‘À––◊¥Ã¨
+extern uint8_t uctsk_Rfms_GetRunState(void);
+extern void uctsk_Rfms_Power(uint8_t OnOff);
+extern void uctsk_Rfms_SetRunState(uint8_t state);
+// ˝æ›÷–∂œ
+extern void uctsk_Rfms_RxIrq(uint8_t *pbuf,uint16_t len);
+// ±º‰÷–∂œ
+extern void uctsk_Rfms_1mS(void);
+//…Ë÷√¥´∏–∆˜ø™πÿ
+extern void uctsk_Rfms_PowerOnOff(uint8_t OnOff);
+extern void uctsk_Rfms_SetOnOff(uint8_t OnOff,uint8_t ManualOrAuto);
+//µ˜ ‘
+extern void uctsk_Rfms_DataStream_DebugTestOnOff(uint8_t OnOff);
+extern void uctsk_Rfms_WaveStream_DebugTestOnOff(uint8_t OnOff);
+extern void uctsk_Rfms_FinalData_DebugTestOnOff(uint8_t OnOff);
+extern void uctsk_Rfms_RunFileData_DebugTestOnOff(uint8_t OnOff);
+// ˝æ›◊™ªª
+extern void uctsk_Rfms_Interpolation_Proc(uint8_t* source, uint8_t* parameter,uint8_t* destination, uint8_t length ,uint8_t min,float coeff, uint8_t endMark);
+extern void uctsk_Rfms_Average_Proc(uint8_t* valueArray, uint8_t average,uint16_t* coordirateArray,uint16_t centerCoordinate,uint16_t limit ,uint8_t length,uint8_t endMark, float step);
+extern void uctsk_Rfms_DataSaveToTf_100ms(void);
+extern void uctsk_RfmsSetSleepLevelBeforeAlarm(void);
+extern uint8_t uctsk_Rfms_BufferLoop1Pop(uint8_t *pbuf,uint16_t *plen);
+//ÃÂ∂Ø
+extern uint8_t uctsk_Rfms_KeepBodyMoveIndex(struct tm *p_tm,uint8_t *p_buf,uint8_t *index);
+extern uint8_t uctsk_Rfms_KeepBodyMove_GetFinalInfo(struct tm *p_tm,uint8_t *pOutbuf);
+//-----------------------------------------------------------
+#endif
+
+</span></div><div class="line"><a name="l00093"></a><span class="lineno"><a class="line" href="uctsk___r_f_m_s_8h.html#afd185b7b23ea9415fb2e9895cdd03a7d">   93</a></span>&#160;<span class="preprocessor">#define STDSLEEPTEMP_HI                24</span></div><div class="line"><a name="l00094"></a><span class="lineno"><a class="line" href="uctsk___r_f_m_s_8h.html#afc2e4a2bfae2e28b8980fbdea6670ee8">   94</a></span>&#160;<span class="preprocessor">#define WEIGHTSLEEPTEMP                7</span></div><div class="line"><a name="l00095"></a><span class="lineno"><a class="line" href="uctsk___r_f_m_s_8h.html#a48c79c224ff8234d441c8c901957d8f7">   95</a></span>&#160;<span class="preprocessor">#define STDSLEEPTEMP_LOW               20</span></div><div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="comment">//ÀØ√ﬂª∑æ≥- ™∂» #define STDSLEEPHUM_HI                 65
+#define WEIGHTSLEEPHUM                 3
+#define STDSLEEPHUM_LOW                45
+//◊‹ÀØ ±≥§œµ ˝
+#define STDTOTALSLEEPPERIOD_HI         480
+#define STDTOTALSLEEPPERIOD_LOW        390
+//
+#define AGERATIO                        (1)
+//-------------------Ω”ø⁄±‰¡ø--------------------------------
+extern uint32_t uctsk_Rfms_TxNum;
+extern uint32_t uctsk_Rfms_RxNum;
+extern uint32_t uctsk_Rfms_MonitorRxNum;
+extern uint16_t uctsk_Rfms_RxValue;
+extern uint8_t uctsk_CurrentSleepLevel;
+extern uint8_t  uctsk_Rfms_Err;
+extern uint16_t Uctsk_Rfms_RxZeroCmtInfo;
+//---µ±«∞ª∫¥Ê «∑ÒŒ™ExtFlash÷–µƒ ˝æ›
+extern uint8_t uctsk_Rfms_ExtFlashReadSign;
+extern MODULE_MEMORY_S_DAY_INFO         uctsk_Rfms_s_DayInfo;
+extern MODULE_MEMORY_S_DAY_SLEEPLEVEL   uctsk_Rfms_s_DaySleepLevel;
+extern MODULE_MEMORY_S_DAY_BREATH       uctsk_Rfms_s_DayBreath;
+extern MODULE_MEMORY_S_DAY_HEARTRATE    uctsk_Rfms_s_HeartRate;
+extern MODULE_MEMORY_S_DAY_BODYMOVE     uctsk_Rfms_s_BodyMove;
+//
+extern uint8_t Uctsk_Rfms_RunFileData_DebugTest_Enable;
+extern uint32_t UctskRfms_TestfileDataNum;
+extern uint32_t UctskRfms_TestfileDataAllByteNum;
+extern uint8_t uctsk_Rfms_PowerSavingOff;
+extern uint16_t Uctsk_Rfms_PowerSavingTimer_s;
+extern uint16_t UctskRfms_BufferLoopAllErrCmt;
+extern uint16_t UctskRfms_BufferLoopMaxErrCmt;
+//
+extern uint8_t uctsk_Rfms_Hardware,uctsk_Rfms_Software;
+//
+extern uint32_t   uctsk_Rfms_NoBodyThresholdValue;
+extern uint32_t   uctsk_Rfms_NoBodyThresholdVTimerS;
+//-------------------Ω”ø⁄∫Ø ˝--------------------------------
+//¥¥Ω®»ŒŒÒ
+extern void App_RfmsTaskCreate(void);
+extern void App_RfmsTaskTestCreate(void);
+extern void App_RfmsTaskTxCreate(void);
+//ªÒ»°…Ë÷√‘À––◊¥Ã¨
+extern uint8_t uctsk_Rfms_GetRunState(void);
+extern void uctsk_Rfms_Power(uint8_t OnOff);
+extern void uctsk_Rfms_SetRunState(uint8_t state);
+// ˝æ›÷–∂œ
+extern void uctsk_Rfms_RxIrq(uint8_t *pbuf,uint16_t len);
+// ±º‰÷–∂œ
+extern void uctsk_Rfms_1mS(void);
+//…Ë÷√¥´∏–∆˜ø™πÿ
+extern void uctsk_Rfms_PowerOnOff(uint8_t OnOff);
+extern void uctsk_Rfms_SetOnOff(uint8_t OnOff,uint8_t ManualOrAuto);
+//µ˜ ‘
+extern void uctsk_Rfms_DataStream_DebugTestOnOff(uint8_t OnOff);
+extern void uctsk_Rfms_WaveStream_DebugTestOnOff(uint8_t OnOff);
+extern void uctsk_Rfms_FinalData_DebugTestOnOff(uint8_t OnOff);
+extern void uctsk_Rfms_RunFileData_DebugTestOnOff(uint8_t OnOff);
+// ˝æ›◊™ªª
+extern void uctsk_Rfms_Interpolation_Proc(uint8_t* source, uint8_t* parameter,uint8_t* destination, uint8_t length ,uint8_t min,float coeff, uint8_t endMark);
+extern void uctsk_Rfms_Average_Proc(uint8_t* valueArray, uint8_t average,uint16_t* coordirateArray,uint16_t centerCoordinate,uint16_t limit ,uint8_t length,uint8_t endMark, float step);
+extern void uctsk_Rfms_DataSaveToTf_100ms(void);
+extern void uctsk_RfmsSetSleepLevelBeforeAlarm(void);
+extern uint8_t uctsk_Rfms_BufferLoop1Pop(uint8_t *pbuf,uint16_t *plen);
+//ÃÂ∂Ø
+extern uint8_t uctsk_Rfms_KeepBodyMoveIndex(struct tm *p_tm,uint8_t *p_buf,uint8_t *index);
+extern uint8_t uctsk_Rfms_KeepBodyMove_GetFinalInfo(struct tm *p_tm,uint8_t *pOutbuf);
+//-----------------------------------------------------------
+#endif
+
+</span></div><div class="line"><a name="l00097"></a><span class="lineno"><a class="line" href="uctsk___r_f_m_s_8h.html#a7b2b2f3d5e08ec897a0ceb7d9113d36a">   97</a></span>&#160;<span class="preprocessor">#define STDSLEEPHUM_HI                 65</span></div><div class="line"><a name="l00098"></a><span class="lineno"><a class="line" href="uctsk___r_f_m_s_8h.html#a5e68a59068c9e80612c8badb17549800">   98</a></span>&#160;<span class="preprocessor">#define WEIGHTSLEEPHUM                 3</span></div><div class="line"><a name="l00099"></a><span class="lineno"><a class="line" href="uctsk___r_f_m_s_8h.html#a8c96373ce1338d8e82afcee44f9b5320">   99</a></span>&#160;<span class="preprocessor">#define STDSLEEPHUM_LOW                45</span></div><div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;<span class="comment">//◊‹ÀØ ±≥§œµ ˝</span></div><div class="line"><a name="l00101"></a><span class="lineno"><a class="line" href="uctsk___r_f_m_s_8h.html#aebc84524224002a915cbb8fb87f377b6">  101</a></span>&#160;<span class="preprocessor">#define STDTOTALSLEEPPERIOD_HI         480</span></div><div class="line"><a name="l00102"></a><span class="lineno"><a class="line" href="uctsk___r_f_m_s_8h.html#aae03e43d32827c70413491a47225df8a">  102</a></span>&#160;<span class="preprocessor">#define STDTOTALSLEEPPERIOD_LOW        390</span></div><div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;<span class="comment">//</span></div><div class="line"><a name="l00104"></a><span class="lineno"><a class="line" href="uctsk___r_f_m_s_8h.html#a65280b90927494af798e22b69837a564">  104</a></span>&#160;<span class="preprocessor">#define AGERATIO                        (1)</span></div><div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;<span class="comment">//-------------------Ω”ø⁄±‰¡ø--------------------------------</span></div><div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;<span class="keyword">extern</span> uint32_t <a class="code" href="uctsk___r_f_m_s_8h.html#a66e45997046d208e5af74b9a25caa2d3">uctsk_Rfms_TxNum</a>;</div><div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;<span class="keyword">extern</span> uint32_t <a class="code" href="uctsk___r_f_m_s_8h.html#a9367da785ff9237c504c6e04dee816fa">uctsk_Rfms_RxNum</a>;</div><div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;<span class="keyword">extern</span> uint32_t <a class="code" href="uctsk___r_f_m_s_8h.html#aeb661bcb429333cdfb7927cb8b150dce">uctsk_Rfms_MonitorRxNum</a>;</div><div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;<span class="keyword">extern</span> uint16_t <a class="code" href="uctsk___r_f_m_s_8h.html#a4145f02aa0765b119eef0a04c71323b0">uctsk_Rfms_RxValue</a>;</div><div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;<span class="keyword">extern</span> uint8_t <a class="code" href="uctsk___r_f_m_s_8h.html#aec42b0f8124eefd5c519a9e1f11312d9">uctsk_CurrentSleepLevel</a>;</div><div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;<span class="keyword">extern</span> uint8_t  <a class="code" href="uctsk___r_f_m_s_8h.html#af382fba96416ba1ca4e82e55a6011b07">uctsk_Rfms_Err</a>;</div><div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;<span class="keyword">extern</span> uint16_t <a class="code" href="uctsk___r_f_m_s_8h.html#aa645519acf1147dfe5f7f51c4cfca6c4">Uctsk_Rfms_RxZeroCmtInfo</a>;</div><div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;<span class="comment">//---µ±«∞ª∫¥Ê «∑ÒŒ™ExtFlash÷–µƒ ˝æ› extern uint8_t uctsk_Rfms_ExtFlashReadSign;
+extern MODULE_MEMORY_S_DAY_INFO         uctsk_Rfms_s_DayInfo;
+extern MODULE_MEMORY_S_DAY_SLEEPLEVEL   uctsk_Rfms_s_DaySleepLevel;
+extern MODULE_MEMORY_S_DAY_BREATH       uctsk_Rfms_s_DayBreath;
+extern MODULE_MEMORY_S_DAY_HEARTRATE    uctsk_Rfms_s_HeartRate;
+extern MODULE_MEMORY_S_DAY_BODYMOVE     uctsk_Rfms_s_BodyMove;
+//
+extern uint8_t Uctsk_Rfms_RunFileData_DebugTest_Enable;
+extern uint32_t UctskRfms_TestfileDataNum;
+extern uint32_t UctskRfms_TestfileDataAllByteNum;
+extern uint8_t uctsk_Rfms_PowerSavingOff;
+extern uint16_t Uctsk_Rfms_PowerSavingTimer_s;
+extern uint16_t UctskRfms_BufferLoopAllErrCmt;
+extern uint16_t UctskRfms_BufferLoopMaxErrCmt;
+//
+extern uint8_t uctsk_Rfms_Hardware,uctsk_Rfms_Software;
+//
+extern uint32_t   uctsk_Rfms_NoBodyThresholdValue;
+extern uint32_t   uctsk_Rfms_NoBodyThresholdVTimerS;
+//-------------------Ω”ø⁄∫Ø ˝--------------------------------
+//¥¥Ω®»ŒŒÒ
+extern void App_RfmsTaskCreate(void);
+extern void App_RfmsTaskTestCreate(void);
+extern void App_RfmsTaskTxCreate(void);
+//ªÒ»°…Ë÷√‘À––◊¥Ã¨
+extern uint8_t uctsk_Rfms_GetRunState(void);
+extern void uctsk_Rfms_Power(uint8_t OnOff);
+extern void uctsk_Rfms_SetRunState(uint8_t state);
+// ˝æ›÷–∂œ
+extern void uctsk_Rfms_RxIrq(uint8_t *pbuf,uint16_t len);
+// ±º‰÷–∂œ
+extern void uctsk_Rfms_1mS(void);
+//…Ë÷√¥´∏–∆˜ø™πÿ
+extern void uctsk_Rfms_PowerOnOff(uint8_t OnOff);
+extern void uctsk_Rfms_SetOnOff(uint8_t OnOff,uint8_t ManualOrAuto);
+//µ˜ ‘
+extern void uctsk_Rfms_DataStream_DebugTestOnOff(uint8_t OnOff);
+extern void uctsk_Rfms_WaveStream_DebugTestOnOff(uint8_t OnOff);
+extern void uctsk_Rfms_FinalData_DebugTestOnOff(uint8_t OnOff);
+extern void uctsk_Rfms_RunFileData_DebugTestOnOff(uint8_t OnOff);
+// ˝æ›◊™ªª
+extern void uctsk_Rfms_Interpolation_Proc(uint8_t* source, uint8_t* parameter,uint8_t* destination, uint8_t length ,uint8_t min,float coeff, uint8_t endMark);
+extern void uctsk_Rfms_Average_Proc(uint8_t* valueArray, uint8_t average,uint16_t* coordirateArray,uint16_t centerCoordinate,uint16_t limit ,uint8_t length,uint8_t endMark, float step);
+extern void uctsk_Rfms_DataSaveToTf_100ms(void);
+extern void uctsk_RfmsSetSleepLevelBeforeAlarm(void);
+extern uint8_t uctsk_Rfms_BufferLoop1Pop(uint8_t *pbuf,uint16_t *plen);
+//ÃÂ∂Ø
+extern uint8_t uctsk_Rfms_KeepBodyMoveIndex(struct tm *p_tm,uint8_t *p_buf,uint8_t *index);
+extern uint8_t uctsk_Rfms_KeepBodyMove_GetFinalInfo(struct tm *p_tm,uint8_t *pOutbuf);
+//-----------------------------------------------------------
+#endif
+
+</span></div><div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;<span class="keyword">extern</span> uint8_t <a class="code" href="uctsk___r_f_m_s_8h.html#a510303e8ea5ea703b0b3e64656e0a8b8">uctsk_Rfms_ExtFlashReadSign</a>;</div><div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;<span class="keyword">extern</span> MODULE_MEMORY_S_DAY_INFO         <a class="code" href="uctsk___r_f_m_s_8h.html#a448ecd30570ea8318da606abe1ed4224">uctsk_Rfms_s_DayInfo</a>;</div><div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;<span class="keyword">extern</span> MODULE_MEMORY_S_DAY_SLEEPLEVEL   <a class="code" href="uctsk___r_f_m_s_8h.html#a4fea7f2b9edeb663eae730681aaa920e">uctsk_Rfms_s_DaySleepLevel</a>;</div><div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;<span class="keyword">extern</span> MODULE_MEMORY_S_DAY_BREATH       <a class="code" href="uctsk___r_f_m_s_8h.html#acea65d8e56f6545c7d4966dddea9ee48">uctsk_Rfms_s_DayBreath</a>;</div><div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;<span class="keyword">extern</span> MODULE_MEMORY_S_DAY_HEARTRATE    <a class="code" href="uctsk___r_f_m_s_8h.html#a12a0913b897ae29e8062f2a1b2450817">uctsk_Rfms_s_HeartRate</a>;</div><div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;<span class="keyword">extern</span> MODULE_MEMORY_S_DAY_BODYMOVE     <a class="code" href="uctsk___r_f_m_s_8h.html#a57298946b5977d078591d4e6b92cf5bd">uctsk_Rfms_s_BodyMove</a>;</div><div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;<span class="comment">//</span></div><div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;<span class="keyword">extern</span> uint8_t <a class="code" href="uctsk___r_f_m_s_8h.html#a6540f300ed9d7157880ab0c3845826a2">Uctsk_Rfms_RunFileData_DebugTest_Enable</a>;</div><div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;<span class="keyword">extern</span> uint32_t <a class="code" href="uctsk___r_f_m_s_8h.html#a8ec5570083ad3064d4607cd07adb76f4">UctskRfms_TestfileDataNum</a>;</div><div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;<span class="keyword">extern</span> uint32_t <a class="code" href="uctsk___r_f_m_s_8h.html#ae5d3c05c715fce1d6fdc07e368cd4ed9">UctskRfms_TestfileDataAllByteNum</a>;</div><div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;<span class="keyword">extern</span> uint8_t <a class="code" href="uctsk___r_f_m_s_8h.html#ae32bf7293b8037f7187bcc3c88d970a9">uctsk_Rfms_PowerSavingOff</a>;</div><div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;<span class="keyword">extern</span> uint16_t <a class="code" href="uctsk___r_f_m_s_8h.html#a6b320be877a650ac74da86edbd9271dd">Uctsk_Rfms_PowerSavingTimer_s</a>;</div><div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;<span class="keyword">extern</span> uint16_t <a class="code" href="uctsk___r_f_m_s_8h.html#affff027bd0c1c11f539907827c11dc42">UctskRfms_BufferLoopAllErrCmt</a>;</div><div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;<span class="keyword">extern</span> uint16_t <a class="code" href="uctsk___r_f_m_s_8h.html#a1f1f58f8962829fee58825e6f172628f">UctskRfms_BufferLoopMaxErrCmt</a>;</div><div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;<span class="comment">//</span></div><div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;<span class="keyword">extern</span> uint8_t <a class="code" href="uctsk___r_f_m_s_8h.html#a86733de05619e67d9b2b2f86f948873c">uctsk_Rfms_Hardware</a>,<a class="code" href="uctsk___r_f_m_s_8h.html#a64e9c26f8609d87dc8bba5e9b409bb42">uctsk_Rfms_Software</a>;</div><div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;<span class="comment">//</span></div><div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;<span class="keyword">extern</span> uint32_t   <a class="code" href="uctsk___r_f_m_s_8h.html#a7280690493f21f551ba31d3cf8c7ee50">uctsk_Rfms_NoBodyThresholdValue</a>;</div><div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;<span class="keyword">extern</span> uint32_t   <a class="code" href="uctsk___r_f_m_s_8h.html#ad6c3cff540cabd7c3572952a289cd8b4">uctsk_Rfms_NoBodyThresholdVTimerS</a>;</div><div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;<span class="comment">//-------------------Ω”ø⁄∫Ø ˝--------------------------------</span></div><div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;<span class="comment">//¥¥Ω®»ŒŒÒ</span></div><div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">void</span> <a class="code" href="uctsk___r_f_m_s_8h.html#ab68dfb414a900f6d3e1d1a041dffe40f">App_RfmsTaskCreate</a>(<span class="keywordtype">void</span>);</div><div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">void</span> <a class="code" href="uctsk___r_f_m_s_8h.html#ab179de0d8c82e2447b2718ba10e1f26e">App_RfmsTaskTestCreate</a>(<span class="keywordtype">void</span>);</div><div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">void</span> <a class="code" href="uctsk___r_f_m_s_8h.html#aa7f473f8afab1371f3915c67a3487659">App_RfmsTaskTxCreate</a>(<span class="keywordtype">void</span>);</div><div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;<span class="comment">//ªÒ»°…Ë÷√‘À––◊¥Ã¨</span></div><div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;<span class="keyword">extern</span> uint8_t <a class="code" href="uctsk___r_f_m_s_8h.html#a181f9d6e9a02463f489ce37814a12cde">uctsk_Rfms_GetRunState</a>(<span class="keywordtype">void</span>);</div><div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">void</span> <a class="code" href="uctsk___r_f_m_s_8h.html#a50399a13ede43a4e9226acb7d36b4650">uctsk_Rfms_Power</a>(uint8_t OnOff);</div><div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">void</span> <a class="code" href="uctsk___r_f_m_s_8h.html#aa9842b304e6941c109fa95a9d3367a66">uctsk_Rfms_SetRunState</a>(uint8_t state);</div><div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;<span class="comment">// ˝æ›÷–∂œ extern void uctsk_Rfms_RxIrq(uint8_t *pbuf,uint16_t len);
+// ±º‰÷–∂œ
+extern void uctsk_Rfms_1mS(void);
+//…Ë÷√¥´∏–∆˜ø™πÿ
+extern void uctsk_Rfms_PowerOnOff(uint8_t OnOff);
+extern void uctsk_Rfms_SetOnOff(uint8_t OnOff,uint8_t ManualOrAuto);
+//µ˜ ‘
+extern void uctsk_Rfms_DataStream_DebugTestOnOff(uint8_t OnOff);
+extern void uctsk_Rfms_WaveStream_DebugTestOnOff(uint8_t OnOff);
+extern void uctsk_Rfms_FinalData_DebugTestOnOff(uint8_t OnOff);
+extern void uctsk_Rfms_RunFileData_DebugTestOnOff(uint8_t OnOff);
+// ˝æ›◊™ªª
+extern void uctsk_Rfms_Interpolation_Proc(uint8_t* source, uint8_t* parameter,uint8_t* destination, uint8_t length ,uint8_t min,float coeff, uint8_t endMark);
+extern void uctsk_Rfms_Average_Proc(uint8_t* valueArray, uint8_t average,uint16_t* coordirateArray,uint16_t centerCoordinate,uint16_t limit ,uint8_t length,uint8_t endMark, float step);
+extern void uctsk_Rfms_DataSaveToTf_100ms(void);
+extern void uctsk_RfmsSetSleepLevelBeforeAlarm(void);
+extern uint8_t uctsk_Rfms_BufferLoop1Pop(uint8_t *pbuf,uint16_t *plen);
+//ÃÂ∂Ø
+extern uint8_t uctsk_Rfms_KeepBodyMoveIndex(struct tm *p_tm,uint8_t *p_buf,uint8_t *index);
+extern uint8_t uctsk_Rfms_KeepBodyMove_GetFinalInfo(struct tm *p_tm,uint8_t *pOutbuf);
+//-----------------------------------------------------------
+#endif
+
+</span></div><div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">void</span> <a class="code" href="uctsk___r_f_m_s_8h.html#af789033b42d2b14fb1359f6fccd9e069">uctsk_Rfms_RxIrq</a>(uint8_t *pbuf,uint16_t len);</div><div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;<span class="comment">// ±º‰÷–∂œ extern void uctsk_Rfms_1mS(void);
+//…Ë÷√¥´∏–∆˜ø™πÿ
+extern void uctsk_Rfms_PowerOnOff(uint8_t OnOff);
+extern void uctsk_Rfms_SetOnOff(uint8_t OnOff,uint8_t ManualOrAuto);
+//µ˜ ‘
+extern void uctsk_Rfms_DataStream_DebugTestOnOff(uint8_t OnOff);
+extern void uctsk_Rfms_WaveStream_DebugTestOnOff(uint8_t OnOff);
+extern void uctsk_Rfms_FinalData_DebugTestOnOff(uint8_t OnOff);
+extern void uctsk_Rfms_RunFileData_DebugTestOnOff(uint8_t OnOff);
+// ˝æ›◊™ªª
+extern void uctsk_Rfms_Interpolation_Proc(uint8_t* source, uint8_t* parameter,uint8_t* destination, uint8_t length ,uint8_t min,float coeff, uint8_t endMark);
+extern void uctsk_Rfms_Average_Proc(uint8_t* valueArray, uint8_t average,uint16_t* coordirateArray,uint16_t centerCoordinate,uint16_t limit ,uint8_t length,uint8_t endMark, float step);
+extern void uctsk_Rfms_DataSaveToTf_100ms(void);
+extern void uctsk_RfmsSetSleepLevelBeforeAlarm(void);
+extern uint8_t uctsk_Rfms_BufferLoop1Pop(uint8_t *pbuf,uint16_t *plen);
+//ÃÂ∂Ø
+extern uint8_t uctsk_Rfms_KeepBodyMoveIndex(struct tm *p_tm,uint8_t *p_buf,uint8_t *index);
+extern uint8_t uctsk_Rfms_KeepBodyMove_GetFinalInfo(struct tm *p_tm,uint8_t *pOutbuf);
+//-----------------------------------------------------------
+#endif
+
+</span></div><div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">void</span> <a class="code" href="uctsk___r_f_m_s_8h.html#a58331f962c51dc076d26374366f73212">uctsk_Rfms_1mS</a>(<span class="keywordtype">void</span>);</div><div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;<span class="comment">//…Ë÷√¥´∏–∆˜ø™πÿ extern void uctsk_Rfms_PowerOnOff(uint8_t OnOff);
+extern void uctsk_Rfms_SetOnOff(uint8_t OnOff,uint8_t ManualOrAuto);
+//µ˜ ‘
+extern void uctsk_Rfms_DataStream_DebugTestOnOff(uint8_t OnOff);
+extern void uctsk_Rfms_WaveStream_DebugTestOnOff(uint8_t OnOff);
+extern void uctsk_Rfms_FinalData_DebugTestOnOff(uint8_t OnOff);
+extern void uctsk_Rfms_RunFileData_DebugTestOnOff(uint8_t OnOff);
+// ˝æ›◊™ªª
+extern void uctsk_Rfms_Interpolation_Proc(uint8_t* source, uint8_t* parameter,uint8_t* destination, uint8_t length ,uint8_t min,float coeff, uint8_t endMark);
+extern void uctsk_Rfms_Average_Proc(uint8_t* valueArray, uint8_t average,uint16_t* coordirateArray,uint16_t centerCoordinate,uint16_t limit ,uint8_t length,uint8_t endMark, float step);
+extern void uctsk_Rfms_DataSaveToTf_100ms(void);
+extern void uctsk_RfmsSetSleepLevelBeforeAlarm(void);
+extern uint8_t uctsk_Rfms_BufferLoop1Pop(uint8_t *pbuf,uint16_t *plen);
+//ÃÂ∂Ø
+extern uint8_t uctsk_Rfms_KeepBodyMoveIndex(struct tm *p_tm,uint8_t *p_buf,uint8_t *index);
+extern uint8_t uctsk_Rfms_KeepBodyMove_GetFinalInfo(struct tm *p_tm,uint8_t *pOutbuf);
+//-----------------------------------------------------------
+#endif
+
+</span></div><div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">void</span> <a class="code" href="uctsk___r_f_m_s_8h.html#aa9f757cc791d503db15e2c9b331103ff">uctsk_Rfms_PowerOnOff</a>(uint8_t OnOff);</div><div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">void</span> <a class="code" href="uctsk___r_f_m_s_8h.html#a8ec55797a5cc946c11e4154bd3a7c4fe">uctsk_Rfms_SetOnOff</a>(uint8_t OnOff,uint8_t ManualOrAuto);</div><div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;<span class="comment">//µ˜ ‘ extern void uctsk_Rfms_DataStream_DebugTestOnOff(uint8_t OnOff);
+extern void uctsk_Rfms_WaveStream_DebugTestOnOff(uint8_t OnOff);
+extern void uctsk_Rfms_FinalData_DebugTestOnOff(uint8_t OnOff);
+extern void uctsk_Rfms_RunFileData_DebugTestOnOff(uint8_t OnOff);
+// ˝æ›◊™ªª
+extern void uctsk_Rfms_Interpolation_Proc(uint8_t* source, uint8_t* parameter,uint8_t* destination, uint8_t length ,uint8_t min,float coeff, uint8_t endMark);
+extern void uctsk_Rfms_Average_Proc(uint8_t* valueArray, uint8_t average,uint16_t* coordirateArray,uint16_t centerCoordinate,uint16_t limit ,uint8_t length,uint8_t endMark, float step);
+extern void uctsk_Rfms_DataSaveToTf_100ms(void);
+extern void uctsk_RfmsSetSleepLevelBeforeAlarm(void);
+extern uint8_t uctsk_Rfms_BufferLoop1Pop(uint8_t *pbuf,uint16_t *plen);
+//ÃÂ∂Ø
+extern uint8_t uctsk_Rfms_KeepBodyMoveIndex(struct tm *p_tm,uint8_t *p_buf,uint8_t *index);
+extern uint8_t uctsk_Rfms_KeepBodyMove_GetFinalInfo(struct tm *p_tm,uint8_t *pOutbuf);
+//-----------------------------------------------------------
+#endif
+
+</span></div><div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">void</span> <a class="code" href="uctsk___r_f_m_s_8h.html#a328322e378a83d8d8ae2f51f280b22aa">uctsk_Rfms_DataStream_DebugTestOnOff</a>(uint8_t OnOff);</div><div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">void</span> <a class="code" href="uctsk___r_f_m_s_8h.html#a7b66d7dd32a00c85bc6d77f0b7a8843e">uctsk_Rfms_WaveStream_DebugTestOnOff</a>(uint8_t OnOff);</div><div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">void</span> <a class="code" href="uctsk___r_f_m_s_8h.html#a94772929239ce84703e12c0325265a98">uctsk_Rfms_FinalData_DebugTestOnOff</a>(uint8_t OnOff);</div><div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">void</span> <a class="code" href="uctsk___r_f_m_s_8h.html#a06bf46631e367ef9499abd4e633cc1aa">uctsk_Rfms_RunFileData_DebugTestOnOff</a>(uint8_t OnOff);</div><div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;<span class="comment">// ˝æ›◊™ªª</span></div><div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">void</span> <a class="code" href="uctsk___r_f_m_s_8h.html#a8d9bce0dac72db4ebd4bb29183690cdb">uctsk_Rfms_Interpolation_Proc</a>(uint8_t* source, uint8_t* parameter,uint8_t* destination, uint8_t length ,uint8_t <a class="code" href="main___soft_test_8c.html#ac6afabdc09a49a433ee19d8a9486056d">min</a>,<span class="keywordtype">float</span> coeff, uint8_t endMark);</div><div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">void</span> <a class="code" href="uctsk___r_f_m_s_8h.html#a5887381368b10e893c8e0ae11bbb5da1">uctsk_Rfms_Average_Proc</a>(uint8_t* valueArray, uint8_t average,uint16_t* coordirateArray,uint16_t centerCoordinate,uint16_t limit ,uint8_t length,uint8_t endMark, <span class="keywordtype">float</span> step);</div><div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">void</span> <a class="code" href="uctsk___r_f_m_s_8h.html#a8817028a8bb60803cb1509108d225f21">uctsk_Rfms_DataSaveToTf_100ms</a>(<span class="keywordtype">void</span>);</div><div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">void</span> <a class="code" href="uctsk___r_f_m_s_8h.html#a010e4b4380d4c34b46aef83fc69dc887">uctsk_RfmsSetSleepLevelBeforeAlarm</a>(<span class="keywordtype">void</span>);</div><div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;<span class="keyword">extern</span> uint8_t <a class="code" href="uctsk___r_f_m_s_8h.html#a7e256ee0a6f4ee62f9747ec6e516f151">uctsk_Rfms_BufferLoop1Pop</a>(uint8_t *pbuf,uint16_t *plen);</div><div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;<span class="comment">//ÃÂ∂Ø</span></div><div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;<span class="keyword">extern</span> uint8_t <a class="code" href="uctsk___r_f_m_s_8h.html#abc67e343bc2d3b063cccfdabc0fb9e39">uctsk_Rfms_KeepBodyMoveIndex</a>(<span class="keyword">struct</span> tm *p_tm,uint8_t *p_buf,uint8_t *index);</div><div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;<span class="keyword">extern</span> uint8_t <a class="code" href="uctsk___r_f_m_s_8h.html#aad8c6150d6ae9f0252fa25fe82664964">uctsk_Rfms_KeepBodyMove_GetFinalInfo</a>(<span class="keyword">struct</span> tm *p_tm,uint8_t *pOutbuf);</div><div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;<span class="comment">//-----------------------------------------------------------</span></div><div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;<span class="preprocessor">#endif</span></div><div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;</div><div class="ttc" id="uctsk___r_f_m_s_8h_html_a448ecd30570ea8318da606abe1ed4224"><div class="ttname"><a href="uctsk___r_f_m_s_8h.html#a448ecd30570ea8318da606abe1ed4224">uctsk_Rfms_s_DayInfo</a></div><div class="ttdeci">MODULE_MEMORY_S_DAY_INFO uctsk_Rfms_s_DayInfo</div><div class="ttdef"><b>Definition:</b> uctsk_RFMS.c:92</div></div>
+<div class="ttc" id="uctsk___r_f_m_s_8h_html_a86733de05619e67d9b2b2f86f948873c"><div class="ttname"><a href="uctsk___r_f_m_s_8h.html#a86733de05619e67d9b2b2f86f948873c">uctsk_Rfms_Hardware</a></div><div class="ttdeci">uint8_t uctsk_Rfms_Hardware</div><div class="ttdef"><b>Definition:</b> uctsk_RFMS.c:100</div></div>
+<div class="ttc" id="uctsk___r_f_m_s_8h_html_acea65d8e56f6545c7d4966dddea9ee48"><div class="ttname"><a href="uctsk___r_f_m_s_8h.html#acea65d8e56f6545c7d4966dddea9ee48">uctsk_Rfms_s_DayBreath</a></div><div class="ttdeci">MODULE_MEMORY_S_DAY_BREATH uctsk_Rfms_s_DayBreath</div><div class="ttdef"><b>Definition:</b> uctsk_RFMS.c:94</div></div>
+<div class="ttc" id="struct_u_c_t_s_k___s___m_o_v_e___p_o_w_e_r_html_a7d8a5ee89c497dd7cb7fba68423d21af"><div class="ttname"><a href="struct_u_c_t_s_k___s___m_o_v_e___p_o_w_e_r.html#a7d8a5ee89c497dd7cb7fba68423d21af">UCTSK_S_MOVE_POWER::Time</a></div><div class="ttdeci">uint8_t Time[6]</div><div class="ttdef"><b>Definition:</b> uctsk_RFMS.h:39</div></div>
+<div class="ttc" id="struct_u_c_t_s_k___s___m_o_v_e___p_o_w_e_r_html_a73502e56bf41a0270ac0e4541d321586"><div class="ttname"><a href="struct_u_c_t_s_k___s___m_o_v_e___p_o_w_e_r.html#a73502e56bf41a0270ac0e4541d321586">UCTSK_S_MOVE_POWER::Num</a></div><div class="ttdeci">uint8_t Num</div><div class="ttdef"><b>Definition:</b> uctsk_RFMS.h:37</div></div>
+<div class="ttc" id="uctsk___r_f_m_s_8h_html_a181f9d6e9a02463f489ce37814a12cde"><div class="ttname"><a href="uctsk___r_f_m_s_8h.html#a181f9d6e9a02463f489ce37814a12cde">uctsk_Rfms_GetRunState</a></div><div class="ttdeci">uint8_t uctsk_Rfms_GetRunState(void)</div><div class="ttdef"><b>Definition:</b> uctsk_RFMS.c:171</div></div>
+<div class="ttc" id="uctsk___r_f_m_s_8h_html_a6951701a30b7a2c6c3c863395bf1b57fac0a468c8898af33d6ed90252217756c1"><div class="ttname"><a href="uctsk___r_f_m_s_8h.html#a6951701a30b7a2c6c3c863395bf1b57fac0a468c8898af33d6ed90252217756c1">UCTSK_RFMS_E_RUNSTATE_START</a></div><div class="ttdef"><b>Definition:</b> uctsk_RFMS.h:16</div></div>
+<div class="ttc" id="uctsk___r_f_m_s_8h_html_af789033b42d2b14fb1359f6fccd9e069"><div class="ttname"><a href="uctsk___r_f_m_s_8h.html#af789033b42d2b14fb1359f6fccd9e069">uctsk_Rfms_RxIrq</a></div><div class="ttdeci">void uctsk_Rfms_RxIrq(uint8_t *pbuf, uint16_t len)</div><div class="ttdef"><b>Definition:</b> uctsk_RFMS.c:250</div></div>
+<div class="ttc" id="uctsk___r_f_m_s_8h_html_a4145f02aa0765b119eef0a04c71323b0"><div class="ttname"><a href="uctsk___r_f_m_s_8h.html#a4145f02aa0765b119eef0a04c71323b0">uctsk_Rfms_RxValue</a></div><div class="ttdeci">uint16_t uctsk_Rfms_RxValue</div><div class="ttdef"><b>Definition:</b> uctsk_RFMS.c:87</div></div>
+<div class="ttc" id="uctsk___r_f_m_s_8h_html_a1542f497b0666364bf677e307450f45b"><div class="ttname"><a href="uctsk___r_f_m_s_8h.html#a1542f497b0666364bf677e307450f45b">UCTSK_S_MOVE_POWER</a></div><div class="ttdeci">struct UCTSK_S_MOVE_POWER UCTSK_S_MOVE_POWER</div></div>
+<div class="ttc" id="uctsk___r_f_m_s_8h_html_a8ec5570083ad3064d4607cd07adb76f4"><div class="ttname"><a href="uctsk___r_f_m_s_8h.html#a8ec5570083ad3064d4607cd07adb76f4">UctskRfms_TestfileDataNum</a></div><div class="ttdeci">uint32_t UctskRfms_TestfileDataNum</div><div class="ttdef"><b>Definition:</b> uctsk_RFMS.c:649</div></div>
+<div class="ttc" id="uctsk___r_f_m_s_8h_html_ab179de0d8c82e2447b2718ba10e1f26e"><div class="ttname"><a href="uctsk___r_f_m_s_8h.html#ab179de0d8c82e2447b2718ba10e1f26e">App_RfmsTaskTestCreate</a></div><div class="ttdeci">void App_RfmsTaskTestCreate(void)</div><div class="ttdef"><b>Definition:</b> uctsk_RFMS.c:625</div></div>
+<div class="ttc" id="uctsk___r_f_m_s_8h_html_af382fba96416ba1ca4e82e55a6011b07"><div class="ttname"><a href="uctsk___r_f_m_s_8h.html#af382fba96416ba1ca4e82e55a6011b07">uctsk_Rfms_Err</a></div><div class="ttdeci">uint8_t uctsk_Rfms_Err</div><div class="ttdef"><b>Definition:</b> uctsk_RFMS.c:90</div></div>
+<div class="ttc" id="uctsk___r_f_m_s_8h_html_a64e9c26f8609d87dc8bba5e9b409bb42"><div class="ttname"><a href="uctsk___r_f_m_s_8h.html#a64e9c26f8609d87dc8bba5e9b409bb42">uctsk_Rfms_Software</a></div><div class="ttdeci">uint8_t uctsk_Rfms_Software</div><div class="ttdef"><b>Definition:</b> uctsk_RFMS.c:100</div></div>
+<div class="ttc" id="uctsk___r_f_m_s_8h_html_a6951701a30b7a2c6c3c863395bf1b57fa94923fe4f802b52f3c264dac4c197b6a"><div class="ttname"><a href="uctsk___r_f_m_s_8h.html#a6951701a30b7a2c6c3c863395bf1b57fa94923fe4f802b52f3c264dac4c197b6a">UCTSK_RFMS_E_RUNSTATE_START_DELAY</a></div><div class="ttdef"><b>Definition:</b> uctsk_RFMS.h:17</div></div>
+<div class="ttc" id="uctsk___r_f_m_s_8h_html_a4fea7f2b9edeb663eae730681aaa920e"><div class="ttname"><a href="uctsk___r_f_m_s_8h.html#a4fea7f2b9edeb663eae730681aaa920e">uctsk_Rfms_s_DaySleepLevel</a></div><div class="ttdeci">MODULE_MEMORY_S_DAY_SLEEPLEVEL uctsk_Rfms_s_DaySleepLevel</div><div class="ttdef"><b>Definition:</b> uctsk_RFMS.c:93</div></div>
+<div class="ttc" id="uctsk___r_f_m_s_8h_html_a66e45997046d208e5af74b9a25caa2d3"><div class="ttname"><a href="uctsk___r_f_m_s_8h.html#a66e45997046d208e5af74b9a25caa2d3">uctsk_Rfms_TxNum</a></div><div class="ttdeci">uint32_t uctsk_Rfms_TxNum</div><div class="ttdef"><b>Definition:</b> uctsk_RFMS.c:84</div></div>
+<div class="ttc" id="uctsk___r_f_m_s_8h_html_a6b320be877a650ac74da86edbd9271dd"><div class="ttname"><a href="uctsk___r_f_m_s_8h.html#a6b320be877a650ac74da86edbd9271dd">Uctsk_Rfms_PowerSavingTimer_s</a></div><div class="ttdeci">uint16_t Uctsk_Rfms_PowerSavingTimer_s</div><div class="ttdef"><b>Definition:</b> uctsk_RFMS.c:77</div></div>
+<div class="ttc" id="uctsk___r_f_m_s_8h_html_a94d177b964933adc452f002e235ed4dba46d5cb0ecfebcb646cedd711df840b7d"><div class="ttname"><a href="uctsk___r_f_m_s_8h.html#a94d177b964933adc452f002e235ed4dba46d5cb0ecfebcb646cedd711df840b7d">UCTSK_RFMS_E_ERR_MOVE_TOO_MANY</a></div><div class="ttdef"><b>Definition:</b> uctsk_RFMS.h:25</div></div>
+<div class="ttc" id="uctsk___r_f_m_s_8h_html_a94d177b964933adc452f002e235ed4dbafe6f2c05407bcef036d5f2f91c709288"><div class="ttname"><a href="uctsk___r_f_m_s_8h.html#a94d177b964933adc452f002e235ed4dbafe6f2c05407bcef036d5f2f91c709288">UCTSK_RFMS_E_ERR_SIGNAL_LOW</a></div><div class="ttdef"><b>Definition:</b> uctsk_RFMS.h:27</div></div>
+<div class="ttc" id="uctsk___r_f_m_s_8h_html_ab68dfb414a900f6d3e1d1a041dffe40f"><div class="ttname"><a href="uctsk___r_f_m_s_8h.html#ab68dfb414a900f6d3e1d1a041dffe40f">App_RfmsTaskCreate</a></div><div class="ttdeci">void App_RfmsTaskCreate(void)</div><div class="ttdef"><b>Definition:</b> uctsk_RFMS.c:615</div></div>
+<div class="ttc" id="uctsk___r_f_m_s_8h_html_a58331f962c51dc076d26374366f73212"><div class="ttname"><a href="uctsk___r_f_m_s_8h.html#a58331f962c51dc076d26374366f73212">uctsk_Rfms_1mS</a></div><div class="ttdeci">void uctsk_Rfms_1mS(void)</div><div class="ttdef"><b>Definition:</b> uctsk_RFMS.c:398</div></div>
+<div class="ttc" id="uctsk___r_f_m_s_8h_html_a6951701a30b7a2c6c3c863395bf1b57fa42ee4e3d9ae0b69fb2d9cd0301a3f091"><div class="ttname"><a href="uctsk___r_f_m_s_8h.html#a6951701a30b7a2c6c3c863395bf1b57fa42ee4e3d9ae0b69fb2d9cd0301a3f091">UCTSK_RFMS_E_RUNSTATE_GET</a></div><div class="ttdef"><b>Definition:</b> uctsk_RFMS.h:18</div></div>
+<div class="ttc" id="uctsk___r_f_m_s_8h_html_a328322e378a83d8d8ae2f51f280b22aa"><div class="ttname"><a href="uctsk___r_f_m_s_8h.html#a328322e378a83d8d8ae2f51f280b22aa">uctsk_Rfms_DataStream_DebugTestOnOff</a></div><div class="ttdeci">void uctsk_Rfms_DataStream_DebugTestOnOff(uint8_t OnOff)</div><div class="ttdef"><b>Definition:</b> uctsk_RFMS.c:451</div></div>
+<div class="ttc" id="_module___memory_8h_html"><div class="ttname"><a href="_module___memory_8h.html">Module_Memory.h</a></div></div>
+<div class="ttc" id="uctsk___r_f_m_s_8h_html_a8ec55797a5cc946c11e4154bd3a7c4fe"><div class="ttname"><a href="uctsk___r_f_m_s_8h.html#a8ec55797a5cc946c11e4154bd3a7c4fe">uctsk_Rfms_SetOnOff</a></div><div class="ttdeci">void uctsk_Rfms_SetOnOff(uint8_t OnOff, uint8_t ManualOrAuto)</div><div class="ttdef"><b>Definition:</b> uctsk_RFMS.c:348</div></div>
+<div class="ttc" id="main___soft_test_8c_html_ac6afabdc09a49a433ee19d8a9486056d"><div class="ttname"><a href="main___soft_test_8c.html#ac6afabdc09a49a433ee19d8a9486056d">min</a></div><div class="ttdeci">#define min(a, b)</div><div class="ttdef"><b>Definition:</b> main_SoftTest.c:38</div></div>
+<div class="ttc" id="uctsk___r_f_m_s_8h_html_ae5d3c05c715fce1d6fdc07e368cd4ed9"><div class="ttname"><a href="uctsk___r_f_m_s_8h.html#ae5d3c05c715fce1d6fdc07e368cd4ed9">UctskRfms_TestfileDataAllByteNum</a></div><div class="ttdeci">uint32_t UctskRfms_TestfileDataAllByteNum</div><div class="ttdef"><b>Definition:</b> uctsk_RFMS.c:650</div></div>
+<div class="ttc" id="uctsk___r_f_m_s_8h_html_a5887381368b10e893c8e0ae11bbb5da1"><div class="ttname"><a href="uctsk___r_f_m_s_8h.html#a5887381368b10e893c8e0ae11bbb5da1">uctsk_Rfms_Average_Proc</a></div><div class="ttdeci">void uctsk_Rfms_Average_Proc(uint8_t *valueArray, uint8_t average, uint16_t *coordirateArray, uint16_t centerCoordinate, uint16_t limit, uint8_t length, uint8_t endMark, float step)</div><div class="ttdef"><b>Definition:</b> uctsk_RFMS.c:2879</div></div>
+<div class="ttc" id="uctsk___r_f_m_s_8h_html_ae32bf7293b8037f7187bcc3c88d970a9"><div class="ttname"><a href="uctsk___r_f_m_s_8h.html#ae32bf7293b8037f7187bcc3c88d970a9">uctsk_Rfms_PowerSavingOff</a></div><div class="ttdeci">uint8_t uctsk_Rfms_PowerSavingOff</div><div class="ttdef"><b>Definition:</b> uctsk_RFMS.c:80</div></div>
+<div class="ttc" id="uctsk___r_f_m_s_8h_html_a8817028a8bb60803cb1509108d225f21"><div class="ttname"><a href="uctsk___r_f_m_s_8h.html#a8817028a8bb60803cb1509108d225f21">uctsk_Rfms_DataSaveToTf_100ms</a></div><div class="ttdeci">void uctsk_Rfms_DataSaveToTf_100ms(void)</div><div class="ttdef"><b>Definition:</b> uctsk_RFMS.c:2996</div></div>
+<div class="ttc" id="uctsk___r_f_m_s_8h_html_affff027bd0c1c11f539907827c11dc42"><div class="ttname"><a href="uctsk___r_f_m_s_8h.html#affff027bd0c1c11f539907827c11dc42">UctskRfms_BufferLoopAllErrCmt</a></div><div class="ttdeci">uint16_t UctskRfms_BufferLoopAllErrCmt</div><div class="ttdef"><b>Definition:</b> uctsk_RFMS.c:44</div></div>
+<div class="ttc" id="includes_8h_html"><div class="ttname"><a href="includes_8h.html">includes.h</a></div></div>
+<div class="ttc" id="uctsk___r_f_m_s_8h_html_a6951701a30b7a2c6c3c863395bf1b57f"><div class="ttname"><a href="uctsk___r_f_m_s_8h.html#a6951701a30b7a2c6c3c863395bf1b57f">UCTSK_RFMS_E_RUNSTATE</a></div><div class="ttdeci">UCTSK_RFMS_E_RUNSTATE</div><div class="ttdef"><b>Definition:</b> uctsk_RFMS.h:13</div></div>
+<div class="ttc" id="uctsk___r_f_m_s_8h_html_aa9842b304e6941c109fa95a9d3367a66"><div class="ttname"><a href="uctsk___r_f_m_s_8h.html#aa9842b304e6941c109fa95a9d3367a66">uctsk_Rfms_SetRunState</a></div><div class="ttdeci">void uctsk_Rfms_SetRunState(uint8_t state)</div><div class="ttdef"><b>Definition:</b> uctsk_RFMS.c:216</div></div>
+<div class="ttc" id="uctsk___r_f_m_s_8h_html_a7e256ee0a6f4ee62f9747ec6e516f151"><div class="ttname"><a href="uctsk___r_f_m_s_8h.html#a7e256ee0a6f4ee62f9747ec6e516f151">uctsk_Rfms_BufferLoop1Pop</a></div><div class="ttdeci">uint8_t uctsk_Rfms_BufferLoop1Pop(uint8_t *pbuf, uint16_t *plen)</div><div class="ttdef"><b>Definition:</b> uctsk_RFMS.c:3178</div></div>
+<div class="ttc" id="uctsk___r_f_m_s_8h_html_a06bf46631e367ef9499abd4e633cc1aa"><div class="ttname"><a href="uctsk___r_f_m_s_8h.html#a06bf46631e367ef9499abd4e633cc1aa">uctsk_Rfms_RunFileData_DebugTestOnOff</a></div><div class="ttdeci">void uctsk_Rfms_RunFileData_DebugTestOnOff(uint8_t OnOff)</div><div class="ttdef"><b>Definition:</b> uctsk_RFMS.c:587</div></div>
+<div class="ttc" id="struct_u_c_t_s_k___s___m_o_v_e___p_o_w_e_r_html_a9581f133868bf7ce7c021030f7b530d4"><div class="ttname"><a href="struct_u_c_t_s_k___s___m_o_v_e___p_o_w_e_r.html#a9581f133868bf7ce7c021030f7b530d4">UCTSK_S_MOVE_POWER::Data</a></div><div class="ttdeci">uint32_t Data[6]</div><div class="ttdef"><b>Definition:</b> uctsk_RFMS.h:41</div></div>
+<div class="ttc" id="uctsk___r_f_m_s_8h_html_a94d177b964933adc452f002e235ed4dba776d0b844cc86b84651eb4e0e205a281"><div class="ttname"><a href="uctsk___r_f_m_s_8h.html#a94d177b964933adc452f002e235ed4dba776d0b844cc86b84651eb4e0e205a281">UCTSK_RFMS_E_ERR_SIGNAL_HIGN</a></div><div class="ttdef"><b>Definition:</b> uctsk_RFMS.h:26</div></div>
+<div class="ttc" id="uctsk___r_f_m_s_8h_html_a50399a13ede43a4e9226acb7d36b4650"><div class="ttname"><a href="uctsk___r_f_m_s_8h.html#a50399a13ede43a4e9226acb7d36b4650">uctsk_Rfms_Power</a></div><div class="ttdeci">void uctsk_Rfms_Power(uint8_t OnOff)</div></div>
+<div class="ttc" id="uctsk___r_f_m_s_8h_html_aa645519acf1147dfe5f7f51c4cfca6c4"><div class="ttname"><a href="uctsk___r_f_m_s_8h.html#aa645519acf1147dfe5f7f51c4cfca6c4">Uctsk_Rfms_RxZeroCmtInfo</a></div><div class="ttdeci">uint16_t Uctsk_Rfms_RxZeroCmtInfo</div><div class="ttdef"><b>Definition:</b> uctsk_RFMS.c:73</div></div>
+<div class="ttc" id="uctsk___r_f_m_s_8h_html_aec42b0f8124eefd5c519a9e1f11312d9"><div class="ttname"><a href="uctsk___r_f_m_s_8h.html#aec42b0f8124eefd5c519a9e1f11312d9">uctsk_CurrentSleepLevel</a></div><div class="ttdeci">uint8_t uctsk_CurrentSleepLevel</div><div class="ttdef"><b>Definition:</b> uctsk_RFMS.c:89</div></div>
+<div class="ttc" id="uctsk___r_f_m_s_8h_html_a510303e8ea5ea703b0b3e64656e0a8b8"><div class="ttname"><a href="uctsk___r_f_m_s_8h.html#a510303e8ea5ea703b0b3e64656e0a8b8">uctsk_Rfms_ExtFlashReadSign</a></div><div class="ttdeci">uint8_t uctsk_Rfms_ExtFlashReadSign</div><div class="ttdef"><b>Definition:</b> uctsk_RFMS.c:98</div></div>
+<div class="ttc" id="uctsk___r_f_m_s_8h_html_a6951701a30b7a2c6c3c863395bf1b57fa3217195fd7237873437538ac0e6bb21a"><div class="ttname"><a href="uctsk___r_f_m_s_8h.html#a6951701a30b7a2c6c3c863395bf1b57fa3217195fd7237873437538ac0e6bb21a">UCTSK_RFMS_E_RUNSTATE_IDLE</a></div><div class="ttdef"><b>Definition:</b> uctsk_RFMS.h:15</div></div>
+<div class="ttc" id="uctsk___r_f_m_s_8h_html_aeb661bcb429333cdfb7927cb8b150dce"><div class="ttname"><a href="uctsk___r_f_m_s_8h.html#aeb661bcb429333cdfb7927cb8b150dce">uctsk_Rfms_MonitorRxNum</a></div><div class="ttdeci">uint32_t uctsk_Rfms_MonitorRxNum</div><div class="ttdef"><b>Definition:</b> uctsk_RFMS.c:86</div></div>
+<div class="ttc" id="uctsk___r_f_m_s_8h_html_a8d9bce0dac72db4ebd4bb29183690cdb"><div class="ttname"><a href="uctsk___r_f_m_s_8h.html#a8d9bce0dac72db4ebd4bb29183690cdb">uctsk_Rfms_Interpolation_Proc</a></div><div class="ttdeci">void uctsk_Rfms_Interpolation_Proc(uint8_t *source, uint8_t *parameter, uint8_t *destination, uint8_t length, uint8_t min, float coeff, uint8_t endMark)</div><div class="ttdef"><b>Definition:</b> uctsk_RFMS.c:2779</div></div>
+<div class="ttc" id="uctsk___r_f_m_s_8h_html_a12a0913b897ae29e8062f2a1b2450817"><div class="ttname"><a href="uctsk___r_f_m_s_8h.html#a12a0913b897ae29e8062f2a1b2450817">uctsk_Rfms_s_HeartRate</a></div><div class="ttdeci">MODULE_MEMORY_S_DAY_HEARTRATE uctsk_Rfms_s_HeartRate</div><div class="ttdef"><b>Definition:</b> uctsk_RFMS.c:95</div></div>
+<div class="ttc" id="uctsk___r_f_m_s_8h_html_aa7f473f8afab1371f3915c67a3487659"><div class="ttname"><a href="uctsk___r_f_m_s_8h.html#aa7f473f8afab1371f3915c67a3487659">App_RfmsTaskTxCreate</a></div><div class="ttdeci">void App_RfmsTaskTxCreate(void)</div><div class="ttdef"><b>Definition:</b> uctsk_RFMS.c:635</div></div>
+<div class="ttc" id="uctsk___r_f_m_s_8h_html_a6540f300ed9d7157880ab0c3845826a2"><div class="ttname"><a href="uctsk___r_f_m_s_8h.html#a6540f300ed9d7157880ab0c3845826a2">Uctsk_Rfms_RunFileData_DebugTest_Enable</a></div><div class="ttdeci">uint8_t Uctsk_Rfms_RunFileData_DebugTest_Enable</div><div class="ttdef"><b>Definition:</b> uctsk_RFMS.c:67</div></div>
+<div class="ttc" id="uctsk___r_f_m_s_8h_html_a94d177b964933adc452f002e235ed4dbac9083be45e7826f2665cd3ad2f5bae44"><div class="ttname"><a href="uctsk___r_f_m_s_8h.html#a94d177b964933adc452f002e235ed4dbac9083be45e7826f2665cd3ad2f5bae44">UCTSK_RFMS_E_ERR_RES2</a></div><div class="ttdef"><b>Definition:</b> uctsk_RFMS.h:24</div></div>
+<div class="ttc" id="uctsk___r_f_m_s_8h_html_a94d177b964933adc452f002e235ed4dba83b6c1a779563d169cb149c7cc9a2965"><div class="ttname"><a href="uctsk___r_f_m_s_8h.html#a94d177b964933adc452f002e235ed4dba83b6c1a779563d169cb149c7cc9a2965">UCTSK_RFMS_E_ERR_RES1</a></div><div class="ttdef"><b>Definition:</b> uctsk_RFMS.h:23</div></div>
+<div class="ttc" id="uctsk___r_f_m_s_8h_html_aad8c6150d6ae9f0252fa25fe82664964"><div class="ttname"><a href="uctsk___r_f_m_s_8h.html#aad8c6150d6ae9f0252fa25fe82664964">uctsk_Rfms_KeepBodyMove_GetFinalInfo</a></div><div class="ttdeci">uint8_t uctsk_Rfms_KeepBodyMove_GetFinalInfo(struct tm *p_tm, uint8_t *pOutbuf)</div><div class="ttdef"><b>Definition:</b> uctsk_RFMS.c:3281</div></div>
+<div class="ttc" id="uctsk___r_f_m_s_8h_html_a010e4b4380d4c34b46aef83fc69dc887"><div class="ttname"><a href="uctsk___r_f_m_s_8h.html#a010e4b4380d4c34b46aef83fc69dc887">uctsk_RfmsSetSleepLevelBeforeAlarm</a></div><div class="ttdeci">void uctsk_RfmsSetSleepLevelBeforeAlarm(void)</div><div class="ttdef"><b>Definition:</b> uctsk_RFMS.c:3095</div></div>
+<div class="ttc" id="uctsk___r_f_m_s_8h_html_a9367da785ff9237c504c6e04dee816fa"><div class="ttname"><a href="uctsk___r_f_m_s_8h.html#a9367da785ff9237c504c6e04dee816fa">uctsk_Rfms_RxNum</a></div><div class="ttdeci">uint32_t uctsk_Rfms_RxNum</div><div class="ttdef"><b>Definition:</b> uctsk_RFMS.c:85</div></div>
+<div class="ttc" id="uctsk___r_f_m_s_8h_html_ad6c3cff540cabd7c3572952a289cd8b4"><div class="ttname"><a href="uctsk___r_f_m_s_8h.html#ad6c3cff540cabd7c3572952a289cd8b4">uctsk_Rfms_NoBodyThresholdVTimerS</a></div><div class="ttdeci">uint32_t uctsk_Rfms_NoBodyThresholdVTimerS</div><div class="ttdef"><b>Definition:</b> uctsk_RFMS.c:103</div></div>
+<div class="ttc" id="uctsk___r_f_m_s_8h_html_a1f1f58f8962829fee58825e6f172628f"><div class="ttname"><a href="uctsk___r_f_m_s_8h.html#a1f1f58f8962829fee58825e6f172628f">UctskRfms_BufferLoopMaxErrCmt</a></div><div class="ttdeci">uint16_t UctskRfms_BufferLoopMaxErrCmt</div><div class="ttdef"><b>Definition:</b> uctsk_RFMS.c:45</div></div>
+<div class="ttc" id="uctsk___r_f_m_s_8h_html_a94d177b964933adc452f002e235ed4dbad1314ff2f971d5d2dea7f3cf96d12319"><div class="ttname"><a href="uctsk___r_f_m_s_8h.html#a94d177b964933adc452f002e235ed4dbad1314ff2f971d5d2dea7f3cf96d12319">UCTSK_RFMS_E_ERR_SIGNAL_NO</a></div><div class="ttdef"><b>Definition:</b> uctsk_RFMS.h:28</div></div>
+<div class="ttc" id="uctsk___r_f_m_s_8h_html_a6951701a30b7a2c6c3c863395bf1b57fa908cda5c48c28f4b6b0aec025986f98d"><div class="ttname"><a href="uctsk___r_f_m_s_8h.html#a6951701a30b7a2c6c3c863395bf1b57fa908cda5c48c28f4b6b0aec025986f98d">UCTSK_RFMS_E_RUNSTATE_STOP</a></div><div class="ttdef"><b>Definition:</b> uctsk_RFMS.h:19</div></div>
+<div class="ttc" id="struct_u_c_t_s_k___s___m_o_v_e___p_o_w_e_r_html"><div class="ttname"><a href="struct_u_c_t_s_k___s___m_o_v_e___p_o_w_e_r.html">UCTSK_S_MOVE_POWER</a></div><div class="ttdef"><b>Definition:</b> uctsk_RFMS.h:35</div></div>
+<div class="ttc" id="uctsk___r_f_m_s_8h_html_aa9f757cc791d503db15e2c9b331103ff"><div class="ttname"><a href="uctsk___r_f_m_s_8h.html#aa9f757cc791d503db15e2c9b331103ff">uctsk_Rfms_PowerOnOff</a></div><div class="ttdeci">void uctsk_Rfms_PowerOnOff(uint8_t OnOff)</div><div class="ttdef"><b>Definition:</b> uctsk_RFMS.c:333</div></div>
+<div class="ttc" id="uctsk___r_f_m_s_8h_html_a7b66d7dd32a00c85bc6d77f0b7a8843e"><div class="ttname"><a href="uctsk___r_f_m_s_8h.html#a7b66d7dd32a00c85bc6d77f0b7a8843e">uctsk_Rfms_WaveStream_DebugTestOnOff</a></div><div class="ttdeci">void uctsk_Rfms_WaveStream_DebugTestOnOff(uint8_t OnOff)</div><div class="ttdef"><b>Definition:</b> uctsk_RFMS.c:463</div></div>
+<div class="ttc" id="uctsk___r_f_m_s_8h_html_abc67e343bc2d3b063cccfdabc0fb9e39"><div class="ttname"><a href="uctsk___r_f_m_s_8h.html#abc67e343bc2d3b063cccfdabc0fb9e39">uctsk_Rfms_KeepBodyMoveIndex</a></div><div class="ttdeci">uint8_t uctsk_Rfms_KeepBodyMoveIndex(struct tm *p_tm, uint8_t *p_buf, uint8_t *index)</div><div class="ttdef"><b>Definition:</b> uctsk_RFMS.c:3188</div></div>
+<div class="ttc" id="uctsk___r_f_m_s_8h_html_a57298946b5977d078591d4e6b92cf5bd"><div class="ttname"><a href="uctsk___r_f_m_s_8h.html#a57298946b5977d078591d4e6b92cf5bd">uctsk_Rfms_s_BodyMove</a></div><div class="ttdeci">MODULE_MEMORY_S_DAY_BODYMOVE uctsk_Rfms_s_BodyMove</div><div class="ttdef"><b>Definition:</b> uctsk_RFMS.c:96</div></div>
+<div class="ttc" id="uctsk___r_f_m_s_8h_html_a94d177b964933adc452f002e235ed4db"><div class="ttname"><a href="uctsk___r_f_m_s_8h.html#a94d177b964933adc452f002e235ed4db">UCTSK_RFMS_E_ERR</a></div><div class="ttdeci">UCTSK_RFMS_E_ERR</div><div class="ttdef"><b>Definition:</b> uctsk_RFMS.h:21</div></div>
+<div class="ttc" id="uctsk___r_f_m_s_8h_html_a94772929239ce84703e12c0325265a98"><div class="ttname"><a href="uctsk___r_f_m_s_8h.html#a94772929239ce84703e12c0325265a98">uctsk_Rfms_FinalData_DebugTestOnOff</a></div><div class="ttdeci">void uctsk_Rfms_FinalData_DebugTestOnOff(uint8_t OnOff)</div><div class="ttdef"><b>Definition:</b> uctsk_RFMS.c:475</div></div>
+<div class="ttc" id="uctsk___r_f_m_s_8h_html_a7280690493f21f551ba31d3cf8c7ee50"><div class="ttname"><a href="uctsk___r_f_m_s_8h.html#a7280690493f21f551ba31d3cf8c7ee50">uctsk_Rfms_NoBodyThresholdValue</a></div><div class="ttdeci">uint32_t uctsk_Rfms_NoBodyThresholdValue</div><div class="ttdef"><b>Definition:</b> uctsk_RFMS.c:102</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Âà∂‰ΩúËÄÖ &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

@@ -1,0 +1,4 @@
+L 1 "..\..\User\USB-VCP\src\usb_app.c"
+N/* Includes ------------------------------------------------------------------*/ 
+C "..\..\User\USB-VCP\src\usb_app.c" 2 27 cannot open source input file "usbd_cdc_core.h": No such file or directory
+N#include "usbd_cdc_core.h"

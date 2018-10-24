@@ -1,0 +1,200 @@
+L 1 "..\..\Libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_spi.c"
+N/**
+N  ******************************************************************************
+N  * @file    stm32f4xx_spi.c
+N  * @author  MCD Application Team
+N  * @version V1.3.0
+N  * @date    08-November-2013
+N  * @brief   This file provides firmware functions to manage the following 
+N  *          functionalities of the Serial peripheral interface (SPI):
+N  *           + Initialization and Configuration
+N  *           + Data transfers functions
+N  *           + Hardware CRC Calculation
+N  *           + DMA transfers management
+N  *           + Interrupts and flags management 
+N  *           
+N@verbatim
+N
+N ===================================================================
+N                  ##### How to use this driver #####
+N ===================================================================
+N [..]
+N   (#) Enable peripheral clock using the following functions 
+N       RCC_APB2PeriphClockCmd(RCC_APB2Periph_SPI1, ENABLE) for SPI1
+N       RCC_APB1PeriphClockCmd(RCC_APB1Periph_SPI2, ENABLE) for SPI2
+N       RCC_APB1PeriphResetCmd(RCC_APB1Periph_SPI3, ENABLE) for SPI3
+N       RCC_APB1PeriphResetCmd(RCC_APB1Periph_SPI3, ENABLE) for SPI4
+N       RCC_APB1PeriphResetCmd(RCC_APB1Periph_SPI3, ENABLE) for SPI5
+N       RCC_APB1PeriphResetCmd(RCC_APB1Periph_SPI3, ENABLE) for SPI6.
+N  
+N   (#) Enable SCK, MOSI, MISO and NSS GPIO clocks using RCC_AHB1PeriphClockCmd()
+N       function. In I2S mode, if an external clock source is used then the I2S 
+N       CKIN pin GPIO clock should also be enabled.
+N  
+N   (#) Peripherals alternate function: 
+N       (++) Connect the pin to the desired peripherals' Alternate Function (AF) 
+N            using GPIO_PinAFConfig() function
+N       (++) Configure the desired pin in alternate function by: 
+N            GPIO_InitStruct->GPIO_Mode = GPIO_Mode_AF
+N       (++) Select the type, pull-up/pull-down and output speed via GPIO_PuPd, 
+N            GPIO_OType and GPIO_Speed members
+N       (++) Call GPIO_Init() function In I2S mode, if an external clock source is 
+N            used then the I2S CKIN pin should be also configured in Alternate 
+N            function Push-pull pull-up mode. 
+N          
+N   (#) Program the Polarity, Phase, First Data, Baud Rate Prescaler, Slave 
+N       Management, Peripheral Mode and CRC Polynomial values using the SPI_Init()
+N       function.
+N       In I2S mode, program the Mode, Standard, Data Format, MCLK Output, Audio 
+N       frequency and Polarity using I2S_Init() function. For I2S mode, make sure 
+N       that either:
+N       (++) I2S PLL is configured using the functions 
+N            RCC_I2SCLKConfig(RCC_I2S2CLKSource_PLLI2S), RCC_PLLI2SCmd(ENABLE) and 
+N            RCC_GetFlagStatus(RCC_FLAG_PLLI2SRDY); or 
+N       (++) External clock source is configured using the function 
+N            RCC_I2SCLKConfig(RCC_I2S2CLKSource_Ext) and after setting correctly 
+N            the define constant I2S_EXTERNAL_CLOCK_VAL in the stm32f4xx_conf.h file. 
+N  
+N   (#) Enable the NVIC and the corresponding interrupt using the function 
+N       SPI_ITConfig() if you need to use interrupt mode. 
+N  
+N   (#) When using the DMA mode 
+N       (++) Configure the DMA using DMA_Init() function
+N       (++) Active the needed channel Request using SPI_I2S_DMACmd() function
+N   
+N   (#) Enable the SPI using the SPI_Cmd() function or enable the I2S using
+N       I2S_Cmd().
+N   
+N   (#) Enable the DMA using the DMA_Cmd() function when using DMA mode. 
+N  
+N   (#) Optionally, you can enable/configure the following parameters without
+N       re-initialization (i.e there is no need to call again SPI_Init() function):
+N       (++) When bidirectional mode (SPI_Direction_1Line_Rx or SPI_Direction_1Line_Tx)
+N            is programmed as Data direction parameter using the SPI_Init() function
+N            it can be possible to switch between SPI_Direction_Tx or SPI_Direction_Rx
+N            using the SPI_BiDirectionalLineConfig() function.
+N       (++) When SPI_NSS_Soft is selected as Slave Select Management parameter 
+N            using the SPI_Init() function it can be possible to manage the 
+N            NSS internal signal using the SPI_NSSInternalSoftwareConfig() function.
+N       (++) Reconfigure the data size using the SPI_DataSizeConfig() function  
+N       (++) Enable or disable the SS output using the SPI_SSOutputCmd() function  
+N            
+N    (#) To use the CRC Hardware calculation feature refer to the Peripheral 
+N        CRC hardware Calculation subsection.
+N     
+N  
+N [..] It is possible to use SPI in I2S full duplex mode, in this case, each SPI 
+N      peripheral is able to manage sending and receiving data simultaneously
+N      using two data lines. Each SPI peripheral has an extended block called I2Sxext
+N      (ie. I2S2ext for SPI2 and I2S3ext for SPI3).
+N      The extension block is not a full SPI IP, it is used only as I2S slave to
+N      implement full duplex mode. The extension block uses the same clock sources
+N      as its master.          
+N      To configure I2S full duplex you have to:
+N              
+N      (#) Configure SPIx in I2S mode (I2S_Init() function) as described above. 
+N             
+N      (#) Call the I2S_FullDuplexConfig() function using the same strucutre passed to  
+N          I2S_Init() function.
+N              
+N      (#) Call I2S_Cmd() for SPIx then for its extended block.
+N            
+N      (#) To configure interrupts or DMA requests and to get/clear flag status, 
+N          use I2Sxext instance for the extension block.
+N               
+N [..] Functions that can be called with I2Sxext instances are: I2S_Cmd(), 
+N      I2S_FullDuplexConfig(), SPI_I2S_ReceiveData(), SPI_I2S_SendData(), 
+N      SPI_I2S_DMACmd(), SPI_I2S_ITConfig(), SPI_I2S_GetFlagStatus(), 
+N      SPI_I2S_ClearFlag(), SPI_I2S_GetITStatus() and SPI_I2S_ClearITPendingBit().
+N                   
+N      Example: To use SPI3 in Full duplex mode (SPI3 is Master Tx, I2S3ext is Slave Rx):
+N              
+N      RCC_APB1PeriphClockCmd(RCC_APB1Periph_SPI3, ENABLE);   
+N      I2S_StructInit(&I2SInitStruct);
+N      I2SInitStruct.Mode = I2S_Mode_MasterTx;     
+N      I2S_Init(SPI3, &I2SInitStruct);
+N      I2S_FullDuplexConfig(SPI3ext, &I2SInitStruct)
+N      I2S_Cmd(SPI3, ENABLE);
+N      I2S_Cmd(SPI3ext, ENABLE);
+N      ...
+N      while (SPI_I2S_GetFlagStatus(SPI2, SPI_FLAG_TXE) == RESET)
+N      {}
+N      SPI_I2S_SendData(SPI3, txdata[i]);
+N      ...  
+N      while (SPI_I2S_GetFlagStatus(I2S3ext, SPI_FLAG_RXNE) == RESET)
+N      {}
+N      rxdata[i] = SPI_I2S_ReceiveData(I2S3ext);
+N      ...          
+N                
+N [..]       
+N   (@) In I2S mode: if an external clock is used as source clock for the I2S,  
+N       then the define I2S_EXTERNAL_CLOCK_VAL in file stm32f4xx_conf.h should 
+N       be enabled and set to the value of the source clock frequency (in Hz).
+N   
+N   (@) In SPI mode: To use the SPI TI mode, call the function SPI_TIModeCmd() 
+N       just after calling the function SPI_Init().
+N  
+N@endverbatim  
+N  *                                  
+N  ******************************************************************************
+N  * @attention
+N  *
+N  * <h2><center>&copy; COPYRIGHT 2013 STMicroelectronics</center></h2>
+N  *
+N  * Licensed under MCD-ST Liberty SW License Agreement V2, (the "License");
+N  * You may not use this file except in compliance with the License.
+N  * You may obtain a copy of the License at:
+N  *
+N  *        http://www.st.com/software_license_agreement_liberty_v2
+N  *
+N  * Unless required by applicable law or agreed to in writing, software 
+N  * distributed under the License is distributed on an "AS IS" BASIS, 
+N  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+N  * See the License for the specific language governing permissions and
+N  * limitations under the License.
+N  *
+N  ******************************************************************************  
+N  */ 
+N
+N/* Includes ------------------------------------------------------------------*/
+N#include "stm32f4xx_spi.h"
+L 1 "..\..\Libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_spi.h" 1
+N/**
+N  ******************************************************************************
+N  * @file    stm32f4xx_spi.h
+N  * @author  MCD Application Team
+N  * @version V1.3.0
+N  * @date    08-November-2013
+N  * @brief   This file contains all the functions prototypes for the SPI 
+N  *          firmware library. 
+N  ******************************************************************************
+N  * @attention
+N  *
+N  * <h2><center>&copy; COPYRIGHT 2013 STMicroelectronics</center></h2>
+N  *
+N  * Licensed under MCD-ST Liberty SW License Agreement V2, (the "License");
+N  * You may not use this file except in compliance with the License.
+N  * You may obtain a copy of the License at:
+N  *
+N  *        http://www.st.com/software_license_agreement_liberty_v2
+N  *
+N  * Unless required by applicable law or agreed to in writing, software 
+N  * distributed under the License is distributed on an "AS IS" BASIS, 
+N  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+N  * See the License for the specific language governing permissions and
+N  * limitations under the License.
+N  *
+N  ******************************************************************************  
+N  */ 
+N
+N/* Define to prevent recursive inclusion -------------------------------------*/
+N#ifndef __STM32F4xx_SPI_H
+N#define __STM32F4xx_SPI_H
+N
+N#ifdef __cplusplus
+S extern "C" {
+N#endif
+N
+N/* Includes ------------------------------------------------------------------*/
+C "..\..\Libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_spi.h" 38 23 cannot open source input file "stm32f4xx.h": No such file or directory
+N#include "stm32f4xx.h"

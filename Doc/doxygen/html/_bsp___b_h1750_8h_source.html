@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>xsl: E:/XkapSourceCode/Xkap-Stm32/Xkap-Stm32/User/UserBsp/Bsp_BH1750.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">xsl
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">源码说明</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.13 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',false,false,'search.php','搜索');
+});
+</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_6d4e12d46ad8519ff7b80e874016d102.html">User</a></li><li class="navelem"><a class="el" href="dir_a31a870a1361c5173f8d637697bb576e.html">UserBsp</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">Bsp_BH1750.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_bsp___b_h1750_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="comment">//-------------------------------------------------------------------------------</span></div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#ifndef __BSP_BH1750_H</span></div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#define __BSP_BH1750_H</span></div><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment">//-------------------加载库函数------------------------------</span></div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="includes_8h.html">includes.h</a>&quot;</span></div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="comment">//-------------------接口宏定义(硬件相关)--------------------</span></div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="comment">//-------------------接口宏定义(硬件无关)--------------------</span></div><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="comment">// 器件地址</span></div><div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="_bsp___b_h1750_8h.html#a73ea127338e604d59a945d92b71f62d9">   38</a></span>&#160;<span class="preprocessor">#define BSP_BH1750_ADDR       0x46</span></div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="comment">// 寄存器地址</span></div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="comment">//-------------------接口函数--------------------------------</span></div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="keyword">extern</span> uint8_t <a class="code" href="_bsp___b_h1750_8h.html#a18e13f6cebc0460899ed4438ca9e462f">BspBH1750_Init</a>(<span class="keywordtype">void</span>);</div><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="keyword">extern</span> uint8_t <a class="code" href="_bsp___b_h1750_8h.html#affd7e13e15510dc5f1b112db832e9ff5">BspBH1750_Read</a>(uint16_t *p_ALS);</div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">void</span> <a class="code" href="_bsp___b_h1750_8h.html#a8668bfaaa9a6cac85e46096537ea352f">BspBH1750_DebugTest_100ms</a>(<span class="keywordtype">void</span>);</div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">void</span> <a class="code" href="_bsp___b_h1750_8h.html#a014a43387f57ae76db2b5bcc0e4fc84f">BspBH1750_DebugTestOnOff</a>(uint8_t OnOff);</div><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="comment">//-------------------------------------------------------------------------------</span></div><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="preprocessor">#endif</span></div><div class="ttc" id="_bsp___b_h1750_8h_html_a18e13f6cebc0460899ed4438ca9e462f"><div class="ttname"><a href="_bsp___b_h1750_8h.html#a18e13f6cebc0460899ed4438ca9e462f">BspBH1750_Init</a></div><div class="ttdeci">uint8_t BspBH1750_Init(void)</div><div class="ttdef"><b>Definition:</b> Bsp_BH1750.c:25</div></div>
+<div class="ttc" id="_bsp___b_h1750_8h_html_a014a43387f57ae76db2b5bcc0e4fc84f"><div class="ttname"><a href="_bsp___b_h1750_8h.html#a014a43387f57ae76db2b5bcc0e4fc84f">BspBH1750_DebugTestOnOff</a></div><div class="ttdeci">void BspBH1750_DebugTestOnOff(uint8_t OnOff)</div><div class="ttdef"><b>Definition:</b> Bsp_BH1750.c:85</div></div>
+<div class="ttc" id="_bsp___b_h1750_8h_html_a8668bfaaa9a6cac85e46096537ea352f"><div class="ttname"><a href="_bsp___b_h1750_8h.html#a8668bfaaa9a6cac85e46096537ea352f">BspBH1750_DebugTest_100ms</a></div><div class="ttdeci">void BspBH1750_DebugTest_100ms(void)</div><div class="ttdef"><b>Definition:</b> Bsp_BH1750.c:44</div></div>
+<div class="ttc" id="_bsp___b_h1750_8h_html_affd7e13e15510dc5f1b112db832e9ff5"><div class="ttname"><a href="_bsp___b_h1750_8h.html#affd7e13e15510dc5f1b112db832e9ff5">BspBH1750_Read</a></div><div class="ttdeci">uint8_t BspBH1750_Read(uint16_t *p_ALS)</div><div class="ttdef"><b>Definition:</b> Bsp_BH1750.c:29</div></div>
+<div class="ttc" id="includes_8h_html"><div class="ttname"><a href="includes_8h.html">includes.h</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

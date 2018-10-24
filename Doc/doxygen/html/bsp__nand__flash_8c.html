@@ -1,0 +1,529 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>xsl: E:/XkapSourceCode/Xkap-Stm32/Xkap-Stm32/User/UserBsp/Stm32F4/src/bsp_nand_flash.c 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">xsl
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">源码说明</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.13 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',false,false,'search.php','搜索');
+});
+</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_6d4e12d46ad8519ff7b80e874016d102.html">User</a></li><li class="navelem"><a class="el" href="dir_a31a870a1361c5173f8d637697bb576e.html">UserBsp</a></li><li class="navelem"><a class="el" href="dir_5e177c7cc544a0a92a21db9013c51e57.html">Stm32F4</a></li><li class="navelem"><a class="el" href="dir_d01952803e2c83a827a93ec31a7773bd.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#define-members">宏定义</a> &#124;
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle">
+<div class="title">bsp_nand_flash.c 文件参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;bsp.h&quot;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+宏定义</h2></td></tr>
+<tr class="memitem:a469213e995f4553ada9bd4ad3e70f308"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__nand__flash_8c.html#a469213e995f4553ada9bd4ad3e70f308">Bank2_NAND_ADDR</a>&#160;&#160;&#160;((uint32_t)0x70000000)</td></tr>
+<tr class="separator:a469213e995f4553ada9bd4ad3e70f308"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a98d9a8b0abdc0e9a7f379d89d4dfd580"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__nand__flash_8c.html#a98d9a8b0abdc0e9a7f379d89d4dfd580">Bank_NAND_ADDR</a>&#160;&#160;&#160;<a class="el" href="bsp__nand__flash_8c.html#a469213e995f4553ada9bd4ad3e70f308">Bank2_NAND_ADDR</a></td></tr>
+<tr class="separator:a98d9a8b0abdc0e9a7f379d89d4dfd580"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e00c6af58dc7fc866b4008f0ddf0a61"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__nand__flash_8c.html#a7e00c6af58dc7fc866b4008f0ddf0a61">NAND_CMD_AREA</a>&#160;&#160;&#160;*(__IO uint8_t *)(<a class="el" href="bsp__nand__flash_8c.html#a98d9a8b0abdc0e9a7f379d89d4dfd580">Bank_NAND_ADDR</a> | <a class="el" href="bsp__nand__flash_8h.html#a20b3da41944714f3fedf34f32652c816">CMD_AREA</a>)</td></tr>
+<tr class="separator:a7e00c6af58dc7fc866b4008f0ddf0a61"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd2cbc537e4f2d930097f16dea3159e6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__nand__flash_8c.html#afd2cbc537e4f2d930097f16dea3159e6">NAND_ADDR_AREA</a>&#160;&#160;&#160;*(__IO uint8_t *)(<a class="el" href="bsp__nand__flash_8c.html#a98d9a8b0abdc0e9a7f379d89d4dfd580">Bank_NAND_ADDR</a> | <a class="el" href="bsp__nand__flash_8h.html#a1a0ba21d2ba9b9a66bfbfc024ba3f438">ADDR_AREA</a>)</td></tr>
+<tr class="separator:afd2cbc537e4f2d930097f16dea3159e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad361134af0473a357dd1e948ad2c5535"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__nand__flash_8c.html#ad361134af0473a357dd1e948ad2c5535">NAND_DATA_AREA</a>&#160;&#160;&#160;*(__IO uint8_t *)(<a class="el" href="bsp__nand__flash_8c.html#a98d9a8b0abdc0e9a7f379d89d4dfd580">Bank_NAND_ADDR</a> | <a class="el" href="bsp__nand__flash_8h.html#a9d34f9a3b083b9181f0c7e6e0fdd53c3">DATA_AREA</a>)</td></tr>
+<tr class="separator:ad361134af0473a357dd1e948ad2c5535"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:a4541c5d52fc4a8a1febab1354b36d0fb"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__nand__flash_8c.html#a4541c5d52fc4a8a1febab1354b36d0fb">NAND_WriteToNewBlock</a> (uint32_t _ulPhyPageNo, uint8_t *_pWriteBuf, uint16_t _usOffset, uint16_t _usSize)</td></tr>
+<tr class="separator:a4541c5d52fc4a8a1febab1354b36d0fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0854338c13ec2d3cb547a4a104ca5699"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__nand__flash_8c.html#a0854338c13ec2d3cb547a4a104ca5699">NAND_ReadID</a> (void)</td></tr>
+<tr class="separator:a0854338c13ec2d3cb547a4a104ca5699"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace30b6d8374669a7e658f6281515634f"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__nand__flash_8c.html#ace30b6d8374669a7e658f6281515634f">NAND_Init</a> (void)</td></tr>
+<tr class="separator:ace30b6d8374669a7e658f6281515634f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afacde8cb3641e79b16ec8ea5632eedb8"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__nand__flash_8c.html#afacde8cb3641e79b16ec8ea5632eedb8">NAND_Write</a> (uint32_t _ulMemAddr, uint32_t *_pWriteBuf, uint16_t _usSize)</td></tr>
+<tr class="separator:afacde8cb3641e79b16ec8ea5632eedb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a147f7915dc00a58af61b100b6e4bb364"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__nand__flash_8c.html#a147f7915dc00a58af61b100b6e4bb364">NAND_Read</a> (uint32_t _ulMemAddr, uint32_t *_pReadBuf, uint16_t _usSize)</td></tr>
+<tr class="separator:a147f7915dc00a58af61b100b6e4bb364"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a38be67d8e97453a9c9ba0175ca96013f"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__nand__flash_8c.html#a38be67d8e97453a9c9ba0175ca96013f">NAND_WriteMultiSectors</a> (uint8_t *_pBuf, uint32_t _SectorNo, uint16_t _SectorSize, uint32_t _SectorCount)</td></tr>
+<tr class="separator:a38be67d8e97453a9c9ba0175ca96013f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a08f9570783cfaefc4be30653185a2389"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__nand__flash_8c.html#a08f9570783cfaefc4be30653185a2389">NAND_ReadMultiSectors</a> (uint8_t *_pBuf, uint32_t _SectorNo, uint16_t _SectorSize, uint32_t _SectorCount)</td></tr>
+<tr class="separator:a08f9570783cfaefc4be30653185a2389"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff6928192cb938d919aa182949496341"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__nand__flash_8c.html#aff6928192cb938d919aa182949496341">NAND_IsBadBlock</a> (uint32_t _ulBlockNo)</td></tr>
+<tr class="separator:aff6928192cb938d919aa182949496341"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c9c74f3694e897393cc0e0168edcd7b"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__nand__flash_8c.html#a8c9c74f3694e897393cc0e0168edcd7b">NAND_ScanBlock</a> (uint32_t _ulBlockNo)</td></tr>
+<tr class="separator:a8c9c74f3694e897393cc0e0168edcd7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a26a6cdcd34b40429867eac168e2a3127"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__nand__flash_8c.html#a26a6cdcd34b40429867eac168e2a3127">NAND_Format</a> (void)</td></tr>
+<tr class="separator:a26a6cdcd34b40429867eac168e2a3127"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a948e26d923c5a2aad3e93e8fad5d1da9"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__nand__flash_8c.html#a948e26d923c5a2aad3e93e8fad5d1da9">NAND_FormatCapacity</a> (void)</td></tr>
+<tr class="separator:a948e26d923c5a2aad3e93e8fad5d1da9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad914d943ebd764f4fda396ee7766e6c3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__nand__flash_8c.html#ad914d943ebd764f4fda396ee7766e6c3">NAND_DispBadBlockInfo</a> (void)</td></tr>
+<tr class="separator:ad914d943ebd764f4fda396ee7766e6c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a280f7e576927d9114e9faaa55cfa878f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__nand__flash_8c.html#a280f7e576927d9114e9faaa55cfa878f">NAND_DispPhyPageData</a> (uint32_t _uiPhyPageNo)</td></tr>
+<tr class="separator:a280f7e576927d9114e9faaa55cfa878f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a10f2ee3b412794c1a5f79a9f8806b09e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__nand__flash_8c.html#a10f2ee3b412794c1a5f79a9f8806b09e">NAND_DispLogicPageData</a> (uint32_t _uiLogicPageNo)</td></tr>
+<tr class="separator:a10f2ee3b412794c1a5f79a9f8806b09e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">宏定义说明</h2>
+<a id="a469213e995f4553ada9bd4ad3e70f308"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a469213e995f4553ada9bd4ad3e70f308">&#9670;&nbsp;</a></span>Bank2_NAND_ADDR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define Bank2_NAND_ADDR&#160;&#160;&#160;((uint32_t)0x70000000)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a98d9a8b0abdc0e9a7f379d89d4dfd580"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a98d9a8b0abdc0e9a7f379d89d4dfd580">&#9670;&nbsp;</a></span>Bank_NAND_ADDR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define Bank_NAND_ADDR&#160;&#160;&#160;<a class="el" href="bsp__nand__flash_8c.html#a469213e995f4553ada9bd4ad3e70f308">Bank2_NAND_ADDR</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afd2cbc537e4f2d930097f16dea3159e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afd2cbc537e4f2d930097f16dea3159e6">&#9670;&nbsp;</a></span>NAND_ADDR_AREA</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define NAND_ADDR_AREA&#160;&#160;&#160;*(__IO uint8_t *)(<a class="el" href="bsp__nand__flash_8c.html#a98d9a8b0abdc0e9a7f379d89d4dfd580">Bank_NAND_ADDR</a> | <a class="el" href="bsp__nand__flash_8h.html#a1a0ba21d2ba9b9a66bfbfc024ba3f438">ADDR_AREA</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7e00c6af58dc7fc866b4008f0ddf0a61"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e00c6af58dc7fc866b4008f0ddf0a61">&#9670;&nbsp;</a></span>NAND_CMD_AREA</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define NAND_CMD_AREA&#160;&#160;&#160;*(__IO uint8_t *)(<a class="el" href="bsp__nand__flash_8c.html#a98d9a8b0abdc0e9a7f379d89d4dfd580">Bank_NAND_ADDR</a> | <a class="el" href="bsp__nand__flash_8h.html#a20b3da41944714f3fedf34f32652c816">CMD_AREA</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad361134af0473a357dd1e948ad2c5535"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad361134af0473a357dd1e948ad2c5535">&#9670;&nbsp;</a></span>NAND_DATA_AREA</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define NAND_DATA_AREA&#160;&#160;&#160;*(__IO uint8_t *)(<a class="el" href="bsp__nand__flash_8c.html#a98d9a8b0abdc0e9a7f379d89d4dfd580">Bank_NAND_ADDR</a> | <a class="el" href="bsp__nand__flash_8h.html#a9d34f9a3b083b9181f0c7e6e0fdd53c3">DATA_AREA</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">函数说明</h2>
+<a id="ad914d943ebd764f4fda396ee7766e6c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad914d943ebd764f4fda396ee7766e6c3">&#9670;&nbsp;</a></span>NAND_DispBadBlockInfo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void NAND_DispBadBlockInfo </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a10f2ee3b412794c1a5f79a9f8806b09e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a10f2ee3b412794c1a5f79a9f8806b09e">&#9670;&nbsp;</a></span>NAND_DispLogicPageData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void NAND_DispLogicPageData </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>_uiLogicPageNo</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a280f7e576927d9114e9faaa55cfa878f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a280f7e576927d9114e9faaa55cfa878f">&#9670;&nbsp;</a></span>NAND_DispPhyPageData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void NAND_DispPhyPageData </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>_uiPhyPageNo</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a26a6cdcd34b40429867eac168e2a3127"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a26a6cdcd34b40429867eac168e2a3127">&#9670;&nbsp;</a></span>NAND_Format()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t NAND_Format </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a948e26d923c5a2aad3e93e8fad5d1da9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a948e26d923c5a2aad3e93e8fad5d1da9">&#9670;&nbsp;</a></span>NAND_FormatCapacity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t NAND_FormatCapacity </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ace30b6d8374669a7e658f6281515634f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace30b6d8374669a7e658f6281515634f">&#9670;&nbsp;</a></span>NAND_Init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t NAND_Init </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aff6928192cb938d919aa182949496341"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aff6928192cb938d919aa182949496341">&#9670;&nbsp;</a></span>NAND_IsBadBlock()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t NAND_IsBadBlock </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>_ulBlockNo</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a147f7915dc00a58af61b100b6e4bb364"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a147f7915dc00a58af61b100b6e4bb364">&#9670;&nbsp;</a></span>NAND_Read()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t NAND_Read </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>_ulMemAddr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t *&#160;</td>
+          <td class="paramname"><em>_pReadBuf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>_usSize</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0854338c13ec2d3cb547a4a104ca5699"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0854338c13ec2d3cb547a4a104ca5699">&#9670;&nbsp;</a></span>NAND_ReadID()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t NAND_ReadID </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a08f9570783cfaefc4be30653185a2389"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a08f9570783cfaefc4be30653185a2389">&#9670;&nbsp;</a></span>NAND_ReadMultiSectors()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t NAND_ReadMultiSectors </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>_pBuf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>_SectorNo</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>_SectorSize</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>_SectorCount</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8c9c74f3694e897393cc0e0168edcd7b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8c9c74f3694e897393cc0e0168edcd7b">&#9670;&nbsp;</a></span>NAND_ScanBlock()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t NAND_ScanBlock </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>_ulBlockNo</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afacde8cb3641e79b16ec8ea5632eedb8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afacde8cb3641e79b16ec8ea5632eedb8">&#9670;&nbsp;</a></span>NAND_Write()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t NAND_Write </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>_ulMemAddr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t *&#160;</td>
+          <td class="paramname"><em>_pWriteBuf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>_usSize</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a38be67d8e97453a9c9ba0175ca96013f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a38be67d8e97453a9c9ba0175ca96013f">&#9670;&nbsp;</a></span>NAND_WriteMultiSectors()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t NAND_WriteMultiSectors </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>_pBuf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>_SectorNo</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>_SectorSize</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>_SectorCount</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4541c5d52fc4a8a1febab1354b36d0fb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4541c5d52fc4a8a1febab1354b36d0fb">&#9670;&nbsp;</a></span>NAND_WriteToNewBlock()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t NAND_WriteToNewBlock </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>_ulPhyPageNo</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>_pWriteBuf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>_usOffset</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>_usSize</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

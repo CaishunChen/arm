@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>xsl: E:/XkapSourceCode/Xkap-Stm32/Xkap-Stm32/User/UserBsp/Bsp_IllumSensor.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">xsl
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">源码说明</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.13 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',false,false,'search.php','搜索');
+});
+</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_6d4e12d46ad8519ff7b80e874016d102.html">User</a></li><li class="navelem"><a class="el" href="dir_a31a870a1361c5173f8d637697bb576e.html">UserBsp</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">Bsp_IllumSensor.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_bsp___illum_sensor_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="comment">//-------------------------------------------------------------------------------</span></div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#ifndef __BSP_ILLUMSENSOR_H</span></div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#define __BSP_ILLUMSENSOR_H</span></div><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment">//-------------------加载库函数------------------------------</span></div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="includes_8h.html">includes.h</a>&gt;</span></div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="comment">//-------------------接口宏定义(硬件相关)--------------------</span></div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="comment">//时钟</span></div><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">#if   (defined(STM32F1))</span></div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">#define BSP_ILLUM_GPIO_RCC_ENABLE   RCC_APB2PeriphClockCmd( RCC_APB2Periph_GPIOB , ENABLE)</span></div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="preprocessor">#define BSP_ILLUM_IICX_RCC_ENABLE   RCC_APB1PeriphClockCmd(RCC_APB1Periph_I2C2,ENABLE)</span></div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">#elif (defined(STM32F4))</span></div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="preprocessor">#define BSP_ILLUM_GPIO_RCC_ENABLE   RCC_AHB1PeriphClockCmd( RCC_AHB1Periph_GPIOB , ENABLE)</span></div><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="preprocessor">#define BSP_ILLUM_IICX_RCC_ENABLE   RCC_APB1PeriphClockCmd(RCC_APB1Periph_I2C2,ENABLE)</span></div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="preprocessor">#endif</span></div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="comment">//端口</span></div><div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="_bsp___illum_sensor_8h.html#ac162493b6ebd7c833478a64d431eb837">   45</a></span>&#160;<span class="preprocessor">#define BSP_ILLUM_IIC_SDA_PORT      GPIOB</span></div><div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="_bsp___illum_sensor_8h.html#a7527a9f52e24032e0d5c188b1249b5c6">   46</a></span>&#160;<span class="preprocessor">#define BSP_ILLUM_IIC_SDA_PIN       GPIO_Pin_11</span></div><div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="_bsp___illum_sensor_8h.html#a50f332dd8ca78cc8e45be11665688647">   47</a></span>&#160;<span class="preprocessor">#define BSP_ILLUM_IIC_SCL_PORT      GPIOB</span></div><div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="_bsp___illum_sensor_8h.html#a54effb55646d5cc2ab09733f8c9b463b">   48</a></span>&#160;<span class="preprocessor">#define BSP_ILLUM_IIC_SCL_PIN       GPIO_Pin_10</span></div><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="preprocessor">#if   (defined(STM32F1))</span></div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="preprocessor">#define BSP_ILLUM_IIC_SDA_REMAP     </span></div><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="preprocessor">#define BSP_ILLUM_IIC_SCL_REMAP     </span></div><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="preprocessor">#elif (defined(STM32F4))</span></div><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="preprocessor">#define BSP_ILLUM_IIC_SDA_REMAP     GPIO_PinAFConfig(GPIOB,GPIO_PinSource10,GPIO_AF_I2C2);</span></div><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="preprocessor">#define BSP_ILLUM_IIC_SCL_REMAP     GPIO_PinAFConfig(GPIOB,GPIO_PinSource11,GPIO_AF_I2C2);</span></div><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="preprocessor">#endif</span></div><div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="comment">//IIC</span></div><div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="_bsp___illum_sensor_8h.html#ada8948575c0990ddf62adf59ce78ce41">   57</a></span>&#160;<span class="preprocessor">#define BSP_ILLUM_IICX  I2C2</span></div><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="comment">//-------------------接口宏定义(硬件无关)--------------------</span></div><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="comment">//-------------------接口函数--------------------------------</span></div><div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="keyword">extern</span> uint8_t <a class="code" href="_bsp___illum_sensor_8h.html#a9102174bc60ada7739712c6b1bd07d94">BspIllumSensor_Init</a>(<span class="keywordtype">void</span>);</div><div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="keyword">extern</span> uint8_t <a class="code" href="_bsp___illum_sensor_8h.html#a2259fcef2c95b396a78a78256f26299b">BspIllumSensor_Read</a>(uint32_t *pIllum);</div><div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">void</span> <a class="code" href="_bsp___illum_sensor_8h.html#aded3184081f9fdc58bad3a64e5d59e3c">BspIllumSensor_DebugTest_100ms</a>(<span class="keywordtype">void</span>);</div><div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">void</span> <a class="code" href="_bsp___illum_sensor_8h.html#ac0834b854c810430e67cd398f17b7182">BspIllumSensor_DebugTestOnOff</a>(uint8_t OnOff);</div><div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="comment">//-------------------------------------------------------------------------------</span></div><div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="preprocessor">#endif</span></div><div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div><div class="ttc" id="_bsp___illum_sensor_8h_html_a9102174bc60ada7739712c6b1bd07d94"><div class="ttname"><a href="_bsp___illum_sensor_8h.html#a9102174bc60ada7739712c6b1bd07d94">BspIllumSensor_Init</a></div><div class="ttdeci">uint8_t BspIllumSensor_Init(void)</div><div class="ttdef"><b>Definition:</b> Bsp_IllumSensor.c:61</div></div>
+<div class="ttc" id="_bsp___illum_sensor_8h_html_a2259fcef2c95b396a78a78256f26299b"><div class="ttname"><a href="_bsp___illum_sensor_8h.html#a2259fcef2c95b396a78a78256f26299b">BspIllumSensor_Read</a></div><div class="ttdeci">uint8_t BspIllumSensor_Read(uint32_t *pIllum)</div><div class="ttdef"><b>Definition:</b> Bsp_IllumSensor.c:326</div></div>
+<div class="ttc" id="_bsp___illum_sensor_8h_html_ac0834b854c810430e67cd398f17b7182"><div class="ttname"><a href="_bsp___illum_sensor_8h.html#ac0834b854c810430e67cd398f17b7182">BspIllumSensor_DebugTestOnOff</a></div><div class="ttdeci">void BspIllumSensor_DebugTestOnOff(uint8_t OnOff)</div><div class="ttdef"><b>Definition:</b> Bsp_IllumSensor.c:407</div></div>
+<div class="ttc" id="includes_8h_html"><div class="ttname"><a href="includes_8h.html">includes.h</a></div></div>
+<div class="ttc" id="_bsp___illum_sensor_8h_html_aded3184081f9fdc58bad3a64e5d59e3c"><div class="ttname"><a href="_bsp___illum_sensor_8h.html#aded3184081f9fdc58bad3a64e5d59e3c">BspIllumSensor_DebugTest_100ms</a></div><div class="ttdeci">void BspIllumSensor_DebugTest_100ms(void)</div><div class="ttdef"><b>Definition:</b> Bsp_IllumSensor.c:374</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

@@ -1,0 +1,288 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>xsl: E:/XkapSourceCode/Xkap-Stm32/Xkap-Stm32/User/UserTask/uctsk_RF.c 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">xsl
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">源码说明</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.13 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',false,false,'search.php','搜索');
+});
+</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_6d4e12d46ad8519ff7b80e874016d102.html">User</a></li><li class="navelem"><a class="el" href="dir_ba9e781c49be9d79c84eb9994eefebec.html">UserTask</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#define-members">宏定义</a> &#124;
+<a href="#func-members">函数</a> &#124;
+<a href="#var-members">变量</a>  </div>
+  <div class="headertitle">
+<div class="title">uctsk_RF.c 文件参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;<a class="el" href="includes_8h_source.html">includes.h</a>&gt;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+宏定义</h2></td></tr>
+<tr class="memitem:a80fe4fd33c5a8f4e48a0fc6ef25385ce"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___r_f_8c.html#a80fe4fd33c5a8f4e48a0fc6ef25385ce">USART3_DR_Base</a>&#160;&#160;&#160;0x40004804</td></tr>
+<tr class="separator:a80fe4fd33c5a8f4e48a0fc6ef25385ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a62f83b085049c0dac2d6b31a06983d19"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___r_f_8c.html#a62f83b085049c0dac2d6b31a06983d19">RF_USART</a>&#160;&#160;&#160;USART3</td></tr>
+<tr class="separator:a62f83b085049c0dac2d6b31a06983d19"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76b6e3014aa7cda906e80bd49b549c2a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___r_f_8c.html#a76b6e3014aa7cda906e80bd49b549c2a">RF_SET_H</a>&#160;&#160;&#160;GPIOB-&gt;BSRR = GPIO_Pin_12</td></tr>
+<tr class="separator:a76b6e3014aa7cda906e80bd49b549c2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac8418f6344b14303a3b0179ff38e88dc"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___r_f_8c.html#ac8418f6344b14303a3b0179ff38e88dc">RF_SET_L</a>&#160;&#160;&#160;GPIOB-&gt;BRR  = GPIO_Pin_12</td></tr>
+<tr class="separator:ac8418f6344b14303a3b0179ff38e88dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc7d0f8f30014a238a4fe062ec1fa86b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___r_f_8c.html#adc7d0f8f30014a238a4fe062ec1fa86b">RF_RESET_H</a>&#160;&#160;&#160;GPIOB-&gt;BSRR = GPIO_Pin_13</td></tr>
+<tr class="separator:adc7d0f8f30014a238a4fe062ec1fa86b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c1be6c3c5f2cc08cc02382bffe7e11a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___r_f_8c.html#a3c1be6c3c5f2cc08cc02382bffe7e11a">RF_RESET_L</a>&#160;&#160;&#160;GPIOB-&gt;BRR  = GPIO_Pin_13</td></tr>
+<tr class="separator:a3c1be6c3c5f2cc08cc02382bffe7e11a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa20288a4e77c60af59895b4feb813232"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___r_f_8c.html#aa20288a4e77c60af59895b4feb813232">RF_RBUF0_MAX</a>&#160;&#160;&#160;500</td></tr>
+<tr class="separator:aa20288a4e77c60af59895b4feb813232"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:a097378fd91ceac19beb2a565a66401e3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___r_f_8c.html#a097378fd91ceac19beb2a565a66401e3">App_RFTaskCreate</a> (void)</td></tr>
+<tr class="separator:a097378fd91ceac19beb2a565a66401e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+变量</h2></td></tr>
+<tr class="memitem:aa6c6f2f466e6ce2eb46e90a892fd153b"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___r_f_8c.html#aa6c6f2f466e6ce2eb46e90a892fd153b">RF_RBuf0</a> [<a class="el" href="uctsk___r_f_8c.html#aa20288a4e77c60af59895b4feb813232">RF_RBUF0_MAX</a>]</td></tr>
+<tr class="separator:aa6c6f2f466e6ce2eb46e90a892fd153b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa1914c3ded7dd5ece17f2672f8eac78"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___r_f_8c.html#afa1914c3ded7dd5ece17f2672f8eac78">RFRBufNewAddr</a></td></tr>
+<tr class="separator:afa1914c3ded7dd5ece17f2672f8eac78"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aacdefe4d792cc41c352d9595d13132ea"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___r_f_8c.html#aacdefe4d792cc41c352d9595d13132ea">RF_RBuf1</a> [10]</td></tr>
+<tr class="separator:aacdefe4d792cc41c352d9595d13132ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af3f9455ba140b7b7c0703dcd4ac01a45"><td class="memItemLeft" align="right" valign="top">struct tm&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___r_f_8c.html#af3f9455ba140b7b7c0703dcd4ac01a45">CurrentDate</a></td></tr>
+<tr class="separator:af3f9455ba140b7b7c0703dcd4ac01a45"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8bda4ca35f8e48b4a4fe1a03a40e526c"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___r_f_8c.html#a8bda4ca35f8e48b4a4fe1a03a40e526c">AD_value_mV</a></td></tr>
+<tr class="separator:a8bda4ca35f8e48b4a4fe1a03a40e526c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">宏定义说明</h2>
+<a id="aa20288a4e77c60af59895b4feb813232"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa20288a4e77c60af59895b4feb813232">&#9670;&nbsp;</a></span>RF_RBUF0_MAX</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RF_RBUF0_MAX&#160;&#160;&#160;500</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adc7d0f8f30014a238a4fe062ec1fa86b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adc7d0f8f30014a238a4fe062ec1fa86b">&#9670;&nbsp;</a></span>RF_RESET_H</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RF_RESET_H&#160;&#160;&#160;GPIOB-&gt;BSRR = GPIO_Pin_13</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3c1be6c3c5f2cc08cc02382bffe7e11a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c1be6c3c5f2cc08cc02382bffe7e11a">&#9670;&nbsp;</a></span>RF_RESET_L</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RF_RESET_L&#160;&#160;&#160;GPIOB-&gt;BRR  = GPIO_Pin_13</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a76b6e3014aa7cda906e80bd49b549c2a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a76b6e3014aa7cda906e80bd49b549c2a">&#9670;&nbsp;</a></span>RF_SET_H</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RF_SET_H&#160;&#160;&#160;GPIOB-&gt;BSRR = GPIO_Pin_12</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac8418f6344b14303a3b0179ff38e88dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac8418f6344b14303a3b0179ff38e88dc">&#9670;&nbsp;</a></span>RF_SET_L</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RF_SET_L&#160;&#160;&#160;GPIOB-&gt;BRR  = GPIO_Pin_12</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a62f83b085049c0dac2d6b31a06983d19"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a62f83b085049c0dac2d6b31a06983d19">&#9670;&nbsp;</a></span>RF_USART</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RF_USART&#160;&#160;&#160;USART3</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a80fe4fd33c5a8f4e48a0fc6ef25385ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a80fe4fd33c5a8f4e48a0fc6ef25385ce">&#9670;&nbsp;</a></span>USART3_DR_Base</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define USART3_DR_Base&#160;&#160;&#160;0x40004804</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">函数说明</h2>
+<a id="a097378fd91ceac19beb2a565a66401e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a097378fd91ceac19beb2a565a66401e3">&#9670;&nbsp;</a></span>App_RFTaskCreate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void App_RFTaskCreate </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">变量说明</h2>
+<a id="a8bda4ca35f8e48b4a4fe1a03a40e526c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8bda4ca35f8e48b4a4fe1a03a40e526c">&#9670;&nbsp;</a></span>AD_value_mV</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t AD_value_mV</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af3f9455ba140b7b7c0703dcd4ac01a45"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af3f9455ba140b7b7c0703dcd4ac01a45">&#9670;&nbsp;</a></span>CurrentDate</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct tm CurrentDate</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa6c6f2f466e6ce2eb46e90a892fd153b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa6c6f2f466e6ce2eb46e90a892fd153b">&#9670;&nbsp;</a></span>RF_RBuf0</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t RF_RBuf0[<a class="el" href="uctsk___r_f_8c.html#aa20288a4e77c60af59895b4feb813232">RF_RBUF0_MAX</a>]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aacdefe4d792cc41c352d9595d13132ea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aacdefe4d792cc41c352d9595d13132ea">&#9670;&nbsp;</a></span>RF_RBuf1</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t RF_RBuf1[10]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afa1914c3ded7dd5ece17f2672f8eac78"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afa1914c3ded7dd5ece17f2672f8eac78">&#9670;&nbsp;</a></span>RFRBufNewAddr</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t RFRBufNewAddr</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

@@ -1,0 +1,332 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>xsl: E:/XkapSourceCode/Xkap-Stm32/Xkap-Stm32/User/UserBsp/Stm32F4/src/bsp_uart_fifo.c 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">xsl
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">源码说明</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.13 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',false,false,'search.php','搜索');
+});
+</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_6d4e12d46ad8519ff7b80e874016d102.html">User</a></li><li class="navelem"><a class="el" href="dir_a31a870a1361c5173f8d637697bb576e.html">UserBsp</a></li><li class="navelem"><a class="el" href="dir_5e177c7cc544a0a92a21db9013c51e57.html">Stm32F4</a></li><li class="navelem"><a class="el" href="dir_d01952803e2c83a827a93ec31a7773bd.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle">
+<div class="title">bsp_uart_fifo.c 文件参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;bsp.h&quot;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:abe9b061c5d893ee24e3716fd3c2a4e3d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__uart__fifo_8c.html#abe9b061c5d893ee24e3716fd3c2a4e3d">bsp_InitUart</a> (void)</td></tr>
+<tr class="separator:abe9b061c5d893ee24e3716fd3c2a4e3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ea01c947da3e50d87b2d21e5fe1fd88"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_u_a_r_t___t.html">UART_T</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__uart__fifo_8c.html#a0ea01c947da3e50d87b2d21e5fe1fd88">ComToUart</a> (<a class="el" href="bsp__uart__fifo_8h.html#ad9867ef85f617d2f9876ab351e6e4cef">COM_PORT_E</a> _ucPort)</td></tr>
+<tr class="separator:a0ea01c947da3e50d87b2d21e5fe1fd88"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d204edff2b16f4b042da250297503d5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__uart__fifo_8c.html#a2d204edff2b16f4b042da250297503d5">comSendBuf</a> (<a class="el" href="bsp__uart__fifo_8h.html#ad9867ef85f617d2f9876ab351e6e4cef">COM_PORT_E</a> _ucPort, uint8_t *_ucaBuf, uint16_t _usLen)</td></tr>
+<tr class="separator:a2d204edff2b16f4b042da250297503d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0fffb5552ce61f42df956ef1477ca0a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__uart__fifo_8c.html#ac0fffb5552ce61f42df956ef1477ca0a">comSendChar</a> (<a class="el" href="bsp__uart__fifo_8h.html#ad9867ef85f617d2f9876ab351e6e4cef">COM_PORT_E</a> _ucPort, uint8_t _ucByte)</td></tr>
+<tr class="separator:ac0fffb5552ce61f42df956ef1477ca0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad65716bcc6f9d77281d75669cb8ccbd1"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__uart__fifo_8c.html#ad65716bcc6f9d77281d75669cb8ccbd1">comGetChar</a> (<a class="el" href="bsp__uart__fifo_8h.html#ad9867ef85f617d2f9876ab351e6e4cef">COM_PORT_E</a> _ucPort, uint8_t *_pByte)</td></tr>
+<tr class="separator:ad65716bcc6f9d77281d75669cb8ccbd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c5e9900316494a403bb03a106cf1694"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__uart__fifo_8c.html#a8c5e9900316494a403bb03a106cf1694">comClearTxFifo</a> (<a class="el" href="bsp__uart__fifo_8h.html#ad9867ef85f617d2f9876ab351e6e4cef">COM_PORT_E</a> _ucPort)</td></tr>
+<tr class="separator:a8c5e9900316494a403bb03a106cf1694"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab3091f3bbb28eac2e861272cce9fbb5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__uart__fifo_8c.html#aab3091f3bbb28eac2e861272cce9fbb5">comClearRxFifo</a> (<a class="el" href="bsp__uart__fifo_8h.html#ad9867ef85f617d2f9876ab351e6e4cef">COM_PORT_E</a> _ucPort)</td></tr>
+<tr class="separator:aab3091f3bbb28eac2e861272cce9fbb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af00469a6eb9e7672637712d5f871b280"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__uart__fifo_8c.html#af00469a6eb9e7672637712d5f871b280">USART3_SendBefor</a> (void)</td></tr>
+<tr class="separator:af00469a6eb9e7672637712d5f871b280"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0165f80113352a56e070989be15be013"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__uart__fifo_8c.html#a0165f80113352a56e070989be15be013">USART3_SendOver</a> (void)</td></tr>
+<tr class="separator:a0165f80113352a56e070989be15be013"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abac7707b6be5733e890091048fcb99a2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__uart__fifo_8c.html#abac7707b6be5733e890091048fcb99a2">fputc</a> (int <a class="el" href="main___iap_test_8c.html#a0523c05685d59544dca911cb6a3db77d">ch</a>, FILE *f)</td></tr>
+<tr class="separator:abac7707b6be5733e890091048fcb99a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c4fad5f95f4c5242c3ea25d791df6e5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__uart__fifo_8c.html#a2c4fad5f95f4c5242c3ea25d791df6e5">fgetc</a> (FILE *f)</td></tr>
+<tr class="separator:a2c4fad5f95f4c5242c3ea25d791df6e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">函数说明</h2>
+<a id="abe9b061c5d893ee24e3716fd3c2a4e3d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abe9b061c5d893ee24e3716fd3c2a4e3d">&#9670;&nbsp;</a></span>bsp_InitUart()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void bsp_InitUart </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aab3091f3bbb28eac2e861272cce9fbb5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aab3091f3bbb28eac2e861272cce9fbb5">&#9670;&nbsp;</a></span>comClearRxFifo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void comClearRxFifo </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="bsp__uart__fifo_8h.html#ad9867ef85f617d2f9876ab351e6e4cef">COM_PORT_E</a>&#160;</td>
+          <td class="paramname"><em>_ucPort</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8c5e9900316494a403bb03a106cf1694"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8c5e9900316494a403bb03a106cf1694">&#9670;&nbsp;</a></span>comClearTxFifo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void comClearTxFifo </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="bsp__uart__fifo_8h.html#ad9867ef85f617d2f9876ab351e6e4cef">COM_PORT_E</a>&#160;</td>
+          <td class="paramname"><em>_ucPort</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad65716bcc6f9d77281d75669cb8ccbd1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad65716bcc6f9d77281d75669cb8ccbd1">&#9670;&nbsp;</a></span>comGetChar()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t comGetChar </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="bsp__uart__fifo_8h.html#ad9867ef85f617d2f9876ab351e6e4cef">COM_PORT_E</a>&#160;</td>
+          <td class="paramname"><em>_ucPort</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>_pByte</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2d204edff2b16f4b042da250297503d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d204edff2b16f4b042da250297503d5">&#9670;&nbsp;</a></span>comSendBuf()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void comSendBuf </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="bsp__uart__fifo_8h.html#ad9867ef85f617d2f9876ab351e6e4cef">COM_PORT_E</a>&#160;</td>
+          <td class="paramname"><em>_ucPort</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>_ucaBuf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>_usLen</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac0fffb5552ce61f42df956ef1477ca0a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac0fffb5552ce61f42df956ef1477ca0a">&#9670;&nbsp;</a></span>comSendChar()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void comSendChar </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="bsp__uart__fifo_8h.html#ad9867ef85f617d2f9876ab351e6e4cef">COM_PORT_E</a>&#160;</td>
+          <td class="paramname"><em>_ucPort</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>_ucByte</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0ea01c947da3e50d87b2d21e5fe1fd88"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ea01c947da3e50d87b2d21e5fe1fd88">&#9670;&nbsp;</a></span>ComToUart()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_u_a_r_t___t.html">UART_T</a>* ComToUart </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="bsp__uart__fifo_8h.html#ad9867ef85f617d2f9876ab351e6e4cef">COM_PORT_E</a>&#160;</td>
+          <td class="paramname"><em>_ucPort</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2c4fad5f95f4c5242c3ea25d791df6e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2c4fad5f95f4c5242c3ea25d791df6e5">&#9670;&nbsp;</a></span>fgetc()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int fgetc </td>
+          <td>(</td>
+          <td class="paramtype">FILE *&#160;</td>
+          <td class="paramname"><em>f</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abac7707b6be5733e890091048fcb99a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abac7707b6be5733e890091048fcb99a2">&#9670;&nbsp;</a></span>fputc()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int fputc </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>ch</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">FILE *&#160;</td>
+          <td class="paramname"><em>f</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af00469a6eb9e7672637712d5f871b280"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af00469a6eb9e7672637712d5f871b280">&#9670;&nbsp;</a></span>USART3_SendBefor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void USART3_SendBefor </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0165f80113352a56e070989be15be013"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0165f80113352a56e070989be15be013">&#9670;&nbsp;</a></span>USART3_SendOver()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void USART3_SendOver </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

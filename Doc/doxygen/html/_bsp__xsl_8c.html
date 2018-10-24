@@ -1,0 +1,410 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>xsl: E:/XkapSourceCode/Xkap-Stm32/Xkap-Stm32/User/UserBsp/Bsp_xsl.c 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">xsl
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">源码说明</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.13 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',false,false,'search.php','搜索');
+});
+</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_6d4e12d46ad8519ff7b80e874016d102.html">User</a></li><li class="navelem"><a class="el" href="dir_a31a870a1361c5173f8d637697bb576e.html">UserBsp</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#define-members">宏定义</a> &#124;
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle">
+<div class="title">Bsp_xsl.c 文件参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;<a class="el" href="includes_8h_source.html">includes.h</a>&gt;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+宏定义</h2></td></tr>
+<tr class="memitem:affee8d751f910c24b6136e62af372cd7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_bsp__xsl_8c.html#affee8d751f910c24b6136e62af372cd7">BSP_REG_DEM_CR</a>&#160;&#160;&#160;(*(CPU_REG32 *)0xE000EDFC)</td></tr>
+<tr class="separator:affee8d751f910c24b6136e62af372cd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad50806e308b38c3b6e2aeebe0b1a61b9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_bsp__xsl_8c.html#ad50806e308b38c3b6e2aeebe0b1a61b9">BSP_REG_DWT_CR</a>&#160;&#160;&#160;(*(CPU_REG32 *)0xE0001000)</td></tr>
+<tr class="separator:ad50806e308b38c3b6e2aeebe0b1a61b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4fc6f4bc1a664a1e6c9a5817bd1a795f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_bsp__xsl_8c.html#a4fc6f4bc1a664a1e6c9a5817bd1a795f">BSP_REG_DWT_CYCCNT</a>&#160;&#160;&#160;(*(CPU_REG32 *)0xE0001004)</td></tr>
+<tr class="separator:a4fc6f4bc1a664a1e6c9a5817bd1a795f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56ecde096bda893ab04e9b48e2aeb0dc"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_bsp__xsl_8c.html#a56ecde096bda893ab04e9b48e2aeb0dc">BSP_REG_DBGMCU_CR</a>&#160;&#160;&#160;(*(CPU_REG32 *)0xE0042004)</td></tr>
+<tr class="separator:a56ecde096bda893ab04e9b48e2aeb0dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a90962f2f4ebb05bda81d8ea26616899d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_bsp__xsl_8c.html#a90962f2f4ebb05bda81d8ea26616899d">BSP_DBGMCU_CR_TRACE_IOEN_MASK</a>&#160;&#160;&#160;0x10</td></tr>
+<tr class="separator:a90962f2f4ebb05bda81d8ea26616899d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8871c46bff4714bc81bb2f67fb6ffc99"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_bsp__xsl_8c.html#a8871c46bff4714bc81bb2f67fb6ffc99">BSP_DBGMCU_CR_TRACE_MODE_ASYNC</a>&#160;&#160;&#160;0x00</td></tr>
+<tr class="separator:a8871c46bff4714bc81bb2f67fb6ffc99"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7049054bfbe98ae8d736b18a5a12006f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_bsp__xsl_8c.html#a7049054bfbe98ae8d736b18a5a12006f">BSP_DBGMCU_CR_TRACE_MODE_SYNC_01</a>&#160;&#160;&#160;0x40</td></tr>
+<tr class="separator:a7049054bfbe98ae8d736b18a5a12006f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b7650f5de51ad5799cf78c844952363"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_bsp__xsl_8c.html#a3b7650f5de51ad5799cf78c844952363">BSP_DBGMCU_CR_TRACE_MODE_SYNC_02</a>&#160;&#160;&#160;0x80</td></tr>
+<tr class="separator:a3b7650f5de51ad5799cf78c844952363"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab859c8fbe3f4628523ff2f0e598541f9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_bsp__xsl_8c.html#ab859c8fbe3f4628523ff2f0e598541f9">BSP_DBGMCU_CR_TRACE_MODE_SYNC_04</a>&#160;&#160;&#160;0xC0</td></tr>
+<tr class="separator:ab859c8fbe3f4628523ff2f0e598541f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a96bb8c5e4f7b00f6a3476bb1c1eed413"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_bsp__xsl_8c.html#a96bb8c5e4f7b00f6a3476bb1c1eed413">BSP_DBGMCU_CR_TRACE_MODE_MASK</a>&#160;&#160;&#160;0xC0</td></tr>
+<tr class="separator:a96bb8c5e4f7b00f6a3476bb1c1eed413"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f833c62bd6d6d387e7358130dbba3d8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_bsp__xsl_8c.html#a4f833c62bd6d6d387e7358130dbba3d8">BSP_BIT_DEM_CR_TRCENA</a>&#160;&#160;&#160;DEF_BIT_24</td></tr>
+<tr class="separator:a4f833c62bd6d6d387e7358130dbba3d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac8f1462367e1aeaa50d27af6d6db6016"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_bsp__xsl_8c.html#ac8f1462367e1aeaa50d27af6d6db6016">BSP_BIT_DWT_CR_CYCCNTENA</a>&#160;&#160;&#160;DEF_BIT_00</td></tr>
+<tr class="separator:ac8f1462367e1aeaa50d27af6d6db6016"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:a236d74bdadb63db2036b99f54fc84698"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_bsp__xsl_8c.html#a236d74bdadb63db2036b99f54fc84698">bsp_Init</a> (void)</td></tr>
+<tr class="separator:a236d74bdadb63db2036b99f54fc84698"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af89e82a6407b3e32de3a89c5b8f3580e"><td class="memItemLeft" align="right" valign="top">CPU_INT32U&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_bsp__xsl_8c.html#af89e82a6407b3e32de3a89c5b8f3580e">BSP_CPU_ClkFreq</a> (void)</td></tr>
+<tr class="separator:af89e82a6407b3e32de3a89c5b8f3580e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa820862f527e5cb2290b5d495bf014eb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_bsp__xsl_8c.html#aa820862f527e5cb2290b5d495bf014eb">BSP_Tick_Init</a> (void)</td></tr>
+<tr class="separator:aa820862f527e5cb2290b5d495bf014eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5fa439a640894915da7405c1f0dccb39"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_bsp__xsl_8c.html#a5fa439a640894915da7405c1f0dccb39">CPU_TS_TmrInit</a> (void)</td></tr>
+<tr class="separator:a5fa439a640894915da7405c1f0dccb39"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f48615b4c55a7a02531c1c727bcfd3c"><td class="memItemLeft" align="right" valign="top">CPU_TS_TMR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_bsp__xsl_8c.html#a0f48615b4c55a7a02531c1c727bcfd3c">CPU_TS_TmrRd</a> (void)</td></tr>
+<tr class="separator:a0f48615b4c55a7a02531c1c727bcfd3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3efbebf8d6447199f3dcb0e05b55d939"><td class="memItemLeft" align="right" valign="top">CPU_INT64U&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_bsp__xsl_8c.html#a3efbebf8d6447199f3dcb0e05b55d939">CPU_TS32_to_uSec</a> (CPU_TS32 ts_cnts)</td></tr>
+<tr class="separator:a3efbebf8d6447199f3dcb0e05b55d939"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad9ddc93098fa17b3667896393f812680"><td class="memItemLeft" align="right" valign="top">CPU_INT64U&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_bsp__xsl_8c.html#ad9ddc93098fa17b3667896393f812680">CPU_TS64_to_uSec</a> (CPU_TS64 ts_cnts)</td></tr>
+<tr class="separator:ad9ddc93098fa17b3667896393f812680"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><dl class="section author"><dt>作者</dt><dd>徐松亮 许红宁(<a href="#" onclick="location.href='mai'+'lto:'+'538'+'76'+'03@'+'qq'+'.co'+'m'; return false;">53876<span style="display: none;">.nosp@m.</span>03@q<span style="display: none;">.nosp@m.</span>q.com</a>) </dd></dl>
+<dl class="section version"><dt>版本</dt><dd>V1.0.0 </dd></dl>
+<dl class="section date"><dt>日期</dt><dd>2018/01/01</dd></dl>
+<dl class="section attention"><dt>注意</dt><dd></dd></dl>
+<p>GNU General Public License (GPL)</p>
+<h2><center>&copy; COPYRIGHT 2017 XSLXHN</center></h2>
+</div><h2 class="groupheader">宏定义说明</h2>
+<a id="a4f833c62bd6d6d387e7358130dbba3d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4f833c62bd6d6d387e7358130dbba3d8">&#9670;&nbsp;</a></span>BSP_BIT_DEM_CR_TRCENA</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BSP_BIT_DEM_CR_TRCENA&#160;&#160;&#160;DEF_BIT_24</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac8f1462367e1aeaa50d27af6d6db6016"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac8f1462367e1aeaa50d27af6d6db6016">&#9670;&nbsp;</a></span>BSP_BIT_DWT_CR_CYCCNTENA</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BSP_BIT_DWT_CR_CYCCNTENA&#160;&#160;&#160;DEF_BIT_00</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a90962f2f4ebb05bda81d8ea26616899d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a90962f2f4ebb05bda81d8ea26616899d">&#9670;&nbsp;</a></span>BSP_DBGMCU_CR_TRACE_IOEN_MASK</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BSP_DBGMCU_CR_TRACE_IOEN_MASK&#160;&#160;&#160;0x10</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8871c46bff4714bc81bb2f67fb6ffc99"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8871c46bff4714bc81bb2f67fb6ffc99">&#9670;&nbsp;</a></span>BSP_DBGMCU_CR_TRACE_MODE_ASYNC</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BSP_DBGMCU_CR_TRACE_MODE_ASYNC&#160;&#160;&#160;0x00</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a96bb8c5e4f7b00f6a3476bb1c1eed413"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a96bb8c5e4f7b00f6a3476bb1c1eed413">&#9670;&nbsp;</a></span>BSP_DBGMCU_CR_TRACE_MODE_MASK</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BSP_DBGMCU_CR_TRACE_MODE_MASK&#160;&#160;&#160;0xC0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7049054bfbe98ae8d736b18a5a12006f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7049054bfbe98ae8d736b18a5a12006f">&#9670;&nbsp;</a></span>BSP_DBGMCU_CR_TRACE_MODE_SYNC_01</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BSP_DBGMCU_CR_TRACE_MODE_SYNC_01&#160;&#160;&#160;0x40</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3b7650f5de51ad5799cf78c844952363"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b7650f5de51ad5799cf78c844952363">&#9670;&nbsp;</a></span>BSP_DBGMCU_CR_TRACE_MODE_SYNC_02</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BSP_DBGMCU_CR_TRACE_MODE_SYNC_02&#160;&#160;&#160;0x80</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab859c8fbe3f4628523ff2f0e598541f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab859c8fbe3f4628523ff2f0e598541f9">&#9670;&nbsp;</a></span>BSP_DBGMCU_CR_TRACE_MODE_SYNC_04</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BSP_DBGMCU_CR_TRACE_MODE_SYNC_04&#160;&#160;&#160;0xC0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a56ecde096bda893ab04e9b48e2aeb0dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a56ecde096bda893ab04e9b48e2aeb0dc">&#9670;&nbsp;</a></span>BSP_REG_DBGMCU_CR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BSP_REG_DBGMCU_CR&#160;&#160;&#160;(*(CPU_REG32 *)0xE0042004)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="affee8d751f910c24b6136e62af372cd7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#affee8d751f910c24b6136e62af372cd7">&#9670;&nbsp;</a></span>BSP_REG_DEM_CR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BSP_REG_DEM_CR&#160;&#160;&#160;(*(CPU_REG32 *)0xE000EDFC)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad50806e308b38c3b6e2aeebe0b1a61b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad50806e308b38c3b6e2aeebe0b1a61b9">&#9670;&nbsp;</a></span>BSP_REG_DWT_CR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BSP_REG_DWT_CR&#160;&#160;&#160;(*(CPU_REG32 *)0xE0001000)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4fc6f4bc1a664a1e6c9a5817bd1a795f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4fc6f4bc1a664a1e6c9a5817bd1a795f">&#9670;&nbsp;</a></span>BSP_REG_DWT_CYCCNT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BSP_REG_DWT_CYCCNT&#160;&#160;&#160;(*(CPU_REG32 *)0xE0001004)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">函数说明</h2>
+<a id="af89e82a6407b3e32de3a89c5b8f3580e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af89e82a6407b3e32de3a89c5b8f3580e">&#9670;&nbsp;</a></span>BSP_CPU_ClkFreq()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CPU_INT32U BSP_CPU_ClkFreq </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a236d74bdadb63db2036b99f54fc84698"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a236d74bdadb63db2036b99f54fc84698">&#9670;&nbsp;</a></span>bsp_Init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void bsp_Init </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa820862f527e5cb2290b5d495bf014eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa820862f527e5cb2290b5d495bf014eb">&#9670;&nbsp;</a></span>BSP_Tick_Init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BSP_Tick_Init </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3efbebf8d6447199f3dcb0e05b55d939"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3efbebf8d6447199f3dcb0e05b55d939">&#9670;&nbsp;</a></span>CPU_TS32_to_uSec()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CPU_INT64U CPU_TS32_to_uSec </td>
+          <td>(</td>
+          <td class="paramtype">CPU_TS32&#160;</td>
+          <td class="paramname"><em>ts_cnts</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad9ddc93098fa17b3667896393f812680"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad9ddc93098fa17b3667896393f812680">&#9670;&nbsp;</a></span>CPU_TS64_to_uSec()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CPU_INT64U CPU_TS64_to_uSec </td>
+          <td>(</td>
+          <td class="paramtype">CPU_TS64&#160;</td>
+          <td class="paramname"><em>ts_cnts</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5fa439a640894915da7405c1f0dccb39"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5fa439a640894915da7405c1f0dccb39">&#9670;&nbsp;</a></span>CPU_TS_TmrInit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CPU_TS_TmrInit </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0f48615b4c55a7a02531c1c727bcfd3c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f48615b4c55a7a02531c1c727bcfd3c">&#9670;&nbsp;</a></span>CPU_TS_TmrRd()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CPU_TS_TMR CPU_TS_TmrRd </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

@@ -1,0 +1,36 @@
+L 1 "..\..\User\uCOS-III\uCOS-III\Source\os_pend_multi.c"
+N/*
+N************************************************************************************************************************
+N*                                                      uC/OS-III
+N*                                                 The Real-Time Kernel
+N*
+N*                                  (c) Copyright 2009-2012; Micrium, Inc.; Weston, FL
+N*                           All rights reserved.  Protected by international copyright laws.
+N*
+N*                                               PEND ON MULTIPLE OBJECTS
+N*
+N* File    : OS_PEND_MULTI.C
+N* By      : JJL
+N* Version : V3.03.01
+N*
+N* LICENSING TERMS:
+N* ---------------
+N*           uC/OS-III is provided in source form for FREE short-term evaluation, for educational use or 
+N*           for peaceful research.  If you plan or intend to use uC/OS-III in a commercial application/
+N*           product then, you need to contact Micrium to properly license uC/OS-III for its use in your 
+N*           application/product.   We provide ALL the source code for your convenience and to help you 
+N*           experience uC/OS-III.  The fact that the source is provided does NOT mean that you can use 
+N*           it commercially without paying a licensing fee.
+N*
+N*           Knowledge of the source code may NOT be used to develop a similar product.
+N*
+N*           Please help us continue to provide the embedded community with the finest software available.
+N*           Your honesty is greatly appreciated.
+N*
+N*           You can contact us at www.micrium.com, or by phone at +1 (954) 217-2036.
+N************************************************************************************************************************
+N*/
+N
+N#define  MICRIUM_SOURCE
+C "..\..\User\uCOS-III\uCOS-III\Source\os_pend_multi.c" 34 16 cannot open source input file "os.h": No such file or directory
+N#include <os.h>

@@ -1,0 +1,290 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>xsl: E:/XkapSourceCode/Xkap-Stm32/Xkap-Stm32/User/UserModule/Module_RBTree.c 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">xsl
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">源码说明</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.13 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',false,false,'search.php','搜索');
+});
+</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_6d4e12d46ad8519ff7b80e874016d102.html">User</a></li><li class="navelem"><a class="el" href="dir_eb2397560f3fdc052e61ca3a27327d74.html">UserModule</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">结构体</a> &#124;
+<a href="#typedef-members">类型定义</a> &#124;
+<a href="#enum-members">枚举</a> &#124;
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle">
+<div class="title">Module_RBTree.c 文件参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &lt;string.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="_module___r_b_tree_8h_source.html">Module_RBTree.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_count_8h_source.html">Count.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="uctsk___debug_8h_source.html">uctsk_Debug.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_mem_manager_8h_source.html">MemManager.h</a>&quot;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+结构体</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrb__node__t.html">rb_node_t</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+类型定义</h2></td></tr>
+<tr class="memitem:a99c5bd20241a4a2708237037a1857062"><td class="memItemLeft" align="right" valign="top">typedef int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_module___r_b_tree_8c.html#a99c5bd20241a4a2708237037a1857062">key_t</a></td></tr>
+<tr class="separator:a99c5bd20241a4a2708237037a1857062"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9854bd2bf1d220fd8e003bb2eb05be0d"><td class="memItemLeft" align="right" valign="top">typedef int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_module___r_b_tree_8c.html#a9854bd2bf1d220fd8e003bb2eb05be0d">data_t</a></td></tr>
+<tr class="separator:a9854bd2bf1d220fd8e003bb2eb05be0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f097841c51f4e2f267980079c16fae5"><td class="memItemLeft" align="right" valign="top">typedef enum <a class="el" href="_module___r_b_tree_8c.html#a0a8ef1b5e1941b7257e545cc33405ff1">color_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_module___r_b_tree_8c.html#a5f097841c51f4e2f267980079c16fae5">color_t</a></td></tr>
+<tr class="separator:a5f097841c51f4e2f267980079c16fae5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48ae57edf4e37a4a826bd0fe7ad58707"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structrb__node__t.html">rb_node_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_module___r_b_tree_8c.html#a48ae57edf4e37a4a826bd0fe7ad58707">rb_node_t</a></td></tr>
+<tr class="separator:a48ae57edf4e37a4a826bd0fe7ad58707"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+枚举</h2></td></tr>
+<tr class="memitem:a0a8ef1b5e1941b7257e545cc33405ff1"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_module___r_b_tree_8c.html#a0a8ef1b5e1941b7257e545cc33405ff1">color_t</a> { <a class="el" href="_module___r_b_tree_8c.html#a0a8ef1b5e1941b7257e545cc33405ff1af80f9a890089d211842d59625e561f88">RED</a> =0, 
+<a class="el" href="_module___r_b_tree_8c.html#a0a8ef1b5e1941b7257e545cc33405ff1af77fb67151d0c18d397069ad8c271ba3">BLACK</a> =1
+ }</td></tr>
+<tr class="separator:a0a8ef1b5e1941b7257e545cc33405ff1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:a34220ffb7956c9f296bf955900751a36"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structrb__node__t.html">rb_node_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_module___r_b_tree_8c.html#a34220ffb7956c9f296bf955900751a36">rb_insert</a> (<a class="el" href="_module___r_b_tree_8c.html#a99c5bd20241a4a2708237037a1857062">key_t</a> key, <a class="el" href="_module___r_b_tree_8c.html#a9854bd2bf1d220fd8e003bb2eb05be0d">data_t</a> data, <a class="el" href="structrb__node__t.html">rb_node_t</a> *root)</td></tr>
+<tr class="separator:a34220ffb7956c9f296bf955900751a36"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a293c47a2fa9ff5a3a5938eaebcf1cd40"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structrb__node__t.html">rb_node_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_module___r_b_tree_8c.html#a293c47a2fa9ff5a3a5938eaebcf1cd40">rb_search</a> (<a class="el" href="_module___r_b_tree_8c.html#a99c5bd20241a4a2708237037a1857062">key_t</a> key, <a class="el" href="structrb__node__t.html">rb_node_t</a> *root)</td></tr>
+<tr class="separator:a293c47a2fa9ff5a3a5938eaebcf1cd40"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af19cc21f4785cb654c5d9db8ab356036"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structrb__node__t.html">rb_node_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_module___r_b_tree_8c.html#af19cc21f4785cb654c5d9db8ab356036">rb_erase</a> (<a class="el" href="_module___r_b_tree_8c.html#a99c5bd20241a4a2708237037a1857062">key_t</a> key, <a class="el" href="structrb__node__t.html">rb_node_t</a> *root)</td></tr>
+<tr class="separator:af19cc21f4785cb654c5d9db8ab356036"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa6dedda67202c82470b35389f563b205"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_module___r_b_tree_8c.html#aa6dedda67202c82470b35389f563b205">ModuleRBTree_DebugTestOnOff</a> (uint8_t OnOff)</td></tr>
+<tr class="separator:aa6dedda67202c82470b35389f563b205"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">类型定义说明</h2>
+<a id="a5f097841c51f4e2f267980079c16fae5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f097841c51f4e2f267980079c16fae5">&#9670;&nbsp;</a></span>color_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef enum <a class="el" href="_module___r_b_tree_8c.html#a0a8ef1b5e1941b7257e545cc33405ff1">color_t</a>  <a class="el" href="_module___r_b_tree_8c.html#a0a8ef1b5e1941b7257e545cc33405ff1">color_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9854bd2bf1d220fd8e003bb2eb05be0d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9854bd2bf1d220fd8e003bb2eb05be0d">&#9670;&nbsp;</a></span>data_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef int <a class="el" href="_module___r_b_tree_8c.html#a9854bd2bf1d220fd8e003bb2eb05be0d">data_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a99c5bd20241a4a2708237037a1857062"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a99c5bd20241a4a2708237037a1857062">&#9670;&nbsp;</a></span>key_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef int <a class="el" href="_module___r_b_tree_8c.html#a99c5bd20241a4a2708237037a1857062">key_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a48ae57edf4e37a4a826bd0fe7ad58707"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a48ae57edf4e37a4a826bd0fe7ad58707">&#9670;&nbsp;</a></span>rb_node_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="structrb__node__t.html">rb_node_t</a>  <a class="el" href="structrb__node__t.html">rb_node_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">枚举类型说明</h2>
+<a id="a0a8ef1b5e1941b7257e545cc33405ff1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a8ef1b5e1941b7257e545cc33405ff1">&#9670;&nbsp;</a></span>color_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="_module___r_b_tree_8c.html#a0a8ef1b5e1941b7257e545cc33405ff1">color_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><a id="a0a8ef1b5e1941b7257e545cc33405ff1af80f9a890089d211842d59625e561f88"></a>RED&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a0a8ef1b5e1941b7257e545cc33405ff1af77fb67151d0c18d397069ad8c271ba3"></a>BLACK&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">函数说明</h2>
+<a id="aa6dedda67202c82470b35389f563b205"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa6dedda67202c82470b35389f563b205">&#9670;&nbsp;</a></span>ModuleRBTree_DebugTestOnOff()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ModuleRBTree_DebugTestOnOff </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>OnOff</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af19cc21f4785cb654c5d9db8ab356036"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af19cc21f4785cb654c5d9db8ab356036">&#9670;&nbsp;</a></span>rb_erase()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structrb__node__t.html">rb_node_t</a> * rb_erase </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_module___r_b_tree_8c.html#a99c5bd20241a4a2708237037a1857062">key_t</a>&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structrb__node__t.html">rb_node_t</a> *&#160;</td>
+          <td class="paramname"><em>root</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a34220ffb7956c9f296bf955900751a36"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a34220ffb7956c9f296bf955900751a36">&#9670;&nbsp;</a></span>rb_insert()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structrb__node__t.html">rb_node_t</a> * rb_insert </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_module___r_b_tree_8c.html#a99c5bd20241a4a2708237037a1857062">key_t</a>&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_module___r_b_tree_8c.html#a9854bd2bf1d220fd8e003bb2eb05be0d">data_t</a>&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structrb__node__t.html">rb_node_t</a> *&#160;</td>
+          <td class="paramname"><em>root</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a293c47a2fa9ff5a3a5938eaebcf1cd40"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a293c47a2fa9ff5a3a5938eaebcf1cd40">&#9670;&nbsp;</a></span>rb_search()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structrb__node__t.html">rb_node_t</a> * rb_search </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_module___r_b_tree_8c.html#a99c5bd20241a4a2708237037a1857062">key_t</a>&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structrb__node__t.html">rb_node_t</a> *&#160;</td>
+          <td class="paramname"><em>root</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

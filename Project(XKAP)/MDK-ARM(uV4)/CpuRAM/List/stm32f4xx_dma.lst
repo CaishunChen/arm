@@ -1,0 +1,165 @@
+L 1 "..\..\Libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_dma.c"
+N/**
+N  ******************************************************************************
+N  * @file    stm32f4xx_dma.c
+N  * @author  MCD Application Team
+N  * @version V1.3.0
+N  * @date    08-November-2013
+N  * @brief   This file provides firmware functions to manage the following 
+N  *          functionalities of the Direct Memory Access controller (DMA):           
+N  *           + Initialization and Configuration
+N  *           + Data Counter
+N  *           + Double Buffer mode configuration and command  
+N  *           + Interrupts and flags management
+N  *           
+N  @verbatim      
+N ===============================================================================      
+N                       ##### How to use this driver #####
+N ===============================================================================
+N    [..] 
+N      (#) Enable The DMA controller clock using RCC_AHB1PeriphResetCmd(RCC_AHB1Periph_DMA1, ENABLE)
+N          function for DMA1 or using RCC_AHB1PeriphResetCmd(RCC_AHB1Periph_DMA2, ENABLE)
+N          function for DMA2.
+N  
+N      (#) Enable and configure the peripheral to be connected to the DMA Stream
+N          (except for internal SRAM / FLASH memories: no initialization is 
+N          necessary). 
+N          
+N      (#) For a given Stream, program the required configuration through following parameters:   
+N          Source and Destination addresses, Transfer Direction, Transfer size, Source and Destination 
+N          data formats, Circular or Normal mode, Stream Priority level, Source and Destination 
+N          Incrementation mode, FIFO mode and its Threshold (if needed), Burst 
+N          mode for Source and/or Destination (if needed) using the DMA_Init() function.
+N          To avoid filling unneccessary fields, you can call DMA_StructInit() function
+N          to initialize a given structure with default values (reset values), the modify
+N          only necessary fields 
+N          (ie. Source and Destination addresses, Transfer size and Data Formats).
+N  
+N      (#) Enable the NVIC and the corresponding interrupt(s) using the function 
+N          DMA_ITConfig() if you need to use DMA interrupts. 
+N  
+N      (#) Optionally, if the Circular mode is enabled, you can use the Double buffer mode by configuring 
+N          the second Memory address and the first Memory to be used through the function 
+N          DMA_DoubleBufferModeConfig(). Then enable the Double buffer mode through the function
+N          DMA_DoubleBufferModeCmd(). These operations must be done before step 6.
+N      
+N      (#) Enable the DMA stream using the DMA_Cmd() function. 
+N                  
+N      (#) Activate the needed Stream Request using PPP_DMACmd() function for
+N          any PPP peripheral except internal SRAM and FLASH (ie. SPI, USART ...)
+N          The function allowing this operation is provided in each PPP peripheral
+N          driver (ie. SPI_DMACmd for SPI peripheral).
+N          Once the Stream is enabled, it is not possible to modify its configuration
+N          unless the stream is stopped and disabled.
+N          After enabling the Stream, it is advised to monitor the EN bit status using
+N          the function DMA_GetCmdStatus(). In case of configuration errors or bus errors
+N          this bit will remain reset and all transfers on this Stream will remain on hold.      
+N  
+N      (#) Optionally, you can configure the number of data to be transferred
+N          when the Stream is disabled (ie. after each Transfer Complete event
+N          or when a Transfer Error occurs) using the function DMA_SetCurrDataCounter().
+N          And you can get the number of remaining data to be transferred using 
+N          the function DMA_GetCurrDataCounter() at run time (when the DMA Stream is
+N          enabled and running).  
+N                     
+N      (#) To control DMA events you can use one of the following two methods:
+N        (##) Check on DMA Stream flags using the function DMA_GetFlagStatus().  
+N        (##) Use DMA interrupts through the function DMA_ITConfig() at initialization
+N             phase and DMA_GetITStatus() function into interrupt routines in
+N             communication phase.
+N    [..]     
+N          After checking on a flag you should clear it using DMA_ClearFlag()
+N          function. And after checking on an interrupt event you should 
+N          clear it using DMA_ClearITPendingBit() function.    
+N                
+N      (#) Optionally, if Circular mode and Double Buffer mode are enabled, you can modify
+N          the Memory Addresses using the function DMA_MemoryTargetConfig(). Make sure that
+N          the Memory Address to be modified is not the one currently in use by DMA Stream.
+N          This condition can be monitored using the function DMA_GetCurrentMemoryTarget().
+N                
+N      (#) Optionally, Pause-Resume operations may be performed:
+N          The DMA_Cmd() function may be used to perform Pause-Resume operation. 
+N          When a transfer is ongoing, calling this function to disable the 
+N          Stream will cause the transfer to be paused. All configuration registers 
+N          and the number of remaining data will be preserved. When calling again 
+N          this function to re-enable the Stream, the transfer will be resumed from 
+N          the point where it was paused.          
+N                   
+N      -@- Memory-to-Memory transfer is possible by setting the address of the memory into
+N           the Peripheral registers. In this mode, Circular mode and Double Buffer mode
+N           are not allowed.
+N    
+N      -@- The FIFO is used mainly to reduce bus usage and to allow data 
+N           packing/unpacking: it is possible to set different Data Sizes for 
+N           the Peripheral and the Memory (ie. you can set Half-Word data size 
+N           for the peripheral to access its data register and set Word data size
+N           for the Memory to gain in access time. Each two Half-words will be 
+N           packed and written in a single access to a Word in the Memory).
+N      
+N      -@- When FIFO is disabled, it is not allowed to configure different 
+N           Data Sizes for Source and Destination. In this case the Peripheral 
+N           Data Size will be applied to both Source and Destination.               
+N  
+N  @endverbatim                                 
+N  ******************************************************************************
+N  * @attention
+N  *
+N  * <h2><center>&copy; COPYRIGHT 2013 STMicroelectronics</center></h2>
+N  *
+N  * Licensed under MCD-ST Liberty SW License Agreement V2, (the "License");
+N  * You may not use this file except in compliance with the License.
+N  * You may obtain a copy of the License at:
+N  *
+N  *        http://www.st.com/software_license_agreement_liberty_v2
+N  *
+N  * Unless required by applicable law or agreed to in writing, software 
+N  * distributed under the License is distributed on an "AS IS" BASIS, 
+N  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+N  * See the License for the specific language governing permissions and
+N  * limitations under the License.
+N  *
+N  ******************************************************************************  
+N  */ 
+N
+N/* Includes ------------------------------------------------------------------*/
+N#include "stm32f4xx_dma.h"
+L 1 "..\..\Libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dma.h" 1
+N/**
+N  ******************************************************************************
+N  * @file    stm32f4xx_dma.h
+N  * @author  MCD Application Team
+N  * @version V1.3.0
+N  * @date    08-November-2013
+N  * @brief   This file contains all the functions prototypes for the DMA firmware 
+N  *          library.
+N  ******************************************************************************
+N  * @attention
+N  *
+N  * <h2><center>&copy; COPYRIGHT 2013 STMicroelectronics</center></h2>
+N  *
+N  * Licensed under MCD-ST Liberty SW License Agreement V2, (the "License");
+N  * You may not use this file except in compliance with the License.
+N  * You may obtain a copy of the License at:
+N  *
+N  *        http://www.st.com/software_license_agreement_liberty_v2
+N  *
+N  * Unless required by applicable law or agreed to in writing, software 
+N  * distributed under the License is distributed on an "AS IS" BASIS, 
+N  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+N  * See the License for the specific language governing permissions and
+N  * limitations under the License.
+N  *
+N  ******************************************************************************  
+N  */ 
+N
+N/* Define to prevent recursive inclusion -------------------------------------*/
+N#ifndef __STM32F4xx_DMA_H
+N#define __STM32F4xx_DMA_H
+N
+N#ifdef __cplusplus
+S extern "C" {
+N#endif
+N
+N/* Includes ------------------------------------------------------------------*/
+C "..\..\Libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dma.h" 38 23 cannot open source input file "stm32f4xx.h": No such file or directory
+N#include "stm32f4xx.h"

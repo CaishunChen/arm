@@ -1,0 +1,294 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>xsl: E:/XkapSourceCode/Xkap-Stm32/Xkap-Stm32/User/UserModule/Module_SdFat.h 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">xsl
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">源码说明</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.13 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',false,false,'search.php','搜索');
+});
+</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_6d4e12d46ad8519ff7b80e874016d102.html">User</a></li><li class="navelem"><a class="el" href="dir_eb2397560f3fdc052e61ca3a27327d74.html">UserModule</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#define-members">宏定义</a> &#124;
+<a href="#typedef-members">类型定义</a> &#124;
+<a href="#enum-members">枚举</a> &#124;
+<a href="#func-members">函数</a> &#124;
+<a href="#var-members">变量</a>  </div>
+  <div class="headertitle">
+<div class="title">Module_SdFat.h 文件参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;ff.h&quot;</code><br />
+<code>#include &quot;diskio.h&quot;</code><br />
+</div>
+<p><a href="_module___sd_fat_8h_source.html">浏览源代码.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+宏定义</h2></td></tr>
+<tr class="memitem:a6f0df8e8a42dd138679dbfda789cf0aa"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_module___sd_fat_8h.html#a6f0df8e8a42dd138679dbfda789cf0aa">MODULE_SDFAT_SD_PATH</a>&#160;&#160;&#160;&quot;0:&quot;</td></tr>
+<tr class="separator:a6f0df8e8a42dd138679dbfda789cf0aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+类型定义</h2></td></tr>
+<tr class="memitem:a69b2570f738f0397aa76ecfdf8ca9256"><td class="memItemLeft" align="right" valign="top">typedef enum <a class="el" href="_module___sd_fat_8h.html#ad214f0c610d3c128f291a3eec988d31a">MODULE_SDFAT_E_APP_CMD</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_module___sd_fat_8h.html#a69b2570f738f0397aa76ecfdf8ca9256">MODULE_SDFAT_E_APP_CMD</a></td></tr>
+<tr class="separator:a69b2570f738f0397aa76ecfdf8ca9256"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+枚举</h2></td></tr>
+<tr class="memitem:ad214f0c610d3c128f291a3eec988d31a"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_module___sd_fat_8h.html#ad214f0c610d3c128f291a3eec988d31a">MODULE_SDFAT_E_APP_CMD</a> { <br />
+&#160;&#160;<a class="el" href="_module___sd_fat_8h.html#ad214f0c610d3c128f291a3eec988d31aa5c5fb10513e5301e14f23f1533d55114">MODULE_SDFAT_E_APP_CMD_FILE_R</a> = 0, 
+<a class="el" href="_module___sd_fat_8h.html#ad214f0c610d3c128f291a3eec988d31aa2684ca7438a177fc12e2793a834b2d24">MODULE_SDFAT_E_APP_CMD_FILE_W</a>, 
+<a class="el" href="_module___sd_fat_8h.html#ad214f0c610d3c128f291a3eec988d31aa5a765d61a1393ba7c299edbb02cb65ee">MODULE_SDFAT_E_APP_CMD_FILE_ADD</a>, 
+<a class="el" href="_module___sd_fat_8h.html#ad214f0c610d3c128f291a3eec988d31aa36a25f2c911c6e599941ff617bd95a22">MODULE_SDFAT_E_APP_CMD_FILE_GETSIZE</a>, 
+<br />
+&#160;&#160;<a class="el" href="_module___sd_fat_8h.html#ad214f0c610d3c128f291a3eec988d31aacd442d59cac4593510ddc0983887f139">MODULE_SDFAT_E_APP_CMD_FORMAT</a>
+<br />
+ }</td></tr>
+<tr class="separator:ad214f0c610d3c128f291a3eec988d31a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:a7a19d7307cdd59e11c1b63fb8c631af4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_module___sd_fat_8h.html#a7a19d7307cdd59e11c1b63fb8c631af4">SdFat_1msPro</a> (void)</td></tr>
+<tr class="separator:a7a19d7307cdd59e11c1b63fb8c631af4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8cdf2f1cad697764c05120ede42cfbab"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_module___sd_fat_8h.html#a8cdf2f1cad697764c05120ede42cfbab">SdFat_App</a> (<a class="el" href="_module___sd_fat_8h.html#ad214f0c610d3c128f291a3eec988d31a">MODULE_SDFAT_E_APP_CMD</a> cmd, char *pPathFileName, void *pbuf, uint32_t *pPos, uint16_t *plen, uint32_t *pbw)</td></tr>
+<tr class="separator:a8cdf2f1cad697764c05120ede42cfbab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa7b23372e268ae66bc9437133b1e35a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_module___sd_fat_8h.html#aaa7b23372e268ae66bc9437133b1e35a">SdFat_Test</a> (uint8_t OnOff)</td></tr>
+<tr class="separator:aaa7b23372e268ae66bc9437133b1e35a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+变量</h2></td></tr>
+<tr class="memitem:acde77e8c196b33668087ed55285cf039"><td class="memItemLeft" align="right" valign="top">FIL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_module___sd_fat_8h.html#acde77e8c196b33668087ed55285cf039">ModuleSdFat_fsrc</a></td></tr>
+<tr class="separator:acde77e8c196b33668087ed55285cf039"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae865472352f6464e5e830d952bb010e7"><td class="memItemLeft" align="right" valign="top">FRESULT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_module___sd_fat_8h.html#ae865472352f6464e5e830d952bb010e7">ModuleSdFat_Res</a></td></tr>
+<tr class="separator:ae865472352f6464e5e830d952bb010e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b97e26b3cdd49c1cd5b5f643b3b34fb"><td class="memItemLeft" align="right" valign="top">FATFS&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_module___sd_fat_8h.html#a9b97e26b3cdd49c1cd5b5f643b3b34fb">ModuleSdFat_Fs</a></td></tr>
+<tr class="separator:a9b97e26b3cdd49c1cd5b5f643b3b34fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">宏定义说明</h2>
+<a id="a6f0df8e8a42dd138679dbfda789cf0aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f0df8e8a42dd138679dbfda789cf0aa">&#9670;&nbsp;</a></span>MODULE_SDFAT_SD_PATH</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MODULE_SDFAT_SD_PATH&#160;&#160;&#160;&quot;0:&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">类型定义说明</h2>
+<a id="a69b2570f738f0397aa76ecfdf8ca9256"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a69b2570f738f0397aa76ecfdf8ca9256">&#9670;&nbsp;</a></span>MODULE_SDFAT_E_APP_CMD</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef enum <a class="el" href="_module___sd_fat_8h.html#ad214f0c610d3c128f291a3eec988d31a">MODULE_SDFAT_E_APP_CMD</a> <a class="el" href="_module___sd_fat_8h.html#ad214f0c610d3c128f291a3eec988d31a">MODULE_SDFAT_E_APP_CMD</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">枚举类型说明</h2>
+<a id="ad214f0c610d3c128f291a3eec988d31a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad214f0c610d3c128f291a3eec988d31a">&#9670;&nbsp;</a></span>MODULE_SDFAT_E_APP_CMD</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="_module___sd_fat_8h.html#ad214f0c610d3c128f291a3eec988d31a">MODULE_SDFAT_E_APP_CMD</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><a id="ad214f0c610d3c128f291a3eec988d31aa5c5fb10513e5301e14f23f1533d55114"></a>MODULE_SDFAT_E_APP_CMD_FILE_R&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ad214f0c610d3c128f291a3eec988d31aa2684ca7438a177fc12e2793a834b2d24"></a>MODULE_SDFAT_E_APP_CMD_FILE_W&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ad214f0c610d3c128f291a3eec988d31aa5a765d61a1393ba7c299edbb02cb65ee"></a>MODULE_SDFAT_E_APP_CMD_FILE_ADD&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ad214f0c610d3c128f291a3eec988d31aa36a25f2c911c6e599941ff617bd95a22"></a>MODULE_SDFAT_E_APP_CMD_FILE_GETSIZE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ad214f0c610d3c128f291a3eec988d31aacd442d59cac4593510ddc0983887f139"></a>MODULE_SDFAT_E_APP_CMD_FORMAT&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">函数说明</h2>
+<a id="a7a19d7307cdd59e11c1b63fb8c631af4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7a19d7307cdd59e11c1b63fb8c631af4">&#9670;&nbsp;</a></span>SdFat_1msPro()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SdFat_1msPro </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8cdf2f1cad697764c05120ede42cfbab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8cdf2f1cad697764c05120ede42cfbab">&#9670;&nbsp;</a></span>SdFat_App()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t SdFat_App </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_module___sd_fat_8h.html#ad214f0c610d3c128f291a3eec988d31a">MODULE_SDFAT_E_APP_CMD</a>&#160;</td>
+          <td class="paramname"><em>cmd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>pPathFileName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>pbuf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t *&#160;</td>
+          <td class="paramname"><em>pPos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t *&#160;</td>
+          <td class="paramname"><em>plen</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t *&#160;</td>
+          <td class="paramname"><em>pbw</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aaa7b23372e268ae66bc9437133b1e35a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa7b23372e268ae66bc9437133b1e35a">&#9670;&nbsp;</a></span>SdFat_Test()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SdFat_Test </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>OnOff</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">变量说明</h2>
+<a id="a9b97e26b3cdd49c1cd5b5f643b3b34fb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b97e26b3cdd49c1cd5b5f643b3b34fb">&#9670;&nbsp;</a></span>ModuleSdFat_Fs</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FATFS ModuleSdFat_Fs</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acde77e8c196b33668087ed55285cf039"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acde77e8c196b33668087ed55285cf039">&#9670;&nbsp;</a></span>ModuleSdFat_fsrc</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FIL ModuleSdFat_fsrc</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae865472352f6464e5e830d952bb010e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae865472352f6464e5e830d952bb010e7">&#9670;&nbsp;</a></span>ModuleSdFat_Res</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FRESULT ModuleSdFat_Res</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

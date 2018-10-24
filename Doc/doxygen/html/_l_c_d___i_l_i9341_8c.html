@@ -1,0 +1,976 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>xsl: E:/XkapSourceCode/Xkap-Stm32/Xkap-Stm32/User/UserBsp/LCD_Driver/LCD_ILI9341.c 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">xsl
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">源码说明</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.13 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',false,false,'search.php','搜索');
+});
+</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_6d4e12d46ad8519ff7b80e874016d102.html">User</a></li><li class="navelem"><a class="el" href="dir_a31a870a1361c5173f8d637697bb576e.html">UserBsp</a></li><li class="navelem"><a class="el" href="dir_7931ff5d57cb839515da9a82353fa9b8.html">LCD_Driver</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">函数</a> &#124;
+<a href="#var-members">变量</a>  </div>
+  <div class="headertitle">
+<div class="title">LCD_ILI9341.c 文件参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="font_8h_source.html">font.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_l_c_d___i_l_i9341_8h_source.html">LCD_ILI9341.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_bsp___pwm_out_8h_source.html">Bsp_PwmOut.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="uctsk___debug_8h_source.html">uctsk_Debug.h</a>&quot;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:a786b2e01a9fbf98efed6a280d354e624"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_l_c_d___i_l_i9341_8c.html#a786b2e01a9fbf98efed6a280d354e624">LCD_ILI9341_HwInit</a> (void)</td></tr>
+<tr class="separator:a786b2e01a9fbf98efed6a280d354e624"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6898df69dd2f0de8b3a4bfa00de0e3f0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_l_c_d___i_l_i9341_8c.html#a6898df69dd2f0de8b3a4bfa00de0e3f0">LCD_ILI9341_WR_REG</a> (uint16_t regval)</td></tr>
+<tr class="separator:a6898df69dd2f0de8b3a4bfa00de0e3f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab013c070137abeacc2b9c853877733f2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_l_c_d___i_l_i9341_8c.html#ab013c070137abeacc2b9c853877733f2">LCD_ILI9341_WR_DATA</a> (uint16_t data)</td></tr>
+<tr class="separator:ab013c070137abeacc2b9c853877733f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a336307b5e991fd9755ffb935f30c71b6"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_l_c_d___i_l_i9341_8c.html#a336307b5e991fd9755ffb935f30c71b6">LCD_ILI9341_RD_DATA</a> (void)</td></tr>
+<tr class="separator:a336307b5e991fd9755ffb935f30c71b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2044727090e31b49b10055d8b46274aa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_l_c_d___i_l_i9341_8c.html#a2044727090e31b49b10055d8b46274aa">LCD_ILI9341_SetBackLight</a> (uint8_t _bright)</td></tr>
+<tr class="separator:a2044727090e31b49b10055d8b46274aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54b74232ef925bb2e121b415f77225c8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_l_c_d___i_l_i9341_8c.html#a54b74232ef925bb2e121b415f77225c8">LCD_ILI9341_WriteRegData</a> (uint8_t Reg, uint16_t Value)</td></tr>
+<tr class="separator:a54b74232ef925bb2e121b415f77225c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf92aa0744351669064256e5bf81462c"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_l_c_d___i_l_i9341_8c.html#adf92aa0744351669064256e5bf81462c">LCD_ILI9341_ReadRegData</a> (uint8_t Reg)</td></tr>
+<tr class="separator:adf92aa0744351669064256e5bf81462c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa1f70ef62d39041753df8610a234d3a"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_l_c_d___i_l_i9341_8c.html#afa1f70ef62d39041753df8610a234d3a">LCD_ILI9341_BGR2RGB</a> (uint16_t c)</td></tr>
+<tr class="separator:afa1f70ef62d39041753df8610a234d3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8eba3688e2bb8f8974e1a2bb98a01d3e"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_l_c_d___i_l_i9341_8c.html#a8eba3688e2bb8f8974e1a2bb98a01d3e">LCD_ILI9341_ReadPoint</a> (uint16_t x, uint16_t <a class="el" href="_bsp___lcd_8c.html#a0ed6a908288e0cd87f79c1b5ab56d07c">y</a>)</td></tr>
+<tr class="separator:a8eba3688e2bb8f8974e1a2bb98a01d3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a699ce1d4091fa704bf50ca2cecc0b87c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_l_c_d___i_l_i9341_8c.html#a699ce1d4091fa704bf50ca2cecc0b87c">LCD_ILI9341_DisplayOn</a> (void)</td></tr>
+<tr class="separator:a699ce1d4091fa704bf50ca2cecc0b87c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed73b2f7ff81d4b314e33f80791e062a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_l_c_d___i_l_i9341_8c.html#aed73b2f7ff81d4b314e33f80791e062a">LCD_ILI9341_DisplayOff</a> (void)</td></tr>
+<tr class="separator:aed73b2f7ff81d4b314e33f80791e062a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa3fb83c15bd88ee878d872f6c2a3cd71"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_l_c_d___i_l_i9341_8c.html#aa3fb83c15bd88ee878d872f6c2a3cd71">LCD_ILI9341_DrawPoint</a> (uint16_t x, uint16_t <a class="el" href="_bsp___lcd_8c.html#a0ed6a908288e0cd87f79c1b5ab56d07c">y</a>, uint32_t color)</td></tr>
+<tr class="separator:aa3fb83c15bd88ee878d872f6c2a3cd71"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae331fb4c82fb6635929f797a3cda6b6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_l_c_d___i_l_i9341_8c.html#aae331fb4c82fb6635929f797a3cda6b6">LCD_ILI9341_DisplayDir</a> (uint8_t dir)</td></tr>
+<tr class="separator:aae331fb4c82fb6635929f797a3cda6b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ff68926113d64dabb9af76046b51161"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_l_c_d___i_l_i9341_8c.html#a4ff68926113d64dabb9af76046b51161">LCD_ILI9341_SetWindow</a> (uint16_t sx, uint16_t sy, uint16_t width, uint16_t height)</td></tr>
+<tr class="separator:a4ff68926113d64dabb9af76046b51161"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a34bd8a16967eb6b1e8c06ae06382d877"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_l_c_d___i_l_i9341_8c.html#a34bd8a16967eb6b1e8c06ae06382d877">LCD_ILI9341_QuitWinow</a> (void)</td></tr>
+<tr class="separator:a34bd8a16967eb6b1e8c06ae06382d877"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c917d11d5c011a82b19f9995f343877"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_l_c_d___i_l_i9341_8c.html#a7c917d11d5c011a82b19f9995f343877">LCD_ILI9341_ReadID</a> (void)</td></tr>
+<tr class="separator:a7c917d11d5c011a82b19f9995f343877"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e59b25c6ef77c95cfa5534687b9ffb9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_l_c_d___i_l_i9341_8c.html#a4e59b25c6ef77c95cfa5534687b9ffb9">LCD_ILI9341_Init</a> (void)</td></tr>
+<tr class="separator:a4e59b25c6ef77c95cfa5534687b9ffb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8dcc6f929f901441ce2562efcacbd869"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_l_c_d___i_l_i9341_8c.html#a8dcc6f929f901441ce2562efcacbd869">LCD_ILI9341_Clear</a> (uint32_t color)</td></tr>
+<tr class="separator:a8dcc6f929f901441ce2562efcacbd869"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45ea479e0a17fa0baa12deff997c964d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_l_c_d___i_l_i9341_8c.html#a45ea479e0a17fa0baa12deff997c964d">LCD_ILI9341_Fill</a> (uint16_t sx, uint16_t sy, uint16_t ex, uint16_t ey, uint32_t color)</td></tr>
+<tr class="separator:a45ea479e0a17fa0baa12deff997c964d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a77e18b4452d415e37858db1eb6f1c5da"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_l_c_d___i_l_i9341_8c.html#a77e18b4452d415e37858db1eb6f1c5da">LCD_ILI9341_DrawLine</a> (uint16_t <a class="el" href="_bsp___lcd_8c.html#a3818b7c50ae3cf2e9ae39316586a1aa4">x1</a>, uint16_t y1, uint16_t <a class="el" href="_bsp___lcd_8c.html#ab24e1cc331c488f6a1623cde1564c644">x2</a>, uint16_t y2, uint32_t color)</td></tr>
+<tr class="separator:a77e18b4452d415e37858db1eb6f1c5da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac4e000b76638b720ce0a81debb556324"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_l_c_d___i_l_i9341_8c.html#ac4e000b76638b720ce0a81debb556324">LCD_ILI9341_DrawRect</a> (uint16_t _usX, uint16_t _usY, uint8_t _usHeight, uint16_t _usWidth, uint32_t _usColor)</td></tr>
+<tr class="separator:ac4e000b76638b720ce0a81debb556324"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a914892e1e5b03b4820814b75578a0e05"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_l_c_d___i_l_i9341_8c.html#a914892e1e5b03b4820814b75578a0e05">LCD_ILI9341_DrawCircle</a> (uint16_t x0, uint16_t y0, uint8_t r, uint32_t color)</td></tr>
+<tr class="separator:a914892e1e5b03b4820814b75578a0e05"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac926e70170cce1b4b5217a004a51daa8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_l_c_d___i_l_i9341_8c.html#ac926e70170cce1b4b5217a004a51daa8">LCD_ILI9341_DrawBMP</a> (uint16_t _usX, uint16_t _usY, uint16_t _usHeight, uint16_t _usWidth, uint16_t *_ptr)</td></tr>
+<tr class="separator:ac926e70170cce1b4b5217a004a51daa8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9efc6bda9234727882b8cfeb2fbf9948"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_l_c_d___i_l_i9341_8c.html#a9efc6bda9234727882b8cfeb2fbf9948">LCD_ILI9341_DrawHLine</a> (uint16_t _usX1, uint16_t _usY1, uint16_t _usX2, uint32_t _usColor)</td></tr>
+<tr class="separator:a9efc6bda9234727882b8cfeb2fbf9948"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66fbaa0d6c1b698a21b9ff53594f3063"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_l_c_d___i_l_i9341_8c.html#a66fbaa0d6c1b698a21b9ff53594f3063">LCD_ILI9341_DrawHColorLine</a> (uint16_t _usX1, uint16_t _usY1, uint16_t _usWidth, uint16_t *_pColor)</td></tr>
+<tr class="separator:a66fbaa0d6c1b698a21b9ff53594f3063"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8557ae93d56cbcb088047791d5fa3fd1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_l_c_d___i_l_i9341_8c.html#a8557ae93d56cbcb088047791d5fa3fd1">LCD_ILI9341_DrawVLine</a> (uint16_t _usX1, uint16_t _usY1, uint16_t _usY2, uint32_t _usColor)</td></tr>
+<tr class="separator:a8557ae93d56cbcb088047791d5fa3fd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa30c2bade4f2d46ca57dd4a63a4a5ac0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_l_c_d___i_l_i9341_8c.html#aa30c2bade4f2d46ca57dd4a63a4a5ac0">LCD_ILI9341_EnterSleep</a> (void)</td></tr>
+<tr class="separator:aa30c2bade4f2d46ca57dd4a63a4a5ac0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe9df2359ea51f2054f56b2d8623d8d9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_l_c_d___i_l_i9341_8c.html#abe9df2359ea51f2054f56b2d8623d8d9">LCD_ILI9341_EnterWork</a> (void)</td></tr>
+<tr class="separator:abe9df2359ea51f2054f56b2d8623d8d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a909d3336c325b48559db7c904f42e3ee"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_l_c_d___i_l_i9341_8c.html#a909d3336c325b48559db7c904f42e3ee">LCD_ILI9341_DebugTestOnOff</a> (uint8_t OnOff)</td></tr>
+<tr class="separator:a909d3336c325b48559db7c904f42e3ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+变量</h2></td></tr>
+<tr class="memitem:ab4bce71923be922231347a20ab170766"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_l_c_d___i_l_i9341_8c.html#ab4bce71923be922231347a20ab170766">LCD_Ili9341_PointColor</a> =0x0000</td></tr>
+<tr class="separator:ab4bce71923be922231347a20ab170766"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ea7fdfeb8bfb5a2948b6f24b449e325"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_l_c_d___i_l_i9341_8c.html#a2ea7fdfeb8bfb5a2948b6f24b449e325">LCD_Ili9341_BackColor</a> =0xFFFF</td></tr>
+<tr class="separator:a2ea7fdfeb8bfb5a2948b6f24b449e325"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c8a03d09f58d1213eb2f16b6006f5ff"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_l_c_d___i_l_i9341_8c.html#a8c8a03d09f58d1213eb2f16b6006f5ff">LCD_ILI9341_SleepFlag</a> =0</td></tr>
+<tr class="separator:a8c8a03d09f58d1213eb2f16b6006f5ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2a6c004462ec9162176dde218824c3e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_l_c_d___i_l_i9341___s___d_e_v.html">LCD_ILI9341_S_DEV</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_l_c_d___i_l_i9341_8c.html#aa2a6c004462ec9162176dde218824c3e">Lcd_Ili9341_s_dev</a></td></tr>
+<tr class="separator:aa2a6c004462ec9162176dde218824c3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">函数说明</h2>
+<a id="afa1f70ef62d39041753df8610a234d3a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afa1f70ef62d39041753df8610a234d3a">&#9670;&nbsp;</a></span>LCD_ILI9341_BGR2RGB()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t LCD_ILI9341_BGR2RGB </td>
+          <td>(</td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>c</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8dcc6f929f901441ce2562efcacbd869"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8dcc6f929f901441ce2562efcacbd869">&#9670;&nbsp;</a></span>LCD_ILI9341_Clear()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LCD_ILI9341_Clear </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>color</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a909d3336c325b48559db7c904f42e3ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a909d3336c325b48559db7c904f42e3ee">&#9670;&nbsp;</a></span>LCD_ILI9341_DebugTestOnOff()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LCD_ILI9341_DebugTestOnOff </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>OnOff</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aae331fb4c82fb6635929f797a3cda6b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae331fb4c82fb6635929f797a3cda6b6">&#9670;&nbsp;</a></span>LCD_ILI9341_DisplayDir()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LCD_ILI9341_DisplayDir </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>dir</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aed73b2f7ff81d4b314e33f80791e062a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aed73b2f7ff81d4b314e33f80791e062a">&#9670;&nbsp;</a></span>LCD_ILI9341_DisplayOff()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LCD_ILI9341_DisplayOff </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a699ce1d4091fa704bf50ca2cecc0b87c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a699ce1d4091fa704bf50ca2cecc0b87c">&#9670;&nbsp;</a></span>LCD_ILI9341_DisplayOn()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LCD_ILI9341_DisplayOn </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac926e70170cce1b4b5217a004a51daa8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac926e70170cce1b4b5217a004a51daa8">&#9670;&nbsp;</a></span>LCD_ILI9341_DrawBMP()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LCD_ILI9341_DrawBMP </td>
+          <td>(</td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>_usX</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>_usY</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>_usHeight</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>_usWidth</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t *&#160;</td>
+          <td class="paramname"><em>_ptr</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a914892e1e5b03b4820814b75578a0e05"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a914892e1e5b03b4820814b75578a0e05">&#9670;&nbsp;</a></span>LCD_ILI9341_DrawCircle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LCD_ILI9341_DrawCircle </td>
+          <td>(</td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>x0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>y0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>r</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>color</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a66fbaa0d6c1b698a21b9ff53594f3063"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a66fbaa0d6c1b698a21b9ff53594f3063">&#9670;&nbsp;</a></span>LCD_ILI9341_DrawHColorLine()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LCD_ILI9341_DrawHColorLine </td>
+          <td>(</td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>_usX1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>_usY1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>_usWidth</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t *&#160;</td>
+          <td class="paramname"><em>_pColor</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9efc6bda9234727882b8cfeb2fbf9948"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9efc6bda9234727882b8cfeb2fbf9948">&#9670;&nbsp;</a></span>LCD_ILI9341_DrawHLine()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LCD_ILI9341_DrawHLine </td>
+          <td>(</td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>_usX1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>_usY1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>_usX2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>_usColor</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a77e18b4452d415e37858db1eb6f1c5da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a77e18b4452d415e37858db1eb6f1c5da">&#9670;&nbsp;</a></span>LCD_ILI9341_DrawLine()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LCD_ILI9341_DrawLine </td>
+          <td>(</td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>x1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>y1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>x2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>y2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>color</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa3fb83c15bd88ee878d872f6c2a3cd71"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa3fb83c15bd88ee878d872f6c2a3cd71">&#9670;&nbsp;</a></span>LCD_ILI9341_DrawPoint()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LCD_ILI9341_DrawPoint </td>
+          <td>(</td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>color</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac4e000b76638b720ce0a81debb556324"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac4e000b76638b720ce0a81debb556324">&#9670;&nbsp;</a></span>LCD_ILI9341_DrawRect()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LCD_ILI9341_DrawRect </td>
+          <td>(</td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>_usX</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>_usY</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>_usHeight</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>_usWidth</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>_usColor</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8557ae93d56cbcb088047791d5fa3fd1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8557ae93d56cbcb088047791d5fa3fd1">&#9670;&nbsp;</a></span>LCD_ILI9341_DrawVLine()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LCD_ILI9341_DrawVLine </td>
+          <td>(</td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>_usX1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>_usY1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>_usY2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>_usColor</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa30c2bade4f2d46ca57dd4a63a4a5ac0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa30c2bade4f2d46ca57dd4a63a4a5ac0">&#9670;&nbsp;</a></span>LCD_ILI9341_EnterSleep()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LCD_ILI9341_EnterSleep </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abe9df2359ea51f2054f56b2d8623d8d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abe9df2359ea51f2054f56b2d8623d8d9">&#9670;&nbsp;</a></span>LCD_ILI9341_EnterWork()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LCD_ILI9341_EnterWork </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a45ea479e0a17fa0baa12deff997c964d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a45ea479e0a17fa0baa12deff997c964d">&#9670;&nbsp;</a></span>LCD_ILI9341_Fill()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LCD_ILI9341_Fill </td>
+          <td>(</td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>sx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>sy</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>ex</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>ey</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>color</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a786b2e01a9fbf98efed6a280d354e624"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a786b2e01a9fbf98efed6a280d354e624">&#9670;&nbsp;</a></span>LCD_ILI9341_HwInit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LCD_ILI9341_HwInit </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4e59b25c6ef77c95cfa5534687b9ffb9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e59b25c6ef77c95cfa5534687b9ffb9">&#9670;&nbsp;</a></span>LCD_ILI9341_Init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LCD_ILI9341_Init </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a34bd8a16967eb6b1e8c06ae06382d877"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a34bd8a16967eb6b1e8c06ae06382d877">&#9670;&nbsp;</a></span>LCD_ILI9341_QuitWinow()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LCD_ILI9341_QuitWinow </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a336307b5e991fd9755ffb935f30c71b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a336307b5e991fd9755ffb935f30c71b6">&#9670;&nbsp;</a></span>LCD_ILI9341_RD_DATA()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t LCD_ILI9341_RD_DATA </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7c917d11d5c011a82b19f9995f343877"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7c917d11d5c011a82b19f9995f343877">&#9670;&nbsp;</a></span>LCD_ILI9341_ReadID()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t LCD_ILI9341_ReadID </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8eba3688e2bb8f8974e1a2bb98a01d3e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8eba3688e2bb8f8974e1a2bb98a01d3e">&#9670;&nbsp;</a></span>LCD_ILI9341_ReadPoint()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t LCD_ILI9341_ReadPoint </td>
+          <td>(</td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adf92aa0744351669064256e5bf81462c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf92aa0744351669064256e5bf81462c">&#9670;&nbsp;</a></span>LCD_ILI9341_ReadRegData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t LCD_ILI9341_ReadRegData </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>Reg</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2044727090e31b49b10055d8b46274aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2044727090e31b49b10055d8b46274aa">&#9670;&nbsp;</a></span>LCD_ILI9341_SetBackLight()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LCD_ILI9341_SetBackLight </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>_bright</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4ff68926113d64dabb9af76046b51161"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ff68926113d64dabb9af76046b51161">&#9670;&nbsp;</a></span>LCD_ILI9341_SetWindow()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LCD_ILI9341_SetWindow </td>
+          <td>(</td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>sx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>sy</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>width</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>height</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab013c070137abeacc2b9c853877733f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab013c070137abeacc2b9c853877733f2">&#9670;&nbsp;</a></span>LCD_ILI9341_WR_DATA()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LCD_ILI9341_WR_DATA </td>
+          <td>(</td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>data</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6898df69dd2f0de8b3a4bfa00de0e3f0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6898df69dd2f0de8b3a4bfa00de0e3f0">&#9670;&nbsp;</a></span>LCD_ILI9341_WR_REG()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LCD_ILI9341_WR_REG </td>
+          <td>(</td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>regval</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a54b74232ef925bb2e121b415f77225c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a54b74232ef925bb2e121b415f77225c8">&#9670;&nbsp;</a></span>LCD_ILI9341_WriteRegData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LCD_ILI9341_WriteRegData </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>Reg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>Value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">变量说明</h2>
+<a id="a2ea7fdfeb8bfb5a2948b6f24b449e325"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2ea7fdfeb8bfb5a2948b6f24b449e325">&#9670;&nbsp;</a></span>LCD_Ili9341_BackColor</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t LCD_Ili9341_BackColor =0xFFFF</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab4bce71923be922231347a20ab170766"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab4bce71923be922231347a20ab170766">&#9670;&nbsp;</a></span>LCD_Ili9341_PointColor</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t LCD_Ili9341_PointColor =0x0000</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa2a6c004462ec9162176dde218824c3e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa2a6c004462ec9162176dde218824c3e">&#9670;&nbsp;</a></span>Lcd_Ili9341_s_dev</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_l_c_d___i_l_i9341___s___d_e_v.html">LCD_ILI9341_S_DEV</a> Lcd_Ili9341_s_dev</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8c8a03d09f58d1213eb2f16b6006f5ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8c8a03d09f58d1213eb2f16b6006f5ff">&#9670;&nbsp;</a></span>LCD_ILI9341_SleepFlag</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t LCD_ILI9341_SleepFlag =0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<JScopeProject>
+    <FileVersion major="1" minor="1" />
+    <Project>
+        <Configuration>
+            <JLink>
+                <Options Connection="1" IsRTTSession="0" IsRTTWithTimeStamp="1" SamplingPeriod="100" SerialNo="0" JTAG_IRPre="-1" JTAG_DRPre="-1" IP="localhost" TargetDevice="nRF51822_xxAA" TargetInterface="SWD" InterfaceSpeed="4000" />
+            </JLink>
+            <ScriptFile Name="unspecified" />
+            <ElfFile Name="E:\XkapSourceCode\Xkap-Stm32\Xkap-Stm32\Project(XKAP)\MDK-ARM(uV4)\Flash\Obj\output.axf" />
+            <DataFile Name="" />
+            <RawFile Name="C:\Users\Administrator\Desktop\Data.jraw" />
+            <Scope>
+                <Options TimeResolutionUs="50000" />
+            </Scope>
+            <Trigger>
+                <Options Level="100.000000" Symbol="BspKey_KeepTimer_ms" On="0" Auto="0" Rise="1" Fall="0" />
+            </Trigger>
+        </Configuration>
+        <Windows>
+            <Graph Show="1" />
+            <Watch Show="1" />
+        </Windows>
+        <SelectedSymbols>
+            <Symbol>
+                <Options Name="BspKey_KeepTimer_ms" Address="0x2000012C" Type="ushort" TypeID="7" Size="2" GraphColorRed="255" GraphColorGreen="215" GraphColorBlue="0" YMinSampled="0" YMaxSampled="13930" YAvgSampled="13773" Offset="4" ShowInGraph="1" ACCoupling="0" YOffset="60" IsAutoConfig="0" YResolution="50" MaxValue="557" File="..\..\User\UserBsp\Bsp_Key.c" Scope="0" DrawStyle="0" />
+            </Symbol>
+        </SelectedSymbols>
+    </Project>
+</JScopeProject>

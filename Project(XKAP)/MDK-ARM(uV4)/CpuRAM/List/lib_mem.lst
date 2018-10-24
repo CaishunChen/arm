@@ -1,0 +1,62 @@
+L 1 "..\..\User\uCOS-III\uC-LIB\lib_mem.c"
+N/*
+N*********************************************************************************************************
+N*                                                uC/LIB
+N*                                        CUSTOM LIBRARY MODULES
+N*
+N*                          (c) Copyright 2004-2012; Micrium, Inc.; Weston, FL
+N*
+N*               All rights reserved.  Protected by international copyright laws.
+N*
+N*               uC/LIB is provided in source form to registered licensees ONLY.  It is
+N*               illegal to distribute this source code to any third party unless you receive
+N*               written permission by an authorized Micrium representative.  Knowledge of
+N*               the source code may NOT be used to develop a similar product.
+N*
+N*               Please help us continue to provide the Embedded community with the finest
+N*               software available.  Your honesty is greatly appreciated.
+N*
+N*               You can contact us at www.micrium.com.
+N*********************************************************************************************************
+N*/
+N
+N/*
+N*********************************************************************************************************
+N*
+N*                                     STANDARD MEMORY OPERATIONS
+N*
+N* Filename      : lib_mem.c
+N* Version       : V1.37.01
+N* Programmer(s) : ITJ
+N*                 FGK
+N*                 JFD
+N*                 FBJ
+N*********************************************************************************************************
+N* Note(s)       : (1) NO compiler-supplied standard library functions are used in library or product software.
+N*
+N*                     (a) ALL standard library functions are implemented in the custom library modules :
+N*
+N*                         (1) \<Custom Library Directory>\lib_*.*
+N*
+N*                         (2) \<Custom Library Directory>\Ports\<cpu>\<compiler>\lib*_a.*
+N*
+N*                               where
+N*                                       <Custom Library Directory>      directory path for custom library software
+N*                                       <cpu>                           directory name for specific processor (CPU)
+N*                                       <compiler>                      directory name for specific compiler
+N*
+N*                     (b) Product-specific library functions are implemented in individual products.
+N*********************************************************************************************************
+N*/
+N
+N
+N/*
+N*********************************************************************************************************
+N*                                            INCLUDE FILES
+N*********************************************************************************************************
+N*/
+N
+N#define    MICRIUM_SOURCE
+N#define    LIB_MEM_MODULE
+C "..\..\User\uCOS-III\uC-LIB\lib_mem.c" 60 22 cannot open source input file "lib_mem.h": No such file or directory
+N#include  <lib_mem.h>

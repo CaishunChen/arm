@@ -1,0 +1,627 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>xsl: E:/XkapSourceCode/Xkap-Stm32/Xkap-Stm32/User/UserTask/uctsk_GprsNetApp.c 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">xsl
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">源码说明</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.13 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',false,false,'search.php','搜索');
+});
+</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_6d4e12d46ad8519ff7b80e874016d102.html">User</a></li><li class="navelem"><a class="el" href="dir_ba9e781c49be9d79c84eb9994eefebec.html">UserTask</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#define-members">宏定义</a> &#124;
+<a href="#func-members">函数</a> &#124;
+<a href="#var-members">变量</a>  </div>
+  <div class="headertitle">
+<div class="title">uctsk_GprsNetApp.c 文件参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;<a class="el" href="includes_8h_source.html">includes.h</a>&gt;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+宏定义</h2></td></tr>
+<tr class="memitem:a6e7f866b20684d1d30c2761ba4660576"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___gprs_net_app_8c.html#a6e7f866b20684d1d30c2761ba4660576">TCI_CONNECT_CH</a>&#160;&#160;&#160;0</td></tr>
+<tr class="separator:a6e7f866b20684d1d30c2761ba4660576"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac61ab5a5e733511c8cfe84c13e63b480"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___gprs_net_app_8c.html#ac61ab5a5e733511c8cfe84c13e63b480">UPDATA_FLASH_ADDR</a>&#160;&#160;&#160;0x08000000+138*1024</td></tr>
+<tr class="separator:ac61ab5a5e733511c8cfe84c13e63b480"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad02e462cab5b8f6eae040d4486d0b954"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___gprs_net_app_8c.html#ad02e462cab5b8f6eae040d4486d0b954">HARD_VERSION</a>&#160;&#160;&#160;&quot;000&quot;</td></tr>
+<tr class="separator:ad02e462cab5b8f6eae040d4486d0b954"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2bc8e5ffccad660400ee0f5744365c9f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___gprs_net_app_8c.html#a2bc8e5ffccad660400ee0f5744365c9f">SOFT_VERSION</a>&#160;&#160;&#160;&quot;00&quot;</td></tr>
+<tr class="separator:a2bc8e5ffccad660400ee0f5744365c9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf1a7984c85851f8e3a985caada375e4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___gprs_net_app_8c.html#acf1a7984c85851f8e3a985caada375e4">EQUIPMENT_KIN_NUM</a>&#160;&#160;&#160;4</td></tr>
+<tr class="separator:acf1a7984c85851f8e3a985caada375e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a37d6b29e19f7c48192f377224cfdd770"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___gprs_net_app_8c.html#a37d6b29e19f7c48192f377224cfdd770">EQUIPMENT_VIN_NUM</a>&#160;&#160;&#160;2</td></tr>
+<tr class="separator:a37d6b29e19f7c48192f377224cfdd770"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a24465d02ba1d9fca99d41a93d5a38d6e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___gprs_net_app_8c.html#a24465d02ba1d9fca99d41a93d5a38d6e">EQUIPMENT_IIN_NUM</a>&#160;&#160;&#160;2</td></tr>
+<tr class="separator:a24465d02ba1d9fca99d41a93d5a38d6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9af5a0d382fc3daa4e0faea2542543dc"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___gprs_net_app_8c.html#a9af5a0d382fc3daa4e0faea2542543dc">EQUIPMENT_FIN_NUM</a>&#160;&#160;&#160;2</td></tr>
+<tr class="separator:a9af5a0d382fc3daa4e0faea2542543dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35836688507ff3a7b43db418d7e02292"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___gprs_net_app_8c.html#a35836688507ff3a7b43db418d7e02292">EQUIPMENT_KOUT_NUM</a>&#160;&#160;&#160;4</td></tr>
+<tr class="separator:a35836688507ff3a7b43db418d7e02292"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f06811a7c80d43ddc4f60c1f4de6f77"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___gprs_net_app_8c.html#a3f06811a7c80d43ddc4f60c1f4de6f77">EQUIPMENT_VOUT_NUM</a>&#160;&#160;&#160;2</td></tr>
+<tr class="separator:a3f06811a7c80d43ddc4f60c1f4de6f77"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a471052377690eb27816b4892f874694b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___gprs_net_app_8c.html#a471052377690eb27816b4892f874694b">EQUIPMENT_IOUT_NUM</a>&#160;&#160;&#160;2</td></tr>
+<tr class="separator:a471052377690eb27816b4892f874694b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e45cd1244534e19b24746eca533303c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___gprs_net_app_8c.html#a2e45cd1244534e19b24746eca533303c">EQUIPMENT_FOUT_NUM</a>&#160;&#160;&#160;2</td></tr>
+<tr class="separator:a2e45cd1244534e19b24746eca533303c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:a90425f8e533838e64590663c16de87e2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___gprs_net_app_8c.html#a90425f8e533838e64590663c16de87e2">TCIServer_Parse</a> (INT8U *buf, INT16U len)</td></tr>
+<tr class="separator:a90425f8e533838e64590663c16de87e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d2f064d9906593f5293fd5fe4630a37"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___gprs_net_app_8c.html#a3d2f064d9906593f5293fd5fe4630a37">App_TciServerTaskCreate</a> (void)</td></tr>
+<tr class="separator:a3d2f064d9906593f5293fd5fe4630a37"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad7dae87e4340b3a31aac73c632f4c06f"><td class="memItemLeft" align="right" valign="top">INT8U&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___gprs_net_app_8c.html#ad7dae87e4340b3a31aac73c632f4c06f">ProgramFlash</a> (INT32U FLASH_ADR, INT8U *buf, INT16U len)</td></tr>
+<tr class="separator:ad7dae87e4340b3a31aac73c632f4c06f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+变量</h2></td></tr>
+<tr class="memitem:adaad570e97c42ecedf099092dbb00c75"><td class="memItemLeft" align="right" valign="top"><a class="el" href="uctsk___gprs_net_8h.html#a1cb5a07c5a9c6b884c88208bb432ba41">GSM_STRUCT1</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___gprs_net_app_8c.html#adaad570e97c42ecedf099092dbb00c75">Tci_s1</a></td></tr>
+<tr class="separator:adaad570e97c42ecedf099092dbb00c75"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc47fcf00b4269f3a0ac5e348b24a1ca"><td class="memItemLeft" >struct {</td></tr>
+<tr class="memitem:a7fcc4bae431399ee3876f9afb33a2894"><td class="memItemLeft" >&#160;&#160;&#160;INT8U&#160;&#160;&#160;<a class="el" href="uctsk___gprs_net_app_8c.html#a8c7a834a3122d9e19d5c4415ae171d22">TciNetWatchCount</a></td></tr>
+<tr class="separator:a7fcc4bae431399ee3876f9afb33a2894"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6976cccc73e4db5c19ac3db830e2ed19"><td class="memItemLeft" >&#160;&#160;&#160;INT8U&#160;&#160;&#160;<a class="el" href="uctsk___gprs_net_app_8c.html#a98cfe644350986816ca0ad5d90520329">UpdataDownTimer</a></td></tr>
+<tr class="separator:a6976cccc73e4db5c19ac3db830e2ed19"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3de8bf785c9a3e9892a92c6f63ab789c"><td class="memItemLeft" >&#160;&#160;&#160;INT16U&#160;&#160;&#160;<a class="el" href="uctsk___gprs_net_app_8c.html#a32c0ccb9b9ec686b596cb0fa8f8a6313">UpdataPacketNow</a></td></tr>
+<tr class="separator:a3de8bf785c9a3e9892a92c6f63ab789c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9e4de7807703d46d2e6091163391db0"><td class="memItemLeft" >&#160;&#160;&#160;INT16U&#160;&#160;&#160;<a class="el" href="uctsk___gprs_net_app_8c.html#ad489525a2df2bee951d7ac68ee58d78e">UpdataPacketSum</a></td></tr>
+<tr class="separator:af9e4de7807703d46d2e6091163391db0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5443a2c4db3460ab87799a4f0a8cdd02"><td class="memItemLeft" >&#160;&#160;&#160;INT8U&#160;&#160;&#160;<a class="el" href="uctsk___gprs_net_app_8c.html#a109641e03b0ae89fc0046d9a0a160db9">TxBuf</a> [100]</td></tr>
+<tr class="separator:a5443a2c4db3460ab87799a4f0a8cdd02"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f45a1dddd2e941491659ee581bff5c0"><td class="memItemLeft" >&#160;&#160;&#160;INT8U&#160;&#160;&#160;<a class="el" href="uctsk___gprs_net_app_8c.html#ac7662302144526a3704d8ac50bd1c673">RxBuf</a> [1100]</td></tr>
+<tr class="separator:a3f45a1dddd2e941491659ee581bff5c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad2f4009c025fe7c7206ba4940e93fb37"><td class="memItemLeft" >&#160;&#160;&#160;INT8U&#160;&#160;&#160;<a class="el" href="uctsk___gprs_net_app_8c.html#a3c6063bc70ab3ed5068d707b316c5302">KinBuf</a> [<a class="el" href="uctsk___gprs_net_app_8c.html#acf1a7984c85851f8e3a985caada375e4">EQUIPMENT_KIN_NUM</a>]</td></tr>
+<tr class="separator:ad2f4009c025fe7c7206ba4940e93fb37"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0fb0ad342d07c4a1e701cb00c6df1a3a"><td class="memItemLeft" >&#160;&#160;&#160;INT16U&#160;&#160;&#160;<a class="el" href="uctsk___gprs_net_app_8c.html#a7761e3488681ef4615d71cd7ff9fa90b">VinBuf</a> [<a class="el" href="uctsk___gprs_net_app_8c.html#a37d6b29e19f7c48192f377224cfdd770">EQUIPMENT_VIN_NUM</a>]</td></tr>
+<tr class="separator:a0fb0ad342d07c4a1e701cb00c6df1a3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a42fc9c5a30c6753ae2f81d327f6b325a"><td class="memItemLeft" >&#160;&#160;&#160;INT16U&#160;&#160;&#160;<a class="el" href="uctsk___gprs_net_app_8c.html#a9846de4eeee24d2de413437099a2f706">IinBuf</a> [<a class="el" href="uctsk___gprs_net_app_8c.html#a24465d02ba1d9fca99d41a93d5a38d6e">EQUIPMENT_IIN_NUM</a>]</td></tr>
+<tr class="separator:a42fc9c5a30c6753ae2f81d327f6b325a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66e0470640a751374b4e1c9440171caa"><td class="memItemLeft" >&#160;&#160;&#160;INT32U&#160;&#160;&#160;<a class="el" href="uctsk___gprs_net_app_8c.html#acda6871b0d2cdadc88a1e911984f34d5">FinBuf</a> [<a class="el" href="uctsk___gprs_net_app_8c.html#a9af5a0d382fc3daa4e0faea2542543dc">EQUIPMENT_FIN_NUM</a>]</td></tr>
+<tr class="separator:a66e0470640a751374b4e1c9440171caa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a874eb001621571d44cce626dfff8d40f"><td class="memItemLeft" >&#160;&#160;&#160;INT16U&#160;&#160;&#160;<a class="el" href="uctsk___gprs_net_app_8c.html#abd3d2ec2a568e6d7fc5a6da9955f2a55">KoutBuf</a> [<a class="el" href="uctsk___gprs_net_app_8c.html#a35836688507ff3a7b43db418d7e02292">EQUIPMENT_KOUT_NUM</a>]</td></tr>
+<tr class="separator:a874eb001621571d44cce626dfff8d40f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa842a59dd2870e42faf0c6df5988ec10"><td class="memItemLeft" >&#160;&#160;&#160;INT16U&#160;&#160;&#160;<a class="el" href="uctsk___gprs_net_app_8c.html#afe3d55344ddd1723555e889142073541">VoutBuf</a> [<a class="el" href="uctsk___gprs_net_app_8c.html#a3f06811a7c80d43ddc4f60c1f4de6f77">EQUIPMENT_VOUT_NUM</a>]</td></tr>
+<tr class="separator:aa842a59dd2870e42faf0c6df5988ec10"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa1b43ecf63106c4fec2753478cfc1f9f"><td class="memItemLeft" >&#160;&#160;&#160;INT16U&#160;&#160;&#160;<a class="el" href="uctsk___gprs_net_app_8c.html#a707d57a3a14262e44fba6045d7ef5d88">IoutBuf</a> [<a class="el" href="uctsk___gprs_net_app_8c.html#a471052377690eb27816b4892f874694b">EQUIPMENT_IOUT_NUM</a>]</td></tr>
+<tr class="separator:aa1b43ecf63106c4fec2753478cfc1f9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ccaeb8196707c24bf3d45298056a3c8"><td class="memItemLeft" >&#160;&#160;&#160;INT32U&#160;&#160;&#160;<a class="el" href="uctsk___gprs_net_app_8c.html#af0428790c586afedf2f01b300a8f597b">FoutBuf</a> [<a class="el" href="uctsk___gprs_net_app_8c.html#a2e45cd1244534e19b24746eca533303c">EQUIPMENT_FOUT_NUM</a>]</td></tr>
+<tr class="separator:a7ccaeb8196707c24bf3d45298056a3c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc47fcf00b4269f3a0ac5e348b24a1ca"><td class="memItemLeft" valign="top">}&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___gprs_net_app_8c.html#adc47fcf00b4269f3a0ac5e348b24a1ca">TCI_Variable</a></td></tr>
+<tr class="separator:adc47fcf00b4269f3a0ac5e348b24a1ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a025a8ad0c495b34efed96219b3ed1bd7"><td class="memItemLeft" align="right" valign="top">INT32U&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___gprs_net_app_8c.html#a025a8ad0c495b34efed96219b3ed1bd7">RelayBuf</a> [4]</td></tr>
+<tr class="separator:a025a8ad0c495b34efed96219b3ed1bd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">宏定义说明</h2>
+<a id="a9af5a0d382fc3daa4e0faea2542543dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9af5a0d382fc3daa4e0faea2542543dc">&#9670;&nbsp;</a></span>EQUIPMENT_FIN_NUM</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define EQUIPMENT_FIN_NUM&#160;&#160;&#160;2</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2e45cd1244534e19b24746eca533303c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e45cd1244534e19b24746eca533303c">&#9670;&nbsp;</a></span>EQUIPMENT_FOUT_NUM</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define EQUIPMENT_FOUT_NUM&#160;&#160;&#160;2</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a24465d02ba1d9fca99d41a93d5a38d6e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a24465d02ba1d9fca99d41a93d5a38d6e">&#9670;&nbsp;</a></span>EQUIPMENT_IIN_NUM</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define EQUIPMENT_IIN_NUM&#160;&#160;&#160;2</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a471052377690eb27816b4892f874694b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a471052377690eb27816b4892f874694b">&#9670;&nbsp;</a></span>EQUIPMENT_IOUT_NUM</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define EQUIPMENT_IOUT_NUM&#160;&#160;&#160;2</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acf1a7984c85851f8e3a985caada375e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acf1a7984c85851f8e3a985caada375e4">&#9670;&nbsp;</a></span>EQUIPMENT_KIN_NUM</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define EQUIPMENT_KIN_NUM&#160;&#160;&#160;4</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a35836688507ff3a7b43db418d7e02292"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a35836688507ff3a7b43db418d7e02292">&#9670;&nbsp;</a></span>EQUIPMENT_KOUT_NUM</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define EQUIPMENT_KOUT_NUM&#160;&#160;&#160;4</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a37d6b29e19f7c48192f377224cfdd770"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a37d6b29e19f7c48192f377224cfdd770">&#9670;&nbsp;</a></span>EQUIPMENT_VIN_NUM</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define EQUIPMENT_VIN_NUM&#160;&#160;&#160;2</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3f06811a7c80d43ddc4f60c1f4de6f77"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3f06811a7c80d43ddc4f60c1f4de6f77">&#9670;&nbsp;</a></span>EQUIPMENT_VOUT_NUM</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define EQUIPMENT_VOUT_NUM&#160;&#160;&#160;2</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad02e462cab5b8f6eae040d4486d0b954"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad02e462cab5b8f6eae040d4486d0b954">&#9670;&nbsp;</a></span>HARD_VERSION</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define HARD_VERSION&#160;&#160;&#160;&quot;000&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2bc8e5ffccad660400ee0f5744365c9f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2bc8e5ffccad660400ee0f5744365c9f">&#9670;&nbsp;</a></span>SOFT_VERSION</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SOFT_VERSION&#160;&#160;&#160;&quot;00&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6e7f866b20684d1d30c2761ba4660576"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e7f866b20684d1d30c2761ba4660576">&#9670;&nbsp;</a></span>TCI_CONNECT_CH</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TCI_CONNECT_CH&#160;&#160;&#160;0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac61ab5a5e733511c8cfe84c13e63b480"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac61ab5a5e733511c8cfe84c13e63b480">&#9670;&nbsp;</a></span>UPDATA_FLASH_ADDR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define UPDATA_FLASH_ADDR&#160;&#160;&#160;0x08000000+138*1024</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">函数说明</h2>
+<a id="a3d2f064d9906593f5293fd5fe4630a37"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3d2f064d9906593f5293fd5fe4630a37">&#9670;&nbsp;</a></span>App_TciServerTaskCreate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void App_TciServerTaskCreate </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad7dae87e4340b3a31aac73c632f4c06f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad7dae87e4340b3a31aac73c632f4c06f">&#9670;&nbsp;</a></span>ProgramFlash()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">INT8U ProgramFlash </td>
+          <td>(</td>
+          <td class="paramtype">INT32U&#160;</td>
+          <td class="paramname"><em>FLASH_ADR</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">INT8U *&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">INT16U&#160;</td>
+          <td class="paramname"><em>len</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a90425f8e533838e64590663c16de87e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a90425f8e533838e64590663c16de87e2">&#9670;&nbsp;</a></span>TCIServer_Parse()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TCIServer_Parse </td>
+          <td>(</td>
+          <td class="paramtype">INT8U *&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">INT16U&#160;</td>
+          <td class="paramname"><em>len</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">变量说明</h2>
+<a id="acda6871b0d2cdadc88a1e911984f34d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acda6871b0d2cdadc88a1e911984f34d5">&#9670;&nbsp;</a></span>FinBuf</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">INT32U FinBuf[<a class="el" href="uctsk___gprs_net_app_8c.html#a9af5a0d382fc3daa4e0faea2542543dc">EQUIPMENT_FIN_NUM</a>]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af0428790c586afedf2f01b300a8f597b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af0428790c586afedf2f01b300a8f597b">&#9670;&nbsp;</a></span>FoutBuf</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">INT32U FoutBuf[<a class="el" href="uctsk___gprs_net_app_8c.html#a2e45cd1244534e19b24746eca533303c">EQUIPMENT_FOUT_NUM</a>]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9846de4eeee24d2de413437099a2f706"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9846de4eeee24d2de413437099a2f706">&#9670;&nbsp;</a></span>IinBuf</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">INT16U IinBuf[<a class="el" href="uctsk___gprs_net_app_8c.html#a24465d02ba1d9fca99d41a93d5a38d6e">EQUIPMENT_IIN_NUM</a>]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a707d57a3a14262e44fba6045d7ef5d88"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a707d57a3a14262e44fba6045d7ef5d88">&#9670;&nbsp;</a></span>IoutBuf</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">INT16U IoutBuf[<a class="el" href="uctsk___gprs_net_app_8c.html#a471052377690eb27816b4892f874694b">EQUIPMENT_IOUT_NUM</a>]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3c6063bc70ab3ed5068d707b316c5302"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c6063bc70ab3ed5068d707b316c5302">&#9670;&nbsp;</a></span>KinBuf</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">INT8U KinBuf[<a class="el" href="uctsk___gprs_net_app_8c.html#acf1a7984c85851f8e3a985caada375e4">EQUIPMENT_KIN_NUM</a>]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abd3d2ec2a568e6d7fc5a6da9955f2a55"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abd3d2ec2a568e6d7fc5a6da9955f2a55">&#9670;&nbsp;</a></span>KoutBuf</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">INT16U KoutBuf[<a class="el" href="uctsk___gprs_net_app_8c.html#a35836688507ff3a7b43db418d7e02292">EQUIPMENT_KOUT_NUM</a>]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a025a8ad0c495b34efed96219b3ed1bd7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a025a8ad0c495b34efed96219b3ed1bd7">&#9670;&nbsp;</a></span>RelayBuf</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">INT32U RelayBuf[4]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac7662302144526a3704d8ac50bd1c673"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac7662302144526a3704d8ac50bd1c673">&#9670;&nbsp;</a></span>RxBuf</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">INT8U RxBuf[1100]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adaad570e97c42ecedf099092dbb00c75"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adaad570e97c42ecedf099092dbb00c75">&#9670;&nbsp;</a></span>Tci_s1</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="uctsk___gprs_net_8h.html#a1cb5a07c5a9c6b884c88208bb432ba41">GSM_STRUCT1</a> Tci_s1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adc47fcf00b4269f3a0ac5e348b24a1ca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adc47fcf00b4269f3a0ac5e348b24a1ca">&#9670;&nbsp;</a></span>TCI_Variable</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct { ... }   TCI_Variable</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8c7a834a3122d9e19d5c4415ae171d22"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8c7a834a3122d9e19d5c4415ae171d22">&#9670;&nbsp;</a></span>TciNetWatchCount</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">INT8U TciNetWatchCount</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a109641e03b0ae89fc0046d9a0a160db9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a109641e03b0ae89fc0046d9a0a160db9">&#9670;&nbsp;</a></span>TxBuf</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">INT8U TxBuf[100]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a98cfe644350986816ca0ad5d90520329"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a98cfe644350986816ca0ad5d90520329">&#9670;&nbsp;</a></span>UpdataDownTimer</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">INT8U UpdataDownTimer</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a32c0ccb9b9ec686b596cb0fa8f8a6313"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a32c0ccb9b9ec686b596cb0fa8f8a6313">&#9670;&nbsp;</a></span>UpdataPacketNow</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">INT16U UpdataPacketNow</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad489525a2df2bee951d7ac68ee58d78e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad489525a2df2bee951d7ac68ee58d78e">&#9670;&nbsp;</a></span>UpdataPacketSum</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">INT16U UpdataPacketSum</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7761e3488681ef4615d71cd7ff9fa90b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7761e3488681ef4615d71cd7ff9fa90b">&#9670;&nbsp;</a></span>VinBuf</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">INT16U VinBuf[<a class="el" href="uctsk___gprs_net_app_8c.html#a37d6b29e19f7c48192f377224cfdd770">EQUIPMENT_VIN_NUM</a>]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afe3d55344ddd1723555e889142073541"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe3d55344ddd1723555e889142073541">&#9670;&nbsp;</a></span>VoutBuf</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">INT16U VoutBuf[<a class="el" href="uctsk___gprs_net_app_8c.html#a3f06811a7c80d43ddc4f60c1f4de6f77">EQUIPMENT_VOUT_NUM</a>]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

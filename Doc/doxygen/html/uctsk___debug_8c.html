@@ -1,0 +1,590 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>xsl: E:/XkapSourceCode/Xkap-Stm32/Xkap-Stm32/User/UserTask/uctsk_Debug.c 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">xsl
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">源码说明</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.13 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',false,false,'search.php','搜索');
+});
+</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_6d4e12d46ad8519ff7b80e874016d102.html">User</a></li><li class="navelem"><a class="el" href="dir_ba9e781c49be9d79c84eb9994eefebec.html">UserTask</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">结构体</a> &#124;
+<a href="#define-members">宏定义</a> &#124;
+<a href="#enum-members">枚举</a> &#124;
+<a href="#func-members">函数</a> &#124;
+<a href="#var-members">变量</a>  </div>
+  <div class="headertitle">
+<div class="title">uctsk_Debug.c 文件参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="uctsk___debug_8h_source.html">uctsk_Debug.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_bsp___rtc_8h_source.html">Bsp_Rtc.h</a>&quot;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+结构体</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_debug_rx.html">DebugRx</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+宏定义</h2></td></tr>
+<tr class="memitem:ad5c208fa570790ba3fc78b4bba087fe5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___debug_8c.html#ad5c208fa570790ba3fc78b4bba087fe5">DEBUG_GLOBAL</a></td></tr>
+<tr class="separator:ad5c208fa570790ba3fc78b4bba087fe5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acaa048a85ebde0df16d93510e5af7b88"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___debug_8c.html#acaa048a85ebde0df16d93510e5af7b88">DEBUG_MENUTAB_NUM</a>&#160;&#160;&#160;(sizeof(Debug_MenuTab)/sizeof(Debug_S_Menu))</td></tr>
+<tr class="separator:acaa048a85ebde0df16d93510e5af7b88"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa350c9237d4b445ea3a8c8adc2010e1a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___debug_8c.html#aa350c9237d4b445ea3a8c8adc2010e1a">DEBUG_RTT_DELAY_MS</a>(x)</td></tr>
+<tr class="separator:aa350c9237d4b445ea3a8c8adc2010e1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aede415ad9353fdaeff2f4bd8a621149a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___debug_8c.html#aede415ad9353fdaeff2f4bd8a621149a">DEBUG_IN_BUF_MAX</a>&#160;&#160;&#160;5</td></tr>
+<tr class="separator:aede415ad9353fdaeff2f4bd8a621149a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+枚举</h2></td></tr>
+<tr class="memitem:a42c2985b8268c87f27304706356fed28"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___debug_8c.html#a42c2985b8268c87f27304706356fed28">DEBUG_STEP</a> { <a class="el" href="uctsk___debug_8c.html#a42c2985b8268c87f27304706356fed28a0660648bd920e61c6236437574e1ca2a">DEBUG_STEP_INIT</a> =0, 
+<a class="el" href="uctsk___debug_8c.html#a42c2985b8268c87f27304706356fed28a52516cea86b8cb3f40bc86b73a84b3f4">DEBUG_STEP_MAIN_MENU</a>, 
+<a class="el" href="uctsk___debug_8c.html#a42c2985b8268c87f27304706356fed28a88c1d1bb9931bca83b7428bac0b2f8b9">DEBUG_STEP_IDLE</a>
+ }</td></tr>
+<tr class="separator:a42c2985b8268c87f27304706356fed28"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:a40f39d77cb43c2385b3595140538ea11"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___debug_8c.html#a40f39d77cb43c2385b3595140538ea11">MODULE_OS_TASK_TAB</a> (AppTaskDebugTCB)</td></tr>
+<tr class="separator:a40f39d77cb43c2385b3595140538ea11"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9748ddfa7126e2bf75d785bf8bb8f528"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___debug_8c.html#a9748ddfa7126e2bf75d785bf8bb8f528">MODULE_OS_TASK_STK</a> (AppTaskDebugStk, APP_CFG_TASK_DEBUG_STK_SIZE)</td></tr>
+<tr class="separator:a9748ddfa7126e2bf75d785bf8bb8f528"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8079bf8b88bd75766cc312a9f859cec4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___debug_8c.html#a8079bf8b88bd75766cc312a9f859cec4">App_DebugTaskCreate</a> (void)</td></tr>
+<tr class="separator:a8079bf8b88bd75766cc312a9f859cec4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba4ba4d9ae40dd8249c35d07ed2a523a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___debug_8c.html#aba4ba4d9ae40dd8249c35d07ed2a523a">DebugInit</a> (void)</td></tr>
+<tr class="separator:aba4ba4d9ae40dd8249c35d07ed2a523a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aadf1b06fc66458243f6eaebdbbeae9a9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___debug_8c.html#aadf1b06fc66458243f6eaebdbbeae9a9">DebugIn</a> (int8_t *str, uint16_t *Comlength)</td></tr>
+<tr class="separator:aadf1b06fc66458243f6eaebdbbeae9a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0fd100d23936331111ad777e5958bec3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___debug_8c.html#a0fd100d23936331111ad777e5958bec3">DebugInClear</a> (void)</td></tr>
+<tr class="separator:a0fd100d23936331111ad777e5958bec3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89e23c9d83d3f0a1115cba84a9a20dec"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___debug_8c.html#a89e23c9d83d3f0a1115cba84a9a20dec">DebugInputNum</a> (uint16_t *Number, uint8_t MaxDight)</td></tr>
+<tr class="separator:a89e23c9d83d3f0a1115cba84a9a20dec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a696ec301cfb4ca7400bffaf38a2e1805"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___debug_8c.html#a696ec301cfb4ca7400bffaf38a2e1805">DebugOut</a> (int8_t *str, uint16_t Comlength)</td></tr>
+<tr class="separator:a696ec301cfb4ca7400bffaf38a2e1805"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac10a683701dad4d5396f2b20853815df"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___debug_8c.html#ac10a683701dad4d5396f2b20853815df">DebugLogOut</a> (<a class="el" href="uctsk___debug_8h.html#a64c494cbdabe82cf0d37cf77ea559aa9">DEBUG_E_LEVEL</a> level, int8_t *str, uint16_t Comlength)</td></tr>
+<tr class="separator:ac10a683701dad4d5396f2b20853815df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c3f1258d0eb582698c49c394efd370b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___debug_8c.html#a1c3f1258d0eb582698c49c394efd370b">DebugOutStr</a> (int8_t *str)</td></tr>
+<tr class="separator:a1c3f1258d0eb582698c49c394efd370b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af19981b92f8c1f8fc8ec3882cb832638"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___debug_8c.html#af19981b92f8c1f8fc8ec3882cb832638">DebugLogOutStr</a> (<a class="el" href="uctsk___debug_8h.html#a64c494cbdabe82cf0d37cf77ea559aa9">DEBUG_E_LEVEL</a> level, int8_t *str)</td></tr>
+<tr class="separator:af19981b92f8c1f8fc8ec3882cb832638"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a001c3798ad430d68686a10a1b58232fa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___debug_8c.html#a001c3798ad430d68686a10a1b58232fa">DebugOutHex</a> (char *pname, uint8_t *pbuf, int16_t len)</td></tr>
+<tr class="separator:a001c3798ad430d68686a10a1b58232fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc0a94afc7e28d2c85687997990f6284"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___debug_8c.html#abc0a94afc7e28d2c85687997990f6284">DebugLogOutHex</a> (<a class="el" href="uctsk___debug_8h.html#a64c494cbdabe82cf0d37cf77ea559aa9">DEBUG_E_LEVEL</a> level, char *pname, uint8_t *pbuf, int16_t len)</td></tr>
+<tr class="separator:abc0a94afc7e28d2c85687997990f6284"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe3ff648304493adb380dd36884fa9ac"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___debug_8c.html#afe3ff648304493adb380dd36884fa9ac">Debug_InterruptRx</a> (uint8_t *d, uint16_t len)</td></tr>
+<tr class="separator:afe3ff648304493adb380dd36884fa9ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+变量</h2></td></tr>
+<tr class="memitem:a2de59e58580909a43798fbc99ee12663"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="struct_debug_rx.html">DebugRx</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___debug_8c.html#a2de59e58580909a43798fbc99ee12663">DebugRx</a></td></tr>
+<tr class="separator:a2de59e58580909a43798fbc99ee12663"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">宏定义说明</h2>
+<a id="ad5c208fa570790ba3fc78b4bba087fe5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad5c208fa570790ba3fc78b4bba087fe5">&#9670;&nbsp;</a></span>DEBUG_GLOBAL</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DEBUG_GLOBAL</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aede415ad9353fdaeff2f4bd8a621149a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aede415ad9353fdaeff2f4bd8a621149a">&#9670;&nbsp;</a></span>DEBUG_IN_BUF_MAX</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DEBUG_IN_BUF_MAX&#160;&#160;&#160;5</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acaa048a85ebde0df16d93510e5af7b88"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acaa048a85ebde0df16d93510e5af7b88">&#9670;&nbsp;</a></span>DEBUG_MENUTAB_NUM</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DEBUG_MENUTAB_NUM&#160;&#160;&#160;(sizeof(Debug_MenuTab)/sizeof(Debug_S_Menu))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa350c9237d4b445ea3a8c8adc2010e1a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa350c9237d4b445ea3a8c8adc2010e1a">&#9670;&nbsp;</a></span>DEBUG_RTT_DELAY_MS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DEBUG_RTT_DELAY_MS</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">x</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">枚举类型说明</h2>
+<a id="a42c2985b8268c87f27304706356fed28"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a42c2985b8268c87f27304706356fed28">&#9670;&nbsp;</a></span>DEBUG_STEP</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="uctsk___debug_8c.html#a42c2985b8268c87f27304706356fed28">DEBUG_STEP</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><a id="a42c2985b8268c87f27304706356fed28a0660648bd920e61c6236437574e1ca2a"></a>DEBUG_STEP_INIT&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a42c2985b8268c87f27304706356fed28a52516cea86b8cb3f40bc86b73a84b3f4"></a>DEBUG_STEP_MAIN_MENU&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a42c2985b8268c87f27304706356fed28a88c1d1bb9931bca83b7428bac0b2f8b9"></a>DEBUG_STEP_IDLE&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">函数说明</h2>
+<a id="a8079bf8b88bd75766cc312a9f859cec4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8079bf8b88bd75766cc312a9f859cec4">&#9670;&nbsp;</a></span>App_DebugTaskCreate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void App_DebugTaskCreate </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afe3ff648304493adb380dd36884fa9ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe3ff648304493adb380dd36884fa9ac">&#9670;&nbsp;</a></span>Debug_InterruptRx()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Debug_InterruptRx </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>d</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>len</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aadf1b06fc66458243f6eaebdbbeae9a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aadf1b06fc66458243f6eaebdbbeae9a9">&#9670;&nbsp;</a></span>DebugIn()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DebugIn </td>
+          <td>(</td>
+          <td class="paramtype">int8_t *&#160;</td>
+          <td class="paramname"><em>str</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t *&#160;</td>
+          <td class="paramname"><em>Comlength</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0fd100d23936331111ad777e5958bec3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0fd100d23936331111ad777e5958bec3">&#9670;&nbsp;</a></span>DebugInClear()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DebugInClear </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aba4ba4d9ae40dd8249c35d07ed2a523a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aba4ba4d9ae40dd8249c35d07ed2a523a">&#9670;&nbsp;</a></span>DebugInit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DebugInit </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a89e23c9d83d3f0a1115cba84a9a20dec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a89e23c9d83d3f0a1115cba84a9a20dec">&#9670;&nbsp;</a></span>DebugInputNum()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t DebugInputNum </td>
+          <td>(</td>
+          <td class="paramtype">uint16_t *&#160;</td>
+          <td class="paramname"><em>Number</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>MaxDight</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac10a683701dad4d5396f2b20853815df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac10a683701dad4d5396f2b20853815df">&#9670;&nbsp;</a></span>DebugLogOut()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DebugLogOut </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="uctsk___debug_8h.html#a64c494cbdabe82cf0d37cf77ea559aa9">DEBUG_E_LEVEL</a>&#160;</td>
+          <td class="paramname"><em>level</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int8_t *&#160;</td>
+          <td class="paramname"><em>str</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>Comlength</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abc0a94afc7e28d2c85687997990f6284"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc0a94afc7e28d2c85687997990f6284">&#9670;&nbsp;</a></span>DebugLogOutHex()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DebugLogOutHex </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="uctsk___debug_8h.html#a64c494cbdabe82cf0d37cf77ea559aa9">DEBUG_E_LEVEL</a>&#160;</td>
+          <td class="paramname"><em>level</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>pname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>pbuf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int16_t&#160;</td>
+          <td class="paramname"><em>len</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af19981b92f8c1f8fc8ec3882cb832638"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af19981b92f8c1f8fc8ec3882cb832638">&#9670;&nbsp;</a></span>DebugLogOutStr()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DebugLogOutStr </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="uctsk___debug_8h.html#a64c494cbdabe82cf0d37cf77ea559aa9">DEBUG_E_LEVEL</a>&#160;</td>
+          <td class="paramname"><em>level</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int8_t *&#160;</td>
+          <td class="paramname"><em>str</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a696ec301cfb4ca7400bffaf38a2e1805"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a696ec301cfb4ca7400bffaf38a2e1805">&#9670;&nbsp;</a></span>DebugOut()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DebugOut </td>
+          <td>(</td>
+          <td class="paramtype">int8_t *&#160;</td>
+          <td class="paramname"><em>str</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>Comlength</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a001c3798ad430d68686a10a1b58232fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a001c3798ad430d68686a10a1b58232fa">&#9670;&nbsp;</a></span>DebugOutHex()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DebugOutHex </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>pname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>pbuf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int16_t&#160;</td>
+          <td class="paramname"><em>len</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1c3f1258d0eb582698c49c394efd370b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c3f1258d0eb582698c49c394efd370b">&#9670;&nbsp;</a></span>DebugOutStr()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DebugOutStr </td>
+          <td>(</td>
+          <td class="paramtype">int8_t *&#160;</td>
+          <td class="paramname"><em>str</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9748ddfa7126e2bf75d785bf8bb8f528"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9748ddfa7126e2bf75d785bf8bb8f528">&#9670;&nbsp;</a></span>MODULE_OS_TASK_STK()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MODULE_OS_TASK_STK </td>
+          <td>(</td>
+          <td class="paramtype">AppTaskDebugStk&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">APP_CFG_TASK_DEBUG_STK_SIZE&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a40f39d77cb43c2385b3595140538ea11"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a40f39d77cb43c2385b3595140538ea11">&#9670;&nbsp;</a></span>MODULE_OS_TASK_TAB()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MODULE_OS_TASK_TAB </td>
+          <td>(</td>
+          <td class="paramtype">AppTaskDebugTCB&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">变量说明</h2>
+<a id="a2de59e58580909a43798fbc99ee12663"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2de59e58580909a43798fbc99ee12663">&#9670;&nbsp;</a></span>DebugRx</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct <a class="el" href="struct_debug_rx.html">DebugRx</a>  <a class="el" href="struct_debug_rx.html">DebugRx</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

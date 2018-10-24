@@ -1,0 +1,69 @@
+L 1 "..\..\Libraries\STM32_USB_Device_Library\Class\cdc\src\usbd_cdc_core.c"
+N/**
+N  ******************************************************************************
+N  * @file    usbd_cdc_core.c
+N  * @author  MCD Application Team
+N  * @version V1.1.0
+N  * @date    19-March-2012
+N  * @brief   This file provides the high layer firmware functions to manage the 
+N  *          following functionalities of the USB CDC Class:
+N  *           - Initialization and Configuration of high and low layer
+N  *           - Enumeration as CDC Device (and enumeration for each implemented memory interface)
+N  *           - OUT/IN data transfer
+N  *           - Command IN transfer (class requests management)
+N  *           - Error management
+N  *           
+N  *  @verbatim
+N  *      
+N  *          ===================================================================      
+N  *                                CDC Class Driver Description
+N  *          =================================================================== 
+N  *           This driver manages the "Universal Serial Bus Class Definitions for Communications Devices
+N  *           Revision 1.2 November 16, 2007" and the sub-protocol specification of "Universal Serial Bus 
+N  *           Communications Class Subclass Specification for PSTN Devices Revision 1.2 February 9, 2007"
+N  *           This driver implements the following aspects of the specification:
+N  *             - Device descriptor management
+N  *             - Configuration descriptor management
+N  *             - Enumeration as CDC device with 2 data endpoints (IN and OUT) and 1 command endpoint (IN)
+N  *             - Requests management (as described in section 6.2 in specification)
+N  *             - Abstract Control Model compliant
+N  *             - Union Functional collection (using 1 IN endpoint for control)
+N  *             - Data interface class
+N
+N  *           @note
+N  *             For the Abstract Control Model, this core allows only transmitting the requests to
+N  *             lower layer dispatcher (ie. usbd_cdc_vcp.c/.h) which should manage each request and
+N  *             perform relative actions.
+N  * 
+N  *           These aspects may be enriched or modified for a specific user application.
+N  *          
+N  *            This driver doesn't implement the following aspects of the specification 
+N  *            (but it is possible to manage these features with some modifications on this driver):
+N  *             - Any class-specific aspect relative to communication classes should be managed by user application.
+N  *             - All communication classes other than PSTN are not managed
+N  *      
+N  *  @endverbatim
+N  *                                  
+N  ******************************************************************************
+N  * @attention
+N  *
+N  * <h2><center>&copy; COPYRIGHT 2012 STMicroelectronics</center></h2>
+N  *
+N  * Licensed under MCD-ST Liberty SW License Agreement V2, (the "License");
+N  * You may not use this file except in compliance with the License.
+N  * You may obtain a copy of the License at:
+N  *
+N  *        http://www.st.com/software_license_agreement_liberty_v2
+N  *
+N  * Unless required by applicable law or agreed to in writing, software 
+N  * distributed under the License is distributed on an "AS IS" BASIS, 
+N  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+N  * See the License for the specific language governing permissions and
+N  * limitations under the License.
+N  *
+N  ******************************************************************************
+N  */ 
+N
+N/* Includes ------------------------------------------------------------------*/
+C "..\..\Libraries\STM32_USB_Device_Library\Class\cdc\src\usbd_cdc_core.c" 67 27 cannot open source input file "usbd_cdc_core.h": No such file or directory
+N#include "usbd_cdc_core.h"

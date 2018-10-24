@@ -1,0 +1,50 @@
+L 1 "..\..\User\uCOS-III\uC-CPU\ARM-Cortex-M4\RealView\cpu_c.c"
+N/*
+N*********************************************************************************************************
+N*                                                uC/CPU
+N*                                    CPU CONFIGURATION & PORT LAYER
+N*
+N*                          (c) Copyright 2004-2011; Micrium, Inc.; Weston, FL
+N*
+N*               All rights reserved.  Protected by international copyright laws.
+N*
+N*               uC/CPU is provided in source form to registered licensees ONLY.  It is 
+N*               illegal to distribute this source code to any third party unless you receive 
+N*               written permission by an authorized Micrium representative.  Knowledge of 
+N*               the source code may NOT be used to develop a similar product.
+N*
+N*               Please help us continue to provide the Embedded community with the finest 
+N*               software available.  Your honesty is greatly appreciated.
+N*
+N*               You can contact us at www.micrium.com.
+N*********************************************************************************************************
+N*/
+N
+N/*
+N*********************************************************************************************************
+N*
+N*                                            CPU PORT FILE
+N*
+N*                                            ARM-Cortex-M4
+N*                                      RealView Development Suite
+N*                            RealView Microcontroller Development Kit (MDK)
+N*                                       ARM Developer Suite (ADS)
+N*                                            Keil uVision
+N*
+N* Filename      : cpu_c.c
+N* Version       : V1.29.01.00
+N* Programmer(s) : JJL
+N*                 BAN
+N*********************************************************************************************************
+N*/
+N
+N
+N/*
+N*********************************************************************************************************
+N*                                            INCLUDE FILES
+N*********************************************************************************************************
+N*/
+N
+N#define   MICRIUM_SOURCE
+C "..\..\User\uCOS-III\uC-CPU\ARM-Cortex-M4\RealView\cpu_c.c" 48 18 cannot open source input file "cpu.h": No such file or directory
+N#include  <cpu.h>

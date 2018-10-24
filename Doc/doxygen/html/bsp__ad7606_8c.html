@@ -1,0 +1,635 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>xsl: E:/XkapSourceCode/Xkap-Stm32/Xkap-Stm32/User/UserBsp/Stm32F4/src/bsp_ad7606.c 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">xsl
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">源码说明</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.13 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',false,false,'search.php','搜索');
+});
+</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_6d4e12d46ad8519ff7b80e874016d102.html">User</a></li><li class="navelem"><a class="el" href="dir_a31a870a1361c5173f8d637697bb576e.html">UserBsp</a></li><li class="navelem"><a class="el" href="dir_5e177c7cc544a0a92a21db9013c51e57.html">Stm32F4</a></li><li class="navelem"><a class="el" href="dir_d01952803e2c83a827a93ec31a7773bd.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#define-members">宏定义</a> &#124;
+<a href="#func-members">函数</a> &#124;
+<a href="#var-members">变量</a>  </div>
+  <div class="headertitle">
+<div class="title">bsp_ad7606.c 文件参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;bsp.h&quot;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+宏定义</h2></td></tr>
+<tr class="memitem:a0d5c28722bbbc798898e5e9fffb387d8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__ad7606_8c.html#a0d5c28722bbbc798898e5e9fffb387d8">OS0_1</a>()&#160;&#160;&#160;GPIOH-&gt;BSRRL = GPIO_Pin_9</td></tr>
+<tr class="separator:a0d5c28722bbbc798898e5e9fffb387d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a813e11c4613be27ceeb76e8d1f10ed18"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__ad7606_8c.html#a813e11c4613be27ceeb76e8d1f10ed18">OS0_0</a>()&#160;&#160;&#160;GPIOH-&gt;BSRRH = GPIO_Pin_9</td></tr>
+<tr class="separator:a813e11c4613be27ceeb76e8d1f10ed18"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a32c2b4cbe0574e5fc52b8ebf0c705015"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__ad7606_8c.html#a32c2b4cbe0574e5fc52b8ebf0c705015">OS1_1</a>()&#160;&#160;&#160;GPIOH-&gt;BSRRL = GPIO_Pin_10</td></tr>
+<tr class="separator:a32c2b4cbe0574e5fc52b8ebf0c705015"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1aa74064cbae785bfecb49ff319a6a86"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__ad7606_8c.html#a1aa74064cbae785bfecb49ff319a6a86">OS1_0</a>()&#160;&#160;&#160;GPIOH-&gt;BSRRH = GPIO_Pin_10</td></tr>
+<tr class="separator:a1aa74064cbae785bfecb49ff319a6a86"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab43084f28a38d8828cf764adeb34b0a0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__ad7606_8c.html#ab43084f28a38d8828cf764adeb34b0a0">OS2_1</a>()&#160;&#160;&#160;GPIOH-&gt;BSRRL = GPIO_Pin_11</td></tr>
+<tr class="separator:ab43084f28a38d8828cf764adeb34b0a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a203c261e0b71684b00c8f25033b65320"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__ad7606_8c.html#a203c261e0b71684b00c8f25033b65320">OS2_0</a>()&#160;&#160;&#160;GPIOH-&gt;BSRRH = GPIO_Pin_11</td></tr>
+<tr class="separator:a203c261e0b71684b00c8f25033b65320"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5fec93c9c50a401fcbd975b9d88d7989"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__ad7606_8c.html#a5fec93c9c50a401fcbd975b9d88d7989">CONVST_1</a>()&#160;&#160;&#160;GPIOH-&gt;BSRRL = GPIO_Pin_12</td></tr>
+<tr class="separator:a5fec93c9c50a401fcbd975b9d88d7989"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a752e3e0471c675500b34950f64a1e3db"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__ad7606_8c.html#a752e3e0471c675500b34950f64a1e3db">CONVST_0</a>()&#160;&#160;&#160;GPIOH-&gt;BSRRH = GPIO_Pin_12</td></tr>
+<tr class="separator:a752e3e0471c675500b34950f64a1e3db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8da104a48ac925493746d848ddda0b5e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__ad7606_8c.html#a8da104a48ac925493746d848ddda0b5e">RANGE_1</a>()&#160;&#160;&#160;GPIOH-&gt;BSRRL = GPIO_Pin_14</td></tr>
+<tr class="separator:a8da104a48ac925493746d848ddda0b5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ed86ffb276244795c2e44138ab22f88"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__ad7606_8c.html#a7ed86ffb276244795c2e44138ab22f88">RANGE_0</a>()&#160;&#160;&#160;GPIOH-&gt;BSRRH = GPIO_Pin_14</td></tr>
+<tr class="separator:a7ed86ffb276244795c2e44138ab22f88"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4386df3662564c2ea5458ce17abe1950"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__ad7606_8c.html#a4386df3662564c2ea5458ce17abe1950">RESET_1</a>()&#160;&#160;&#160;GPIOI-&gt;BSRRL = GPIO_Pin_4</td></tr>
+<tr class="separator:a4386df3662564c2ea5458ce17abe1950"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a645ab8a1c396e491df36e2dbb4210a6e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__ad7606_8c.html#a645ab8a1c396e491df36e2dbb4210a6e">RESET_0</a>()&#160;&#160;&#160;GPIOI-&gt;BSRRH = GPIO_Pin_4</td></tr>
+<tr class="separator:a645ab8a1c396e491df36e2dbb4210a6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76f8c06f61b6d2d07e13cdd9db67e453"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__ad7606_8c.html#a76f8c06f61b6d2d07e13cdd9db67e453">AD7606_RESULT</a>()&#160;&#160;&#160;*(__IO uint16_t *)0x6C400000</td></tr>
+<tr class="separator:a76f8c06f61b6d2d07e13cdd9db67e453"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:a57042c065bf8e7532fdb4471b0f94908"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__ad7606_8c.html#a57042c065bf8e7532fdb4471b0f94908">bsp_InitAD7606</a> (void)</td></tr>
+<tr class="separator:a57042c065bf8e7532fdb4471b0f94908"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f7a521f5703094c4a1712f9ccf36bc3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__ad7606_8c.html#a9f7a521f5703094c4a1712f9ccf36bc3">AD7606_SetOS</a> (uint8_t _ucOS)</td></tr>
+<tr class="separator:a9f7a521f5703094c4a1712f9ccf36bc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab63035215497831eb47638ded3f475c2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__ad7606_8c.html#ab63035215497831eb47638ded3f475c2">AD7606_SetInputRange</a> (uint8_t _ucRange)</td></tr>
+<tr class="separator:ab63035215497831eb47638ded3f475c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e63e50fea34f8b8dcd6a2fbacfe05e7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__ad7606_8c.html#a7e63e50fea34f8b8dcd6a2fbacfe05e7">AD7606_Reset</a> (void)</td></tr>
+<tr class="separator:a7e63e50fea34f8b8dcd6a2fbacfe05e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa721938c3e8159dad9a7a0a3d1da6e4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__ad7606_8c.html#afa721938c3e8159dad9a7a0a3d1da6e4">AD7606_StartConvst</a> (void)</td></tr>
+<tr class="separator:afa721938c3e8159dad9a7a0a3d1da6e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd779dec1ea2916bc6c086c11c6d5495"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__ad7606_8c.html#afd779dec1ea2916bc6c086c11c6d5495">AD7606_ReadNowAdc</a> (void)</td></tr>
+<tr class="separator:afd779dec1ea2916bc6c086c11c6d5495"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aabf2c8576d81d5a9b67e3b496d2c7146"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__ad7606_8c.html#aabf2c8576d81d5a9b67e3b496d2c7146">AD7606_EnterAutoMode</a> (uint32_t _ulFreq)</td></tr>
+<tr class="separator:aabf2c8576d81d5a9b67e3b496d2c7146"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a195bfe962f71d75885731074a4fc9847"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__ad7606_8c.html#a195bfe962f71d75885731074a4fc9847">AD7606_HasNewData</a> (void)</td></tr>
+<tr class="separator:a195bfe962f71d75885731074a4fc9847"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a352f517725a2f9154cce75fa3ee30d60"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__ad7606_8c.html#a352f517725a2f9154cce75fa3ee30d60">AD7606_FifoFull</a> (void)</td></tr>
+<tr class="separator:a352f517725a2f9154cce75fa3ee30d60"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af8681fca7c66aea5065dfb6974b6a8af"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__ad7606_8c.html#af8681fca7c66aea5065dfb6974b6a8af">AD7606_ReadFifo</a> (uint16_t *_usReadAdc)</td></tr>
+<tr class="separator:af8681fca7c66aea5065dfb6974b6a8af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a698d588efa73ce0d810f90e08059330e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__ad7606_8c.html#a698d588efa73ce0d810f90e08059330e">AD7606_StartRecord</a> (uint32_t _ulFreq)</td></tr>
+<tr class="separator:a698d588efa73ce0d810f90e08059330e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a152007f70ebf209f54633132abf15614"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__ad7606_8c.html#a152007f70ebf209f54633132abf15614">AD7606_StopRecord</a> (void)</td></tr>
+<tr class="separator:a152007f70ebf209f54633132abf15614"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb9964d1057f855e4d367b74310c99d4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__ad7606_8c.html#adb9964d1057f855e4d367b74310c99d4">AD7606_ISR</a> (void)</td></tr>
+<tr class="separator:adb9964d1057f855e4d367b74310c99d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b2096b8b2643286dc3a7e5110e5ae85"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__ad7606_8c.html#a7b2096b8b2643286dc3a7e5110e5ae85">EXTI9_5_IRQHandler</a> (void)</td></tr>
+<tr class="separator:a7b2096b8b2643286dc3a7e5110e5ae85"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+变量</h2></td></tr>
+<tr class="memitem:aed5d45fa77eda9e233936bec3340498a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_a_d7606___v_a_r___t.html">AD7606_VAR_T</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__ad7606_8c.html#aed5d45fa77eda9e233936bec3340498a">g_tAD7606</a></td></tr>
+<tr class="separator:aed5d45fa77eda9e233936bec3340498a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3fe65ff7fb4daddcb18550ba213f6bf7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_a_d7606___f_i_f_o___t.html">AD7606_FIFO_T</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__ad7606_8c.html#a3fe65ff7fb4daddcb18550ba213f6bf7">g_tAdcFifo</a></td></tr>
+<tr class="separator:a3fe65ff7fb4daddcb18550ba213f6bf7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">宏定义说明</h2>
+<a id="a76f8c06f61b6d2d07e13cdd9db67e453"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a76f8c06f61b6d2d07e13cdd9db67e453">&#9670;&nbsp;</a></span>AD7606_RESULT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define AD7606_RESULT</td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td>&#160;&#160;&#160;*(__IO uint16_t *)0x6C400000</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a752e3e0471c675500b34950f64a1e3db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a752e3e0471c675500b34950f64a1e3db">&#9670;&nbsp;</a></span>CONVST_0</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CONVST_0</td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td>&#160;&#160;&#160;GPIOH-&gt;BSRRH = GPIO_Pin_12</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5fec93c9c50a401fcbd975b9d88d7989"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5fec93c9c50a401fcbd975b9d88d7989">&#9670;&nbsp;</a></span>CONVST_1</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CONVST_1</td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td>&#160;&#160;&#160;GPIOH-&gt;BSRRL = GPIO_Pin_12</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a813e11c4613be27ceeb76e8d1f10ed18"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a813e11c4613be27ceeb76e8d1f10ed18">&#9670;&nbsp;</a></span>OS0_0</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define OS0_0</td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td>&#160;&#160;&#160;GPIOH-&gt;BSRRH = GPIO_Pin_9</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0d5c28722bbbc798898e5e9fffb387d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0d5c28722bbbc798898e5e9fffb387d8">&#9670;&nbsp;</a></span>OS0_1</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define OS0_1</td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td>&#160;&#160;&#160;GPIOH-&gt;BSRRL = GPIO_Pin_9</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1aa74064cbae785bfecb49ff319a6a86"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1aa74064cbae785bfecb49ff319a6a86">&#9670;&nbsp;</a></span>OS1_0</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define OS1_0</td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td>&#160;&#160;&#160;GPIOH-&gt;BSRRH = GPIO_Pin_10</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a32c2b4cbe0574e5fc52b8ebf0c705015"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a32c2b4cbe0574e5fc52b8ebf0c705015">&#9670;&nbsp;</a></span>OS1_1</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define OS1_1</td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td>&#160;&#160;&#160;GPIOH-&gt;BSRRL = GPIO_Pin_10</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a203c261e0b71684b00c8f25033b65320"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a203c261e0b71684b00c8f25033b65320">&#9670;&nbsp;</a></span>OS2_0</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define OS2_0</td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td>&#160;&#160;&#160;GPIOH-&gt;BSRRH = GPIO_Pin_11</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab43084f28a38d8828cf764adeb34b0a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab43084f28a38d8828cf764adeb34b0a0">&#9670;&nbsp;</a></span>OS2_1</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define OS2_1</td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td>&#160;&#160;&#160;GPIOH-&gt;BSRRL = GPIO_Pin_11</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7ed86ffb276244795c2e44138ab22f88"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ed86ffb276244795c2e44138ab22f88">&#9670;&nbsp;</a></span>RANGE_0</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RANGE_0</td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td>&#160;&#160;&#160;GPIOH-&gt;BSRRH = GPIO_Pin_14</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8da104a48ac925493746d848ddda0b5e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8da104a48ac925493746d848ddda0b5e">&#9670;&nbsp;</a></span>RANGE_1</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RANGE_1</td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td>&#160;&#160;&#160;GPIOH-&gt;BSRRL = GPIO_Pin_14</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a645ab8a1c396e491df36e2dbb4210a6e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a645ab8a1c396e491df36e2dbb4210a6e">&#9670;&nbsp;</a></span>RESET_0</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RESET_0</td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td>&#160;&#160;&#160;GPIOI-&gt;BSRRH = GPIO_Pin_4</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4386df3662564c2ea5458ce17abe1950"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4386df3662564c2ea5458ce17abe1950">&#9670;&nbsp;</a></span>RESET_1</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RESET_1</td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td>&#160;&#160;&#160;GPIOI-&gt;BSRRL = GPIO_Pin_4</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">函数说明</h2>
+<a id="aabf2c8576d81d5a9b67e3b496d2c7146"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aabf2c8576d81d5a9b67e3b496d2c7146">&#9670;&nbsp;</a></span>AD7606_EnterAutoMode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AD7606_EnterAutoMode </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>_ulFreq</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a352f517725a2f9154cce75fa3ee30d60"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a352f517725a2f9154cce75fa3ee30d60">&#9670;&nbsp;</a></span>AD7606_FifoFull()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t AD7606_FifoFull </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a195bfe962f71d75885731074a4fc9847"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a195bfe962f71d75885731074a4fc9847">&#9670;&nbsp;</a></span>AD7606_HasNewData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t AD7606_HasNewData </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adb9964d1057f855e4d367b74310c99d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb9964d1057f855e4d367b74310c99d4">&#9670;&nbsp;</a></span>AD7606_ISR()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AD7606_ISR </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af8681fca7c66aea5065dfb6974b6a8af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af8681fca7c66aea5065dfb6974b6a8af">&#9670;&nbsp;</a></span>AD7606_ReadFifo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t AD7606_ReadFifo </td>
+          <td>(</td>
+          <td class="paramtype">uint16_t *&#160;</td>
+          <td class="paramname"><em>_usReadAdc</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afd779dec1ea2916bc6c086c11c6d5495"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afd779dec1ea2916bc6c086c11c6d5495">&#9670;&nbsp;</a></span>AD7606_ReadNowAdc()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AD7606_ReadNowAdc </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7e63e50fea34f8b8dcd6a2fbacfe05e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e63e50fea34f8b8dcd6a2fbacfe05e7">&#9670;&nbsp;</a></span>AD7606_Reset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AD7606_Reset </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab63035215497831eb47638ded3f475c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab63035215497831eb47638ded3f475c2">&#9670;&nbsp;</a></span>AD7606_SetInputRange()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AD7606_SetInputRange </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>_ucRange</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9f7a521f5703094c4a1712f9ccf36bc3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f7a521f5703094c4a1712f9ccf36bc3">&#9670;&nbsp;</a></span>AD7606_SetOS()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AD7606_SetOS </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>_ucOS</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afa721938c3e8159dad9a7a0a3d1da6e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afa721938c3e8159dad9a7a0a3d1da6e4">&#9670;&nbsp;</a></span>AD7606_StartConvst()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AD7606_StartConvst </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a698d588efa73ce0d810f90e08059330e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a698d588efa73ce0d810f90e08059330e">&#9670;&nbsp;</a></span>AD7606_StartRecord()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AD7606_StartRecord </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>_ulFreq</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a152007f70ebf209f54633132abf15614"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a152007f70ebf209f54633132abf15614">&#9670;&nbsp;</a></span>AD7606_StopRecord()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AD7606_StopRecord </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a57042c065bf8e7532fdb4471b0f94908"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a57042c065bf8e7532fdb4471b0f94908">&#9670;&nbsp;</a></span>bsp_InitAD7606()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void bsp_InitAD7606 </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7b2096b8b2643286dc3a7e5110e5ae85"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b2096b8b2643286dc3a7e5110e5ae85">&#9670;&nbsp;</a></span>EXTI9_5_IRQHandler()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void EXTI9_5_IRQHandler </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">变量说明</h2>
+<a id="aed5d45fa77eda9e233936bec3340498a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aed5d45fa77eda9e233936bec3340498a">&#9670;&nbsp;</a></span>g_tAD7606</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_a_d7606___v_a_r___t.html">AD7606_VAR_T</a> g_tAD7606</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3fe65ff7fb4daddcb18550ba213f6bf7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3fe65ff7fb4daddcb18550ba213f6bf7">&#9670;&nbsp;</a></span>g_tAdcFifo</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_a_d7606___f_i_f_o___t.html">AD7606_FIFO_T</a> g_tAdcFifo</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

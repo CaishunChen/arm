@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>xsl: E:/XkapSourceCode/Xkap-Stm32/Xkap-Stm32/User/UserBsp/Bsp_NXP74HC165.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">xsl
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">源码说明</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.13 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',false,false,'search.php','搜索');
+});
+</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_6d4e12d46ad8519ff7b80e874016d102.html">User</a></li><li class="navelem"><a class="el" href="dir_a31a870a1361c5173f8d637697bb576e.html">UserBsp</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">Bsp_NXP74HC165.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_bsp___n_x_p74_h_c165_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#ifndef __BSP_NXP74HC165_H</span></div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#define __BSP_NXP74HC165_H</span></div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="comment">//-------------------加载库函数------------------------------</span></div><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="includes_8h.html">includes.h</a>&quot;</span></div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="comment">//-------------------接口宏定义(硬件相关)--------------------</span></div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor">#if   (defined(PROJECT_TCI_V30))</span></div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="comment">//----&gt;</span></div><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="comment">//数量</span></div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">#define BSP_NXP74HC165_NUM          1</span></div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="comment">//时钟</span></div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">#if   (defined(STM32F1))</span></div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="preprocessor">#define BSP_NXP74HC165_RCC_ENABLE   RCC_APB2PeriphClockCmd( RCC_APB2Periph_GPIOA|RCC_APB2Periph_GPIOE , ENABLE);</span></div><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="preprocessor">#elif (defined(STM32F4))</span></div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="preprocessor">#define BSP_NXP74HC165_RCC_ENABLE   RCC_AHB1PeriphClockCmd( RCC_APB2Periph_GPIOA|RCC_AHB1Periph_GPIOE , ENABLE);</span></div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="preprocessor">#endif</span></div><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="comment">//端口</span></div><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="preprocessor">#define BSP_NXP74HC165_SH_PORT      GPIOE</span></div><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="preprocessor">#define BSP_NXP74HC165_SH_PIN       GPIO_Pin_9</span></div><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="preprocessor">#define BSP_NXP74HC165_CLK_PORT     GPIOA</span></div><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="preprocessor">#define BSP_NXP74HC165_CLK_PIN      GPIO_Pin_0</span></div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="preprocessor">#define BSP_NXP74HC165_QH_PORT      GPIOE</span></div><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="preprocessor">#define BSP_NXP74HC165_QH_PIN       GPIO_Pin_10</span></div><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="comment">//&lt;----</span></div><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="preprocessor">#else </span></div><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="preprocessor">#error Please Set Project to Bsp_NXP74HC165.h</span></div><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="preprocessor">#endif</span></div><div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="comment">//-------------------接口宏定义(硬件无关)--------------------</span></div><div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="preprocessor">#if   (defined(STM32F1)||defined(STM32F4))</span></div><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="preprocessor">#define BSP_NXP74HC165_SH_SET       GPIO_SetBits(BSP_NXP74HC165_SH_PORT, BSP_NXP74HC165_SH_PIN)</span></div><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="preprocessor">#define BSP_NXP74HC165_SH_CLR       GPIO_ResetBits(BSP_NXP74HC165_SH_PORT, BSP_NXP74HC165_SH_PIN)</span></div><div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="preprocessor">#define BSP_NXP74HC165_CLK_SET      GPIO_SetBits(BSP_NXP74HC165_CLK_PORT, BSP_NXP74HC165_CLK_PIN)</span></div><div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="preprocessor">#define BSP_NXP74HC165_CLK_CLR      GPIO_ResetBits(BSP_NXP74HC165_CLK_PORT, BSP_NXP74HC165_CLK_PIN)</span></div><div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="preprocessor">#define BSP_NXP74HC165_QH_R        (BSP_NXP74HC165_QH_PORT-&gt;IDR &amp; BSP_NXP74HC165_QH_PIN)</span></div><div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="preprocessor">#define NXP74HC165_NOP      </span></div><div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="preprocessor">#elif (defined(NRF51)||defined(NRF52))</span></div><div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="preprocessor">#define BSP_NXP74HC165_SH_SET       nrf_gpio_pin_write(BSP_NXP74HC165_SH_PIN,1)</span></div><div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="preprocessor">#define BSP_NXP74HC165_SH_CLR       nrf_gpio_pin_write(BSP_NXP74HC165_SH_PIN,0)</span></div><div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="preprocessor">#define BSP_NXP74HC165_CLK_SET      nrf_gpio_pin_write(BSP_NXP74HC165_CLK_PIN,1)</span></div><div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="preprocessor">#define BSP_NXP74HC165_CLK_CLR      nrf_gpio_pin_write(BSP_NXP74HC165_CLK_PIN,0)</span></div><div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="preprocessor">#define BSP_NXP74HC165_QH_R         nrf_gpio_pin_read(BSP_NXP74HC165_QH_PIN)</span></div><div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="preprocessor">#endif</span></div><div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="comment">//-------------------接口函数--------------------------------</span></div><div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">void</span> <a class="code" href="_bsp___n_x_p74_h_c165_8h.html#ae813fd69637ef690f92a21da71261f5f">BspNXP74HC165_Init</a>(<span class="keywordtype">void</span>);</div><div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="keyword">extern</span> uint32_t <a class="code" href="_bsp___n_x_p74_h_c165_8h.html#a7fde503a22aac638af76b9bac41dc471">BspNXP74HC165_read</a>(<span class="keywordtype">void</span>);</div><div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">void</span> <a class="code" href="_bsp___n_x_p74_h_c165_8h.html#a7a0508d536bc2d9e62830832877928b6">BspNXP74HC165_100ms</a>(<span class="keywordtype">void</span>);</div><div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">void</span> <a class="code" href="_bsp___n_x_p74_h_c165_8h.html#a3a2f0d70dc38411305ed75a0b217402f">BspNXP74HC165_DebugTestOnOff</a>(uint8_t OnOff);</div><div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="comment">//</span></div><div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="preprocessor">#endif</span></div><div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div><div class="ttc" id="_bsp___n_x_p74_h_c165_8h_html_a7fde503a22aac638af76b9bac41dc471"><div class="ttname"><a href="_bsp___n_x_p74_h_c165_8h.html#a7fde503a22aac638af76b9bac41dc471">BspNXP74HC165_read</a></div><div class="ttdeci">uint32_t BspNXP74HC165_read(void)</div><div class="ttdef"><b>Definition:</b> Bsp_NXP74HC165.c:70</div></div>
+<div class="ttc" id="includes_8h_html"><div class="ttname"><a href="includes_8h.html">includes.h</a></div></div>
+<div class="ttc" id="_bsp___n_x_p74_h_c165_8h_html_ae813fd69637ef690f92a21da71261f5f"><div class="ttname"><a href="_bsp___n_x_p74_h_c165_8h.html#ae813fd69637ef690f92a21da71261f5f">BspNXP74HC165_Init</a></div><div class="ttdeci">void BspNXP74HC165_Init(void)</div><div class="ttdef"><b>Definition:</b> Bsp_NXP74HC165.c:27</div></div>
+<div class="ttc" id="_bsp___n_x_p74_h_c165_8h_html_a3a2f0d70dc38411305ed75a0b217402f"><div class="ttname"><a href="_bsp___n_x_p74_h_c165_8h.html#a3a2f0d70dc38411305ed75a0b217402f">BspNXP74HC165_DebugTestOnOff</a></div><div class="ttdeci">void BspNXP74HC165_DebugTestOnOff(uint8_t OnOff)</div><div class="ttdef"><b>Definition:</b> Bsp_NXP74HC165.c:147</div></div>
+<div class="ttc" id="_bsp___n_x_p74_h_c165_8h_html_a7a0508d536bc2d9e62830832877928b6"><div class="ttname"><a href="_bsp___n_x_p74_h_c165_8h.html#a7a0508d536bc2d9e62830832877928b6">BspNXP74HC165_100ms</a></div><div class="ttdeci">void BspNXP74HC165_100ms(void)</div><div class="ttdef"><b>Definition:</b> Bsp_NXP74HC165.c:120</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

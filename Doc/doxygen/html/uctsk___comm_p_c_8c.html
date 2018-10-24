@@ -1,0 +1,275 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>xsl: E:/XkapSourceCode/Xkap-Stm32/Xkap-Stm32/User/UserTask/uctsk_CommPC.c 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">xsl
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">源码说明</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.13 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',false,false,'search.php','搜索');
+});
+</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_6d4e12d46ad8519ff7b80e874016d102.html">User</a></li><li class="navelem"><a class="el" href="dir_ba9e781c49be9d79c84eb9994eefebec.html">UserTask</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#enum-members">枚举</a> &#124;
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle">
+<div class="title">uctsk_CommPC.c 文件参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="uctsk___comm_p_c_8h_source.html">uctsk_CommPC.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="uctsk___debug_8h_source.html">uctsk_Debug.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_module___memory_8h_source.html">Module_Memory.h</a>&quot;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+枚举</h2></td></tr>
+<tr class="memitem:ad90e0d69f4fdf427c9e215cb539a0798"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___comm_p_c_8c.html#ad90e0d69f4fdf427c9e215cb539a0798">COMMPC_E_TX_CMD</a> { <a class="el" href="uctsk___comm_p_c_8c.html#ad90e0d69f4fdf427c9e215cb539a0798a5851e17b5a22dbaead03cec389667dfe">COMMPC_E_TX_CMD_FILE_INFO</a> =0, 
+<a class="el" href="uctsk___comm_p_c_8c.html#ad90e0d69f4fdf427c9e215cb539a0798ae670e4aba58b52a27b5b1bdc08f3d424">COMMPC_E_TX_CMD_FILE_DATA</a>
+ }</td></tr>
+<tr class="separator:ad90e0d69f4fdf427c9e215cb539a0798"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:acd43328ec42255b02e7ce5d8ba85520f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___comm_p_c_8c.html#acd43328ec42255b02e7ce5d8ba85520f">MODULE_OS_TASK_TAB</a> (App_TaskCommPcTCB)</td></tr>
+<tr class="separator:acd43328ec42255b02e7ce5d8ba85520f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a07693d4cfe6292b0beda95ece89cdc2b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___comm_p_c_8c.html#a07693d4cfe6292b0beda95ece89cdc2b">MODULE_OS_TASK_STK</a> (App_TaskCommPcStk, <a class="el" href="app__cfg_8h.html#aac0cb66614528861b3d53c4cd964e7d1">APP_TASK_COMMPC_STK_SIZE</a>)</td></tr>
+<tr class="separator:a07693d4cfe6292b0beda95ece89cdc2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0516f2f5f61958d4cf67ff785af9bd47"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___comm_p_c_8c.html#a0516f2f5f61958d4cf67ff785af9bd47">MODULE_OS_SEM</a> (CommPc_Sem_Rx)</td></tr>
+<tr class="separator:a0516f2f5f61958d4cf67ff785af9bd47"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e9f973e297e87d26b3f4fe65f29ba7c"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___comm_p_c_8c.html#a9e9f973e297e87d26b3f4fe65f29ba7c">uctsk_CommPc_Rx</a> (uint8_t *pbuf, uint16_t len)</td></tr>
+<tr class="separator:a9e9f973e297e87d26b3f4fe65f29ba7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a331425cbf19c103c64a18944cd679f5e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___comm_p_c_8c.html#a331425cbf19c103c64a18944cd679f5e">uctsk_CommPc_1ms</a> (void)</td></tr>
+<tr class="separator:a331425cbf19c103c64a18944cd679f5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac2c67c311c560954a7be7f906a0074b5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___comm_p_c_8c.html#ac2c67c311c560954a7be7f906a0074b5">CommPc_DebugTestOnOff</a> (uint8_t OnOff)</td></tr>
+<tr class="separator:ac2c67c311c560954a7be7f906a0074b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f375df655f8407c3681d19dc89d45a3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___comm_p_c_8c.html#a2f375df655f8407c3681d19dc89d45a3">CommPc_Result_DebugTestOnOff</a> (uint8_t OnOff)</td></tr>
+<tr class="separator:a2f375df655f8407c3681d19dc89d45a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade8b25ed967efda7ee28fdfc8fb2d584"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___comm_p_c_8c.html#ade8b25ed967efda7ee28fdfc8fb2d584">App_CommPcTaskCreate</a> (void)</td></tr>
+<tr class="separator:ade8b25ed967efda7ee28fdfc8fb2d584"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">枚举类型说明</h2>
+<a id="ad90e0d69f4fdf427c9e215cb539a0798"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad90e0d69f4fdf427c9e215cb539a0798">&#9670;&nbsp;</a></span>COMMPC_E_TX_CMD</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="uctsk___comm_p_c_8c.html#ad90e0d69f4fdf427c9e215cb539a0798">COMMPC_E_TX_CMD</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><a id="ad90e0d69f4fdf427c9e215cb539a0798a5851e17b5a22dbaead03cec389667dfe"></a>COMMPC_E_TX_CMD_FILE_INFO&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ad90e0d69f4fdf427c9e215cb539a0798ae670e4aba58b52a27b5b1bdc08f3d424"></a>COMMPC_E_TX_CMD_FILE_DATA&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">函数说明</h2>
+<a id="ade8b25ed967efda7ee28fdfc8fb2d584"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ade8b25ed967efda7ee28fdfc8fb2d584">&#9670;&nbsp;</a></span>App_CommPcTaskCreate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void App_CommPcTaskCreate </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac2c67c311c560954a7be7f906a0074b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac2c67c311c560954a7be7f906a0074b5">&#9670;&nbsp;</a></span>CommPc_DebugTestOnOff()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CommPc_DebugTestOnOff </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>OnOff</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2f375df655f8407c3681d19dc89d45a3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f375df655f8407c3681d19dc89d45a3">&#9670;&nbsp;</a></span>CommPc_Result_DebugTestOnOff()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CommPc_Result_DebugTestOnOff </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>OnOff</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0516f2f5f61958d4cf67ff785af9bd47"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0516f2f5f61958d4cf67ff785af9bd47">&#9670;&nbsp;</a></span>MODULE_OS_SEM()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MODULE_OS_SEM </td>
+          <td>(</td>
+          <td class="paramtype">CommPc_Sem_Rx&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a07693d4cfe6292b0beda95ece89cdc2b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a07693d4cfe6292b0beda95ece89cdc2b">&#9670;&nbsp;</a></span>MODULE_OS_TASK_STK()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MODULE_OS_TASK_STK </td>
+          <td>(</td>
+          <td class="paramtype">App_TaskCommPcStk&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="app__cfg_8h.html#aac0cb66614528861b3d53c4cd964e7d1">APP_TASK_COMMPC_STK_SIZE</a>&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acd43328ec42255b02e7ce5d8ba85520f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acd43328ec42255b02e7ce5d8ba85520f">&#9670;&nbsp;</a></span>MODULE_OS_TASK_TAB()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MODULE_OS_TASK_TAB </td>
+          <td>(</td>
+          <td class="paramtype">App_TaskCommPcTCB&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a331425cbf19c103c64a18944cd679f5e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a331425cbf19c103c64a18944cd679f5e">&#9670;&nbsp;</a></span>uctsk_CommPc_1ms()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void uctsk_CommPc_1ms </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9e9f973e297e87d26b3f4fe65f29ba7c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9e9f973e297e87d26b3f4fe65f29ba7c">&#9670;&nbsp;</a></span>uctsk_CommPc_Rx()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t uctsk_CommPc_Rx </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>pbuf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>len</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

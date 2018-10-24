@@ -1,0 +1,569 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>xsl: E:/XkapSourceCode/Xkap-Stm32/Xkap-Stm32/User/UserBsp/Bsp_Gps.c 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">xsl
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">源码说明</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.13 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',false,false,'search.php','搜索');
+});
+</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_6d4e12d46ad8519ff7b80e874016d102.html">User</a></li><li class="navelem"><a class="el" href="dir_a31a870a1361c5173f8d637697bb576e.html">UserBsp</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">函数</a> &#124;
+<a href="#var-members">变量</a>  </div>
+  <div class="headertitle">
+<div class="title">Bsp_Gps.c 文件参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="includes_8h_source.html">includes.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_bsp___gps_8h_source.html">Bsp_Gps.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_bsp___uart_8h_source.html">Bsp_Uart.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="uctsk___debug_8h_source.html">uctsk_Debug.h</a>&quot;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:a200a13caa613a6766112e72de2774dfd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_bsp___gps_8c.html#a200a13caa613a6766112e72de2774dfd">Analyze0183</a> (uint8_t *_ucaBuf, uint16_t _usLen)</td></tr>
+<tr class="separator:a200a13caa613a6766112e72de2774dfd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a27ade57aa40c7ece5fd421b9e40f7474"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_bsp___gps_8c.html#a27ade57aa40c7ece5fd421b9e40f7474">StrToInt</a> (char *_pStr)</td></tr>
+<tr class="separator:a27ade57aa40c7ece5fd421b9e40f7474"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae80d66c121c13ffb622c68ceae1ee763"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_bsp___gps_8c.html#ae80d66c121c13ffb622c68ceae1ee763">StrToIntFix</a> (char *_pStr, uint8_t _ucLen)</td></tr>
+<tr class="separator:ae80d66c121c13ffb622c68ceae1ee763"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab5a3a8ff98c511c5619670ceff0778ab"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_bsp___gps_8c.html#ab5a3a8ff98c511c5619670ceff0778ab">HexToAscii</a> (uint8_t *_ucpHex, uint8_t *_ucpAscII, uint8_t _ucLenasc)</td></tr>
+<tr class="separator:ab5a3a8ff98c511c5619670ceff0778ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a031921c8968c969fc9b1cbcce5879773"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_bsp___gps_8c.html#a031921c8968c969fc9b1cbcce5879773">BspGps_Init</a> (void)</td></tr>
+<tr class="separator:a031921c8968c969fc9b1cbcce5879773"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a84220d064617475c59d77ddd4c9167ad"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_bsp___gps_8c.html#a84220d064617475c59d77ddd4c9167ad">Gps_InterruptRx</a> (uint8_t *pbuf, uint16_t len)</td></tr>
+<tr class="separator:a84220d064617475c59d77ddd4c9167ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab41bb96a9214db530ec827a4ce27c4d3"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_bsp___gps_8c.html#ab41bb96a9214db530ec827a4ce27c4d3">CheckXor</a> (uint8_t *_ucaBuf, uint16_t _usLen)</td></tr>
+<tr class="separator:ab41bb96a9214db530ec827a4ce27c4d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7aaa5c18d9468ca0c292f091633d3aaf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_bsp___gps_8c.html#a7aaa5c18d9468ca0c292f091633d3aaf">gpsGPGGA</a> (uint8_t *_ucaBuf, uint16_t _usLen)</td></tr>
+<tr class="separator:a7aaa5c18d9468ca0c292f091633d3aaf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af6dbb9f221844d566aba1a3388ecffc8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_bsp___gps_8c.html#af6dbb9f221844d566aba1a3388ecffc8">gpsGPGSA</a> (uint8_t *_ucaBuf, uint16_t _usLen)</td></tr>
+<tr class="separator:af6dbb9f221844d566aba1a3388ecffc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a228b2070976397340f77d11cab9374d7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_bsp___gps_8c.html#a228b2070976397340f77d11cab9374d7">gpsGPGSV</a> (uint8_t *_ucaBuf, uint16_t _usLen)</td></tr>
+<tr class="separator:a228b2070976397340f77d11cab9374d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99bfd604f5a7c0177fd9e48695ff451a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_bsp___gps_8c.html#a99bfd604f5a7c0177fd9e48695ff451a">gpsGPRMC</a> (uint8_t *_ucaBuf, uint16_t _usLen)</td></tr>
+<tr class="separator:a99bfd604f5a7c0177fd9e48695ff451a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76a00134183cbf278ad348ddfba0b3b2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_bsp___gps_8c.html#a76a00134183cbf278ad348ddfba0b3b2">gpsGPVTG</a> (uint8_t *_ucaBuf, uint16_t _usLen)</td></tr>
+<tr class="separator:a76a00134183cbf278ad348ddfba0b3b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af0d6bffdb3d96b8c6ef1a16ae3ae1749"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_bsp___gps_8c.html#af0d6bffdb3d96b8c6ef1a16ae3ae1749">gpsGPGLL</a> (uint8_t *_ucaBuf, uint16_t _usLen)</td></tr>
+<tr class="separator:af0d6bffdb3d96b8c6ef1a16ae3ae1749"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed3869b9947ec2ce8d9db6852576a937"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_bsp___gps_8c.html#aed3869b9947ec2ce8d9db6852576a937">gps_FenToDu</a> (uint32_t _fen)</td></tr>
+<tr class="separator:aed3869b9947ec2ce8d9db6852576a937"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b44b9ace8f633d5aeff813e907ebab4"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_bsp___gps_8c.html#a5b44b9ace8f633d5aeff813e907ebab4">gps_FenToMiao</a> (uint32_t _fen)</td></tr>
+<tr class="separator:a5b44b9ace8f633d5aeff813e907ebab4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a34cfb3939a1f8cba13b9cebd2cf19815"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_bsp___gps_8c.html#a34cfb3939a1f8cba13b9cebd2cf19815">UTCDate</a> (void)</td></tr>
+<tr class="separator:a34cfb3939a1f8cba13b9cebd2cf19815"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac3d8dbe23478db2a6c6274c62c48f889"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_bsp___gps_8c.html#ac3d8dbe23478db2a6c6274c62c48f889">Gps_DebugTestOnOff</a> (uint8_t OnOff)</td></tr>
+<tr class="separator:ac3d8dbe23478db2a6c6274c62c48f889"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+变量</h2></td></tr>
+<tr class="memitem:a7d8202b58658ec7ca0ed5417545dcdbd"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_bsp___gps_8c.html#a7d8202b58658ec7ca0ed5417545dcdbd">Gps_DebugTest_Enable</a> =0</td></tr>
+<tr class="separator:a7d8202b58658ec7ca0ed5417545dcdbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea2404497588c292e10f4c88d079520f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_g_p_s___t.html">GPS_T</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_bsp___gps_8c.html#aea2404497588c292e10f4c88d079520f">g_tGPS</a></td></tr>
+<tr class="separator:aea2404497588c292e10f4c88d079520f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><dl class="section author"><dt>作者</dt><dd>徐松亮 许红宁(<a href="#" onclick="location.href='mai'+'lto:'+'538'+'76'+'03@'+'qq'+'.co'+'m'; return false;">53876<span style="display: none;">.nosp@m.</span>03@q<span style="display: none;">.nosp@m.</span>q.com</a>) </dd></dl>
+<dl class="section version"><dt>版本</dt><dd>V1.0.0 </dd></dl>
+<dl class="section date"><dt>日期</dt><dd>2018/01/01</dd></dl>
+<dl class="section attention"><dt>注意</dt><dd></dd></dl>
+<p>GNU General Public License (GPL)</p>
+<h2><center>&copy; COPYRIGHT 2017 XSLXHN</center></h2>
+</div><h2 class="groupheader">函数说明</h2>
+<a id="a200a13caa613a6766112e72de2774dfd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a200a13caa613a6766112e72de2774dfd">&#9670;&nbsp;</a></span>Analyze0183()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Analyze0183 </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>_ucaBuf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>_usLen</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a031921c8968c969fc9b1cbcce5879773"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a031921c8968c969fc9b1cbcce5879773">&#9670;&nbsp;</a></span>BspGps_Init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BspGps_Init </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab41bb96a9214db530ec827a4ce27c4d3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab41bb96a9214db530ec827a4ce27c4d3">&#9670;&nbsp;</a></span>CheckXor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t CheckXor </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>_ucaBuf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>_usLen</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac3d8dbe23478db2a6c6274c62c48f889"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac3d8dbe23478db2a6c6274c62c48f889">&#9670;&nbsp;</a></span>Gps_DebugTestOnOff()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Gps_DebugTestOnOff </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>OnOff</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aed3869b9947ec2ce8d9db6852576a937"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aed3869b9947ec2ce8d9db6852576a937">&#9670;&nbsp;</a></span>gps_FenToDu()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t gps_FenToDu </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>_fen</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5b44b9ace8f633d5aeff813e907ebab4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b44b9ace8f633d5aeff813e907ebab4">&#9670;&nbsp;</a></span>gps_FenToMiao()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t gps_FenToMiao </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>_fen</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a84220d064617475c59d77ddd4c9167ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a84220d064617475c59d77ddd4c9167ad">&#9670;&nbsp;</a></span>Gps_InterruptRx()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Gps_InterruptRx </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>pbuf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>len</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7aaa5c18d9468ca0c292f091633d3aaf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7aaa5c18d9468ca0c292f091633d3aaf">&#9670;&nbsp;</a></span>gpsGPGGA()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void gpsGPGGA </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>_ucaBuf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>_usLen</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af0d6bffdb3d96b8c6ef1a16ae3ae1749"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af0d6bffdb3d96b8c6ef1a16ae3ae1749">&#9670;&nbsp;</a></span>gpsGPGLL()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void gpsGPGLL </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>_ucaBuf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>_usLen</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af6dbb9f221844d566aba1a3388ecffc8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af6dbb9f221844d566aba1a3388ecffc8">&#9670;&nbsp;</a></span>gpsGPGSA()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void gpsGPGSA </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>_ucaBuf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>_usLen</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a228b2070976397340f77d11cab9374d7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a228b2070976397340f77d11cab9374d7">&#9670;&nbsp;</a></span>gpsGPGSV()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void gpsGPGSV </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>_ucaBuf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>_usLen</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a99bfd604f5a7c0177fd9e48695ff451a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a99bfd604f5a7c0177fd9e48695ff451a">&#9670;&nbsp;</a></span>gpsGPRMC()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void gpsGPRMC </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>_ucaBuf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>_usLen</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a76a00134183cbf278ad348ddfba0b3b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a76a00134183cbf278ad348ddfba0b3b2">&#9670;&nbsp;</a></span>gpsGPVTG()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void gpsGPVTG </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>_ucaBuf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>_usLen</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab5a3a8ff98c511c5619670ceff0778ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab5a3a8ff98c511c5619670ceff0778ab">&#9670;&nbsp;</a></span>HexToAscii()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void HexToAscii </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>_ucpHex</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>_ucpAscII</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>_ucLenasc</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a27ade57aa40c7ece5fd421b9e40f7474"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a27ade57aa40c7ece5fd421b9e40f7474">&#9670;&nbsp;</a></span>StrToInt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int32_t StrToInt </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>_pStr</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae80d66c121c13ffb622c68ceae1ee763"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae80d66c121c13ffb622c68ceae1ee763">&#9670;&nbsp;</a></span>StrToIntFix()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int32_t StrToIntFix </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>_pStr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>_ucLen</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a34cfb3939a1f8cba13b9cebd2cf19815"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a34cfb3939a1f8cba13b9cebd2cf19815">&#9670;&nbsp;</a></span>UTCDate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UTCDate </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">变量说明</h2>
+<a id="aea2404497588c292e10f4c88d079520f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aea2404497588c292e10f4c88d079520f">&#9670;&nbsp;</a></span>g_tGPS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_g_p_s___t.html">GPS_T</a> g_tGPS</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7d8202b58658ec7ca0ed5417545dcdbd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d8202b58658ec7ca0ed5417545dcdbd">&#9670;&nbsp;</a></span>Gps_DebugTest_Enable</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t Gps_DebugTest_Enable =0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

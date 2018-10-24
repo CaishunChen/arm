@@ -1,0 +1,983 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>xsl: E:/XkapSourceCode/Xkap-Stm32/Xkap-Stm32/User/UserTask/uctsk_GprsNet.c 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">xsl
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">源码说明</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.13 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',false,false,'search.php','搜索');
+});
+</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_6d4e12d46ad8519ff7b80e874016d102.html">User</a></li><li class="navelem"><a class="el" href="dir_ba9e781c49be9d79c84eb9994eefebec.html">UserTask</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#define-members">宏定义</a> &#124;
+<a href="#enum-members">枚举</a> &#124;
+<a href="#func-members">函数</a> &#124;
+<a href="#var-members">变量</a>  </div>
+  <div class="headertitle">
+<div class="title">uctsk_GprsNet.c 文件参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="uctsk___gprs_net_8h_source.html">uctsk_GprsNet.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="uctsk___debug_8h_source.html">uctsk_Debug.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_bsp___cpu_flash_8h_source.html">Bsp_CpuFlash.h</a>&quot;</code><br />
+<code>#include &quot;Bsp_Uart.h&quot;</code><br />
+<code>#include &quot;<a class="el" href="_bsp___bkp_ram_8h_source.html">Bsp_BkpRam.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_bsp___led_8h_source.html">Bsp_Led.h</a>&quot;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+宏定义</h2></td></tr>
+<tr class="memitem:a54b0b7c59e4b4fd48bf9bb6ef19765d1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___gprs_net_8c.html#a54b0b7c59e4b4fd48bf9bb6ef19765d1">CONNECT_MAX_TIME_S</a>&#160;&#160;&#160;10</td></tr>
+<tr class="separator:a54b0b7c59e4b4fd48bf9bb6ef19765d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76df55df95993c6dce4fa9546424aaa7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___gprs_net_8c.html#a76df55df95993c6dce4fa9546424aaa7">GSMSUBSECTION_QBUF_MAX</a>&#160;&#160;&#160;10</td></tr>
+<tr class="separator:a76df55df95993c6dce4fa9546424aaa7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7fa66b685de2ab6ccbbf4c2e5b009e85"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___gprs_net_8c.html#a7fa66b685de2ab6ccbbf4c2e5b009e85">GSMAPPTX_QBUF_MAX</a>&#160;&#160;&#160;10</td></tr>
+<tr class="separator:a7fa66b685de2ab6ccbbf4c2e5b009e85"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2baaf9ecbb7aebab83ad452fd2c3a89"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___gprs_net_8c.html#ab2baaf9ecbb7aebab83ad452fd2c3a89">GSMAPPRX_QBUF_MAX</a>&#160;&#160;&#160;10</td></tr>
+<tr class="separator:ab2baaf9ecbb7aebab83ad452fd2c3a89"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad20a7d1484931f546be793ed79610352"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___gprs_net_8c.html#ad20a7d1484931f546be793ed79610352">SMSPHOTO_ALMIGHTY</a>&#160;&#160;&#160;&quot;15998849102&quot;</td></tr>
+<tr class="separator:ad20a7d1484931f546be793ed79610352"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adcab5c12ee40c68f04e20c3cc0daf2ba"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___gprs_net_8c.html#adcab5c12ee40c68f04e20c3cc0daf2ba">GPRS_BUFFERLOOP_BUF_MAX</a>&#160;&#160;&#160;GPRS_BUFFERLOOP_RXBUF_MAX</td></tr>
+<tr class="separator:adcab5c12ee40c68f04e20c3cc0daf2ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad3bd04e43c59cb8e85a1b7b5d1f1e9d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___gprs_net_8c.html#aad3bd04e43c59cb8e85a1b7b5d1f1e9d">GPRS_BUFFERLOOP_NODE_MAX</a>&#160;&#160;&#160;<a class="el" href="uctsk___gprs_net_8c.html#a76df55df95993c6dce4fa9546424aaa7">GSMSUBSECTION_QBUF_MAX</a></td></tr>
+<tr class="separator:aad3bd04e43c59cb8e85a1b7b5d1f1e9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a979461599e5eef722d8bf45fc462d81a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___gprs_net_8c.html#a979461599e5eef722d8bf45fc462d81a">GPRSNET_RXTIMER_MAX_S</a>&#160;&#160;&#160;60</td></tr>
+<tr class="separator:a979461599e5eef722d8bf45fc462d81a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+枚举</h2></td></tr>
+<tr class="memitem:a2a9dac510a7892b6651ce5ee1cad7ca3"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___gprs_net_8c.html#a2a9dac510a7892b6651ce5ee1cad7ca3">GPRS_E_AT</a> { <br />
+&#160;&#160;<a class="el" href="uctsk___gprs_net_8c.html#a2a9dac510a7892b6651ce5ee1cad7ca3a6220631ce7228627154c5041a7f4e5d0">AT_IPR</a> =1, 
+<a class="el" href="uctsk___gprs_net_8c.html#a2a9dac510a7892b6651ce5ee1cad7ca3a05b0a3da279b84387cc629ef1f0cec2e">AT_ATE</a>, 
+<a class="el" href="uctsk___gprs_net_8c.html#a2a9dac510a7892b6651ce5ee1cad7ca3af56dd8d89b188b2db12b47c45fbe651b">AT_ATS</a>, 
+<a class="el" href="uctsk___gprs_net_8c.html#a2a9dac510a7892b6651ce5ee1cad7ca3ab4ec85239f8a394077852b896c768a07">AT_ATI</a>, 
+<br />
+&#160;&#160;<a class="el" href="uctsk___gprs_net_8c.html#a2a9dac510a7892b6651ce5ee1cad7ca3a802ec0b28a3627e62ae67fab09040d10">AT_CSQ</a>, 
+<a class="el" href="uctsk___gprs_net_8c.html#a2a9dac510a7892b6651ce5ee1cad7ca3a2141b600ef05138c80c12e7889bbfd79">AT_CPIN</a>, 
+<a class="el" href="uctsk___gprs_net_8c.html#a2a9dac510a7892b6651ce5ee1cad7ca3ae755d30fb23c6185e63dfb994fa6e1f9">AT_CPIN2006</a>, 
+<a class="el" href="uctsk___gprs_net_8c.html#a2a9dac510a7892b6651ce5ee1cad7ca3ae7ecf5fa9b765a26620aa498a782c92b">AT_CREG2</a>, 
+<br />
+&#160;&#160;<a class="el" href="uctsk___gprs_net_8c.html#a2a9dac510a7892b6651ce5ee1cad7ca3ae1d9cc99d966f31a696ef0c80a4e1e82">AT_CREG</a>, 
+<a class="el" href="uctsk___gprs_net_8c.html#a2a9dac510a7892b6651ce5ee1cad7ca3a15c36a5e3e8eb5737aadfac094c1a02c">AT_CGREG2</a>, 
+<a class="el" href="uctsk___gprs_net_8c.html#a2a9dac510a7892b6651ce5ee1cad7ca3ac7ecff9975933b3c9f59767bbb420c1f">AT_CGREG</a>, 
+<a class="el" href="uctsk___gprs_net_8c.html#a2a9dac510a7892b6651ce5ee1cad7ca3a7d14094fc330751631cd4987086215dc">AT_QIMUX</a>, 
+<br />
+&#160;&#160;<a class="el" href="uctsk___gprs_net_8c.html#a2a9dac510a7892b6651ce5ee1cad7ca3a1563523e4f35cc9cd16f7b427a5c45f4">AT_CMGF</a>, 
+<a class="el" href="uctsk___gprs_net_8c.html#a2a9dac510a7892b6651ce5ee1cad7ca3a4ff078e53e392c8dfe1f3488fa8e74fd">AT_GSN</a>, 
+<a class="el" href="uctsk___gprs_net_8c.html#a2a9dac510a7892b6651ce5ee1cad7ca3a27c57fc5dd0cb9be5448116863e5138e">AT_CIMI</a>, 
+<a class="el" href="uctsk___gprs_net_8c.html#a2a9dac510a7892b6651ce5ee1cad7ca3ae5850a7644d250c9203299decbe2803d">AT_CNUM</a>, 
+<br />
+&#160;&#160;<a class="el" href="uctsk___gprs_net_8c.html#a2a9dac510a7892b6651ce5ee1cad7ca3a4d9eec26a87a1683d7fb0c98ae310dcb">AT_CSCS</a>, 
+<a class="el" href="uctsk___gprs_net_8c.html#a2a9dac510a7892b6651ce5ee1cad7ca3acea08b47608962a4a76904c536755509">AT_CMGL</a>, 
+<a class="el" href="uctsk___gprs_net_8c.html#a2a9dac510a7892b6651ce5ee1cad7ca3a09aa115ea51dd3965afab9dedc806dfa">AT_CMGD</a>, 
+<a class="el" href="uctsk___gprs_net_8c.html#a2a9dac510a7892b6651ce5ee1cad7ca3a806047842d980fcb7770f12fc55c652d">AT_CGATT_SET</a>, 
+<br />
+&#160;&#160;<a class="el" href="uctsk___gprs_net_8c.html#a2a9dac510a7892b6651ce5ee1cad7ca3a05fab204e6aa47af48831c905c6b14bb">AT_CGATT</a>, 
+<a class="el" href="uctsk___gprs_net_8c.html#a2a9dac510a7892b6651ce5ee1cad7ca3aa9b2aa845c468a76cba4c371390212b4">AT_QIFGCNT</a>, 
+<a class="el" href="uctsk___gprs_net_8c.html#a2a9dac510a7892b6651ce5ee1cad7ca3a02d8f8973d1da3d2d600ee5bf98634b6">AT_QICSGP</a>, 
+<a class="el" href="uctsk___gprs_net_8c.html#a2a9dac510a7892b6651ce5ee1cad7ca3a78405a6ac678ddce8f277f8eb3ed5a97">AT_QIMODE</a>, 
+<br />
+&#160;&#160;<a class="el" href="uctsk___gprs_net_8c.html#a2a9dac510a7892b6651ce5ee1cad7ca3a38b99b72c3c8659b2b72c344cf13aa53">AT_QIDNSIP</a>, 
+<a class="el" href="uctsk___gprs_net_8c.html#a2a9dac510a7892b6651ce5ee1cad7ca3a66b64ec2877983860009c5214865c9a4">AT_QIREGAPP</a>, 
+<a class="el" href="uctsk___gprs_net_8c.html#a2a9dac510a7892b6651ce5ee1cad7ca3a6e60661d146f237cf23e6716c86d7dfd">AT_QIACT</a>, 
+<a class="el" href="uctsk___gprs_net_8c.html#a2a9dac510a7892b6651ce5ee1cad7ca3adb7057016c465e6a5b4ee27e11ff45a0">AT_QIOPEN</a>, 
+<br />
+&#160;&#160;<a class="el" href="uctsk___gprs_net_8c.html#a2a9dac510a7892b6651ce5ee1cad7ca3ac6219902406f8876ce72d2bed57b1719">AT_QISEND</a>, 
+<a class="el" href="uctsk___gprs_net_8c.html#a2a9dac510a7892b6651ce5ee1cad7ca3afe037681cffbc735110a69b2a6b85279">AT_QIMUXCMD1</a>, 
+<a class="el" href="uctsk___gprs_net_8c.html#a2a9dac510a7892b6651ce5ee1cad7ca3a71668f9729a385a8828d1d36ef950762">AT_QIDNSCFG</a>, 
+<a class="el" href="uctsk___gprs_net_8c.html#a2a9dac510a7892b6651ce5ee1cad7ca3a734f3b0803c4f93e7874a27e960bde4a">AT_QCELLLOC</a>, 
+<br />
+&#160;&#160;<a class="el" href="uctsk___gprs_net_8c.html#a2a9dac510a7892b6651ce5ee1cad7ca3a868b2560293416e1e5ae261f83ea6183">AT_QILOCIP</a>, 
+<a class="el" href="uctsk___gprs_net_8c.html#a2a9dac510a7892b6651ce5ee1cad7ca3acc99117f739f5e488c3ef897175adc07">AT_QICLOSE</a>, 
+<a class="el" href="uctsk___gprs_net_8c.html#a2a9dac510a7892b6651ce5ee1cad7ca3a67ec5d1b5c2e644cef8ae8a9b21b0ff9">AT_QISTAT</a>, 
+<a class="el" href="uctsk___gprs_net_8c.html#a2a9dac510a7892b6651ce5ee1cad7ca3aac8e6eea37a579f95f8538c20e0b7e7d">AT_CGDCONT</a>, 
+<br />
+&#160;&#160;<a class="el" href="uctsk___gprs_net_8c.html#a2a9dac510a7892b6651ce5ee1cad7ca3af1ca553fc4f11a88c52b1fe0148ef73b">AT_CGACT</a>, 
+<a class="el" href="uctsk___gprs_net_8c.html#a2a9dac510a7892b6651ce5ee1cad7ca3a64ded65c08cee0b083a07f8de81e6eb4">AT_CIFSR</a>, 
+<a class="el" href="uctsk___gprs_net_8c.html#a2a9dac510a7892b6651ce5ee1cad7ca3a1718b85b50d225146b88fcd524387d6c">AT_UPSD_APN</a>, 
+<a class="el" href="uctsk___gprs_net_8c.html#a2a9dac510a7892b6651ce5ee1cad7ca3a9a1a0d6d9caf89db775231457321db7b">AT_UPSD_USER</a>, 
+<br />
+&#160;&#160;<a class="el" href="uctsk___gprs_net_8c.html#a2a9dac510a7892b6651ce5ee1cad7ca3a8d6e07e2df1cffb4bf72fa7646674a3e">AT_UPSD_PASSWORD</a>, 
+<a class="el" href="uctsk___gprs_net_8c.html#a2a9dac510a7892b6651ce5ee1cad7ca3a86c5fc6030e39cf63c063bcd9e67b4cb">AT_UPSD_CHAP</a>, 
+<a class="el" href="uctsk___gprs_net_8c.html#a2a9dac510a7892b6651ce5ee1cad7ca3aba8288ffefefe13ca805ecabe9875d67">AT_UPSD_IP</a>, 
+<a class="el" href="uctsk___gprs_net_8c.html#a2a9dac510a7892b6651ce5ee1cad7ca3aa5127a5a532970b6b40e7afb581bfaa6">AT_UPSDA_PARA_WR_EEPROM</a>, 
+<br />
+&#160;&#160;<a class="el" href="uctsk___gprs_net_8c.html#a2a9dac510a7892b6651ce5ee1cad7ca3af89c0e2577f7e9595b98c4e1a5cce54d">AT_USOSO_KEEPALIVE_CREATE</a>, 
+<a class="el" href="uctsk___gprs_net_8c.html#a2a9dac510a7892b6651ce5ee1cad7ca3ac9f0fd48ebf54a3ad3101ea89bbdc647">AT_USOSO_KEEPALIVE_ENABLE</a>, 
+<a class="el" href="uctsk___gprs_net_8c.html#a2a9dac510a7892b6651ce5ee1cad7ca3a1751d23b2af13c9b2148ef92b9136387">AT_USOSO_KEEPALIVE_SET</a>, 
+<a class="el" href="uctsk___gprs_net_8c.html#a2a9dac510a7892b6651ce5ee1cad7ca3a89902edd7d3f1c2d8b93d827bd0d6197">AT_UPSDA_ACTIVATE</a>, 
+<br />
+&#160;&#160;<a class="el" href="uctsk___gprs_net_8c.html#a2a9dac510a7892b6651ce5ee1cad7ca3a2d7a9745b37c7a33369ff53068ce50f2">AT_UPSND</a>, 
+<a class="el" href="uctsk___gprs_net_8c.html#a2a9dac510a7892b6651ce5ee1cad7ca3a83ef568f6ee1d71d8892f3238c1b3178">AT_USOCR</a>, 
+<a class="el" href="uctsk___gprs_net_8c.html#a2a9dac510a7892b6651ce5ee1cad7ca3a83b0f088ec6fdfdbab93ec726406290d">AT_UDNSRN</a>, 
+<a class="el" href="uctsk___gprs_net_8c.html#a2a9dac510a7892b6651ce5ee1cad7ca3a32d2cbbc609719b34663da8bb1bc342b">AT_USOST</a>, 
+<br />
+&#160;&#160;<a class="el" href="uctsk___gprs_net_8c.html#a2a9dac510a7892b6651ce5ee1cad7ca3acd984209cb898ec52fd0a626d4d0c177">AT_USORF</a>, 
+<a class="el" href="uctsk___gprs_net_8c.html#a2a9dac510a7892b6651ce5ee1cad7ca3a78a606f60252126d0f1dfc4b71cbd75d">AT_UHTTP_RESET</a>, 
+<a class="el" href="uctsk___gprs_net_8c.html#a2a9dac510a7892b6651ce5ee1cad7ca3a1bd61505694b848ca4b01c77a3c244b5">AT_UHTTP_DOMAIN_NAME</a>, 
+<a class="el" href="uctsk___gprs_net_8c.html#a2a9dac510a7892b6651ce5ee1cad7ca3a7d7fd910ea82b24c50d5979705e5055d">AT_UHTTP_PORT</a>, 
+<br />
+&#160;&#160;<a class="el" href="uctsk___gprs_net_8c.html#a2a9dac510a7892b6651ce5ee1cad7ca3a8e74bdc6b266844f1fa99a8b4d1486b5">AT_HTTP_TEST</a>, 
+<a class="el" href="uctsk___gprs_net_8c.html#a2a9dac510a7892b6651ce5ee1cad7ca3a7ae0d445d676a682168b1aec528bde33">AT_ATH</a>, 
+<a class="el" href="uctsk___gprs_net_8c.html#a2a9dac510a7892b6651ce5ee1cad7ca3ae37d94b636bb04a2bc1ca87071e6ff8b">AT_ATA</a>, 
+<a class="el" href="uctsk___gprs_net_8c.html#a2a9dac510a7892b6651ce5ee1cad7ca3a54d2453a9ae6d6c97185d4f8e5b46ec2">AT_CLIP</a>, 
+<br />
+&#160;&#160;<a class="el" href="uctsk___gprs_net_8c.html#a2a9dac510a7892b6651ce5ee1cad7ca3a4f8a6d47ce700f10ef1e3cf70b632e34">AT_2_CSQ</a>, 
+<a class="el" href="uctsk___gprs_net_8c.html#a2a9dac510a7892b6651ce5ee1cad7ca3afced7be143a9e5e90ee30a2531d20e97">AT_NULL</a>
+<br />
+ }</td></tr>
+<tr class="separator:a2a9dac510a7892b6651ce5ee1cad7ca3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:a12ef45183b20024000122a8de12e98cb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___gprs_net_8c.html#a12ef45183b20024000122a8de12e98cb">MODULE_OS_TASK_TAB</a> (App_TaskGsmParseTCB)</td></tr>
+<tr class="separator:a12ef45183b20024000122a8de12e98cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2182937976f3adc57ba55306de8530ef"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___gprs_net_8c.html#a2182937976f3adc57ba55306de8530ef">MODULE_OS_TASK_STK</a> (App_TaskGsmParseStk, <a class="el" href="app__cfg_8h.html#a4a555bbb5d47bd277a01fb7d72be4e02">APP_TASK_GSM_PARSE_STK_SIZE</a>)</td></tr>
+<tr class="separator:a2182937976f3adc57ba55306de8530ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa695160ef8a28994164e6e92ec83eba8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___gprs_net_8c.html#aa695160ef8a28994164e6e92ec83eba8">MODULE_OS_TASK_TAB</a> (App_TaskGsmSendTCB)</td></tr>
+<tr class="separator:aa695160ef8a28994164e6e92ec83eba8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c1e23eb785147bc78d528555e548fa2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___gprs_net_8c.html#a1c1e23eb785147bc78d528555e548fa2">MODULE_OS_TASK_STK</a> (App_TaskGsmSendStk, <a class="el" href="app__cfg_8h.html#aa23034deaacc20d17f402396fbfa4d75">APP_TASK_GSM_SEND_STK_SIZE</a>)</td></tr>
+<tr class="separator:a1c1e23eb785147bc78d528555e548fa2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad6137a65d0b1bf7670d26f56e26b78a4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___gprs_net_8c.html#ad6137a65d0b1bf7670d26f56e26b78a4">MODULE_OS_TASK_TAB</a> (App_TaskGsmTestTCB)</td></tr>
+<tr class="separator:ad6137a65d0b1bf7670d26f56e26b78a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2817cb265f7127b41d44bc75ab7b376a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___gprs_net_8c.html#a2817cb265f7127b41d44bc75ab7b376a">MODULE_OS_TASK_STK</a> (App_TaskGsmTestStk, <a class="el" href="app__cfg_8h.html#a40ea602e332e5aeb6af896cf11dbd107">APP_TASK_GSM_TEST_STK_SIZE</a>)</td></tr>
+<tr class="separator:a2817cb265f7127b41d44bc75ab7b376a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada822055aac274de861060d01b156d2c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___gprs_net_8c.html#ada822055aac274de861060d01b156d2c">MODULE_OS_SEM</a> (GsmSubsectionSem)</td></tr>
+<tr class="separator:ada822055aac274de861060d01b156d2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a13e77006f92336fd1f4c747931679335"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___gprs_net_8c.html#a13e77006f92336fd1f4c747931679335">MODULE_OS_Q</a> (GsmAppRxQ)</td></tr>
+<tr class="separator:a13e77006f92336fd1f4c747931679335"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e99d498a0bdc5d9eb506c6ac227c629"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___gprs_net_8c.html#a4e99d498a0bdc5d9eb506c6ac227c629">MODULE_OS_Q</a> (GsmAppTxQ)</td></tr>
+<tr class="separator:a4e99d498a0bdc5d9eb506c6ac227c629"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a864230cabb5921b20919708eff6fb90a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___gprs_net_8c.html#a864230cabb5921b20919708eff6fb90a">App_GsmParseTaskCreate</a> (void)</td></tr>
+<tr class="separator:a864230cabb5921b20919708eff6fb90a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f365408e6ea21ac8a6c0f4cfcbfb36f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___gprs_net_8c.html#a3f365408e6ea21ac8a6c0f4cfcbfb36f">App_GsmSendTaskCreate</a> (void)</td></tr>
+<tr class="separator:a3f365408e6ea21ac8a6c0f4cfcbfb36f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe94bd335bb53c59a1a27c134ef81ee3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___gprs_net_8c.html#abe94bd335bb53c59a1a27c134ef81ee3">App_GsmTestTaskCreate</a> (void)</td></tr>
+<tr class="separator:abe94bd335bb53c59a1a27c134ef81ee3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a63543319f7d69ca284731a56e08082b6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___gprs_net_8c.html#a63543319f7d69ca284731a56e08082b6">UctskGprsNet_HttpGet</a> (uint8_t *pDns, char *pBuf, uint16_t *plen)</td></tr>
+<tr class="separator:a63543319f7d69ca284731a56e08082b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e2b59ad985726931f19379f935e1d0e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___gprs_net_8c.html#a4e2b59ad985726931f19379f935e1d0e">UctskGprsNet_HttpPost</a> (uint8_t *pDns, char *pBuf, uint16_t *plen)</td></tr>
+<tr class="separator:a4e2b59ad985726931f19379f935e1d0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae6db4a172dd07fc77965c9128a1e9c62"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___gprs_net_8c.html#ae6db4a172dd07fc77965c9128a1e9c62">GprsNet_InterruptRx</a> (uint8_t *pbuf, uint16_t len)</td></tr>
+<tr class="separator:ae6db4a172dd07fc77965c9128a1e9c62"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a38f6c25a627ebebec31b9341754ea1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___gprs_net_8c.html#a4a38f6c25a627ebebec31b9341754ea1">GprsNet_DebugTestOnOff</a> (uint8_t OnOff)</td></tr>
+<tr class="separator:a4a38f6c25a627ebebec31b9341754ea1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a460b37b055f1643dd6be6ab48e7cd263"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___gprs_net_8c.html#a460b37b055f1643dd6be6ab48e7cd263">GprsNet_DebugControlOnOff</a> (uint8_t OnOff)</td></tr>
+<tr class="separator:a460b37b055f1643dd6be6ab48e7cd263"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ff5e961e8eed5d5bad828221ea632aa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___gprs_net_8c.html#a2ff5e961e8eed5d5bad828221ea632aa">GprsNet_DebugRx</a> (uint8_t *d, uint16_t len)</td></tr>
+<tr class="separator:a2ff5e961e8eed5d5bad828221ea632aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab56cea32cae4e16db88822dd81c9a551"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___gprs_net_8c.html#ab56cea32cae4e16db88822dd81c9a551">GprsNet_OnOff</a> (uint8_t OnOff)</td></tr>
+<tr class="separator:ab56cea32cae4e16db88822dd81c9a551"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac57af334c0c5cefff840a5a39b420638"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___gprs_net_8c.html#ac57af334c0c5cefff840a5a39b420638">GprsNet_FlowWrite</a> (uint32_t val)</td></tr>
+<tr class="separator:ac57af334c0c5cefff840a5a39b420638"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+变量</h2></td></tr>
+<tr class="memitem:a223a2a20b63d73f69813434888a8dd37"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___gprs_net_8c.html#a223a2a20b63d73f69813434888a8dd37">ConnectTimeS</a></td></tr>
+<tr class="separator:a223a2a20b63d73f69813434888a8dd37"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a342a4c91883130e25c22d867f8f7b770"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___gprs_net_8c.html#a342a4c91883130e25c22d867f8f7b770">ConnectOutTimeS</a></td></tr>
+<tr class="separator:a342a4c91883130e25c22d867f8f7b770"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb0d5ea2b6ea6c69edf0f2481c1569c4"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___gprs_net_8c.html#acb0d5ea2b6ea6c69edf0f2481c1569c4">GPRS_RBuf1_OverBz</a></td></tr>
+<tr class="separator:acb0d5ea2b6ea6c69edf0f2481c1569c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acdf24c598e849654540ec13b9a590868"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___gprs_net_8c.html#acdf24c598e849654540ec13b9a590868">Bz_M10ResetFinish</a></td></tr>
+<tr class="separator:acdf24c598e849654540ec13b9a590868"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91faab174297b01c198dd4a5b8d05285"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_g_p_r_s_n_e_t___s___c_o_n_n_e_c_t.html">GPRSNET_S_CONNECT</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___gprs_net_8c.html#a91faab174297b01c198dd4a5b8d05285">Connect_s</a> [5]</td></tr>
+<tr class="separator:a91faab174297b01c198dd4a5b8d05285"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad3290bda923b8b772c80b907c23bf747"><td class="memItemLeft" align="right" valign="top"><a class="el" href="uctsk___gprs_net_8h.html#aa87bf676860a7f6b13910c9a5d03889c">GPRSNET_S_INFO</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___gprs_net_8c.html#ad3290bda923b8b772c80b907c23bf747">GprsNet_s_Info</a></td></tr>
+<tr class="separator:ad3290bda923b8b772c80b907c23bf747"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd487e7d6b8db7c3c4ff6bd46aa3f136"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_g_p_r_s_n_e_t___s___r_i_n_g.html">GPRSNET_S_RING</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___gprs_net_8c.html#acd487e7d6b8db7c3c4ff6bd46aa3f136">Ring_S</a></td></tr>
+<tr class="separator:acd487e7d6b8db7c3c4ff6bd46aa3f136"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a287dfa028efe12c0dab2457b1f8a4927"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___gprs_net_8c.html#a287dfa028efe12c0dab2457b1f8a4927">pTest</a></td></tr>
+<tr class="separator:a287dfa028efe12c0dab2457b1f8a4927"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">宏定义说明</h2>
+<a id="a54b0b7c59e4b4fd48bf9bb6ef19765d1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a54b0b7c59e4b4fd48bf9bb6ef19765d1">&#9670;&nbsp;</a></span>CONNECT_MAX_TIME_S</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CONNECT_MAX_TIME_S&#160;&#160;&#160;10</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adcab5c12ee40c68f04e20c3cc0daf2ba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adcab5c12ee40c68f04e20c3cc0daf2ba">&#9670;&nbsp;</a></span>GPRS_BUFFERLOOP_BUF_MAX</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GPRS_BUFFERLOOP_BUF_MAX&#160;&#160;&#160;GPRS_BUFFERLOOP_RXBUF_MAX</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aad3bd04e43c59cb8e85a1b7b5d1f1e9d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aad3bd04e43c59cb8e85a1b7b5d1f1e9d">&#9670;&nbsp;</a></span>GPRS_BUFFERLOOP_NODE_MAX</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GPRS_BUFFERLOOP_NODE_MAX&#160;&#160;&#160;<a class="el" href="uctsk___gprs_net_8c.html#a76df55df95993c6dce4fa9546424aaa7">GSMSUBSECTION_QBUF_MAX</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a979461599e5eef722d8bf45fc462d81a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a979461599e5eef722d8bf45fc462d81a">&#9670;&nbsp;</a></span>GPRSNET_RXTIMER_MAX_S</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GPRSNET_RXTIMER_MAX_S&#160;&#160;&#160;60</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab2baaf9ecbb7aebab83ad452fd2c3a89"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab2baaf9ecbb7aebab83ad452fd2c3a89">&#9670;&nbsp;</a></span>GSMAPPRX_QBUF_MAX</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GSMAPPRX_QBUF_MAX&#160;&#160;&#160;10</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7fa66b685de2ab6ccbbf4c2e5b009e85"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7fa66b685de2ab6ccbbf4c2e5b009e85">&#9670;&nbsp;</a></span>GSMAPPTX_QBUF_MAX</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GSMAPPTX_QBUF_MAX&#160;&#160;&#160;10</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a76df55df95993c6dce4fa9546424aaa7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a76df55df95993c6dce4fa9546424aaa7">&#9670;&nbsp;</a></span>GSMSUBSECTION_QBUF_MAX</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GSMSUBSECTION_QBUF_MAX&#160;&#160;&#160;10</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad20a7d1484931f546be793ed79610352"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad20a7d1484931f546be793ed79610352">&#9670;&nbsp;</a></span>SMSPHOTO_ALMIGHTY</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SMSPHOTO_ALMIGHTY&#160;&#160;&#160;&quot;15998849102&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">枚举类型说明</h2>
+<a id="a2a9dac510a7892b6651ce5ee1cad7ca3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a9dac510a7892b6651ce5ee1cad7ca3">&#9670;&nbsp;</a></span>GPRS_E_AT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="uctsk___gprs_net_8c.html#a2a9dac510a7892b6651ce5ee1cad7ca3">GPRS_E_AT</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><a id="a2a9dac510a7892b6651ce5ee1cad7ca3a6220631ce7228627154c5041a7f4e5d0"></a>AT_IPR&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a2a9dac510a7892b6651ce5ee1cad7ca3a05b0a3da279b84387cc629ef1f0cec2e"></a>AT_ATE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a2a9dac510a7892b6651ce5ee1cad7ca3af56dd8d89b188b2db12b47c45fbe651b"></a>AT_ATS&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a2a9dac510a7892b6651ce5ee1cad7ca3ab4ec85239f8a394077852b896c768a07"></a>AT_ATI&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a2a9dac510a7892b6651ce5ee1cad7ca3a802ec0b28a3627e62ae67fab09040d10"></a>AT_CSQ&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a2a9dac510a7892b6651ce5ee1cad7ca3a2141b600ef05138c80c12e7889bbfd79"></a>AT_CPIN&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a2a9dac510a7892b6651ce5ee1cad7ca3ae755d30fb23c6185e63dfb994fa6e1f9"></a>AT_CPIN2006&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a2a9dac510a7892b6651ce5ee1cad7ca3ae7ecf5fa9b765a26620aa498a782c92b"></a>AT_CREG2&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a2a9dac510a7892b6651ce5ee1cad7ca3ae1d9cc99d966f31a696ef0c80a4e1e82"></a>AT_CREG&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a2a9dac510a7892b6651ce5ee1cad7ca3a15c36a5e3e8eb5737aadfac094c1a02c"></a>AT_CGREG2&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a2a9dac510a7892b6651ce5ee1cad7ca3ac7ecff9975933b3c9f59767bbb420c1f"></a>AT_CGREG&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a2a9dac510a7892b6651ce5ee1cad7ca3a7d14094fc330751631cd4987086215dc"></a>AT_QIMUX&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a2a9dac510a7892b6651ce5ee1cad7ca3a1563523e4f35cc9cd16f7b427a5c45f4"></a>AT_CMGF&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a2a9dac510a7892b6651ce5ee1cad7ca3a4ff078e53e392c8dfe1f3488fa8e74fd"></a>AT_GSN&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a2a9dac510a7892b6651ce5ee1cad7ca3a27c57fc5dd0cb9be5448116863e5138e"></a>AT_CIMI&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a2a9dac510a7892b6651ce5ee1cad7ca3ae5850a7644d250c9203299decbe2803d"></a>AT_CNUM&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a2a9dac510a7892b6651ce5ee1cad7ca3a4d9eec26a87a1683d7fb0c98ae310dcb"></a>AT_CSCS&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a2a9dac510a7892b6651ce5ee1cad7ca3acea08b47608962a4a76904c536755509"></a>AT_CMGL&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a2a9dac510a7892b6651ce5ee1cad7ca3a09aa115ea51dd3965afab9dedc806dfa"></a>AT_CMGD&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a2a9dac510a7892b6651ce5ee1cad7ca3a806047842d980fcb7770f12fc55c652d"></a>AT_CGATT_SET&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a2a9dac510a7892b6651ce5ee1cad7ca3a05fab204e6aa47af48831c905c6b14bb"></a>AT_CGATT&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a2a9dac510a7892b6651ce5ee1cad7ca3aa9b2aa845c468a76cba4c371390212b4"></a>AT_QIFGCNT&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a2a9dac510a7892b6651ce5ee1cad7ca3a02d8f8973d1da3d2d600ee5bf98634b6"></a>AT_QICSGP&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a2a9dac510a7892b6651ce5ee1cad7ca3a78405a6ac678ddce8f277f8eb3ed5a97"></a>AT_QIMODE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a2a9dac510a7892b6651ce5ee1cad7ca3a38b99b72c3c8659b2b72c344cf13aa53"></a>AT_QIDNSIP&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a2a9dac510a7892b6651ce5ee1cad7ca3a66b64ec2877983860009c5214865c9a4"></a>AT_QIREGAPP&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a2a9dac510a7892b6651ce5ee1cad7ca3a6e60661d146f237cf23e6716c86d7dfd"></a>AT_QIACT&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a2a9dac510a7892b6651ce5ee1cad7ca3adb7057016c465e6a5b4ee27e11ff45a0"></a>AT_QIOPEN&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a2a9dac510a7892b6651ce5ee1cad7ca3ac6219902406f8876ce72d2bed57b1719"></a>AT_QISEND&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a2a9dac510a7892b6651ce5ee1cad7ca3afe037681cffbc735110a69b2a6b85279"></a>AT_QIMUXCMD1&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a2a9dac510a7892b6651ce5ee1cad7ca3a71668f9729a385a8828d1d36ef950762"></a>AT_QIDNSCFG&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a2a9dac510a7892b6651ce5ee1cad7ca3a734f3b0803c4f93e7874a27e960bde4a"></a>AT_QCELLLOC&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a2a9dac510a7892b6651ce5ee1cad7ca3a868b2560293416e1e5ae261f83ea6183"></a>AT_QILOCIP&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a2a9dac510a7892b6651ce5ee1cad7ca3acc99117f739f5e488c3ef897175adc07"></a>AT_QICLOSE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a2a9dac510a7892b6651ce5ee1cad7ca3a67ec5d1b5c2e644cef8ae8a9b21b0ff9"></a>AT_QISTAT&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a2a9dac510a7892b6651ce5ee1cad7ca3aac8e6eea37a579f95f8538c20e0b7e7d"></a>AT_CGDCONT&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a2a9dac510a7892b6651ce5ee1cad7ca3af1ca553fc4f11a88c52b1fe0148ef73b"></a>AT_CGACT&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a2a9dac510a7892b6651ce5ee1cad7ca3a64ded65c08cee0b083a07f8de81e6eb4"></a>AT_CIFSR&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a2a9dac510a7892b6651ce5ee1cad7ca3a1718b85b50d225146b88fcd524387d6c"></a>AT_UPSD_APN&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a2a9dac510a7892b6651ce5ee1cad7ca3a9a1a0d6d9caf89db775231457321db7b"></a>AT_UPSD_USER&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a2a9dac510a7892b6651ce5ee1cad7ca3a8d6e07e2df1cffb4bf72fa7646674a3e"></a>AT_UPSD_PASSWORD&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a2a9dac510a7892b6651ce5ee1cad7ca3a86c5fc6030e39cf63c063bcd9e67b4cb"></a>AT_UPSD_CHAP&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a2a9dac510a7892b6651ce5ee1cad7ca3aba8288ffefefe13ca805ecabe9875d67"></a>AT_UPSD_IP&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a2a9dac510a7892b6651ce5ee1cad7ca3aa5127a5a532970b6b40e7afb581bfaa6"></a>AT_UPSDA_PARA_WR_EEPROM&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a2a9dac510a7892b6651ce5ee1cad7ca3af89c0e2577f7e9595b98c4e1a5cce54d"></a>AT_USOSO_KEEPALIVE_CREATE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a2a9dac510a7892b6651ce5ee1cad7ca3ac9f0fd48ebf54a3ad3101ea89bbdc647"></a>AT_USOSO_KEEPALIVE_ENABLE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a2a9dac510a7892b6651ce5ee1cad7ca3a1751d23b2af13c9b2148ef92b9136387"></a>AT_USOSO_KEEPALIVE_SET&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a2a9dac510a7892b6651ce5ee1cad7ca3a89902edd7d3f1c2d8b93d827bd0d6197"></a>AT_UPSDA_ACTIVATE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a2a9dac510a7892b6651ce5ee1cad7ca3a2d7a9745b37c7a33369ff53068ce50f2"></a>AT_UPSND&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a2a9dac510a7892b6651ce5ee1cad7ca3a83ef568f6ee1d71d8892f3238c1b3178"></a>AT_USOCR&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a2a9dac510a7892b6651ce5ee1cad7ca3a83b0f088ec6fdfdbab93ec726406290d"></a>AT_UDNSRN&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a2a9dac510a7892b6651ce5ee1cad7ca3a32d2cbbc609719b34663da8bb1bc342b"></a>AT_USOST&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a2a9dac510a7892b6651ce5ee1cad7ca3acd984209cb898ec52fd0a626d4d0c177"></a>AT_USORF&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a2a9dac510a7892b6651ce5ee1cad7ca3a78a606f60252126d0f1dfc4b71cbd75d"></a>AT_UHTTP_RESET&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a2a9dac510a7892b6651ce5ee1cad7ca3a1bd61505694b848ca4b01c77a3c244b5"></a>AT_UHTTP_DOMAIN_NAME&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a2a9dac510a7892b6651ce5ee1cad7ca3a7d7fd910ea82b24c50d5979705e5055d"></a>AT_UHTTP_PORT&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a2a9dac510a7892b6651ce5ee1cad7ca3a8e74bdc6b266844f1fa99a8b4d1486b5"></a>AT_HTTP_TEST&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a2a9dac510a7892b6651ce5ee1cad7ca3a7ae0d445d676a682168b1aec528bde33"></a>AT_ATH&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a2a9dac510a7892b6651ce5ee1cad7ca3ae37d94b636bb04a2bc1ca87071e6ff8b"></a>AT_ATA&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a2a9dac510a7892b6651ce5ee1cad7ca3a54d2453a9ae6d6c97185d4f8e5b46ec2"></a>AT_CLIP&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a2a9dac510a7892b6651ce5ee1cad7ca3a4f8a6d47ce700f10ef1e3cf70b632e34"></a>AT_2_CSQ&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a2a9dac510a7892b6651ce5ee1cad7ca3afced7be143a9e5e90ee30a2531d20e97"></a>AT_NULL&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">函数说明</h2>
+<a id="a864230cabb5921b20919708eff6fb90a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a864230cabb5921b20919708eff6fb90a">&#9670;&nbsp;</a></span>App_GsmParseTaskCreate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void App_GsmParseTaskCreate </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3f365408e6ea21ac8a6c0f4cfcbfb36f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3f365408e6ea21ac8a6c0f4cfcbfb36f">&#9670;&nbsp;</a></span>App_GsmSendTaskCreate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void App_GsmSendTaskCreate </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abe94bd335bb53c59a1a27c134ef81ee3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abe94bd335bb53c59a1a27c134ef81ee3">&#9670;&nbsp;</a></span>App_GsmTestTaskCreate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void App_GsmTestTaskCreate </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a460b37b055f1643dd6be6ab48e7cd263"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a460b37b055f1643dd6be6ab48e7cd263">&#9670;&nbsp;</a></span>GprsNet_DebugControlOnOff()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GprsNet_DebugControlOnOff </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>OnOff</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2ff5e961e8eed5d5bad828221ea632aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2ff5e961e8eed5d5bad828221ea632aa">&#9670;&nbsp;</a></span>GprsNet_DebugRx()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GprsNet_DebugRx </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>d</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>len</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4a38f6c25a627ebebec31b9341754ea1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a38f6c25a627ebebec31b9341754ea1">&#9670;&nbsp;</a></span>GprsNet_DebugTestOnOff()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GprsNet_DebugTestOnOff </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>OnOff</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac57af334c0c5cefff840a5a39b420638"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac57af334c0c5cefff840a5a39b420638">&#9670;&nbsp;</a></span>GprsNet_FlowWrite()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GprsNet_FlowWrite </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>val</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae6db4a172dd07fc77965c9128a1e9c62"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae6db4a172dd07fc77965c9128a1e9c62">&#9670;&nbsp;</a></span>GprsNet_InterruptRx()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GprsNet_InterruptRx </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>pbuf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>len</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab56cea32cae4e16db88822dd81c9a551"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab56cea32cae4e16db88822dd81c9a551">&#9670;&nbsp;</a></span>GprsNet_OnOff()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GprsNet_OnOff </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>OnOff</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a13e77006f92336fd1f4c747931679335"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a13e77006f92336fd1f4c747931679335">&#9670;&nbsp;</a></span>MODULE_OS_Q() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MODULE_OS_Q </td>
+          <td>(</td>
+          <td class="paramtype">GsmAppRxQ&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4e99d498a0bdc5d9eb506c6ac227c629"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e99d498a0bdc5d9eb506c6ac227c629">&#9670;&nbsp;</a></span>MODULE_OS_Q() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MODULE_OS_Q </td>
+          <td>(</td>
+          <td class="paramtype">GsmAppTxQ&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ada822055aac274de861060d01b156d2c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ada822055aac274de861060d01b156d2c">&#9670;&nbsp;</a></span>MODULE_OS_SEM()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MODULE_OS_SEM </td>
+          <td>(</td>
+          <td class="paramtype">GsmSubsectionSem&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2182937976f3adc57ba55306de8530ef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2182937976f3adc57ba55306de8530ef">&#9670;&nbsp;</a></span>MODULE_OS_TASK_STK() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MODULE_OS_TASK_STK </td>
+          <td>(</td>
+          <td class="paramtype">App_TaskGsmParseStk&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="app__cfg_8h.html#a4a555bbb5d47bd277a01fb7d72be4e02">APP_TASK_GSM_PARSE_STK_SIZE</a>&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1c1e23eb785147bc78d528555e548fa2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c1e23eb785147bc78d528555e548fa2">&#9670;&nbsp;</a></span>MODULE_OS_TASK_STK() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MODULE_OS_TASK_STK </td>
+          <td>(</td>
+          <td class="paramtype">App_TaskGsmSendStk&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="app__cfg_8h.html#aa23034deaacc20d17f402396fbfa4d75">APP_TASK_GSM_SEND_STK_SIZE</a>&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2817cb265f7127b41d44bc75ab7b376a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2817cb265f7127b41d44bc75ab7b376a">&#9670;&nbsp;</a></span>MODULE_OS_TASK_STK() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MODULE_OS_TASK_STK </td>
+          <td>(</td>
+          <td class="paramtype">App_TaskGsmTestStk&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="app__cfg_8h.html#a40ea602e332e5aeb6af896cf11dbd107">APP_TASK_GSM_TEST_STK_SIZE</a>&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a12ef45183b20024000122a8de12e98cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a12ef45183b20024000122a8de12e98cb">&#9670;&nbsp;</a></span>MODULE_OS_TASK_TAB() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MODULE_OS_TASK_TAB </td>
+          <td>(</td>
+          <td class="paramtype">App_TaskGsmParseTCB&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa695160ef8a28994164e6e92ec83eba8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa695160ef8a28994164e6e92ec83eba8">&#9670;&nbsp;</a></span>MODULE_OS_TASK_TAB() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MODULE_OS_TASK_TAB </td>
+          <td>(</td>
+          <td class="paramtype">App_TaskGsmSendTCB&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad6137a65d0b1bf7670d26f56e26b78a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad6137a65d0b1bf7670d26f56e26b78a4">&#9670;&nbsp;</a></span>MODULE_OS_TASK_TAB() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MODULE_OS_TASK_TAB </td>
+          <td>(</td>
+          <td class="paramtype">App_TaskGsmTestTCB&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a63543319f7d69ca284731a56e08082b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a63543319f7d69ca284731a56e08082b6">&#9670;&nbsp;</a></span>UctskGprsNet_HttpGet()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UctskGprsNet_HttpGet </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>pDns</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>pBuf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t *&#160;</td>
+          <td class="paramname"><em>plen</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4e2b59ad985726931f19379f935e1d0e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e2b59ad985726931f19379f935e1d0e">&#9670;&nbsp;</a></span>UctskGprsNet_HttpPost()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UctskGprsNet_HttpPost </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>pDns</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>pBuf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t *&#160;</td>
+          <td class="paramname"><em>plen</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">变量说明</h2>
+<a id="acdf24c598e849654540ec13b9a590868"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acdf24c598e849654540ec13b9a590868">&#9670;&nbsp;</a></span>Bz_M10ResetFinish</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t Bz_M10ResetFinish</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a91faab174297b01c198dd4a5b8d05285"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a91faab174297b01c198dd4a5b8d05285">&#9670;&nbsp;</a></span>Connect_s</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_g_p_r_s_n_e_t___s___c_o_n_n_e_c_t.html">GPRSNET_S_CONNECT</a> Connect_s[5]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a342a4c91883130e25c22d867f8f7b770"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a342a4c91883130e25c22d867f8f7b770">&#9670;&nbsp;</a></span>ConnectOutTimeS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t ConnectOutTimeS</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a223a2a20b63d73f69813434888a8dd37"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a223a2a20b63d73f69813434888a8dd37">&#9670;&nbsp;</a></span>ConnectTimeS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t ConnectTimeS</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acb0d5ea2b6ea6c69edf0f2481c1569c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb0d5ea2b6ea6c69edf0f2481c1569c4">&#9670;&nbsp;</a></span>GPRS_RBuf1_OverBz</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t GPRS_RBuf1_OverBz</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad3290bda923b8b772c80b907c23bf747"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad3290bda923b8b772c80b907c23bf747">&#9670;&nbsp;</a></span>GprsNet_s_Info</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="uctsk___gprs_net_8h.html#aa87bf676860a7f6b13910c9a5d03889c">GPRSNET_S_INFO</a> GprsNet_s_Info</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a287dfa028efe12c0dab2457b1f8a4927"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a287dfa028efe12c0dab2457b1f8a4927">&#9670;&nbsp;</a></span>pTest</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* pTest</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acd487e7d6b8db7c3c4ff6bd46aa3f136"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acd487e7d6b8db7c3c4ff6bd46aa3f136">&#9670;&nbsp;</a></span>Ring_S</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_g_p_r_s_n_e_t___s___r_i_n_g.html">GPRSNET_S_RING</a> Ring_S</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

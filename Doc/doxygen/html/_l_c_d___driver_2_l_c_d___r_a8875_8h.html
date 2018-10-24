@@ -1,0 +1,1446 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>xsl: E:/XkapSourceCode/Xkap-Stm32/Xkap-Stm32/User/UserBsp/LCD_Driver/LCD_RA8875.h Êñá‰ª∂ÂèÇËÄÉ</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">xsl
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">Ê∫êÁ†ÅËØ¥Êòé</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Âà∂‰ΩúËÄÖ Doxygen 1.8.13 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',false,false,'search.php','ÊêúÁ¥¢');
+});
+</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_6d4e12d46ad8519ff7b80e874016d102.html">User</a></li><li class="navelem"><a class="el" href="dir_a31a870a1361c5173f8d637697bb576e.html">UserBsp</a></li><li class="navelem"><a class="el" href="dir_7931ff5d57cb839515da9a82353fa9b8.html">LCD_Driver</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#define-members">ÂÆèÂÆö‰πâ</a> &#124;
+<a href="#enum-members">Êûö‰∏æ</a> &#124;
+<a href="#func-members">ÂáΩÊï∞</a>  </div>
+  <div class="headertitle">
+<div class="title">LCD_RA8875.h Êñá‰ª∂ÂèÇËÄÉ</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="includes_8h_source.html">includes.h</a>&quot;</code><br />
+</div>
+<p><a href="_l_c_d___driver_2_l_c_d___r_a8875_8h_source.html">ÊµèËßàÊ∫ê‰ª£Á†Å.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+ÂÆèÂÆö‰πâ</h2></td></tr>
+<tr class="memitem:a2411037ddd27f20f3d36467979c5cbf1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_l_c_d___driver_2_l_c_d___r_a8875_8h.html#a2411037ddd27f20f3d36467979c5cbf1">IF_8080_EN</a>&#160;&#160;&#160;/* 8080 ◊‹œﬂΩ”ø⁄ */</td></tr>
+<tr class="separator:a2411037ddd27f20f3d36467979c5cbf1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a819ef3940aaf881be15baeaa5ecba172"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_l_c_d___driver_2_l_c_d___r_a8875_8h.html#a819ef3940aaf881be15baeaa5ecba172">RA8875_BASE</a>&#160;&#160;&#160;((uint32_t)(0x6C000000 | 0x00000000))</td></tr>
+<tr class="separator:a819ef3940aaf881be15baeaa5ecba172"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adef9bf81f115299771d3736b776b828c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_l_c_d___driver_2_l_c_d___r_a8875_8h.html#adef9bf81f115299771d3736b776b828c">RA8875_REG</a>&#160;&#160;&#160;*(__IO uint16_t *)(<a class="el" href="_l_c_d___driver_2_l_c_d___r_a8875_8h.html#a819ef3940aaf881be15baeaa5ecba172">RA8875_BASE</a> +  (1 &lt;&lt; (18 + 1)))	/* FSMC 16Œª◊‹œﬂƒ£ Ωœ¬£¨FSMC_A18ø⁄œﬂ∂‘”¶ŒÔ¿Ìµÿ÷∑A19 */</td></tr>
+<tr class="separator:adef9bf81f115299771d3736b776b828c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a88999ae8217ef053312b3e84e8c92b59"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_l_c_d___driver_2_l_c_d___r_a8875_8h.html#a88999ae8217ef053312b3e84e8c92b59">RA8875_RAM</a>&#160;&#160;&#160;*(__IO uint16_t *)(<a class="el" href="_l_c_d___driver_2_l_c_d___r_a8875_8h.html#a819ef3940aaf881be15baeaa5ecba172">RA8875_BASE</a>)</td></tr>
+<tr class="separator:a88999ae8217ef053312b3e84e8c92b59"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a244aa97fc99c8fdb5d2c6f4e3d52b5f3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_l_c_d___driver_2_l_c_d___r_a8875_8h.html#a244aa97fc99c8fdb5d2c6f4e3d52b5f3">RA8875_RAM_ADDR</a>&#160;&#160;&#160;<a class="el" href="_l_c_d___driver_2_l_c_d___r_a8875_8h.html#a819ef3940aaf881be15baeaa5ecba172">RA8875_BASE</a></td></tr>
+<tr class="separator:a244aa97fc99c8fdb5d2c6f4e3d52b5f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+Êûö‰∏æ</h2></td></tr>
+<tr class="memitem:a385c44f6fb256e5716a2302a5b940388"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <a class="el" href="_l_c_d___driver_2_l_c_d___r_a8875_8h.html#a385c44f6fb256e5716a2302a5b940388a461ea79d961f5c023af8620ff46a9859">RA_FONT_16</a> = 0, 
+<a class="el" href="_l_c_d___driver_2_l_c_d___r_a8875_8h.html#a385c44f6fb256e5716a2302a5b940388a9414c841cc9f19b29db5fb205de7263f">RA_FONT_24</a> = 1, 
+<a class="el" href="_l_c_d___driver_2_l_c_d___r_a8875_8h.html#a385c44f6fb256e5716a2302a5b940388ae55c2bbe9cdc114b29f94cf91a7b0eba">RA_FONT_32</a> = 2
+ }</td></tr>
+<tr class="separator:a385c44f6fb256e5716a2302a5b940388"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc5c98fcc1211af2b80116dd6e0a035d"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <a class="el" href="_l_c_d___driver_2_l_c_d___r_a8875_8h.html#abc5c98fcc1211af2b80116dd6e0a035da5a462e5166b30ab13eddcc7175c0de5d">RA_SIZE_X1</a> = 0, 
+<a class="el" href="_l_c_d___driver_2_l_c_d___r_a8875_8h.html#abc5c98fcc1211af2b80116dd6e0a035da7f4c761a1f4ecb52179628ce6862fb25">RA_SIZE_X2</a> = 1, 
+<a class="el" href="_l_c_d___driver_2_l_c_d___r_a8875_8h.html#abc5c98fcc1211af2b80116dd6e0a035da163181e21e21df4bdf7c5a99d41e2cf2">RA_SIZE_X3</a> = 2, 
+<a class="el" href="_l_c_d___driver_2_l_c_d___r_a8875_8h.html#abc5c98fcc1211af2b80116dd6e0a035da837e865713016521f9ac2a3c48b9e914">RA_SIZE_X4</a> = 3
+ }</td></tr>
+<tr class="separator:abc5c98fcc1211af2b80116dd6e0a035d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+ÂáΩÊï∞</h2></td></tr>
+<tr class="memitem:a69aced91a343fc153d67da42645b1367"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_l_c_d___driver_2_l_c_d___r_a8875_8h.html#a69aced91a343fc153d67da42645b1367">RA8875_InitHard</a> (void)</td></tr>
+<tr class="separator:a69aced91a343fc153d67da42645b1367"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ff7fee66d17ff0ee0128c09ce1f2741"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_l_c_d___driver_2_l_c_d___r_a8875_8h.html#a4ff7fee66d17ff0ee0128c09ce1f2741">RA8875_ReadID</a> (void)</td></tr>
+<tr class="separator:a4ff7fee66d17ff0ee0128c09ce1f2741"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:addd3b18d3c9c7323e3fb96d9fcff9905"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_l_c_d___driver_2_l_c_d___r_a8875_8h.html#addd3b18d3c9c7323e3fb96d9fcff9905">RA8875_IsBusy</a> (void)</td></tr>
+<tr class="separator:addd3b18d3c9c7323e3fb96d9fcff9905"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeed18bcd107c38e3e0578f89a2f84f0f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_l_c_d___driver_2_l_c_d___r_a8875_8h.html#aeed18bcd107c38e3e0578f89a2f84f0f">RA8875_Layer1Visable</a> (void)</td></tr>
+<tr class="separator:aeed18bcd107c38e3e0578f89a2f84f0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a584f81a65c4dd12125a5a64546e2a881"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_l_c_d___driver_2_l_c_d___r_a8875_8h.html#a584f81a65c4dd12125a5a64546e2a881">RA8875_Layer2Visable</a> (void)</td></tr>
+<tr class="separator:a584f81a65c4dd12125a5a64546e2a881"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9ebda95ca85d61ef2950e4bec526e56"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_l_c_d___driver_2_l_c_d___r_a8875_8h.html#af9ebda95ca85d61ef2950e4bec526e56">RA8875_DispOn</a> (void)</td></tr>
+<tr class="separator:af9ebda95ca85d61ef2950e4bec526e56"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a8f30697340d2c6d1b85c6a48c0f9d0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_l_c_d___driver_2_l_c_d___r_a8875_8h.html#a2a8f30697340d2c6d1b85c6a48c0f9d0">RA8875_DispOff</a> (void)</td></tr>
+<tr class="separator:a2a8f30697340d2c6d1b85c6a48c0f9d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af8a1508e1678812198d362091cae4680"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_l_c_d___driver_2_l_c_d___r_a8875_8h.html#af8a1508e1678812198d362091cae4680">RA8875_PutPixel</a> (uint16_t _usX, uint16_t _usY, uint16_t _usColor)</td></tr>
+<tr class="separator:af8a1508e1678812198d362091cae4680"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e6eb28235534360343a9f0aa2e8c8bd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_l_c_d___driver_2_l_c_d___r_a8875_8h.html#a4e6eb28235534360343a9f0aa2e8c8bd">RA8875_SetCursor</a> (uint16_t _usX, uint16_t _usY)</td></tr>
+<tr class="separator:a4e6eb28235534360343a9f0aa2e8c8bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc01286ffd0f74a714a788a5b9b38b70"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_l_c_d___driver_2_l_c_d___r_a8875_8h.html#adc01286ffd0f74a714a788a5b9b38b70">RA8875_GetPixel</a> (uint16_t _usX, uint16_t _usY)</td></tr>
+<tr class="separator:adc01286ffd0f74a714a788a5b9b38b70"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71647481d73068debbe02d27cf4ff63f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_l_c_d___driver_2_l_c_d___r_a8875_8h.html#a71647481d73068debbe02d27cf4ff63f">RA8875_SetFrontColor</a> (uint16_t _usColor)</td></tr>
+<tr class="separator:a71647481d73068debbe02d27cf4ff63f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b7f3c6e29ab11ac85f6e155bc5ecbbb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_l_c_d___driver_2_l_c_d___r_a8875_8h.html#a0b7f3c6e29ab11ac85f6e155bc5ecbbb">RA8875_SetBackColor</a> (uint16_t _usColor)</td></tr>
+<tr class="separator:a0b7f3c6e29ab11ac85f6e155bc5ecbbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0df904970fbacad66ffd6dc9caccb498"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_l_c_d___driver_2_l_c_d___r_a8875_8h.html#a0df904970fbacad66ffd6dc9caccb498">RA8875_SetFont</a> (uint8_t _ucFontType, uint8_t _ucLineSpace, uint8_t _ucCharSpace)</td></tr>
+<tr class="separator:a0df904970fbacad66ffd6dc9caccb498"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0117b1e1a9594698f022dab3964f5bb1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_l_c_d___driver_2_l_c_d___r_a8875_8h.html#a0117b1e1a9594698f022dab3964f5bb1">RA8875_SetTextZoom</a> (uint8_t _ucHSize, uint8_t _ucVSize)</td></tr>
+<tr class="separator:a0117b1e1a9594698f022dab3964f5bb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abdd36e27980abcfb59d89c8335ceec04"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_l_c_d___driver_2_l_c_d___r_a8875_8h.html#abdd36e27980abcfb59d89c8335ceec04">RA8875_DispAscii</a> (uint16_t _usX, uint16_t _usY, char *_ptr)</td></tr>
+<tr class="separator:abdd36e27980abcfb59d89c8335ceec04"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f730353c99dd131e44c9d7b2559872b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_l_c_d___driver_2_l_c_d___r_a8875_8h.html#a7f730353c99dd131e44c9d7b2559872b">RA8875_DispStr</a> (uint16_t _usX, uint16_t _usY, char *_ptr)</td></tr>
+<tr class="separator:a7f730353c99dd131e44c9d7b2559872b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afaf14790ef555e1f1dc82676d547720a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_l_c_d___driver_2_l_c_d___r_a8875_8h.html#afaf14790ef555e1f1dc82676d547720a">RA8875_ClrScr</a> (uint16_t _usColor)</td></tr>
+<tr class="separator:afaf14790ef555e1f1dc82676d547720a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5edd4a61baf99a4b11de8033c28c3ef6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_l_c_d___driver_2_l_c_d___r_a8875_8h.html#a5edd4a61baf99a4b11de8033c28c3ef6">RA8875_DrawBMP</a> (uint16_t _usX, uint16_t _usY, uint16_t _usHeight, uint16_t _usWidth, uint16_t *_ptr)</td></tr>
+<tr class="separator:a5edd4a61baf99a4b11de8033c28c3ef6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9385439abcac62754d653cff0ec8f5f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_l_c_d___driver_2_l_c_d___r_a8875_8h.html#ae9385439abcac62754d653cff0ec8f5f">RA8875_DrawLine</a> (uint16_t _usX1, uint16_t _usY1, uint16_t _usX2, uint16_t _usY2, uint16_t _usColor)</td></tr>
+<tr class="separator:ae9385439abcac62754d653cff0ec8f5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d6d66c8928e3d5634405d2b75d7ac29"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_l_c_d___driver_2_l_c_d___r_a8875_8h.html#a2d6d66c8928e3d5634405d2b75d7ac29">RA8875_DrawRect</a> (uint16_t _usX, uint16_t _usY, uint16_t _usHeight, uint16_t _usWidth, uint16_t _usColor)</td></tr>
+<tr class="separator:a2d6d66c8928e3d5634405d2b75d7ac29"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8cefa8362767d9a14103d71d34ce0611"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_l_c_d___driver_2_l_c_d___r_a8875_8h.html#a8cefa8362767d9a14103d71d34ce0611">RA8875_FillRect</a> (uint16_t _usX, uint16_t _usY, uint16_t _usHeight, uint16_t _usWidth, uint16_t _usColor)</td></tr>
+<tr class="separator:a8cefa8362767d9a14103d71d34ce0611"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add1b545751aa7209e25d7bc721699e59"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_l_c_d___driver_2_l_c_d___r_a8875_8h.html#add1b545751aa7209e25d7bc721699e59">RA8875_DrawCircle</a> (uint16_t _usX, uint16_t _usY, uint16_t _usRadius, uint16_t _usColor)</td></tr>
+<tr class="separator:add1b545751aa7209e25d7bc721699e59"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a62f03526581f0a6177a23b3b4a78deac"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_l_c_d___driver_2_l_c_d___r_a8875_8h.html#a62f03526581f0a6177a23b3b4a78deac">RA8875_FillCircle</a> (uint16_t _usX, uint16_t _usY, uint16_t _usRadius, uint16_t _usColor)</td></tr>
+<tr class="separator:a62f03526581f0a6177a23b3b4a78deac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad1c95ce68731dbdd256514d183ef39be"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_l_c_d___driver_2_l_c_d___r_a8875_8h.html#ad1c95ce68731dbdd256514d183ef39be">RA8875_SetDispWin</a> (uint16_t _usX, uint16_t _usY, uint16_t _usHeight, uint16_t _usWidth)</td></tr>
+<tr class="separator:ad1c95ce68731dbdd256514d183ef39be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af4701e7628192bcbaeade18b399bdd1f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_l_c_d___driver_2_l_c_d___r_a8875_8h.html#af4701e7628192bcbaeade18b399bdd1f">RA8875_QuitWinMode</a> (void)</td></tr>
+<tr class="separator:af4701e7628192bcbaeade18b399bdd1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2114bbae349ae93505b4e0e8b6b9168"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_l_c_d___driver_2_l_c_d___r_a8875_8h.html#ab2114bbae349ae93505b4e0e8b6b9168">RA8875_CtrlGPO</a> (uint8_t _pin, uint8_t _value)</td></tr>
+<tr class="separator:ab2114bbae349ae93505b4e0e8b6b9168"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b69efebc8fb1b6e91c726463c95c948"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_l_c_d___driver_2_l_c_d___r_a8875_8h.html#a2b69efebc8fb1b6e91c726463c95c948">RA8875_SetBackLight</a> (uint8_t _bright)</td></tr>
+<tr class="separator:a2b69efebc8fb1b6e91c726463c95c948"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a53db1d5ff7eb82349d30ba96c740e88a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_l_c_d___driver_2_l_c_d___r_a8875_8h.html#a53db1d5ff7eb82349d30ba96c740e88a">RA8875_TouchInit</a> (void)</td></tr>
+<tr class="separator:a53db1d5ff7eb82349d30ba96c740e88a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad318907c82c218664850a499e42690c"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_l_c_d___driver_2_l_c_d___r_a8875_8h.html#aad318907c82c218664850a499e42690c">RA8875_TouchReadX</a> (void)</td></tr>
+<tr class="separator:aad318907c82c218664850a499e42690c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c2bebe5438b7773b780256e09635531"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_l_c_d___driver_2_l_c_d___r_a8875_8h.html#a9c2bebe5438b7773b780256e09635531">RA8875_TouchReadY</a> (void)</td></tr>
+<tr class="separator:a9c2bebe5438b7773b780256e09635531"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d4c318458fca11eca714ae8576ec96d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_l_c_d___driver_2_l_c_d___r_a8875_8h.html#a2d4c318458fca11eca714ae8576ec96d">BTE_SetTarBlock</a> (uint16_t _usX, uint16_t _usY, uint16_t _usHeight, uint16_t _usWidth, uint8_t _ucLayer)</td></tr>
+<tr class="separator:a2d4c318458fca11eca714ae8576ec96d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb7fe09077389be7ab60ac8565d06e84"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_l_c_d___driver_2_l_c_d___r_a8875_8h.html#aeb7fe09077389be7ab60ac8565d06e84">BTE_SetOperateCode</a> (uint8_t _ucOperate)</td></tr>
+<tr class="separator:aeb7fe09077389be7ab60ac8565d06e84"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e472d235ed048bc5bf7c845c825036a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_l_c_d___driver_2_l_c_d___r_a8875_8h.html#a9e472d235ed048bc5bf7c845c825036a">BTE_Start</a> (void)</td></tr>
+<tr class="separator:a9e472d235ed048bc5bf7c845c825036a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ce4304aed8a16f168896ba989aa3839"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_l_c_d___driver_2_l_c_d___r_a8875_8h.html#a0ce4304aed8a16f168896ba989aa3839">BTE_Wait</a> (void)</td></tr>
+<tr class="separator:a0ce4304aed8a16f168896ba989aa3839"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c396fb571a1e684891819bfcfa52944"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_l_c_d___driver_2_l_c_d___r_a8875_8h.html#a1c396fb571a1e684891819bfcfa52944">RA8875_DrawVLine</a> (uint16_t _usX1, uint16_t _usY1, uint16_t _usY2, uint16_t _usColor)</td></tr>
+<tr class="separator:a1c396fb571a1e684891819bfcfa52944"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae711da4bfe8f87d90546dfff215b02c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_l_c_d___driver_2_l_c_d___r_a8875_8h.html#aae711da4bfe8f87d90546dfff215b02c">RA8875_DrawHColorLine</a> (uint16_t _usX1, uint16_t _usY1, uint16_t _usWidth, uint16_t *_pColor)</td></tr>
+<tr class="separator:aae711da4bfe8f87d90546dfff215b02c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad85eb74b0a885d1ee20157947145e77"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_l_c_d___driver_2_l_c_d___r_a8875_8h.html#aad85eb74b0a885d1ee20157947145e77">RA8875_DrawHLine</a> (uint16_t _usX1, uint16_t _usY1, uint16_t _usX2, uint16_t _usColor)</td></tr>
+<tr class="separator:aad85eb74b0a885d1ee20157947145e77"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae39bf2c160401085930a3ebcf64f413f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_l_c_d___driver_2_l_c_d___r_a8875_8h.html#ae39bf2c160401085930a3ebcf64f413f">RA8875_InitSPI</a> (void)</td></tr>
+<tr class="separator:ae39bf2c160401085930a3ebcf64f413f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af4af3f194e8ecbcb588cfd46621aafca"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_l_c_d___driver_2_l_c_d___r_a8875_8h.html#af4af3f194e8ecbcb588cfd46621aafca">RA8875_Sleep</a> (void)</td></tr>
+<tr class="separator:af4af3f194e8ecbcb588cfd46621aafca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b7b020b899a393df83942f24ce2c94b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_l_c_d___driver_2_l_c_d___r_a8875_8h.html#a6b7b020b899a393df83942f24ce2c94b">RA8875_StartDirectDraw</a> (uint16_t _usX, uint16_t _usY, uint16_t _usHeight, uint16_t _usWidth)</td></tr>
+<tr class="separator:a6b7b020b899a393df83942f24ce2c94b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff1167925a303cf1df5d3b45c0b81873"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_l_c_d___driver_2_l_c_d___r_a8875_8h.html#aff1167925a303cf1df5d3b45c0b81873">RA8875_GetDispMemAddr</a> (void)</td></tr>
+<tr class="separator:aff1167925a303cf1df5d3b45c0b81873"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afac65feceeecd4bed4d4fb02c9d489a0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_l_c_d___driver_2_l_c_d___r_a8875_8h.html#afac65feceeecd4bed4d4fb02c9d489a0">RA8875_QuitDirectDraw</a> (void)</td></tr>
+<tr class="separator:afac65feceeecd4bed4d4fb02c9d489a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">ÂÆèÂÆö‰πâËØ¥Êòé</h2>
+<a id="a2411037ddd27f20f3d36467979c5cbf1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2411037ddd27f20f3d36467979c5cbf1">&#9670;&nbsp;</a></span>IF_8080_EN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define IF_8080_EN&#160;&#160;&#160;/* 8080 ◊‹œﬂΩ”ø⁄ */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a819ef3940aaf881be15baeaa5ecba172"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a819ef3940aaf881be15baeaa5ecba172">&#9670;&nbsp;</a></span>RA8875_BASE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RA8875_BASE&#160;&#160;&#160;((uint32_t)(0x6C000000 | 0x00000000))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a88999ae8217ef053312b3e84e8c92b59"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a88999ae8217ef053312b3e84e8c92b59">&#9670;&nbsp;</a></span>RA8875_RAM</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RA8875_RAM&#160;&#160;&#160;*(__IO uint16_t *)(<a class="el" href="_l_c_d___driver_2_l_c_d___r_a8875_8h.html#a819ef3940aaf881be15baeaa5ecba172">RA8875_BASE</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a244aa97fc99c8fdb5d2c6f4e3d52b5f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a244aa97fc99c8fdb5d2c6f4e3d52b5f3">&#9670;&nbsp;</a></span>RA8875_RAM_ADDR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RA8875_RAM_ADDR&#160;&#160;&#160;<a class="el" href="_l_c_d___driver_2_l_c_d___r_a8875_8h.html#a819ef3940aaf881be15baeaa5ecba172">RA8875_BASE</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adef9bf81f115299771d3736b776b828c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adef9bf81f115299771d3736b776b828c">&#9670;&nbsp;</a></span>RA8875_REG</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RA8875_REG&#160;&#160;&#160;*(__IO uint16_t *)(<a class="el" href="_l_c_d___driver_2_l_c_d___r_a8875_8h.html#a819ef3940aaf881be15baeaa5ecba172">RA8875_BASE</a> +  (1 &lt;&lt; (18 + 1)))	/* FSMC 16Œª◊‹œﬂƒ£ Ωœ¬£¨FSMC_A18ø⁄œﬂ∂‘”¶ŒÔ¿Ìµÿ÷∑A19 */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Êûö‰∏æÁ±ªÂûãËØ¥Êòé</h2>
+<a id="a385c44f6fb256e5716a2302a5b940388"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a385c44f6fb256e5716a2302a5b940388">&#9670;&nbsp;</a></span>anonymous enum</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">anonymous enum</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Êûö‰∏æÂÄº</th></tr><tr><td class="fieldname"><a id="a385c44f6fb256e5716a2302a5b940388a461ea79d961f5c023af8620ff46a9859"></a>RA_FONT_16&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a385c44f6fb256e5716a2302a5b940388a9414c841cc9f19b29db5fb205de7263f"></a>RA_FONT_24&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a385c44f6fb256e5716a2302a5b940388ae55c2bbe9cdc114b29f94cf91a7b0eba"></a>RA_FONT_32&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<a id="abc5c98fcc1211af2b80116dd6e0a035d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc5c98fcc1211af2b80116dd6e0a035d">&#9670;&nbsp;</a></span>anonymous enum</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">anonymous enum</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Êûö‰∏æÂÄº</th></tr><tr><td class="fieldname"><a id="abc5c98fcc1211af2b80116dd6e0a035da5a462e5166b30ab13eddcc7175c0de5d"></a>RA_SIZE_X1&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="abc5c98fcc1211af2b80116dd6e0a035da7f4c761a1f4ecb52179628ce6862fb25"></a>RA_SIZE_X2&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="abc5c98fcc1211af2b80116dd6e0a035da163181e21e21df4bdf7c5a99d41e2cf2"></a>RA_SIZE_X3&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="abc5c98fcc1211af2b80116dd6e0a035da837e865713016521f9ac2a3c48b9e914"></a>RA_SIZE_X4&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">ÂáΩÊï∞ËØ¥Êòé</h2>
+<a id="aeb7fe09077389be7ab60ac8565d06e84"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb7fe09077389be7ab60ac8565d06e84">&#9670;&nbsp;</a></span>BTE_SetOperateCode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BTE_SetOperateCode </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>_ucOperate</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2d4c318458fca11eca714ae8576ec96d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d4c318458fca11eca714ae8576ec96d">&#9670;&nbsp;</a></span>BTE_SetTarBlock()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BTE_SetTarBlock </td>
+          <td>(</td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>_usX</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>_usY</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>_usHeight</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>_usWidth</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>_ucLayer</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9e472d235ed048bc5bf7c845c825036a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9e472d235ed048bc5bf7c845c825036a">&#9670;&nbsp;</a></span>BTE_Start()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BTE_Start </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0ce4304aed8a16f168896ba989aa3839"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ce4304aed8a16f168896ba989aa3839">&#9670;&nbsp;</a></span>BTE_Wait()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BTE_Wait </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afaf14790ef555e1f1dc82676d547720a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afaf14790ef555e1f1dc82676d547720a">&#9670;&nbsp;</a></span>RA8875_ClrScr()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RA8875_ClrScr </td>
+          <td>(</td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>_usColor</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab2114bbae349ae93505b4e0e8b6b9168"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab2114bbae349ae93505b4e0e8b6b9168">&#9670;&nbsp;</a></span>RA8875_CtrlGPO()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RA8875_CtrlGPO </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>_pin</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>_value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abdd36e27980abcfb59d89c8335ceec04"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abdd36e27980abcfb59d89c8335ceec04">&#9670;&nbsp;</a></span>RA8875_DispAscii()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RA8875_DispAscii </td>
+          <td>(</td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>_usX</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>_usY</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>_ptr</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2a8f30697340d2c6d1b85c6a48c0f9d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a8f30697340d2c6d1b85c6a48c0f9d0">&#9670;&nbsp;</a></span>RA8875_DispOff()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RA8875_DispOff </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af9ebda95ca85d61ef2950e4bec526e56"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af9ebda95ca85d61ef2950e4bec526e56">&#9670;&nbsp;</a></span>RA8875_DispOn()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RA8875_DispOn </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7f730353c99dd131e44c9d7b2559872b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7f730353c99dd131e44c9d7b2559872b">&#9670;&nbsp;</a></span>RA8875_DispStr()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RA8875_DispStr </td>
+          <td>(</td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>_usX</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>_usY</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>_ptr</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5edd4a61baf99a4b11de8033c28c3ef6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5edd4a61baf99a4b11de8033c28c3ef6">&#9670;&nbsp;</a></span>RA8875_DrawBMP()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RA8875_DrawBMP </td>
+          <td>(</td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>_usX</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>_usY</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>_usHeight</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>_usWidth</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t *&#160;</td>
+          <td class="paramname"><em>_ptr</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="add1b545751aa7209e25d7bc721699e59"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#add1b545751aa7209e25d7bc721699e59">&#9670;&nbsp;</a></span>RA8875_DrawCircle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RA8875_DrawCircle </td>
+          <td>(</td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>_usX</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>_usY</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>_usRadius</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>_usColor</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aae711da4bfe8f87d90546dfff215b02c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae711da4bfe8f87d90546dfff215b02c">&#9670;&nbsp;</a></span>RA8875_DrawHColorLine()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RA8875_DrawHColorLine </td>
+          <td>(</td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>_usX1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>_usY1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>_usWidth</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t *&#160;</td>
+          <td class="paramname"><em>_pColor</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aad85eb74b0a885d1ee20157947145e77"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aad85eb74b0a885d1ee20157947145e77">&#9670;&nbsp;</a></span>RA8875_DrawHLine()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RA8875_DrawHLine </td>
+          <td>(</td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>_usX1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>_usY1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>_usX2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>_usColor</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae9385439abcac62754d653cff0ec8f5f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae9385439abcac62754d653cff0ec8f5f">&#9670;&nbsp;</a></span>RA8875_DrawLine()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RA8875_DrawLine </td>
+          <td>(</td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>_usX1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>_usY1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>_usX2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>_usY2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>_usColor</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2d6d66c8928e3d5634405d2b75d7ac29"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d6d66c8928e3d5634405d2b75d7ac29">&#9670;&nbsp;</a></span>RA8875_DrawRect()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RA8875_DrawRect </td>
+          <td>(</td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>_usX</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>_usY</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>_usHeight</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>_usWidth</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>_usColor</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1c396fb571a1e684891819bfcfa52944"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c396fb571a1e684891819bfcfa52944">&#9670;&nbsp;</a></span>RA8875_DrawVLine()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RA8875_DrawVLine </td>
+          <td>(</td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>_usX1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>_usY1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>_usY2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>_usColor</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a62f03526581f0a6177a23b3b4a78deac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a62f03526581f0a6177a23b3b4a78deac">&#9670;&nbsp;</a></span>RA8875_FillCircle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RA8875_FillCircle </td>
+          <td>(</td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>_usX</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>_usY</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>_usRadius</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>_usColor</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8cefa8362767d9a14103d71d34ce0611"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8cefa8362767d9a14103d71d34ce0611">&#9670;&nbsp;</a></span>RA8875_FillRect()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RA8875_FillRect </td>
+          <td>(</td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>_usX</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>_usY</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>_usHeight</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>_usWidth</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>_usColor</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aff1167925a303cf1df5d3b45c0b81873"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aff1167925a303cf1df5d3b45c0b81873">&#9670;&nbsp;</a></span>RA8875_GetDispMemAddr()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t RA8875_GetDispMemAddr </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adc01286ffd0f74a714a788a5b9b38b70"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adc01286ffd0f74a714a788a5b9b38b70">&#9670;&nbsp;</a></span>RA8875_GetPixel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t RA8875_GetPixel </td>
+          <td>(</td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>_usX</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>_usY</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a69aced91a343fc153d67da42645b1367"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a69aced91a343fc153d67da42645b1367">&#9670;&nbsp;</a></span>RA8875_InitHard()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RA8875_InitHard </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae39bf2c160401085930a3ebcf64f413f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae39bf2c160401085930a3ebcf64f413f">&#9670;&nbsp;</a></span>RA8875_InitSPI()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RA8875_InitSPI </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="addd3b18d3c9c7323e3fb96d9fcff9905"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#addd3b18d3c9c7323e3fb96d9fcff9905">&#9670;&nbsp;</a></span>RA8875_IsBusy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t RA8875_IsBusy </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aeed18bcd107c38e3e0578f89a2f84f0f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeed18bcd107c38e3e0578f89a2f84f0f">&#9670;&nbsp;</a></span>RA8875_Layer1Visable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RA8875_Layer1Visable </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a584f81a65c4dd12125a5a64546e2a881"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a584f81a65c4dd12125a5a64546e2a881">&#9670;&nbsp;</a></span>RA8875_Layer2Visable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RA8875_Layer2Visable </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af8a1508e1678812198d362091cae4680"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af8a1508e1678812198d362091cae4680">&#9670;&nbsp;</a></span>RA8875_PutPixel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RA8875_PutPixel </td>
+          <td>(</td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>_usX</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>_usY</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>_usColor</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afac65feceeecd4bed4d4fb02c9d489a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afac65feceeecd4bed4d4fb02c9d489a0">&#9670;&nbsp;</a></span>RA8875_QuitDirectDraw()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RA8875_QuitDirectDraw </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af4701e7628192bcbaeade18b399bdd1f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af4701e7628192bcbaeade18b399bdd1f">&#9670;&nbsp;</a></span>RA8875_QuitWinMode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RA8875_QuitWinMode </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4ff7fee66d17ff0ee0128c09ce1f2741"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ff7fee66d17ff0ee0128c09ce1f2741">&#9670;&nbsp;</a></span>RA8875_ReadID()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t RA8875_ReadID </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0b7f3c6e29ab11ac85f6e155bc5ecbbb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0b7f3c6e29ab11ac85f6e155bc5ecbbb">&#9670;&nbsp;</a></span>RA8875_SetBackColor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RA8875_SetBackColor </td>
+          <td>(</td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>_usColor</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2b69efebc8fb1b6e91c726463c95c948"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b69efebc8fb1b6e91c726463c95c948">&#9670;&nbsp;</a></span>RA8875_SetBackLight()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RA8875_SetBackLight </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>_bright</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4e6eb28235534360343a9f0aa2e8c8bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e6eb28235534360343a9f0aa2e8c8bd">&#9670;&nbsp;</a></span>RA8875_SetCursor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RA8875_SetCursor </td>
+          <td>(</td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>_usX</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>_usY</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad1c95ce68731dbdd256514d183ef39be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad1c95ce68731dbdd256514d183ef39be">&#9670;&nbsp;</a></span>RA8875_SetDispWin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RA8875_SetDispWin </td>
+          <td>(</td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>_usX</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>_usY</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>_usHeight</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>_usWidth</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0df904970fbacad66ffd6dc9caccb498"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0df904970fbacad66ffd6dc9caccb498">&#9670;&nbsp;</a></span>RA8875_SetFont()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RA8875_SetFont </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>_ucFontType</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>_ucLineSpace</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>_ucCharSpace</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a71647481d73068debbe02d27cf4ff63f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a71647481d73068debbe02d27cf4ff63f">&#9670;&nbsp;</a></span>RA8875_SetFrontColor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RA8875_SetFrontColor </td>
+          <td>(</td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>_usColor</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0117b1e1a9594698f022dab3964f5bb1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0117b1e1a9594698f022dab3964f5bb1">&#9670;&nbsp;</a></span>RA8875_SetTextZoom()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RA8875_SetTextZoom </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>_ucHSize</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>_ucVSize</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af4af3f194e8ecbcb588cfd46621aafca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af4af3f194e8ecbcb588cfd46621aafca">&#9670;&nbsp;</a></span>RA8875_Sleep()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RA8875_Sleep </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6b7b020b899a393df83942f24ce2c94b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6b7b020b899a393df83942f24ce2c94b">&#9670;&nbsp;</a></span>RA8875_StartDirectDraw()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RA8875_StartDirectDraw </td>
+          <td>(</td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>_usX</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>_usY</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>_usHeight</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>_usWidth</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a53db1d5ff7eb82349d30ba96c740e88a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a53db1d5ff7eb82349d30ba96c740e88a">&#9670;&nbsp;</a></span>RA8875_TouchInit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RA8875_TouchInit </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aad318907c82c218664850a499e42690c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aad318907c82c218664850a499e42690c">&#9670;&nbsp;</a></span>RA8875_TouchReadX()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t RA8875_TouchReadX </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9c2bebe5438b7773b780256e09635531"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c2bebe5438b7773b780256e09635531">&#9670;&nbsp;</a></span>RA8875_TouchReadY()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t RA8875_TouchReadY </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Âà∂‰ΩúËÄÖ &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

@@ -1,0 +1,7 @@
+---- Flag_DataValid Matches (6 in 4 files) ----
+MODULE_MEMORY_S_DAY_INFO in Module_Memory.h (Xkap-Stm32\User\UserModule) :     uint8_t Flag_DataValid :1;
+Xkap_IsleepData1 in uctsk_GprsAppXkap.c (Xkap-Stm32\User\UserTask) :     pbuf[i16]   =  psDayInfo->Flag_DataValid;
+Hci_Menu_SleepCurve in uctsk_HCI.c (Xkap-Stm32\User\UserTask) :         if((Hci_SleepDataValid(psDaySleepLevel->DataBuf, sizeof(psDaySleepLevel->DataBuf)) == ERR)/*||psDayInfo->Flag_DataValid==1*/)
+Hci_Menu_SleepCurve in uctsk_HCI.c (Xkap-Stm32\User\UserTask) :         if(psDayInfo->Flag_DataValid==1)
+uctsk_Rfms in uctsk_RFMS.c (Xkap-Stm32\User\UserTask) :                         uctsk_Rfms_s_DayInfo.Flag_DataValid=1;
+uctsk_Rfms in uctsk_RFMS.c (Xkap-Stm32\User\UserTask) :                         uctsk_Rfms_s_DayInfo.Flag_DataValid=0;

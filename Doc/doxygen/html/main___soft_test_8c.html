@@ -1,0 +1,396 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>xsl: E:/XkapSourceCode/Xkap-Stm32/Xkap-Stm32/User/UserTask/main_SoftTest.c 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">xsl
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">源码说明</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.13 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',false,false,'search.php','搜索');
+});
+</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_6d4e12d46ad8519ff7b80e874016d102.html">User</a></li><li class="navelem"><a class="el" href="dir_ba9e781c49be9d79c84eb9994eefebec.html">UserTask</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">结构体</a> &#124;
+<a href="#define-members">宏定义</a> &#124;
+<a href="#typedef-members">类型定义</a> &#124;
+<a href="#func-members">函数</a> &#124;
+<a href="#var-members">变量</a>  </div>
+  <div class="headertitle">
+<div class="title">main_SoftTest.c 文件参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;stdint.h&gt;</code><br />
+<code>#include &lt;string.h&gt;</code><br />
+<code>#include &lt;ctype.h&gt;</code><br />
+<code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &lt;stdarg.h&gt;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+结构体</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtag_memo_record.html">tagMemoRecord</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+宏定义</h2></td></tr>
+<tr class="memitem:ac6afabdc09a49a433ee19d8a9486056d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main___soft_test_8c.html#ac6afabdc09a49a433ee19d8a9486056d">min</a>(a,  b)&#160;&#160;&#160;(((a) &lt; (b)) ? (a) : (b))</td></tr>
+<tr class="separator:ac6afabdc09a49a433ee19d8a9486056d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2390e29a53df25e33248e0201ef52ebe"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main___soft_test_8c.html#a2390e29a53df25e33248e0201ef52ebe">TEST</a>(Name,  Size)&#160;&#160;&#160;const uint16_t Size;</td></tr>
+<tr class="separator:a2390e29a53df25e33248e0201ef52ebe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+类型定义</h2></td></tr>
+<tr class="memitem:a3080d9b1bbb47c87b42f8a08deea6690"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structtag_memo_record.html">tagMemoRecord</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main___soft_test_8c.html#a3080d9b1bbb47c87b42f8a08deea6690">MEMO_RECORD</a></td></tr>
+<tr class="separator:a3080d9b1bbb47c87b42f8a08deea6690"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:a7609efffa12dd9a95ae1fc6d27fd8161"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main___soft_test_8c.html#a7609efffa12dd9a95ae1fc6d27fd8161">EditDistance1</a> (char *src, char *dest)</td></tr>
+<tr class="separator:a7609efffa12dd9a95ae1fc6d27fd8161"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a10370059d1381cc99a21bf71e9c4193d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main___soft_test_8c.html#a10370059d1381cc99a21bf71e9c4193d">EditDistance2</a> (char *src, char *dest, int i, int j)</td></tr>
+<tr class="separator:a10370059d1381cc99a21bf71e9c4193d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a28cdf54260642cbc7fb2d518c0c4b79d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main___soft_test_8c.html#a28cdf54260642cbc7fb2d518c0c4b79d">EditDistance3</a> (char *src, char *dest)</td></tr>
+<tr class="separator:a28cdf54260642cbc7fb2d518c0c4b79d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ddf1224851353fc92bfbff6f499fa97"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main___soft_test_8c.html#a0ddf1224851353fc92bfbff6f499fa97">main</a> (int argc, char *argv[])</td></tr>
+<tr class="separator:a0ddf1224851353fc92bfbff6f499fa97"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+变量</h2></td></tr>
+<tr class="memitem:a0b46b2608d4d08c7b96dd304ce334490"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main___soft_test_8c.html#a0b46b2608d4d08c7b96dd304ce334490">INVALID_VALUE</a> = 0xFFFF</td></tr>
+<tr class="separator:a0b46b2608d4d08c7b96dd304ce334490"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a430596c6be24479aac38627b557f4493"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main___soft_test_8c.html#a430596c6be24479aac38627b557f4493">MAX_STRING_LEN</a> = 50</td></tr>
+<tr class="separator:a430596c6be24479aac38627b557f4493"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c673813a7c7a0e97e10e0090e618a5c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="main___soft_test_8c.html#a3080d9b1bbb47c87b42f8a08deea6690">MEMO_RECORD</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main___soft_test_8c.html#a4c673813a7c7a0e97e10e0090e618a5c">memo</a> [<a class="el" href="main___soft_test_8c.html#a430596c6be24479aac38627b557f4493">MAX_STRING_LEN</a>][<a class="el" href="main___soft_test_8c.html#a430596c6be24479aac38627b557f4493">MAX_STRING_LEN</a>]</td></tr>
+<tr class="separator:a4c673813a7c7a0e97e10e0090e618a5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19dcf9b52976babd140d30eecd7cddcb"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main___soft_test_8c.html#a19dcf9b52976babd140d30eecd7cddcb">test1</a> =0</td></tr>
+<tr class="separator:a19dcf9b52976babd140d30eecd7cddcb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af83e789c5e440a8fae56ad74d35422d9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main___soft_test_8c.html#af83e789c5e440a8fae56ad74d35422d9">test2</a> =0</td></tr>
+<tr class="separator:af83e789c5e440a8fae56ad74d35422d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4fea1d49786f1844ac20bd3844f01ee"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main___soft_test_8c.html#aa4fea1d49786f1844ac20bd3844f01ee">test3</a> =0</td></tr>
+<tr class="separator:aa4fea1d49786f1844ac20bd3844f01ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">宏定义说明</h2>
+<a id="ac6afabdc09a49a433ee19d8a9486056d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac6afabdc09a49a433ee19d8a9486056d">&#9670;&nbsp;</a></span>min</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define min</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">b&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;(((a) &lt; (b)) ? (a) : (b))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2390e29a53df25e33248e0201ef52ebe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2390e29a53df25e33248e0201ef52ebe">&#9670;&nbsp;</a></span>TEST</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TEST</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Name, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Size&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;const uint16_t Size;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">类型定义说明</h2>
+<a id="a3080d9b1bbb47c87b42f8a08deea6690"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3080d9b1bbb47c87b42f8a08deea6690">&#9670;&nbsp;</a></span>MEMO_RECORD</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="structtag_memo_record.html">tagMemoRecord</a>  <a class="el" href="main___soft_test_8c.html#a3080d9b1bbb47c87b42f8a08deea6690">MEMO_RECORD</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">函数说明</h2>
+<a id="a7609efffa12dd9a95ae1fc6d27fd8161"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7609efffa12dd9a95ae1fc6d27fd8161">&#9670;&nbsp;</a></span>EditDistance1()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int EditDistance1 </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>src</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>dest</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a10370059d1381cc99a21bf71e9c4193d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a10370059d1381cc99a21bf71e9c4193d">&#9670;&nbsp;</a></span>EditDistance2()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int EditDistance2 </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>src</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>dest</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>i</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>j</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a28cdf54260642cbc7fb2d518c0c4b79d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a28cdf54260642cbc7fb2d518c0c4b79d">&#9670;&nbsp;</a></span>EditDistance3()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int EditDistance3 </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>src</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>dest</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0ddf1224851353fc92bfbff6f499fa97"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ddf1224851353fc92bfbff6f499fa97">&#9670;&nbsp;</a></span>main()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int main </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>argc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>argv</em>[]&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">变量说明</h2>
+<a id="a0b46b2608d4d08c7b96dd304ce334490"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0b46b2608d4d08c7b96dd304ce334490">&#9670;&nbsp;</a></span>INVALID_VALUE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int INVALID_VALUE = 0xFFFF</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a430596c6be24479aac38627b557f4493"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a430596c6be24479aac38627b557f4493">&#9670;&nbsp;</a></span>MAX_STRING_LEN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int MAX_STRING_LEN = 50</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4c673813a7c7a0e97e10e0090e618a5c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c673813a7c7a0e97e10e0090e618a5c">&#9670;&nbsp;</a></span>memo</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="main___soft_test_8c.html#a3080d9b1bbb47c87b42f8a08deea6690">MEMO_RECORD</a> memo[<a class="el" href="main___soft_test_8c.html#a430596c6be24479aac38627b557f4493">MAX_STRING_LEN</a>][<a class="el" href="main___soft_test_8c.html#a430596c6be24479aac38627b557f4493">MAX_STRING_LEN</a>]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a19dcf9b52976babd140d30eecd7cddcb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a19dcf9b52976babd140d30eecd7cddcb">&#9670;&nbsp;</a></span>test1</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int test1 =0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af83e789c5e440a8fae56ad74d35422d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af83e789c5e440a8fae56ad74d35422d9">&#9670;&nbsp;</a></span>test2</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int test2 =0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa4fea1d49786f1844ac20bd3844f01ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa4fea1d49786f1844ac20bd3844f01ee">&#9670;&nbsp;</a></span>test3</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int test3 =0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

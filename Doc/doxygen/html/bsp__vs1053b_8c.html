@@ -1,0 +1,611 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>xsl: E:/XkapSourceCode/Xkap-Stm32/Xkap-Stm32/User/UserBsp/Stm32F4/src/bsp_vs1053b.c 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">xsl
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">源码说明</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.13 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',false,false,'search.php','搜索');
+});
+</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_6d4e12d46ad8519ff7b80e874016d102.html">User</a></li><li class="navelem"><a class="el" href="dir_a31a870a1361c5173f8d637697bb576e.html">UserBsp</a></li><li class="navelem"><a class="el" href="dir_5e177c7cc544a0a92a21db9013c51e57.html">Stm32F4</a></li><li class="navelem"><a class="el" href="dir_d01952803e2c83a827a93ec31a7773bd.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#define-members">宏定义</a> &#124;
+<a href="#func-members">函数</a> &#124;
+<a href="#var-members">变量</a>  </div>
+  <div class="headertitle">
+<div class="title">bsp_vs1053b.c 文件参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;bsp.h&quot;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+宏定义</h2></td></tr>
+<tr class="memitem:aea9386ae104f204dc4c2c5c55cbc338e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__vs1053b_8c.html#aea9386ae104f204dc4c2c5c55cbc338e">VS1053_CS_0</a>()&#160;&#160;&#160;GPIOC-&gt;BSRRH = GPIO_Pin_2</td></tr>
+<tr class="separator:aea9386ae104f204dc4c2c5c55cbc338e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b5aba0b45df359c6f5b1739988597e0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__vs1053b_8c.html#a2b5aba0b45df359c6f5b1739988597e0">VS1053_CS_1</a>()&#160;&#160;&#160;GPIOC-&gt;BSRRL = GPIO_Pin_2</td></tr>
+<tr class="separator:a2b5aba0b45df359c6f5b1739988597e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af519fd7d5ff52c58990238078020c8fc"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__vs1053b_8c.html#af519fd7d5ff52c58990238078020c8fc">VS1053_DS_0</a>()&#160;&#160;&#160;GPIOA-&gt;BSRRH = GPIO_Pin_5</td></tr>
+<tr class="separator:af519fd7d5ff52c58990238078020c8fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab271925062fdef2d81abe90b442ff0b1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__vs1053b_8c.html#ab271925062fdef2d81abe90b442ff0b1">VS1053_DS_1</a>()&#160;&#160;&#160;GPIOA-&gt;BSRRL = GPIO_Pin_5</td></tr>
+<tr class="separator:ab271925062fdef2d81abe90b442ff0b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa9d424977c92ebdc7d21bafd3ed802e6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__vs1053b_8c.html#aa9d424977c92ebdc7d21bafd3ed802e6">VS1053_IS_BUSY</a>()&#160;&#160;&#160;((GPIOB-&gt;IDR &amp; GPIO_Pin_8) == 0)</td></tr>
+<tr class="separator:aa9d424977c92ebdc7d21bafd3ed802e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc81a065700d3af56b6fb631585e3641"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__vs1053b_8c.html#adc81a065700d3af56b6fb631585e3641">DUMMY_BYTE</a>&#160;&#160;&#160;0xFF		/* �ɶ�������ֵ */</td></tr>
+<tr class="separator:adc81a065700d3af56b6fb631585e3641"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:af2dbe0bd98234a8eb4138c61f6dff71f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__vs1053b_8c.html#af2dbe0bd98234a8eb4138c61f6dff71f">vs1053_Init</a> (void)</td></tr>
+<tr class="separator:af2dbe0bd98234a8eb4138c61f6dff71f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3fc13347f97caf3d1efde748de714e2d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__vs1053b_8c.html#a3fc13347f97caf3d1efde748de714e2d">bsp_CfgSPIForVS1053B</a> (void)</td></tr>
+<tr class="separator:a3fc13347f97caf3d1efde748de714e2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af6108249509f65ad757b67da280280d7"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__vs1053b_8c.html#af6108249509f65ad757b67da280280d7">vs1053_WriteByte</a> (uint8_t _ucByte)</td></tr>
+<tr class="separator:af6108249509f65ad757b67da280280d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3aefb95c805f2c008a6814678250ea73"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__vs1053b_8c.html#a3aefb95c805f2c008a6814678250ea73">vs1053_ReadByte</a> (void)</td></tr>
+<tr class="separator:a3aefb95c805f2c008a6814678250ea73"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a87db39321c870774f2012f89ee18e42f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__vs1053b_8c.html#a87db39321c870774f2012f89ee18e42f">vs1053_WriteCmd</a> (uint8_t _ucAddr, uint16_t _usData)</td></tr>
+<tr class="separator:a87db39321c870774f2012f89ee18e42f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af33c8945bb86dec8dc548cbaff5e1f96"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__vs1053b_8c.html#af33c8945bb86dec8dc548cbaff5e1f96">vs1053_ReqNewData</a> (void)</td></tr>
+<tr class="separator:af33c8945bb86dec8dc548cbaff5e1f96"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc86fcceefebd3994ba18815cad4bd65"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__vs1053b_8c.html#abc86fcceefebd3994ba18815cad4bd65">vs1053_PreWriteData</a> (void)</td></tr>
+<tr class="separator:abc86fcceefebd3994ba18815cad4bd65"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a17d498b44dab606fdbdc6a5a7f529931"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__vs1053b_8c.html#a17d498b44dab606fdbdc6a5a7f529931">vs1053_WriteData</a> (uint8_t _ucData)</td></tr>
+<tr class="separator:a17d498b44dab606fdbdc6a5a7f529931"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a871aa734f1571a34ffbe22f693b66e97"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__vs1053b_8c.html#a871aa734f1571a34ffbe22f693b66e97">vs1053_ReadReg</a> (uint8_t _ucAddr)</td></tr>
+<tr class="separator:a871aa734f1571a34ffbe22f693b66e97"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb2f0f61f32590f1e5775ea166daa634"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__vs1053b_8c.html#afb2f0f61f32590f1e5775ea166daa634">vs1053_ReadChipID</a> (void)</td></tr>
+<tr class="separator:afb2f0f61f32590f1e5775ea166daa634"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a26af8bdb733512b211f0b9c824667e20"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__vs1053b_8c.html#a26af8bdb733512b211f0b9c824667e20">vs1053_WaitTimeOut</a> (void)</td></tr>
+<tr class="separator:a26af8bdb733512b211f0b9c824667e20"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a360271da594726474c4732863bd8f1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__vs1053b_8c.html#a9a360271da594726474c4732863bd8f1">LoadUserPatch</a> (void)</td></tr>
+<tr class="separator:a9a360271da594726474c4732863bd8f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3cbf9cf4678c8cd5e2dcb9070b35904d"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__vs1053b_8c.html#a3cbf9cf4678c8cd5e2dcb9070b35904d">vs1053_TestRam</a> (void)</td></tr>
+<tr class="separator:a3cbf9cf4678c8cd5e2dcb9070b35904d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba2ced1328becbdfdf468b1d9ac9f6d0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__vs1053b_8c.html#aba2ced1328becbdfdf468b1d9ac9f6d0">vs1053_TestSine</a> (void)</td></tr>
+<tr class="separator:aba2ced1328becbdfdf468b1d9ac9f6d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab26cb6779a522808c36f4d325e8e6fdf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__vs1053b_8c.html#ab26cb6779a522808c36f4d325e8e6fdf">vs1053_SoftReset</a> (void)</td></tr>
+<tr class="separator:ab26cb6779a522808c36f4d325e8e6fdf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae662244b300f13eb0cc5082d72544dd9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__vs1053b_8c.html#ae662244b300f13eb0cc5082d72544dd9">vs1053_SetVolume</a> (uint8_t _ucVol)</td></tr>
+<tr class="separator:ae662244b300f13eb0cc5082d72544dd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa59eca4e5951d1d2f4cbf68b66419dcc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__vs1053b_8c.html#aa59eca4e5951d1d2f4cbf68b66419dcc">vs1053_SetBASS</a> (int8_t _cHighAmp, uint16_t _usHighFreqCut, uint8_t _ucLowAmp, uint16_t _usLowFreqCut)</td></tr>
+<tr class="separator:aa59eca4e5951d1d2f4cbf68b66419dcc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf0f4d2d89a5cbdfe2444fa7c88bfead"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__vs1053b_8c.html#adf0f4d2d89a5cbdfe2444fa7c88bfead">ResetDecodeTime</a> (void)</td></tr>
+<tr class="separator:adf0f4d2d89a5cbdfe2444fa7c88bfead"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+变量</h2></td></tr>
+<tr class="memitem:a71a781c61c72a75e4eb5d44b6cd099c4"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__vs1053b_8c.html#a71a781c61c72a75e4eb5d44b6cd099c4">vs1053ram</a> [5] ={0,0,0,0,250}</td></tr>
+<tr class="separator:a71a781c61c72a75e4eb5d44b6cd099c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb007147788665a4a4710b7426131c68"><td class="memItemLeft" align="right" valign="top">const uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__vs1053b_8c.html#aeb007147788665a4a4710b7426131c68">plugin</a> [605]</td></tr>
+<tr class="separator:aeb007147788665a4a4710b7426131c68"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">宏定义说明</h2>
+<a id="adc81a065700d3af56b6fb631585e3641"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adc81a065700d3af56b6fb631585e3641">&#9670;&nbsp;</a></span>DUMMY_BYTE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DUMMY_BYTE&#160;&#160;&#160;0xFF		/* �ɶ�������ֵ */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aea9386ae104f204dc4c2c5c55cbc338e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aea9386ae104f204dc4c2c5c55cbc338e">&#9670;&nbsp;</a></span>VS1053_CS_0</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define VS1053_CS_0</td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td>&#160;&#160;&#160;GPIOC-&gt;BSRRH = GPIO_Pin_2</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2b5aba0b45df359c6f5b1739988597e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b5aba0b45df359c6f5b1739988597e0">&#9670;&nbsp;</a></span>VS1053_CS_1</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define VS1053_CS_1</td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td>&#160;&#160;&#160;GPIOC-&gt;BSRRL = GPIO_Pin_2</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af519fd7d5ff52c58990238078020c8fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af519fd7d5ff52c58990238078020c8fc">&#9670;&nbsp;</a></span>VS1053_DS_0</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define VS1053_DS_0</td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td>&#160;&#160;&#160;GPIOA-&gt;BSRRH = GPIO_Pin_5</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab271925062fdef2d81abe90b442ff0b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab271925062fdef2d81abe90b442ff0b1">&#9670;&nbsp;</a></span>VS1053_DS_1</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define VS1053_DS_1</td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td>&#160;&#160;&#160;GPIOA-&gt;BSRRL = GPIO_Pin_5</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa9d424977c92ebdc7d21bafd3ed802e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa9d424977c92ebdc7d21bafd3ed802e6">&#9670;&nbsp;</a></span>VS1053_IS_BUSY</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define VS1053_IS_BUSY</td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td>&#160;&#160;&#160;((GPIOB-&gt;IDR &amp; GPIO_Pin_8) == 0)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">函数说明</h2>
+<a id="a3fc13347f97caf3d1efde748de714e2d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3fc13347f97caf3d1efde748de714e2d">&#9670;&nbsp;</a></span>bsp_CfgSPIForVS1053B()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void bsp_CfgSPIForVS1053B </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9a360271da594726474c4732863bd8f1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9a360271da594726474c4732863bd8f1">&#9670;&nbsp;</a></span>LoadUserPatch()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LoadUserPatch </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adf0f4d2d89a5cbdfe2444fa7c88bfead"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf0f4d2d89a5cbdfe2444fa7c88bfead">&#9670;&nbsp;</a></span>ResetDecodeTime()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ResetDecodeTime </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af2dbe0bd98234a8eb4138c61f6dff71f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af2dbe0bd98234a8eb4138c61f6dff71f">&#9670;&nbsp;</a></span>vs1053_Init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void vs1053_Init </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abc86fcceefebd3994ba18815cad4bd65"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc86fcceefebd3994ba18815cad4bd65">&#9670;&nbsp;</a></span>vs1053_PreWriteData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void vs1053_PreWriteData </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3aefb95c805f2c008a6814678250ea73"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3aefb95c805f2c008a6814678250ea73">&#9670;&nbsp;</a></span>vs1053_ReadByte()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t vs1053_ReadByte </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afb2f0f61f32590f1e5775ea166daa634"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb2f0f61f32590f1e5775ea166daa634">&#9670;&nbsp;</a></span>vs1053_ReadChipID()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t vs1053_ReadChipID </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a871aa734f1571a34ffbe22f693b66e97"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a871aa734f1571a34ffbe22f693b66e97">&#9670;&nbsp;</a></span>vs1053_ReadReg()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t vs1053_ReadReg </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>_ucAddr</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af33c8945bb86dec8dc548cbaff5e1f96"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af33c8945bb86dec8dc548cbaff5e1f96">&#9670;&nbsp;</a></span>vs1053_ReqNewData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t vs1053_ReqNewData </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa59eca4e5951d1d2f4cbf68b66419dcc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa59eca4e5951d1d2f4cbf68b66419dcc">&#9670;&nbsp;</a></span>vs1053_SetBASS()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void vs1053_SetBASS </td>
+          <td>(</td>
+          <td class="paramtype">int8_t&#160;</td>
+          <td class="paramname"><em>_cHighAmp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>_usHighFreqCut</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>_ucLowAmp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>_usLowFreqCut</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae662244b300f13eb0cc5082d72544dd9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae662244b300f13eb0cc5082d72544dd9">&#9670;&nbsp;</a></span>vs1053_SetVolume()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void vs1053_SetVolume </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>_ucVol</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab26cb6779a522808c36f4d325e8e6fdf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab26cb6779a522808c36f4d325e8e6fdf">&#9670;&nbsp;</a></span>vs1053_SoftReset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void vs1053_SoftReset </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3cbf9cf4678c8cd5e2dcb9070b35904d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3cbf9cf4678c8cd5e2dcb9070b35904d">&#9670;&nbsp;</a></span>vs1053_TestRam()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t vs1053_TestRam </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aba2ced1328becbdfdf468b1d9ac9f6d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aba2ced1328becbdfdf468b1d9ac9f6d0">&#9670;&nbsp;</a></span>vs1053_TestSine()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void vs1053_TestSine </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a26af8bdb733512b211f0b9c824667e20"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a26af8bdb733512b211f0b9c824667e20">&#9670;&nbsp;</a></span>vs1053_WaitTimeOut()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t vs1053_WaitTimeOut </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af6108249509f65ad757b67da280280d7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af6108249509f65ad757b67da280280d7">&#9670;&nbsp;</a></span>vs1053_WriteByte()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t vs1053_WriteByte </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>_ucByte</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a87db39321c870774f2012f89ee18e42f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a87db39321c870774f2012f89ee18e42f">&#9670;&nbsp;</a></span>vs1053_WriteCmd()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void vs1053_WriteCmd </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>_ucAddr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>_usData</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a17d498b44dab606fdbdc6a5a7f529931"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a17d498b44dab606fdbdc6a5a7f529931">&#9670;&nbsp;</a></span>vs1053_WriteData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void vs1053_WriteData </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>_ucData</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">变量说明</h2>
+<a id="aeb007147788665a4a4710b7426131c68"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb007147788665a4a4710b7426131c68">&#9670;&nbsp;</a></span>plugin</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const uint16_t plugin[605]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a71a781c61c72a75e4eb5d44b6cd099c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a71a781c61c72a75e4eb5d44b6cd099c4">&#9670;&nbsp;</a></span>vs1053ram</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t vs1053ram[5] ={0,0,0,0,250}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

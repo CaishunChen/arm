@@ -1,0 +1,765 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>xsl: E:/XkapSourceCode/Xkap-Stm32/Xkap-Stm32/User/UserBsp/Stm32F4/src/bsp_touch.c Êñá‰ª∂ÂèÇËÄÉ</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">xsl
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">Ê∫êÁ†ÅËØ¥Êòé</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Âà∂‰ΩúËÄÖ Doxygen 1.8.13 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',false,false,'search.php','ÊêúÁ¥¢');
+});
+</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_6d4e12d46ad8519ff7b80e874016d102.html">User</a></li><li class="navelem"><a class="el" href="dir_a31a870a1361c5173f8d637697bb576e.html">UserBsp</a></li><li class="navelem"><a class="el" href="dir_5e177c7cc544a0a92a21db9013c51e57.html">Stm32F4</a></li><li class="navelem"><a class="el" href="dir_d01952803e2c83a827a93ec31a7773bd.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#define-members">ÂÆèÂÆö‰πâ</a> &#124;
+<a href="#func-members">ÂáΩÊï∞</a> &#124;
+<a href="#var-members">ÂèòÈáè</a>  </div>
+  <div class="headertitle">
+<div class="title">bsp_touch.c Êñá‰ª∂ÂèÇËÄÉ</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;stm32f4xx.h&quot;</code><br />
+<code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &quot;bsp_touch.h&quot;</code><br />
+<code>#include &quot;bsp_tft_lcd.h&quot;</code><br />
+<code>#include &quot;LCD_RA8875.h&quot;</code><br />
+<code>#include &quot;<a class="el" href="bsp__timer_8h_source.html">bsp_timer.h</a>&quot;</code><br />
+<code>#include &quot;param.h&quot;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+ÂÆèÂÆö‰πâ</h2></td></tr>
+<tr class="memitem:a44ae59c73f68c2ba6b4241188bfd8459"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_stm32_f4_2src_2bsp__touch_8c.html#a44ae59c73f68c2ba6b4241188bfd8459">TSC2046_CS_1</a>()&#160;&#160;&#160;GPIOA-&gt;BSRRL = 	GPIO_Pin_8</td></tr>
+<tr class="separator:a44ae59c73f68c2ba6b4241188bfd8459"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac4e380040d2bbb02a88b95317a75f08"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_stm32_f4_2src_2bsp__touch_8c.html#aac4e380040d2bbb02a88b95317a75f08">TSC2046_CS_0</a>()&#160;&#160;&#160;GPIOA-&gt;BSRRH = 	GPIO_Pin_8</td></tr>
+<tr class="separator:aac4e380040d2bbb02a88b95317a75f08"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b8cd9fdfd9bd871ae66b617ad0879f8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_stm32_f4_2src_2bsp__touch_8c.html#a9b8cd9fdfd9bd871ae66b617ad0879f8">ADC_CH_X</a>&#160;&#160;&#160;1		/* XÕ®µ¿£¨≤‚¡øXŒª÷√ */</td></tr>
+<tr class="separator:a9b8cd9fdfd9bd871ae66b617ad0879f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac4927ae4027500572f160e2f5cf0624b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_stm32_f4_2src_2bsp__touch_8c.html#ac4927ae4027500572f160e2f5cf0624b">ADC_CH_Y</a>&#160;&#160;&#160;5		/* YÕ®µ¿£¨≤‚¡øYŒª÷√ */</td></tr>
+<tr class="separator:ac4927ae4027500572f160e2f5cf0624b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1682c770d91c5d167b621a782be940d4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_stm32_f4_2src_2bsp__touch_8c.html#a1682c770d91c5d167b621a782be940d4">SAMPLE_COUNT</a>&#160;&#160;&#160;10	/* √ø¥Œ¡¨–¯≤…ºØ∂‡…Ÿ∏ˆ—˘±æ */</td></tr>
+<tr class="separator:a1682c770d91c5d167b621a782be940d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2fda37932b8ee86aa14af11190dd9faf"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_stm32_f4_2src_2bsp__touch_8c.html#a2fda37932b8ee86aa14af11190dd9faf">CALIB_OFFSET</a>&#160;&#160;&#160;20</td></tr>
+<tr class="separator:a2fda37932b8ee86aa14af11190dd9faf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa1aec7eb6a09262e118da92ce937c7c7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_stm32_f4_2src_2bsp__touch_8c.html#aa1aec7eb6a09262e118da92ce937c7c7">TP_X1</a>&#160;&#160;&#160;<a class="el" href="_stm32_f4_2src_2bsp__touch_8c.html#a2fda37932b8ee86aa14af11190dd9faf">CALIB_OFFSET</a></td></tr>
+<tr class="separator:aa1aec7eb6a09262e118da92ce937c7c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58406ae56bc0b7f9c0695103a1637e8e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_stm32_f4_2src_2bsp__touch_8c.html#a58406ae56bc0b7f9c0695103a1637e8e">TP_Y1</a>&#160;&#160;&#160;<a class="el" href="_stm32_f4_2src_2bsp__touch_8c.html#a2fda37932b8ee86aa14af11190dd9faf">CALIB_OFFSET</a></td></tr>
+<tr class="separator:a58406ae56bc0b7f9c0695103a1637e8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a662d2d495b2eb11dc2ff5818df5bb8d4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_stm32_f4_2src_2bsp__touch_8c.html#a662d2d495b2eb11dc2ff5818df5bb8d4">TP_X2</a>&#160;&#160;&#160;(<a class="el" href="_stm32_f4_2src_2bsp__tft__lcd_8c.html#aa4f5b9c00c6463c531a641ab3394c8d7">LCD_GetWidth</a>() - <a class="el" href="_stm32_f4_2src_2bsp__touch_8c.html#a2fda37932b8ee86aa14af11190dd9faf">CALIB_OFFSET</a>)</td></tr>
+<tr class="separator:a662d2d495b2eb11dc2ff5818df5bb8d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a402c3b00c64e4a8888c518c5b38bea86"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_stm32_f4_2src_2bsp__touch_8c.html#a402c3b00c64e4a8888c518c5b38bea86">TP_Y2</a>&#160;&#160;&#160;(<a class="el" href="_stm32_f4_2src_2bsp__tft__lcd_8c.html#ad88d0deac412d51a327995451f71331f">LCD_GetHeight</a>() - <a class="el" href="_stm32_f4_2src_2bsp__touch_8c.html#a2fda37932b8ee86aa14af11190dd9faf">CALIB_OFFSET</a>)</td></tr>
+<tr class="separator:a402c3b00c64e4a8888c518c5b38bea86"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b4d3ee1f37ea3b2066c4cb48d674382"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_stm32_f4_2src_2bsp__touch_8c.html#a3b4d3ee1f37ea3b2066c4cb48d674382">TP_X3</a>&#160;&#160;&#160;<a class="el" href="_stm32_f4_2src_2bsp__touch_8c.html#a2fda37932b8ee86aa14af11190dd9faf">CALIB_OFFSET</a></td></tr>
+<tr class="separator:a3b4d3ee1f37ea3b2066c4cb48d674382"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a00128b924cdae7f3638cecf57aab51"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_stm32_f4_2src_2bsp__touch_8c.html#a6a00128b924cdae7f3638cecf57aab51">TP_Y3</a>&#160;&#160;&#160;(<a class="el" href="_stm32_f4_2src_2bsp__tft__lcd_8c.html#ad88d0deac412d51a327995451f71331f">LCD_GetHeight</a>() - <a class="el" href="_stm32_f4_2src_2bsp__touch_8c.html#a2fda37932b8ee86aa14af11190dd9faf">CALIB_OFFSET</a>)</td></tr>
+<tr class="separator:a6a00128b924cdae7f3638cecf57aab51"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace615571f2f32cd33183ce4578c62d76"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_stm32_f4_2src_2bsp__touch_8c.html#ace615571f2f32cd33183ce4578c62d76">TP_X4</a>&#160;&#160;&#160;(<a class="el" href="_stm32_f4_2src_2bsp__tft__lcd_8c.html#aa4f5b9c00c6463c531a641ab3394c8d7">LCD_GetWidth</a>() - <a class="el" href="_stm32_f4_2src_2bsp__touch_8c.html#a2fda37932b8ee86aa14af11190dd9faf">CALIB_OFFSET</a>)</td></tr>
+<tr class="separator:ace615571f2f32cd33183ce4578c62d76"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb665aa2f2633807d2e47ceeb8b5394b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_stm32_f4_2src_2bsp__touch_8c.html#adb665aa2f2633807d2e47ceeb8b5394b">TP_Y4</a>&#160;&#160;&#160;<a class="el" href="_stm32_f4_2src_2bsp__touch_8c.html#a2fda37932b8ee86aa14af11190dd9faf">CALIB_OFFSET</a></td></tr>
+<tr class="separator:adb665aa2f2633807d2e47ceeb8b5394b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab1389c067d1759a538c17086da8f3fb3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_stm32_f4_2src_2bsp__touch_8c.html#ab1389c067d1759a538c17086da8f3fb3">ADC_VALID_OFFSET</a>&#160;&#160;&#160;2</td></tr>
+<tr class="separator:ab1389c067d1759a538c17086da8f3fb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66a0ab733912214cda77a26bdc760b2f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_stm32_f4_2src_2bsp__touch_8c.html#a66a0ab733912214cda77a26bdc760b2f">WaitTPReady</a>()&#160;&#160;&#160;{}</td></tr>
+<tr class="separator:a66a0ab733912214cda77a26bdc760b2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+ÂáΩÊï∞</h2></td></tr>
+<tr class="memitem:aace3fbf70e48ca8c91ab7cbc5f933e67"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_stm32_f4_2src_2bsp__touch_8c.html#aace3fbf70e48ca8c91ab7cbc5f933e67">TOUCH_Abs</a> (int32_t x)</td></tr>
+<tr class="separator:aace3fbf70e48ca8c91ab7cbc5f933e67"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac43044f19096b322b48b38c77d344f97"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_stm32_f4_2src_2bsp__touch_8c.html#ac43044f19096b322b48b38c77d344f97">TOUCH_InitHard</a> (void)</td></tr>
+<tr class="separator:ac43044f19096b322b48b38c77d344f97"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64deeb44180793c5ec5827af2496c0c6"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_stm32_f4_2src_2bsp__touch_8c.html#a64deeb44180793c5ec5827af2496c0c6">TOUCH_ReadAdcX</a> (void)</td></tr>
+<tr class="separator:a64deeb44180793c5ec5827af2496c0c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa79ae931f81b7dcfa5f7e490089a982f"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_stm32_f4_2src_2bsp__touch_8c.html#aa79ae931f81b7dcfa5f7e490089a982f">TOUCH_ReadAdcY</a> (void)</td></tr>
+<tr class="separator:aa79ae931f81b7dcfa5f7e490089a982f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4168b435259f2d7c242b6769919cf7c5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_stm32_f4_2src_2bsp__touch_8c.html#a4168b435259f2d7c242b6769919cf7c5">TOUCH_PutKey</a> (uint8_t _ucEvent, uint16_t _usX, uint16_t _usY)</td></tr>
+<tr class="separator:a4168b435259f2d7c242b6769919cf7c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d01ca82795a92bd07100cdad99aa4dd"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_stm32_f4_2src_2bsp__touch_8c.html#a8d01ca82795a92bd07100cdad99aa4dd">TOUCH_GetKey</a> (int16_t *_pX, int16_t *_pY)</td></tr>
+<tr class="separator:a8d01ca82795a92bd07100cdad99aa4dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94bfefa1eada263ad1b2da1ae162effc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_stm32_f4_2src_2bsp__touch_8c.html#a94bfefa1eada263ad1b2da1ae162effc">TOUCH_CelarFIFO</a> (void)</td></tr>
+<tr class="separator:a94bfefa1eada263ad1b2da1ae162effc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afae9bcd759aedf51d4e95f723ae34f34"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_stm32_f4_2src_2bsp__touch_8c.html#afae9bcd759aedf51d4e95f723ae34f34">TOUCH_InRect</a> (uint16_t _usX, uint16_t _usY, uint16_t _usRectX, uint16_t _usRectY, uint16_t _usRectH, uint16_t _usRectW)</td></tr>
+<tr class="separator:afae9bcd759aedf51d4e95f723ae34f34"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a26aa0b44eef2ae2cc3d041159c8e1e94"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_stm32_f4_2src_2bsp__touch_8c.html#a26aa0b44eef2ae2cc3d041159c8e1e94">TOUCH_MoveValid</a> (uint16_t _usX1, uint16_t _usY1, uint16_t _usX2, uint16_t _usY2)</td></tr>
+<tr class="separator:a26aa0b44eef2ae2cc3d041159c8e1e94"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a663757887527381c55a7845e8c926987"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_stm32_f4_2src_2bsp__touch_8c.html#a663757887527381c55a7845e8c926987">TOUCH_Scan</a> (void)</td></tr>
+<tr class="separator:a663757887527381c55a7845e8c926987"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a07bfa66a7ec78faf503b41729839e83e"><td class="memItemLeft" align="right" valign="top">int16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_stm32_f4_2src_2bsp__touch_8c.html#a07bfa66a7ec78faf503b41729839e83e">TOUCH_GetX</a> (void)</td></tr>
+<tr class="separator:a07bfa66a7ec78faf503b41729839e83e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b891a976fec545c0af453b47aefc6b5"><td class="memItemLeft" align="right" valign="top">int16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_stm32_f4_2src_2bsp__touch_8c.html#a2b891a976fec545c0af453b47aefc6b5">TOUCH_GetY</a> (void)</td></tr>
+<tr class="separator:a2b891a976fec545c0af453b47aefc6b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a68325416928d84cd818a7f390b224a16"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_stm32_f4_2src_2bsp__touch_8c.html#a68325416928d84cd818a7f390b224a16">SpiDelay</a> (uint32_t DelayCnt)</td></tr>
+<tr class="separator:a68325416928d84cd818a7f390b224a16"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af13c80b4c06ba78fa10ae16244f4a26f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_stm32_f4_2src_2bsp__touch_8c.html#af13c80b4c06ba78fa10ae16244f4a26f">TOUCH_Calibration</a> (void)</td></tr>
+<tr class="separator:af13c80b4c06ba78fa10ae16244f4a26f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af5a306d2c1a080806ebbe506dd09fec3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_stm32_f4_2src_2bsp__touch_8c.html#af5a306d2c1a080806ebbe506dd09fec3">SaveParam</a> (void)</td></tr>
+<tr class="separator:af5a306d2c1a080806ebbe506dd09fec3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade77629760ce0a3089f54496e4b6be25"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_stm32_f4_2src_2bsp__touch_8c.html#ade77629760ce0a3089f54496e4b6be25">LoadParam</a> (void)</td></tr>
+<tr class="separator:ade77629760ce0a3089f54496e4b6be25"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+ÂèòÈáè</h2></td></tr>
+<tr class="memitem:a3c6dab2c71d21b641da824c1e8993c04"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_t_o_u_c_h___t.html">TOUCH_T</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_stm32_f4_2src_2bsp__touch_8c.html#a3c6dab2c71d21b641da824c1e8993c04">g_tTP</a></td></tr>
+<tr class="separator:a3c6dab2c71d21b641da824c1e8993c04"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">ÂÆèÂÆö‰πâËØ¥Êòé</h2>
+<a id="a9b8cd9fdfd9bd871ae66b617ad0879f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b8cd9fdfd9bd871ae66b617ad0879f8">&#9670;&nbsp;</a></span>ADC_CH_X</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ADC_CH_X&#160;&#160;&#160;1		/* XÕ®µ¿£¨≤‚¡øXŒª÷√ */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac4927ae4027500572f160e2f5cf0624b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac4927ae4027500572f160e2f5cf0624b">&#9670;&nbsp;</a></span>ADC_CH_Y</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ADC_CH_Y&#160;&#160;&#160;5		/* YÕ®µ¿£¨≤‚¡øYŒª÷√ */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab1389c067d1759a538c17086da8f3fb3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab1389c067d1759a538c17086da8f3fb3">&#9670;&nbsp;</a></span>ADC_VALID_OFFSET</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ADC_VALID_OFFSET&#160;&#160;&#160;2</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2fda37932b8ee86aa14af11190dd9faf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2fda37932b8ee86aa14af11190dd9faf">&#9670;&nbsp;</a></span>CALIB_OFFSET</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CALIB_OFFSET&#160;&#160;&#160;20</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1682c770d91c5d167b621a782be940d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1682c770d91c5d167b621a782be940d4">&#9670;&nbsp;</a></span>SAMPLE_COUNT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SAMPLE_COUNT&#160;&#160;&#160;10	/* √ø¥Œ¡¨–¯≤…ºØ∂‡…Ÿ∏ˆ—˘±æ */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa1aec7eb6a09262e118da92ce937c7c7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa1aec7eb6a09262e118da92ce937c7c7">&#9670;&nbsp;</a></span>TP_X1</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TP_X1&#160;&#160;&#160;<a class="el" href="_stm32_f4_2src_2bsp__touch_8c.html#a2fda37932b8ee86aa14af11190dd9faf">CALIB_OFFSET</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a662d2d495b2eb11dc2ff5818df5bb8d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a662d2d495b2eb11dc2ff5818df5bb8d4">&#9670;&nbsp;</a></span>TP_X2</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TP_X2&#160;&#160;&#160;(<a class="el" href="_stm32_f4_2src_2bsp__tft__lcd_8c.html#aa4f5b9c00c6463c531a641ab3394c8d7">LCD_GetWidth</a>() - <a class="el" href="_stm32_f4_2src_2bsp__touch_8c.html#a2fda37932b8ee86aa14af11190dd9faf">CALIB_OFFSET</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3b4d3ee1f37ea3b2066c4cb48d674382"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b4d3ee1f37ea3b2066c4cb48d674382">&#9670;&nbsp;</a></span>TP_X3</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TP_X3&#160;&#160;&#160;<a class="el" href="_stm32_f4_2src_2bsp__touch_8c.html#a2fda37932b8ee86aa14af11190dd9faf">CALIB_OFFSET</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ace615571f2f32cd33183ce4578c62d76"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace615571f2f32cd33183ce4578c62d76">&#9670;&nbsp;</a></span>TP_X4</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TP_X4&#160;&#160;&#160;(<a class="el" href="_stm32_f4_2src_2bsp__tft__lcd_8c.html#aa4f5b9c00c6463c531a641ab3394c8d7">LCD_GetWidth</a>() - <a class="el" href="_stm32_f4_2src_2bsp__touch_8c.html#a2fda37932b8ee86aa14af11190dd9faf">CALIB_OFFSET</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a58406ae56bc0b7f9c0695103a1637e8e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a58406ae56bc0b7f9c0695103a1637e8e">&#9670;&nbsp;</a></span>TP_Y1</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TP_Y1&#160;&#160;&#160;<a class="el" href="_stm32_f4_2src_2bsp__touch_8c.html#a2fda37932b8ee86aa14af11190dd9faf">CALIB_OFFSET</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a402c3b00c64e4a8888c518c5b38bea86"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a402c3b00c64e4a8888c518c5b38bea86">&#9670;&nbsp;</a></span>TP_Y2</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TP_Y2&#160;&#160;&#160;(<a class="el" href="_stm32_f4_2src_2bsp__tft__lcd_8c.html#ad88d0deac412d51a327995451f71331f">LCD_GetHeight</a>() - <a class="el" href="_stm32_f4_2src_2bsp__touch_8c.html#a2fda37932b8ee86aa14af11190dd9faf">CALIB_OFFSET</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6a00128b924cdae7f3638cecf57aab51"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a00128b924cdae7f3638cecf57aab51">&#9670;&nbsp;</a></span>TP_Y3</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TP_Y3&#160;&#160;&#160;(<a class="el" href="_stm32_f4_2src_2bsp__tft__lcd_8c.html#ad88d0deac412d51a327995451f71331f">LCD_GetHeight</a>() - <a class="el" href="_stm32_f4_2src_2bsp__touch_8c.html#a2fda37932b8ee86aa14af11190dd9faf">CALIB_OFFSET</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adb665aa2f2633807d2e47ceeb8b5394b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb665aa2f2633807d2e47ceeb8b5394b">&#9670;&nbsp;</a></span>TP_Y4</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TP_Y4&#160;&#160;&#160;<a class="el" href="_stm32_f4_2src_2bsp__touch_8c.html#a2fda37932b8ee86aa14af11190dd9faf">CALIB_OFFSET</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aac4e380040d2bbb02a88b95317a75f08"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac4e380040d2bbb02a88b95317a75f08">&#9670;&nbsp;</a></span>TSC2046_CS_0</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TSC2046_CS_0</td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td>&#160;&#160;&#160;GPIOA-&gt;BSRRH = 	GPIO_Pin_8</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a44ae59c73f68c2ba6b4241188bfd8459"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a44ae59c73f68c2ba6b4241188bfd8459">&#9670;&nbsp;</a></span>TSC2046_CS_1</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TSC2046_CS_1</td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td>&#160;&#160;&#160;GPIOA-&gt;BSRRL = 	GPIO_Pin_8</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a66a0ab733912214cda77a26bdc760b2f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a66a0ab733912214cda77a26bdc760b2f">&#9670;&nbsp;</a></span>WaitTPReady</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define WaitTPReady</td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td>&#160;&#160;&#160;{}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">ÂáΩÊï∞ËØ¥Êòé</h2>
+<a id="ade77629760ce0a3089f54496e4b6be25"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ade77629760ce0a3089f54496e4b6be25">&#9670;&nbsp;</a></span>LoadParam()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LoadParam </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af5a306d2c1a080806ebbe506dd09fec3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af5a306d2c1a080806ebbe506dd09fec3">&#9670;&nbsp;</a></span>SaveParam()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SaveParam </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a68325416928d84cd818a7f390b224a16"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a68325416928d84cd818a7f390b224a16">&#9670;&nbsp;</a></span>SpiDelay()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SpiDelay </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>DelayCnt</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aace3fbf70e48ca8c91ab7cbc5f933e67"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aace3fbf70e48ca8c91ab7cbc5f933e67">&#9670;&nbsp;</a></span>TOUCH_Abs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int32_t TOUCH_Abs </td>
+          <td>(</td>
+          <td class="paramtype">int32_t&#160;</td>
+          <td class="paramname"><em>x</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af13c80b4c06ba78fa10ae16244f4a26f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af13c80b4c06ba78fa10ae16244f4a26f">&#9670;&nbsp;</a></span>TOUCH_Calibration()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TOUCH_Calibration </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a94bfefa1eada263ad1b2da1ae162effc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a94bfefa1eada263ad1b2da1ae162effc">&#9670;&nbsp;</a></span>TOUCH_CelarFIFO()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TOUCH_CelarFIFO </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8d01ca82795a92bd07100cdad99aa4dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d01ca82795a92bd07100cdad99aa4dd">&#9670;&nbsp;</a></span>TOUCH_GetKey()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t TOUCH_GetKey </td>
+          <td>(</td>
+          <td class="paramtype">int16_t *&#160;</td>
+          <td class="paramname"><em>_pX</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int16_t *&#160;</td>
+          <td class="paramname"><em>_pY</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a07bfa66a7ec78faf503b41729839e83e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a07bfa66a7ec78faf503b41729839e83e">&#9670;&nbsp;</a></span>TOUCH_GetX()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int16_t TOUCH_GetX </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2b891a976fec545c0af453b47aefc6b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b891a976fec545c0af453b47aefc6b5">&#9670;&nbsp;</a></span>TOUCH_GetY()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int16_t TOUCH_GetY </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac43044f19096b322b48b38c77d344f97"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac43044f19096b322b48b38c77d344f97">&#9670;&nbsp;</a></span>TOUCH_InitHard()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TOUCH_InitHard </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afae9bcd759aedf51d4e95f723ae34f34"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afae9bcd759aedf51d4e95f723ae34f34">&#9670;&nbsp;</a></span>TOUCH_InRect()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t TOUCH_InRect </td>
+          <td>(</td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>_usX</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>_usY</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>_usRectX</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>_usRectY</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>_usRectH</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>_usRectW</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a26aa0b44eef2ae2cc3d041159c8e1e94"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a26aa0b44eef2ae2cc3d041159c8e1e94">&#9670;&nbsp;</a></span>TOUCH_MoveValid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t TOUCH_MoveValid </td>
+          <td>(</td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>_usX1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>_usY1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>_usX2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>_usY2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4168b435259f2d7c242b6769919cf7c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4168b435259f2d7c242b6769919cf7c5">&#9670;&nbsp;</a></span>TOUCH_PutKey()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TOUCH_PutKey </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>_ucEvent</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>_usX</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>_usY</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a64deeb44180793c5ec5827af2496c0c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a64deeb44180793c5ec5827af2496c0c6">&#9670;&nbsp;</a></span>TOUCH_ReadAdcX()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t TOUCH_ReadAdcX </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa79ae931f81b7dcfa5f7e490089a982f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa79ae931f81b7dcfa5f7e490089a982f">&#9670;&nbsp;</a></span>TOUCH_ReadAdcY()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t TOUCH_ReadAdcY </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a663757887527381c55a7845e8c926987"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a663757887527381c55a7845e8c926987">&#9670;&nbsp;</a></span>TOUCH_Scan()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TOUCH_Scan </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">ÂèòÈáèËØ¥Êòé</h2>
+<a id="a3c6dab2c71d21b641da824c1e8993c04"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c6dab2c71d21b641da824c1e8993c04">&#9670;&nbsp;</a></span>g_tTP</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_t_o_u_c_h___t.html">TOUCH_T</a> g_tTP</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Âà∂‰ΩúËÄÖ &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

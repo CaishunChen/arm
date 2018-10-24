@@ -1,0 +1,707 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>xsl: E:/XkapSourceCode/Xkap-Stm32/Xkap-Stm32/User/UserBsp/Stm32F4/src/bsp_ra8875_flash.c Êñá‰ª∂ÂèÇËÄÉ</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">xsl
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">Ê∫êÁ†ÅËØ¥Êòé</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Âà∂‰ΩúËÄÖ Doxygen 1.8.13 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',false,false,'search.php','ÊêúÁ¥¢');
+});
+</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_6d4e12d46ad8519ff7b80e874016d102.html">User</a></li><li class="navelem"><a class="el" href="dir_a31a870a1361c5173f8d637697bb576e.html">UserBsp</a></li><li class="navelem"><a class="el" href="dir_5e177c7cc544a0a92a21db9013c51e57.html">Stm32F4</a></li><li class="navelem"><a class="el" href="dir_d01952803e2c83a827a93ec31a7773bd.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#define-members">ÂÆèÂÆö‰πâ</a> &#124;
+<a href="#func-members">ÂáΩÊï∞</a> &#124;
+<a href="#var-members">ÂèòÈáè</a>  </div>
+  <div class="headertitle">
+<div class="title">bsp_ra8875_flash.c Êñá‰ª∂ÂèÇËÄÉ</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;bsp.h&quot;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+ÂÆèÂÆö‰πâ</h2></td></tr>
+<tr class="memitem:a76ef2edf77faa2f18d8567bf7300c542"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__ra8875__flash_8c.html#a76ef2edf77faa2f18d8567bf7300c542">SPI_FLASH</a>&#160;&#160;&#160;SPI1</td></tr>
+<tr class="separator:a76ef2edf77faa2f18d8567bf7300c542"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af39a37556819f3d24ef551727f507aa2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__ra8875__flash_8c.html#af39a37556819f3d24ef551727f507aa2">ENABLE_SPI_RCC</a>()&#160;&#160;&#160;RCC_APB2PeriphClockCmd(RCC_APB2Periph_SPI1, ENABLE)</td></tr>
+<tr class="separator:af39a37556819f3d24ef551727f507aa2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af83877dd89769b83f81b4b7d019e7039"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__ra8875__flash_8c.html#af83877dd89769b83f81b4b7d019e7039">SPI_BAUD</a>&#160;&#160;&#160;SPI_BaudRatePrescaler_8</td></tr>
+<tr class="separator:af83877dd89769b83f81b4b7d019e7039"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1967286dc95e8857e29f19d07326029f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__ra8875__flash_8c.html#a1967286dc95e8857e29f19d07326029f">W25_CS_GPIO</a>&#160;&#160;&#160;GPIOI</td></tr>
+<tr class="separator:a1967286dc95e8857e29f19d07326029f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afda1dd8e0c2c74bcbe0c4c4171b6d225"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__ra8875__flash_8c.html#afda1dd8e0c2c74bcbe0c4c4171b6d225">W25_CS_PIN</a>&#160;&#160;&#160;GPIO_Pin_10</td></tr>
+<tr class="separator:afda1dd8e0c2c74bcbe0c4c4171b6d225"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f608a5cfbb27a16dde7f868de5383e8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__ra8875__flash_8c.html#a9f608a5cfbb27a16dde7f868de5383e8">W25_PWM_GPIO</a>&#160;&#160;&#160;GPIOF</td></tr>
+<tr class="separator:a9f608a5cfbb27a16dde7f868de5383e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb81b244251e9d7db0d5e3b12212cda0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__ra8875__flash_8c.html#acb81b244251e9d7db0d5e3b12212cda0">W25_PWM_PIN</a>&#160;&#160;&#160;GPIO_Pin_6</td></tr>
+<tr class="separator:acb81b244251e9d7db0d5e3b12212cda0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af3b4210988f6d2f35022e181e568ca14"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__ra8875__flash_8c.html#af3b4210988f6d2f35022e181e568ca14">W25_CS_LOW</a>()&#160;&#160;&#160;<a class="el" href="bsp__ra8875__flash_8c.html#a1967286dc95e8857e29f19d07326029f">W25_CS_GPIO</a>-&gt;BSRRH = <a class="el" href="bsp__ra8875__flash_8c.html#afda1dd8e0c2c74bcbe0c4c4171b6d225">W25_CS_PIN</a></td></tr>
+<tr class="separator:af3b4210988f6d2f35022e181e568ca14"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1bcba1b29e82c92c83f6f56da7765c51"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__ra8875__flash_8c.html#a1bcba1b29e82c92c83f6f56da7765c51">W25_CS_HIGH</a>()&#160;&#160;&#160;<a class="el" href="bsp__ra8875__flash_8c.html#a1967286dc95e8857e29f19d07326029f">W25_CS_GPIO</a>-&gt;BSRRL = <a class="el" href="bsp__ra8875__flash_8c.html#afda1dd8e0c2c74bcbe0c4c4171b6d225">W25_CS_PIN</a></td></tr>
+<tr class="separator:a1bcba1b29e82c92c83f6f56da7765c51"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8079c06e1655dadf88595afe5cd119d0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__ra8875__flash_8c.html#a8079c06e1655dadf88595afe5cd119d0">W25_PWM_LOW</a>()&#160;&#160;&#160;<a class="el" href="bsp__ra8875__flash_8c.html#a9f608a5cfbb27a16dde7f868de5383e8">W25_PWM_GPIO</a>-&gt;BSRRH = <a class="el" href="bsp__ra8875__flash_8c.html#acb81b244251e9d7db0d5e3b12212cda0">W25_PWM_PIN</a></td></tr>
+<tr class="separator:a8079c06e1655dadf88595afe5cd119d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba09541a7a847a785d1ac53cd900ed57"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__ra8875__flash_8c.html#aba09541a7a847a785d1ac53cd900ed57">W25_PWM_HIGH</a>()&#160;&#160;&#160;<a class="el" href="bsp__ra8875__flash_8c.html#a9f608a5cfbb27a16dde7f868de5383e8">W25_PWM_GPIO</a>-&gt;BSRRL = <a class="el" href="bsp__ra8875__flash_8c.html#acb81b244251e9d7db0d5e3b12212cda0">W25_PWM_PIN</a></td></tr>
+<tr class="separator:aba09541a7a847a785d1ac53cd900ed57"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a741fa11f7bb56aa4fc4c843a01ba910a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__ra8875__flash_8c.html#a741fa11f7bb56aa4fc4c843a01ba910a">CMD_AAI</a>&#160;&#160;&#160;0xAD  	/* AAI ¡¨–¯±‡≥Ã÷∏¡Ó(FOR SST25VF016B) */</td></tr>
+<tr class="separator:a741fa11f7bb56aa4fc4c843a01ba910a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a508ec783373178de9d1eb640ffba52c2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__ra8875__flash_8c.html#a508ec783373178de9d1eb640ffba52c2">CMD_DISWR</a>&#160;&#160;&#160;0x04		/* Ω˚÷π–¥, ÕÀ≥ˆAAI◊¥Ã¨ */</td></tr>
+<tr class="separator:a508ec783373178de9d1eb640ffba52c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a55bc1e84587dae570091c5b0c20dea2d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__ra8875__flash_8c.html#a55bc1e84587dae570091c5b0c20dea2d">CMD_EWRSR</a>&#160;&#160;&#160;0x50		/* ‘ –Ì–¥◊¥Ã¨ºƒ¥Ê∆˜µƒ√¸¡Ó */</td></tr>
+<tr class="separator:a55bc1e84587dae570091c5b0c20dea2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf9ec38b37caa1223e957bba6058f626"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__ra8875__flash_8c.html#acf9ec38b37caa1223e957bba6058f626">CMD_WRSR</a>&#160;&#160;&#160;0x01  	/* –¥◊¥Ã¨ºƒ¥Ê∆˜√¸¡Ó */</td></tr>
+<tr class="separator:acf9ec38b37caa1223e957bba6058f626"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a233ab2b77759d1d35814743f08c96347"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__ra8875__flash_8c.html#a233ab2b77759d1d35814743f08c96347">CMD_WREN</a>&#160;&#160;&#160;0x06		/* –¥ πƒ‹√¸¡Ó */</td></tr>
+<tr class="separator:a233ab2b77759d1d35814743f08c96347"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c953a6c538020e644127ee080608021"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__ra8875__flash_8c.html#a9c953a6c538020e644127ee080608021">CMD_READ</a>&#160;&#160;&#160;0x03  	/* ∂¡ ˝æ›«¯√¸¡Ó */</td></tr>
+<tr class="separator:a9c953a6c538020e644127ee080608021"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af36d3b85d64c03760c6b76e916b443c1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__ra8875__flash_8c.html#af36d3b85d64c03760c6b76e916b443c1">CMD_RDSR</a>&#160;&#160;&#160;0x05		/* ∂¡◊¥Ã¨ºƒ¥Ê∆˜√¸¡Ó */</td></tr>
+<tr class="separator:af36d3b85d64c03760c6b76e916b443c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7dcce537746ff1c0c717f6ac1f4af57b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__ra8875__flash_8c.html#a7dcce537746ff1c0c717f6ac1f4af57b">CMD_RDID</a>&#160;&#160;&#160;0x9F		/* ∂¡∆˜º˛ID√¸¡Ó */</td></tr>
+<tr class="separator:a7dcce537746ff1c0c717f6ac1f4af57b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab108a0bca1eff44cfc82862a6931b04f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__ra8875__flash_8c.html#ab108a0bca1eff44cfc82862a6931b04f">CMD_SE</a>&#160;&#160;&#160;0x20		/* ≤¡≥˝…»«¯√¸¡Ó */</td></tr>
+<tr class="separator:ab108a0bca1eff44cfc82862a6931b04f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa9af7926edb62c8fe23efa4ae2cb744b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__ra8875__flash_8c.html#aa9af7926edb62c8fe23efa4ae2cb744b">CMD_BE</a>&#160;&#160;&#160;0xC7		/* ≈˙¡ø≤¡≥˝√¸¡Ó */</td></tr>
+<tr class="separator:aa9af7926edb62c8fe23efa4ae2cb744b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc81a065700d3af56b6fb631585e3641"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__ra8875__flash_8c.html#adc81a065700d3af56b6fb631585e3641">DUMMY_BYTE</a>&#160;&#160;&#160;0xA5		/* —∆√¸¡Ó£¨ø…“‘Œ™»Œ“‚÷µ£¨”√”⁄∂¡≤Ÿ◊˜ */</td></tr>
+<tr class="separator:adc81a065700d3af56b6fb631585e3641"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48091a4d280b9da4d009473c6c7138fb"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__ra8875__flash_8c.html#a48091a4d280b9da4d009473c6c7138fb">WIP_FLAG</a>&#160;&#160;&#160;0x01		/* ◊¥Ã¨ºƒ¥Ê∆˜÷–µƒ’˝‘⁄±‡≥Ã±Í÷æ£®WIP) */</td></tr>
+<tr class="separator:a48091a4d280b9da4d009473c6c7138fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+ÂáΩÊï∞</h2></td></tr>
+<tr class="memitem:acebba42807358cdb76dbd620f83aa607"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__ra8875__flash_8c.html#acebba42807358cdb76dbd620f83aa607">w25_ReadInfo</a> (void)</td></tr>
+<tr class="separator:acebba42807358cdb76dbd620f83aa607"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab18b3881142748f5be759df796dac22e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__ra8875__flash_8c.html#ab18b3881142748f5be759df796dac22e">bsp_InitRA8875Flash</a> (void)</td></tr>
+<tr class="separator:ab18b3881142748f5be759df796dac22e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2dd27da51b5889eca287ef713440a21d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__ra8875__flash_8c.html#a2dd27da51b5889eca287ef713440a21d">w25_CtrlByMCU</a> (void)</td></tr>
+<tr class="separator:a2dd27da51b5889eca287ef713440a21d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9904a6a612e548973af171ebc7adf14"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__ra8875__flash_8c.html#af9904a6a612e548973af171ebc7adf14">w25_CtrlByRA8875</a> (void)</td></tr>
+<tr class="separator:af9904a6a612e548973af171ebc7adf14"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a307a5be76f7ab4022e133434c66ec501"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__ra8875__flash_8c.html#a307a5be76f7ab4022e133434c66ec501">w25_SelectChip</a> (uint8_t _idex)</td></tr>
+<tr class="separator:a307a5be76f7ab4022e133434c66ec501"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe10298625de255980b915edb9fc0aea"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__ra8875__flash_8c.html#abe10298625de255980b915edb9fc0aea">w25_EraseSector</a> (uint32_t _uiSectorAddr)</td></tr>
+<tr class="separator:abe10298625de255980b915edb9fc0aea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a207bf5e9633a22dca0729ccc9636bdb9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__ra8875__flash_8c.html#a207bf5e9633a22dca0729ccc9636bdb9">w25_EraseChip</a> (void)</td></tr>
+<tr class="separator:a207bf5e9633a22dca0729ccc9636bdb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b14e009ac55bf58ac6a8474cbc8e0cc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__ra8875__flash_8c.html#a7b14e009ac55bf58ac6a8474cbc8e0cc">w25_WritePage</a> (uint8_t *_pBuf, uint32_t _uiWriteAddr, uint16_t _usSize)</td></tr>
+<tr class="separator:a7b14e009ac55bf58ac6a8474cbc8e0cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f135624156a3ecd582306c5ab27360f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__ra8875__flash_8c.html#a8f135624156a3ecd582306c5ab27360f">w25_ReadBuffer</a> (uint8_t *_pBuf, uint32_t _uiReadAddr, uint32_t _uiSize)</td></tr>
+<tr class="separator:a8f135624156a3ecd582306c5ab27360f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6496ac869d939380f51d4697149e7446"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__ra8875__flash_8c.html#a6496ac869d939380f51d4697149e7446">w25_ReadID</a> (void)</td></tr>
+<tr class="separator:a6496ac869d939380f51d4697149e7446"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+ÂèòÈáè</h2></td></tr>
+<tr class="memitem:aba2fdb488edf2def4fc61cbb901899f3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_w25___t.html">W25_T</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__ra8875__flash_8c.html#aba2fdb488edf2def4fc61cbb901899f3">g_tW25</a></td></tr>
+<tr class="separator:aba2fdb488edf2def4fc61cbb901899f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">ÂÆèÂÆö‰πâËØ¥Êòé</h2>
+<a id="a741fa11f7bb56aa4fc4c843a01ba910a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a741fa11f7bb56aa4fc4c843a01ba910a">&#9670;&nbsp;</a></span>CMD_AAI</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CMD_AAI&#160;&#160;&#160;0xAD  	/* AAI ¡¨–¯±‡≥Ã÷∏¡Ó(FOR SST25VF016B) */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa9af7926edb62c8fe23efa4ae2cb744b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa9af7926edb62c8fe23efa4ae2cb744b">&#9670;&nbsp;</a></span>CMD_BE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CMD_BE&#160;&#160;&#160;0xC7		/* ≈˙¡ø≤¡≥˝√¸¡Ó */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a508ec783373178de9d1eb640ffba52c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a508ec783373178de9d1eb640ffba52c2">&#9670;&nbsp;</a></span>CMD_DISWR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CMD_DISWR&#160;&#160;&#160;0x04		/* Ω˚÷π–¥, ÕÀ≥ˆAAI◊¥Ã¨ */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a55bc1e84587dae570091c5b0c20dea2d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a55bc1e84587dae570091c5b0c20dea2d">&#9670;&nbsp;</a></span>CMD_EWRSR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CMD_EWRSR&#160;&#160;&#160;0x50		/* ‘ –Ì–¥◊¥Ã¨ºƒ¥Ê∆˜µƒ√¸¡Ó */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7dcce537746ff1c0c717f6ac1f4af57b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7dcce537746ff1c0c717f6ac1f4af57b">&#9670;&nbsp;</a></span>CMD_RDID</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CMD_RDID&#160;&#160;&#160;0x9F		/* ∂¡∆˜º˛ID√¸¡Ó */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af36d3b85d64c03760c6b76e916b443c1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af36d3b85d64c03760c6b76e916b443c1">&#9670;&nbsp;</a></span>CMD_RDSR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CMD_RDSR&#160;&#160;&#160;0x05		/* ∂¡◊¥Ã¨ºƒ¥Ê∆˜√¸¡Ó */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9c953a6c538020e644127ee080608021"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c953a6c538020e644127ee080608021">&#9670;&nbsp;</a></span>CMD_READ</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CMD_READ&#160;&#160;&#160;0x03  	/* ∂¡ ˝æ›«¯√¸¡Ó */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab108a0bca1eff44cfc82862a6931b04f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab108a0bca1eff44cfc82862a6931b04f">&#9670;&nbsp;</a></span>CMD_SE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CMD_SE&#160;&#160;&#160;0x20		/* ≤¡≥˝…»«¯√¸¡Ó */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a233ab2b77759d1d35814743f08c96347"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a233ab2b77759d1d35814743f08c96347">&#9670;&nbsp;</a></span>CMD_WREN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CMD_WREN&#160;&#160;&#160;0x06		/* –¥ πƒ‹√¸¡Ó */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acf9ec38b37caa1223e957bba6058f626"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acf9ec38b37caa1223e957bba6058f626">&#9670;&nbsp;</a></span>CMD_WRSR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CMD_WRSR&#160;&#160;&#160;0x01  	/* –¥◊¥Ã¨ºƒ¥Ê∆˜√¸¡Ó */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adc81a065700d3af56b6fb631585e3641"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adc81a065700d3af56b6fb631585e3641">&#9670;&nbsp;</a></span>DUMMY_BYTE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DUMMY_BYTE&#160;&#160;&#160;0xA5		/* —∆√¸¡Ó£¨ø…“‘Œ™»Œ“‚÷µ£¨”√”⁄∂¡≤Ÿ◊˜ */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af39a37556819f3d24ef551727f507aa2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af39a37556819f3d24ef551727f507aa2">&#9670;&nbsp;</a></span>ENABLE_SPI_RCC</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ENABLE_SPI_RCC</td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td>&#160;&#160;&#160;RCC_APB2PeriphClockCmd(RCC_APB2Periph_SPI1, ENABLE)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af83877dd89769b83f81b4b7d019e7039"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af83877dd89769b83f81b4b7d019e7039">&#9670;&nbsp;</a></span>SPI_BAUD</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SPI_BAUD&#160;&#160;&#160;SPI_BaudRatePrescaler_8</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a76ef2edf77faa2f18d8567bf7300c542"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a76ef2edf77faa2f18d8567bf7300c542">&#9670;&nbsp;</a></span>SPI_FLASH</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SPI_FLASH&#160;&#160;&#160;SPI1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1967286dc95e8857e29f19d07326029f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1967286dc95e8857e29f19d07326029f">&#9670;&nbsp;</a></span>W25_CS_GPIO</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define W25_CS_GPIO&#160;&#160;&#160;GPIOI</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1bcba1b29e82c92c83f6f56da7765c51"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1bcba1b29e82c92c83f6f56da7765c51">&#9670;&nbsp;</a></span>W25_CS_HIGH</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define W25_CS_HIGH</td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td>&#160;&#160;&#160;<a class="el" href="bsp__ra8875__flash_8c.html#a1967286dc95e8857e29f19d07326029f">W25_CS_GPIO</a>-&gt;BSRRL = <a class="el" href="bsp__ra8875__flash_8c.html#afda1dd8e0c2c74bcbe0c4c4171b6d225">W25_CS_PIN</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af3b4210988f6d2f35022e181e568ca14"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af3b4210988f6d2f35022e181e568ca14">&#9670;&nbsp;</a></span>W25_CS_LOW</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define W25_CS_LOW</td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td>&#160;&#160;&#160;<a class="el" href="bsp__ra8875__flash_8c.html#a1967286dc95e8857e29f19d07326029f">W25_CS_GPIO</a>-&gt;BSRRH = <a class="el" href="bsp__ra8875__flash_8c.html#afda1dd8e0c2c74bcbe0c4c4171b6d225">W25_CS_PIN</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afda1dd8e0c2c74bcbe0c4c4171b6d225"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afda1dd8e0c2c74bcbe0c4c4171b6d225">&#9670;&nbsp;</a></span>W25_CS_PIN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define W25_CS_PIN&#160;&#160;&#160;GPIO_Pin_10</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9f608a5cfbb27a16dde7f868de5383e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f608a5cfbb27a16dde7f868de5383e8">&#9670;&nbsp;</a></span>W25_PWM_GPIO</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define W25_PWM_GPIO&#160;&#160;&#160;GPIOF</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aba09541a7a847a785d1ac53cd900ed57"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aba09541a7a847a785d1ac53cd900ed57">&#9670;&nbsp;</a></span>W25_PWM_HIGH</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define W25_PWM_HIGH</td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td>&#160;&#160;&#160;<a class="el" href="bsp__ra8875__flash_8c.html#a9f608a5cfbb27a16dde7f868de5383e8">W25_PWM_GPIO</a>-&gt;BSRRL = <a class="el" href="bsp__ra8875__flash_8c.html#acb81b244251e9d7db0d5e3b12212cda0">W25_PWM_PIN</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8079c06e1655dadf88595afe5cd119d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8079c06e1655dadf88595afe5cd119d0">&#9670;&nbsp;</a></span>W25_PWM_LOW</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define W25_PWM_LOW</td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td>&#160;&#160;&#160;<a class="el" href="bsp__ra8875__flash_8c.html#a9f608a5cfbb27a16dde7f868de5383e8">W25_PWM_GPIO</a>-&gt;BSRRH = <a class="el" href="bsp__ra8875__flash_8c.html#acb81b244251e9d7db0d5e3b12212cda0">W25_PWM_PIN</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acb81b244251e9d7db0d5e3b12212cda0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb81b244251e9d7db0d5e3b12212cda0">&#9670;&nbsp;</a></span>W25_PWM_PIN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define W25_PWM_PIN&#160;&#160;&#160;GPIO_Pin_6</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a48091a4d280b9da4d009473c6c7138fb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a48091a4d280b9da4d009473c6c7138fb">&#9670;&nbsp;</a></span>WIP_FLAG</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define WIP_FLAG&#160;&#160;&#160;0x01		/* ◊¥Ã¨ºƒ¥Ê∆˜÷–µƒ’˝‘⁄±‡≥Ã±Í÷æ£®WIP) */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">ÂáΩÊï∞ËØ¥Êòé</h2>
+<a id="ab18b3881142748f5be759df796dac22e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab18b3881142748f5be759df796dac22e">&#9670;&nbsp;</a></span>bsp_InitRA8875Flash()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void bsp_InitRA8875Flash </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2dd27da51b5889eca287ef713440a21d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2dd27da51b5889eca287ef713440a21d">&#9670;&nbsp;</a></span>w25_CtrlByMCU()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void w25_CtrlByMCU </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af9904a6a612e548973af171ebc7adf14"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af9904a6a612e548973af171ebc7adf14">&#9670;&nbsp;</a></span>w25_CtrlByRA8875()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void w25_CtrlByRA8875 </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a207bf5e9633a22dca0729ccc9636bdb9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a207bf5e9633a22dca0729ccc9636bdb9">&#9670;&nbsp;</a></span>w25_EraseChip()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void w25_EraseChip </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abe10298625de255980b915edb9fc0aea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abe10298625de255980b915edb9fc0aea">&#9670;&nbsp;</a></span>w25_EraseSector()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void w25_EraseSector </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>_uiSectorAddr</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8f135624156a3ecd582306c5ab27360f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8f135624156a3ecd582306c5ab27360f">&#9670;&nbsp;</a></span>w25_ReadBuffer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void w25_ReadBuffer </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>_pBuf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>_uiReadAddr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>_uiSize</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6496ac869d939380f51d4697149e7446"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6496ac869d939380f51d4697149e7446">&#9670;&nbsp;</a></span>w25_ReadID()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t w25_ReadID </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acebba42807358cdb76dbd620f83aa607"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acebba42807358cdb76dbd620f83aa607">&#9670;&nbsp;</a></span>w25_ReadInfo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void w25_ReadInfo </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a307a5be76f7ab4022e133434c66ec501"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a307a5be76f7ab4022e133434c66ec501">&#9670;&nbsp;</a></span>w25_SelectChip()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void w25_SelectChip </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>_idex</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7b14e009ac55bf58ac6a8474cbc8e0cc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b14e009ac55bf58ac6a8474cbc8e0cc">&#9670;&nbsp;</a></span>w25_WritePage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void w25_WritePage </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>_pBuf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>_uiWriteAddr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>_usSize</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">ÂèòÈáèËØ¥Êòé</h2>
+<a id="aba2fdb488edf2def4fc61cbb901899f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aba2fdb488edf2def4fc61cbb901899f3">&#9670;&nbsp;</a></span>g_tW25</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_w25___t.html">W25_T</a> g_tW25</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Âà∂‰ΩúËÄÖ &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

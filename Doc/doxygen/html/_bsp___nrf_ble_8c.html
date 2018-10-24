@@ -1,0 +1,260 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>xsl: E:/XkapSourceCode/Xkap-Stm32/Xkap-Stm32/User/UserBsp/Bsp_NrfBle.c 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">xsl
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">源码说明</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.13 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',false,false,'search.php','搜索');
+});
+</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_6d4e12d46ad8519ff7b80e874016d102.html">User</a></li><li class="navelem"><a class="el" href="dir_a31a870a1361c5173f8d637697bb576e.html">UserBsp</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#define-members">宏定义</a> &#124;
+<a href="#func-members">函数</a> &#124;
+<a href="#var-members">变量</a>  </div>
+  <div class="headertitle">
+<div class="title">Bsp_NrfBle.c 文件参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="_bsp___nrf_ble_8h_source.html">Bsp_NrfBle.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="uctsk___debug_8h_source.html">uctsk_Debug.h</a>&quot;</code><br />
+<code>#include &quot;ble_gap.h&quot;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+宏定义</h2></td></tr>
+<tr class="memitem:a83b3f133d57b0720e959524bb6ba298f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_bsp___nrf_ble_8c.html#a83b3f133d57b0720e959524bb6ba298f">ONESECOND_INTERVAL</a>&#160;&#160;&#160;APP_TIMER_TICKS(1000, <a class="el" href="_bsp___nrf_ble_8h.html#a7bbff5bb0ca047b109e70a831f08e217">APP_TIMER_PRESCALER</a>)</td></tr>
+<tr class="separator:a83b3f133d57b0720e959524bb6ba298f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:a4df3b6dd09cac7a9c1705e80fcb735cb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_bsp___nrf_ble_8c.html#a4df3b6dd09cac7a9c1705e80fcb735cb">assert_nrf_callback</a> (uint16_t line_num, const uint8_t *p_file_name)</td></tr>
+<tr class="memdesc:a4df3b6dd09cac7a9c1705e80fcb735cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback function for asserts in the SoftDevice.  <a href="#a4df3b6dd09cac7a9c1705e80fcb735cb">更多...</a><br /></td></tr>
+<tr class="separator:a4df3b6dd09cac7a9c1705e80fcb735cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad7e46d85140bc1716973788a014f6298"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_bsp___nrf_ble_8c.html#ad7e46d85140bc1716973788a014f6298">BspNrfBle_Init</a> (void)</td></tr>
+<tr class="separator:ad7e46d85140bc1716973788a014f6298"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac237604a404fb72bf0cce20c6d40290"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_bsp___nrf_ble_8c.html#aac237604a404fb72bf0cce20c6d40290">BspNrfBle_Timer</a> (uint16_t ms)</td></tr>
+<tr class="separator:aac237604a404fb72bf0cce20c6d40290"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5af558bd2e05d35ea66f8ce7c31b4ded"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_bsp___nrf_ble_8c.html#a5af558bd2e05d35ea66f8ce7c31b4ded">BspNrfBle_DebugTestOnOff</a> (uint8_t OnOff)</td></tr>
+<tr class="separator:a5af558bd2e05d35ea66f8ce7c31b4ded"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca3bf9013b4753db9c028ef73729fb28"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_bsp___nrf_ble_8c.html#aca3bf9013b4753db9c028ef73729fb28">BspNrfBle_ProtocolParse</a> (uint8_t *pbuf, uint16_t len)</td></tr>
+<tr class="separator:aca3bf9013b4753db9c028ef73729fb28"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+变量</h2></td></tr>
+<tr class="memitem:a90b4f8e0fa0569a4bca97690f7665977"><td class="memItemLeft" align="right" valign="top">app_timer_id_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_bsp___nrf_ble_8c.html#a90b4f8e0fa0569a4bca97690f7665977">SecondID</a></td></tr>
+<tr class="separator:a90b4f8e0fa0569a4bca97690f7665977"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a163279763269aa751d3d64d0476c57f5"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_bsp___nrf_ble_8c.html#a163279763269aa751d3d64d0476c57f5">Rtc_Timer_s</a></td></tr>
+<tr class="separator:a163279763269aa751d3d64d0476c57f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">宏定义说明</h2>
+<a id="a83b3f133d57b0720e959524bb6ba298f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a83b3f133d57b0720e959524bb6ba298f">&#9670;&nbsp;</a></span>ONESECOND_INTERVAL</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ONESECOND_INTERVAL&#160;&#160;&#160;APP_TIMER_TICKS(1000, <a class="el" href="_bsp___nrf_ble_8h.html#a7bbff5bb0ca047b109e70a831f08e217">APP_TIMER_PRESCALER</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">函数说明</h2>
+<a id="a4df3b6dd09cac7a9c1705e80fcb735cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4df3b6dd09cac7a9c1705e80fcb735cb">&#9670;&nbsp;</a></span>assert_nrf_callback()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void assert_nrf_callback </td>
+          <td>(</td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>line_num</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uint8_t *&#160;</td>
+          <td class="paramname"><em>p_file_name</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Callback function for asserts in the SoftDevice. </p>
+<p>This function will be called in case of an assert in the SoftDevice.</p>
+<dl class="section warning"><dt>警告</dt><dd>This handler is an example only and does not fit a final product. You need to analyze how your product is supposed to react in case of Assert. </dd>
+<dd>
+On assert from the SoftDevice, the system can only recover on reset.</dd></dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">line_num</td><td>Line number of the failing ASSERT call. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">file_name</td><td>File name of the failing ASSERT call. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a5af558bd2e05d35ea66f8ce7c31b4ded"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5af558bd2e05d35ea66f8ce7c31b4ded">&#9670;&nbsp;</a></span>BspNrfBle_DebugTestOnOff()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BspNrfBle_DebugTestOnOff </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>OnOff</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad7e46d85140bc1716973788a014f6298"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad7e46d85140bc1716973788a014f6298">&#9670;&nbsp;</a></span>BspNrfBle_Init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BspNrfBle_Init </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aca3bf9013b4753db9c028ef73729fb28"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca3bf9013b4753db9c028ef73729fb28">&#9670;&nbsp;</a></span>BspNrfBle_ProtocolParse()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BspNrfBle_ProtocolParse </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>pbuf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>len</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aac237604a404fb72bf0cce20c6d40290"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac237604a404fb72bf0cce20c6d40290">&#9670;&nbsp;</a></span>BspNrfBle_Timer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BspNrfBle_Timer </td>
+          <td>(</td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>ms</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">变量说明</h2>
+<a id="a163279763269aa751d3d64d0476c57f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a163279763269aa751d3d64d0476c57f5">&#9670;&nbsp;</a></span>Rtc_Timer_s</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t Rtc_Timer_s</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a90b4f8e0fa0569a4bca97690f7665977"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a90b4f8e0fa0569a4bca97690f7665977">&#9670;&nbsp;</a></span>SecondID</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">app_timer_id_t SecondID</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

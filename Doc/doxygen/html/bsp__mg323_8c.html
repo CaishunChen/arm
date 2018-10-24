@@ -1,0 +1,589 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>xsl: E:/XkapSourceCode/Xkap-Stm32/Xkap-Stm32/User/UserBsp/Stm32F4/src/bsp_mg323.c 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">xsl
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">源码说明</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.13 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',false,false,'search.php','搜索');
+});
+</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_6d4e12d46ad8519ff7b80e874016d102.html">User</a></li><li class="navelem"><a class="el" href="dir_a31a870a1361c5173f8d637697bb576e.html">UserBsp</a></li><li class="navelem"><a class="el" href="dir_5e177c7cc544a0a92a21db9013c51e57.html">Stm32F4</a></li><li class="navelem"><a class="el" href="dir_d01952803e2c83a827a93ec31a7773bd.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#define-members">宏定义</a> &#124;
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle">
+<div class="title">bsp_mg323.c 文件参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;bsp.h&quot;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+宏定义</h2></td></tr>
+<tr class="memitem:af01121459c0a063a7d0969aa7fd5d3ab"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__mg323_8c.html#af01121459c0a063a7d0969aa7fd5d3ab">RCC_TERM_ON</a>&#160;&#160;&#160;RCC_AHB1Periph_GPIOI</td></tr>
+<tr class="separator:af01121459c0a063a7d0969aa7fd5d3ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aabe97a77c288ddf5f882d28bcd9fa2f3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__mg323_8c.html#aabe97a77c288ddf5f882d28bcd9fa2f3">PORT_TERM_ON</a>&#160;&#160;&#160;GPIOI</td></tr>
+<tr class="separator:aabe97a77c288ddf5f882d28bcd9fa2f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86ce8b64e0037241c336f9f3160f8f90"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__mg323_8c.html#a86ce8b64e0037241c336f9f3160f8f90">PIN_TERM_ON</a>&#160;&#160;&#160;GPIO_Pin_0</td></tr>
+<tr class="separator:a86ce8b64e0037241c336f9f3160f8f90"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8cbb291dda5c07eb3019dcc356c6fce0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__mg323_8c.html#a8cbb291dda5c07eb3019dcc356c6fce0">RCC_RESET</a>&#160;&#160;&#160;RCC_AHB1Periph_GPIOB</td></tr>
+<tr class="separator:a8cbb291dda5c07eb3019dcc356c6fce0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a452864e751114950cf7a5fc4105f7816"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__mg323_8c.html#a452864e751114950cf7a5fc4105f7816">PORT_RESET</a>&#160;&#160;&#160;GPIOB</td></tr>
+<tr class="separator:a452864e751114950cf7a5fc4105f7816"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d990297df33b717e4d1489159aef8c0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__mg323_8c.html#a6d990297df33b717e4d1489159aef8c0">PIN_RESET</a>&#160;&#160;&#160;GPIO_Pin_7</td></tr>
+<tr class="separator:a6d990297df33b717e4d1489159aef8c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a39d8eb2e49c7bbb171f089bf5f1d7906"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__mg323_8c.html#a39d8eb2e49c7bbb171f089bf5f1d7906">TERM_ON_1</a>()&#160;&#160;&#160;GPIO_ResetBits(<a class="el" href="bsp__mg323_8c.html#aabe97a77c288ddf5f882d28bcd9fa2f3">PORT_TERM_ON</a>, <a class="el" href="bsp__mg323_8c.html#a86ce8b64e0037241c336f9f3160f8f90">PIN_TERM_ON</a>);</td></tr>
+<tr class="separator:a39d8eb2e49c7bbb171f089bf5f1d7906"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac967bd90655c05b3699e2be1727b0464"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__mg323_8c.html#ac967bd90655c05b3699e2be1727b0464">TERM_ON_0</a>()&#160;&#160;&#160;GPIO_SetBits(<a class="el" href="bsp__mg323_8c.html#aabe97a77c288ddf5f882d28bcd9fa2f3">PORT_TERM_ON</a>, <a class="el" href="bsp__mg323_8c.html#a86ce8b64e0037241c336f9f3160f8f90">PIN_TERM_ON</a>);</td></tr>
+<tr class="separator:ac967bd90655c05b3699e2be1727b0464"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab1db1fad65f716422da674ce198868b4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__mg323_8c.html#ab1db1fad65f716422da674ce198868b4">MG_RESET_1</a>()&#160;&#160;&#160;GPIO_ResetBits(<a class="el" href="bsp__tm7705_8c.html#a452864e751114950cf7a5fc4105f7816">PORT_RESET</a>, <a class="el" href="bsp__tm7705_8c.html#a6d990297df33b717e4d1489159aef8c0">PIN_RESET</a>);</td></tr>
+<tr class="separator:ab1db1fad65f716422da674ce198868b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31f94e9e748758f596375d7f325c71fd"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__mg323_8c.html#a31f94e9e748758f596375d7f325c71fd">MG_RESET_0</a>()&#160;&#160;&#160;GPIO_SetBits(<a class="el" href="bsp__tm7705_8c.html#a452864e751114950cf7a5fc4105f7816">PORT_RESET</a>, <a class="el" href="bsp__tm7705_8c.html#a6d990297df33b717e4d1489159aef8c0">PIN_RESET</a>);</td></tr>
+<tr class="separator:a31f94e9e748758f596375d7f325c71fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:afba96d25148f1a2f505a838f234956f7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__mg323_8c.html#afba96d25148f1a2f505a838f234956f7">bsp_InitMG323</a> (void)</td></tr>
+<tr class="separator:afba96d25148f1a2f505a838f234956f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5dfe78ba8ba7988e0f9e8bb0787d654c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__mg323_8c.html#a5dfe78ba8ba7988e0f9e8bb0787d654c">MG323_PrintRxData</a> (uint8_t _ch)</td></tr>
+<tr class="separator:a5dfe78ba8ba7988e0f9e8bb0787d654c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18d21ed30d806e87f0eb5f2ee2eda65b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__mg323_8c.html#a18d21ed30d806e87f0eb5f2ee2eda65b">MG323_PowerOn</a> (void)</td></tr>
+<tr class="separator:a18d21ed30d806e87f0eb5f2ee2eda65b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab017e01551c3b17177ee7bedc75fed6e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__mg323_8c.html#ab017e01551c3b17177ee7bedc75fed6e">MG323_Reset</a> (void)</td></tr>
+<tr class="separator:ab017e01551c3b17177ee7bedc75fed6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f6a8977c4b579b9e5cefb68a18886ba"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__mg323_8c.html#a5f6a8977c4b579b9e5cefb68a18886ba">MG323_PowerOff</a> (void)</td></tr>
+<tr class="separator:a5f6a8977c4b579b9e5cefb68a18886ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab0f7d9b9f782da17186b5ffc0e4ed66f"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__mg323_8c.html#ab0f7d9b9f782da17186b5ffc0e4ed66f">MG323_WaitResponse</a> (char *_pAckStr, uint16_t _usTimeOut)</td></tr>
+<tr class="separator:ab0f7d9b9f782da17186b5ffc0e4ed66f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae261c749b83f3f1dd2f2ce14b45f21f0"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__mg323_8c.html#ae261c749b83f3f1dd2f2ce14b45f21f0">MG323_ReadResponse</a> (char *_pBuf, uint16_t _usBufSize, uint16_t _usTimeOut)</td></tr>
+<tr class="separator:ae261c749b83f3f1dd2f2ce14b45f21f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa39de450796c1af0d7dd49dd5be27801"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__mg323_8c.html#aa39de450796c1af0d7dd49dd5be27801">MG323_SendAT</a> (char *_Cmd)</td></tr>
+<tr class="separator:aa39de450796c1af0d7dd49dd5be27801"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5151602f9270e52ad346512ba0a1a28c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__mg323_8c.html#a5151602f9270e52ad346512ba0a1a28c">MG323_SetAutoReport</a> (void)</td></tr>
+<tr class="separator:a5151602f9270e52ad346512ba0a1a28c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9dd6c19407141770209d39e5de64ad7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__mg323_8c.html#ae9dd6c19407141770209d39e5de64ad7">MG323_SwitchPath</a> (uint8_t <a class="el" href="main___iap_test_8c.html#a0523c05685d59544dca911cb6a3db77d">ch</a>)</td></tr>
+<tr class="separator:ae9dd6c19407141770209d39e5de64ad7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5eb56132bc263c340054ba328e89a64d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__mg323_8c.html#a5eb56132bc263c340054ba328e89a64d">MG323_SetEarVolume</a> (uint8_t _ucVolume)</td></tr>
+<tr class="separator:a5eb56132bc263c340054ba328e89a64d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a95f7edf025cdb60feb3ceefc4ebc027d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__mg323_8c.html#a95f7edf025cdb60feb3ceefc4ebc027d">MG323_SetMicGain</a> (int16_t _iGain)</td></tr>
+<tr class="separator:a95f7edf025cdb60feb3ceefc4ebc027d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae1fe88e40c089fa8d0b8aa1b473e7813"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__mg323_8c.html#ae1fe88e40c089fa8d0b8aa1b473e7813">MG323_DialTel</a> (char *_pTel)</td></tr>
+<tr class="separator:ae1fe88e40c089fa8d0b8aa1b473e7813"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3bada0f72fa825a5997561badc0c0f2c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__mg323_8c.html#a3bada0f72fa825a5997561badc0c0f2c">MG323_Hangup</a> (void)</td></tr>
+<tr class="separator:a3bada0f72fa825a5997561badc0c0f2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c75ccff1db971ca560e015f49ce3b22"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__mg323_8c.html#a0c75ccff1db971ca560e015f49ce3b22">MG323_GetHardInfo</a> (<a class="el" href="struct_m_g___h_a_r_d___i_n_f_o___t.html">MG_HARD_INFO_T</a> *_pInfo)</td></tr>
+<tr class="separator:a0c75ccff1db971ca560e015f49ce3b22"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11a666b709f9651a432f1fb79e0e538d"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__mg323_8c.html#a11a666b709f9651a432f1fb79e0e538d">MG323_GetNetStatus</a> (void)</td></tr>
+<tr class="separator:a11a666b709f9651a432f1fb79e0e538d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">宏定义说明</h2>
+<a id="a31f94e9e748758f596375d7f325c71fd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a31f94e9e748758f596375d7f325c71fd">&#9670;&nbsp;</a></span>MG_RESET_0</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MG_RESET_0</td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td>&#160;&#160;&#160;GPIO_SetBits(<a class="el" href="bsp__tm7705_8c.html#a452864e751114950cf7a5fc4105f7816">PORT_RESET</a>, <a class="el" href="bsp__tm7705_8c.html#a6d990297df33b717e4d1489159aef8c0">PIN_RESET</a>);</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab1db1fad65f716422da674ce198868b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab1db1fad65f716422da674ce198868b4">&#9670;&nbsp;</a></span>MG_RESET_1</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MG_RESET_1</td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td>&#160;&#160;&#160;GPIO_ResetBits(<a class="el" href="bsp__tm7705_8c.html#a452864e751114950cf7a5fc4105f7816">PORT_RESET</a>, <a class="el" href="bsp__tm7705_8c.html#a6d990297df33b717e4d1489159aef8c0">PIN_RESET</a>);</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6d990297df33b717e4d1489159aef8c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d990297df33b717e4d1489159aef8c0">&#9670;&nbsp;</a></span>PIN_RESET</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define PIN_RESET&#160;&#160;&#160;GPIO_Pin_7</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a86ce8b64e0037241c336f9f3160f8f90"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a86ce8b64e0037241c336f9f3160f8f90">&#9670;&nbsp;</a></span>PIN_TERM_ON</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define PIN_TERM_ON&#160;&#160;&#160;GPIO_Pin_0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a452864e751114950cf7a5fc4105f7816"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a452864e751114950cf7a5fc4105f7816">&#9670;&nbsp;</a></span>PORT_RESET</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define PORT_RESET&#160;&#160;&#160;GPIOB</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aabe97a77c288ddf5f882d28bcd9fa2f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aabe97a77c288ddf5f882d28bcd9fa2f3">&#9670;&nbsp;</a></span>PORT_TERM_ON</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define PORT_TERM_ON&#160;&#160;&#160;GPIOI</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8cbb291dda5c07eb3019dcc356c6fce0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8cbb291dda5c07eb3019dcc356c6fce0">&#9670;&nbsp;</a></span>RCC_RESET</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RCC_RESET&#160;&#160;&#160;RCC_AHB1Periph_GPIOB</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af01121459c0a063a7d0969aa7fd5d3ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af01121459c0a063a7d0969aa7fd5d3ab">&#9670;&nbsp;</a></span>RCC_TERM_ON</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RCC_TERM_ON&#160;&#160;&#160;RCC_AHB1Periph_GPIOI</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac967bd90655c05b3699e2be1727b0464"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac967bd90655c05b3699e2be1727b0464">&#9670;&nbsp;</a></span>TERM_ON_0</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TERM_ON_0</td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td>&#160;&#160;&#160;GPIO_SetBits(<a class="el" href="bsp__mg323_8c.html#aabe97a77c288ddf5f882d28bcd9fa2f3">PORT_TERM_ON</a>, <a class="el" href="bsp__mg323_8c.html#a86ce8b64e0037241c336f9f3160f8f90">PIN_TERM_ON</a>);</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a39d8eb2e49c7bbb171f089bf5f1d7906"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a39d8eb2e49c7bbb171f089bf5f1d7906">&#9670;&nbsp;</a></span>TERM_ON_1</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TERM_ON_1</td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td>&#160;&#160;&#160;GPIO_ResetBits(<a class="el" href="bsp__mg323_8c.html#aabe97a77c288ddf5f882d28bcd9fa2f3">PORT_TERM_ON</a>, <a class="el" href="bsp__mg323_8c.html#a86ce8b64e0037241c336f9f3160f8f90">PIN_TERM_ON</a>);</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">函数说明</h2>
+<a id="afba96d25148f1a2f505a838f234956f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afba96d25148f1a2f505a838f234956f7">&#9670;&nbsp;</a></span>bsp_InitMG323()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void bsp_InitMG323 </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae1fe88e40c089fa8d0b8aa1b473e7813"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae1fe88e40c089fa8d0b8aa1b473e7813">&#9670;&nbsp;</a></span>MG323_DialTel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MG323_DialTel </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>_pTel</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0c75ccff1db971ca560e015f49ce3b22"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c75ccff1db971ca560e015f49ce3b22">&#9670;&nbsp;</a></span>MG323_GetHardInfo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t MG323_GetHardInfo </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_m_g___h_a_r_d___i_n_f_o___t.html">MG_HARD_INFO_T</a> *&#160;</td>
+          <td class="paramname"><em>_pInfo</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a11a666b709f9651a432f1fb79e0e538d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a11a666b709f9651a432f1fb79e0e538d">&#9670;&nbsp;</a></span>MG323_GetNetStatus()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t MG323_GetNetStatus </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3bada0f72fa825a5997561badc0c0f2c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3bada0f72fa825a5997561badc0c0f2c">&#9670;&nbsp;</a></span>MG323_Hangup()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MG323_Hangup </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5f6a8977c4b579b9e5cefb68a18886ba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f6a8977c4b579b9e5cefb68a18886ba">&#9670;&nbsp;</a></span>MG323_PowerOff()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MG323_PowerOff </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a18d21ed30d806e87f0eb5f2ee2eda65b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a18d21ed30d806e87f0eb5f2ee2eda65b">&#9670;&nbsp;</a></span>MG323_PowerOn()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MG323_PowerOn </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5dfe78ba8ba7988e0f9e8bb0787d654c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5dfe78ba8ba7988e0f9e8bb0787d654c">&#9670;&nbsp;</a></span>MG323_PrintRxData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MG323_PrintRxData </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>_ch</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae261c749b83f3f1dd2f2ce14b45f21f0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae261c749b83f3f1dd2f2ce14b45f21f0">&#9670;&nbsp;</a></span>MG323_ReadResponse()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t MG323_ReadResponse </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>_pBuf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>_usBufSize</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>_usTimeOut</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab017e01551c3b17177ee7bedc75fed6e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab017e01551c3b17177ee7bedc75fed6e">&#9670;&nbsp;</a></span>MG323_Reset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MG323_Reset </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa39de450796c1af0d7dd49dd5be27801"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa39de450796c1af0d7dd49dd5be27801">&#9670;&nbsp;</a></span>MG323_SendAT()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MG323_SendAT </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>_Cmd</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5151602f9270e52ad346512ba0a1a28c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5151602f9270e52ad346512ba0a1a28c">&#9670;&nbsp;</a></span>MG323_SetAutoReport()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MG323_SetAutoReport </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5eb56132bc263c340054ba328e89a64d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5eb56132bc263c340054ba328e89a64d">&#9670;&nbsp;</a></span>MG323_SetEarVolume()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MG323_SetEarVolume </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>_ucVolume</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a95f7edf025cdb60feb3ceefc4ebc027d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a95f7edf025cdb60feb3ceefc4ebc027d">&#9670;&nbsp;</a></span>MG323_SetMicGain()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MG323_SetMicGain </td>
+          <td>(</td>
+          <td class="paramtype">int16_t&#160;</td>
+          <td class="paramname"><em>_iGain</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae9dd6c19407141770209d39e5de64ad7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae9dd6c19407141770209d39e5de64ad7">&#9670;&nbsp;</a></span>MG323_SwitchPath()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MG323_SwitchPath </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>ch</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab0f7d9b9f782da17186b5ffc0e4ed66f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab0f7d9b9f782da17186b5ffc0e4ed66f">&#9670;&nbsp;</a></span>MG323_WaitResponse()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t MG323_WaitResponse </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>_pAckStr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>_usTimeOut</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

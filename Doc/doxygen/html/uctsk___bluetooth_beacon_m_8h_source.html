@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>xsl: E:/XkapSourceCode/Xkap-Stm32/Xkap-Stm32/User/UserTask/uctsk_BluetoothBeaconM.h Ê∫êÊñá‰ª∂</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">xsl
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">Ê∫êÁ†ÅËØ¥Êòé</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Âà∂‰ΩúËÄÖ Doxygen 1.8.13 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',false,false,'search.php','ÊêúÁ¥¢');
+});
+</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_6d4e12d46ad8519ff7b80e874016d102.html">User</a></li><li class="navelem"><a class="el" href="dir_ba9e781c49be9d79c84eb9994eefebec.html">UserTask</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">uctsk_BluetoothBeaconM.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="uctsk___bluetooth_beacon_m_8h.html">ÊµèËßàËØ•Êñá‰ª∂ÁöÑÊñáÊ°£.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*</span></div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">***********************************************************************************</span></div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">*                    ◊˜    ’ﬂ: –ÏÀ…¡¡</span></div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">*                    ∏¸–¬ ±º‰: 2015-06-03</span></div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">***********************************************************************************</span></div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">*/</span></div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#ifndef __BLUETOOTH_BEACON_M_H</span></div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#define __BLUETOOTH_BEACON_M_H</span></div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">//-------------------º”‘ÿø‚∫Ø ˝------------------------------</span></div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="includes_8h.html">includes.h</a>&quot;</span></div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">//-------------------Ω”ø⁄∫Í∂®“Â(”≤º˛œ‡πÿ)--------------------</span></div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#if   (defined(STM32F1))</span></div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#define BLUETOOTH_RCC_ENABLE     RCC_APB2PeriphClockCmd( RCC_APB2Periph_GPIOE , ENABLE)</span></div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#elif (defined(STM32F4))</span></div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#define BLUETOOTH_RCC_ENABLE     RCC_AHB1PeriphClockCmd( RCC_AHB1Periph_GPIOE , ENABLE)</span></div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#endif</span></div><div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="uctsk___bluetooth_beacon_m_8h.html#a6faaf328abedcc1f02f9239d1623ef7c">   18</a></span>&#160;<span class="preprocessor">#define BLUETOOTH_PWR_PORT       GPIOE</span></div><div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="uctsk___bluetooth_beacon_m_8h.html#aee2ba4b970f81bce795f3a64228a5062">   19</a></span>&#160;<span class="preprocessor">#define BLUETOOTH_PWR_PIN        GPIO_Pin_4</span></div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div><div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="uctsk___bluetooth_beacon_m_8h.html#abe8760bdc71ed6eb5b62692e105b7549">   21</a></span>&#160;<span class="preprocessor">#define BLUETOOTH_TX_PORT        GPIOD</span></div><div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="uctsk___bluetooth_beacon_m_8h.html#a03828dc38b1dd4e24867280ccaf54c1e">   22</a></span>&#160;<span class="preprocessor">#define BLUETOOTH_TX_PIN         GPIO_Pin_8</span></div><div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="uctsk___bluetooth_beacon_m_8h.html#a89540d6e1f09972e0a0184eaf9d11843">   23</a></span>&#160;<span class="preprocessor">#define BLUETOOTH_RX_PORT        GPIOD</span></div><div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="uctsk___bluetooth_beacon_m_8h.html#ad6b845bce7449baa7ebc4f2625c32165">   24</a></span>&#160;<span class="preprocessor">#define BLUETOOTH_RX_PIN         GPIO_Pin_9</span></div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment">//-------------------Ω”ø⁄∫Í∂®“Â(”≤º˛Œﬁπÿ)--------------------</span></div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment">//øÿ÷∆LED¡¡√</span></div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#if   (defined(PROJECT_XKAP_V1))</span></div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#define BLUETOOTH_PWR_ON         GPIO_ResetBits(BLUETOOTH_PWR_PORT , BLUETOOTH_PWR_PIN)</span></div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#define BLUETOOTH_PWR_OFF        GPIO_SetBits(BLUETOOTH_PWR_PORT , BLUETOOTH_PWR_PIN)</span></div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#elif (defined(PROJECT_XKAP_V2))</span></div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#define BLUETOOTH_PWR_ON         GPIO_SetBits(BLUETOOTH_PWR_PORT , BLUETOOTH_PWR_PIN)</span></div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#define BLUETOOTH_PWR_OFF        GPIO_ResetBits(BLUETOOTH_PWR_PORT , BLUETOOTH_PWR_PIN)</span></div><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#endif</span></div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="comment">//-------------------Ω”ø⁄±‰¡ø--------------------------------</span></div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="comment">//≥§π©µÁ πƒ‹</span></div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keyword">extern</span> uint8_t <a class="code" href="uctsk___bluetooth_beacon_m_8h.html#a59552932ffcdebca0f3ef3265ce85644">Bluetooth_PowerOnHold_Enable</a>; </div><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="comment">//¡¨Ω” πƒ‹</span></div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="keyword">extern</span> uint8_t <a class="code" href="uctsk___bluetooth_beacon_m_8h.html#aa493959b134461f55c7eb54c50823e20">Bluetooth_ConnectSign</a>;</div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="comment">//Õ≥º∆ ˝æ› extern uint16_t Bluetooth_ChipPowerCount;
+extern uint16_t Bluetooth_ChipOkCount;
+extern uint16_t Bluetooth_ChipErrCount;
+extern uint16_t Bluetooth_ChipNCCount;
+//-------------------Ω”ø⁄∫Ø ˝--------------------------------
+void Bluetooth_RxIrqBufToRBuf0(uint8_t *pRxIqBuf,uint16_t len);
+uint8_t Bluetooth_BufferLoopPop(uint8_t *pBuf,uint16_t *plen);
+void App_BluetoothTaskCreate(void);
+void Bluetooth_DebugTestOnOff(uint8_t OnOff);
+
+#endif
+
+
+</span></div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="keyword">extern</span> uint16_t <a class="code" href="uctsk___bluetooth_beacon_m_8h.html#a9d0a0b70a4f477105988bb61419e9b04">Bluetooth_ChipPowerCount</a>;</div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="keyword">extern</span> uint16_t <a class="code" href="uctsk___bluetooth_beacon_m_8h.html#ae62de7e9d59e4f187d165c845388ed2c">Bluetooth_ChipOkCount</a>;</div><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="keyword">extern</span> uint16_t <a class="code" href="uctsk___bluetooth_beacon_m_8h.html#a489d80b6947e097a170e0e60c0e8ee25">Bluetooth_ChipErrCount</a>;</div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="keyword">extern</span> uint16_t <a class="code" href="uctsk___bluetooth_beacon_m_8h.html#a2af9679e3556ec11a83effbd83ce479d">Bluetooth_ChipNCCount</a>;</div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="comment">//-------------------Ω”ø⁄∫Ø ˝--------------------------------</span></div><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="keywordtype">void</span> <a class="code" href="uctsk___bluetooth_beacon_m_8h.html#ab00f895ddee1bedbfea061c1e8868631">Bluetooth_RxIrqBufToRBuf0</a>(uint8_t *pRxIqBuf,uint16_t len);</div><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;uint8_t <a class="code" href="uctsk___bluetooth_beacon_m_8h.html#a46fec6d782131f5a4e3f44ac87fb8021">Bluetooth_BufferLoopPop</a>(uint8_t *pBuf,uint16_t *plen);</div><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="keywordtype">void</span> <a class="code" href="uctsk___bluetooth_beacon_m_8h.html#a81ded786b21e2c103fb8cc25e52ce668">App_BluetoothTaskCreate</a>(<span class="keywordtype">void</span>);</div><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="keywordtype">void</span> <a class="code" href="uctsk___bluetooth_beacon_m_8h.html#a2d50b0e91f8a0449144e34e3aac40d19">Bluetooth_DebugTestOnOff</a>(uint8_t OnOff);</div><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="preprocessor">#endif</span></div><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div><div class="ttc" id="uctsk___bluetooth_beacon_m_8h_html_a489d80b6947e097a170e0e60c0e8ee25"><div class="ttname"><a href="uctsk___bluetooth_beacon_m_8h.html#a489d80b6947e097a170e0e60c0e8ee25">Bluetooth_ChipErrCount</a></div><div class="ttdeci">uint16_t Bluetooth_ChipErrCount</div><div class="ttdef"><b>Definition:</b> uctsk_BluetoothBeaconM.c:50</div></div>
+<div class="ttc" id="uctsk___bluetooth_beacon_m_8h_html_a46fec6d782131f5a4e3f44ac87fb8021"><div class="ttname"><a href="uctsk___bluetooth_beacon_m_8h.html#a46fec6d782131f5a4e3f44ac87fb8021">Bluetooth_BufferLoopPop</a></div><div class="ttdeci">uint8_t Bluetooth_BufferLoopPop(uint8_t *pBuf, uint16_t *plen)</div><div class="ttdef"><b>Definition:</b> uctsk_BluetoothBeaconM.c:154</div></div>
+<div class="ttc" id="uctsk___bluetooth_beacon_m_8h_html_a9d0a0b70a4f477105988bb61419e9b04"><div class="ttname"><a href="uctsk___bluetooth_beacon_m_8h.html#a9d0a0b70a4f477105988bb61419e9b04">Bluetooth_ChipPowerCount</a></div><div class="ttdeci">uint16_t Bluetooth_ChipPowerCount</div><div class="ttdef"><b>Definition:</b> uctsk_BluetoothBeaconM.c:48</div></div>
+<div class="ttc" id="uctsk___bluetooth_beacon_m_8h_html_a2af9679e3556ec11a83effbd83ce479d"><div class="ttname"><a href="uctsk___bluetooth_beacon_m_8h.html#a2af9679e3556ec11a83effbd83ce479d">Bluetooth_ChipNCCount</a></div><div class="ttdeci">uint16_t Bluetooth_ChipNCCount</div><div class="ttdef"><b>Definition:</b> uctsk_BluetoothBeaconM.c:51</div></div>
+<div class="ttc" id="uctsk___bluetooth_beacon_m_8h_html_ab00f895ddee1bedbfea061c1e8868631"><div class="ttname"><a href="uctsk___bluetooth_beacon_m_8h.html#ab00f895ddee1bedbfea061c1e8868631">Bluetooth_RxIrqBufToRBuf0</a></div><div class="ttdeci">void Bluetooth_RxIrqBufToRBuf0(uint8_t *pRxIqBuf, uint16_t len)</div><div class="ttdef"><b>Definition:</b> uctsk_BluetoothBeaconM.c:133</div></div>
+<div class="ttc" id="uctsk___bluetooth_beacon_m_8h_html_a2d50b0e91f8a0449144e34e3aac40d19"><div class="ttname"><a href="uctsk___bluetooth_beacon_m_8h.html#a2d50b0e91f8a0449144e34e3aac40d19">Bluetooth_DebugTestOnOff</a></div><div class="ttdeci">void Bluetooth_DebugTestOnOff(uint8_t OnOff)</div><div class="ttdef"><b>Definition:</b> uctsk_BluetoothBeaconM.c:281</div></div>
+<div class="ttc" id="uctsk___bluetooth_beacon_m_8h_html_a81ded786b21e2c103fb8cc25e52ce668"><div class="ttname"><a href="uctsk___bluetooth_beacon_m_8h.html#a81ded786b21e2c103fb8cc25e52ce668">App_BluetoothTaskCreate</a></div><div class="ttdeci">void App_BluetoothTaskCreate(void)</div><div class="ttdef"><b>Definition:</b> uctsk_BluetoothBeaconM.c:161</div></div>
+<div class="ttc" id="uctsk___bluetooth_beacon_m_8h_html_a59552932ffcdebca0f3ef3265ce85644"><div class="ttname"><a href="uctsk___bluetooth_beacon_m_8h.html#a59552932ffcdebca0f3ef3265ce85644">Bluetooth_PowerOnHold_Enable</a></div><div class="ttdeci">uint8_t Bluetooth_PowerOnHold_Enable</div><div class="ttdef"><b>Definition:</b> uctsk_BluetoothBeaconM.c:55</div></div>
+<div class="ttc" id="includes_8h_html"><div class="ttname"><a href="includes_8h.html">includes.h</a></div></div>
+<div class="ttc" id="uctsk___bluetooth_beacon_m_8h_html_ae62de7e9d59e4f187d165c845388ed2c"><div class="ttname"><a href="uctsk___bluetooth_beacon_m_8h.html#ae62de7e9d59e4f187d165c845388ed2c">Bluetooth_ChipOkCount</a></div><div class="ttdeci">uint16_t Bluetooth_ChipOkCount</div><div class="ttdef"><b>Definition:</b> uctsk_BluetoothBeaconM.c:49</div></div>
+<div class="ttc" id="uctsk___bluetooth_beacon_m_8h_html_aa493959b134461f55c7eb54c50823e20"><div class="ttname"><a href="uctsk___bluetooth_beacon_m_8h.html#aa493959b134461f55c7eb54c50823e20">Bluetooth_ConnectSign</a></div><div class="ttdeci">uint8_t Bluetooth_ConnectSign</div><div class="ttdef"><b>Definition:</b> uctsk_BluetoothBeaconM.c:57</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Âà∂‰ΩúËÄÖ &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

@@ -1,0 +1,646 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>xsl: E:/XkapSourceCode/Xkap-Stm32/Xkap-Stm32/User/UserTask/uctsk_BluetoothDTU.c 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">xsl
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">源码说明</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.13 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',false,false,'search.php','搜索');
+});
+</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_6d4e12d46ad8519ff7b80e874016d102.html">User</a></li><li class="navelem"><a class="el" href="dir_ba9e781c49be9d79c84eb9994eefebec.html">UserTask</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#define-members">宏定义</a> &#124;
+<a href="#enum-members">枚举</a> &#124;
+<a href="#func-members">函数</a> &#124;
+<a href="#var-members">变量</a>  </div>
+  <div class="headertitle">
+<div class="title">uctsk_BluetoothDTU.c 文件参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="includes_8h_source.html">includes.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="uctsk___bluetooth_d_t_u_8h_source.html">uctsk_BluetoothDTU.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="uctsk___debug_8h_source.html">uctsk_Debug.h</a>&quot;</code><br />
+<code>#include &quot;Bsp_Uart.h&quot;</code><br />
+<code>#include &quot;<a class="el" href="_bsp___cpu_flash_8h_source.html">Bsp_CpuFlash.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_bsp___cpu_id_8h_source.html">Bsp_CpuId.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_bsp___rtc_8h_source.html">Bsp_Rtc.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_i_a_p_8h_source.html">IAP.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_module___err_8h_source.html">Module_Err.h</a>&quot;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+宏定义</h2></td></tr>
+<tr class="memitem:a5cfb669da168ac0d475d0b93a1debe80"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___bluetooth_d_t_u_8c.html#a5cfb669da168ac0d475d0b93a1debe80">BLUETOOTH_BUFFERLOOP_BUF_MAX</a>&#160;&#160;&#160;256</td></tr>
+<tr class="separator:a5cfb669da168ac0d475d0b93a1debe80"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab1e0d99df5f01a0be854ba3cae2dfb1d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___bluetooth_d_t_u_8c.html#ab1e0d99df5f01a0be854ba3cae2dfb1d">BLUETOOTH_BUFFERLOOP_NODE_MAX</a>&#160;&#160;&#160;10</td></tr>
+<tr class="separator:ab1e0d99df5f01a0be854ba3cae2dfb1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+枚举</h2></td></tr>
+<tr class="memitem:aed6f8ce784a40f9d4e40bed857dc1556"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___bluetooth_d_t_u_8c.html#aed6f8ce784a40f9d4e40bed857dc1556">BLUETOOTH_E_UPLOAD_STEP</a> { <br />
+&#160;&#160;<a class="el" href="uctsk___bluetooth_d_t_u_8c.html#aed6f8ce784a40f9d4e40bed857dc1556a88edf821ebb103d822ebc61458a5129e">BLUETOOTH_E_UPLOAD_STEP_POWER_ON</a> = 0, 
+<a class="el" href="uctsk___bluetooth_d_t_u_8c.html#aed6f8ce784a40f9d4e40bed857dc1556aa76688a3c1fee86830e35e8a53883ccd">BLUETOOTH_E_UPLOAD_STEP_CONNECT</a>, 
+<a class="el" href="uctsk___bluetooth_d_t_u_8c.html#aed6f8ce784a40f9d4e40bed857dc1556a42d09ddf88e4c7580becf72719754a5f">BLUETOOTH_E_UPLOAD_STEP_CONNECT_DELAY</a>, 
+<a class="el" href="uctsk___bluetooth_d_t_u_8c.html#aed6f8ce784a40f9d4e40bed857dc1556a913f67006940c13a24c00e9037111d57">BLUETOOTH_E_UPLOAD_STEP_HAND</a>, 
+<br />
+&#160;&#160;<a class="el" href="uctsk___bluetooth_d_t_u_8c.html#aed6f8ce784a40f9d4e40bed857dc1556a2b63ecaae4606f0ae63ba60791ea219c">BLUETOOTH_E_UPLOAD_STEP_HAND_WAIT_ACK</a>, 
+<a class="el" href="uctsk___bluetooth_d_t_u_8c.html#aed6f8ce784a40f9d4e40bed857dc1556af69fcd0a25fbb52fd295f84fdf151082">BLUETOOTH_E_UPLOAD_STEP_TX_PACK1</a>, 
+<a class="el" href="uctsk___bluetooth_d_t_u_8c.html#aed6f8ce784a40f9d4e40bed857dc1556a89825fec3a9fb87edae3494aa7651333">BLUETOOTH_E_UPLOAD_STEP_TX_PACK1_DELAY</a>, 
+<a class="el" href="uctsk___bluetooth_d_t_u_8c.html#aed6f8ce784a40f9d4e40bed857dc1556aa123f1e3b82ba5ad984f12b0b22dfd58">BLUETOOTH_E_UPLOAD_STEP_TX_PACK2</a>, 
+<br />
+&#160;&#160;<a class="el" href="uctsk___bluetooth_d_t_u_8c.html#aed6f8ce784a40f9d4e40bed857dc1556aa02538b0a40758212f6872fa99d4b7bb">BLUETOOTH_E_UPLOAD_STEP_TX_PACK2_DELAY</a>, 
+<a class="el" href="uctsk___bluetooth_d_t_u_8c.html#aed6f8ce784a40f9d4e40bed857dc1556a62ff8a717ee2785a15720859220233df">BLUETOOTH_E_UPLOAD_STEP_TX_PACK3</a>, 
+<a class="el" href="uctsk___bluetooth_d_t_u_8c.html#aed6f8ce784a40f9d4e40bed857dc1556ae04dc36fdb15f4b36b12d550611e7e35">BLUETOOTH_E_UPLOAD_STEP_TX_PACK3_DELAY</a>, 
+<a class="el" href="uctsk___bluetooth_d_t_u_8c.html#aed6f8ce784a40f9d4e40bed857dc1556a1db888d02d38041e2024ba6c2f6b066c">BLUETOOTH_E_UPLOAD_STEP_TX_PACK4</a>, 
+<br />
+&#160;&#160;<a class="el" href="uctsk___bluetooth_d_t_u_8c.html#aed6f8ce784a40f9d4e40bed857dc1556a03d2a3d4cebe9f73ff8de58bee9742fd">BLUETOOTH_E_UPLOAD_STEP_TX_PACK4_DELAY</a>, 
+<a class="el" href="uctsk___bluetooth_d_t_u_8c.html#aed6f8ce784a40f9d4e40bed857dc1556aa0f89b03008815f61e91306cab89d907">BLUETOOTH_E_UPLOAD_STEP_TX_PACK5</a>, 
+<a class="el" href="uctsk___bluetooth_d_t_u_8c.html#aed6f8ce784a40f9d4e40bed857dc1556a30475a5f7d9893b7a4c2c53e9ce92346">BLUETOOTH_E_UPLOAD_STEP_TX_PACK5_WAIT_ACK</a>, 
+<a class="el" href="uctsk___bluetooth_d_t_u_8c.html#aed6f8ce784a40f9d4e40bed857dc1556a355e569b4721bf8c8c7db8d3ac7f1c10">BLUETOOTH_E_UPLOAD_STEP_TX_OK</a>, 
+<br />
+&#160;&#160;<a class="el" href="uctsk___bluetooth_d_t_u_8c.html#aed6f8ce784a40f9d4e40bed857dc1556a60b880d0b54790b4d0fd51f75279d86d">BLUETOOTH_E_UPLOAD_STEP_TX_ERR</a>, 
+<a class="el" href="uctsk___bluetooth_d_t_u_8c.html#aed6f8ce784a40f9d4e40bed857dc1556ae7345140e51403cb4e337c369fbcdac3">BLUETOOTH_E_UPLOAD_STEP_POWER_OFF</a>
+<br />
+ }</td></tr>
+<tr class="separator:aed6f8ce784a40f9d4e40bed857dc1556"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5834fc57fb46b1a999516c1b9fd24691"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___bluetooth_d_t_u_8c.html#a5834fc57fb46b1a999516c1b9fd24691">BLUETOOTH_E_IAP_STEP</a> { <br />
+&#160;&#160;<a class="el" href="uctsk___bluetooth_d_t_u_8c.html#a5834fc57fb46b1a999516c1b9fd24691a427c8ab96fbb6f2ad5e76201ee59cfa6">BLUETOOTH_E_IAP_STEP_POWER_ON</a> = 0, 
+<a class="el" href="uctsk___bluetooth_d_t_u_8c.html#a5834fc57fb46b1a999516c1b9fd24691a790762f455766997d7b768587d0d0604">BLUETOOTH_E_IAP_STEP_CONNECT</a>, 
+<a class="el" href="uctsk___bluetooth_d_t_u_8c.html#a5834fc57fb46b1a999516c1b9fd24691aaaefd632fc98e4f8b3ff2425c21060e2">BLUETOOTH_E_IAP_STEP_CONNECT_DELAY</a>, 
+<a class="el" href="uctsk___bluetooth_d_t_u_8c.html#a5834fc57fb46b1a999516c1b9fd24691ae0c2dd36a629a93f19a41e939e4120c4">BLUETOOTH_E_IAP_STEP_MONITOR</a>, 
+<br />
+&#160;&#160;<a class="el" href="uctsk___bluetooth_d_t_u_8c.html#a5834fc57fb46b1a999516c1b9fd24691a82c71ab8ed494b5e6d3c2012066109f2">BLUETOOTH_E_IAP_STEP_TX_OK</a>, 
+<a class="el" href="uctsk___bluetooth_d_t_u_8c.html#a5834fc57fb46b1a999516c1b9fd24691a74973e52345c3371b46dcc03d333533b">BLUETOOTH_E_IAP_STEP_TX_ERR</a>, 
+<a class="el" href="uctsk___bluetooth_d_t_u_8c.html#a5834fc57fb46b1a999516c1b9fd24691afe754d0527037ac4a2bdbf89c6b3ca05">BLUETOOTH_E_IAP_STEP_POWER_OFF</a>
+<br />
+ }</td></tr>
+<tr class="separator:a5834fc57fb46b1a999516c1b9fd24691"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:a18e76b7d04966047386e657adc871222"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___bluetooth_d_t_u_8c.html#a18e76b7d04966047386e657adc871222">MODULE_OS_TASK_TAB</a> (App_TaskBluetoothTCB)</td></tr>
+<tr class="separator:a18e76b7d04966047386e657adc871222"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e06692ea376a3a7608be20fefcafbc0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___bluetooth_d_t_u_8c.html#a7e06692ea376a3a7608be20fefcafbc0">MODULE_OS_TASK_STK</a> (App_TaskBluetoothStk, <a class="el" href="app__cfg_8h.html#a1b8e745eea1262ad9ec97103417908a0">APP_TASK_BLUETOOTH_STK_SIZE</a>)</td></tr>
+<tr class="separator:a7e06692ea376a3a7608be20fefcafbc0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a439f6916fd7e81f97350263f1849319d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___bluetooth_d_t_u_8c.html#a439f6916fd7e81f97350263f1849319d">MODULE_OS_SEM</a> (Bluetooth_Sem_Rx)</td></tr>
+<tr class="separator:a439f6916fd7e81f97350263f1849319d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab00f895ddee1bedbfea061c1e8868631"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___bluetooth_d_t_u_8c.html#ab00f895ddee1bedbfea061c1e8868631">Bluetooth_RxIrqBufToRBuf0</a> (uint8_t *pRxIqBuf, uint16_t len)</td></tr>
+<tr class="separator:ab00f895ddee1bedbfea061c1e8868631"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89e0e4082a69dbefb0de6bc1547b7893"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___bluetooth_d_t_u_8c.html#a89e0e4082a69dbefb0de6bc1547b7893">Bluetooth_Tx</a> (uint8_t *pBuf, uint16_t len)</td></tr>
+<tr class="separator:a89e0e4082a69dbefb0de6bc1547b7893"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81ded786b21e2c103fb8cc25e52ce668"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___bluetooth_d_t_u_8c.html#a81ded786b21e2c103fb8cc25e52ce668">App_BluetoothTaskCreate</a> (void)</td></tr>
+<tr class="separator:a81ded786b21e2c103fb8cc25e52ce668"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8896ebfa58358782ee136b2ab73bc6f8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___bluetooth_d_t_u_8c.html#a8896ebfa58358782ee136b2ab73bc6f8">Bluetooth_App</a> (<a class="el" href="uctsk___bluetooth_d_t_u_8h.html#a22676f5de26568e0e430544a85f0265e">BLUETOOTH_E_CMD</a> cmd, uint8_t *pbuf)</td></tr>
+<tr class="separator:a8896ebfa58358782ee136b2ab73bc6f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02cc30cb50475e9ceff8f668b9925a9e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___bluetooth_d_t_u_8c.html#a02cc30cb50475e9ceff8f668b9925a9e">BluetoothDtu_Init</a> (void)</td></tr>
+<tr class="separator:a02cc30cb50475e9ceff8f668b9925a9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a665be9d82f27e6fbbf59c2e115bcf2ad"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___bluetooth_d_t_u_8c.html#a665be9d82f27e6fbbf59c2e115bcf2ad">BluetoothDtu_100ms</a> (void)</td></tr>
+<tr class="separator:a665be9d82f27e6fbbf59c2e115bcf2ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a888bd76515579d09c94affc366efcfa5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___bluetooth_d_t_u_8c.html#a888bd76515579d09c94affc366efcfa5">BluetoothDtu_RxIrq</a> (uint8_t *pRx, uint16_t len)</td></tr>
+<tr class="separator:a888bd76515579d09c94affc366efcfa5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d50b0e91f8a0449144e34e3aac40d19"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___bluetooth_d_t_u_8c.html#a2d50b0e91f8a0449144e34e3aac40d19">Bluetooth_DebugTestOnOff</a> (uint8_t OnOff)</td></tr>
+<tr class="separator:a2d50b0e91f8a0449144e34e3aac40d19"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+变量</h2></td></tr>
+<tr class="memitem:a9d0a0b70a4f477105988bb61419e9b04"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___bluetooth_d_t_u_8c.html#a9d0a0b70a4f477105988bb61419e9b04">Bluetooth_ChipPowerCount</a> =0</td></tr>
+<tr class="separator:a9d0a0b70a4f477105988bb61419e9b04"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae62de7e9d59e4f187d165c845388ed2c"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___bluetooth_d_t_u_8c.html#ae62de7e9d59e4f187d165c845388ed2c">Bluetooth_ChipOkCount</a> =0</td></tr>
+<tr class="separator:ae62de7e9d59e4f187d165c845388ed2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a489d80b6947e097a170e0e60c0e8ee25"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___bluetooth_d_t_u_8c.html#a489d80b6947e097a170e0e60c0e8ee25">Bluetooth_ChipErrCount</a> =0</td></tr>
+<tr class="separator:a489d80b6947e097a170e0e60c0e8ee25"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2af9679e3556ec11a83effbd83ce479d"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___bluetooth_d_t_u_8c.html#a2af9679e3556ec11a83effbd83ce479d">Bluetooth_ChipNCCount</a> =0</td></tr>
+<tr class="separator:a2af9679e3556ec11a83effbd83ce479d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a59552932ffcdebca0f3ef3265ce85644"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___bluetooth_d_t_u_8c.html#a59552932ffcdebca0f3ef3265ce85644">Bluetooth_PowerOnHold_Enable</a> = 0</td></tr>
+<tr class="separator:a59552932ffcdebca0f3ef3265ce85644"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31c25a84c97fdb4833205b49b8e518e9"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___bluetooth_d_t_u_8c.html#a31c25a84c97fdb4833205b49b8e518e9">Bluetooth_ConnectOnOff</a> = <a class="el" href="includes_8h.html#a29e413f6725b2ba32d165ffaa35b01e5">OFF</a></td></tr>
+<tr class="separator:a31c25a84c97fdb4833205b49b8e518e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa493959b134461f55c7eb54c50823e20"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___bluetooth_d_t_u_8c.html#aa493959b134461f55c7eb54c50823e20">Bluetooth_ConnectSign</a> = 0</td></tr>
+<tr class="separator:aa493959b134461f55c7eb54c50823e20"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae66188d80314e6fd8224434c0d1546e5"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___bluetooth_d_t_u_8c.html#ae66188d80314e6fd8224434c0d1546e5">Bluetooth_HciTxRxOkErr</a> = <a class="el" href="_module___err_8h.html#ad42ceda3ce3e223cbfa7ea6400e8a1f3aec8640d3605ceff9ad02e6a833cbc684">MODULE_E_ERR_NULL</a></td></tr>
+<tr class="separator:ae66188d80314e6fd8224434c0d1546e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af31e169d20b13b6952e64068fb75e3d7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_b_l_u_e_t_o_o_t_h___s___i_n_f_o.html">BLUETOOTH_S_INFO</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___bluetooth_d_t_u_8c.html#af31e169d20b13b6952e64068fb75e3d7">Bluetooth_s_info</a></td></tr>
+<tr class="separator:af31e169d20b13b6952e64068fb75e3d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c6db6ad48849809131e1ca9a7ead6c7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_b_l_u_e_t_o_o_t_h___s___s_l_a_v_e.html">BLUETOOTH_S_SLAVE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___bluetooth_d_t_u_8c.html#a7c6db6ad48849809131e1ca9a7ead6c7">BluetoothDtu_s_SlaveBuf</a> [<a class="el" href="uctsk___bluetooth_d_t_u_8h.html#a25c76651ead68dc25c779e0f203e1378">BLUETOOTH_DTU_S_SLAVEBUF_NUM</a>]</td></tr>
+<tr class="separator:a7c6db6ad48849809131e1ca9a7ead6c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">宏定义说明</h2>
+<a id="a5cfb669da168ac0d475d0b93a1debe80"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5cfb669da168ac0d475d0b93a1debe80">&#9670;&nbsp;</a></span>BLUETOOTH_BUFFERLOOP_BUF_MAX</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BLUETOOTH_BUFFERLOOP_BUF_MAX&#160;&#160;&#160;256</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab1e0d99df5f01a0be854ba3cae2dfb1d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab1e0d99df5f01a0be854ba3cae2dfb1d">&#9670;&nbsp;</a></span>BLUETOOTH_BUFFERLOOP_NODE_MAX</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BLUETOOTH_BUFFERLOOP_NODE_MAX&#160;&#160;&#160;10</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">枚举类型说明</h2>
+<a id="a5834fc57fb46b1a999516c1b9fd24691"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5834fc57fb46b1a999516c1b9fd24691">&#9670;&nbsp;</a></span>BLUETOOTH_E_IAP_STEP</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="uctsk___bluetooth_d_t_u_8c.html#a5834fc57fb46b1a999516c1b9fd24691">BLUETOOTH_E_IAP_STEP</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><a id="a5834fc57fb46b1a999516c1b9fd24691a427c8ab96fbb6f2ad5e76201ee59cfa6"></a>BLUETOOTH_E_IAP_STEP_POWER_ON&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a5834fc57fb46b1a999516c1b9fd24691a790762f455766997d7b768587d0d0604"></a>BLUETOOTH_E_IAP_STEP_CONNECT&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a5834fc57fb46b1a999516c1b9fd24691aaaefd632fc98e4f8b3ff2425c21060e2"></a>BLUETOOTH_E_IAP_STEP_CONNECT_DELAY&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a5834fc57fb46b1a999516c1b9fd24691ae0c2dd36a629a93f19a41e939e4120c4"></a>BLUETOOTH_E_IAP_STEP_MONITOR&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a5834fc57fb46b1a999516c1b9fd24691a82c71ab8ed494b5e6d3c2012066109f2"></a>BLUETOOTH_E_IAP_STEP_TX_OK&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a5834fc57fb46b1a999516c1b9fd24691a74973e52345c3371b46dcc03d333533b"></a>BLUETOOTH_E_IAP_STEP_TX_ERR&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a5834fc57fb46b1a999516c1b9fd24691afe754d0527037ac4a2bdbf89c6b3ca05"></a>BLUETOOTH_E_IAP_STEP_POWER_OFF&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<a id="aed6f8ce784a40f9d4e40bed857dc1556"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aed6f8ce784a40f9d4e40bed857dc1556">&#9670;&nbsp;</a></span>BLUETOOTH_E_UPLOAD_STEP</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="uctsk___bluetooth_d_t_u_8c.html#aed6f8ce784a40f9d4e40bed857dc1556">BLUETOOTH_E_UPLOAD_STEP</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><a id="aed6f8ce784a40f9d4e40bed857dc1556a88edf821ebb103d822ebc61458a5129e"></a>BLUETOOTH_E_UPLOAD_STEP_POWER_ON&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aed6f8ce784a40f9d4e40bed857dc1556aa76688a3c1fee86830e35e8a53883ccd"></a>BLUETOOTH_E_UPLOAD_STEP_CONNECT&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aed6f8ce784a40f9d4e40bed857dc1556a42d09ddf88e4c7580becf72719754a5f"></a>BLUETOOTH_E_UPLOAD_STEP_CONNECT_DELAY&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aed6f8ce784a40f9d4e40bed857dc1556a913f67006940c13a24c00e9037111d57"></a>BLUETOOTH_E_UPLOAD_STEP_HAND&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aed6f8ce784a40f9d4e40bed857dc1556a2b63ecaae4606f0ae63ba60791ea219c"></a>BLUETOOTH_E_UPLOAD_STEP_HAND_WAIT_ACK&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aed6f8ce784a40f9d4e40bed857dc1556af69fcd0a25fbb52fd295f84fdf151082"></a>BLUETOOTH_E_UPLOAD_STEP_TX_PACK1&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aed6f8ce784a40f9d4e40bed857dc1556a89825fec3a9fb87edae3494aa7651333"></a>BLUETOOTH_E_UPLOAD_STEP_TX_PACK1_DELAY&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aed6f8ce784a40f9d4e40bed857dc1556aa123f1e3b82ba5ad984f12b0b22dfd58"></a>BLUETOOTH_E_UPLOAD_STEP_TX_PACK2&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aed6f8ce784a40f9d4e40bed857dc1556aa02538b0a40758212f6872fa99d4b7bb"></a>BLUETOOTH_E_UPLOAD_STEP_TX_PACK2_DELAY&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aed6f8ce784a40f9d4e40bed857dc1556a62ff8a717ee2785a15720859220233df"></a>BLUETOOTH_E_UPLOAD_STEP_TX_PACK3&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aed6f8ce784a40f9d4e40bed857dc1556ae04dc36fdb15f4b36b12d550611e7e35"></a>BLUETOOTH_E_UPLOAD_STEP_TX_PACK3_DELAY&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aed6f8ce784a40f9d4e40bed857dc1556a1db888d02d38041e2024ba6c2f6b066c"></a>BLUETOOTH_E_UPLOAD_STEP_TX_PACK4&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aed6f8ce784a40f9d4e40bed857dc1556a03d2a3d4cebe9f73ff8de58bee9742fd"></a>BLUETOOTH_E_UPLOAD_STEP_TX_PACK4_DELAY&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aed6f8ce784a40f9d4e40bed857dc1556aa0f89b03008815f61e91306cab89d907"></a>BLUETOOTH_E_UPLOAD_STEP_TX_PACK5&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aed6f8ce784a40f9d4e40bed857dc1556a30475a5f7d9893b7a4c2c53e9ce92346"></a>BLUETOOTH_E_UPLOAD_STEP_TX_PACK5_WAIT_ACK&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aed6f8ce784a40f9d4e40bed857dc1556a355e569b4721bf8c8c7db8d3ac7f1c10"></a>BLUETOOTH_E_UPLOAD_STEP_TX_OK&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aed6f8ce784a40f9d4e40bed857dc1556a60b880d0b54790b4d0fd51f75279d86d"></a>BLUETOOTH_E_UPLOAD_STEP_TX_ERR&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aed6f8ce784a40f9d4e40bed857dc1556ae7345140e51403cb4e337c369fbcdac3"></a>BLUETOOTH_E_UPLOAD_STEP_POWER_OFF&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">函数说明</h2>
+<a id="a81ded786b21e2c103fb8cc25e52ce668"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a81ded786b21e2c103fb8cc25e52ce668">&#9670;&nbsp;</a></span>App_BluetoothTaskCreate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void App_BluetoothTaskCreate </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8896ebfa58358782ee136b2ab73bc6f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8896ebfa58358782ee136b2ab73bc6f8">&#9670;&nbsp;</a></span>Bluetooth_App()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Bluetooth_App </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="uctsk___bluetooth_d_t_u_8h.html#a22676f5de26568e0e430544a85f0265e">BLUETOOTH_E_CMD</a>&#160;</td>
+          <td class="paramname"><em>cmd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>pbuf</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2d50b0e91f8a0449144e34e3aac40d19"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d50b0e91f8a0449144e34e3aac40d19">&#9670;&nbsp;</a></span>Bluetooth_DebugTestOnOff()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Bluetooth_DebugTestOnOff </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>OnOff</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab00f895ddee1bedbfea061c1e8868631"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab00f895ddee1bedbfea061c1e8868631">&#9670;&nbsp;</a></span>Bluetooth_RxIrqBufToRBuf0()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Bluetooth_RxIrqBufToRBuf0 </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>pRxIqBuf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>len</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a89e0e4082a69dbefb0de6bc1547b7893"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a89e0e4082a69dbefb0de6bc1547b7893">&#9670;&nbsp;</a></span>Bluetooth_Tx()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t Bluetooth_Tx </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>pBuf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>len</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a665be9d82f27e6fbbf59c2e115bcf2ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a665be9d82f27e6fbbf59c2e115bcf2ad">&#9670;&nbsp;</a></span>BluetoothDtu_100ms()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BluetoothDtu_100ms </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a02cc30cb50475e9ceff8f668b9925a9e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a02cc30cb50475e9ceff8f668b9925a9e">&#9670;&nbsp;</a></span>BluetoothDtu_Init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BluetoothDtu_Init </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a888bd76515579d09c94affc366efcfa5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a888bd76515579d09c94affc366efcfa5">&#9670;&nbsp;</a></span>BluetoothDtu_RxIrq()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BluetoothDtu_RxIrq </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>pRx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>len</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a439f6916fd7e81f97350263f1849319d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a439f6916fd7e81f97350263f1849319d">&#9670;&nbsp;</a></span>MODULE_OS_SEM()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MODULE_OS_SEM </td>
+          <td>(</td>
+          <td class="paramtype">Bluetooth_Sem_Rx&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7e06692ea376a3a7608be20fefcafbc0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e06692ea376a3a7608be20fefcafbc0">&#9670;&nbsp;</a></span>MODULE_OS_TASK_STK()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MODULE_OS_TASK_STK </td>
+          <td>(</td>
+          <td class="paramtype">App_TaskBluetoothStk&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="app__cfg_8h.html#a1b8e745eea1262ad9ec97103417908a0">APP_TASK_BLUETOOTH_STK_SIZE</a>&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a18e76b7d04966047386e657adc871222"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a18e76b7d04966047386e657adc871222">&#9670;&nbsp;</a></span>MODULE_OS_TASK_TAB()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MODULE_OS_TASK_TAB </td>
+          <td>(</td>
+          <td class="paramtype">App_TaskBluetoothTCB&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">变量说明</h2>
+<a id="a489d80b6947e097a170e0e60c0e8ee25"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a489d80b6947e097a170e0e60c0e8ee25">&#9670;&nbsp;</a></span>Bluetooth_ChipErrCount</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t Bluetooth_ChipErrCount =0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2af9679e3556ec11a83effbd83ce479d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2af9679e3556ec11a83effbd83ce479d">&#9670;&nbsp;</a></span>Bluetooth_ChipNCCount</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t Bluetooth_ChipNCCount =0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae62de7e9d59e4f187d165c845388ed2c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae62de7e9d59e4f187d165c845388ed2c">&#9670;&nbsp;</a></span>Bluetooth_ChipOkCount</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t Bluetooth_ChipOkCount =0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9d0a0b70a4f477105988bb61419e9b04"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9d0a0b70a4f477105988bb61419e9b04">&#9670;&nbsp;</a></span>Bluetooth_ChipPowerCount</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t Bluetooth_ChipPowerCount =0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a31c25a84c97fdb4833205b49b8e518e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a31c25a84c97fdb4833205b49b8e518e9">&#9670;&nbsp;</a></span>Bluetooth_ConnectOnOff</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t Bluetooth_ConnectOnOff = <a class="el" href="includes_8h.html#a29e413f6725b2ba32d165ffaa35b01e5">OFF</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa493959b134461f55c7eb54c50823e20"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa493959b134461f55c7eb54c50823e20">&#9670;&nbsp;</a></span>Bluetooth_ConnectSign</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t Bluetooth_ConnectSign = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae66188d80314e6fd8224434c0d1546e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae66188d80314e6fd8224434c0d1546e5">&#9670;&nbsp;</a></span>Bluetooth_HciTxRxOkErr</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t Bluetooth_HciTxRxOkErr = <a class="el" href="_module___err_8h.html#ad42ceda3ce3e223cbfa7ea6400e8a1f3aec8640d3605ceff9ad02e6a833cbc684">MODULE_E_ERR_NULL</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a59552932ffcdebca0f3ef3265ce85644"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a59552932ffcdebca0f3ef3265ce85644">&#9670;&nbsp;</a></span>Bluetooth_PowerOnHold_Enable</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t Bluetooth_PowerOnHold_Enable = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af31e169d20b13b6952e64068fb75e3d7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af31e169d20b13b6952e64068fb75e3d7">&#9670;&nbsp;</a></span>Bluetooth_s_info</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_b_l_u_e_t_o_o_t_h___s___i_n_f_o.html">BLUETOOTH_S_INFO</a> Bluetooth_s_info</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7c6db6ad48849809131e1ca9a7ead6c7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7c6db6ad48849809131e1ca9a7ead6c7">&#9670;&nbsp;</a></span>BluetoothDtu_s_SlaveBuf</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_b_l_u_e_t_o_o_t_h___s___s_l_a_v_e.html">BLUETOOTH_S_SLAVE</a> BluetoothDtu_s_SlaveBuf[<a class="el" href="uctsk___bluetooth_d_t_u_8h.html#a25c76651ead68dc25c779e0f203e1378">BLUETOOTH_DTU_S_SLAVEBUF_NUM</a>]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

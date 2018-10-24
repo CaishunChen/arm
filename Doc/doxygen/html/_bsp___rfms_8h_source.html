@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>xsl: E:/XkapSourceCode/Xkap-Stm32/Xkap-Stm32/User/UserBsp/Bsp_Rfms.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">xsl
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">源码说明</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.13 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',false,false,'search.php','搜索');
+});
+</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_6d4e12d46ad8519ff7b80e874016d102.html">User</a></li><li class="navelem"><a class="el" href="dir_a31a870a1361c5173f8d637697bb576e.html">UserBsp</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">Bsp_Rfms.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_bsp___rfms_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="comment">//-------------------------------------------------------------------------------</span></div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#ifndef __BSP_RFMS_H</span></div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#define __BSP_RFMS_H</span></div><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment">//-------------------加载库函数------------------------------</span></div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="includes_8h.html">includes.h</a>&quot;</span></div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="comment">//-------------------接口宏定义(硬件相关)--------------------</span></div><div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="_bsp___rfms_8h.html#a7f83c7f4650f233d773bd563b0ae429d">   36</a></span>&#160;<span class="preprocessor">#define RFMS_UARTX      1</span></div><div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="_bsp___rfms_8h.html#a2c6b1adf04afb3a7518052685189045f">   37</a></span>&#160;<span class="preprocessor">#define RFMS_UART_BPS   19200</span></div><div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="_bsp___rfms_8h.html#af66c6d55a13cf44fedad4742aa9e25b6">   38</a></span>&#160;<span class="preprocessor">#define RFMS_REAL_VALUE (ADC_mV[0])</span></div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="comment">//-------------------接口宏定义(硬件无关)--------------------</span></div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="comment">//缓存环的尺寸</span></div><div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="_bsp___rfms_8h.html#ac3e1f9cbc88491afa0d79cf787199778">   41</a></span>&#160;<span class="preprocessor">#define RFMS_BUF_MAX 50</span></div><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="comment">//-------------------接口变量--------------------------------</span></div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="comment">//均值累加</span></div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="keyword">extern</span> uint32_t <a class="code" href="_bsp___rfms_8h.html#aa459366ca73a183c33e7866976d74c52">Rfms_BufAveSum</a>;</div><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="comment">//满足条件的差值次数累加</span></div><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="keyword">extern</span> uint16_t <a class="code" href="_bsp___rfms_8h.html#ab0540be77adcdaed8c365e3a7ac3f40c">Rfms_SubCount</a>;</div><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="comment">//差分阈值/连续2次采样满足一定差值的最小值/(EEPROM)</span></div><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="keyword">extern</span> uint16_t <a class="code" href="_bsp___rfms_8h.html#afb7db4bd66f496df4156ceb41d72cab1">Rfms_SubThreshold</a>;</div><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="comment">//调试信息</span></div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="keyword">extern</span> uint16_t <a class="code" href="_bsp___rfms_8h.html#adf79976abd721ff6b0832eee6b08c382">Rfms_Timer1</a>;</div><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="keyword">extern</span> uint16_t <a class="code" href="_bsp___rfms_8h.html#afb27ec098ec3d523b569e983ef0d9e0c">Rfms_SubCounter</a>;</div><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="comment">//-------------------接口函数--------------------------------</span></div><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="keyword">extern</span> uint8_t <a class="code" href="_bsp___rfms_8h.html#a23b369e13341f99f0d8dc78db3d05c0f">Rfms_Init</a>(<span class="keywordtype">void</span>);</div><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="keyword">extern</span> uint16_t <a class="code" href="_bsp___rfms_8h.html#a9c36ef265e7660d2026fa06b94821eac">Rfms_GetSubThreshold</a>(<span class="keywordtype">void</span>);</div><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">void</span> <a class="code" href="_bsp___rfms_8h.html#a73adad79535e51b32d8b44808fe447b0">Rfms_SetSubThreshold</a>(uint16_t value);</div><div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">void</span> <a class="code" href="_bsp___rfms_8h.html#a91e58691e10bc5ae5ee1cfd65a719cd3">Rfms_Count_20ms</a>(<span class="keywordtype">void</span>);</div><div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">void</span> <a class="code" href="_bsp___rfms_8h.html#a2ca4b04594c03011135c68c22bbd3a3d">Rfms_DebugTestWaveOnOff</a>(uint8_t OnOff);</div><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">void</span> <a class="code" href="_bsp___rfms_8h.html#a74fe8f493b25a38ca77b1f8af38d4eb5">Rfms_DebugTestOnOff</a>(uint8_t OnOff);</div><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="comment">//-------------------------------------------------------------------------------</span></div><div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="preprocessor">#endif</span></div><div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div><div class="ttc" id="_bsp___rfms_8h_html_afb27ec098ec3d523b569e983ef0d9e0c"><div class="ttname"><a href="_bsp___rfms_8h.html#afb27ec098ec3d523b569e983ef0d9e0c">Rfms_SubCounter</a></div><div class="ttdeci">uint16_t Rfms_SubCounter</div><div class="ttdef"><b>Definition:</b> Bsp_Rfms.c:105</div></div>
+<div class="ttc" id="_bsp___rfms_8h_html_a23b369e13341f99f0d8dc78db3d05c0f"><div class="ttname"><a href="_bsp___rfms_8h.html#a23b369e13341f99f0d8dc78db3d05c0f">Rfms_Init</a></div><div class="ttdeci">uint8_t Rfms_Init(void)</div><div class="ttdef"><b>Definition:</b> Bsp_Rfms.c:70</div></div>
+<div class="ttc" id="_bsp___rfms_8h_html_a74fe8f493b25a38ca77b1f8af38d4eb5"><div class="ttname"><a href="_bsp___rfms_8h.html#a74fe8f493b25a38ca77b1f8af38d4eb5">Rfms_DebugTestOnOff</a></div><div class="ttdeci">void Rfms_DebugTestOnOff(uint8_t OnOff)</div><div class="ttdef"><b>Definition:</b> Bsp_Rfms.c:190</div></div>
+<div class="ttc" id="_bsp___rfms_8h_html_a73adad79535e51b32d8b44808fe447b0"><div class="ttname"><a href="_bsp___rfms_8h.html#a73adad79535e51b32d8b44808fe447b0">Rfms_SetSubThreshold</a></div><div class="ttdeci">void Rfms_SetSubThreshold(uint16_t value)</div><div class="ttdef"><b>Definition:</b> Bsp_Rfms.c:44</div></div>
+<div class="ttc" id="_bsp___rfms_8h_html_adf79976abd721ff6b0832eee6b08c382"><div class="ttname"><a href="_bsp___rfms_8h.html#adf79976abd721ff6b0832eee6b08c382">Rfms_Timer1</a></div><div class="ttdeci">uint16_t Rfms_Timer1</div><div class="ttdef"><b>Definition:</b> Bsp_Rfms.c:104</div></div>
+<div class="ttc" id="includes_8h_html"><div class="ttname"><a href="includes_8h.html">includes.h</a></div></div>
+<div class="ttc" id="_bsp___rfms_8h_html_a9c36ef265e7660d2026fa06b94821eac"><div class="ttname"><a href="_bsp___rfms_8h.html#a9c36ef265e7660d2026fa06b94821eac">Rfms_GetSubThreshold</a></div><div class="ttdeci">uint16_t Rfms_GetSubThreshold(void)</div><div class="ttdef"><b>Definition:</b> Bsp_Rfms.c:40</div></div>
+<div class="ttc" id="_bsp___rfms_8h_html_ab0540be77adcdaed8c365e3a7ac3f40c"><div class="ttname"><a href="_bsp___rfms_8h.html#ab0540be77adcdaed8c365e3a7ac3f40c">Rfms_SubCount</a></div><div class="ttdeci">uint16_t Rfms_SubCount</div><div class="ttdef"><b>Definition:</b> Bsp_Rfms.c:27</div></div>
+<div class="ttc" id="_bsp___rfms_8h_html_aa459366ca73a183c33e7866976d74c52"><div class="ttname"><a href="_bsp___rfms_8h.html#aa459366ca73a183c33e7866976d74c52">Rfms_BufAveSum</a></div><div class="ttdeci">uint32_t Rfms_BufAveSum</div><div class="ttdef"><b>Definition:</b> Bsp_Rfms.c:25</div></div>
+<div class="ttc" id="_bsp___rfms_8h_html_a91e58691e10bc5ae5ee1cfd65a719cd3"><div class="ttname"><a href="_bsp___rfms_8h.html#a91e58691e10bc5ae5ee1cfd65a719cd3">Rfms_Count_20ms</a></div><div class="ttdeci">void Rfms_Count_20ms(void)</div><div class="ttdef"><b>Definition:</b> Bsp_Rfms.c:106</div></div>
+<div class="ttc" id="_bsp___rfms_8h_html_a2ca4b04594c03011135c68c22bbd3a3d"><div class="ttname"><a href="_bsp___rfms_8h.html#a2ca4b04594c03011135c68c22bbd3a3d">Rfms_DebugTestWaveOnOff</a></div><div class="ttdeci">void Rfms_DebugTestWaveOnOff(uint8_t OnOff)</div><div class="ttdef"><b>Definition:</b> Bsp_Rfms.c:179</div></div>
+<div class="ttc" id="_bsp___rfms_8h_html_afb7db4bd66f496df4156ceb41d72cab1"><div class="ttname"><a href="_bsp___rfms_8h.html#afb7db4bd66f496df4156ceb41d72cab1">Rfms_SubThreshold</a></div><div class="ttdeci">uint16_t Rfms_SubThreshold</div><div class="ttdef"><b>Definition:</b> Bsp_Rfms.c:29</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

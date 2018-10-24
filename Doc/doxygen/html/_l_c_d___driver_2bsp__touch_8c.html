@@ -1,0 +1,420 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>xsl: E:/XkapSourceCode/Xkap-Stm32/Xkap-Stm32/User/UserBsp/LCD_Driver/bsp_touch.c Êñá‰ª∂ÂèÇËÄÉ</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">xsl
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">Ê∫êÁ†ÅËØ¥Êòé</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Âà∂‰ΩúËÄÖ Doxygen 1.8.13 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',false,false,'search.php','ÊêúÁ¥¢');
+});
+</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_6d4e12d46ad8519ff7b80e874016d102.html">User</a></li><li class="navelem"><a class="el" href="dir_a31a870a1361c5173f8d637697bb576e.html">UserBsp</a></li><li class="navelem"><a class="el" href="dir_7931ff5d57cb839515da9a82353fa9b8.html">LCD_Driver</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#define-members">ÂÆèÂÆö‰πâ</a> &#124;
+<a href="#func-members">ÂáΩÊï∞</a> &#124;
+<a href="#var-members">ÂèòÈáè</a>  </div>
+  <div class="headertitle">
+<div class="title">bsp_touch.c Êñá‰ª∂ÂèÇËÄÉ</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="includes_8h_source.html">includes.h</a>&quot;</code><br />
+<code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="_l_c_d___driver_2bsp__touch_8h_source.html">bsp_touch.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_l_c_d___driver_2bsp__tft__lcd_8h_source.html">bsp_tft_lcd.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_l_c_d___driver_2_l_c_d___r_a8875_8h_source.html">LCD_RA8875.h</a>&quot;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+ÂÆèÂÆö‰πâ</h2></td></tr>
+<tr class="memitem:a44ae59c73f68c2ba6b4241188bfd8459"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_l_c_d___driver_2bsp__touch_8c.html#a44ae59c73f68c2ba6b4241188bfd8459">TSC2046_CS_1</a>()</td></tr>
+<tr class="separator:a44ae59c73f68c2ba6b4241188bfd8459"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac4e380040d2bbb02a88b95317a75f08"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_l_c_d___driver_2bsp__touch_8c.html#aac4e380040d2bbb02a88b95317a75f08">TSC2046_CS_0</a>()</td></tr>
+<tr class="separator:aac4e380040d2bbb02a88b95317a75f08"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5faab76638d78bc6e22b6238c1e9f8d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_l_c_d___driver_2bsp__touch_8c.html#ac5faab76638d78bc6e22b6238c1e9f8d">TOUCH_PressValid</a>&#160;&#160;&#160;0</td></tr>
+<tr class="separator:ac5faab76638d78bc6e22b6238c1e9f8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b8cd9fdfd9bd871ae66b617ad0879f8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_l_c_d___driver_2bsp__touch_8c.html#a9b8cd9fdfd9bd871ae66b617ad0879f8">ADC_CH_X</a>&#160;&#160;&#160;1		/* XÕ®µ¿£¨≤‚¡øXŒª÷√ */</td></tr>
+<tr class="separator:a9b8cd9fdfd9bd871ae66b617ad0879f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac4927ae4027500572f160e2f5cf0624b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_l_c_d___driver_2bsp__touch_8c.html#ac4927ae4027500572f160e2f5cf0624b">ADC_CH_Y</a>&#160;&#160;&#160;5		/* YÕ®µ¿£¨≤‚¡øYŒª÷√ */</td></tr>
+<tr class="separator:ac4927ae4027500572f160e2f5cf0624b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91752cd67ecae8eee79757fe4ee8668a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_l_c_d___driver_2bsp__touch_8c.html#a91752cd67ecae8eee79757fe4ee8668a">XPT2046_READ_TIMES</a>&#160;&#160;&#160;5</td></tr>
+<tr class="separator:a91752cd67ecae8eee79757fe4ee8668a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad7485e52ace51ea9f7553c5e3dbc2ba4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_l_c_d___driver_2bsp__touch_8c.html#ad7485e52ace51ea9f7553c5e3dbc2ba4">XPT2046_LOST_VAL</a>&#160;&#160;&#160;1</td></tr>
+<tr class="separator:ad7485e52ace51ea9f7553c5e3dbc2ba4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+ÂáΩÊï∞</h2></td></tr>
+<tr class="memitem:ab90a840369a913f2854442f768ae72d7"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_l_c_d___driver_2bsp__touch_8c.html#ab90a840369a913f2854442f768ae72d7">TSC2046_ReadAdc</a> (uint8_t _ucCh)</td></tr>
+<tr class="separator:ab90a840369a913f2854442f768ae72d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac6c7e04649541537290c865318fed2c0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_l_c_d___driver_2bsp__touch_8c.html#ac6c7e04649541537290c865318fed2c0">TOUCH_LoadParam</a> (void)</td></tr>
+<tr class="separator:ac6c7e04649541537290c865318fed2c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b442d7b837c7ba6b927e430b0d2c3e7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_l_c_d___driver_2bsp__touch_8c.html#a5b442d7b837c7ba6b927e430b0d2c3e7">TOUCH_SaveParam</a> (void)</td></tr>
+<tr class="separator:a5b442d7b837c7ba6b927e430b0d2c3e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aace3fbf70e48ca8c91ab7cbc5f933e67"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_l_c_d___driver_2bsp__touch_8c.html#aace3fbf70e48ca8c91ab7cbc5f933e67">TOUCH_Abs</a> (int32_t x)</td></tr>
+<tr class="separator:aace3fbf70e48ca8c91ab7cbc5f933e67"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac43044f19096b322b48b38c77d344f97"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_l_c_d___driver_2bsp__touch_8c.html#ac43044f19096b322b48b38c77d344f97">TOUCH_InitHard</a> (void)</td></tr>
+<tr class="separator:ac43044f19096b322b48b38c77d344f97"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a187a4b2955721840fb4f67786f2f327c"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_l_c_d___driver_2bsp__touch_8c.html#a187a4b2955721840fb4f67786f2f327c">TOUCH_DataFilter</a> (uint8_t _ucCh)</td></tr>
+<tr class="separator:a187a4b2955721840fb4f67786f2f327c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1697513648cde2c6cc639506fc0b15c2"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_l_c_d___driver_2bsp__touch_8c.html#a1697513648cde2c6cc639506fc0b15c2">TOUCH_ReadAdcXY</a> (int16_t *_usX, int16_t *_usY)</td></tr>
+<tr class="separator:a1697513648cde2c6cc639506fc0b15c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b82fb7466a5afb968053c4f8d3fb84f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_l_c_d___driver_2bsp__touch_8c.html#a9b82fb7466a5afb968053c4f8d3fb84f">TOUCH_SCAN</a> (void)</td></tr>
+<tr class="separator:a9b82fb7466a5afb968053c4f8d3fb84f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a68325416928d84cd818a7f390b224a16"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_l_c_d___driver_2bsp__touch_8c.html#a68325416928d84cd818a7f390b224a16">SpiDelay</a> (uint32_t DelayCnt)</td></tr>
+<tr class="separator:a68325416928d84cd818a7f390b224a16"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+ÂèòÈáè</h2></td></tr>
+<tr class="memitem:a3c6dab2c71d21b641da824c1e8993c04"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_t_o_u_c_h___t.html">TOUCH_T</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_l_c_d___driver_2bsp__touch_8c.html#a3c6dab2c71d21b641da824c1e8993c04">g_tTP</a></td></tr>
+<tr class="separator:a3c6dab2c71d21b641da824c1e8993c04"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a15a84f17b6b9890f0c2bf37566cedbeb"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_l_c_d___driver_2bsp__touch_8c.html#a15a84f17b6b9890f0c2bf37566cedbeb">ADC_ERR_RANGE</a> = 5</td></tr>
+<tr class="separator:a15a84f17b6b9890f0c2bf37566cedbeb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">ÂÆèÂÆö‰πâËØ¥Êòé</h2>
+<a id="a9b8cd9fdfd9bd871ae66b617ad0879f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b8cd9fdfd9bd871ae66b617ad0879f8">&#9670;&nbsp;</a></span>ADC_CH_X</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ADC_CH_X&#160;&#160;&#160;1		/* XÕ®µ¿£¨≤‚¡øXŒª÷√ */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac4927ae4027500572f160e2f5cf0624b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac4927ae4027500572f160e2f5cf0624b">&#9670;&nbsp;</a></span>ADC_CH_Y</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ADC_CH_Y&#160;&#160;&#160;5		/* YÕ®µ¿£¨≤‚¡øYŒª÷√ */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac5faab76638d78bc6e22b6238c1e9f8d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac5faab76638d78bc6e22b6238c1e9f8d">&#9670;&nbsp;</a></span>TOUCH_PressValid</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TOUCH_PressValid&#160;&#160;&#160;0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aac4e380040d2bbb02a88b95317a75f08"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac4e380040d2bbb02a88b95317a75f08">&#9670;&nbsp;</a></span>TSC2046_CS_0</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TSC2046_CS_0</td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a44ae59c73f68c2ba6b4241188bfd8459"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a44ae59c73f68c2ba6b4241188bfd8459">&#9670;&nbsp;</a></span>TSC2046_CS_1</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TSC2046_CS_1</td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad7485e52ace51ea9f7553c5e3dbc2ba4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad7485e52ace51ea9f7553c5e3dbc2ba4">&#9670;&nbsp;</a></span>XPT2046_LOST_VAL</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define XPT2046_LOST_VAL&#160;&#160;&#160;1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a91752cd67ecae8eee79757fe4ee8668a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a91752cd67ecae8eee79757fe4ee8668a">&#9670;&nbsp;</a></span>XPT2046_READ_TIMES</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define XPT2046_READ_TIMES&#160;&#160;&#160;5</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">ÂáΩÊï∞ËØ¥Êòé</h2>
+<a id="a68325416928d84cd818a7f390b224a16"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a68325416928d84cd818a7f390b224a16">&#9670;&nbsp;</a></span>SpiDelay()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SpiDelay </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>DelayCnt</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aace3fbf70e48ca8c91ab7cbc5f933e67"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aace3fbf70e48ca8c91ab7cbc5f933e67">&#9670;&nbsp;</a></span>TOUCH_Abs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int32_t TOUCH_Abs </td>
+          <td>(</td>
+          <td class="paramtype">int32_t&#160;</td>
+          <td class="paramname"><em>x</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a187a4b2955721840fb4f67786f2f327c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a187a4b2955721840fb4f67786f2f327c">&#9670;&nbsp;</a></span>TOUCH_DataFilter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t TOUCH_DataFilter </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>_ucCh</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac43044f19096b322b48b38c77d344f97"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac43044f19096b322b48b38c77d344f97">&#9670;&nbsp;</a></span>TOUCH_InitHard()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TOUCH_InitHard </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac6c7e04649541537290c865318fed2c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac6c7e04649541537290c865318fed2c0">&#9670;&nbsp;</a></span>TOUCH_LoadParam()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void TOUCH_LoadParam </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1697513648cde2c6cc639506fc0b15c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1697513648cde2c6cc639506fc0b15c2">&#9670;&nbsp;</a></span>TOUCH_ReadAdcXY()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t TOUCH_ReadAdcXY </td>
+          <td>(</td>
+          <td class="paramtype">int16_t *&#160;</td>
+          <td class="paramname"><em>_usX</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int16_t *&#160;</td>
+          <td class="paramname"><em>_usY</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5b442d7b837c7ba6b927e430b0d2c3e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b442d7b837c7ba6b927e430b0d2c3e7">&#9670;&nbsp;</a></span>TOUCH_SaveParam()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void TOUCH_SaveParam </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9b82fb7466a5afb968053c4f8d3fb84f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b82fb7466a5afb968053c4f8d3fb84f">&#9670;&nbsp;</a></span>TOUCH_SCAN()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TOUCH_SCAN </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab90a840369a913f2854442f768ae72d7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab90a840369a913f2854442f768ae72d7">&#9670;&nbsp;</a></span>TSC2046_ReadAdc()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">static uint16_t TSC2046_ReadAdc </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>_ucCh</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">ÂèòÈáèËØ¥Êòé</h2>
+<a id="a15a84f17b6b9890f0c2bf37566cedbeb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a15a84f17b6b9890f0c2bf37566cedbeb">&#9670;&nbsp;</a></span>ADC_ERR_RANGE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t ADC_ERR_RANGE = 5</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3c6dab2c71d21b641da824c1e8993c04"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c6dab2c71d21b641da824c1e8993c04">&#9670;&nbsp;</a></span>g_tTP</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_t_o_u_c_h___t.html">TOUCH_T</a> g_tTP</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Âà∂‰ΩúËÄÖ &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

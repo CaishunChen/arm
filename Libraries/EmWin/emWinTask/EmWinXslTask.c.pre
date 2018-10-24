@@ -1,0 +1,650 @@
+/*
+***********************************************************************************
+*                    作    者: 徐松亮
+*                    更新时间: 2016-01-18
+***********************************************************************************
+*/
+//------------------------------ Includes ---------------------------------------
+#include "includes.h"
+#include "EmWinXslTask.h"
+#include "os.h"
+/*
+******************************************************************************
+* 函数功能: 回调函数模型
+******************************************************************************
+*/
+static void EmWinXslTask_CallBack_Template(WM_MESSAGE * pMsg)
+{
+    int NCode, Id;
+    WM_HWIN hWin = pMsg->hWin;
+    switch (pMsg->MsgId)
+    {
+        //----------系统定义的消息----------
+        //窗口创建后立即发送,使窗口可以初始化并创建任何子窗口
+        case WM_CREATE:
+            break;
+        //要删除窗口前发送,告诉窗口释放其数据结构(如果有)
+        case WM_DELETE:
+            break;
+        //看看窗口是否可以聚焦
+        case WM_GET_ACCEPT_FOCUS:
+            break;
+        //请求窗口ID
+        case WM_GET_ID:
+            break;
+        //创建对话框后立即发送到窗口
+        case WM_INIT_DIALOG:
+            break;
+        //按下某个按键后发送到当前包含焦点的窗口
+        case WM_KEY:
+            switch(((WM_KEY_INFO*)(pMsg->Data.p))->Key)
+            {
+                case GUI_KEY_ESCAPE:
+                    break;
+                case GUI_KEY_ENTER:
+                    break;
+                //......
+                default:
+                    break;
+            }
+            break;
+        //窗口移动后立即发送到窗口
+        case WM_MOVE:
+            break;
+        //告知父窗口,其子窗口中发生了某些变化
+        case WM_NOTIFY_PARENT:
+            Id = WM_GetId(pMsg->hWinSrc);
+            NCode = pMsg->Data.v;
+            switch(Id)
+            {
+                case GUI_ID_OK:
+                    break;
+                case GUI_ID_CANCEL:
+                    break;
+                case GUI_ID_BUTTON0:
+                    break;
+                //......
+                default:
+                    break;
+            }
+            switch(NCode)
+            {
+                //----------通知消息----------------
+                // 窗口被删除前,发送消息到父窗口
+                case WM_NOTIFICATION_CHILD_DELETED:
+                    break;
+                // 单击窗口
+                case WM_NOTIFICATION_CLICKED:
+                    break;
+                // 窗口获得焦点
+                case WM_NOTIFICATION_GOT_FOCUS:
+                    break;
+                // 窗口失去焦点
+                case WM_NOTIFICATION_LOST_FOCUS:
+                    break;
+                // 此消息将在移出窗口并点击时发送
+                case WM_NOTIFICATION_MOVED_OUT:
+                    break;
+                // 此消息将在被点击的小工具已被释放时发送
+                case WM_NOTIFICATION_RELEASED:
+                    break;
+                // 此消息将在附加的SCROLLBAR(滚动条)小工具的滚动位置更改时发送
+                case WM_NOTIFICATION_SCROLL_CHANGED:
+                    break;
+                // 此消息将在附加的SCROLLBAR(滚动条)小工具的滚动位置更改时发送
+                case WM_NOTIFICATION_SCROLLBAR_ADDED:
+                    break;
+                // 此消息将在小工具选择已更改时发送
+                case WM_NOTIFICATION_SEL_CHANGED:
+                    break;
+                // 此消息将在小工具特定值已更改时发送
+                case WM_NOTIFICATION_VALUE_CHANGED:
+                    break;
+            }
+            break;
+        //窗口可见性修改时发送到窗口
+        case WM_NOTIFY_VIS_CHANGED:
+            break;
+        //窗口变为无效并应重绘时,发送到窗口
+        case WM_PAINT:
+            break;
+        //最后一条 WM_PAIN 消息处理后发送到窗口
+        case WM_POST_PAINT:
+            break;
+        //第一条 WM_PAIN 消息发送之前发送到窗口
+        case WM_PRE_PAINT:
+            break;
+        //获取或失去输入焦点时发送到窗口
+        case WM_SET_FOCUS:
+            break;
+        //发送到窗口更改窗口ID
+        case WM_SET_ID:
+            break;
+        //窗口大小更改后发送到窗口
+        case WM_SIZE:
+            break;
+        //定时器到期后发送到窗口
+        case WM_TIMER:
+            break;
+        //----------指针输入设备消息--------
+        // 发送到窗口实现运动的支持
+        case WM_MOTION:
+            break;
+        // 指针输入设备接触到窗口轮廓时发送到窗口(仅支持鼠标时发送)
+        case WM_MOUSEOVER:
+            break;
+        // 指针输入设备已移出窗口轮廓时发送到窗口(仅支持鼠标时发送)
+        case WM_MOUSEOVER_END:
+            break;
+        // 按下状态已更改时,发送到指针输入设备指向的窗口
+        case WM_PID_STATE_CHANGED:
+            break;
+        // 指针输入设备接触到处于按下状态的窗口轮廓时发送到窗口
+        case WM_TOUCH:
+            break;
+        // 指针输入设备接触到子窗口时发送到父窗口
+        case WM_TOUCH_CHILD:
+            break;
+        //----------用户消息----------------
+        // 应用程序可使用 WM_USER 常数来定义私人消息,通常形式为 WM_USER + X.
+        case WM_USER:
+            break;
+        //----------------------------------
+        default:
+            WM_DefaultProc(pMsg);
+    }
+}
+/*
+*********************************************************************************************************
+*                                        变量
+*********************************************************************************************************
+*/
+static const char *TaskProfile[7]= {" "," "," "," "," "," "," "};
+static GRAPH_SCALE_Handle hScaleV;
+static GRAPH_DATA_Handle  ahData[1];   /* GRAPH_DATA 的句柄 */
+static GUI_COLOR _aColor[] = {GUI_BLUE};
+
+/*
+*********************************************************************************************************
+*                                        对话框初始化选项
+*********************************************************************************************************
+*/
+static const GUI_WIDGET_CREATE_INFO _aDialogCreate[] =
+{
+    {
+        //创建函数
+        FRAMEWIN_CreateIndirect,
+        //对话框名称
+        "uCOS-III V3.03.01",
+        //ID
+        0,
+        //x0
+        0,
+        //y0
+        0,
+        //xSize
+        320,
+        //ySize
+        240,
+        //参数
+        0,
+        //额外字节数
+        0
+    },
+};
+
+/*
+*********************************************************************************************************
+*   函 数 名: InitDialog
+*   功能说明: 初始化函数
+*   形    参：pMsg
+*   返 回 值: 无
+*********************************************************************************************************
+*/
+void InitDialog(WM_MESSAGE * pMsg)
+{
+    WM_HWIN hWin = pMsg->hWin;
+    //
+    //FRAMEWIN
+    //
+    FRAMEWIN_SetTextColor(hWin,0x0000ff);
+    FRAMEWIN_SetFont(hWin,&GUI_FontHZ_SimSun_1616);
+    FRAMEWIN_SetTextAlign(hWin,GUI_TA_VCENTER|GUI_TA_CENTER);
+    FRAMEWIN_SetTitleHeight(hWin,25);
+}
+
+/*
+*********************************************************************************************************
+*   函 数 名: _cbCallback
+*   功能说明: 主对话框回调函数
+*   形    参：pMsg
+*   返 回 值: 无
+*********************************************************************************************************
+*/
+static void _cbCallback(WM_MESSAGE * pMsg)
+{
+    int NCode, Id;
+    WM_HWIN hWin = pMsg->hWin;
+    switch (pMsg->MsgId)
+    {
+        /* 重绘消息 */
+        case WM_PAINT:
+            break;
+
+        /* 初始化消息 */
+        case WM_INIT_DIALOG:
+            InitDialog(pMsg);
+            break;
+
+        /* 按键消息 */
+        case WM_KEY:
+            switch (((WM_KEY_INFO*)(pMsg->Data.p))->Key)
+            {
+                case GUI_KEY_ESCAPE:
+                    GUI_EndDialog(hWin, 1);
+                    break;
+                case GUI_KEY_ENTER:
+                    GUI_EndDialog(hWin, 0);
+                    break;
+            }
+            break;
+
+        /* 通知消息 */
+        case WM_NOTIFY_PARENT:
+            Id = WM_GetId(pMsg->hWinSrc);
+            NCode = pMsg->Data.v;
+            switch (Id)
+            {
+                case GUI_ID_OK:
+                    if(NCode==WM_NOTIFICATION_RELEASED)
+                        GUI_EndDialog(hWin, 0);
+                    break;
+                case GUI_ID_CANCEL:
+                    if(NCode==WM_NOTIFICATION_RELEASED)
+                        GUI_EndDialog(hWin, 0);
+                    break;
+            }
+            break;
+
+        default:
+            WM_DefaultProc(pMsg);
+    }
+}
+
+/*
+*********************************************************************************************************
+*                                        任务对话框初始化选项
+*********************************************************************************************************
+*/
+static const GUI_WIDGET_CREATE_INFO _aDialogCreateTask[] =
+{
+    {
+        WINDOW_CreateIndirect,
+        NULL,
+        0,
+        0,
+        0,
+        (320-1),
+        (240-1),
+        FRAMEWIN_CF_MOVEABLE
+    },
+    {
+        LISTVIEW_CreateIndirect,
+        NULL,
+        GUI_ID_LISTVIEW0,
+        0,
+        0,
+        (320-6),
+        (240-18),
+        0,
+        0
+    }
+};
+
+/*
+*********************************************************************************************************
+*   函 数 名: InitDialog
+*   功能说明: 初始化函数
+*   形    参：pMsg
+*   返 回 值: 无
+*********************************************************************************************************
+*/
+void InitDialogTask(WM_MESSAGE * pMsg)
+{
+    WM_HWIN hWin = pMsg->hWin;
+    unsigned char i;
+    HEADER_Handle hHeader;
+
+    //
+    //GUI_ID_LISTVIEW0
+    //
+    hHeader = LISTVIEW_GetHeader(WM_GetDialogItem(hWin,GUI_ID_LISTVIEW0));
+    HEADER_SetFont(hHeader,&GUI_FontHZ_SimSun_1616);
+    HEADER_SetHeight(hHeader,20);
+
+    LISTVIEW_SetBkColor(WM_GetDialogItem(hWin,GUI_ID_LISTVIEW0),0,0x000000);
+    LISTVIEW_SetTextColor(WM_GetDialogItem(hWin,GUI_ID_LISTVIEW0),0,0x00ff00);
+    LISTVIEW_SetFont(WM_GetDialogItem(hWin,GUI_ID_LISTVIEW0),&GUI_FontHZ_SimSun_1616);
+
+    LISTVIEW_AddColumn(WM_GetDialogItem(hWin,GUI_ID_LISTVIEW0),60,"优先级",GUI_TA_VCENTER|GUI_TA_LEFT);
+    LISTVIEW_AddColumn(WM_GetDialogItem(hWin,GUI_ID_LISTVIEW0),60,"堆栈使用",GUI_TA_VCENTER|GUI_TA_LEFT);
+    LISTVIEW_AddColumn(WM_GetDialogItem(hWin,GUI_ID_LISTVIEW0),60,"堆栈剩余",GUI_TA_VCENTER|GUI_TA_LEFT);
+    LISTVIEW_AddColumn(WM_GetDialogItem(hWin,GUI_ID_LISTVIEW0),60,"堆栈比",GUI_TA_VCENTER|GUI_TA_LEFT);
+    LISTVIEW_AddColumn(WM_GetDialogItem(hWin,GUI_ID_LISTVIEW0),60,"CPU",GUI_TA_VCENTER|GUI_TA_LEFT);
+
+    LISTVIEW_AddColumn(WM_GetDialogItem(hWin,GUI_ID_LISTVIEW0),100,"名字",GUI_TA_VCENTER|GUI_TA_LEFT);
+
+    LISTVIEW_SetColumnWidth(WM_GetDialogItem(hWin,GUI_ID_LISTVIEW0), 0, 50);
+    LISTVIEW_SetColumnWidth(WM_GetDialogItem(hWin,GUI_ID_LISTVIEW0), 1, 70);
+    LISTVIEW_SetColumnWidth(WM_GetDialogItem(hWin,GUI_ID_LISTVIEW0), 2, 70);
+    LISTVIEW_SetColumnWidth(WM_GetDialogItem(hWin,GUI_ID_LISTVIEW0), 3, 55);
+    LISTVIEW_SetColumnWidth(WM_GetDialogItem(hWin,GUI_ID_LISTVIEW0), 4, 60);
+    LISTVIEW_SetColumnWidth(WM_GetDialogItem(hWin,GUI_ID_LISTVIEW0), 5, 170);
+
+    for(i = 0; i < OSTaskQty; i++)
+    {
+        LISTVIEW_AddRow(WM_GetDialogItem(hWin,GUI_ID_LISTVIEW0), (GUI_ConstString *)TaskProfile);
+        LISTVIEW_SetItemText(WM_GetDialogItem(hWin,GUI_ID_LISTVIEW0), 0, i, "1");
+        LISTVIEW_SetItemText(WM_GetDialogItem(hWin,GUI_ID_LISTVIEW0), 1, i, "2");
+        LISTVIEW_SetItemText(WM_GetDialogItem(hWin,GUI_ID_LISTVIEW0), 2, i, "3");
+        LISTVIEW_SetItemText(WM_GetDialogItem(hWin,GUI_ID_LISTVIEW0), 3, i, "4");
+        LISTVIEW_SetItemText(WM_GetDialogItem(hWin,GUI_ID_LISTVIEW0), 4, i, "5");
+        LISTVIEW_SetItemText(WM_GetDialogItem(hWin,GUI_ID_LISTVIEW0), 5, i, "6");
+    }
+}
+
+/*
+*********************************************************************************************************
+*   函 数 名: _cbCallback
+*   功能说明: 任务对话框回调函数
+*   形    参：pMsg
+*   返 回 值: 无
+*********************************************************************************************************
+*/
+static void _cbCallbackTask(WM_MESSAGE * pMsg)
+{
+    int NCode, Id;
+    WM_HWIN hWin = pMsg->hWin;
+    switch (pMsg->MsgId)
+    {
+        /* 重绘消息 */
+        case WM_PAINT:
+            break;
+
+        /* 初始化消息 */
+        case WM_INIT_DIALOG:
+            InitDialogTask(pMsg);
+            break;
+
+        /* 按键消息 */
+        case WM_KEY:
+            switch (((WM_KEY_INFO*)(pMsg->Data.p))->Key)
+            {
+                case GUI_KEY_ESCAPE:
+                    GUI_EndDialog(hWin, 1);
+                    break;
+                case GUI_KEY_ENTER:
+                    GUI_EndDialog(hWin, 0);
+                    break;
+            }
+            break;
+
+        /* 通知消息 */
+        case WM_NOTIFY_PARENT:
+            Id = WM_GetId(pMsg->hWinSrc);
+            NCode = pMsg->Data.v;
+            switch (Id)
+            {
+                case GUI_ID_OK:
+                    if(NCode==WM_NOTIFICATION_RELEASED)
+                        GUI_EndDialog(hWin, 0);
+                    break;
+                case GUI_ID_CANCEL:
+                    if(NCode==WM_NOTIFICATION_RELEASED)
+                        GUI_EndDialog(hWin, 0);
+                    break;
+            }
+            break;
+
+        default:
+            WM_DefaultProc(pMsg);
+    }
+}
+
+/*
+*********************************************************************************************************
+*                                        对话框初始化选项
+*********************************************************************************************************
+*/
+static const GUI_WIDGET_CREATE_INFO _aDialogCreateCPU[] =
+{
+    { WINDOW_CreateIndirect,    NULL,              0,                   0,   0, (320-1), (240-1), FRAMEWIN_CF_MOVEABLE },
+    { GRAPH_CreateIndirect,     0,                 GUI_ID_GRAPH0,       0,   0, (320-14),(240-41), 0, 0}
+};
+
+/*
+*********************************************************************************************************
+*   函 数 名: InitDialog
+*   功能说明: CPU利用率对话框初始化函数
+*   形    参：pMsg
+*   返 回 值: 无
+*********************************************************************************************************
+*/
+void InitDialogCPU(WM_MESSAGE * pMsg)
+{
+    WM_HWIN hWin = pMsg->hWin;
+    WM_HWIN hItem;
+    unsigned char i;
+
+    hItem = WM_GetDialogItem(hWin, GUI_ID_GRAPH0);
+
+    for (i = 0; i < GUI_COUNTOF(_aColor); i++)
+    {
+        /* 创建成功的话，返回数据句柄 */
+        /* 显示的曲线颜色，可以显示的最大数据个数，数据指针，要添加的数据个数 */
+        ahData[i] = GRAPH_DATA_YT_Create(_aColor[i], 320, 0, 0);
+
+        /* 为绘图控件添加数据对象 */
+        GRAPH_AttachData(hItem, ahData[i]);
+    }
+
+    GRAPH_SetGridDistY(hItem, 20);
+
+    /* 栅格是否可见 */
+    GRAPH_SetGridVis(hItem, 1);
+
+    /* 固定X轴的栅格 */
+    GRAPH_SetGridFixedX(hItem, 1);
+
+    /* 创建和增加垂直范围尺度标签  */
+    /* 离左边的尺度位置，对齐方式，垂直或水平标签，标签的间距 */
+    hScaleV = GRAPH_SCALE_Create( 20, GUI_TA_RIGHT, GRAPH_SCALE_CF_VERTICAL, 20);
+
+    /* 用于设置比例因子 */
+    GRAPH_SCALE_SetFactor(hScaleV, 0.5);
+
+    /* 设置标签字体颜色 */
+    GRAPH_SCALE_SetTextColor(hScaleV, GUI_RED);
+
+    /* 将标签添加到垂直方向 */
+    GRAPH_AttachScale(hItem, hScaleV);
+
+    /* 用于设置左上右下边界 */
+    GRAPH_SetBorder(hItem,25,0,0,10);
+
+}
+
+/*
+*********************************************************************************************************
+*   函 数 名: _cbCallback
+*   功能说明: CPU利用率回调函数
+*   形    参：pMsg
+*   返 回 值: 无
+*********************************************************************************************************
+*/
+static void _cbCallbackCPU(WM_MESSAGE * pMsg)
+{
+    int NCode, Id;
+    WM_HWIN hWin = pMsg->hWin;
+    switch (pMsg->MsgId)
+    {
+        /* 重绘消息 */
+        case WM_PAINT:
+            break;
+
+        /* 初始化消息 */
+        case WM_INIT_DIALOG:
+            InitDialogCPU(pMsg);
+            break;
+
+        /* 按键消息 */
+        case WM_KEY:
+            switch (((WM_KEY_INFO*)(pMsg->Data.p))->Key)
+            {
+                case GUI_KEY_ESCAPE:
+                    GUI_EndDialog(hWin, 1);
+                    break;
+                case GUI_KEY_ENTER:
+                    GUI_EndDialog(hWin, 0);
+                    break;
+            }
+            break;
+
+        /* 通知消息 */
+        case WM_NOTIFY_PARENT:
+            Id = WM_GetId(pMsg->hWinSrc);
+            NCode = pMsg->Data.v;
+            switch (Id)
+            {
+                case GUI_ID_OK:
+                    if(NCode==WM_NOTIFICATION_RELEASED)
+                        GUI_EndDialog(hWin, 0);
+                    break;
+                case GUI_ID_CANCEL:
+                    if(NCode==WM_NOTIFICATION_RELEASED)
+                        GUI_EndDialog(hWin, 0);
+                    break;
+            }
+            break;
+
+        default:
+            WM_DefaultProc(pMsg);
+    }
+}
+
+/*
+*********************************************************************************************************
+*   函 数 名: MainTask
+*   功能说明: GUI主函数
+*   形    参：无
+*   返 回 值: 无
+*********************************************************************************************************
+*/
+void EmWinXslTask_MainTask(void)
+{
+    WM_HWIN hDialog;
+    WM_HWIN hMultiPage, hDialogTemp;
+    OS_TCB      *p_tcb;
+    float CPU;
+    char buf[10],i,num;
+    CPU_SR_ALLOC();
+    //----------初始化--------------
+    // 初始化
+    GUI_Init();
+    // 使用内存设备防止屏闪
+    WM_SetCreateFlags(WM_CF_MEMDEV);
+    // 自动更新桌面颜色
+    WM_SetDesktopColor(GUI_BLUE);
+    // 使能相关控件的皮肤
+    PROGBAR_SetDefaultSkin(PROGBAR_SKIN_FLEX);
+    FRAMEWIN_SetDefaultSkin(FRAMEWIN_SKIN_FLEX);
+    PROGBAR_SetDefaultSkin(PROGBAR_SKIN_FLEX);
+    BUTTON_SetDefaultSkin(BUTTON_SKIN_FLEX);
+    CHECKBOX_SetDefaultSkin(CHECKBOX_SKIN_FLEX);
+    DROPDOWN_SetDefaultSkin(DROPDOWN_SKIN_FLEX);
+    SCROLLBAR_SetDefaultSkin(SCROLLBAR_SKIN_FLEX);
+    SLIDER_SetDefaultSkin(SLIDER_SKIN_FLEX);
+    HEADER_SetDefaultSkin(HEADER_SKIN_FLEX);
+    RADIO_SetDefaultSkin(RADIO_SKIN_FLEX);
+    MULTIPAGE_SetDefaultSkin(MULTIPAGE_SKIN_FLEX);
+    //----------创建控件------------
+    //---创建对话框
+    hDialog = GUI_CreateDialogBox(_aDialogCreate, GUI_COUNTOF(_aDialogCreate), &_cbCallback, 0, 0, 0);
+    //---创建多页控件
+    hMultiPage = MULTIPAGE_CreateEx(0, 0, WM_GetWindowSizeX(WM_GetClientWindow(hDialog)), WM_GetWindowSizeY(WM_GetClientWindow(hDialog)), WM_GetClientWindow(hDialog), WM_CF_SHOW, 0, 0);
+    //------设置多页控件字体
+    MULTIPAGE_SetFont(hMultiPage, &GUI_FontHZ_SimSun_1616);
+    //------创建多页控件第一项
+    hDialogTemp = GUI_CreateDialogBox(_aDialogCreateCPU, GUI_COUNTOF(_aDialogCreateCPU), &_cbCallbackCPU, WM_UNATTACHED, 0, 0);
+    MULTIPAGE_AddPage(hMultiPage, hDialogTemp, "性能");
+    //------创建多页控件第二项
+    hDialogTemp = GUI_CreateDialogBox(_aDialogCreateTask, GUI_COUNTOF(_aDialogCreateTask), &_cbCallbackTask, WM_UNATTACHED, 0, 0);
+    MULTIPAGE_AddPage(hMultiPage, hDialogTemp, "进程");
+    //---
+    MULTIPAGE_SelectPage(hMultiPage,0);
+
+    num=0;
+    while(1)
+    {
+        // 选择多页控件的第2页
+        if(MULTIPAGE_GetSelection(hMultiPage) == 1)
+        {
+            CPU_CRITICAL_ENTER();
+            p_tcb = OSTaskDbgListPtr;
+            CPU_CRITICAL_EXIT();
+
+            i = 0;
+            /* 遍历任务控制块列表(TCB list)，打印所有的任务的优先级和名称 */
+            while (p_tcb != (OS_TCB *)0)
+            {
+                CPU = (float)p_tcb->CPUUsage / 100;
+                sprintf(buf, "%d", p_tcb->Prio);
+                LISTVIEW_SetItemText(WM_GetDialogItem(MULTIPAGE_GetWindow(hMultiPage, 1), GUI_ID_LISTVIEW0), 0, i, buf);
+                sprintf(buf, "%d", p_tcb->StkUsed);
+                LISTVIEW_SetItemText(WM_GetDialogItem(MULTIPAGE_GetWindow(hMultiPage, 1), GUI_ID_LISTVIEW0), 1, i, buf);
+                sprintf(buf, "%d", p_tcb->StkFree);
+                LISTVIEW_SetItemText(WM_GetDialogItem(MULTIPAGE_GetWindow(hMultiPage, 1), GUI_ID_LISTVIEW0), 2, i, buf);
+                sprintf(buf, "%d%%", (p_tcb->StkUsed * 100) / (p_tcb->StkUsed + p_tcb->StkFree));
+                LISTVIEW_SetItemText(WM_GetDialogItem(MULTIPAGE_GetWindow(hMultiPage, 1), GUI_ID_LISTVIEW0), 3, i, buf);
+                sprintf(buf, "%5.2f%% ", CPU);
+                LISTVIEW_SetItemText(WM_GetDialogItem(MULTIPAGE_GetWindow(hMultiPage, 1), GUI_ID_LISTVIEW0), 4, i, buf);
+                sprintf(buf, "%s", p_tcb->NamePtr);
+                LISTVIEW_SetItemText(WM_GetDialogItem(MULTIPAGE_GetWindow(hMultiPage, 1), GUI_ID_LISTVIEW0), 5, i, buf);
+
+                CPU_CRITICAL_ENTER();
+                p_tcb = p_tcb->DbgNextPtr;
+                CPU_CRITICAL_EXIT();
+                i++;
+            }
+        }
+        // 选择多页控件的第1页
+        else
+        {
+            GRAPH_DATA_YT_AddValue(ahData[0], OSStatTaskCPUUsage);
+        }
+
+        // 延迟时间不能太快，要不会造成刷新listiew控件的时候，这个任务的利用率很高
+        GUI_Delay(300);
+        // 30秒退出
+        num++;
+        if(num>100)
+        {
+            break;
+        }
+        // 每10秒发送一次按键消息
+        if(num%10==0)
+        {
+            if(MULTIPAGE_GetSelection(hMultiPage) == 1)
+            {
+            MULTIPAGE_SelectPage(hMultiPage,0);
+            }
+            else
+            {
+               MULTIPAGE_SelectPage(hMultiPage,1);
+               }
+        }
+    }
+
+}
+
+/***************************** 安富莱电子 www.armfly.com (END OF FILE) *********************************/

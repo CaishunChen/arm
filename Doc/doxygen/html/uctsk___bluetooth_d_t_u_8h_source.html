@@ -1,0 +1,629 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>xsl: E:/XkapSourceCode/Xkap-Stm32/Xkap-Stm32/User/UserTask/uctsk_BluetoothDTU.h Ê∫êÊñá‰ª∂</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">xsl
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">Ê∫êÁ†ÅËØ¥Êòé</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Âà∂‰ΩúËÄÖ Doxygen 1.8.13 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',false,false,'search.php','ÊêúÁ¥¢');
+});
+</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_6d4e12d46ad8519ff7b80e874016d102.html">User</a></li><li class="navelem"><a class="el" href="dir_ba9e781c49be9d79c84eb9994eefebec.html">UserTask</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">uctsk_BluetoothDTU.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="uctsk___bluetooth_d_t_u_8h.html">ÊµèËßàËØ•Êñá‰ª∂ÁöÑÊñáÊ°£.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*</span></div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">***********************************************************************************</span></div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">*                    ◊˜    ’ﬂ: –ÏÀ…¡¡</span></div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">*                    ∏¸–¬ ±º‰: 2015-06-03</span></div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">***********************************************************************************</span></div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">*/</span></div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#ifndef __BLUETOOTH_DTU_H</span></div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#define __BLUETOOTH_DTU_H</span></div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">//-------------------º”‘ÿø‚∫Ø ˝------------------------------</span></div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="includes_8h.html">includes.h</a>&quot;</span></div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_bsp___nrf_ble_8h.html">Bsp_NrfBle.h</a>&quot;</span></div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &quot;ble_gap.h&quot;</span></div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">//-------------------Ω”ø⁄∫Í∂®“Â(”≤º˛œ‡πÿ)--------------------</span></div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">//GPIO</span></div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#if   (defined(STM32F1))</span></div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#define BLUETOOTH_RCC_ENABLE     RCC_APB2PeriphClockCmd( RCC_APB2Periph_GPIOE , ENABLE)</span></div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#define BLUETOOTH_RCC_DISABLE    RCC_APB2PeriphClockCmd( RCC_APB2Periph_GPIOE , DISABLE)</span></div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#elif (defined(STM32F4))</span></div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#define BLUETOOTH_RCC_ENABLE     RCC_AHB1PeriphClockCmd( RCC_AHB1Periph_GPIOE , ENABLE)</span></div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#define BLUETOOTH_RCC_DISABLE    RCC_AHB1PeriphClockCmd( RCC_AHB1Periph_GPIOE , DISABLE)</span></div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#endif</span></div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#if   (defined(PROJECT_XKAP_V3)||defined(XKAP_ICARE_B_D_M))</span></div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">//----&gt;</span></div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#define BLUETOOTH_PWR_PORT       GPIOB</span></div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#define BLUETOOTH_PWR_PIN        GPIO_Pin_8</span></div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#define BLUETOOTH_CONNECT_PORT   GPIOE</span></div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#define BLUETOOTH_CONNECT_PIN    GPIO_Pin_2</span></div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#define BLUETOOTH_RADLATE_PORT   GPIOE</span></div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#define BLUETOOTH_RADLATE_PIN    GPIO_Pin_3</span></div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#define BLUETOOTH_TX_PORT        GPIOA</span></div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#define BLUETOOTH_TX_PIN         GPIO_Pin_2</span></div><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#define BLUETOOTH_RX_PORT        GPIOA</span></div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#define BLUETOOTH_RX_PIN         GPIO_Pin_3</span></div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor">#define BLUETOOTH_UARTX          2</span></div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="preprocessor">#define BLUETOOTH_UART_BPS       115200</span></div><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="comment">//&lt;----</span></div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">#endif</span></div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="comment">//øÿ÷∆µÁ‘¥</span></div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">#if   (defined(PROJECT_XKAP_V3)||defined(XKAP_ICARE_B_D_M))</span></div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="preprocessor">#define BLUETOOTH_PWR_ON         GPIO_SetBits(BLUETOOTH_PWR_PORT , BLUETOOTH_PWR_PIN)</span></div><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="preprocessor">#define BLUETOOTH_PWR_OFF        GPIO_ResetBits(BLUETOOTH_PWR_PORT , BLUETOOTH_PWR_PIN)</span></div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="preprocessor">#endif</span></div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="comment">//-------------------Ω”ø⁄∫Í∂®“Â(”≤º˛Œﬁπÿ)--------------------</span></div><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="comment">//¥”ª˙µÿ÷∑</span></div><div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="uctsk___bluetooth_d_t_u_8h.html#a74acc00cc045345d9f8548edb502378a">   46</a></span>&#160;<span class="preprocessor">#define BLUETOOTH_DTU_SLAVE_NUM  1</span></div><div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="uctsk___bluetooth_d_t_u_8h.html#a8fdbd6c96a8960576d7c85b1640f3b66">   47</a></span>&#160;<span class="preprocessor">#define BLUETOOTH_DTU_SLAVE_ADDR 0x01</span></div><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="comment">//øÿ÷∆Œﬁœﬂ #define BLUETOOTH_RADLATE_L      GPIO_ResetBits(BLUETOOTH_RADLATE_PORT , BLUETOOTH_RADLATE_PIN)
+#define BLUETOOTH_RADLATE_H      GPIO_SetBits(BLUETOOTH_RADLATE_PORT , BLUETOOTH_RADLATE_PIN)
+//∂¡»°¡¨Ω”◊¥Ã¨
+#define BLUETOOTH_CONNECT_R     (BLUETOOTH_CONNECT_PORT-&gt;IDR &amp; BLUETOOTH_CONNECT_PIN)
+typedef enum BLUETOOTH_E_CMD
+{
+   BLUETOOTH_CMD_NULL=0,
+   BLUETOOTH_CMD_UPDATA_1DAY,
+   BLUETOOTH_CMD_UPDATA_7DAY, 
+   BLUETOOTH_CMD_IAP,
+   BLUETOOTH_CMD_READ_CMD,
+   BLUETOOTH_CMD_KEEP_CONNECT_ONOFF,
+}BLUETOOTH_E_CMD;
+//
+typedef struct BLUETOOTH_S_INFO
+{
+    // S200BπÃ∂® π”√
+    uint8_t  Mode;      // ◊¥Ã¨(0- ∂±MACƒ£ Ω 1-’˝≥£π§◊˜ƒ£ Ω)
+    // π„≤•Õ∏¥´ƒ£øÈ
+    uint8_t  MacBuf[6]; // MACµÿ÷∑
+    uint8_t  Type;      // 0-ƒ¨»œ   1- π„≤•Õ∏¥´ƒ£øÈ   ∆‰À˚-Œﬁ–ß
+    uint8_t  HardwareVer_m;   // ƒ£øÈ”≤º˛∞Ê±æ-÷˜∫≈
+    uint8_t  HardwareVer_s;   // ƒ£øÈ”≤º˛∞Ê±æ-◊”∫≈
+    uint8_t  SoftwareVer_m;   // ƒ£øÈ»Ìº˛∞Ê±æ-÷˜∫≈
+    uint8_t  SoftwareVer_s;   // ƒ£øÈ»Ìº˛∞Ê±æ-◊”∫≈
+    // Õ≥º∆
+    uint32_t  UartRxNum;
+    uint32_t  UartTxNum;
+} BLUETOOTH_S_INFO;
+//
+typedef struct BLUETOOTH_S_SLAVE  
+{
+    ble_gap_evt_adv_report_t AdvReport;
+    uint8_t  state;           // 0-ø’œ– 1- ˝æ›∏¸–¬÷– 2-- ˝æ›æÕ–˜
+    uint8_t  Type;            // ƒ£øÈ¿‡–Õ
+    uint16_t timeover_s;      // æ‡¿Î…œ¥Œ ˝æ›ªÒ»°µƒ√Î ˝
+}BLUETOOTH_S_SLAVE;
+//-------------------Ω”ø⁄±‰¡ø--------------------------------
+extern BLUETOOTH_S_INFO Bluetooth_s_info;
+//≥§π©µÁ πƒ‹
+extern uint8_t Bluetooth_PowerOnHold_Enable; 
+//¡¨Ω” πƒ‹
+extern uint8_t Bluetooth_ConnectOnOff;
+//¡¨Ω”±Í ∂
+extern uint8_t Bluetooth_ConnectSign;
+//¥´ ‰’˝»∑”Î¥ÌŒÛ
+extern uint16_t Bluetooth_HciTxRxOkErr;
+//Õ≥º∆ ˝æ›
+extern uint16_t Bluetooth_ChipPowerCount;
+extern uint16_t Bluetooth_ChipOkCount;
+extern uint16_t Bluetooth_ChipErrCount;
+extern uint16_t Bluetooth_ChipNCCount;
+//
+#define BLUETOOTH_DTU_S_SLAVEBUF_NUM   20
+extern BLUETOOTH_S_SLAVE BluetoothDtu_s_SlaveBuf[BLUETOOTH_DTU_S_SLAVEBUF_NUM];
+//-------------------Ω”ø⁄∫Ø ˝--------------------------------
+//-----»ŒŒÒƒ£ Ω
+//“∆÷≤œ‡πÿ
+extern void Bluetooth_RxIrqBufToRBuf0(uint8_t *pRxIqBuf,uint16_t len);
+extern void App_BluetoothTaskCreate(void);
+extern void Bluetooth_DebugTestOnOff(uint8_t OnOff);
+//”¶”√
+extern void Bluetooth_App(BLUETOOTH_E_CMD cmd,uint8_t *pbuf);
+//-----∑«»ŒŒÒƒ£ Ω
+extern void BluetoothDtu_Init(void);
+extern void BluetoothDtu_100ms(void);
+extern void BluetoothDtu_RxIrq(uint8_t *pRx,uint16_t len);
+//-----------------------------------------------------------
+#endif
+
+
+</span></div><div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="uctsk___bluetooth_d_t_u_8h.html#a0c2e6f0cdb0ade673726213caa6a52ae">   49</a></span>&#160;<span class="preprocessor">#define BLUETOOTH_RADLATE_L      GPIO_ResetBits(BLUETOOTH_RADLATE_PORT , BLUETOOTH_RADLATE_PIN)</span></div><div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="uctsk___bluetooth_d_t_u_8h.html#abe4cfbc611fa576ca257ae2d5915e5e3">   50</a></span>&#160;<span class="preprocessor">#define BLUETOOTH_RADLATE_H      GPIO_SetBits(BLUETOOTH_RADLATE_PORT , BLUETOOTH_RADLATE_PIN)</span></div><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="comment">//∂¡»°¡¨Ω”◊¥Ã¨</span></div><div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="uctsk___bluetooth_d_t_u_8h.html#a1ba8a6155d7dd9b75552977aafcd4ca3">   52</a></span>&#160;<span class="preprocessor">#define BLUETOOTH_CONNECT_R     (BLUETOOTH_CONNECT_PORT-&gt;IDR &amp; BLUETOOTH_CONNECT_PIN)</span></div><div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="uctsk___bluetooth_d_t_u_8h.html#a22676f5de26568e0e430544a85f0265e">   53</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">enum</span> <a class="code" href="uctsk___bluetooth_d_t_u_8h.html#a22676f5de26568e0e430544a85f0265e">BLUETOOTH_E_CMD</a></div><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;{</div><div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="uctsk___bluetooth_d_t_u_8h.html#a22676f5de26568e0e430544a85f0265eaa033f41375548863ccbe917c72ae9370">   55</a></span>&#160;   <a class="code" href="uctsk___bluetooth_d_t_u_8h.html#a22676f5de26568e0e430544a85f0265eaa033f41375548863ccbe917c72ae9370">BLUETOOTH_CMD_NULL</a>=0,</div><div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="uctsk___bluetooth_d_t_u_8h.html#a22676f5de26568e0e430544a85f0265ea8183a7ef12abc13ccae849e0245acfcb">   56</a></span>&#160;   <a class="code" href="uctsk___bluetooth_d_t_u_8h.html#a22676f5de26568e0e430544a85f0265ea8183a7ef12abc13ccae849e0245acfcb">BLUETOOTH_CMD_UPDATA_1DAY</a>,</div><div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="uctsk___bluetooth_d_t_u_8h.html#a22676f5de26568e0e430544a85f0265ea3c8a321a0fa39e679501b424dddac4f7">   57</a></span>&#160;   <a class="code" href="uctsk___bluetooth_d_t_u_8h.html#a22676f5de26568e0e430544a85f0265ea3c8a321a0fa39e679501b424dddac4f7">BLUETOOTH_CMD_UPDATA_7DAY</a>, </div><div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="uctsk___bluetooth_d_t_u_8h.html#a22676f5de26568e0e430544a85f0265ea0ee122c7fc94f3a74c60d46c853ca767">   58</a></span>&#160;   <a class="code" href="uctsk___bluetooth_d_t_u_8h.html#a22676f5de26568e0e430544a85f0265ea0ee122c7fc94f3a74c60d46c853ca767">BLUETOOTH_CMD_IAP</a>,</div><div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="uctsk___bluetooth_d_t_u_8h.html#a22676f5de26568e0e430544a85f0265eaa78ea1d0b6d6c4755bdc422a70d28f83">   59</a></span>&#160;   <a class="code" href="uctsk___bluetooth_d_t_u_8h.html#a22676f5de26568e0e430544a85f0265eaa78ea1d0b6d6c4755bdc422a70d28f83">BLUETOOTH_CMD_READ_CMD</a>,</div><div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="uctsk___bluetooth_d_t_u_8h.html#a22676f5de26568e0e430544a85f0265ead8b09e407f645e5c5355795ca68fc787">   60</a></span>&#160;   <a class="code" href="uctsk___bluetooth_d_t_u_8h.html#a22676f5de26568e0e430544a85f0265ead8b09e407f645e5c5355795ca68fc787">BLUETOOTH_CMD_KEEP_CONNECT_ONOFF</a>,</div><div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;}<a class="code" href="uctsk___bluetooth_d_t_u_8h.html#a22676f5de26568e0e430544a85f0265e">BLUETOOTH_E_CMD</a>;</div><div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="comment">//</span></div><div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="struct_b_l_u_e_t_o_o_t_h___s___i_n_f_o.html">   63</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="struct_b_l_u_e_t_o_o_t_h___s___i_n_f_o.html">BLUETOOTH_S_INFO</a></div><div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;{</div><div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="comment">// S200BπÃ∂® π”√</span></div><div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="struct_b_l_u_e_t_o_o_t_h___s___i_n_f_o.html#a85c178de1d08bdae1f6491fe7b9cb995">   66</a></span>&#160;    uint8_t  <a class="code" href="struct_b_l_u_e_t_o_o_t_h___s___i_n_f_o.html#a85c178de1d08bdae1f6491fe7b9cb995">Mode</a>;      <span class="comment">// ◊¥Ã¨(0- ∂±MACƒ£ Ω 1-’˝≥£π§◊˜ƒ£ Ω)</span></div><div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="comment">// π„≤•Õ∏¥´ƒ£øÈ     uint8_t  MacBuf[6]; // MACµÿ÷∑
+    uint8_t  Type;      // 0-ƒ¨»œ   1- π„≤•Õ∏¥´ƒ£øÈ   ∆‰À˚-Œﬁ–ß
+    uint8_t  HardwareVer_m;   // ƒ£øÈ”≤º˛∞Ê±æ-÷˜∫≈
+    uint8_t  HardwareVer_s;   // ƒ£øÈ”≤º˛∞Ê±æ-◊”∫≈
+    uint8_t  SoftwareVer_m;   // ƒ£øÈ»Ìº˛∞Ê±æ-÷˜∫≈
+    uint8_t  SoftwareVer_s;   // ƒ£øÈ»Ìº˛∞Ê±æ-◊”∫≈
+    // Õ≥º∆
+    uint32_t  UartRxNum;
+    uint32_t  UartTxNum;
+} BLUETOOTH_S_INFO;
+//
+typedef struct BLUETOOTH_S_SLAVE  
+{
+    ble_gap_evt_adv_report_t AdvReport;
+    uint8_t  state;           // 0-ø’œ– 1- ˝æ›∏¸–¬÷– 2-- ˝æ›æÕ–˜
+    uint8_t  Type;            // ƒ£øÈ¿‡–Õ
+    uint16_t timeover_s;      // æ‡¿Î…œ¥Œ ˝æ›ªÒ»°µƒ√Î ˝
+}BLUETOOTH_S_SLAVE;
+//-------------------Ω”ø⁄±‰¡ø--------------------------------
+extern BLUETOOTH_S_INFO Bluetooth_s_info;
+//≥§π©µÁ πƒ‹
+extern uint8_t Bluetooth_PowerOnHold_Enable; 
+//¡¨Ω” πƒ‹
+extern uint8_t Bluetooth_ConnectOnOff;
+//¡¨Ω”±Í ∂
+extern uint8_t Bluetooth_ConnectSign;
+//¥´ ‰’˝»∑”Î¥ÌŒÛ
+extern uint16_t Bluetooth_HciTxRxOkErr;
+//Õ≥º∆ ˝æ›
+extern uint16_t Bluetooth_ChipPowerCount;
+extern uint16_t Bluetooth_ChipOkCount;
+extern uint16_t Bluetooth_ChipErrCount;
+extern uint16_t Bluetooth_ChipNCCount;
+//
+#define BLUETOOTH_DTU_S_SLAVEBUF_NUM   20
+extern BLUETOOTH_S_SLAVE BluetoothDtu_s_SlaveBuf[BLUETOOTH_DTU_S_SLAVEBUF_NUM];
+//-------------------Ω”ø⁄∫Ø ˝--------------------------------
+//-----»ŒŒÒƒ£ Ω
+//“∆÷≤œ‡πÿ
+extern void Bluetooth_RxIrqBufToRBuf0(uint8_t *pRxIqBuf,uint16_t len);
+extern void App_BluetoothTaskCreate(void);
+extern void Bluetooth_DebugTestOnOff(uint8_t OnOff);
+//”¶”√
+extern void Bluetooth_App(BLUETOOTH_E_CMD cmd,uint8_t *pbuf);
+//-----∑«»ŒŒÒƒ£ Ω
+extern void BluetoothDtu_Init(void);
+extern void BluetoothDtu_100ms(void);
+extern void BluetoothDtu_RxIrq(uint8_t *pRx,uint16_t len);
+//-----------------------------------------------------------
+#endif
+
+
+</span></div><div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="struct_b_l_u_e_t_o_o_t_h___s___i_n_f_o.html#a4e2a81ef7192310961e3324379f5745a">   68</a></span>&#160;    uint8_t  <a class="code" href="struct_b_l_u_e_t_o_o_t_h___s___i_n_f_o.html#a4e2a81ef7192310961e3324379f5745a">MacBuf</a>[6]; <span class="comment">// MACµÿ÷∑</span></div><div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="struct_b_l_u_e_t_o_o_t_h___s___i_n_f_o.html#a754f6ef6d1a6c354115ae8b49d741c3f">   69</a></span>&#160;    uint8_t  <a class="code" href="struct_b_l_u_e_t_o_o_t_h___s___i_n_f_o.html#a754f6ef6d1a6c354115ae8b49d741c3f">Type</a>;      <span class="comment">// 0-ƒ¨»œ   1- π„≤•Õ∏¥´ƒ£øÈ   ∆‰À˚-Œﬁ–ß</span></div><div class="line"><a name="l00070"></a><span class="lineno"><a class="line" href="struct_b_l_u_e_t_o_o_t_h___s___i_n_f_o.html#aa59ca8b12c4bdc5a7b58ee88a470ef1c">   70</a></span>&#160;    uint8_t  <a class="code" href="struct_b_l_u_e_t_o_o_t_h___s___i_n_f_o.html#aa59ca8b12c4bdc5a7b58ee88a470ef1c">HardwareVer_m</a>;   <span class="comment">// ƒ£øÈ”≤º˛∞Ê±æ-÷˜∫≈     uint8_t  HardwareVer_s;   // ƒ£øÈ”≤º˛∞Ê±æ-◊”∫≈
+    uint8_t  SoftwareVer_m;   // ƒ£øÈ»Ìº˛∞Ê±æ-÷˜∫≈
+    uint8_t  SoftwareVer_s;   // ƒ£øÈ»Ìº˛∞Ê±æ-◊”∫≈
+    // Õ≥º∆
+    uint32_t  UartRxNum;
+    uint32_t  UartTxNum;
+} BLUETOOTH_S_INFO;
+//
+typedef struct BLUETOOTH_S_SLAVE  
+{
+    ble_gap_evt_adv_report_t AdvReport;
+    uint8_t  state;           // 0-ø’œ– 1- ˝æ›∏¸–¬÷– 2-- ˝æ›æÕ–˜
+    uint8_t  Type;            // ƒ£øÈ¿‡–Õ
+    uint16_t timeover_s;      // æ‡¿Î…œ¥Œ ˝æ›ªÒ»°µƒ√Î ˝
+}BLUETOOTH_S_SLAVE;
+//-------------------Ω”ø⁄±‰¡ø--------------------------------
+extern BLUETOOTH_S_INFO Bluetooth_s_info;
+//≥§π©µÁ πƒ‹
+extern uint8_t Bluetooth_PowerOnHold_Enable; 
+//¡¨Ω” πƒ‹
+extern uint8_t Bluetooth_ConnectOnOff;
+//¡¨Ω”±Í ∂
+extern uint8_t Bluetooth_ConnectSign;
+//¥´ ‰’˝»∑”Î¥ÌŒÛ
+extern uint16_t Bluetooth_HciTxRxOkErr;
+//Õ≥º∆ ˝æ›
+extern uint16_t Bluetooth_ChipPowerCount;
+extern uint16_t Bluetooth_ChipOkCount;
+extern uint16_t Bluetooth_ChipErrCount;
+extern uint16_t Bluetooth_ChipNCCount;
+//
+#define BLUETOOTH_DTU_S_SLAVEBUF_NUM   20
+extern BLUETOOTH_S_SLAVE BluetoothDtu_s_SlaveBuf[BLUETOOTH_DTU_S_SLAVEBUF_NUM];
+//-------------------Ω”ø⁄∫Ø ˝--------------------------------
+//-----»ŒŒÒƒ£ Ω
+//“∆÷≤œ‡πÿ
+extern void Bluetooth_RxIrqBufToRBuf0(uint8_t *pRxIqBuf,uint16_t len);
+extern void App_BluetoothTaskCreate(void);
+extern void Bluetooth_DebugTestOnOff(uint8_t OnOff);
+//”¶”√
+extern void Bluetooth_App(BLUETOOTH_E_CMD cmd,uint8_t *pbuf);
+//-----∑«»ŒŒÒƒ£ Ω
+extern void BluetoothDtu_Init(void);
+extern void BluetoothDtu_100ms(void);
+extern void BluetoothDtu_RxIrq(uint8_t *pRx,uint16_t len);
+//-----------------------------------------------------------
+#endif
+
+
+</span></div><div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="struct_b_l_u_e_t_o_o_t_h___s___i_n_f_o.html#a1ebc9a39832889fc6fddefa160234dda">   71</a></span>&#160;    uint8_t  <a class="code" href="struct_b_l_u_e_t_o_o_t_h___s___i_n_f_o.html#a1ebc9a39832889fc6fddefa160234dda">HardwareVer_s</a>;   <span class="comment">// ƒ£øÈ”≤º˛∞Ê±æ-◊”∫≈     uint8_t  SoftwareVer_m;   // ƒ£øÈ»Ìº˛∞Ê±æ-÷˜∫≈
+    uint8_t  SoftwareVer_s;   // ƒ£øÈ»Ìº˛∞Ê±æ-◊”∫≈
+    // Õ≥º∆
+    uint32_t  UartRxNum;
+    uint32_t  UartTxNum;
+} BLUETOOTH_S_INFO;
+//
+typedef struct BLUETOOTH_S_SLAVE  
+{
+    ble_gap_evt_adv_report_t AdvReport;
+    uint8_t  state;           // 0-ø’œ– 1- ˝æ›∏¸–¬÷– 2-- ˝æ›æÕ–˜
+    uint8_t  Type;            // ƒ£øÈ¿‡–Õ
+    uint16_t timeover_s;      // æ‡¿Î…œ¥Œ ˝æ›ªÒ»°µƒ√Î ˝
+}BLUETOOTH_S_SLAVE;
+//-------------------Ω”ø⁄±‰¡ø--------------------------------
+extern BLUETOOTH_S_INFO Bluetooth_s_info;
+//≥§π©µÁ πƒ‹
+extern uint8_t Bluetooth_PowerOnHold_Enable; 
+//¡¨Ω” πƒ‹
+extern uint8_t Bluetooth_ConnectOnOff;
+//¡¨Ω”±Í ∂
+extern uint8_t Bluetooth_ConnectSign;
+//¥´ ‰’˝»∑”Î¥ÌŒÛ
+extern uint16_t Bluetooth_HciTxRxOkErr;
+//Õ≥º∆ ˝æ›
+extern uint16_t Bluetooth_ChipPowerCount;
+extern uint16_t Bluetooth_ChipOkCount;
+extern uint16_t Bluetooth_ChipErrCount;
+extern uint16_t Bluetooth_ChipNCCount;
+//
+#define BLUETOOTH_DTU_S_SLAVEBUF_NUM   20
+extern BLUETOOTH_S_SLAVE BluetoothDtu_s_SlaveBuf[BLUETOOTH_DTU_S_SLAVEBUF_NUM];
+//-------------------Ω”ø⁄∫Ø ˝--------------------------------
+//-----»ŒŒÒƒ£ Ω
+//“∆÷≤œ‡πÿ
+extern void Bluetooth_RxIrqBufToRBuf0(uint8_t *pRxIqBuf,uint16_t len);
+extern void App_BluetoothTaskCreate(void);
+extern void Bluetooth_DebugTestOnOff(uint8_t OnOff);
+//”¶”√
+extern void Bluetooth_App(BLUETOOTH_E_CMD cmd,uint8_t *pbuf);
+//-----∑«»ŒŒÒƒ£ Ω
+extern void BluetoothDtu_Init(void);
+extern void BluetoothDtu_100ms(void);
+extern void BluetoothDtu_RxIrq(uint8_t *pRx,uint16_t len);
+//-----------------------------------------------------------
+#endif
+
+
+</span></div><div class="line"><a name="l00072"></a><span class="lineno"><a class="line" href="struct_b_l_u_e_t_o_o_t_h___s___i_n_f_o.html#adab280226bcf6b9cda8c9f2fe1a72a9f">   72</a></span>&#160;    uint8_t  <a class="code" href="struct_b_l_u_e_t_o_o_t_h___s___i_n_f_o.html#adab280226bcf6b9cda8c9f2fe1a72a9f">SoftwareVer_m</a>;   <span class="comment">// ƒ£øÈ»Ìº˛∞Ê±æ-÷˜∫≈     uint8_t  SoftwareVer_s;   // ƒ£øÈ»Ìº˛∞Ê±æ-◊”∫≈
+    // Õ≥º∆
+    uint32_t  UartRxNum;
+    uint32_t  UartTxNum;
+} BLUETOOTH_S_INFO;
+//
+typedef struct BLUETOOTH_S_SLAVE  
+{
+    ble_gap_evt_adv_report_t AdvReport;
+    uint8_t  state;           // 0-ø’œ– 1- ˝æ›∏¸–¬÷– 2-- ˝æ›æÕ–˜
+    uint8_t  Type;            // ƒ£øÈ¿‡–Õ
+    uint16_t timeover_s;      // æ‡¿Î…œ¥Œ ˝æ›ªÒ»°µƒ√Î ˝
+}BLUETOOTH_S_SLAVE;
+//-------------------Ω”ø⁄±‰¡ø--------------------------------
+extern BLUETOOTH_S_INFO Bluetooth_s_info;
+//≥§π©µÁ πƒ‹
+extern uint8_t Bluetooth_PowerOnHold_Enable; 
+//¡¨Ω” πƒ‹
+extern uint8_t Bluetooth_ConnectOnOff;
+//¡¨Ω”±Í ∂
+extern uint8_t Bluetooth_ConnectSign;
+//¥´ ‰’˝»∑”Î¥ÌŒÛ
+extern uint16_t Bluetooth_HciTxRxOkErr;
+//Õ≥º∆ ˝æ›
+extern uint16_t Bluetooth_ChipPowerCount;
+extern uint16_t Bluetooth_ChipOkCount;
+extern uint16_t Bluetooth_ChipErrCount;
+extern uint16_t Bluetooth_ChipNCCount;
+//
+#define BLUETOOTH_DTU_S_SLAVEBUF_NUM   20
+extern BLUETOOTH_S_SLAVE BluetoothDtu_s_SlaveBuf[BLUETOOTH_DTU_S_SLAVEBUF_NUM];
+//-------------------Ω”ø⁄∫Ø ˝--------------------------------
+//-----»ŒŒÒƒ£ Ω
+//“∆÷≤œ‡πÿ
+extern void Bluetooth_RxIrqBufToRBuf0(uint8_t *pRxIqBuf,uint16_t len);
+extern void App_BluetoothTaskCreate(void);
+extern void Bluetooth_DebugTestOnOff(uint8_t OnOff);
+//”¶”√
+extern void Bluetooth_App(BLUETOOTH_E_CMD cmd,uint8_t *pbuf);
+//-----∑«»ŒŒÒƒ£ Ω
+extern void BluetoothDtu_Init(void);
+extern void BluetoothDtu_100ms(void);
+extern void BluetoothDtu_RxIrq(uint8_t *pRx,uint16_t len);
+//-----------------------------------------------------------
+#endif
+
+
+</span></div><div class="line"><a name="l00073"></a><span class="lineno"><a class="line" href="struct_b_l_u_e_t_o_o_t_h___s___i_n_f_o.html#a856276b85fa264037f5495762456c9a2">   73</a></span>&#160;    uint8_t  <a class="code" href="struct_b_l_u_e_t_o_o_t_h___s___i_n_f_o.html#a856276b85fa264037f5495762456c9a2">SoftwareVer_s</a>;   <span class="comment">// ƒ£øÈ»Ìº˛∞Ê±æ-◊”∫≈     // Õ≥º∆
+    uint32_t  UartRxNum;
+    uint32_t  UartTxNum;
+} BLUETOOTH_S_INFO;
+//
+typedef struct BLUETOOTH_S_SLAVE  
+{
+    ble_gap_evt_adv_report_t AdvReport;
+    uint8_t  state;           // 0-ø’œ– 1- ˝æ›∏¸–¬÷– 2-- ˝æ›æÕ–˜
+    uint8_t  Type;            // ƒ£øÈ¿‡–Õ
+    uint16_t timeover_s;      // æ‡¿Î…œ¥Œ ˝æ›ªÒ»°µƒ√Î ˝
+}BLUETOOTH_S_SLAVE;
+//-------------------Ω”ø⁄±‰¡ø--------------------------------
+extern BLUETOOTH_S_INFO Bluetooth_s_info;
+//≥§π©µÁ πƒ‹
+extern uint8_t Bluetooth_PowerOnHold_Enable; 
+//¡¨Ω” πƒ‹
+extern uint8_t Bluetooth_ConnectOnOff;
+//¡¨Ω”±Í ∂
+extern uint8_t Bluetooth_ConnectSign;
+//¥´ ‰’˝»∑”Î¥ÌŒÛ
+extern uint16_t Bluetooth_HciTxRxOkErr;
+//Õ≥º∆ ˝æ›
+extern uint16_t Bluetooth_ChipPowerCount;
+extern uint16_t Bluetooth_ChipOkCount;
+extern uint16_t Bluetooth_ChipErrCount;
+extern uint16_t Bluetooth_ChipNCCount;
+//
+#define BLUETOOTH_DTU_S_SLAVEBUF_NUM   20
+extern BLUETOOTH_S_SLAVE BluetoothDtu_s_SlaveBuf[BLUETOOTH_DTU_S_SLAVEBUF_NUM];
+//-------------------Ω”ø⁄∫Ø ˝--------------------------------
+//-----»ŒŒÒƒ£ Ω
+//“∆÷≤œ‡πÿ
+extern void Bluetooth_RxIrqBufToRBuf0(uint8_t *pRxIqBuf,uint16_t len);
+extern void App_BluetoothTaskCreate(void);
+extern void Bluetooth_DebugTestOnOff(uint8_t OnOff);
+//”¶”√
+extern void Bluetooth_App(BLUETOOTH_E_CMD cmd,uint8_t *pbuf);
+//-----∑«»ŒŒÒƒ£ Ω
+extern void BluetoothDtu_Init(void);
+extern void BluetoothDtu_100ms(void);
+extern void BluetoothDtu_RxIrq(uint8_t *pRx,uint16_t len);
+//-----------------------------------------------------------
+#endif
+
+
+</span></div><div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="comment">// Õ≥º∆     uint32_t  UartRxNum;
+    uint32_t  UartTxNum;
+} BLUETOOTH_S_INFO;
+//
+typedef struct BLUETOOTH_S_SLAVE  
+{
+    ble_gap_evt_adv_report_t AdvReport;
+    uint8_t  state;           // 0-ø’œ– 1- ˝æ›∏¸–¬÷– 2-- ˝æ›æÕ–˜
+    uint8_t  Type;            // ƒ£øÈ¿‡–Õ
+    uint16_t timeover_s;      // æ‡¿Î…œ¥Œ ˝æ›ªÒ»°µƒ√Î ˝
+}BLUETOOTH_S_SLAVE;
+//-------------------Ω”ø⁄±‰¡ø--------------------------------
+extern BLUETOOTH_S_INFO Bluetooth_s_info;
+//≥§π©µÁ πƒ‹
+extern uint8_t Bluetooth_PowerOnHold_Enable; 
+//¡¨Ω” πƒ‹
+extern uint8_t Bluetooth_ConnectOnOff;
+//¡¨Ω”±Í ∂
+extern uint8_t Bluetooth_ConnectSign;
+//¥´ ‰’˝»∑”Î¥ÌŒÛ
+extern uint16_t Bluetooth_HciTxRxOkErr;
+//Õ≥º∆ ˝æ›
+extern uint16_t Bluetooth_ChipPowerCount;
+extern uint16_t Bluetooth_ChipOkCount;
+extern uint16_t Bluetooth_ChipErrCount;
+extern uint16_t Bluetooth_ChipNCCount;
+//
+#define BLUETOOTH_DTU_S_SLAVEBUF_NUM   20
+extern BLUETOOTH_S_SLAVE BluetoothDtu_s_SlaveBuf[BLUETOOTH_DTU_S_SLAVEBUF_NUM];
+//-------------------Ω”ø⁄∫Ø ˝--------------------------------
+//-----»ŒŒÒƒ£ Ω
+//“∆÷≤œ‡πÿ
+extern void Bluetooth_RxIrqBufToRBuf0(uint8_t *pRxIqBuf,uint16_t len);
+extern void App_BluetoothTaskCreate(void);
+extern void Bluetooth_DebugTestOnOff(uint8_t OnOff);
+//”¶”√
+extern void Bluetooth_App(BLUETOOTH_E_CMD cmd,uint8_t *pbuf);
+//-----∑«»ŒŒÒƒ£ Ω
+extern void BluetoothDtu_Init(void);
+extern void BluetoothDtu_100ms(void);
+extern void BluetoothDtu_RxIrq(uint8_t *pRx,uint16_t len);
+//-----------------------------------------------------------
+#endif
+
+
+</span></div><div class="line"><a name="l00075"></a><span class="lineno"><a class="line" href="struct_b_l_u_e_t_o_o_t_h___s___i_n_f_o.html#a115ae5310fb61cc580e1b8e59618083d">   75</a></span>&#160;    uint32_t  <a class="code" href="struct_b_l_u_e_t_o_o_t_h___s___i_n_f_o.html#a115ae5310fb61cc580e1b8e59618083d">UartRxNum</a>;</div><div class="line"><a name="l00076"></a><span class="lineno"><a class="line" href="struct_b_l_u_e_t_o_o_t_h___s___i_n_f_o.html#a5d666d286f774725c968be0c96e44031">   76</a></span>&#160;    uint32_t  <a class="code" href="struct_b_l_u_e_t_o_o_t_h___s___i_n_f_o.html#a5d666d286f774725c968be0c96e44031">UartTxNum</a>;</div><div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;} <a class="code" href="uctsk___bluetooth_d_t_u_8h.html#a40b3b877edbe107fd4f839edcb7aeda9">BLUETOOTH_S_INFO</a>;</div><div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="comment">//</span></div><div class="line"><a name="l00079"></a><span class="lineno"><a class="line" href="struct_b_l_u_e_t_o_o_t_h___s___s_l_a_v_e.html">   79</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="struct_b_l_u_e_t_o_o_t_h___s___s_l_a_v_e.html">BLUETOOTH_S_SLAVE</a>  </div><div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;{</div><div class="line"><a name="l00081"></a><span class="lineno"><a class="line" href="struct_b_l_u_e_t_o_o_t_h___s___s_l_a_v_e.html#a653385a82146a6c627f3ad0aca99fba4">   81</a></span>&#160;    ble_gap_evt_adv_report_t <a class="code" href="struct_b_l_u_e_t_o_o_t_h___s___s_l_a_v_e.html#a653385a82146a6c627f3ad0aca99fba4">AdvReport</a>;</div><div class="line"><a name="l00082"></a><span class="lineno"><a class="line" href="struct_b_l_u_e_t_o_o_t_h___s___s_l_a_v_e.html#ae25ba5b43930a3a1fcbba3e1699daf0d">   82</a></span>&#160;    uint8_t  <a class="code" href="struct_b_l_u_e_t_o_o_t_h___s___s_l_a_v_e.html#ae25ba5b43930a3a1fcbba3e1699daf0d">state</a>;           <span class="comment">// 0-ø’œ– 1- ˝æ›∏¸–¬÷– 2-- ˝æ›æÕ–˜     uint8_t  Type;            // ƒ£øÈ¿‡–Õ
+    uint16_t timeover_s;      // æ‡¿Î…œ¥Œ ˝æ›ªÒ»°µƒ√Î ˝
+}BLUETOOTH_S_SLAVE;
+//-------------------Ω”ø⁄±‰¡ø--------------------------------
+extern BLUETOOTH_S_INFO Bluetooth_s_info;
+//≥§π©µÁ πƒ‹
+extern uint8_t Bluetooth_PowerOnHold_Enable; 
+//¡¨Ω” πƒ‹
+extern uint8_t Bluetooth_ConnectOnOff;
+//¡¨Ω”±Í ∂
+extern uint8_t Bluetooth_ConnectSign;
+//¥´ ‰’˝»∑”Î¥ÌŒÛ
+extern uint16_t Bluetooth_HciTxRxOkErr;
+//Õ≥º∆ ˝æ›
+extern uint16_t Bluetooth_ChipPowerCount;
+extern uint16_t Bluetooth_ChipOkCount;
+extern uint16_t Bluetooth_ChipErrCount;
+extern uint16_t Bluetooth_ChipNCCount;
+//
+#define BLUETOOTH_DTU_S_SLAVEBUF_NUM   20
+extern BLUETOOTH_S_SLAVE BluetoothDtu_s_SlaveBuf[BLUETOOTH_DTU_S_SLAVEBUF_NUM];
+//-------------------Ω”ø⁄∫Ø ˝--------------------------------
+//-----»ŒŒÒƒ£ Ω
+//“∆÷≤œ‡πÿ
+extern void Bluetooth_RxIrqBufToRBuf0(uint8_t *pRxIqBuf,uint16_t len);
+extern void App_BluetoothTaskCreate(void);
+extern void Bluetooth_DebugTestOnOff(uint8_t OnOff);
+//”¶”√
+extern void Bluetooth_App(BLUETOOTH_E_CMD cmd,uint8_t *pbuf);
+//-----∑«»ŒŒÒƒ£ Ω
+extern void BluetoothDtu_Init(void);
+extern void BluetoothDtu_100ms(void);
+extern void BluetoothDtu_RxIrq(uint8_t *pRx,uint16_t len);
+//-----------------------------------------------------------
+#endif
+
+
+</span></div><div class="line"><a name="l00083"></a><span class="lineno"><a class="line" href="struct_b_l_u_e_t_o_o_t_h___s___s_l_a_v_e.html#a5b2073443756f3355a25db0ed3a73a25">   83</a></span>&#160;    uint8_t  <a class="code" href="struct_b_l_u_e_t_o_o_t_h___s___s_l_a_v_e.html#a5b2073443756f3355a25db0ed3a73a25">Type</a>;            <span class="comment">// ƒ£øÈ¿‡–Õ     uint16_t timeover_s;      // æ‡¿Î…œ¥Œ ˝æ›ªÒ»°µƒ√Î ˝
+}BLUETOOTH_S_SLAVE;
+//-------------------Ω”ø⁄±‰¡ø--------------------------------
+extern BLUETOOTH_S_INFO Bluetooth_s_info;
+//≥§π©µÁ πƒ‹
+extern uint8_t Bluetooth_PowerOnHold_Enable; 
+//¡¨Ω” πƒ‹
+extern uint8_t Bluetooth_ConnectOnOff;
+//¡¨Ω”±Í ∂
+extern uint8_t Bluetooth_ConnectSign;
+//¥´ ‰’˝»∑”Î¥ÌŒÛ
+extern uint16_t Bluetooth_HciTxRxOkErr;
+//Õ≥º∆ ˝æ›
+extern uint16_t Bluetooth_ChipPowerCount;
+extern uint16_t Bluetooth_ChipOkCount;
+extern uint16_t Bluetooth_ChipErrCount;
+extern uint16_t Bluetooth_ChipNCCount;
+//
+#define BLUETOOTH_DTU_S_SLAVEBUF_NUM   20
+extern BLUETOOTH_S_SLAVE BluetoothDtu_s_SlaveBuf[BLUETOOTH_DTU_S_SLAVEBUF_NUM];
+//-------------------Ω”ø⁄∫Ø ˝--------------------------------
+//-----»ŒŒÒƒ£ Ω
+//“∆÷≤œ‡πÿ
+extern void Bluetooth_RxIrqBufToRBuf0(uint8_t *pRxIqBuf,uint16_t len);
+extern void App_BluetoothTaskCreate(void);
+extern void Bluetooth_DebugTestOnOff(uint8_t OnOff);
+//”¶”√
+extern void Bluetooth_App(BLUETOOTH_E_CMD cmd,uint8_t *pbuf);
+//-----∑«»ŒŒÒƒ£ Ω
+extern void BluetoothDtu_Init(void);
+extern void BluetoothDtu_100ms(void);
+extern void BluetoothDtu_RxIrq(uint8_t *pRx,uint16_t len);
+//-----------------------------------------------------------
+#endif
+
+
+</span></div><div class="line"><a name="l00084"></a><span class="lineno"><a class="line" href="struct_b_l_u_e_t_o_o_t_h___s___s_l_a_v_e.html#a35cc6528a67b13d3bef5dc1420577052">   84</a></span>&#160;    uint16_t <a class="code" href="struct_b_l_u_e_t_o_o_t_h___s___s_l_a_v_e.html#a35cc6528a67b13d3bef5dc1420577052">timeover_s</a>;      <span class="comment">// æ‡¿Î…œ¥Œ ˝æ›ªÒ»°µƒ√Î ˝ }BLUETOOTH_S_SLAVE;
+//-------------------Ω”ø⁄±‰¡ø--------------------------------
+extern BLUETOOTH_S_INFO Bluetooth_s_info;
+//≥§π©µÁ πƒ‹
+extern uint8_t Bluetooth_PowerOnHold_Enable; 
+//¡¨Ω” πƒ‹
+extern uint8_t Bluetooth_ConnectOnOff;
+//¡¨Ω”±Í ∂
+extern uint8_t Bluetooth_ConnectSign;
+//¥´ ‰’˝»∑”Î¥ÌŒÛ
+extern uint16_t Bluetooth_HciTxRxOkErr;
+//Õ≥º∆ ˝æ›
+extern uint16_t Bluetooth_ChipPowerCount;
+extern uint16_t Bluetooth_ChipOkCount;
+extern uint16_t Bluetooth_ChipErrCount;
+extern uint16_t Bluetooth_ChipNCCount;
+//
+#define BLUETOOTH_DTU_S_SLAVEBUF_NUM   20
+extern BLUETOOTH_S_SLAVE BluetoothDtu_s_SlaveBuf[BLUETOOTH_DTU_S_SLAVEBUF_NUM];
+//-------------------Ω”ø⁄∫Ø ˝--------------------------------
+//-----»ŒŒÒƒ£ Ω
+//“∆÷≤œ‡πÿ
+extern void Bluetooth_RxIrqBufToRBuf0(uint8_t *pRxIqBuf,uint16_t len);
+extern void App_BluetoothTaskCreate(void);
+extern void Bluetooth_DebugTestOnOff(uint8_t OnOff);
+//”¶”√
+extern void Bluetooth_App(BLUETOOTH_E_CMD cmd,uint8_t *pbuf);
+//-----∑«»ŒŒÒƒ£ Ω
+extern void BluetoothDtu_Init(void);
+extern void BluetoothDtu_100ms(void);
+extern void BluetoothDtu_RxIrq(uint8_t *pRx,uint16_t len);
+//-----------------------------------------------------------
+#endif
+
+
+</span></div><div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;}<a class="code" href="uctsk___bluetooth_d_t_u_8h.html#a35203559a38e19dd85bfc9dda7bb7cf1">BLUETOOTH_S_SLAVE</a>;</div><div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="comment">//-------------------Ω”ø⁄±‰¡ø--------------------------------</span></div><div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="keyword">extern</span> <a class="code" href="struct_b_l_u_e_t_o_o_t_h___s___i_n_f_o.html">BLUETOOTH_S_INFO</a> <a class="code" href="uctsk___bluetooth_d_t_u_8h.html#af31e169d20b13b6952e64068fb75e3d7">Bluetooth_s_info</a>;</div><div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="comment">//≥§π©µÁ πƒ‹</span></div><div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="keyword">extern</span> uint8_t <a class="code" href="uctsk___bluetooth_d_t_u_8h.html#a59552932ffcdebca0f3ef3265ce85644">Bluetooth_PowerOnHold_Enable</a>; </div><div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="comment">//¡¨Ω” πƒ‹</span></div><div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="keyword">extern</span> uint8_t <a class="code" href="uctsk___bluetooth_d_t_u_8h.html#a31c25a84c97fdb4833205b49b8e518e9">Bluetooth_ConnectOnOff</a>;</div><div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="comment">//¡¨Ω”±Í ∂</span></div><div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="keyword">extern</span> uint8_t <a class="code" href="uctsk___bluetooth_d_t_u_8h.html#aa493959b134461f55c7eb54c50823e20">Bluetooth_ConnectSign</a>;</div><div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="comment">//¥´ ‰’˝»∑”Î¥ÌŒÛ extern uint16_t Bluetooth_HciTxRxOkErr;
+//Õ≥º∆ ˝æ›
+extern uint16_t Bluetooth_ChipPowerCount;
+extern uint16_t Bluetooth_ChipOkCount;
+extern uint16_t Bluetooth_ChipErrCount;
+extern uint16_t Bluetooth_ChipNCCount;
+//
+#define BLUETOOTH_DTU_S_SLAVEBUF_NUM   20
+extern BLUETOOTH_S_SLAVE BluetoothDtu_s_SlaveBuf[BLUETOOTH_DTU_S_SLAVEBUF_NUM];
+//-------------------Ω”ø⁄∫Ø ˝--------------------------------
+//-----»ŒŒÒƒ£ Ω
+//“∆÷≤œ‡πÿ
+extern void Bluetooth_RxIrqBufToRBuf0(uint8_t *pRxIqBuf,uint16_t len);
+extern void App_BluetoothTaskCreate(void);
+extern void Bluetooth_DebugTestOnOff(uint8_t OnOff);
+//”¶”√
+extern void Bluetooth_App(BLUETOOTH_E_CMD cmd,uint8_t *pbuf);
+//-----∑«»ŒŒÒƒ£ Ω
+extern void BluetoothDtu_Init(void);
+extern void BluetoothDtu_100ms(void);
+extern void BluetoothDtu_RxIrq(uint8_t *pRx,uint16_t len);
+//-----------------------------------------------------------
+#endif
+
+
+</span></div><div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="keyword">extern</span> uint16_t <a class="code" href="uctsk___bluetooth_d_t_u_8h.html#ae66188d80314e6fd8224434c0d1546e5">Bluetooth_HciTxRxOkErr</a>;</div><div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="comment">//Õ≥º∆ ˝æ› extern uint16_t Bluetooth_ChipPowerCount;
+extern uint16_t Bluetooth_ChipOkCount;
+extern uint16_t Bluetooth_ChipErrCount;
+extern uint16_t Bluetooth_ChipNCCount;
+//
+#define BLUETOOTH_DTU_S_SLAVEBUF_NUM   20
+extern BLUETOOTH_S_SLAVE BluetoothDtu_s_SlaveBuf[BLUETOOTH_DTU_S_SLAVEBUF_NUM];
+//-------------------Ω”ø⁄∫Ø ˝--------------------------------
+//-----»ŒŒÒƒ£ Ω
+//“∆÷≤œ‡πÿ
+extern void Bluetooth_RxIrqBufToRBuf0(uint8_t *pRxIqBuf,uint16_t len);
+extern void App_BluetoothTaskCreate(void);
+extern void Bluetooth_DebugTestOnOff(uint8_t OnOff);
+//”¶”√
+extern void Bluetooth_App(BLUETOOTH_E_CMD cmd,uint8_t *pbuf);
+//-----∑«»ŒŒÒƒ£ Ω
+extern void BluetoothDtu_Init(void);
+extern void BluetoothDtu_100ms(void);
+extern void BluetoothDtu_RxIrq(uint8_t *pRx,uint16_t len);
+//-----------------------------------------------------------
+#endif
+
+
+</span></div><div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<span class="keyword">extern</span> uint16_t <a class="code" href="uctsk___bluetooth_d_t_u_8h.html#a9d0a0b70a4f477105988bb61419e9b04">Bluetooth_ChipPowerCount</a>;</div><div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;<span class="keyword">extern</span> uint16_t <a class="code" href="uctsk___bluetooth_d_t_u_8h.html#ae62de7e9d59e4f187d165c845388ed2c">Bluetooth_ChipOkCount</a>;</div><div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;<span class="keyword">extern</span> uint16_t <a class="code" href="uctsk___bluetooth_d_t_u_8h.html#a489d80b6947e097a170e0e60c0e8ee25">Bluetooth_ChipErrCount</a>;</div><div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;<span class="keyword">extern</span> uint16_t <a class="code" href="uctsk___bluetooth_d_t_u_8h.html#a2af9679e3556ec11a83effbd83ce479d">Bluetooth_ChipNCCount</a>;</div><div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;<span class="comment">//</span></div><div class="line"><a name="l00102"></a><span class="lineno"><a class="line" href="uctsk___bluetooth_d_t_u_8h.html#a25c76651ead68dc25c779e0f203e1378">  102</a></span>&#160;<span class="preprocessor">#define BLUETOOTH_DTU_S_SLAVEBUF_NUM   20</span></div><div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;<span class="keyword">extern</span> <a class="code" href="struct_b_l_u_e_t_o_o_t_h___s___s_l_a_v_e.html">BLUETOOTH_S_SLAVE</a> <a class="code" href="uctsk___bluetooth_d_t_u_8h.html#a7c6db6ad48849809131e1ca9a7ead6c7">BluetoothDtu_s_SlaveBuf</a>[<a class="code" href="uctsk___bluetooth_d_t_u_8h.html#a25c76651ead68dc25c779e0f203e1378">BLUETOOTH_DTU_S_SLAVEBUF_NUM</a>];</div><div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<span class="comment">//-------------------Ω”ø⁄∫Ø ˝--------------------------------</span></div><div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;<span class="comment">//-----»ŒŒÒƒ£ Ω</span></div><div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;<span class="comment">//“∆÷≤œ‡πÿ extern void Bluetooth_RxIrqBufToRBuf0(uint8_t *pRxIqBuf,uint16_t len);
+extern void App_BluetoothTaskCreate(void);
+extern void Bluetooth_DebugTestOnOff(uint8_t OnOff);
+//”¶”√
+extern void Bluetooth_App(BLUETOOTH_E_CMD cmd,uint8_t *pbuf);
+//-----∑«»ŒŒÒƒ£ Ω
+extern void BluetoothDtu_Init(void);
+extern void BluetoothDtu_100ms(void);
+extern void BluetoothDtu_RxIrq(uint8_t *pRx,uint16_t len);
+//-----------------------------------------------------------
+#endif
+
+
+</span></div><div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">void</span> <a class="code" href="uctsk___bluetooth_d_t_u_8h.html#ab00f895ddee1bedbfea061c1e8868631">Bluetooth_RxIrqBufToRBuf0</a>(uint8_t *pRxIqBuf,uint16_t len);</div><div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">void</span> <a class="code" href="uctsk___bluetooth_d_t_u_8h.html#a81ded786b21e2c103fb8cc25e52ce668">App_BluetoothTaskCreate</a>(<span class="keywordtype">void</span>);</div><div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">void</span> <a class="code" href="uctsk___bluetooth_d_t_u_8h.html#a2d50b0e91f8a0449144e34e3aac40d19">Bluetooth_DebugTestOnOff</a>(uint8_t OnOff);</div><div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;<span class="comment">//”¶”√</span></div><div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">void</span> <a class="code" href="uctsk___bluetooth_d_t_u_8h.html#a8896ebfa58358782ee136b2ab73bc6f8">Bluetooth_App</a>(<a class="code" href="uctsk___bluetooth_d_t_u_8h.html#a22676f5de26568e0e430544a85f0265e">BLUETOOTH_E_CMD</a> cmd,uint8_t *pbuf);</div><div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;<span class="comment">//-----∑«»ŒŒÒƒ£ Ω</span></div><div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">void</span> <a class="code" href="uctsk___bluetooth_d_t_u_8h.html#a02cc30cb50475e9ceff8f668b9925a9e">BluetoothDtu_Init</a>(<span class="keywordtype">void</span>);</div><div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">void</span> <a class="code" href="uctsk___bluetooth_d_t_u_8h.html#a665be9d82f27e6fbbf59c2e115bcf2ad">BluetoothDtu_100ms</a>(<span class="keywordtype">void</span>);</div><div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">void</span> <a class="code" href="uctsk___bluetooth_d_t_u_8h.html#a888bd76515579d09c94affc366efcfa5">BluetoothDtu_RxIrq</a>(uint8_t *pRx,uint16_t len);</div><div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;<span class="comment">//-----------------------------------------------------------</span></div><div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;<span class="preprocessor">#endif</span></div><div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;</div><div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;</div><div class="ttc" id="struct_b_l_u_e_t_o_o_t_h___s___i_n_f_o_html_a85c178de1d08bdae1f6491fe7b9cb995"><div class="ttname"><a href="struct_b_l_u_e_t_o_o_t_h___s___i_n_f_o.html#a85c178de1d08bdae1f6491fe7b9cb995">BLUETOOTH_S_INFO::Mode</a></div><div class="ttdeci">uint8_t Mode</div><div class="ttdef"><b>Definition:</b> uctsk_BluetoothDTU.h:66</div></div>
+<div class="ttc" id="uctsk___bluetooth_d_t_u_8h_html_ae62de7e9d59e4f187d165c845388ed2c"><div class="ttname"><a href="uctsk___bluetooth_d_t_u_8h.html#ae62de7e9d59e4f187d165c845388ed2c">Bluetooth_ChipOkCount</a></div><div class="ttdeci">uint16_t Bluetooth_ChipOkCount</div><div class="ttdef"><b>Definition:</b> uctsk_BluetoothBeaconM.c:49</div></div>
+<div class="ttc" id="uctsk___bluetooth_d_t_u_8h_html_a22676f5de26568e0e430544a85f0265ea3c8a321a0fa39e679501b424dddac4f7"><div class="ttname"><a href="uctsk___bluetooth_d_t_u_8h.html#a22676f5de26568e0e430544a85f0265ea3c8a321a0fa39e679501b424dddac4f7">BLUETOOTH_CMD_UPDATA_7DAY</a></div><div class="ttdef"><b>Definition:</b> uctsk_BluetoothDTU.h:57</div></div>
+<div class="ttc" id="uctsk___bluetooth_d_t_u_8h_html_a9d0a0b70a4f477105988bb61419e9b04"><div class="ttname"><a href="uctsk___bluetooth_d_t_u_8h.html#a9d0a0b70a4f477105988bb61419e9b04">Bluetooth_ChipPowerCount</a></div><div class="ttdeci">uint16_t Bluetooth_ChipPowerCount</div><div class="ttdef"><b>Definition:</b> uctsk_BluetoothBeaconM.c:48</div></div>
+<div class="ttc" id="uctsk___bluetooth_d_t_u_8h_html_a59552932ffcdebca0f3ef3265ce85644"><div class="ttname"><a href="uctsk___bluetooth_d_t_u_8h.html#a59552932ffcdebca0f3ef3265ce85644">Bluetooth_PowerOnHold_Enable</a></div><div class="ttdeci">uint8_t Bluetooth_PowerOnHold_Enable</div><div class="ttdef"><b>Definition:</b> uctsk_BluetoothBeaconM.c:55</div></div>
+<div class="ttc" id="uctsk___bluetooth_d_t_u_8h_html_a31c25a84c97fdb4833205b49b8e518e9"><div class="ttname"><a href="uctsk___bluetooth_d_t_u_8h.html#a31c25a84c97fdb4833205b49b8e518e9">Bluetooth_ConnectOnOff</a></div><div class="ttdeci">uint8_t Bluetooth_ConnectOnOff</div><div class="ttdef"><b>Definition:</b> uctsk_BluetoothDTU.c:55</div></div>
+<div class="ttc" id="struct_b_l_u_e_t_o_o_t_h___s___s_l_a_v_e_html_a653385a82146a6c627f3ad0aca99fba4"><div class="ttname"><a href="struct_b_l_u_e_t_o_o_t_h___s___s_l_a_v_e.html#a653385a82146a6c627f3ad0aca99fba4">BLUETOOTH_S_SLAVE::AdvReport</a></div><div class="ttdeci">ble_gap_evt_adv_report_t AdvReport</div><div class="ttdef"><b>Definition:</b> uctsk_BluetoothDTU.h:81</div></div>
+<div class="ttc" id="uctsk___bluetooth_d_t_u_8h_html_a2af9679e3556ec11a83effbd83ce479d"><div class="ttname"><a href="uctsk___bluetooth_d_t_u_8h.html#a2af9679e3556ec11a83effbd83ce479d">Bluetooth_ChipNCCount</a></div><div class="ttdeci">uint16_t Bluetooth_ChipNCCount</div><div class="ttdef"><b>Definition:</b> uctsk_BluetoothBeaconM.c:51</div></div>
+<div class="ttc" id="uctsk___bluetooth_d_t_u_8h_html_aa493959b134461f55c7eb54c50823e20"><div class="ttname"><a href="uctsk___bluetooth_d_t_u_8h.html#aa493959b134461f55c7eb54c50823e20">Bluetooth_ConnectSign</a></div><div class="ttdeci">uint8_t Bluetooth_ConnectSign</div><div class="ttdef"><b>Definition:</b> uctsk_BluetoothBeaconM.c:57</div></div>
+<div class="ttc" id="uctsk___bluetooth_d_t_u_8h_html_a35203559a38e19dd85bfc9dda7bb7cf1"><div class="ttname"><a href="uctsk___bluetooth_d_t_u_8h.html#a35203559a38e19dd85bfc9dda7bb7cf1">BLUETOOTH_S_SLAVE</a></div><div class="ttdeci">struct BLUETOOTH_S_SLAVE BLUETOOTH_S_SLAVE</div></div>
+<div class="ttc" id="uctsk___bluetooth_d_t_u_8h_html_a25c76651ead68dc25c779e0f203e1378"><div class="ttname"><a href="uctsk___bluetooth_d_t_u_8h.html#a25c76651ead68dc25c779e0f203e1378">BLUETOOTH_DTU_S_SLAVEBUF_NUM</a></div><div class="ttdeci">#define BLUETOOTH_DTU_S_SLAVEBUF_NUM</div><div class="ttdef"><b>Definition:</b> uctsk_BluetoothDTU.h:102</div></div>
+<div class="ttc" id="struct_b_l_u_e_t_o_o_t_h___s___s_l_a_v_e_html_a35cc6528a67b13d3bef5dc1420577052"><div class="ttname"><a href="struct_b_l_u_e_t_o_o_t_h___s___s_l_a_v_e.html#a35cc6528a67b13d3bef5dc1420577052">BLUETOOTH_S_SLAVE::timeover_s</a></div><div class="ttdeci">uint16_t timeover_s</div><div class="ttdef"><b>Definition:</b> uctsk_BluetoothDTU.h:84</div></div>
+<div class="ttc" id="_bsp___nrf_ble_8h_html"><div class="ttname"><a href="_bsp___nrf_ble_8h.html">Bsp_NrfBle.h</a></div><div class="ttdoc">bottom-driven ‚Äì&gt; Âü∫‰∫éNrf5xÁöÑBLEÈ©±Âä®. </div></div>
+<div class="ttc" id="uctsk___bluetooth_d_t_u_8h_html_ab00f895ddee1bedbfea061c1e8868631"><div class="ttname"><a href="uctsk___bluetooth_d_t_u_8h.html#ab00f895ddee1bedbfea061c1e8868631">Bluetooth_RxIrqBufToRBuf0</a></div><div class="ttdeci">void Bluetooth_RxIrqBufToRBuf0(uint8_t *pRxIqBuf, uint16_t len)</div><div class="ttdef"><b>Definition:</b> uctsk_BluetoothBeaconM.c:133</div></div>
+<div class="ttc" id="uctsk___bluetooth_d_t_u_8h_html_a02cc30cb50475e9ceff8f668b9925a9e"><div class="ttname"><a href="uctsk___bluetooth_d_t_u_8h.html#a02cc30cb50475e9ceff8f668b9925a9e">BluetoothDtu_Init</a></div><div class="ttdeci">void BluetoothDtu_Init(void)</div><div class="ttdef"><b>Definition:</b> uctsk_BluetoothDTU.c:972</div></div>
+<div class="ttc" id="struct_b_l_u_e_t_o_o_t_h___s___i_n_f_o_html_a4e2a81ef7192310961e3324379f5745a"><div class="ttname"><a href="struct_b_l_u_e_t_o_o_t_h___s___i_n_f_o.html#a4e2a81ef7192310961e3324379f5745a">BLUETOOTH_S_INFO::MacBuf</a></div><div class="ttdeci">uint8_t MacBuf[6]</div><div class="ttdef"><b>Definition:</b> uctsk_BluetoothDTU.h:68</div></div>
+<div class="ttc" id="uctsk___bluetooth_d_t_u_8h_html_a8896ebfa58358782ee136b2ab73bc6f8"><div class="ttname"><a href="uctsk___bluetooth_d_t_u_8h.html#a8896ebfa58358782ee136b2ab73bc6f8">Bluetooth_App</a></div><div class="ttdeci">void Bluetooth_App(BLUETOOTH_E_CMD cmd, uint8_t *pbuf)</div><div class="ttdef"><b>Definition:</b> uctsk_BluetoothDTU.c:561</div></div>
+<div class="ttc" id="struct_b_l_u_e_t_o_o_t_h___s___i_n_f_o_html"><div class="ttname"><a href="struct_b_l_u_e_t_o_o_t_h___s___i_n_f_o.html">BLUETOOTH_S_INFO</a></div><div class="ttdef"><b>Definition:</b> uctsk_BluetoothDTU.h:63</div></div>
+<div class="ttc" id="struct_b_l_u_e_t_o_o_t_h___s___s_l_a_v_e_html_a5b2073443756f3355a25db0ed3a73a25"><div class="ttname"><a href="struct_b_l_u_e_t_o_o_t_h___s___s_l_a_v_e.html#a5b2073443756f3355a25db0ed3a73a25">BLUETOOTH_S_SLAVE::Type</a></div><div class="ttdeci">uint8_t Type</div><div class="ttdef"><b>Definition:</b> uctsk_BluetoothDTU.h:83</div></div>
+<div class="ttc" id="uctsk___bluetooth_d_t_u_8h_html_af31e169d20b13b6952e64068fb75e3d7"><div class="ttname"><a href="uctsk___bluetooth_d_t_u_8h.html#af31e169d20b13b6952e64068fb75e3d7">Bluetooth_s_info</a></div><div class="ttdeci">BLUETOOTH_S_INFO Bluetooth_s_info</div><div class="ttdef"><b>Definition:</b> uctsk_BluetoothDTU.c:61</div></div>
+<div class="ttc" id="includes_8h_html"><div class="ttname"><a href="includes_8h.html">includes.h</a></div></div>
+<div class="ttc" id="uctsk___bluetooth_d_t_u_8h_html_a2d50b0e91f8a0449144e34e3aac40d19"><div class="ttname"><a href="uctsk___bluetooth_d_t_u_8h.html#a2d50b0e91f8a0449144e34e3aac40d19">Bluetooth_DebugTestOnOff</a></div><div class="ttdeci">void Bluetooth_DebugTestOnOff(uint8_t OnOff)</div><div class="ttdef"><b>Definition:</b> uctsk_BluetoothBeaconM.c:281</div></div>
+<div class="ttc" id="uctsk___bluetooth_d_t_u_8h_html_a22676f5de26568e0e430544a85f0265eaa033f41375548863ccbe917c72ae9370"><div class="ttname"><a href="uctsk___bluetooth_d_t_u_8h.html#a22676f5de26568e0e430544a85f0265eaa033f41375548863ccbe917c72ae9370">BLUETOOTH_CMD_NULL</a></div><div class="ttdef"><b>Definition:</b> uctsk_BluetoothDTU.h:55</div></div>
+<div class="ttc" id="uctsk___bluetooth_d_t_u_8h_html_a22676f5de26568e0e430544a85f0265ead8b09e407f645e5c5355795ca68fc787"><div class="ttname"><a href="uctsk___bluetooth_d_t_u_8h.html#a22676f5de26568e0e430544a85f0265ead8b09e407f645e5c5355795ca68fc787">BLUETOOTH_CMD_KEEP_CONNECT_ONOFF</a></div><div class="ttdef"><b>Definition:</b> uctsk_BluetoothDTU.h:60</div></div>
+<div class="ttc" id="uctsk___bluetooth_d_t_u_8h_html_a489d80b6947e097a170e0e60c0e8ee25"><div class="ttname"><a href="uctsk___bluetooth_d_t_u_8h.html#a489d80b6947e097a170e0e60c0e8ee25">Bluetooth_ChipErrCount</a></div><div class="ttdeci">uint16_t Bluetooth_ChipErrCount</div><div class="ttdef"><b>Definition:</b> uctsk_BluetoothBeaconM.c:50</div></div>
+<div class="ttc" id="uctsk___bluetooth_d_t_u_8h_html_ae66188d80314e6fd8224434c0d1546e5"><div class="ttname"><a href="uctsk___bluetooth_d_t_u_8h.html#ae66188d80314e6fd8224434c0d1546e5">Bluetooth_HciTxRxOkErr</a></div><div class="ttdeci">uint16_t Bluetooth_HciTxRxOkErr</div><div class="ttdef"><b>Definition:</b> uctsk_BluetoothDTU.c:59</div></div>
+<div class="ttc" id="struct_b_l_u_e_t_o_o_t_h___s___s_l_a_v_e_html_ae25ba5b43930a3a1fcbba3e1699daf0d"><div class="ttname"><a href="struct_b_l_u_e_t_o_o_t_h___s___s_l_a_v_e.html#ae25ba5b43930a3a1fcbba3e1699daf0d">BLUETOOTH_S_SLAVE::state</a></div><div class="ttdeci">uint8_t state</div><div class="ttdef"><b>Definition:</b> uctsk_BluetoothDTU.h:82</div></div>
+<div class="ttc" id="struct_b_l_u_e_t_o_o_t_h___s___i_n_f_o_html_adab280226bcf6b9cda8c9f2fe1a72a9f"><div class="ttname"><a href="struct_b_l_u_e_t_o_o_t_h___s___i_n_f_o.html#adab280226bcf6b9cda8c9f2fe1a72a9f">BLUETOOTH_S_INFO::SoftwareVer_m</a></div><div class="ttdeci">uint8_t SoftwareVer_m</div><div class="ttdef"><b>Definition:</b> uctsk_BluetoothDTU.h:72</div></div>
+<div class="ttc" id="uctsk___bluetooth_d_t_u_8h_html_a40b3b877edbe107fd4f839edcb7aeda9"><div class="ttname"><a href="uctsk___bluetooth_d_t_u_8h.html#a40b3b877edbe107fd4f839edcb7aeda9">BLUETOOTH_S_INFO</a></div><div class="ttdeci">struct BLUETOOTH_S_INFO BLUETOOTH_S_INFO</div></div>
+<div class="ttc" id="uctsk___bluetooth_d_t_u_8h_html_a22676f5de26568e0e430544a85f0265eaa78ea1d0b6d6c4755bdc422a70d28f83"><div class="ttname"><a href="uctsk___bluetooth_d_t_u_8h.html#a22676f5de26568e0e430544a85f0265eaa78ea1d0b6d6c4755bdc422a70d28f83">BLUETOOTH_CMD_READ_CMD</a></div><div class="ttdef"><b>Definition:</b> uctsk_BluetoothDTU.h:59</div></div>
+<div class="ttc" id="uctsk___bluetooth_d_t_u_8h_html_a7c6db6ad48849809131e1ca9a7ead6c7"><div class="ttname"><a href="uctsk___bluetooth_d_t_u_8h.html#a7c6db6ad48849809131e1ca9a7ead6c7">BluetoothDtu_s_SlaveBuf</a></div><div class="ttdeci">BLUETOOTH_S_SLAVE BluetoothDtu_s_SlaveBuf[BLUETOOTH_DTU_S_SLAVEBUF_NUM]</div><div class="ttdef"><b>Definition:</b> uctsk_BluetoothDTU.c:63</div></div>
+<div class="ttc" id="struct_b_l_u_e_t_o_o_t_h___s___i_n_f_o_html_aa59ca8b12c4bdc5a7b58ee88a470ef1c"><div class="ttname"><a href="struct_b_l_u_e_t_o_o_t_h___s___i_n_f_o.html#aa59ca8b12c4bdc5a7b58ee88a470ef1c">BLUETOOTH_S_INFO::HardwareVer_m</a></div><div class="ttdeci">uint8_t HardwareVer_m</div><div class="ttdef"><b>Definition:</b> uctsk_BluetoothDTU.h:70</div></div>
+<div class="ttc" id="struct_b_l_u_e_t_o_o_t_h___s___i_n_f_o_html_a754f6ef6d1a6c354115ae8b49d741c3f"><div class="ttname"><a href="struct_b_l_u_e_t_o_o_t_h___s___i_n_f_o.html#a754f6ef6d1a6c354115ae8b49d741c3f">BLUETOOTH_S_INFO::Type</a></div><div class="ttdeci">uint8_t Type</div><div class="ttdef"><b>Definition:</b> uctsk_BluetoothDTU.h:69</div></div>
+<div class="ttc" id="struct_b_l_u_e_t_o_o_t_h___s___i_n_f_o_html_a856276b85fa264037f5495762456c9a2"><div class="ttname"><a href="struct_b_l_u_e_t_o_o_t_h___s___i_n_f_o.html#a856276b85fa264037f5495762456c9a2">BLUETOOTH_S_INFO::SoftwareVer_s</a></div><div class="ttdeci">uint8_t SoftwareVer_s</div><div class="ttdef"><b>Definition:</b> uctsk_BluetoothDTU.h:73</div></div>
+<div class="ttc" id="uctsk___bluetooth_d_t_u_8h_html_a22676f5de26568e0e430544a85f0265ea8183a7ef12abc13ccae849e0245acfcb"><div class="ttname"><a href="uctsk___bluetooth_d_t_u_8h.html#a22676f5de26568e0e430544a85f0265ea8183a7ef12abc13ccae849e0245acfcb">BLUETOOTH_CMD_UPDATA_1DAY</a></div><div class="ttdef"><b>Definition:</b> uctsk_BluetoothDTU.h:56</div></div>
+<div class="ttc" id="uctsk___bluetooth_d_t_u_8h_html_a22676f5de26568e0e430544a85f0265ea0ee122c7fc94f3a74c60d46c853ca767"><div class="ttname"><a href="uctsk___bluetooth_d_t_u_8h.html#a22676f5de26568e0e430544a85f0265ea0ee122c7fc94f3a74c60d46c853ca767">BLUETOOTH_CMD_IAP</a></div><div class="ttdef"><b>Definition:</b> uctsk_BluetoothDTU.h:58</div></div>
+<div class="ttc" id="struct_b_l_u_e_t_o_o_t_h___s___s_l_a_v_e_html"><div class="ttname"><a href="struct_b_l_u_e_t_o_o_t_h___s___s_l_a_v_e.html">BLUETOOTH_S_SLAVE</a></div><div class="ttdef"><b>Definition:</b> uctsk_BluetoothDTU.h:79</div></div>
+<div class="ttc" id="uctsk___bluetooth_d_t_u_8h_html_a665be9d82f27e6fbbf59c2e115bcf2ad"><div class="ttname"><a href="uctsk___bluetooth_d_t_u_8h.html#a665be9d82f27e6fbbf59c2e115bcf2ad">BluetoothDtu_100ms</a></div><div class="ttdeci">void BluetoothDtu_100ms(void)</div><div class="ttdef"><b>Definition:</b> uctsk_BluetoothDTU.c:984</div></div>
+<div class="ttc" id="struct_b_l_u_e_t_o_o_t_h___s___i_n_f_o_html_a5d666d286f774725c968be0c96e44031"><div class="ttname"><a href="struct_b_l_u_e_t_o_o_t_h___s___i_n_f_o.html#a5d666d286f774725c968be0c96e44031">BLUETOOTH_S_INFO::UartTxNum</a></div><div class="ttdeci">uint32_t UartTxNum</div><div class="ttdef"><b>Definition:</b> uctsk_BluetoothDTU.h:76</div></div>
+<div class="ttc" id="struct_b_l_u_e_t_o_o_t_h___s___i_n_f_o_html_a1ebc9a39832889fc6fddefa160234dda"><div class="ttname"><a href="struct_b_l_u_e_t_o_o_t_h___s___i_n_f_o.html#a1ebc9a39832889fc6fddefa160234dda">BLUETOOTH_S_INFO::HardwareVer_s</a></div><div class="ttdeci">uint8_t HardwareVer_s</div><div class="ttdef"><b>Definition:</b> uctsk_BluetoothDTU.h:71</div></div>
+<div class="ttc" id="struct_b_l_u_e_t_o_o_t_h___s___i_n_f_o_html_a115ae5310fb61cc580e1b8e59618083d"><div class="ttname"><a href="struct_b_l_u_e_t_o_o_t_h___s___i_n_f_o.html#a115ae5310fb61cc580e1b8e59618083d">BLUETOOTH_S_INFO::UartRxNum</a></div><div class="ttdeci">uint32_t UartRxNum</div><div class="ttdef"><b>Definition:</b> uctsk_BluetoothDTU.h:75</div></div>
+<div class="ttc" id="uctsk___bluetooth_d_t_u_8h_html_a888bd76515579d09c94affc366efcfa5"><div class="ttname"><a href="uctsk___bluetooth_d_t_u_8h.html#a888bd76515579d09c94affc366efcfa5">BluetoothDtu_RxIrq</a></div><div class="ttdeci">void BluetoothDtu_RxIrq(uint8_t *pRx, uint16_t len)</div><div class="ttdef"><b>Definition:</b> uctsk_BluetoothDTU.c:1033</div></div>
+<div class="ttc" id="uctsk___bluetooth_d_t_u_8h_html_a81ded786b21e2c103fb8cc25e52ce668"><div class="ttname"><a href="uctsk___bluetooth_d_t_u_8h.html#a81ded786b21e2c103fb8cc25e52ce668">App_BluetoothTaskCreate</a></div><div class="ttdeci">void App_BluetoothTaskCreate(void)</div><div class="ttdef"><b>Definition:</b> uctsk_BluetoothBeaconM.c:161</div></div>
+<div class="ttc" id="uctsk___bluetooth_d_t_u_8h_html_a22676f5de26568e0e430544a85f0265e"><div class="ttname"><a href="uctsk___bluetooth_d_t_u_8h.html#a22676f5de26568e0e430544a85f0265e">BLUETOOTH_E_CMD</a></div><div class="ttdeci">BLUETOOTH_E_CMD</div><div class="ttdef"><b>Definition:</b> uctsk_BluetoothDTU.h:53</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Âà∂‰ΩúËÄÖ &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

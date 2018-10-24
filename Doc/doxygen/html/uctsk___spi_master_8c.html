@@ -1,0 +1,216 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>xsl: E:/XkapSourceCode/Xkap-Stm32/Xkap-Stm32/User/UserTask/uctsk_SpiMaster.c 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">xsl
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">源码说明</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.13 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',false,false,'search.php','搜索');
+});
+</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_6d4e12d46ad8519ff7b80e874016d102.html">User</a></li><li class="navelem"><a class="el" href="dir_ba9e781c49be9d79c84eb9994eefebec.html">UserTask</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#define-members">宏定义</a> &#124;
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle">
+<div class="title">uctsk_SpiMaster.c 文件参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="uctsk___spi_master_8h_source.html">uctsk_SpiMaster.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="uctsk___spi_slave_8h_source.html">uctsk_SpiSlave.h</a>&quot;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+宏定义</h2></td></tr>
+<tr class="memitem:aac9f541a618ce030284d6fdc1d213e46"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___spi_master_8c.html#aac9f541a618ce030284d6fdc1d213e46">SPI_MASTER_GLOBAL</a></td></tr>
+<tr class="separator:aac9f541a618ce030284d6fdc1d213e46"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac067aecde2bd2f88757e02b04632797a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___spi_master_8c.html#ac067aecde2bd2f88757e02b04632797a">Spi_MasterArraySize</a>(a)&#160;&#160;&#160;(sizeof(a) / sizeof((a)[0]))</td></tr>
+<tr class="separator:ac067aecde2bd2f88757e02b04632797a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:a4b8ff02ace3b356594319c16abcdc566"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___spi_master_8c.html#a4b8ff02ace3b356594319c16abcdc566">MODULE_OS_SEM</a> (Mutex_SpiMasterWriteRead)</td></tr>
+<tr class="separator:a4b8ff02ace3b356594319c16abcdc566"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac1053282ca441c727a1c1c8fc595a295"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___spi_master_8c.html#ac1053282ca441c727a1c1c8fc595a295">Spi_MasterIntExtIRQHandler</a> (void)</td></tr>
+<tr class="separator:ac1053282ca441c727a1c1c8fc595a295"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad7924633775907edeb599ee0087c2b19"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___spi_master_8c.html#ad7924633775907edeb599ee0087c2b19">Spi_MasterApp</a> (uint8_t SlaveAddr, uint8_t cmd, uint16_t regAddr, void *pBuf, uint16_t *pregByteLen)</td></tr>
+<tr class="separator:ad7924633775907edeb599ee0087c2b19"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a995176d46317e9a1a8a20a2bc3a6a0cd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___spi_master_8c.html#a995176d46317e9a1a8a20a2bc3a6a0cd">SpiMaster_DebugTestOnOff</a> (uint8_t OnOff)</td></tr>
+<tr class="separator:a995176d46317e9a1a8a20a2bc3a6a0cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">宏定义说明</h2>
+<a id="aac9f541a618ce030284d6fdc1d213e46"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac9f541a618ce030284d6fdc1d213e46">&#9670;&nbsp;</a></span>SPI_MASTER_GLOBAL</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SPI_MASTER_GLOBAL</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac067aecde2bd2f88757e02b04632797a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac067aecde2bd2f88757e02b04632797a">&#9670;&nbsp;</a></span>Spi_MasterArraySize</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define Spi_MasterArraySize</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a</td><td>)</td>
+          <td>&#160;&#160;&#160;(sizeof(a) / sizeof((a)[0]))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">函数说明</h2>
+<a id="a4b8ff02ace3b356594319c16abcdc566"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b8ff02ace3b356594319c16abcdc566">&#9670;&nbsp;</a></span>MODULE_OS_SEM()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MODULE_OS_SEM </td>
+          <td>(</td>
+          <td class="paramtype">Mutex_SpiMasterWriteRead&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad7924633775907edeb599ee0087c2b19"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad7924633775907edeb599ee0087c2b19">&#9670;&nbsp;</a></span>Spi_MasterApp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t Spi_MasterApp </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>SlaveAddr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>cmd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>regAddr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>pBuf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t *&#160;</td>
+          <td class="paramname"><em>pregByteLen</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac1053282ca441c727a1c1c8fc595a295"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac1053282ca441c727a1c1c8fc595a295">&#9670;&nbsp;</a></span>Spi_MasterIntExtIRQHandler()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Spi_MasterIntExtIRQHandler </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a995176d46317e9a1a8a20a2bc3a6a0cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a995176d46317e9a1a8a20a2bc3a6a0cd">&#9670;&nbsp;</a></span>SpiMaster_DebugTestOnOff()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SpiMaster_DebugTestOnOff </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>OnOff</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

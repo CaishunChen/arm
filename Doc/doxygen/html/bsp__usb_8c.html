@@ -1,0 +1,324 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>xsl: E:/XkapSourceCode/Xkap-Stm32/Xkap-Stm32/User/UserBsp/Stm32F4/src/bsp_usb.c 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">xsl
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">源码说明</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.13 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',false,false,'search.php','搜索');
+});
+</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_6d4e12d46ad8519ff7b80e874016d102.html">User</a></li><li class="navelem"><a class="el" href="dir_a31a870a1361c5173f8d637697bb576e.html">UserBsp</a></li><li class="navelem"><a class="el" href="dir_5e177c7cc544a0a92a21db9013c51e57.html">Stm32F4</a></li><li class="navelem"><a class="el" href="dir_d01952803e2c83a827a93ec31a7773bd.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">函数</a> &#124;
+<a href="#var-members">变量</a>  </div>
+  <div class="headertitle">
+<div class="title">bsp_usb.c 文件参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;usb_bsp.h&quot;</code><br />
+<code>#include &quot;bsp.h&quot;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:acffb89e4346b11dee704fe5a40326a1f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__usb_8c.html#acffb89e4346b11dee704fe5a40326a1f">USB_OTG_BSP_Init</a> (USB_OTG_CORE_HANDLE *pdev)</td></tr>
+<tr class="memdesc:acffb89e4346b11dee704fe5a40326a1f"><td class="mdescLeft">&#160;</td><td class="mdescRight">USB_OTG_BSP_Init Initilizes BSP configurations  <a href="#acffb89e4346b11dee704fe5a40326a1f">更多...</a><br /></td></tr>
+<tr class="separator:acffb89e4346b11dee704fe5a40326a1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a38bdd94d09d00f27d1343fdb0babdfa1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__usb_8c.html#a38bdd94d09d00f27d1343fdb0babdfa1">USB_OTG_BSP_EnableInterrupt</a> (USB_OTG_CORE_HANDLE *pdev)</td></tr>
+<tr class="memdesc:a38bdd94d09d00f27d1343fdb0babdfa1"><td class="mdescLeft">&#160;</td><td class="mdescRight">USB_OTG_BSP_EnableInterrupt Configures USB Global interrupt  <a href="#a38bdd94d09d00f27d1343fdb0babdfa1">更多...</a><br /></td></tr>
+<tr class="separator:a38bdd94d09d00f27d1343fdb0babdfa1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a0b196001899cd61bc722d080ca8161"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__usb_8c.html#a1a0b196001899cd61bc722d080ca8161">USB_OTG_BSP_DriveVBUS</a> (USB_OTG_CORE_HANDLE *pdev, uint8_t state)</td></tr>
+<tr class="memdesc:a1a0b196001899cd61bc722d080ca8161"><td class="mdescLeft">&#160;</td><td class="mdescRight">BSP_Drive_VBUS Drives the Vbus signal through IO  <a href="#a1a0b196001899cd61bc722d080ca8161">更多...</a><br /></td></tr>
+<tr class="separator:a1a0b196001899cd61bc722d080ca8161"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02dee21bb9a092415782c0e1a460981c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__usb_8c.html#a02dee21bb9a092415782c0e1a460981c">USB_OTG_BSP_ConfigVBUS</a> (USB_OTG_CORE_HANDLE *pdev)</td></tr>
+<tr class="memdesc:a02dee21bb9a092415782c0e1a460981c"><td class="mdescLeft">&#160;</td><td class="mdescRight">USB_OTG_BSP_ConfigVBUS Configures the IO for the Vbus and OverCurrent  <a href="#a02dee21bb9a092415782c0e1a460981c">更多...</a><br /></td></tr>
+<tr class="separator:a02dee21bb9a092415782c0e1a460981c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa70213d9a7b9b047dc6d3357f99e19b5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__usb_8c.html#aa70213d9a7b9b047dc6d3357f99e19b5">USB_OTG_BSP_uDelay</a> (const uint32_t usec)</td></tr>
+<tr class="memdesc:aa70213d9a7b9b047dc6d3357f99e19b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">USB_OTG_BSP_uDelay This function provides delay time in micro sec  <a href="#aa70213d9a7b9b047dc6d3357f99e19b5">更多...</a><br /></td></tr>
+<tr class="separator:aa70213d9a7b9b047dc6d3357f99e19b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a28c906bec05a1b7f91aa0e4ff5d8a16c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__usb_8c.html#a28c906bec05a1b7f91aa0e4ff5d8a16c">USB_OTG_BSP_mDelay</a> (const uint32_t msec)</td></tr>
+<tr class="memdesc:a28c906bec05a1b7f91aa0e4ff5d8a16c"><td class="mdescLeft">&#160;</td><td class="mdescRight">USB_OTG_BSP_mDelay This function provides delay time in milli sec  <a href="#a28c906bec05a1b7f91aa0e4ff5d8a16c">更多...</a><br /></td></tr>
+<tr class="separator:a28c906bec05a1b7f91aa0e4ff5d8a16c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+变量</h2></td></tr>
+<tr class="memitem:a7ccb1664e7eaef1ae7a6fda10d5a3ac7"><td class="memItemLeft" align="right" valign="top">USB_OTG_CORE_HANDLE&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__usb_8c.html#a7ccb1664e7eaef1ae7a6fda10d5a3ac7">USB_OTG_dev</a></td></tr>
+<tr class="separator:a7ccb1664e7eaef1ae7a6fda10d5a3ac7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a247c407b0c06319f16669ee2f3b35530"><td class="memItemLeft" align="right" valign="top">USB_OTG_CORE_HANDLE&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__usb_8c.html#a247c407b0c06319f16669ee2f3b35530">USB_OTG_Core</a></td></tr>
+<tr class="separator:a247c407b0c06319f16669ee2f3b35530"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">函数说明</h2>
+<a id="a02dee21bb9a092415782c0e1a460981c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a02dee21bb9a092415782c0e1a460981c">&#9670;&nbsp;</a></span>USB_OTG_BSP_ConfigVBUS()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void USB_OTG_BSP_ConfigVBUS </td>
+          <td>(</td>
+          <td class="paramtype">USB_OTG_CORE_HANDLE *&#160;</td>
+          <td class="paramname"><em>pdev</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>USB_OTG_BSP_ConfigVBUS Configures the IO for the Vbus and OverCurrent </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">None</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>返回值</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">None</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a1a0b196001899cd61bc722d080ca8161"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1a0b196001899cd61bc722d080ca8161">&#9670;&nbsp;</a></span>USB_OTG_BSP_DriveVBUS()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void USB_OTG_BSP_DriveVBUS </td>
+          <td>(</td>
+          <td class="paramtype">USB_OTG_CORE_HANDLE *&#160;</td>
+          <td class="paramname"><em>pdev</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>state</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>BSP_Drive_VBUS Drives the Vbus signal through IO </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">state</td><td>: VBUS states </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>返回值</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">None</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a38bdd94d09d00f27d1343fdb0babdfa1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a38bdd94d09d00f27d1343fdb0babdfa1">&#9670;&nbsp;</a></span>USB_OTG_BSP_EnableInterrupt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void USB_OTG_BSP_EnableInterrupt </td>
+          <td>(</td>
+          <td class="paramtype">USB_OTG_CORE_HANDLE *&#160;</td>
+          <td class="paramname"><em>pdev</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>USB_OTG_BSP_EnableInterrupt Configures USB Global interrupt </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">None</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>返回值</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">None</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="acffb89e4346b11dee704fe5a40326a1f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acffb89e4346b11dee704fe5a40326a1f">&#9670;&nbsp;</a></span>USB_OTG_BSP_Init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void USB_OTG_BSP_Init </td>
+          <td>(</td>
+          <td class="paramtype">USB_OTG_CORE_HANDLE *&#160;</td>
+          <td class="paramname"><em>pdev</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>USB_OTG_BSP_Init Initilizes BSP configurations </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">None</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>返回值</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">None</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a28c906bec05a1b7f91aa0e4ff5d8a16c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a28c906bec05a1b7f91aa0e4ff5d8a16c">&#9670;&nbsp;</a></span>USB_OTG_BSP_mDelay()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void USB_OTG_BSP_mDelay </td>
+          <td>(</td>
+          <td class="paramtype">const uint32_t&#160;</td>
+          <td class="paramname"><em>msec</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>USB_OTG_BSP_mDelay This function provides delay time in milli sec </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">msec</td><td>: Value of delay required in milli sec </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>返回值</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">None</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aa70213d9a7b9b047dc6d3357f99e19b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa70213d9a7b9b047dc6d3357f99e19b5">&#9670;&nbsp;</a></span>USB_OTG_BSP_uDelay()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void USB_OTG_BSP_uDelay </td>
+          <td>(</td>
+          <td class="paramtype">const uint32_t&#160;</td>
+          <td class="paramname"><em>usec</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>USB_OTG_BSP_uDelay This function provides delay time in micro sec </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">usec</td><td>: Value of delay required in micro sec </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>返回值</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">None</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">变量说明</h2>
+<a id="a247c407b0c06319f16669ee2f3b35530"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a247c407b0c06319f16669ee2f3b35530">&#9670;&nbsp;</a></span>USB_OTG_Core</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">USB_OTG_CORE_HANDLE USB_OTG_Core</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7ccb1664e7eaef1ae7a6fda10d5a3ac7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ccb1664e7eaef1ae7a6fda10d5a3ac7">&#9670;&nbsp;</a></span>USB_OTG_dev</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">USB_OTG_CORE_HANDLE USB_OTG_dev</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

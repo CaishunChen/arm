@@ -1,0 +1,156 @@
+﻿/*
+*********************************************************************************************************
+*
+*	                   STM32引脚分配表(按GPIO次序排列)
+*
+*********************************************************************************************************
+*/
+【按GPIO次序排列, 一共140个GPIO】
+    PA0-WKUP/ADC123_IN0                         
+    PA1/ETH_RMII_RX_CLK                         
+    PA2/USART2/ETH_MDIO                         3G-TXD
+    PA3/USART2_RX                               3G-RXD
+    PA4/NRF905_TX_EN/NRF24L01_CE/DAC1_OUT       KEY-BACK
+    PA5/NRF905_TRX_CE/VS1053_XDCS/DAC2_OUT      KEY-SET
+    PA6/DCMI_PIXCLK                             KEY-LEFT
+    PA7/RMII_CRS_DV                             KEY-RIGHT
+    PA8/IR_TX                                   
+    PA9/USART1_TX                               
+    PA10/USART1_RX                              
+    PA11/OTG_FS_DM                              
+    PA12/OTG_FS_DP                              
+    PA13/JTMS-SWDIO                             
+    PA14/JTCK-SWCLK                             
+    PA15/DM9000_INT                             
+
+    PB0/IR_RX                                   LCD-WR
+    PB1/1-WIRE                                  LCD-RS
+    PB2-BOOT1/RS485_TXEN                        
+    PB3/SPI3_SCK                                
+    PB4/SPI3_MISO                               3G-Power-Enable
+    PB5/SPI3_MOSI                               
+    PB6/CAN2_TX/NRF905_PWR_UP                   
+    PB7/GPRS_RESET                              
+    PB8/NRF905_DR/VS1053_DREQ                   
+    PB9/NRF905_AM                               
+    PB10/USART3_TX/IIC2                         IIC2-SCL(Illum,TempHumid)     
+    PB11/USART3_RX/IIC2                         IIC2-SDA(Illum,TempHumid)     
+    PB12/I2S2_WS/CAN2_RX                        
+    PB13/I2S2_CK/CAN2_TX/ETH_RMII_TXD1          
+    PB14/OTG_HS_DM                              
+    PB15/OTG_HS_DP                              
+
+    PC0/ADC123_IN10                             3G-RESET
+    PC1/ETH_MDC                                 3G-PWRON
+    PC2/NRF905_CSN/VS1053_XCS                   
+    PC3/I2S2_SD                                 
+    PC4/ETH_RMII_RX_D0                          LCD-RST
+    PC5/ETH_RMII_RX_D1                          LCD-RD
+    PC6/I2S2_MCK                                LCD-BACKLIGHT2
+    PC7/USART6_RX                               LCD-BACKLIGHT1
+    PC8/SDIO_D0                                 
+    PC9/SDIO_D1                                 
+    PC10/SDIO_D2                                
+    PC11/SDIO_D3                                
+    PC12/SDIO_CK                                
+    PC13/KEY2                                   
+    PC14-OSC32_IN                               
+    PC15-OSC32_OUT                              
+
+    PD0/FSMC_D2                                 
+    PD1/FSMC_D3                                 
+    PD2/SDIO_CMD                                
+    PD3/LCD_BUSY                                
+    PD4/FSMC_NOE                                
+    PD5/FSMC_NWE                                
+    PD6/FSMC_NWAIT                              LED1
+    PD7/FSMC_NCE2                               
+    PD8/FSMC_D13                                
+    PD9/FSMC_D14                                
+    PD10/FSMC_D15                               KEY-HOME
+    PD11/FSMC_CLE/FSMC_A16                      
+    PD12/FSMC_ALE/FSMC_A17                      
+    PD13/FSMC_A18                               
+    PD14/FSMC_D0                                
+    PD15/FSMC_D1                                
+
+    PE0/FSMC_NBL0                               
+    PE1/FSMC_NBL1                               
+    PE2/FSMC_A23/SD_DETECT                      
+    PE3/FSMC_A19                                
+    PE4/FSMC_A20                                
+    PE5/FSMC_A21                                
+    PE6/FSMC_A22                                
+    PE7/FSMC_D4                                 LCD-CS
+    PE8/FSMC_D5                                 LCD-D0
+    PE9/FSMC_D6                                 LCD-D1
+    PE10/FSMC_D7                                LCD-D2
+    PE11/FSMC_D8                                LCD-D3
+    PE12/FSMC_D9                                LCD-D4
+    PE13/FSMC_D10                               LCD-D5
+    PE14/FSMC_D11                               LCD-D6
+    PE15/FSMC_D12                               LCD-D7
+
+    PF0/FSMC_A0                                 
+    PF1/FSMC_A1                                 
+    PF2/FSMC_A2                                 
+    PF3/FSMC_A3                                 
+    PF4/FSMC_A4                                 
+    PF5/FSMC_A5                                 
+    PF6/LCD_PWM                                 
+    PF7/NRF24L01_CSN                            
+    PF8/SF_CS                                   
+    PF9/ADC3_IN7                                
+    PF10/ADC3_IN8                               
+    PF11/JOY_L/PS2_DATA                         
+    PF12/FSMC_A6                                
+    PF13/FSMC_A7                                
+    PF14/FSMC_A8                                
+    PF15/FSMC_A9                                
+
+    PG0/FSMC_A10                                
+    PG1/FSMC_A11                                
+    PG2/FSMC_A12                                
+    PG3/FSMC_A13                                
+    PG4/FSMC_A14                                
+    PG5/FSMC_A15                                
+    PG6/FSMC_INT2                               
+    PG7/JOY_R/PS2_CLK                           
+    PG8/USART6_RTS                              
+    PG9/FSMC_NE2                                
+    PG10/FSMC_NE3                               
+    PG11/ETH_RMII_TX_EN                         
+    PG12/FSMC_NE4                               
+    PG13/FSMC_A24/ETH_RMII_TXD0                 
+    PG14/USART6_TX/ETH_RMII_TXD1                
+    PG15/USART6_CTS                             
+
+    PH0-OSC_IN                                  
+    PH1-OSC_OUT                                 
+    PH2/JOY_U                                   
+    PH3/JOY_D                                   
+    PH4/I2C2_SCL                                
+    PH5/I2C2_SDA                                
+    PH6/MII_INT                                 
+    PH7/NRF24L01_IRQ                            
+    PH8/DCMI_HSYNC                              
+    PH9/DCMI_D0/AD7606_OS0                      
+    PH10/DCMI_D1/AD7606_OS1                     
+    PH11/DCMI_D2/AD7606_OS2                     
+    PH12/DCMI_D3/AD7606_CONVST                  
+    PH13/CAN1_TX                                
+    PH14/DCMI_D4/AD7606_RAGE                    
+    PH15/JOY_OK                                 
+
+    PI0/GPRS_TERM_ON                            
+    PI1/MPU-6050_INT                            
+    PI2/I2S2ext_SD                              
+    PI3/TP_INT                                  
+    PI4/DCMI_D5/AD7606_RESET                    
+    PI5/DCMI_VSYNC                              
+    PI6/DCMI_D6/AD7606_BUSY                     
+    PI7/DCMI_D7/NRF905_CD                       
+    PI8/KEY1                                    
+    PI9/CAN1_RX                                 
+    PI10/TP_NCS                                 
+    PI11/KEY3                                   

@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>xsl: E:/XkapSourceCode/Xkap-Stm32/Xkap-Stm32/User/UserBsp/Bsp_Dac.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">xsl
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">源码说明</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.13 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',false,false,'search.php','搜索');
+});
+</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_6d4e12d46ad8519ff7b80e874016d102.html">User</a></li><li class="navelem"><a class="el" href="dir_a31a870a1361c5173f8d637697bb576e.html">UserBsp</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">Bsp_Dac.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_bsp___dac_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="preprocessor">#ifndef __BSP_DAC_H</span></div><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="preprocessor">#define __BSP_DAC_H</span></div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="comment">//-------------------加载库函数------------------------------</span></div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="includes_8h.html">includes.h</a>&quot;</span></div><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="comment">//-------------------接口宏定义(硬件相关)--------------------</span></div><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="comment">//基准源设定</span></div><div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="_bsp___dac_8h.html#aa78a2a23cf37d19f5433619f1880acb9">   47</a></span>&#160;<span class="preprocessor">#define BSP_DAC_REF_MV           3300</span></div><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="comment">//DAC1</span></div><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="preprocessor">#if   (defined(STM32F1))</span></div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="preprocessor">#define BSP_DAC1_GPIO_RCC_ENABLE RCC_APB2PeriphClockCmd( RCC_APB2Periph_GPIOA , ENABLE);</span></div><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="preprocessor">#define BSP_DAC1_RCC_ENABLE      RCC_APB1PeriphClockCmd(RCC_APB1Periph_DAC,ENABLE);</span></div><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="preprocessor">#elif (defined(STM32F4))</span></div><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="preprocessor">#define BSP_DAC1_GPIO_RCC_ENABLE RCC_AHB1PeriphClockCmd( RCC_AHB1Periph_GPIOA , ENABLE);</span></div><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="preprocessor">#define BSP_DAC1_RCC_ENABLE      RCC_APB1PeriphClockCmd(RCC_APB1Periph_DAC,ENABLE);</span></div><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="preprocessor">#define BSP_DAC1_RCC_DISABLE     RCC_APB1PeriphClockCmd(RCC_APB1Periph_DAC,DISABLE);</span></div><div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="preprocessor">#endif</span></div><div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="_bsp___dac_8h.html#a1766b306017a48e09d7810817c30158d">   57</a></span>&#160;<span class="preprocessor">#define BSP_DAC1_PORT            GPIOA</span></div><div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="_bsp___dac_8h.html#aa46de3d16a6921e6a6d147164c400e49">   58</a></span>&#160;<span class="preprocessor">#define BSP_DAC1_PIN             GPIO_Pin_4</span></div><div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="_bsp___dac_8h.html#a28da7555d4fe1a9c761b0582b1f41302">   59</a></span>&#160;<span class="preprocessor">#define BSP_DAC1_CH              DAC_Channel_1</span></div><div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="_bsp___dac_8h.html#a37e82dfb86a06f1af03571eed04aca32">   60</a></span>&#160;<span class="preprocessor">#define BSP_DAC1_SET_FUN         DAC_SetChannel1Data</span></div><div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="comment">//DAC2</span></div><div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="preprocessor">#if   (defined(STM32F1))</span></div><div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="preprocessor">#define BSP_DAC2_GPIO_RCC_ENABLE RCC_APB2PeriphClockCmd( RCC_APB2Periph_GPIOA , ENABLE);</span></div><div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="preprocessor">#define BSP_DAC2_RCC_ENABLE      RCC_APB1PeriphClockCmd(RCC_APB1Periph_DAC,ENABLE);</span></div><div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="preprocessor">#elif (defined(STM32F4))</span></div><div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="preprocessor">#define BSP_DAC2_GPIO_RCC_ENABLE RCC_AHB1PeriphClockCmd( RCC_AHB1Periph_GPIOA , ENABLE);</span></div><div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="preprocessor">#define BSP_DAC2_RCC_ENABLE      RCC_APB1PeriphClockCmd(RCC_APB1Periph_DAC,ENABLE);</span></div><div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="preprocessor">#define BSP_DAC2_RCC_DISABLE     RCC_APB1PeriphClockCmd(RCC_APB1Periph_DAC,DISABLE);</span></div><div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="preprocessor">#endif</span></div><div class="line"><a name="l00070"></a><span class="lineno"><a class="line" href="_bsp___dac_8h.html#a74cf71acbca8089a7b11daec12535beb">   70</a></span>&#160;<span class="preprocessor">#define BSP_DAC2_PORT            GPIOA</span></div><div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="_bsp___dac_8h.html#a63b3e1b53c53ee0d9b8aa08f3b721e3c">   71</a></span>&#160;<span class="preprocessor">#define BSP_DAC2_PIN             GPIO_Pin_5</span></div><div class="line"><a name="l00072"></a><span class="lineno"><a class="line" href="_bsp___dac_8h.html#a2a1bac5a54563d620929dc224778cfbc">   72</a></span>&#160;<span class="preprocessor">#define BSP_DAC2_CH              DAC_Channel_2</span></div><div class="line"><a name="l00073"></a><span class="lineno"><a class="line" href="_bsp___dac_8h.html#a05a658a0766d95271cbdccb03a9515bd">   73</a></span>&#160;<span class="preprocessor">#define BSP_DAC2_SET_FUN         DAC_SetChannel2Data</span></div><div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="comment">//-------------------接口函数--------------------------------</span></div><div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">void</span> <a class="code" href="_bsp___dac_8h.html#a79de7ad9b130030270e3f4f4be64a311">BspDac_Init</a>(uint8_t <a class="code" href="main___iap_test_8c.html#a0523c05685d59544dca911cb6a3db77d">ch</a>);</div><div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">void</span> <a class="code" href="_bsp___dac_8h.html#a46f8bfbcba731163143aacc41d4e8459">BspDac_DeInit</a>(uint8_t <a class="code" href="main___iap_test_8c.html#a0523c05685d59544dca911cb6a3db77d">ch</a>);</div><div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">void</span> <a class="code" href="_bsp___dac_8h.html#a9437d6fb52b8ad7a4448380b36165580">BspDac_Write</a>(uint8_t <a class="code" href="main___iap_test_8c.html#a0523c05685d59544dca911cb6a3db77d">ch</a>,uint16_t mv);</div><div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="comment">//-------------------------------------------------------------------------------输出函数</span></div><div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="preprocessor">#endif</span></div><div class="ttc" id="_bsp___dac_8h_html_a46f8bfbcba731163143aacc41d4e8459"><div class="ttname"><a href="_bsp___dac_8h.html#a46f8bfbcba731163143aacc41d4e8459">BspDac_DeInit</a></div><div class="ttdeci">void BspDac_DeInit(uint8_t ch)</div><div class="ttdef"><b>Definition:</b> Bsp_Dac.c:80</div></div>
+<div class="ttc" id="includes_8h_html"><div class="ttname"><a href="includes_8h.html">includes.h</a></div></div>
+<div class="ttc" id="_bsp___dac_8h_html_a9437d6fb52b8ad7a4448380b36165580"><div class="ttname"><a href="_bsp___dac_8h.html#a9437d6fb52b8ad7a4448380b36165580">BspDac_Write</a></div><div class="ttdeci">void BspDac_Write(uint8_t ch, uint16_t mv)</div><div class="ttdef"><b>Definition:</b> Bsp_Dac.c:134</div></div>
+<div class="ttc" id="main___iap_test_8c_html_a0523c05685d59544dca911cb6a3db77d"><div class="ttname"><a href="main___iap_test_8c.html#a0523c05685d59544dca911cb6a3db77d">ch</a></div><div class="ttdeci">return ch</div><div class="ttdef"><b>Definition:</b> main_IapTest.c:70</div></div>
+<div class="ttc" id="_bsp___dac_8h_html_a79de7ad9b130030270e3f4f4be64a311"><div class="ttname"><a href="_bsp___dac_8h.html#a79de7ad9b130030270e3f4f4be64a311">BspDac_Init</a></div><div class="ttdeci">void BspDac_Init(uint8_t ch)</div><div class="ttdef"><b>Definition:</b> Bsp_Dac.c:18</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

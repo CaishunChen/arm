@@ -1,0 +1,535 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>xsl: E:/XkapSourceCode/Xkap-Stm32/Xkap-Stm32/User/UserTask/bootloader.c 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">xsl
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">源码说明</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.13 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',false,false,'search.php','搜索');
+});
+</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_6d4e12d46ad8519ff7b80e874016d102.html">User</a></li><li class="navelem"><a class="el" href="dir_ba9e781c49be9d79c84eb9994eefebec.html">UserTask</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#define-members">宏定义</a> &#124;
+<a href="#typedef-members">类型定义</a> &#124;
+<a href="#func-members">函数</a> &#124;
+<a href="#var-members">变量</a>  </div>
+  <div class="headertitle">
+<div class="title">bootloader.c 文件参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;string.h&gt;</code><br />
+<code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="_bsp___cpu_flash_8h_source.html">Bsp_CpuFlash.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_bsp___ext_flash_8h_source.html">Bsp_ExtFlash.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_module___memory_8h_source.html">Module_Memory.h</a>&quot;</code><br />
+<code>#include &quot;ff.h&quot;</code><br />
+<code>#include &quot;diskio.h&quot;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+宏定义</h2></td></tr>
+<tr class="memitem:ada495fd5604b065a3f8d1fd5572b02f2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bootloader_8c.html#ada495fd5604b065a3f8d1fd5572b02f2">BOOTLOADER_TF_ENABLE</a></td></tr>
+<tr class="separator:ada495fd5604b065a3f8d1fd5572b02f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aebfbd7ef1fbd654d97149ba5d3886e5b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bootloader_8c.html#aebfbd7ef1fbd654d97149ba5d3886e5b">BOOTLOADER_VER</a>&#160;&#160;&#160;(5)</td></tr>
+<tr class="separator:aebfbd7ef1fbd654d97149ba5d3886e5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac040eb6679fed6e591776425aa7abd9d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bootloader_8c.html#ac040eb6679fed6e591776425aa7abd9d">PUTCHAR_PROTOTYPE</a>&#160;&#160;&#160;int <a class="el" href="bsp__uart__fifo_8c.html#abac7707b6be5733e890091048fcb99a2">fputc</a>(int <a class="el" href="main___iap_test_8c.html#a0523c05685d59544dca911cb6a3db77d">ch</a>, FILE *f)</td></tr>
+<tr class="separator:ac040eb6679fed6e591776425aa7abd9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89c412b63ad7374c88e3c359a7fca246"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bootloader_8c.html#a89c412b63ad7374c88e3c359a7fca246">BOOTLOADER_TF_FILE</a>&#160;&#160;&#160;&quot;/fw.bin&quot;</td></tr>
+<tr class="separator:a89c412b63ad7374c88e3c359a7fca246"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a239b5ae6407c9a1463aedd806c833f88"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bootloader_8c.html#a239b5ae6407c9a1463aedd806c833f88">USER_FLASH_ADDR_START_KB</a>&#160;&#160;&#160;20</td></tr>
+<tr class="separator:a239b5ae6407c9a1463aedd806c833f88"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b2973c878f155285f7a34b2c03bfaa7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bootloader_8c.html#a6b2973c878f155285f7a34b2c03bfaa7">USER_FLASH_ADDR_ADDR_KB</a>&#160;&#160;&#160;265</td></tr>
+<tr class="separator:a6b2973c878f155285f7a34b2c03bfaa7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a720355f0dd2ce37e9da9f72edf5c2e18"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bootloader_8c.html#a720355f0dd2ce37e9da9f72edf5c2e18">ISP_FLASH_ADDR_START_KB</a>&#160;&#160;&#160;266</td></tr>
+<tr class="separator:a720355f0dd2ce37e9da9f72edf5c2e18"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad9e906ff2d84b5bfffd504fac10fb240"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bootloader_8c.html#ad9e906ff2d84b5bfffd504fac10fb240">ISP_FLASH_ADDR_END_KB</a>&#160;&#160;&#160;511</td></tr>
+<tr class="separator:ad9e906ff2d84b5bfffd504fac10fb240"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8fdb51f9080539a27bcb708e1cafcbf0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bootloader_8c.html#a8fdb51f9080539a27bcb708e1cafcbf0">BOOTLOADER_KEY1_PORT</a>&#160;&#160;&#160;GPIOD</td></tr>
+<tr class="separator:a8fdb51f9080539a27bcb708e1cafcbf0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a5a96e4fdc0cc1f731b9135d4b0d919"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bootloader_8c.html#a2a5a96e4fdc0cc1f731b9135d4b0d919">BOOTLOADER_KEY1_PIN</a>&#160;&#160;&#160;GPIO_Pin_10</td></tr>
+<tr class="separator:a2a5a96e4fdc0cc1f731b9135d4b0d919"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a42fe45e5b7e685e424d6d3f5de5217e3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bootloader_8c.html#a42fe45e5b7e685e424d6d3f5de5217e3">BOOTLOADER_KEY2_PORT</a>&#160;&#160;&#160;GPIOC</td></tr>
+<tr class="separator:a42fe45e5b7e685e424d6d3f5de5217e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae3d9f0beb821337c0b7128703e1f1480"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bootloader_8c.html#ae3d9f0beb821337c0b7128703e1f1480">BOOTLOADER_KEY2_PIN</a>&#160;&#160;&#160;GPIO_Pin_3</td></tr>
+<tr class="separator:ae3d9f0beb821337c0b7128703e1f1480"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+类型定义</h2></td></tr>
+<tr class="memitem:aed53e618f2025481fbe48a5098f70079"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bootloader_8c.html#aed53e618f2025481fbe48a5098f70079">pFunction</a>) (void)</td></tr>
+<tr class="separator:aed53e618f2025481fbe48a5098f70079"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:a44e35b22c44a833394edb6020a34511e"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bootloader_8c.html#a44e35b22c44a833394edb6020a34511e">check_isp_entry_pin</a> (void)</td></tr>
+<tr class="separator:a44e35b22c44a833394edb6020a34511e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef1a5c1a939a4420531f875e54ee0ae8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bootloader_8c.html#aef1a5c1a939a4420531f875e54ee0ae8">execute_user_code</a> (void)</td></tr>
+<tr class="separator:aef1a5c1a939a4420531f875e54ee0ae8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a840291bc02cba5474a4cb46a9b9566fe"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bootloader_8c.html#a840291bc02cba5474a4cb46a9b9566fe">main</a> (void)</td></tr>
+<tr class="separator:a840291bc02cba5474a4cb46a9b9566fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a23f21e58931c21107cbcd2c5f9c83ac3"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bootloader_8c.html#a23f21e58931c21107cbcd2c5f9c83ac3">check_isp_Out_pin</a> (void)</td></tr>
+<tr class="separator:a23f21e58931c21107cbcd2c5f9c83ac3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+变量</h2></td></tr>
+<tr class="memitem:a84c5d94fa848a708b99d35841a80d505"><td class="memItemLeft" align="right" valign="top">FATFS&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bootloader_8c.html#a84c5d94fa848a708b99d35841a80d505">BOOTLOADER_Fs</a></td></tr>
+<tr class="separator:a84c5d94fa848a708b99d35841a80d505"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a173a9fd2d5578a1d826fa18e276a96"><td class="memItemLeft" align="right" valign="top">FIL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bootloader_8c.html#a0a173a9fd2d5578a1d826fa18e276a96">BOOTLOADER_fsrc</a></td></tr>
+<tr class="separator:a0a173a9fd2d5578a1d826fa18e276a96"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a59614d64be27269cd50a61a8328b4ab0"><td class="memItemLeft" align="right" valign="top">FRESULT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bootloader_8c.html#a59614d64be27269cd50a61a8328b4ab0">BOOTLOADER_Res</a></td></tr>
+<tr class="separator:a59614d64be27269cd50a61a8328b4ab0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae008716d6ed133fb953438fc2bc494dd"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bootloader_8c.html#ae008716d6ed133fb953438fc2bc494dd">BOOTLOADER_buf</a> [1024]</td></tr>
+<tr class="separator:ae008716d6ed133fb953438fc2bc494dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af23fa039de6085c4eba7ece4341bac96"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bootloader_8c.html#af23fa039de6085c4eba7ece4341bac96">BOOTLOADER_FileSize</a></td></tr>
+<tr class="separator:af23fa039de6085c4eba7ece4341bac96"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe6990204003a7b416139a4723064b14"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bootloader_8c.html#aed53e618f2025481fbe48a5098f70079">pFunction</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bootloader_8c.html#afe6990204003a7b416139a4723064b14">Jump_To_Application</a></td></tr>
+<tr class="separator:afe6990204003a7b416139a4723064b14"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a77170d6dd28c130d54753378bdfa035e"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bootloader_8c.html#a77170d6dd28c130d54753378bdfa035e">JumpAddress</a></td></tr>
+<tr class="separator:a77170d6dd28c130d54753378bdfa035e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac1e35b30996a8c48d65a81e1dd0e8318"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_m_o_d_u_l_e___m_e_m_o_r_y___s___p_a_r_a.html">MODULE_MEMORY_S_PARA</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bootloader_8c.html#ac1e35b30996a8c48d65a81e1dd0e8318">S_Para</a></td></tr>
+<tr class="separator:ac1e35b30996a8c48d65a81e1dd0e8318"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a24f50adf55dc7ab33804a4105ff480d9"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bootloader_8c.html#a24f50adf55dc7ab33804a4105ff480d9">sum1</a></td></tr>
+<tr class="separator:a24f50adf55dc7ab33804a4105ff480d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0fe44f0d86c23c11c828d4cb5102409c"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bootloader_8c.html#a0fe44f0d86c23c11c828d4cb5102409c">sum2</a></td></tr>
+<tr class="separator:a0fe44f0d86c23c11c828d4cb5102409c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">宏定义说明</h2>
+<a id="a2a5a96e4fdc0cc1f731b9135d4b0d919"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a5a96e4fdc0cc1f731b9135d4b0d919">&#9670;&nbsp;</a></span>BOOTLOADER_KEY1_PIN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BOOTLOADER_KEY1_PIN&#160;&#160;&#160;GPIO_Pin_10</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8fdb51f9080539a27bcb708e1cafcbf0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8fdb51f9080539a27bcb708e1cafcbf0">&#9670;&nbsp;</a></span>BOOTLOADER_KEY1_PORT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BOOTLOADER_KEY1_PORT&#160;&#160;&#160;GPIOD</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae3d9f0beb821337c0b7128703e1f1480"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae3d9f0beb821337c0b7128703e1f1480">&#9670;&nbsp;</a></span>BOOTLOADER_KEY2_PIN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BOOTLOADER_KEY2_PIN&#160;&#160;&#160;GPIO_Pin_3</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a42fe45e5b7e685e424d6d3f5de5217e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a42fe45e5b7e685e424d6d3f5de5217e3">&#9670;&nbsp;</a></span>BOOTLOADER_KEY2_PORT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BOOTLOADER_KEY2_PORT&#160;&#160;&#160;GPIOC</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ada495fd5604b065a3f8d1fd5572b02f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ada495fd5604b065a3f8d1fd5572b02f2">&#9670;&nbsp;</a></span>BOOTLOADER_TF_ENABLE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BOOTLOADER_TF_ENABLE</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a89c412b63ad7374c88e3c359a7fca246"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a89c412b63ad7374c88e3c359a7fca246">&#9670;&nbsp;</a></span>BOOTLOADER_TF_FILE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BOOTLOADER_TF_FILE&#160;&#160;&#160;&quot;/fw.bin&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aebfbd7ef1fbd654d97149ba5d3886e5b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aebfbd7ef1fbd654d97149ba5d3886e5b">&#9670;&nbsp;</a></span>BOOTLOADER_VER</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BOOTLOADER_VER&#160;&#160;&#160;(5)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad9e906ff2d84b5bfffd504fac10fb240"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad9e906ff2d84b5bfffd504fac10fb240">&#9670;&nbsp;</a></span>ISP_FLASH_ADDR_END_KB</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ISP_FLASH_ADDR_END_KB&#160;&#160;&#160;511</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a720355f0dd2ce37e9da9f72edf5c2e18"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a720355f0dd2ce37e9da9f72edf5c2e18">&#9670;&nbsp;</a></span>ISP_FLASH_ADDR_START_KB</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ISP_FLASH_ADDR_START_KB&#160;&#160;&#160;266</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac040eb6679fed6e591776425aa7abd9d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac040eb6679fed6e591776425aa7abd9d">&#9670;&nbsp;</a></span>PUTCHAR_PROTOTYPE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define PUTCHAR_PROTOTYPE&#160;&#160;&#160;int <a class="el" href="bsp__uart__fifo_8c.html#abac7707b6be5733e890091048fcb99a2">fputc</a>(int <a class="el" href="main___iap_test_8c.html#a0523c05685d59544dca911cb6a3db77d">ch</a>, FILE *f)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6b2973c878f155285f7a34b2c03bfaa7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6b2973c878f155285f7a34b2c03bfaa7">&#9670;&nbsp;</a></span>USER_FLASH_ADDR_ADDR_KB</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define USER_FLASH_ADDR_ADDR_KB&#160;&#160;&#160;265</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a239b5ae6407c9a1463aedd806c833f88"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a239b5ae6407c9a1463aedd806c833f88">&#9670;&nbsp;</a></span>USER_FLASH_ADDR_START_KB</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define USER_FLASH_ADDR_START_KB&#160;&#160;&#160;20</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">类型定义说明</h2>
+<a id="aed53e618f2025481fbe48a5098f70079"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aed53e618f2025481fbe48a5098f70079">&#9670;&nbsp;</a></span>pFunction</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef void(* pFunction) (void)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">函数说明</h2>
+<a id="a44e35b22c44a833394edb6020a34511e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a44e35b22c44a833394edb6020a34511e">&#9670;&nbsp;</a></span>check_isp_entry_pin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t check_isp_entry_pin </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a23f21e58931c21107cbcd2c5f9c83ac3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a23f21e58931c21107cbcd2c5f9c83ac3">&#9670;&nbsp;</a></span>check_isp_Out_pin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t check_isp_Out_pin </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aef1a5c1a939a4420531f875e54ee0ae8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aef1a5c1a939a4420531f875e54ee0ae8">&#9670;&nbsp;</a></span>execute_user_code()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void execute_user_code </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a840291bc02cba5474a4cb46a9b9566fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a840291bc02cba5474a4cb46a9b9566fe">&#9670;&nbsp;</a></span>main()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int main </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">变量说明</h2>
+<a id="ae008716d6ed133fb953438fc2bc494dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae008716d6ed133fb953438fc2bc494dd">&#9670;&nbsp;</a></span>BOOTLOADER_buf</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t BOOTLOADER_buf[1024]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af23fa039de6085c4eba7ece4341bac96"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af23fa039de6085c4eba7ece4341bac96">&#9670;&nbsp;</a></span>BOOTLOADER_FileSize</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t BOOTLOADER_FileSize</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a84c5d94fa848a708b99d35841a80d505"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a84c5d94fa848a708b99d35841a80d505">&#9670;&nbsp;</a></span>BOOTLOADER_Fs</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FATFS BOOTLOADER_Fs</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0a173a9fd2d5578a1d826fa18e276a96"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a173a9fd2d5578a1d826fa18e276a96">&#9670;&nbsp;</a></span>BOOTLOADER_fsrc</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FIL BOOTLOADER_fsrc</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a59614d64be27269cd50a61a8328b4ab0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a59614d64be27269cd50a61a8328b4ab0">&#9670;&nbsp;</a></span>BOOTLOADER_Res</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FRESULT BOOTLOADER_Res</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afe6990204003a7b416139a4723064b14"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe6990204003a7b416139a4723064b14">&#9670;&nbsp;</a></span>Jump_To_Application</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bootloader_8c.html#aed53e618f2025481fbe48a5098f70079">pFunction</a> Jump_To_Application</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a77170d6dd28c130d54753378bdfa035e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a77170d6dd28c130d54753378bdfa035e">&#9670;&nbsp;</a></span>JumpAddress</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t JumpAddress</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac1e35b30996a8c48d65a81e1dd0e8318"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac1e35b30996a8c48d65a81e1dd0e8318">&#9670;&nbsp;</a></span>S_Para</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_m_o_d_u_l_e___m_e_m_o_r_y___s___p_a_r_a.html">MODULE_MEMORY_S_PARA</a> S_Para</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a24f50adf55dc7ab33804a4105ff480d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a24f50adf55dc7ab33804a4105ff480d9">&#9670;&nbsp;</a></span>sum1</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t sum1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0fe44f0d86c23c11c828d4cb5102409c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0fe44f0d86c23c11c828d4cb5102409c">&#9670;&nbsp;</a></span>sum2</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t sum2</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

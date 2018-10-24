@@ -1,0 +1,71 @@
+L 1 "..\..\User\uCOS-III\uC-LIB\lib_math.c"
+N/*
+N*********************************************************************************************************
+N*                                                uC/LIB
+N*                                        CUSTOM LIBRARY MODULES
+N*
+N*                          (c) Copyright 2004-2012; Micrium, Inc.; Weston, FL
+N*
+N*               All rights reserved.  Protected by international copyright laws.
+N*
+N*               uC/LIB is provided in source form to registered licensees ONLY.  It is 
+N*               illegal to distribute this source code to any third party unless you receive 
+N*               written permission by an authorized Micrium representative.  Knowledge of 
+N*               the source code may NOT be used to develop a similar product.
+N*
+N*               Please help us continue to provide the Embedded community with the finest 
+N*               software available.  Your honesty is greatly appreciated.
+N*
+N*               You can contact us at www.micrium.com.
+N*********************************************************************************************************
+N*/
+N
+N/*
+N*********************************************************************************************************
+N*
+N*                                        MATHEMATIC OPERATIONS
+N*
+N* Filename      : lib_math.c
+N* Version       : V1.37.01
+N* Programmer(s) : SR
+N*                 ITJ
+N*********************************************************************************************************
+N* Note(s)       : (1) NO compiler-supplied standard library functions are used in library or product software.
+N*
+N*                     (a) ALL standard library functions are implemented in the custom library modules :
+N*
+N*                         (1) \<Custom Library Directory>\lib_*.*
+N*
+N*                         (2) \<Custom Library Directory>\Ports\<cpu>\<compiler>\lib*_a.*
+N*
+N*                               where
+N*                                       <Custom Library Directory>      directory path for custom library software
+N*                                       <cpu>                           directory name for specific processor (CPU)
+N*                                       <compiler>                      directory name for specific compiler
+N*
+N*                     (b) Product-specific library functions are implemented in individual products.
+N*
+N*********************************************************************************************************
+N* Notice(s)     : (1) The Institute of Electrical and Electronics Engineers and The Open Group, have given
+N*                     us permission to reprint portions of their documentation.  Portions of this text are
+N*                     reprinted and reproduced in electronic form from the IEEE Std 1003.1, 2004 Edition,
+N*                     Standard for Information Technology -- Portable Operating System Interface (POSIX),
+N*                     The Open Group Base Specifications Issue 6, Copyright (C) 2001-2004 by the Institute
+N*                     of Electrical and Electronics Engineers, Inc and The Open Group.  In the event of any
+N*                     discrepancy between these versions and the original IEEE and The Open Group Standard,
+N*                     the original IEEE and The Open Group Standard is the referee document.  The original
+N*                     Standard can be obtained online at http://www.opengroup.org/unix/online.html.
+N*********************************************************************************************************
+N*/
+N
+N
+N/*
+N*********************************************************************************************************
+N*                                            INCLUDE FILES
+N*********************************************************************************************************
+N*/
+N
+N#define    MICRIUM_SOURCE
+N#define    LIB_MATH_MODULE
+C "..\..\User\uCOS-III\uC-LIB\lib_math.c" 69 23 cannot open source input file "lib_math.h": No such file or directory
+N#include  <lib_math.h>

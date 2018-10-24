@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>xsl: E:/XkapSourceCode/Xkap-Stm32/Xkap-Stm32/User/UserBsp/Stm32F4/inc/bsp_tim_pwm.h æºæ–‡ä»¶</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">xsl
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">æºç è¯´æ˜</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- åˆ¶ä½œè€… Doxygen 1.8.13 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',false,false,'search.php','æœç´¢');
+});
+</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_6d4e12d46ad8519ff7b80e874016d102.html">User</a></li><li class="navelem"><a class="el" href="dir_a31a870a1361c5173f8d637697bb576e.html">UserBsp</a></li><li class="navelem"><a class="el" href="dir_5e177c7cc544a0a92a21db9013c51e57.html">Stm32F4</a></li><li class="navelem"><a class="el" href="dir_bfc268d3643ad69e1597d4c973161630.html">inc</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">bsp_tim_pwm.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="bsp__tim__pwm_8h.html">æµè§ˆè¯¥æ–‡ä»¶çš„æ–‡æ¡£.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*</span></div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">*********************************************************************************************************</span></div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">*</span></div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">*   Ä£¿éÃû³Æ : ÀûÓÃSTM32F4ÄÚ²¿TIMÊä³öPWMĞÅºÅ£¬Ë³±ãÊµÏÖ</span></div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">*   ÎÄ¼şÃû³Æ : bsp_tim_pwm.h</span></div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">*   °æ    ±¾ : V1.0</span></div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">*   Ëµ    Ã÷ : Í·ÎÄ¼ş</span></div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">*</span></div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">*   Copyright (C), 2012-2013, °²¸»À³µç×Ó www.armfly.com</span></div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">*</span></div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">*********************************************************************************************************</span></div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">*/</span></div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#ifndef __BSP_TIM_PWM_H</span></div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#define __BSP_TIM_PWM_H</span></div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keywordtype">void</span> <a class="code" href="bsp__tim__pwm_8h.html#a33c2d37d81e7639a263568cca2253b06">bsp_SetTIMOutPWM</a>(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin, TIM_TypeDef* TIMx, uint8_t _ucChannel,</div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;     uint32_t _ulFreq, uint32_t _ulDutyCycle);</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keywordtype">void</span> <a class="code" href="bsp__tim__pwm_8h.html#a87f7148c6a5c0fa352a8c2910ab7eed5">bsp_SetTIMforInt</a>(TIM_TypeDef* TIMx, uint32_t _ulFreq, uint8_t _PreemptionPriority, uint8_t _SubPriority);</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#endif</span></div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div><div class="ttc" id="bsp__tim__pwm_8h_html_a33c2d37d81e7639a263568cca2253b06"><div class="ttname"><a href="bsp__tim__pwm_8h.html#a33c2d37d81e7639a263568cca2253b06">bsp_SetTIMOutPWM</a></div><div class="ttdeci">void bsp_SetTIMOutPWM(GPIO_TypeDef *GPIOx, uint16_t GPIO_Pin, TIM_TypeDef *TIMx, uint8_t _ucChannel, uint32_t _ulFreq, uint32_t _ulDutyCycle)</div><div class="ttdef"><b>Definition:</b> bsp_tim_pwm.c:406</div></div>
+<div class="ttc" id="bsp__tim__pwm_8h_html_a87f7148c6a5c0fa352a8c2910ab7eed5"><div class="ttname"><a href="bsp__tim__pwm_8h.html#a87f7148c6a5c0fa352a8c2910ab7eed5">bsp_SetTIMforInt</a></div><div class="ttdeci">void bsp_SetTIMforInt(TIM_TypeDef *TIMx, uint32_t _ulFreq, uint8_t _PreemptionPriority, uint8_t _SubPriority)</div><div class="ttdef"><b>Definition:</b> bsp_tim_pwm.c:521</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+åˆ¶ä½œè€… &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

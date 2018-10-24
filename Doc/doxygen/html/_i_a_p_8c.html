@@ -1,0 +1,275 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>xsl: E:/XkapSourceCode/Xkap-Stm32/Xkap-Stm32/User/UserModule/IAP.c 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">xsl
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">源码说明</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.13 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',false,false,'search.php','搜索');
+});
+</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_6d4e12d46ad8519ff7b80e874016d102.html">User</a></li><li class="navelem"><a class="el" href="dir_eb2397560f3fdc052e61ca3a27327d74.html">UserModule</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#define-members">宏定义</a> &#124;
+<a href="#enum-members">枚举</a> &#124;
+<a href="#func-members">函数</a> &#124;
+<a href="#var-members">变量</a>  </div>
+  <div class="headertitle">
+<div class="title">IAP.c 文件参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="_i_a_p_8h_source.html">IAP.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="uctsk___debug_8h_source.html">uctsk_Debug.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_module___memory_8h_source.html">Module_Memory.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_bsp___cpu_flash_8h_source.html">Bsp_CpuFlash.h</a>&quot;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+宏定义</h2></td></tr>
+<tr class="memitem:aaf65a93afccd7e81649ed10cf4d3557f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_i_a_p_8c.html#aaf65a93afccd7e81649ed10cf4d3557f">IAP_MAX_PACKET_NUM</a>&#160;&#160;&#160;(<a class="el" href="_i_a_p_8h.html#a5eb5cce0587be369949499548951a3bf">IAP_MAX_BYTE</a>/<a class="el" href="_i_a_p_8h.html#ab4564b17569236d88be79b832cfb5621">IAP_PACKET_SIZE</a>)</td></tr>
+<tr class="separator:aaf65a93afccd7e81649ed10cf4d3557f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+枚举</h2></td></tr>
+<tr class="memitem:a7987b7ed9400cdf68ae3830fd1e1f703"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_i_a_p_8c.html#a7987b7ed9400cdf68ae3830fd1e1f703">IAP_ENTERPRO_CMD</a> { <a class="el" href="_i_a_p_8c.html#a7987b7ed9400cdf68ae3830fd1e1f703a570a05ab5946ece9b237c0c154f9b1cb">IAP_ENTERPRO_CMD_W</a> =0, 
+<a class="el" href="_i_a_p_8c.html#a7987b7ed9400cdf68ae3830fd1e1f703a15c0da64d0ca3fd817aef56c7a86b59c">IAP_ENTERPRO_CMD_F</a>, 
+<a class="el" href="_i_a_p_8c.html#a7987b7ed9400cdf68ae3830fd1e1f703ae77a3de168826614cc016089cee47321">IAP_ENTERPRO_CMD_S</a>, 
+<a class="el" href="_i_a_p_8c.html#a7987b7ed9400cdf68ae3830fd1e1f703a6c1f94918010314acc2139fed0f99433">IAP_ENTERPRO_CMD_RESET</a>
+ }</td></tr>
+<tr class="separator:a7987b7ed9400cdf68ae3830fd1e1f703"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b62289ceadaf2adaeb1428ee1f838f1"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_i_a_p_8c.html#a6b62289ceadaf2adaeb1428ee1f838f1">IAP_APP_STEP</a> { <br />
+&#160;&#160;<a class="el" href="_i_a_p_8c.html#a6b62289ceadaf2adaeb1428ee1f838f1a520d7b5cec87c9d595b1871a084f0d7f">IAP_APP_STEP_PRE</a> =0, 
+<a class="el" href="_i_a_p_8c.html#a6b62289ceadaf2adaeb1428ee1f838f1aa035750d492f5b93c4b3c98fb5dab095">IAP_APP_STEP_START</a>, 
+<a class="el" href="_i_a_p_8c.html#a6b62289ceadaf2adaeb1428ee1f838f1a855599d1609a27e909cbaf03fb8e0a55">IAP_APP_STEP_DOING</a>, 
+<a class="el" href="_i_a_p_8c.html#a6b62289ceadaf2adaeb1428ee1f838f1ab92915370aefa84f7d99402eff6db7a9">IAP_APP_STEP_END</a>, 
+<br />
+&#160;&#160;<a class="el" href="_i_a_p_8c.html#a6b62289ceadaf2adaeb1428ee1f838f1aea36219bfc85837ce29833a61a26baee">IAP_APP_STEP_UPGRADE</a>
+<br />
+ }</td></tr>
+<tr class="separator:a6b62289ceadaf2adaeb1428ee1f838f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:a2a1f6cc1e1844d476a7d01f02099d37c"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_i_a_p_8c.html#a2a1f6cc1e1844d476a7d01f02099d37c">IAP_APP</a> (uint8_t cmd, uint8_t *buf, uint16_t len, uint16_t MaxPacket, uint16_t CurrentPacket, uint32_t Sum, uint8_t Ver, uint16_t *NextPacket)</td></tr>
+<tr class="separator:a2a1f6cc1e1844d476a7d01f02099d37c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91a28deda44afaf80e3560a49d94e894"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_i_a_p_8c.html#a91a28deda44afaf80e3560a49d94e894">IAP_100msPro</a> (void)</td></tr>
+<tr class="separator:a91a28deda44afaf80e3560a49d94e894"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+变量</h2></td></tr>
+<tr class="memitem:ae287f12068840b835d37a9bab70d34d6"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_i_a_p_8c.html#ae287f12068840b835d37a9bab70d34d6">Iap_AllPackage</a> =0</td></tr>
+<tr class="separator:ae287f12068840b835d37a9bab70d34d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0400c5979da689a2a2979e8c0d89dcc6"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_i_a_p_8c.html#a0400c5979da689a2a2979e8c0d89dcc6">Iap_CurrentPackage</a> =0</td></tr>
+<tr class="separator:a0400c5979da689a2a2979e8c0d89dcc6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">宏定义说明</h2>
+<a id="aaf65a93afccd7e81649ed10cf4d3557f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaf65a93afccd7e81649ed10cf4d3557f">&#9670;&nbsp;</a></span>IAP_MAX_PACKET_NUM</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define IAP_MAX_PACKET_NUM&#160;&#160;&#160;(<a class="el" href="_i_a_p_8h.html#a5eb5cce0587be369949499548951a3bf">IAP_MAX_BYTE</a>/<a class="el" href="_i_a_p_8h.html#ab4564b17569236d88be79b832cfb5621">IAP_PACKET_SIZE</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">枚举类型说明</h2>
+<a id="a6b62289ceadaf2adaeb1428ee1f838f1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6b62289ceadaf2adaeb1428ee1f838f1">&#9670;&nbsp;</a></span>IAP_APP_STEP</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="_i_a_p_8c.html#a6b62289ceadaf2adaeb1428ee1f838f1">IAP_APP_STEP</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><a id="a6b62289ceadaf2adaeb1428ee1f838f1a520d7b5cec87c9d595b1871a084f0d7f"></a>IAP_APP_STEP_PRE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a6b62289ceadaf2adaeb1428ee1f838f1aa035750d492f5b93c4b3c98fb5dab095"></a>IAP_APP_STEP_START&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a6b62289ceadaf2adaeb1428ee1f838f1a855599d1609a27e909cbaf03fb8e0a55"></a>IAP_APP_STEP_DOING&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a6b62289ceadaf2adaeb1428ee1f838f1ab92915370aefa84f7d99402eff6db7a9"></a>IAP_APP_STEP_END&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a6b62289ceadaf2adaeb1428ee1f838f1aea36219bfc85837ce29833a61a26baee"></a>IAP_APP_STEP_UPGRADE&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<a id="a7987b7ed9400cdf68ae3830fd1e1f703"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7987b7ed9400cdf68ae3830fd1e1f703">&#9670;&nbsp;</a></span>IAP_ENTERPRO_CMD</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="_i_a_p_8c.html#a7987b7ed9400cdf68ae3830fd1e1f703">IAP_ENTERPRO_CMD</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><a id="a7987b7ed9400cdf68ae3830fd1e1f703a570a05ab5946ece9b237c0c154f9b1cb"></a>IAP_ENTERPRO_CMD_W&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a7987b7ed9400cdf68ae3830fd1e1f703a15c0da64d0ca3fd817aef56c7a86b59c"></a>IAP_ENTERPRO_CMD_F&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a7987b7ed9400cdf68ae3830fd1e1f703ae77a3de168826614cc016089cee47321"></a>IAP_ENTERPRO_CMD_S&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a7987b7ed9400cdf68ae3830fd1e1f703a6c1f94918010314acc2139fed0f99433"></a>IAP_ENTERPRO_CMD_RESET&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">函数说明</h2>
+<a id="a91a28deda44afaf80e3560a49d94e894"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a91a28deda44afaf80e3560a49d94e894">&#9670;&nbsp;</a></span>IAP_100msPro()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void IAP_100msPro </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2a1f6cc1e1844d476a7d01f02099d37c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a1f6cc1e1844d476a7d01f02099d37c">&#9670;&nbsp;</a></span>IAP_APP()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t IAP_APP </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>cmd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>len</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>MaxPacket</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>CurrentPacket</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>Sum</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>Ver</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t *&#160;</td>
+          <td class="paramname"><em>NextPacket</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">变量说明</h2>
+<a id="ae287f12068840b835d37a9bab70d34d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae287f12068840b835d37a9bab70d34d6">&#9670;&nbsp;</a></span>Iap_AllPackage</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t Iap_AllPackage =0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0400c5979da689a2a2979e8c0d89dcc6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0400c5979da689a2a2979e8c0d89dcc6">&#9670;&nbsp;</a></span>Iap_CurrentPackage</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t Iap_CurrentPackage =0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

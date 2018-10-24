@@ -1,0 +1,21 @@
+L 1 "..\..\User\UserBsp\Stm32F4\bsp.c"
+N/*
+N*********************************************************************************************************
+N*
+N*	模块名称 : BSP模块(For STM32F4XX)
+N*	文件名称 : bsp.c
+N*	版    本 : V1.1
+N*	说    明 : 这是硬件底层驱动程序的主文件。每个c文件可以 #include "bsp.h" 来包含所有的外设驱动模块。
+N*			   bsp = Borad surport packet 板级支持包
+N*	修改记录 :
+N*		版本号  日期        作者     说明
+N*		V1.0    2013-03-01  armfly   正式发布
+N*		V1.1    2013-06-20  armfly   规范注释，添加必要说明
+N*
+N*	Copyright (C), 2013-2014, 安富莱电子 www.armfly.com
+N*
+N*********************************************************************************************************
+N*/
+N
+C "..\..\User\UserBsp\Stm32F4\bsp.c" 19 23 cannot open source input file "includes.h": No such file or directory
+N#include  <includes.h>

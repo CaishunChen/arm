@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>xsl: E:/XkapSourceCode/Xkap-Stm32/Xkap-Stm32/User/UserBsp/Stm32F4/inc/bsp_dht11.h æºæ–‡ä»¶</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">xsl
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">æºç è¯´æ˜</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- åˆ¶ä½œè€… Doxygen 1.8.13 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',false,false,'search.php','æœç´¢');
+});
+</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_6d4e12d46ad8519ff7b80e874016d102.html">User</a></li><li class="navelem"><a class="el" href="dir_a31a870a1361c5173f8d637697bb576e.html">UserBsp</a></li><li class="navelem"><a class="el" href="dir_5e177c7cc544a0a92a21db9013c51e57.html">Stm32F4</a></li><li class="navelem"><a class="el" href="dir_bfc268d3643ad69e1597d4c973161630.html">inc</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">bsp_dht11.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="bsp__dht11_8h.html">æµè§ˆè¯¥æ–‡ä»¶çš„æ–‡æ¡£.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*</span></div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">*********************************************************************************************************</span></div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">*</span></div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">*   Ä£¿éÃû³Æ : DHT11 Çı¶¯Ä£¿é(1-wire Êı×ÖÎÂÊª¶È´«¸ĞÆ÷£©</span></div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">*   ÎÄ¼şÃû³Æ : bsp_dht11.h</span></div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">*</span></div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">*   Copyright (C), 2013-2014, °²¸»À³µç×Ó www.armfly.com</span></div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">*</span></div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">*********************************************************************************************************</span></div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">*/</span></div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#ifndef _BSP_DHT11_H</span></div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#define _BSP_DHT11_H</span></div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div><div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="struct_d_h_t11___t.html">   15</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct</span></div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;{</div><div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="struct_d_h_t11___t.html#a9f70fc48c4692164e1518498659a288a">   17</a></span>&#160;    uint8_t Buf[5];</div><div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="struct_d_h_t11___t.html#a4c6456de1fd6bcd582a099c23e851335">   18</a></span>&#160;    uint8_t <a class="code" href="struct_d_h_t11___t.html#a4c6456de1fd6bcd582a099c23e851335">Temp</a>;       <span class="comment">/* Temperature ÎÂ¶È ÉãÊÏ¶È */</span></div><div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="struct_d_h_t11___t.html#a74b9a8e7c407fa512994ded47a6db03a">   19</a></span>&#160;    uint8_t <a class="code" href="struct_d_h_t11___t.html#a74b9a8e7c407fa512994ded47a6db03a">Hum</a>;        <span class="comment">/* Humidity Êª¶È °Ù·Ö±È */</span></div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;}<a class="code" href="struct_d_h_t11___t.html">DHT11_T</a>;</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keywordtype">void</span> <a class="code" href="bsp__dht11_8h.html#af6e33ed8e22006fa783e72090b154ece">bsp_InitDHT11</a>(<span class="keywordtype">void</span>);</div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;uint8_t <a class="code" href="bsp__dht11_8h.html#ae4942db3c30a33c46a9b68b07f939633">DHT11_ReadData</a>(<a class="code" href="struct_d_h_t11___t.html">DHT11_T</a> *_pDHT);</div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#endif</span></div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment">/***************************** °²¸»À³µç×Ó www.armfly.com (END OF FILE) *********************************/</span></div><div class="ttc" id="bsp__dht11_8h_html_ae4942db3c30a33c46a9b68b07f939633"><div class="ttname"><a href="bsp__dht11_8h.html#ae4942db3c30a33c46a9b68b07f939633">DHT11_ReadData</a></div><div class="ttdeci">uint8_t DHT11_ReadData(DHT11_T *_pDHT)</div><div class="ttdef"><b>Definition:</b> bsp_dht11.c:85</div></div>
+<div class="ttc" id="struct_d_h_t11___t_html_a74b9a8e7c407fa512994ded47a6db03a"><div class="ttname"><a href="struct_d_h_t11___t.html#a74b9a8e7c407fa512994ded47a6db03a">DHT11_T::Hum</a></div><div class="ttdeci">uint8_t Hum</div><div class="ttdef"><b>Definition:</b> bsp_dht11.h:19</div></div>
+<div class="ttc" id="bsp__dht11_8h_html_af6e33ed8e22006fa783e72090b154ece"><div class="ttname"><a href="bsp__dht11_8h.html#af6e33ed8e22006fa783e72090b154ece">bsp_InitDHT11</a></div><div class="ttdeci">void bsp_InitDHT11(void)</div><div class="ttdef"><b>Definition:</b> bsp_dht11.c:58</div></div>
+<div class="ttc" id="struct_d_h_t11___t_html"><div class="ttname"><a href="struct_d_h_t11___t.html">DHT11_T</a></div><div class="ttdef"><b>Definition:</b> bsp_dht11.h:15</div></div>
+<div class="ttc" id="struct_d_h_t11___t_html_a4c6456de1fd6bcd582a099c23e851335"><div class="ttname"><a href="struct_d_h_t11___t.html#a4c6456de1fd6bcd582a099c23e851335">DHT11_T::Temp</a></div><div class="ttdeci">uint8_t Temp</div><div class="ttdef"><b>Definition:</b> bsp_dht11.h:18</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+åˆ¶ä½œè€… &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

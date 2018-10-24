@@ -1,0 +1,626 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>xsl: E:/XkapSourceCode/Xkap-Stm32/Xkap-Stm32/User/UserModule/Module_SList.c 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">xsl
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">源码说明</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.13 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',false,false,'search.php','搜索');
+});
+</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_6d4e12d46ad8519ff7b80e874016d102.html">User</a></li><li class="navelem"><a class="el" href="dir_eb2397560f3fdc052e61ca3a27327d74.html">UserModule</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">结构体</a> &#124;
+<a href="#typedef-members">类型定义</a> &#124;
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle">
+<div class="title">Module_SList.c 文件参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &lt;string.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="_module___s_list_8h_source.html">Module_SList.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="uctsk___debug_8h_source.html">uctsk_Debug.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_mem_manager_8h_source.html">MemManager.h</a>&quot;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+结构体</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_n_o_d_e.html">NODE</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+类型定义</h2></td></tr>
+<tr class="memitem:aef5f5a1ea5d4393f4ab26b474a10734f"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="struct_n_o_d_e.html">NODE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_module___s_list_8c.html#aef5f5a1ea5d4393f4ab26b474a10734f">Node</a></td></tr>
+<tr class="separator:aef5f5a1ea5d4393f4ab26b474a10734f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:ace18ca6d616d669690ac60f6e08f0f2f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_module___s_list_8c.html#ace18ca6d616d669690ac60f6e08f0f2f">ModuleSList_InitList</a> (<a class="el" href="_module___s_list_8c.html#aef5f5a1ea5d4393f4ab26b474a10734f">Node</a> **pNode)</td></tr>
+<tr class="separator:ace18ca6d616d669690ac60f6e08f0f2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf2a66d87d8a36f1d9575123f0339bdd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_module___s_list_8c.html#aef5f5a1ea5d4393f4ab26b474a10734f">Node</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_module___s_list_8c.html#adf2a66d87d8a36f1d9575123f0339bdd">ModuleSList_CreatList</a> (<a class="el" href="_module___s_list_8c.html#aef5f5a1ea5d4393f4ab26b474a10734f">Node</a> *pHead, uint32_t KeyValue)</td></tr>
+<tr class="separator:adf2a66d87d8a36f1d9575123f0339bdd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a591b62c63e2307af9913c3693c561fe7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_module___s_list_8c.html#a591b62c63e2307af9913c3693c561fe7">ModuleSList_PrintList</a> (<a class="el" href="_module___s_list_8c.html#aef5f5a1ea5d4393f4ab26b474a10734f">Node</a> *pHead)</td></tr>
+<tr class="separator:a591b62c63e2307af9913c3693c561fe7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e6f4177f7445be6898c1df0a752782a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_module___s_list_8c.html#a9e6f4177f7445be6898c1df0a752782a">ModuleSList_ClearList</a> (<a class="el" href="_module___s_list_8c.html#aef5f5a1ea5d4393f4ab26b474a10734f">Node</a> *pHead)</td></tr>
+<tr class="separator:a9e6f4177f7445be6898c1df0a752782a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec9f0f645bde4076fc86915f94fc0028"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_module___s_list_8c.html#aec9f0f645bde4076fc86915f94fc0028">ModuleSList_SizeList</a> (<a class="el" href="_module___s_list_8c.html#aef5f5a1ea5d4393f4ab26b474a10734f">Node</a> *pHead)</td></tr>
+<tr class="separator:aec9f0f645bde4076fc86915f94fc0028"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0bb10d0381d10a75c3ef7f1dd916b5fb"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_module___s_list_8c.html#a0bb10d0381d10a75c3ef7f1dd916b5fb">ModuleSList_IsEmptyList</a> (<a class="el" href="_module___s_list_8c.html#aef5f5a1ea5d4393f4ab26b474a10734f">Node</a> *pHead)</td></tr>
+<tr class="separator:a0bb10d0381d10a75c3ef7f1dd916b5fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74add3d9f9f6b968913e23d49eece3e0"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_module___s_list_8c.html#a74add3d9f9f6b968913e23d49eece3e0">ModuleSList_GetElement</a> (<a class="el" href="_module___s_list_8c.html#aef5f5a1ea5d4393f4ab26b474a10734f">Node</a> *pHead, int32_t pos)</td></tr>
+<tr class="separator:a74add3d9f9f6b968913e23d49eece3e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8fe8717face04805ae23698ba07ed9be"><td class="memItemLeft" align="right" valign="top">uint32_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_module___s_list_8c.html#a8fe8717face04805ae23698ba07ed9be">ModuleSList_GetElemAddr</a> (<a class="el" href="_module___s_list_8c.html#aef5f5a1ea5d4393f4ab26b474a10734f">Node</a> *pHead, uint32_t KeyValue)</td></tr>
+<tr class="separator:a8fe8717face04805ae23698ba07ed9be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a13ec995b956f1d46468c4a619e67cf3e"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_module___s_list_8c.html#a13ec995b956f1d46468c4a619e67cf3e">ModuleSList_ModifyElem</a> (<a class="el" href="_module___s_list_8c.html#aef5f5a1ea5d4393f4ab26b474a10734f">Node</a> *pNode, int32_t pos, uint32_t KeyValue)</td></tr>
+<tr class="separator:a13ec995b956f1d46468c4a619e67cf3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f5ab2593c89858fe12d1a8d501f6e40"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_module___s_list_8c.html#a7f5ab2593c89858fe12d1a8d501f6e40">ModuleSList_InsertHeadList</a> (<a class="el" href="_module___s_list_8c.html#aef5f5a1ea5d4393f4ab26b474a10734f">Node</a> **pNode, uint32_t KeyValue)</td></tr>
+<tr class="separator:a7f5ab2593c89858fe12d1a8d501f6e40"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada4e64fd7de2c9cf012bcb0e64ec1fff"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_module___s_list_8c.html#ada4e64fd7de2c9cf012bcb0e64ec1fff">ModuleSList_InsertLastList</a> (<a class="el" href="_module___s_list_8c.html#aef5f5a1ea5d4393f4ab26b474a10734f">Node</a> *pNode, uint32_t KeyValue)</td></tr>
+<tr class="separator:ada4e64fd7de2c9cf012bcb0e64ec1fff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86c710bc7b5e962a75f727f750016426"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_module___s_list_8c.html#a86c710bc7b5e962a75f727f750016426">ModuleSList_IsAddPos</a> (<a class="el" href="_module___s_list_8c.html#aef5f5a1ea5d4393f4ab26b474a10734f">Node</a> *pNode, int32_t pos, uint32_t KeyValue)</td></tr>
+<tr class="separator:a86c710bc7b5e962a75f727f750016426"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a27e46b67f039742fc167ea381524bcb3"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_module___s_list_8c.html#a27e46b67f039742fc167ea381524bcb3">ModuleSList_OrrderList</a> (<a class="el" href="_module___s_list_8c.html#aef5f5a1ea5d4393f4ab26b474a10734f">Node</a> *pNode, uint32_t KeyValue)</td></tr>
+<tr class="separator:a27e46b67f039742fc167ea381524bcb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e71e17adbc25ffebd877c6df9b9c94c"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_module___s_list_8c.html#a4e71e17adbc25ffebd877c6df9b9c94c">ModuleSList_DelHeadList</a> (<a class="el" href="_module___s_list_8c.html#aef5f5a1ea5d4393f4ab26b474a10734f">Node</a> **pList)</td></tr>
+<tr class="separator:a4e71e17adbc25ffebd877c6df9b9c94c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c6012f9f578d1b9f4f22c7a9946f830"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_module___s_list_8c.html#a4c6012f9f578d1b9f4f22c7a9946f830">ModuleSList_DelLastList</a> (<a class="el" href="_module___s_list_8c.html#aef5f5a1ea5d4393f4ab26b474a10734f">Node</a> *pNode)</td></tr>
+<tr class="separator:a4c6012f9f578d1b9f4f22c7a9946f830"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1fc68d4b0b1a27fbdfedc75e864ae16c"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_module___s_list_8c.html#a1fc68d4b0b1a27fbdfedc75e864ae16c">ModuleSList_DelPos</a> (<a class="el" href="_module___s_list_8c.html#aef5f5a1ea5d4393f4ab26b474a10734f">Node</a> *pNode, int32_t pos)</td></tr>
+<tr class="separator:a1fc68d4b0b1a27fbdfedc75e864ae16c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a09465096b4987b533c955e9d55954f"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_module___s_list_8c.html#a4a09465096b4987b533c955e9d55954f">ModuleSList_Delx</a> (<a class="el" href="_module___s_list_8c.html#aef5f5a1ea5d4393f4ab26b474a10734f">Node</a> **pNode, int32_t KeyValue)</td></tr>
+<tr class="separator:a4a09465096b4987b533c955e9d55954f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a09c1628a33df77809444bd2f067bbc1c"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_module___s_list_8c.html#a09c1628a33df77809444bd2f067bbc1c">ModuleSList_Exchange2Pos</a> (<a class="el" href="_module___s_list_8c.html#aef5f5a1ea5d4393f4ab26b474a10734f">Node</a> *pNode, int32_t pos1, int32_t pos2)</td></tr>
+<tr class="separator:a09c1628a33df77809444bd2f067bbc1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac576466c19626ee45f936717f3b358fb"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_module___s_list_8c.html#ac576466c19626ee45f936717f3b358fb">ModuleSList_Arrange</a> (<a class="el" href="_module___s_list_8c.html#aef5f5a1ea5d4393f4ab26b474a10734f">Node</a> *pNode)</td></tr>
+<tr class="separator:ac576466c19626ee45f936717f3b358fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae7b189198bf3d32dedf7ab8bb75c26b1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_module___s_list_8c.html#ae7b189198bf3d32dedf7ab8bb75c26b1">ModuleSList_DebugTestOnOff</a> (uint8_t OnOff)</td></tr>
+<tr class="separator:ae7b189198bf3d32dedf7ab8bb75c26b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">类型定义说明</h2>
+<a id="aef5f5a1ea5d4393f4ab26b474a10734f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aef5f5a1ea5d4393f4ab26b474a10734f">&#9670;&nbsp;</a></span>Node</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="struct_n_o_d_e.html">NODE</a>  <a class="el" href="_module___s_list_8c.html#aef5f5a1ea5d4393f4ab26b474a10734f">Node</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">函数说明</h2>
+<a id="ac576466c19626ee45f936717f3b358fb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac576466c19626ee45f936717f3b358fb">&#9670;&nbsp;</a></span>ModuleSList_Arrange()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int32_t ModuleSList_Arrange </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_module___s_list_8c.html#aef5f5a1ea5d4393f4ab26b474a10734f">Node</a> *&#160;</td>
+          <td class="paramname"><em>pNode</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9e6f4177f7445be6898c1df0a752782a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9e6f4177f7445be6898c1df0a752782a">&#9670;&nbsp;</a></span>ModuleSList_ClearList()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ModuleSList_ClearList </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_module___s_list_8c.html#aef5f5a1ea5d4393f4ab26b474a10734f">Node</a> *&#160;</td>
+          <td class="paramname"><em>pHead</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adf2a66d87d8a36f1d9575123f0339bdd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf2a66d87d8a36f1d9575123f0339bdd">&#9670;&nbsp;</a></span>ModuleSList_CreatList()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_module___s_list_8c.html#aef5f5a1ea5d4393f4ab26b474a10734f">Node</a>* ModuleSList_CreatList </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_module___s_list_8c.html#aef5f5a1ea5d4393f4ab26b474a10734f">Node</a> *&#160;</td>
+          <td class="paramname"><em>pHead</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>KeyValue</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae7b189198bf3d32dedf7ab8bb75c26b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae7b189198bf3d32dedf7ab8bb75c26b1">&#9670;&nbsp;</a></span>ModuleSList_DebugTestOnOff()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ModuleSList_DebugTestOnOff </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>OnOff</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4e71e17adbc25ffebd877c6df9b9c94c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e71e17adbc25ffebd877c6df9b9c94c">&#9670;&nbsp;</a></span>ModuleSList_DelHeadList()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int32_t ModuleSList_DelHeadList </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_module___s_list_8c.html#aef5f5a1ea5d4393f4ab26b474a10734f">Node</a> **&#160;</td>
+          <td class="paramname"><em>pList</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4c6012f9f578d1b9f4f22c7a9946f830"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c6012f9f578d1b9f4f22c7a9946f830">&#9670;&nbsp;</a></span>ModuleSList_DelLastList()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int32_t ModuleSList_DelLastList </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_module___s_list_8c.html#aef5f5a1ea5d4393f4ab26b474a10734f">Node</a> *&#160;</td>
+          <td class="paramname"><em>pNode</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1fc68d4b0b1a27fbdfedc75e864ae16c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1fc68d4b0b1a27fbdfedc75e864ae16c">&#9670;&nbsp;</a></span>ModuleSList_DelPos()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int32_t ModuleSList_DelPos </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_module___s_list_8c.html#aef5f5a1ea5d4393f4ab26b474a10734f">Node</a> *&#160;</td>
+          <td class="paramname"><em>pNode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int32_t&#160;</td>
+          <td class="paramname"><em>pos</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4a09465096b4987b533c955e9d55954f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a09465096b4987b533c955e9d55954f">&#9670;&nbsp;</a></span>ModuleSList_Delx()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int32_t ModuleSList_Delx </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_module___s_list_8c.html#aef5f5a1ea5d4393f4ab26b474a10734f">Node</a> **&#160;</td>
+          <td class="paramname"><em>pNode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int32_t&#160;</td>
+          <td class="paramname"><em>KeyValue</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a09c1628a33df77809444bd2f067bbc1c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a09c1628a33df77809444bd2f067bbc1c">&#9670;&nbsp;</a></span>ModuleSList_Exchange2Pos()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int32_t ModuleSList_Exchange2Pos </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_module___s_list_8c.html#aef5f5a1ea5d4393f4ab26b474a10734f">Node</a> *&#160;</td>
+          <td class="paramname"><em>pNode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int32_t&#160;</td>
+          <td class="paramname"><em>pos1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int32_t&#160;</td>
+          <td class="paramname"><em>pos2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8fe8717face04805ae23698ba07ed9be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8fe8717face04805ae23698ba07ed9be">&#9670;&nbsp;</a></span>ModuleSList_GetElemAddr()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t* ModuleSList_GetElemAddr </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_module___s_list_8c.html#aef5f5a1ea5d4393f4ab26b474a10734f">Node</a> *&#160;</td>
+          <td class="paramname"><em>pHead</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>KeyValue</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a74add3d9f9f6b968913e23d49eece3e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a74add3d9f9f6b968913e23d49eece3e0">&#9670;&nbsp;</a></span>ModuleSList_GetElement()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int32_t ModuleSList_GetElement </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_module___s_list_8c.html#aef5f5a1ea5d4393f4ab26b474a10734f">Node</a> *&#160;</td>
+          <td class="paramname"><em>pHead</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int32_t&#160;</td>
+          <td class="paramname"><em>pos</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ace18ca6d616d669690ac60f6e08f0f2f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace18ca6d616d669690ac60f6e08f0f2f">&#9670;&nbsp;</a></span>ModuleSList_InitList()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ModuleSList_InitList </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_module___s_list_8c.html#aef5f5a1ea5d4393f4ab26b474a10734f">Node</a> **&#160;</td>
+          <td class="paramname"><em>pNode</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7f5ab2593c89858fe12d1a8d501f6e40"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7f5ab2593c89858fe12d1a8d501f6e40">&#9670;&nbsp;</a></span>ModuleSList_InsertHeadList()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int32_t ModuleSList_InsertHeadList </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_module___s_list_8c.html#aef5f5a1ea5d4393f4ab26b474a10734f">Node</a> **&#160;</td>
+          <td class="paramname"><em>pNode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>KeyValue</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ada4e64fd7de2c9cf012bcb0e64ec1fff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ada4e64fd7de2c9cf012bcb0e64ec1fff">&#9670;&nbsp;</a></span>ModuleSList_InsertLastList()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int32_t ModuleSList_InsertLastList </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_module___s_list_8c.html#aef5f5a1ea5d4393f4ab26b474a10734f">Node</a> *&#160;</td>
+          <td class="paramname"><em>pNode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>KeyValue</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a86c710bc7b5e962a75f727f750016426"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a86c710bc7b5e962a75f727f750016426">&#9670;&nbsp;</a></span>ModuleSList_IsAddPos()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int32_t ModuleSList_IsAddPos </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_module___s_list_8c.html#aef5f5a1ea5d4393f4ab26b474a10734f">Node</a> *&#160;</td>
+          <td class="paramname"><em>pNode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int32_t&#160;</td>
+          <td class="paramname"><em>pos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>KeyValue</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0bb10d0381d10a75c3ef7f1dd916b5fb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0bb10d0381d10a75c3ef7f1dd916b5fb">&#9670;&nbsp;</a></span>ModuleSList_IsEmptyList()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int32_t ModuleSList_IsEmptyList </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_module___s_list_8c.html#aef5f5a1ea5d4393f4ab26b474a10734f">Node</a> *&#160;</td>
+          <td class="paramname"><em>pHead</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a13ec995b956f1d46468c4a619e67cf3e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a13ec995b956f1d46468c4a619e67cf3e">&#9670;&nbsp;</a></span>ModuleSList_ModifyElem()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int32_t ModuleSList_ModifyElem </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_module___s_list_8c.html#aef5f5a1ea5d4393f4ab26b474a10734f">Node</a> *&#160;</td>
+          <td class="paramname"><em>pNode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int32_t&#160;</td>
+          <td class="paramname"><em>pos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>KeyValue</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a27e46b67f039742fc167ea381524bcb3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a27e46b67f039742fc167ea381524bcb3">&#9670;&nbsp;</a></span>ModuleSList_OrrderList()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int32_t ModuleSList_OrrderList </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_module___s_list_8c.html#aef5f5a1ea5d4393f4ab26b474a10734f">Node</a> *&#160;</td>
+          <td class="paramname"><em>pNode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>KeyValue</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a591b62c63e2307af9913c3693c561fe7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a591b62c63e2307af9913c3693c561fe7">&#9670;&nbsp;</a></span>ModuleSList_PrintList()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ModuleSList_PrintList </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_module___s_list_8c.html#aef5f5a1ea5d4393f4ab26b474a10734f">Node</a> *&#160;</td>
+          <td class="paramname"><em>pHead</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aec9f0f645bde4076fc86915f94fc0028"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec9f0f645bde4076fc86915f94fc0028">&#9670;&nbsp;</a></span>ModuleSList_SizeList()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int32_t ModuleSList_SizeList </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_module___s_list_8c.html#aef5f5a1ea5d4393f4ab26b474a10734f">Node</a> *&#160;</td>
+          <td class="paramname"><em>pHead</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

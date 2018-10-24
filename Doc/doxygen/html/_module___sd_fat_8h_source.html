@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>xsl: E:/XkapSourceCode/Xkap-Stm32/Xkap-Stm32/User/UserModule/Module_SdFat.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">xsl
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">源码说明</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.13 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',false,false,'search.php','搜索');
+});
+</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_6d4e12d46ad8519ff7b80e874016d102.html">User</a></li><li class="navelem"><a class="el" href="dir_eb2397560f3fdc052e61ca3a27327d74.html">UserModule</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">Module_SdFat.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_module___sd_fat_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*</span></div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">***********************************************************************************</span></div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">*                    作    者: 徐松亮</span></div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">*                    更新时间: 2015-06-03</span></div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">***********************************************************************************</span></div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">*/</span></div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#ifndef __SDFAT_H</span></div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#define __SDFAT_H</span></div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">//-------------------加载库函数------------------------------</span></div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;ff.h&quot;</span></div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;diskio.h&quot;</span></div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">//-------------------接口宏定义(硬件相关)--------------------</span></div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">//-------------------接口宏定义(硬件无关)--------------------</span></div><div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="_module___sd_fat_8h.html#a6f0df8e8a42dd138679dbfda789cf0aa">   14</a></span>&#160;<span class="preprocessor">#define  MODULE_SDFAT_SD_PATH   &quot;0:&quot;</span></div><div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="_module___sd_fat_8h.html#ad214f0c610d3c128f291a3eec988d31a">   15</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">enum</span> <a class="code" href="_module___sd_fat_8h.html#ad214f0c610d3c128f291a3eec988d31a">MODULE_SDFAT_E_APP_CMD</a></div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;{    </div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;   <span class="comment">//正常读写操作</span></div><div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="_module___sd_fat_8h.html#ad214f0c610d3c128f291a3eec988d31aa5c5fb10513e5301e14f23f1533d55114">   18</a></span>&#160;   <a class="code" href="_module___sd_fat_8h.html#ad214f0c610d3c128f291a3eec988d31aa5c5fb10513e5301e14f23f1533d55114">MODULE_SDFAT_E_APP_CMD_FILE_R</a> = 0,</div><div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="_module___sd_fat_8h.html#ad214f0c610d3c128f291a3eec988d31aa2684ca7438a177fc12e2793a834b2d24">   19</a></span>&#160;   <a class="code" href="_module___sd_fat_8h.html#ad214f0c610d3c128f291a3eec988d31aa2684ca7438a177fc12e2793a834b2d24">MODULE_SDFAT_E_APP_CMD_FILE_W</a>,</div><div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="_module___sd_fat_8h.html#ad214f0c610d3c128f291a3eec988d31aa5a765d61a1393ba7c299edbb02cb65ee">   20</a></span>&#160;   <a class="code" href="_module___sd_fat_8h.html#ad214f0c610d3c128f291a3eec988d31aa5a765d61a1393ba7c299edbb02cb65ee">MODULE_SDFAT_E_APP_CMD_FILE_ADD</a>,</div><div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="_module___sd_fat_8h.html#ad214f0c610d3c128f291a3eec988d31aa36a25f2c911c6e599941ff617bd95a22">   21</a></span>&#160;   <a class="code" href="_module___sd_fat_8h.html#ad214f0c610d3c128f291a3eec988d31aa36a25f2c911c6e599941ff617bd95a22">MODULE_SDFAT_E_APP_CMD_FILE_GETSIZE</a>,</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;   <span class="comment">//特殊指令</span></div><div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="_module___sd_fat_8h.html#ad214f0c610d3c128f291a3eec988d31aacd442d59cac4593510ddc0983887f139">   23</a></span>&#160;   <a class="code" href="_module___sd_fat_8h.html#ad214f0c610d3c128f291a3eec988d31aacd442d59cac4593510ddc0983887f139">MODULE_SDFAT_E_APP_CMD_FORMAT</a>,</div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;}<a class="code" href="_module___sd_fat_8h.html#ad214f0c610d3c128f291a3eec988d31a">MODULE_SDFAT_E_APP_CMD</a>;</div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment">//-------------------接口变量--------------------------------</span></div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">extern</span> FIL     <a class="code" href="_module___sd_fat_8h.html#acde77e8c196b33668087ed55285cf039">ModuleSdFat_fsrc</a>;</div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">extern</span> FRESULT <a class="code" href="_module___sd_fat_8h.html#ae865472352f6464e5e830d952bb010e7">ModuleSdFat_Res</a>;</div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keyword">extern</span> FATFS   <a class="code" href="_module___sd_fat_8h.html#a9b97e26b3cdd49c1cd5b5f643b3b34fb">ModuleSdFat_Fs</a>;</div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment">//-------------------接口函数--------------------------------</span></div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">void</span> <a class="code" href="_module___sd_fat_8h.html#a7a19d7307cdd59e11c1b63fb8c631af4">SdFat_1msPro</a>(<span class="keywordtype">void</span>);</div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keyword">extern</span> uint8_t <a class="code" href="_module___sd_fat_8h.html#a8cdf2f1cad697764c05120ede42cfbab">SdFat_App</a>(<a class="code" href="_module___sd_fat_8h.html#ad214f0c610d3c128f291a3eec988d31a">MODULE_SDFAT_E_APP_CMD</a> cmd,<span class="keywordtype">char</span> *pPathFileName,<span class="keywordtype">void</span> *pbuf,uint32_t *pPos,uint16_t *plen,uint32_t *pbw);</div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">void</span> <a class="code" href="_module___sd_fat_8h.html#aaa7b23372e268ae66bc9437133b1e35a">SdFat_Test</a>(uint8_t OnOff);</div><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment">//-----------------------------------------------------------</span></div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#endif</span></div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div><div class="ttc" id="_module___sd_fat_8h_html_ad214f0c610d3c128f291a3eec988d31aa2684ca7438a177fc12e2793a834b2d24"><div class="ttname"><a href="_module___sd_fat_8h.html#ad214f0c610d3c128f291a3eec988d31aa2684ca7438a177fc12e2793a834b2d24">MODULE_SDFAT_E_APP_CMD_FILE_W</a></div><div class="ttdef"><b>Definition:</b> Module_SdFat.h:19</div></div>
+<div class="ttc" id="_module___sd_fat_8h_html_ad214f0c610d3c128f291a3eec988d31aacd442d59cac4593510ddc0983887f139"><div class="ttname"><a href="_module___sd_fat_8h.html#ad214f0c610d3c128f291a3eec988d31aacd442d59cac4593510ddc0983887f139">MODULE_SDFAT_E_APP_CMD_FORMAT</a></div><div class="ttdef"><b>Definition:</b> Module_SdFat.h:23</div></div>
+<div class="ttc" id="_module___sd_fat_8h_html_ad214f0c610d3c128f291a3eec988d31aa5c5fb10513e5301e14f23f1533d55114"><div class="ttname"><a href="_module___sd_fat_8h.html#ad214f0c610d3c128f291a3eec988d31aa5c5fb10513e5301e14f23f1533d55114">MODULE_SDFAT_E_APP_CMD_FILE_R</a></div><div class="ttdef"><b>Definition:</b> Module_SdFat.h:18</div></div>
+<div class="ttc" id="_module___sd_fat_8h_html_a7a19d7307cdd59e11c1b63fb8c631af4"><div class="ttname"><a href="_module___sd_fat_8h.html#a7a19d7307cdd59e11c1b63fb8c631af4">SdFat_1msPro</a></div><div class="ttdeci">void SdFat_1msPro(void)</div><div class="ttdef"><b>Definition:</b> Module_SdFat.c:30</div></div>
+<div class="ttc" id="_module___sd_fat_8h_html_ae865472352f6464e5e830d952bb010e7"><div class="ttname"><a href="_module___sd_fat_8h.html#ae865472352f6464e5e830d952bb010e7">ModuleSdFat_Res</a></div><div class="ttdeci">FRESULT ModuleSdFat_Res</div><div class="ttdef"><b>Definition:</b> Module_SdFat.c:14</div></div>
+<div class="ttc" id="_module___sd_fat_8h_html_a9b97e26b3cdd49c1cd5b5f643b3b34fb"><div class="ttname"><a href="_module___sd_fat_8h.html#a9b97e26b3cdd49c1cd5b5f643b3b34fb">ModuleSdFat_Fs</a></div><div class="ttdeci">FATFS ModuleSdFat_Fs</div><div class="ttdef"><b>Definition:</b> Module_SdFat.c:15</div></div>
+<div class="ttc" id="_module___sd_fat_8h_html_a8cdf2f1cad697764c05120ede42cfbab"><div class="ttname"><a href="_module___sd_fat_8h.html#a8cdf2f1cad697764c05120ede42cfbab">SdFat_App</a></div><div class="ttdeci">uint8_t SdFat_App(MODULE_SDFAT_E_APP_CMD cmd, char *pPathFileName, void *pbuf, uint32_t *pPos, uint16_t *plen, uint32_t *pbw)</div><div class="ttdef"><b>Definition:</b> Module_SdFat.c:42</div></div>
+<div class="ttc" id="_module___sd_fat_8h_html_ad214f0c610d3c128f291a3eec988d31a"><div class="ttname"><a href="_module___sd_fat_8h.html#ad214f0c610d3c128f291a3eec988d31a">MODULE_SDFAT_E_APP_CMD</a></div><div class="ttdeci">MODULE_SDFAT_E_APP_CMD</div><div class="ttdef"><b>Definition:</b> Module_SdFat.h:15</div></div>
+<div class="ttc" id="_module___sd_fat_8h_html_acde77e8c196b33668087ed55285cf039"><div class="ttname"><a href="_module___sd_fat_8h.html#acde77e8c196b33668087ed55285cf039">ModuleSdFat_fsrc</a></div><div class="ttdeci">FIL ModuleSdFat_fsrc</div><div class="ttdef"><b>Definition:</b> Module_SdFat.c:13</div></div>
+<div class="ttc" id="_module___sd_fat_8h_html_aaa7b23372e268ae66bc9437133b1e35a"><div class="ttname"><a href="_module___sd_fat_8h.html#aaa7b23372e268ae66bc9437133b1e35a">SdFat_Test</a></div><div class="ttdeci">void SdFat_Test(uint8_t OnOff)</div><div class="ttdef"><b>Definition:</b> Module_SdFat.c:185</div></div>
+<div class="ttc" id="_module___sd_fat_8h_html_ad214f0c610d3c128f291a3eec988d31aa5a765d61a1393ba7c299edbb02cb65ee"><div class="ttname"><a href="_module___sd_fat_8h.html#ad214f0c610d3c128f291a3eec988d31aa5a765d61a1393ba7c299edbb02cb65ee">MODULE_SDFAT_E_APP_CMD_FILE_ADD</a></div><div class="ttdef"><b>Definition:</b> Module_SdFat.h:20</div></div>
+<div class="ttc" id="_module___sd_fat_8h_html_ad214f0c610d3c128f291a3eec988d31aa36a25f2c911c6e599941ff617bd95a22"><div class="ttname"><a href="_module___sd_fat_8h.html#ad214f0c610d3c128f291a3eec988d31aa36a25f2c911c6e599941ff617bd95a22">MODULE_SDFAT_E_APP_CMD_FILE_GETSIZE</a></div><div class="ttdef"><b>Definition:</b> Module_SdFat.h:21</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

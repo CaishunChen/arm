@@ -1,0 +1,504 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>xsl: E:/XkapSourceCode/Xkap-Stm32/Xkap-Stm32/User/UserBsp/Bsp_Relay.h 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">xsl
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">源码说明</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.13 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',false,false,'search.php','搜索');
+});
+</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_6d4e12d46ad8519ff7b80e874016d102.html">User</a></li><li class="navelem"><a class="el" href="dir_a31a870a1361c5173f8d637697bb576e.html">UserBsp</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#define-members">宏定义</a> &#124;
+<a href="#enum-members">枚举</a> &#124;
+<a href="#func-members">函数</a> &#124;
+<a href="#var-members">变量</a>  </div>
+  <div class="headertitle">
+<div class="title">Bsp_Relay.h 文件参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>bottom-driven &ndash;&gt; 继电器驱动(包含延时单稳态与多权限).  
+<a href="#details">更多...</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="includes_8h_source.html">includes.h</a>&quot;</code><br />
+</div>
+<p><a href="_bsp___relay_8h_source.html">浏览源代码.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+宏定义</h2></td></tr>
+<tr class="memitem:a53dd52be244720be49d47bed248b031f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_bsp___relay_8h.html#a53dd52be244720be49d47bed248b031f">BSP_RELAY_MAX_NUM</a>&#160;&#160;&#160;8</td></tr>
+<tr class="separator:a53dd52be244720be49d47bed248b031f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0ac9819a6626b607fe131aa38bcc0a1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_bsp___relay_8h.html#ac0ac9819a6626b607fe131aa38bcc0a1">BSP_RELAY_ON</a>&#160;&#160;&#160;1</td></tr>
+<tr class="separator:ac0ac9819a6626b607fe131aa38bcc0a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12d26daf6606ca48d58d5c5564da3541"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_bsp___relay_8h.html#a12d26daf6606ca48d58d5c5564da3541">BSP_RELAY_OFF</a>&#160;&#160;&#160;0</td></tr>
+<tr class="separator:a12d26daf6606ca48d58d5c5564da3541"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a50ee532735bf92edb02891ad93c1bf44"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_bsp___relay_8h.html#a50ee532735bf92edb02891ad93c1bf44">BSP_RELAY1_SAFE_MAX_TIME_100MS</a>&#160;&#160;&#160;0xFFFFFFFF</td></tr>
+<tr class="separator:a50ee532735bf92edb02891ad93c1bf44"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad3e7150bfb4aeac8ac04f2e4f73baeb"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_bsp___relay_8h.html#aad3e7150bfb4aeac8ac04f2e4f73baeb">BSP_RELAY2_SAFE_MAX_TIME_100MS</a>&#160;&#160;&#160;0xFFFFFFFF</td></tr>
+<tr class="separator:aad3e7150bfb4aeac8ac04f2e4f73baeb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60f13645952f31695f249dd335aaba33"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_bsp___relay_8h.html#a60f13645952f31695f249dd335aaba33">BSP_RELAY3_SAFE_MAX_TIME_100MS</a>&#160;&#160;&#160;0xFFFFFFFF</td></tr>
+<tr class="separator:a60f13645952f31695f249dd335aaba33"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c66eff8e68a54f2ef8d88164bd3e95b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_bsp___relay_8h.html#a7c66eff8e68a54f2ef8d88164bd3e95b">BSP_RELAY4_SAFE_MAX_TIME_100MS</a>&#160;&#160;&#160;0xFFFFFFFF</td></tr>
+<tr class="separator:a7c66eff8e68a54f2ef8d88164bd3e95b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05eb30fc4d2478e107e4da5a1146c1ee"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_bsp___relay_8h.html#a05eb30fc4d2478e107e4da5a1146c1ee">BSP_RELAY5_SAFE_MAX_TIME_100MS</a>&#160;&#160;&#160;0xFFFFFFFF</td></tr>
+<tr class="separator:a05eb30fc4d2478e107e4da5a1146c1ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a46ca5256a4b1a1973752c42a445dc46a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_bsp___relay_8h.html#a46ca5256a4b1a1973752c42a445dc46a">BSP_RELAY6_SAFE_MAX_TIME_100MS</a>&#160;&#160;&#160;0xFFFFFFFF</td></tr>
+<tr class="separator:a46ca5256a4b1a1973752c42a445dc46a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06abdc851f71afbcdaa78b4758b22aa5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_bsp___relay_8h.html#a06abdc851f71afbcdaa78b4758b22aa5">BSP_RELAY7_SAFE_MAX_TIME_100MS</a>&#160;&#160;&#160;0xFFFFFFFF</td></tr>
+<tr class="separator:a06abdc851f71afbcdaa78b4758b22aa5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae3d0a87b57054906a164d0d376ed0dbf"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_bsp___relay_8h.html#ae3d0a87b57054906a164d0d376ed0dbf">BSP_RELAY8_SAFE_MAX_TIME_100MS</a>&#160;&#160;&#160;0xFFFFFFFF</td></tr>
+<tr class="separator:ae3d0a87b57054906a164d0d376ed0dbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+枚举</h2></td></tr>
+<tr class="memitem:a7b67b488040457af98123a1105827c1e"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_bsp___relay_8h.html#a7b67b488040457af98123a1105827c1e">RELAY_LEVEL_ENUM</a> { <br />
+&#160;&#160;<a class="el" href="_bsp___relay_8h.html#a7b67b488040457af98123a1105827c1eaa9ef328b3be2e202f389c8011cbf11f2">BSP_RELAY_LEVEL_LOW</a> =0, 
+<a class="el" href="_bsp___relay_8h.html#a7b67b488040457af98123a1105827c1ea0ba4f2a7bd0c7abf68fa398c5473b3c3">BSP_RELAY_LEVEL_1</a>, 
+<a class="el" href="_bsp___relay_8h.html#a7b67b488040457af98123a1105827c1ea86c378b325fca4881340a583ea8c0a69">BSP_RELAY_LEVEL_2</a>, 
+<a class="el" href="_bsp___relay_8h.html#a7b67b488040457af98123a1105827c1ea58e1f32d6cba9f6b34dbbfb5e3e8573f">BSP_RELAY_LEVEL_3</a>, 
+<br />
+&#160;&#160;<a class="el" href="_bsp___relay_8h.html#a7b67b488040457af98123a1105827c1ea69a6370d3102e016fc73756b9c32b295">BSP_RELAY_LEVEL_4</a>, 
+<a class="el" href="_bsp___relay_8h.html#a7b67b488040457af98123a1105827c1eab5460b147b4784918a57d87bbb78c52c">BSP_RELAY_LEVEL_5</a>, 
+<a class="el" href="_bsp___relay_8h.html#a7b67b488040457af98123a1105827c1ea3b8277e82cd5d9a7f71f621a6fe154b9">BSP_RELAY_LEVEL_LOGIC</a>, 
+<a class="el" href="_bsp___relay_8h.html#a7b67b488040457af98123a1105827c1eab8fbc020851038491dcdfddf942cd724">BSP_RELAY_LEVEL_FIRSTCARD</a>, 
+<br />
+&#160;&#160;<a class="el" href="_bsp___relay_8h.html#a7b67b488040457af98123a1105827c1ea952326dd707b129d15b1e7e438f3250a">BSP_RELAY_LEVEL_PC</a>, 
+<a class="el" href="_bsp___relay_8h.html#a7b67b488040457af98123a1105827c1ea84246b0b255a00e2b48dc8dd45b9c2fc">BSP_RELAY_LEVEL_DEGUG</a>, 
+<a class="el" href="_bsp___relay_8h.html#a7b67b488040457af98123a1105827c1ea9a2b61ff8e9f1a382b3ab9c2f7a66b99">BSP_RELAY_LEVEL_MENU</a>, 
+<a class="el" href="_bsp___relay_8h.html#a7b67b488040457af98123a1105827c1ea20c3d2f47e8c17af44169c78b051af63">BSP_RELAY_LEVEL_HIGH</a> =255
+<br />
+ }</td></tr>
+<tr class="separator:a7b67b488040457af98123a1105827c1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a379e599bdd8ed2366e1d759d8a99e988"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_bsp___relay_8h.html#a379e599bdd8ed2366e1d759d8a99e988">RELAY_WIRTE_ERR_ENUM</a> { <a class="el" href="_bsp___relay_8h.html#a379e599bdd8ed2366e1d759d8a99e988a20668fd801b24377b47113d74932dba2">BSP_RELAY_WIRTE_ERR_NO</a> =0, 
+<a class="el" href="_bsp___relay_8h.html#a379e599bdd8ed2366e1d759d8a99e988af7f71669c06bae47c42ec97fc01ad938">BSP_RELAY_WIRTE_ERR_PARA</a>, 
+<a class="el" href="_bsp___relay_8h.html#a379e599bdd8ed2366e1d759d8a99e988a61d27a3e941d1828675687d3c174330a">BSP_RELAY_WIRTE_ERR_LEVEL</a>
+ }</td></tr>
+<tr class="separator:a379e599bdd8ed2366e1d759d8a99e988"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:a44c230a482b359cb0829f40f43d9fcdc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_bsp___relay_8h.html#a44c230a482b359cb0829f40f43d9fcdc">BspRelay_100ms</a> (void)</td></tr>
+<tr class="separator:a44c230a482b359cb0829f40f43d9fcdc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91be7189fb989298a4623e8855853e35"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_bsp___relay_8h.html#a91be7189fb989298a4623e8855853e35">BspRelay_Write</a> (uint8_t level, uint8_t <a class="el" href="main___iap_test_8c.html#a0523c05685d59544dca911cb6a3db77d">ch</a>, uint32_t time, uint16_t delaytime)</td></tr>
+<tr class="separator:a91be7189fb989298a4623e8855853e35"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8130f7771abf04d549da6d36118d10ec"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_bsp___relay_8h.html#a8130f7771abf04d549da6d36118d10ec">BspRelay_Read</a> (void)</td></tr>
+<tr class="separator:a8130f7771abf04d549da6d36118d10ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe14c8236db22db180b49329f5441de7"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_bsp___relay_8h.html#abe14c8236db22db180b49329f5441de7">BspRelay_Test</a> (void)</td></tr>
+<tr class="separator:abe14c8236db22db180b49329f5441de7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad49007527543269a6a372a8bcf69d887"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_bsp___relay_8h.html#ad49007527543269a6a372a8bcf69d887">BspRelay_DebugTestOnOff</a> (uint8_t OnOff)</td></tr>
+<tr class="separator:ad49007527543269a6a372a8bcf69d887"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+变量</h2></td></tr>
+<tr class="memitem:a425ce5ae175c02671dbc1fbe1102cbe2"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_bsp___relay_8h.html#a425ce5ae175c02671dbc1fbe1102cbe2">Relay_PcSign</a> [<a class="el" href="_bsp___relay_8h.html#a53dd52be244720be49d47bed248b031f">BSP_RELAY_MAX_NUM</a>]</td></tr>
+<tr class="separator:a425ce5ae175c02671dbc1fbe1102cbe2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f050edf1a47ebed3738958f4c2f01db"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_bsp___relay_8h.html#a9f050edf1a47ebed3738958f4c2f01db">Relay_LinkageSign</a> [<a class="el" href="_bsp___relay_8h.html#a53dd52be244720be49d47bed248b031f">BSP_RELAY_MAX_NUM</a>]</td></tr>
+<tr class="separator:a9f050edf1a47ebed3738958f4c2f01db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>bottom-driven &ndash;&gt; 继电器驱动(包含延时单稳态与多权限). </p>
+<dl class="section author"><dt>作者</dt><dd>徐松亮 许红宁(<a href="#" onclick="location.href='mai'+'lto:'+'538'+'76'+'03@'+'qq'+'.co'+'m'; return false;">53876<span style="display: none;">.nosp@m.</span>03@q<span style="display: none;">.nosp@m.</span>q.com</a>) </dd></dl>
+<dl class="section version"><dt>版本</dt><dd>V1.0.0 </dd></dl>
+<dl class="section date"><dt>日期</dt><dd>2018/01/01 </dd></dl>
+<dl class="section note"><dt>注解</dt><dd><pre class="fragment">===============================================================================
+                    ##### How to use this driver #####
+===============================================================================
+  1,    适用芯片
+        STM      :  STM32F1  STM32F4
+        Nordic   :  Nrf51    Nrf52
+  2,    移植步骤
+  3,    验证方法
+  4,    使用方法
+  5,    其他说明</pre></dd></dl>
+<dl class="section attention"><dt>注意</dt><dd></dd></dl>
+<p>GNU General Public License (GPL)</p>
+<h2><center>&copy; COPYRIGHT 2017 XSLXHN</center></h2>
+</div><h2 class="groupheader">宏定义说明</h2>
+<a id="a50ee532735bf92edb02891ad93c1bf44"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a50ee532735bf92edb02891ad93c1bf44">&#9670;&nbsp;</a></span>BSP_RELAY1_SAFE_MAX_TIME_100MS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BSP_RELAY1_SAFE_MAX_TIME_100MS&#160;&#160;&#160;0xFFFFFFFF</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aad3e7150bfb4aeac8ac04f2e4f73baeb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aad3e7150bfb4aeac8ac04f2e4f73baeb">&#9670;&nbsp;</a></span>BSP_RELAY2_SAFE_MAX_TIME_100MS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BSP_RELAY2_SAFE_MAX_TIME_100MS&#160;&#160;&#160;0xFFFFFFFF</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a60f13645952f31695f249dd335aaba33"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a60f13645952f31695f249dd335aaba33">&#9670;&nbsp;</a></span>BSP_RELAY3_SAFE_MAX_TIME_100MS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BSP_RELAY3_SAFE_MAX_TIME_100MS&#160;&#160;&#160;0xFFFFFFFF</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7c66eff8e68a54f2ef8d88164bd3e95b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7c66eff8e68a54f2ef8d88164bd3e95b">&#9670;&nbsp;</a></span>BSP_RELAY4_SAFE_MAX_TIME_100MS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BSP_RELAY4_SAFE_MAX_TIME_100MS&#160;&#160;&#160;0xFFFFFFFF</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a05eb30fc4d2478e107e4da5a1146c1ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a05eb30fc4d2478e107e4da5a1146c1ee">&#9670;&nbsp;</a></span>BSP_RELAY5_SAFE_MAX_TIME_100MS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BSP_RELAY5_SAFE_MAX_TIME_100MS&#160;&#160;&#160;0xFFFFFFFF</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a46ca5256a4b1a1973752c42a445dc46a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a46ca5256a4b1a1973752c42a445dc46a">&#9670;&nbsp;</a></span>BSP_RELAY6_SAFE_MAX_TIME_100MS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BSP_RELAY6_SAFE_MAX_TIME_100MS&#160;&#160;&#160;0xFFFFFFFF</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a06abdc851f71afbcdaa78b4758b22aa5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a06abdc851f71afbcdaa78b4758b22aa5">&#9670;&nbsp;</a></span>BSP_RELAY7_SAFE_MAX_TIME_100MS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BSP_RELAY7_SAFE_MAX_TIME_100MS&#160;&#160;&#160;0xFFFFFFFF</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae3d0a87b57054906a164d0d376ed0dbf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae3d0a87b57054906a164d0d376ed0dbf">&#9670;&nbsp;</a></span>BSP_RELAY8_SAFE_MAX_TIME_100MS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BSP_RELAY8_SAFE_MAX_TIME_100MS&#160;&#160;&#160;0xFFFFFFFF</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a53dd52be244720be49d47bed248b031f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a53dd52be244720be49d47bed248b031f">&#9670;&nbsp;</a></span>BSP_RELAY_MAX_NUM</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BSP_RELAY_MAX_NUM&#160;&#160;&#160;8</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a12d26daf6606ca48d58d5c5564da3541"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a12d26daf6606ca48d58d5c5564da3541">&#9670;&nbsp;</a></span>BSP_RELAY_OFF</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BSP_RELAY_OFF&#160;&#160;&#160;0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac0ac9819a6626b607fe131aa38bcc0a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac0ac9819a6626b607fe131aa38bcc0a1">&#9670;&nbsp;</a></span>BSP_RELAY_ON</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BSP_RELAY_ON&#160;&#160;&#160;1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">枚举类型说明</h2>
+<a id="a7b67b488040457af98123a1105827c1e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b67b488040457af98123a1105827c1e">&#9670;&nbsp;</a></span>RELAY_LEVEL_ENUM</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="_bsp___relay_8h.html#a7b67b488040457af98123a1105827c1e">RELAY_LEVEL_ENUM</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><a id="a7b67b488040457af98123a1105827c1eaa9ef328b3be2e202f389c8011cbf11f2"></a>BSP_RELAY_LEVEL_LOW&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a7b67b488040457af98123a1105827c1ea0ba4f2a7bd0c7abf68fa398c5473b3c3"></a>BSP_RELAY_LEVEL_1&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a7b67b488040457af98123a1105827c1ea86c378b325fca4881340a583ea8c0a69"></a>BSP_RELAY_LEVEL_2&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a7b67b488040457af98123a1105827c1ea58e1f32d6cba9f6b34dbbfb5e3e8573f"></a>BSP_RELAY_LEVEL_3&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a7b67b488040457af98123a1105827c1ea69a6370d3102e016fc73756b9c32b295"></a>BSP_RELAY_LEVEL_4&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a7b67b488040457af98123a1105827c1eab5460b147b4784918a57d87bbb78c52c"></a>BSP_RELAY_LEVEL_5&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a7b67b488040457af98123a1105827c1ea3b8277e82cd5d9a7f71f621a6fe154b9"></a>BSP_RELAY_LEVEL_LOGIC&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a7b67b488040457af98123a1105827c1eab8fbc020851038491dcdfddf942cd724"></a>BSP_RELAY_LEVEL_FIRSTCARD&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a7b67b488040457af98123a1105827c1ea952326dd707b129d15b1e7e438f3250a"></a>BSP_RELAY_LEVEL_PC&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a7b67b488040457af98123a1105827c1ea84246b0b255a00e2b48dc8dd45b9c2fc"></a>BSP_RELAY_LEVEL_DEGUG&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a7b67b488040457af98123a1105827c1ea9a2b61ff8e9f1a382b3ab9c2f7a66b99"></a>BSP_RELAY_LEVEL_MENU&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a7b67b488040457af98123a1105827c1ea20c3d2f47e8c17af44169c78b051af63"></a>BSP_RELAY_LEVEL_HIGH&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<a id="a379e599bdd8ed2366e1d759d8a99e988"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a379e599bdd8ed2366e1d759d8a99e988">&#9670;&nbsp;</a></span>RELAY_WIRTE_ERR_ENUM</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="_bsp___relay_8h.html#a379e599bdd8ed2366e1d759d8a99e988">RELAY_WIRTE_ERR_ENUM</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><a id="a379e599bdd8ed2366e1d759d8a99e988a20668fd801b24377b47113d74932dba2"></a>BSP_RELAY_WIRTE_ERR_NO&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a379e599bdd8ed2366e1d759d8a99e988af7f71669c06bae47c42ec97fc01ad938"></a>BSP_RELAY_WIRTE_ERR_PARA&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a379e599bdd8ed2366e1d759d8a99e988a61d27a3e941d1828675687d3c174330a"></a>BSP_RELAY_WIRTE_ERR_LEVEL&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">函数说明</h2>
+<a id="a44c230a482b359cb0829f40f43d9fcdc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a44c230a482b359cb0829f40f43d9fcdc">&#9670;&nbsp;</a></span>BspRelay_100ms()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BspRelay_100ms </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad49007527543269a6a372a8bcf69d887"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad49007527543269a6a372a8bcf69d887">&#9670;&nbsp;</a></span>BspRelay_DebugTestOnOff()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BspRelay_DebugTestOnOff </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>OnOff</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8130f7771abf04d549da6d36118d10ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8130f7771abf04d549da6d36118d10ec">&#9670;&nbsp;</a></span>BspRelay_Read()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t BspRelay_Read </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abe14c8236db22db180b49329f5441de7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abe14c8236db22db180b49329f5441de7">&#9670;&nbsp;</a></span>BspRelay_Test()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t BspRelay_Test </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a91be7189fb989298a4623e8855853e35"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a91be7189fb989298a4623e8855853e35">&#9670;&nbsp;</a></span>BspRelay_Write()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t BspRelay_Write </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>level</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>ch</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>time</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>delaytime</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">变量说明</h2>
+<a id="a9f050edf1a47ebed3738958f4c2f01db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f050edf1a47ebed3738958f4c2f01db">&#9670;&nbsp;</a></span>Relay_LinkageSign</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t Relay_LinkageSign[<a class="el" href="_bsp___relay_8h.html#a53dd52be244720be49d47bed248b031f">BSP_RELAY_MAX_NUM</a>]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a425ce5ae175c02671dbc1fbe1102cbe2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a425ce5ae175c02671dbc1fbe1102cbe2">&#9670;&nbsp;</a></span>Relay_PcSign</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t Relay_PcSign[<a class="el" href="_bsp___relay_8h.html#a53dd52be244720be49d47bed248b031f">BSP_RELAY_MAX_NUM</a>]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

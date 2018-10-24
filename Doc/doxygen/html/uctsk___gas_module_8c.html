@@ -1,0 +1,243 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>xsl: E:/XkapSourceCode/Xkap-Stm32/Xkap-Stm32/User/UserTask/uctsk_GasModule.c 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">xsl
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">源码说明</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.13 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',false,false,'search.php','搜索');
+});
+</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_6d4e12d46ad8519ff7b80e874016d102.html">User</a></li><li class="navelem"><a class="el" href="dir_ba9e781c49be9d79c84eb9994eefebec.html">UserTask</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">函数</a> &#124;
+<a href="#var-members">变量</a>  </div>
+  <div class="headertitle">
+<div class="title">uctsk_GasModule.c 文件参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="includes_8h_source.html">includes.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="uctsk___gas_module_8h_source.html">uctsk_GasModule.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="uctsk___debug_8h_source.html">uctsk_Debug.h</a>&quot;</code><br />
+<code>#include &quot;Bsp_Uart.h&quot;</code><br />
+<code>#include &quot;<a class="el" href="_bsp___rtc_8h_source.html">Bsp_Rtc.h</a>&quot;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:a818092f3f87abad013006dc4e0cebb0a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___gas_module_8c.html#a818092f3f87abad013006dc4e0cebb0a">MODULE_OS_TASK_TAB</a> (App_TaskGasModuleTCB)</td></tr>
+<tr class="separator:a818092f3f87abad013006dc4e0cebb0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a96799d373ecf6d16935e9a23250bb352"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___gas_module_8c.html#a96799d373ecf6d16935e9a23250bb352">MODULE_OS_TASK_STK</a> (App_TaskGasModuleStk, <a class="el" href="app__cfg_8h.html#ae2a55adcbead1346ff8eaba435a7e22d">APP_TASK_GASMODULE_STK_SIZE</a>)</td></tr>
+<tr class="separator:a96799d373ecf6d16935e9a23250bb352"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad1efa6d775f8fff01b94d4fbc07ac674"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___gas_module_8c.html#ad1efa6d775f8fff01b94d4fbc07ac674">App_GasModuleTaskCreate</a> (void)</td></tr>
+<tr class="separator:ad1efa6d775f8fff01b94d4fbc07ac674"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5cb26f3d2ed2513eb9c3b53353e060cd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___gas_module_8c.html#a5cb26f3d2ed2513eb9c3b53353e060cd">GasModule_RxIrqBufToRBuf0</a> (uint8_t *pRxIqBuf, uint16_t len)</td></tr>
+<tr class="separator:a5cb26f3d2ed2513eb9c3b53353e060cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab6ff4c7f232aefd61c615a19e099594c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___gas_module_8c.html#ab6ff4c7f232aefd61c615a19e099594c">GasModule_DebugTestOnOff</a> (uint8_t OnOff)</td></tr>
+<tr class="separator:ab6ff4c7f232aefd61c615a19e099594c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+变量</h2></td></tr>
+<tr class="memitem:a4e1c780eb6f23ec3ee4ac6e53774bf73"><td class="memItemLeft" align="right" valign="top">const uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___gas_module_8c.html#a4e1c780eb6f23ec3ee4ac6e53774bf73">GasModule_TxCmd</a> [] = {0x61,0x02,0x01,0x65}</td></tr>
+<tr class="separator:a4e1c780eb6f23ec3ee4ac6e53774bf73"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a2876208fd444a7eca90e4f6d891850"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_g_a_s_m_o_d_u_l_e___s___i_n_f_o.html">GASMODULE_S_INFO</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___gas_module_8c.html#a1a2876208fd444a7eca90e4f6d891850">GasModule_s_Info</a></td></tr>
+<tr class="separator:a1a2876208fd444a7eca90e4f6d891850"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af3f9455ba140b7b7c0703dcd4ac01a45"><td class="memItemLeft" align="right" valign="top">struct tm&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uctsk___gas_module_8c.html#af3f9455ba140b7b7c0703dcd4ac01a45">CurrentDate</a></td></tr>
+<tr class="separator:af3f9455ba140b7b7c0703dcd4ac01a45"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">函数说明</h2>
+<a id="ad1efa6d775f8fff01b94d4fbc07ac674"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad1efa6d775f8fff01b94d4fbc07ac674">&#9670;&nbsp;</a></span>App_GasModuleTaskCreate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void App_GasModuleTaskCreate </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab6ff4c7f232aefd61c615a19e099594c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab6ff4c7f232aefd61c615a19e099594c">&#9670;&nbsp;</a></span>GasModule_DebugTestOnOff()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GasModule_DebugTestOnOff </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>OnOff</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5cb26f3d2ed2513eb9c3b53353e060cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5cb26f3d2ed2513eb9c3b53353e060cd">&#9670;&nbsp;</a></span>GasModule_RxIrqBufToRBuf0()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GasModule_RxIrqBufToRBuf0 </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>pRxIqBuf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>len</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a96799d373ecf6d16935e9a23250bb352"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a96799d373ecf6d16935e9a23250bb352">&#9670;&nbsp;</a></span>MODULE_OS_TASK_STK()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MODULE_OS_TASK_STK </td>
+          <td>(</td>
+          <td class="paramtype">App_TaskGasModuleStk&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="app__cfg_8h.html#ae2a55adcbead1346ff8eaba435a7e22d">APP_TASK_GASMODULE_STK_SIZE</a>&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a818092f3f87abad013006dc4e0cebb0a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a818092f3f87abad013006dc4e0cebb0a">&#9670;&nbsp;</a></span>MODULE_OS_TASK_TAB()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MODULE_OS_TASK_TAB </td>
+          <td>(</td>
+          <td class="paramtype">App_TaskGasModuleTCB&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">变量说明</h2>
+<a id="af3f9455ba140b7b7c0703dcd4ac01a45"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af3f9455ba140b7b7c0703dcd4ac01a45">&#9670;&nbsp;</a></span>CurrentDate</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct tm CurrentDate</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1a2876208fd444a7eca90e4f6d891850"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1a2876208fd444a7eca90e4f6d891850">&#9670;&nbsp;</a></span>GasModule_s_Info</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_g_a_s_m_o_d_u_l_e___s___i_n_f_o.html">GASMODULE_S_INFO</a> GasModule_s_Info</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4e1c780eb6f23ec3ee4ac6e53774bf73"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e1c780eb6f23ec3ee4ac6e53774bf73">&#9670;&nbsp;</a></span>GasModule_TxCmd</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const uint8_t GasModule_TxCmd[] = {0x61,0x02,0x01,0x65}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

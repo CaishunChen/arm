@@ -1,0 +1,95 @@
+L 1 "..\..\User\UserBsp\Bsp_Rtc.c"
+N/*
+N***********************************************************************************
+N*                    作    者: 徐松亮
+N*                    更新时间: 2015-06-03
+N***********************************************************************************
+N*/
+N/*******************************************************************************
+N*                               UNIX时间戳
+N*本文件实现基于RTC的日期功能，提供年月日的读写。
+N* RTC中保存的时间格式，是格式的。即一个32bit的time_t变量（实为u32）
+N*
+N* ANSI-C的标准库中，提供了两种表示时间的数据型：
+N* time_t:
+N*       UNIX时间戳（从1970-1-1起到某时间经过的秒数）
+N*   typedef unsigned int time_t;
+N* struct tm:
+N*       Calendar格式（年月日形式）
+N*       tm结构如下：
+N*       struct tm {
+N*               int tm_sec;   // 秒 0 to 60
+N*               int tm_min;   // 分 0 to 59
+N*       int tm_hour;  // 时 0 to 23
+N*       int tm_mday;  // 日 1 to 31
+N*       int tm_mon;   // 月 0 to 11
+N*       int tm_year;  // 年   since 1900
+N*       int tm_wday;  // 星期 since Sunday, 0 to 6
+N*       int tm_yday;  // 从元旦起的天数 days since January 1, 0 to 365
+N*       int tm_isdst; // 夏令时
+N*       ...
+N*   }
+N*   其中wday，yday可以自动产生，软件直接读取
+N*   mon的取值为0-11
+N*   ***注意***：
+N*   tm_year:在time.h库中定义为1900年起的年份，即2008年应表示为2008-1900=108
+N*   这种表示方法对用户来说不是十分友好，与现实有较大差异。
+N*   所以在本文件中，屏蔽了这种差异。
+N*   即外部调用本文件的函数时，tm结构体类型的日期，tm_year即为2008
+N*   注意：若要调用系统库time.c中的函数，需要自行将tm_year-=1900
+N* 成员函数说明：
+N* struct tm Time_ConvUnixToCalendar(time_t t);
+N*   输入一个Unix时间戳（time_t），返回Calendar格式日期
+N* time_t Time_ConvCalendarToUnix(struct tm t);
+N*   输入一个Calendar格式日期，返回Unix时间戳（time_t）
+N* time_t Time_GetUnixTime(void);
+N*   从RTC取当前时间的Unix时间戳值
+N* struct tm Time_GetCalendarTime(void);
+N*   从RTC取当前时间的日历时间
+N* void Time_SetUnixTime(time_t);
+N*   输入UNIX时间戳格式时间，设置为当前RTC时间
+N* void Time_SetCalendarTime(struct tm t);
+N*   输入Calendar格式时间，设置为当前RTC时间
+N*
+N* 外部调用实例：
+N* 定义一个Calendar格式的日期变量：
+N* struct tm now;
+N* now.tm_year = 2008;
+N* now.tm_mon = 11;      //12月
+N* now.tm_mday = 20;
+N* now.tm_hour = 20;
+N* now.tm_min = 12;
+N* now.tm_sec = 30;
+N*
+N* 获取当前日期时间：
+N* tm_now = Time_GetCalendarTime();
+N* 然后可以直接读tm_now.tm_wday获取星期数
+N*
+N* 设置时间：
+N* Step1. tm_now.xxx = xxxxxxxxx;
+N* Step2. Time_SetCalendarTime(tm_now);
+N*
+N* 计算两个时间的差
+N* struct tm t1,t2;
+N* t1_t = Time_ConvCalendarToUnix(t1);
+N* t2_t = Time_ConvCalendarToUnix(t2);
+N* dt = t1_t - t2_t;
+N* dt就是两个时间差的秒数
+N* dt_tm = mktime(dt);   //注意dt的年份匹配，ansi库中函数为相对年份，注意超限
+N* 另可以参考相关资料，调用ansi-c库的格式化输出等功能，ctime，strftime等
+N*
+N*******************************************************************************/
+N//------------------------------- Includes -----------------------------------
+N#include "Bsp_Rtc.h"
+L 1 "..\..\User\UserBsp\Bsp_Rtc.h" 1
+N/*
+N***********************************************************************************
+N*                    作    者: 徐松亮
+N*                    更新时间: 2015-06-03
+N***********************************************************************************
+N*/
+N#ifndef __BSP_RTC_H
+N#define __BSP_RTC_H
+N//-------------------加载库函数------------------------------
+C "..\..\User\UserBsp\Bsp_Rtc.h" 10 22 cannot open source input file "includes.h": No such file or directory
+N#include "includes.h"

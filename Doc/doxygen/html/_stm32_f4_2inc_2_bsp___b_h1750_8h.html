@@ -1,0 +1,253 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>xsl: E:/XkapSourceCode/Xkap-Stm32/Xkap-Stm32/User/UserBsp/Stm32F4/inc/bsp_bh1750.h 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">xsl
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">源码说明</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.13 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',false,false,'search.php','搜索');
+});
+</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_6d4e12d46ad8519ff7b80e874016d102.html">User</a></li><li class="navelem"><a class="el" href="dir_a31a870a1361c5173f8d637697bb576e.html">UserBsp</a></li><li class="navelem"><a class="el" href="dir_5e177c7cc544a0a92a21db9013c51e57.html">Stm32F4</a></li><li class="navelem"><a class="el" href="dir_bfc268d3643ad69e1597d4c973161630.html">inc</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#define-members">宏定义</a> &#124;
+<a href="#enum-members">枚举</a> &#124;
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle">
+<div class="title">bsp_bh1750.h 文件参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><a href="_stm32_f4_2inc_2_bsp___b_h1750_8h_source.html">浏览源代码.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+宏定义</h2></td></tr>
+<tr class="memitem:a960419f3a1c1e08418ef2c5c332a0af3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_stm32_f4_2inc_2_bsp___b_h1750_8h.html#a960419f3a1c1e08418ef2c5c332a0af3">BH1750_SLAVE_ADDRESS</a>&#160;&#160;&#160;0x46		/* I2C�ӻ���ַ */</td></tr>
+<tr class="separator:a960419f3a1c1e08418ef2c5c332a0af3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+枚举</h2></td></tr>
+<tr class="memitem:ac36f475ca5b446f4fde4c9b90bec77c8"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <br />
+&#160;&#160;<a class="el" href="_stm32_f4_2inc_2_bsp___b_h1750_8h.html#ac36f475ca5b446f4fde4c9b90bec77c8aff3650271a95154c4fb475db6d9fd5fa">BHOP_POWER_DOWN</a> = 0x00, 
+<a class="el" href="_stm32_f4_2inc_2_bsp___b_h1750_8h.html#ac36f475ca5b446f4fde4c9b90bec77c8ac7753c6c7e6055257724d853f0de76e1">BHOP_POWER_ON</a> = 0x01, 
+<a class="el" href="_stm32_f4_2inc_2_bsp___b_h1750_8h.html#ac36f475ca5b446f4fde4c9b90bec77c8a49ef7f0568ce1e3a65ebe232f92fffbb">BHOP_RESET</a> = 0x07, 
+<a class="el" href="_stm32_f4_2inc_2_bsp___b_h1750_8h.html#ac36f475ca5b446f4fde4c9b90bec77c8ad7ac67775392137efb19a51d42515ae6">BHOP_CON_H_RES</a> = 0x10, 
+<br />
+&#160;&#160;<a class="el" href="_stm32_f4_2inc_2_bsp___b_h1750_8h.html#ac36f475ca5b446f4fde4c9b90bec77c8ac2922a2bbf1e113972e1a43b61310712">BHOP_CON_H_RES2</a> = 0x11, 
+<a class="el" href="_stm32_f4_2inc_2_bsp___b_h1750_8h.html#ac36f475ca5b446f4fde4c9b90bec77c8a878f1ab9ca22173a9a19bc41147513cf">BHOP_CON_L_RES</a> = 0x13, 
+<a class="el" href="_stm32_f4_2inc_2_bsp___b_h1750_8h.html#ac36f475ca5b446f4fde4c9b90bec77c8a553867637203772a00f0b5d4cd218afa">BHOP_ONE_H_RES</a> = 0x20, 
+<a class="el" href="_stm32_f4_2inc_2_bsp___b_h1750_8h.html#ac36f475ca5b446f4fde4c9b90bec77c8ae61b422d41b1a909d81887d3977d31af">BHOP_ONE_H_RES2</a> = 0x21, 
+<br />
+&#160;&#160;<a class="el" href="_stm32_f4_2inc_2_bsp___b_h1750_8h.html#ac36f475ca5b446f4fde4c9b90bec77c8af06c8d187a0fa153167820f1a5db3b07">BHOP_ONE_L_RES</a> = 0x23
+<br />
+ }</td></tr>
+<tr class="separator:ac36f475ca5b446f4fde4c9b90bec77c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:a2a47de212695912107ef31b48d4bc597"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_stm32_f4_2inc_2_bsp___b_h1750_8h.html#a2a47de212695912107ef31b48d4bc597">bsp_InitBH1750</a> (void)</td></tr>
+<tr class="separator:a2a47de212695912107ef31b48d4bc597"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7aa4f80efbfd3ec4e5607359a5c3f36a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_stm32_f4_2inc_2_bsp___b_h1750_8h.html#a7aa4f80efbfd3ec4e5607359a5c3f36a">BH1750_WriteCmd</a> (uint8_t _ucOpecode)</td></tr>
+<tr class="separator:a7aa4f80efbfd3ec4e5607359a5c3f36a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a42a3005780c72719036ad4b6eafff1d3"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_stm32_f4_2inc_2_bsp___b_h1750_8h.html#a42a3005780c72719036ad4b6eafff1d3">BH1750_ReadData</a> (void)</td></tr>
+<tr class="separator:a42a3005780c72719036ad4b6eafff1d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56519c724ad6f26a2a4472752ce79144"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_stm32_f4_2inc_2_bsp___b_h1750_8h.html#a56519c724ad6f26a2a4472752ce79144">BH1750_AdjustSensitivity</a> (uint8_t _ucMTReg)</td></tr>
+<tr class="separator:a56519c724ad6f26a2a4472752ce79144"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a32577e7aac4d99c6e210ddc33552cf11"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_stm32_f4_2inc_2_bsp___b_h1750_8h.html#a32577e7aac4d99c6e210ddc33552cf11">BH1750_ChageMode</a> (uint8_t _ucMode)</td></tr>
+<tr class="separator:a32577e7aac4d99c6e210ddc33552cf11"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5bf6da480addd4aa80fb8c2b47e0b2d6"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_stm32_f4_2inc_2_bsp___b_h1750_8h.html#a5bf6da480addd4aa80fb8c2b47e0b2d6">BH1750_GetLux</a> (void)</td></tr>
+<tr class="separator:a5bf6da480addd4aa80fb8c2b47e0b2d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">宏定义说明</h2>
+<a id="a960419f3a1c1e08418ef2c5c332a0af3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a960419f3a1c1e08418ef2c5c332a0af3">&#9670;&nbsp;</a></span>BH1750_SLAVE_ADDRESS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BH1750_SLAVE_ADDRESS&#160;&#160;&#160;0x46		/* I2C�ӻ���ַ */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">枚举类型说明</h2>
+<a id="ac36f475ca5b446f4fde4c9b90bec77c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac36f475ca5b446f4fde4c9b90bec77c8">&#9670;&nbsp;</a></span>anonymous enum</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">anonymous enum</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><a id="ac36f475ca5b446f4fde4c9b90bec77c8aff3650271a95154c4fb475db6d9fd5fa"></a>BHOP_POWER_DOWN&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ac36f475ca5b446f4fde4c9b90bec77c8ac7753c6c7e6055257724d853f0de76e1"></a>BHOP_POWER_ON&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ac36f475ca5b446f4fde4c9b90bec77c8a49ef7f0568ce1e3a65ebe232f92fffbb"></a>BHOP_RESET&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ac36f475ca5b446f4fde4c9b90bec77c8ad7ac67775392137efb19a51d42515ae6"></a>BHOP_CON_H_RES&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ac36f475ca5b446f4fde4c9b90bec77c8ac2922a2bbf1e113972e1a43b61310712"></a>BHOP_CON_H_RES2&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ac36f475ca5b446f4fde4c9b90bec77c8a878f1ab9ca22173a9a19bc41147513cf"></a>BHOP_CON_L_RES&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ac36f475ca5b446f4fde4c9b90bec77c8a553867637203772a00f0b5d4cd218afa"></a>BHOP_ONE_H_RES&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ac36f475ca5b446f4fde4c9b90bec77c8ae61b422d41b1a909d81887d3977d31af"></a>BHOP_ONE_H_RES2&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ac36f475ca5b446f4fde4c9b90bec77c8af06c8d187a0fa153167820f1a5db3b07"></a>BHOP_ONE_L_RES&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">函数说明</h2>
+<a id="a56519c724ad6f26a2a4472752ce79144"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a56519c724ad6f26a2a4472752ce79144">&#9670;&nbsp;</a></span>BH1750_AdjustSensitivity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BH1750_AdjustSensitivity </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>_ucMTReg</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a32577e7aac4d99c6e210ddc33552cf11"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a32577e7aac4d99c6e210ddc33552cf11">&#9670;&nbsp;</a></span>BH1750_ChageMode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BH1750_ChageMode </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>_ucMode</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5bf6da480addd4aa80fb8c2b47e0b2d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5bf6da480addd4aa80fb8c2b47e0b2d6">&#9670;&nbsp;</a></span>BH1750_GetLux()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float BH1750_GetLux </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a42a3005780c72719036ad4b6eafff1d3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a42a3005780c72719036ad4b6eafff1d3">&#9670;&nbsp;</a></span>BH1750_ReadData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t BH1750_ReadData </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7aa4f80efbfd3ec4e5607359a5c3f36a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7aa4f80efbfd3ec4e5607359a5c3f36a">&#9670;&nbsp;</a></span>BH1750_WriteCmd()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BH1750_WriteCmd </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>_ucOpecode</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2a47de212695912107ef31b48d4bc597"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a47de212695912107ef31b48d4bc597">&#9670;&nbsp;</a></span>bsp_InitBH1750()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void bsp_InitBH1750 </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

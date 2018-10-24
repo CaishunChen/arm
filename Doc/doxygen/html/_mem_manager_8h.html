@@ -1,0 +1,359 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>xsl: E:/XkapSourceCode/Xkap-Stm32/Xkap-Stm32/User/UserModule/MemManager.h 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">xsl
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">源码说明</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.13 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',false,false,'search.php','搜索');
+});
+</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_6d4e12d46ad8519ff7b80e874016d102.html">User</a></li><li class="navelem"><a class="el" href="dir_eb2397560f3fdc052e61ca3a27327d74.html">UserModule</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#typedef-members">类型定义</a> &#124;
+<a href="#enum-members">枚举</a> &#124;
+<a href="#func-members">函数</a> &#124;
+<a href="#var-members">变量</a>  </div>
+  <div class="headertitle">
+<div class="title">MemManager.h 文件参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><a href="_mem_manager_8h_source.html">浏览源代码.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+类型定义</h2></td></tr>
+<tr class="memitem:a9594dca6dca08d60ccb0f928791c4751"><td class="memItemLeft" align="right" valign="top">typedef enum <a class="el" href="_mem_manager_8h.html#a42e96a91f83a9e898b563b64a3925f63">E_MEM_MANAGER_TYPE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_mem_manager_8h.html#a9594dca6dca08d60ccb0f928791c4751">E_MEM_MANAGER_TYPE</a></td></tr>
+<tr class="separator:a9594dca6dca08d60ccb0f928791c4751"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+枚举</h2></td></tr>
+<tr class="memitem:a42e96a91f83a9e898b563b64a3925f63"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_mem_manager_8h.html#a42e96a91f83a9e898b563b64a3925f63">E_MEM_MANAGER_TYPE</a> { <br />
+&#160;&#160;<a class="el" href="_mem_manager_8h.html#a42e96a91f83a9e898b563b64a3925f63a7219f6558dcb8280b5372e7027af6bc4">E_MEM_MANAGER_TYPE_256B</a>, 
+<a class="el" href="_mem_manager_8h.html#a42e96a91f83a9e898b563b64a3925f63ab92940a6137a4d2a28f3754e98b58075">E_MEM_MANAGER_TYPE_1KB</a>, 
+<a class="el" href="_mem_manager_8h.html#a42e96a91f83a9e898b563b64a3925f63ae934c0226c6ef8573fcc5d98319663eb">E_MEM_MANAGER_TYPE_2KB_BASIC</a>, 
+<a class="el" href="_mem_manager_8h.html#a42e96a91f83a9e898b563b64a3925f63a47a2b786d5d452cb614b2f0d843f3ece">E_MEM_MANAGER_TYPE_5KB_BASIC</a>, 
+<br />
+&#160;&#160;<a class="el" href="_mem_manager_8h.html#a42e96a91f83a9e898b563b64a3925f63a37beddba2f28403f990ccd2798fbe6fc">E_MEM_MANAGER_TYPE_10KB</a>
+<br />
+ }</td></tr>
+<tr class="separator:a42e96a91f83a9e898b563b64a3925f63"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:adeea965673d7953706d08b2fd4f293b4"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_mem_manager_8h.html#adeea965673d7953706d08b2fd4f293b4">MemManager_Get</a> (<a class="el" href="_mem_manager_8h.html#a42e96a91f83a9e898b563b64a3925f63">E_MEM_MANAGER_TYPE</a> mem_type)</td></tr>
+<tr class="separator:adeea965673d7953706d08b2fd4f293b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abcb64846584344aeb835a6bcaf68a637"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_mem_manager_8h.html#abcb64846584344aeb835a6bcaf68a637">MemManager_Free</a> (<a class="el" href="_mem_manager_8h.html#a42e96a91f83a9e898b563b64a3925f63">E_MEM_MANAGER_TYPE</a> mem_type, void *pmem_blk)</td></tr>
+<tr class="separator:abcb64846584344aeb835a6bcaf68a637"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af4cff410c560814d4e5396fae59b7303"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_mem_manager_8h.html#af4cff410c560814d4e5396fae59b7303">MemManager_Test</a> (void)</td></tr>
+<tr class="separator:af4cff410c560814d4e5396fae59b7303"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+变量</h2></td></tr>
+<tr class="memitem:a2562a9ec3ceec923909ec693ec7ad320"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_mem_manager_8h.html#a2562a9ec3ceec923909ec693ec7ad320">MemManager_Mem_256B_MaxNum</a></td></tr>
+<tr class="separator:a2562a9ec3ceec923909ec693ec7ad320"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1958d773f4bf9a2a66bd500cfe3f2005"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_mem_manager_8h.html#a1958d773f4bf9a2a66bd500cfe3f2005">MemManager_Mem_256B_Num</a></td></tr>
+<tr class="separator:a1958d773f4bf9a2a66bd500cfe3f2005"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af3bcb0ed9d45dbf447b9349f15b26dd6"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_mem_manager_8h.html#af3bcb0ed9d45dbf447b9349f15b26dd6">MemManager_Mem_1KB_MaxNum</a></td></tr>
+<tr class="separator:af3bcb0ed9d45dbf447b9349f15b26dd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab3d3f8c80f7754f4270b97ca3dbeb614"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_mem_manager_8h.html#ab3d3f8c80f7754f4270b97ca3dbeb614">MemManager_Mem_1KB_Num</a></td></tr>
+<tr class="separator:ab3d3f8c80f7754f4270b97ca3dbeb614"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed66494d9b1c766512fb6d15e2904967"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_mem_manager_8h.html#aed66494d9b1c766512fb6d15e2904967">MemManager_Mem_2KB_Basic_MaxNum</a></td></tr>
+<tr class="separator:aed66494d9b1c766512fb6d15e2904967"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acccc773bb29760c56303583d4c3b00a5"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_mem_manager_8h.html#acccc773bb29760c56303583d4c3b00a5">MemManager_Mem_2KB_Basic_Num</a></td></tr>
+<tr class="separator:acccc773bb29760c56303583d4c3b00a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c15f71f62d9f27725f0914bb5520ae7"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_mem_manager_8h.html#a8c15f71f62d9f27725f0914bb5520ae7">MemManager_Mem_5KB_Basic_MaxNum</a></td></tr>
+<tr class="separator:a8c15f71f62d9f27725f0914bb5520ae7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2eddb41848ee7fe518ca48d4929d2e33"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_mem_manager_8h.html#a2eddb41848ee7fe518ca48d4929d2e33">MemManager_Mem_5KB_Basic_Num</a></td></tr>
+<tr class="separator:a2eddb41848ee7fe518ca48d4929d2e33"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea8f1008bc24f8fed8046c14c285b57c"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_mem_manager_8h.html#aea8f1008bc24f8fed8046c14c285b57c">MemManager_Mem_10KB_MaxNum</a></td></tr>
+<tr class="separator:aea8f1008bc24f8fed8046c14c285b57c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeaa27ded01344f9440d1783a70e6ae4a"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_mem_manager_8h.html#aeaa27ded01344f9440d1783a70e6ae4a">MemManager_Mem_10KB_Num</a></td></tr>
+<tr class="separator:aeaa27ded01344f9440d1783a70e6ae4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">类型定义说明</h2>
+<a id="a9594dca6dca08d60ccb0f928791c4751"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9594dca6dca08d60ccb0f928791c4751">&#9670;&nbsp;</a></span>E_MEM_MANAGER_TYPE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef enum <a class="el" href="_mem_manager_8h.html#a42e96a91f83a9e898b563b64a3925f63">E_MEM_MANAGER_TYPE</a> <a class="el" href="_mem_manager_8h.html#a42e96a91f83a9e898b563b64a3925f63">E_MEM_MANAGER_TYPE</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">枚举类型说明</h2>
+<a id="a42e96a91f83a9e898b563b64a3925f63"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a42e96a91f83a9e898b563b64a3925f63">&#9670;&nbsp;</a></span>E_MEM_MANAGER_TYPE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="_mem_manager_8h.html#a42e96a91f83a9e898b563b64a3925f63">E_MEM_MANAGER_TYPE</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><a id="a42e96a91f83a9e898b563b64a3925f63a7219f6558dcb8280b5372e7027af6bc4"></a>E_MEM_MANAGER_TYPE_256B&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a42e96a91f83a9e898b563b64a3925f63ab92940a6137a4d2a28f3754e98b58075"></a>E_MEM_MANAGER_TYPE_1KB&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a42e96a91f83a9e898b563b64a3925f63ae934c0226c6ef8573fcc5d98319663eb"></a>E_MEM_MANAGER_TYPE_2KB_BASIC&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a42e96a91f83a9e898b563b64a3925f63a47a2b786d5d452cb614b2f0d843f3ece"></a>E_MEM_MANAGER_TYPE_5KB_BASIC&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a42e96a91f83a9e898b563b64a3925f63a37beddba2f28403f990ccd2798fbe6fc"></a>E_MEM_MANAGER_TYPE_10KB&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">函数说明</h2>
+<a id="abcb64846584344aeb835a6bcaf68a637"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abcb64846584344aeb835a6bcaf68a637">&#9670;&nbsp;</a></span>MemManager_Free()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MemManager_Free </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_mem_manager_8h.html#a42e96a91f83a9e898b563b64a3925f63">E_MEM_MANAGER_TYPE</a>&#160;</td>
+          <td class="paramname"><em>mem_type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>pmem_blk</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adeea965673d7953706d08b2fd4f293b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adeea965673d7953706d08b2fd4f293b4">&#9670;&nbsp;</a></span>MemManager_Get()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void* MemManager_Get </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_mem_manager_8h.html#a42e96a91f83a9e898b563b64a3925f63">E_MEM_MANAGER_TYPE</a>&#160;</td>
+          <td class="paramname"><em>mem_type</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af4cff410c560814d4e5396fae59b7303"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af4cff410c560814d4e5396fae59b7303">&#9670;&nbsp;</a></span>MemManager_Test()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MemManager_Test </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">变量说明</h2>
+<a id="aea8f1008bc24f8fed8046c14c285b57c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aea8f1008bc24f8fed8046c14c285b57c">&#9670;&nbsp;</a></span>MemManager_Mem_10KB_MaxNum</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t MemManager_Mem_10KB_MaxNum</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aeaa27ded01344f9440d1783a70e6ae4a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeaa27ded01344f9440d1783a70e6ae4a">&#9670;&nbsp;</a></span>MemManager_Mem_10KB_Num</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t MemManager_Mem_10KB_Num</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af3bcb0ed9d45dbf447b9349f15b26dd6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af3bcb0ed9d45dbf447b9349f15b26dd6">&#9670;&nbsp;</a></span>MemManager_Mem_1KB_MaxNum</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t MemManager_Mem_1KB_MaxNum</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab3d3f8c80f7754f4270b97ca3dbeb614"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab3d3f8c80f7754f4270b97ca3dbeb614">&#9670;&nbsp;</a></span>MemManager_Mem_1KB_Num</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t MemManager_Mem_1KB_Num</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2562a9ec3ceec923909ec693ec7ad320"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2562a9ec3ceec923909ec693ec7ad320">&#9670;&nbsp;</a></span>MemManager_Mem_256B_MaxNum</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t MemManager_Mem_256B_MaxNum</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1958d773f4bf9a2a66bd500cfe3f2005"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1958d773f4bf9a2a66bd500cfe3f2005">&#9670;&nbsp;</a></span>MemManager_Mem_256B_Num</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t MemManager_Mem_256B_Num</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aed66494d9b1c766512fb6d15e2904967"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aed66494d9b1c766512fb6d15e2904967">&#9670;&nbsp;</a></span>MemManager_Mem_2KB_Basic_MaxNum</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t MemManager_Mem_2KB_Basic_MaxNum</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acccc773bb29760c56303583d4c3b00a5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acccc773bb29760c56303583d4c3b00a5">&#9670;&nbsp;</a></span>MemManager_Mem_2KB_Basic_Num</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t MemManager_Mem_2KB_Basic_Num</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8c15f71f62d9f27725f0914bb5520ae7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8c15f71f62d9f27725f0914bb5520ae7">&#9670;&nbsp;</a></span>MemManager_Mem_5KB_Basic_MaxNum</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t MemManager_Mem_5KB_Basic_MaxNum</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2eddb41848ee7fe518ca48d4929d2e33"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2eddb41848ee7fe518ca48d4929d2e33">&#9670;&nbsp;</a></span>MemManager_Mem_5KB_Basic_Num</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t MemManager_Mem_5KB_Basic_Num</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

@@ -1,0 +1,87 @@
+L 1 "..\..\Libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_dma2d.c"
+N/**
+N  ******************************************************************************
+N  * @file    stm32f4xx_dma2d.c
+N  * @author  MCD Application Team
+N  * @version V1.3.0
+N  * @date    08-November-2013
+N  * @brief   This file provides firmware functions to manage the following 
+N  *          functionalities of the DMA2D controller (DMA2D) peripheral:
+N  *           + Initialization and configuration
+N  *           + Interrupts and flags management
+N  *           
+N  @verbatim  
+N ===============================================================================
+N                      ##### How to use this driver #####
+N ===============================================================================
+N    [..]
+N        (#) Enable DMA2D clock using 
+N            RCC_APB2PeriphResetCmd(RCC_APB2Periph_DMA2D, ENABLE) function.
+N            
+N        (#) Configures DMA2D
+N          (++) transfer mode 
+N          (++) pixel format, line_number, pixel_per_line
+N          (++) output memory address
+N          (++) alpha value
+N          (++) output offset
+N          (++) Default color (RGB)
+N           
+N        (#) Configures Foreground or/and background
+N          (++) memory address
+N          (++) alpha value
+N          (++) offset and default color
+N  
+N        (#) Call the DMA2D_Start() to enable the DMA2D controller.
+N        
+N    @endverbatim
+N  
+N  ******************************************************************************
+N  * @attention
+N  *
+N  * THE PRESENT FIRMWARE WHICH IS FOR GUIDANCE ONLY AIMS AT PROVIDING CUSTOMERS
+N  * WITH CODING INFORMATION REGARDING THEIR PRODUCTS IN ORDER FOR THEM TO SAVE
+N  * TIME. AS A RESULT, STMICROELECTRONICS SHALL NOT BE HELD LIABLE FOR ANY
+N  * DIRECT, INDIRECT OR CONSEQUENTIAL DAMAGES WITH RESPECT TO ANY CLAIMS ARISING
+N  * FROM THE CONTENT OF SUCH FIRMWARE AND/OR THE USE MADE BY CUSTOMERS OF THE
+N  * CODING INFORMATION CONTAINED HEREIN IN CONNECTION WITH THEIR PRODUCTS.
+N  *
+N  * <h2><center>&copy; COPYRIGHT 2013 STMicroelectronics</center></h2>
+N  ******************************************************************************
+N  */ 
+N
+N/* Includes ------------------------------------------------------------------*/
+N#include "stm32f4xx_dma2d.h"
+L 1 "..\..\Libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dma2d.h" 1
+N/**
+N  ******************************************************************************
+N  * @file    stm32f4xx_dma2d.h
+N  * @author  MCD Application Team
+N  * @version V1.3.0
+N  * @date    08-November-2013
+N  * @brief   This file contains all the functions prototypes for the DMA2D firmware 
+N  *          library.
+N  ******************************************************************************
+N  * @attention
+N  *
+N  * THE PRESENT FIRMWARE WHICH IS FOR GUIDANCE ONLY AIMS AT PROVIDING CUSTOMERS
+N  * WITH CODING INFORMATION REGARDING THEIR PRODUCTS IN ORDER FOR THEM TO SAVE
+N  * TIME. AS A RESULT, STMICROELECTRONICS SHALL NOT BE HELD LIABLE FOR ANY
+N  * DIRECT, INDIRECT OR CONSEQUENTIAL DAMAGES WITH RESPECT TO ANY CLAIMS ARISING
+N  * FROM THE CONTENT OF SUCH FIRMWARE AND/OR THE USE MADE BY CUSTOMERS OF THE
+N  * CODING INFORMATION CONTAINED HEREIN IN CONNECTION WITH THEIR PRODUCTS.
+N  *
+N  * <h2><center>&copy; COPYRIGHT 2013 STMicroelectronics</center></h2>
+N  ******************************************************************************
+N  */ 
+N
+N/* Define to prevent recursive inclusion -------------------------------------*/
+N#ifndef __STM32F4xx_DMA2D_H
+N#define __STM32F4xx_DMA2D_H
+N
+N#ifdef __cplusplus
+S extern "C" {
+N#endif
+N
+N/* Includes ------------------------------------------------------------------*/
+C "..\..\Libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dma2d.h" 32 23 cannot open source input file "stm32f4xx.h": No such file or directory
+N#include "stm32f4xx.h"

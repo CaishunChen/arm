@@ -1,0 +1,84 @@
+L 1 "..\..\User\uCOS-III\uC-LIB\lib_ascii.c"
+N/*
+N*********************************************************************************************************
+N*                                                uC/LIB
+N*                                        CUSTOM LIBRARY MODULES
+N*
+N*                          (c) Copyright 2004-2012; Micrium, Inc.; Weston, FL
+N*
+N*               All rights reserved.  Protected by international copyright laws.
+N*
+N*               uC/LIB is provided in source form to registered licensees ONLY.  It is 
+N*               illegal to distribute this source code to any third party unless you receive 
+N*               written permission by an authorized Micrium representative.  Knowledge of 
+N*               the source code may NOT be used to develop a similar product.
+N*
+N*               Please help us continue to provide the Embedded community with the finest 
+N*               software available.  Your honesty is greatly appreciated.
+N*
+N*               You can contact us at www.micrium.com.
+N*********************************************************************************************************
+N*/
+N
+N/*
+N*********************************************************************************************************
+N*
+N*                                     ASCII CHARACTER OPERATIONS
+N*
+N* Filename      : lib_ascii.c
+N* Version       : V1.37.01
+N* Programmer(s) : BAN
+N*                 ITJ
+N*********************************************************************************************************
+N* Note(s)       : (1) NO compiler-supplied standard library functions are used in library or product software.
+N*
+N*                     (a) ALL standard library functions are implemented in the custom library modules :
+N*
+N*                         (1) \<Custom Library Directory>\lib_*.*
+N*
+N*                         (2) \<Custom Library Directory>\Ports\<cpu>\<compiler>\lib*_a.*
+N*
+N*                               where
+N*                                       <Custom Library Directory>      directory path for custom library software
+N*                                       <cpu>                           directory name for specific processor (CPU)
+N*                                       <compiler>                      directory name for specific compiler
+N*
+N*                     (b) Product-specific library functions are implemented in individual products.
+N*
+N*
+N*                 (2) (a) ECMA-6 '7-Bit coded Character Set' (6th edition), which corresponds to the
+N*                         3rd edition of ISO 646, specifies several versions of a 7-bit character set :
+N*
+N*                         (1) THE GENERAL VERSION, which allows characters at 0x23 and 0x24 to be given a
+N*                             set alternate form and allows the characters 0x40, 0x5B, 0x5D, 0x60, 0x7B &
+N*                             0x7D to be assigned a "unique graphic character" or to be declared as unused.
+N*                             All other characters are explicitly specified.
+N*
+N*                         (2) THE INTERNATIONAL REFERENCE VERSION, which explicitly specifies all characters
+N*                             in the 7-bit character set.
+N*
+N*                         (3) NATIONAL & APPLICATION-ORIENTED VERSIONS, which may be derived from the
+N*                             standard in specified ways.
+N*
+N*                     (b) The character set represented in this file reproduces the Internation Reference
+N*                         Version.  This is identical to the 7-bit character set which occupies Unicode
+N*                         characters 0x0000 through 0x007F.  The character names are taken from v5.0 of the
+N*                         Unicode specification, with certain abbreviations so that the resulting #define
+N*                         names will not violate ANSI C naming restriction :
+N*
+N*                         (1) For the Latin capital & lowercase letters, the name components 'LETTER_CAPITAL'
+N*                             & 'LETTER_SMALL' are replaced by 'UPPER' & 'LOWER', respectively.
+N*********************************************************************************************************
+N*/
+N
+N
+N/*
+N*********************************************************************************************************
+N*                                            INCLUDE FILES
+N*********************************************************************************************************
+N*/
+N
+N#define    MICRIUM_SOURCE
+N#define    LIB_ASCII_MODULE
+C "..\..\User\uCOS-III\uC-LIB\lib_ascii.c" 82 24 cannot open source input file "lib_ascii.h": No such file or directory
+N#include  <lib_ascii.h>
