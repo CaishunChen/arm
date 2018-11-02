@@ -7,7 +7,7 @@
 		<Mark
 			Name="6452255445847090308102"
 			Comment=""
-			File="Xkap-Stm32\User\UserTask\uctsk_GprsAppXkap.c"
+			File="arm\User\UserTask\uctsk_GprsAppXkap.c"
 			Line="2519"
 			Column="65"
 			LineOffset="0"
