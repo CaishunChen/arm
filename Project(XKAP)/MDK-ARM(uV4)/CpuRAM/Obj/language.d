@@ -1,0 +1,9 @@
+.\cpuram\obj\language.o: ..\..\User\UserConfig\Language.c
+.\cpuram\obj\language.o: ..\..\User\UserConfig\includes.h
+.\cpuram\obj\language.o: C:\Keil_v5\ARM\ARMCC\bin\..\include\stdio.h
+.\cpuram\obj\language.o: C:\Keil_v5\ARM\ARMCC\bin\..\include\stdint.h
+.\cpuram\obj\language.o: C:\Keil_v5\ARM\ARMCC\bin\..\include\string.h
+.\cpuram\obj\language.o: C:\Keil_v5\ARM\ARMCC\bin\..\include\ctype.h
+.\cpuram\obj\language.o: C:\Keil_v5\ARM\ARMCC\bin\..\include\stdlib.h
+.\cpuram\obj\language.o: C:\Keil_v5\ARM\ARMCC\bin\..\include\stdarg.h
+.\cpuram\obj\language.o: C:\Keil_v5\ARM\ARMCC\bin\..\include\time.h
