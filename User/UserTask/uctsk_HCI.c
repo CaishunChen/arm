@@ -2682,11 +2682,12 @@ static void Hci_Menu_II_Set(void)
     uint8_t *pbuf;
     FONT_T sfont;
     uint16_t xpos=10,ypos=0;
+	  uint8_t i;
     sfont.FontCode=0;
     sfont.FrontColor=CL_YELLOW;
     sfont.BackColor=CL_BLACK;
     sfont.Space=0;
-    uint8_t i;
+    
     if(0 != Hci_ReShowTimer)
     {
         Hci_ReShowTimer--;

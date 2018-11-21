@@ -12,7 +12,7 @@ del /Q User\UserBsp\*.pre
 
 del /Q Firmware\*.bin
 
-xcopy /E /S /Y Libraries ..\Libraries
-xcopy /E /S /Y ToolSoftware ..\ToolSoftware
-rd /s /q Libraries
-rd /s /q ToolSoftware
+::xcopy /E /S /Y Libraries ..\Libraries
+::xcopy /E /S /Y ToolSoftware ..\ToolSoftware
+::rd /s /q Libraries
+::rd /s /q ToolSoftware
